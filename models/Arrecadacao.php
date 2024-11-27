@@ -16,15 +16,18 @@ class Arrecadacao{
     public $foto;
     public $pagamento;
 
-    public function __construct(Banco $db, Pagamento $pagamento) {
+    public function __construct(Banco $db) {
         $this->conexao = $db;
-        $this->pagamento = new Pagamento();
     }
 
-    public function getIdLivro($id_arrecadacao) {
+    public function criarPagamento(){
+        $this->pagamento = new Pagamento($fotoQRCode, $chave, $nome_da_conta, $conta, $agencia);
+        $this->conexao->query($this->criarPagamento());
+    }
+
+    public function getIdArrecadacao($id_arrecadacao) {
         $query = "SELECT * FROM {$this->tabela} WHERE id = {$id_arrecadacao}";
-        $resultado = $this->conexao->query($query);
-        return $resultado->fetch_all(MYSQLI_ASSOC);
+
     }
 
     public function create() {

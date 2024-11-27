@@ -12,8 +12,15 @@ class Pagamento{
     public $conta;
     public $agencia;
 
-    public function __construct($db) {
-        $this->conexao = $db;
+    public function __construct($fotoQRCode, $chave, $nome_da_conta, $conta, $agencia) {
+        $this->fotoQRCode = $fotoQRCode;
+        $this->chave = $chave;
+        $this->nome_da_conta = $nome_da_conta;
+        $this->conta = $conta;
+        $this->agencia = $agencia;
+
+        return $this;
+        
     }
 
     public function getIdLivro($id_pagamento) {

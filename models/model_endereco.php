@@ -26,7 +26,7 @@ class Endereco implements Crud {
     }
 
     public function create(){
-            $query = "INSERT INTO {$this->tabela}(cidade, uf, rua, numero, bairro, complemento) VALUES ("' .$this->cidade . '", "' .$this->uf . '", "' .$this->rua . '", "' .$this->numero . '", "' .$this->bairro . '", "' .$this->complemento . '");";
+            $query = "INSERT INTO {$this->tabela}(cidade, uf, rua, numero, bairro, complemento) VALUES ('{$this->cidade}', '{$this->uf}', '{$this->rua}', '{$this->numero}', '{$this->bairro}', '{$this->complemento}');";
             $resultado = $this->conexao->query($query);
             return $resultado;
     }

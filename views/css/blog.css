@@ -1,0 +1,98 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+}
+.container{
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+.corpo{
+    background-color: rgb(255, 255, 255);
+    width: 1500px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+}
+
+.container{
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+
+.corpo{
+    background-color: rgb(255, 255, 255);
+    width: 1150px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal {
+    width: 65%;
+    margin-right: 20px;
+}
+ 
+.grandin {
+    margin-bottom: 20px;
+    text-align: center;
+}
+ 
+.sidebar {
+    width: 30%;
+}
+ 
+.ladin {
+    margin-bottom: 20px;
+    text-align: center;
+}
+ 
+h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    border-bottom: 3.3px solid rgb(85,149,79);
+    padding-bottom: 8px;
+    width: 62%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grandin, .ladin {
+    margin-bottom: px;
+}
+
+#tatu{
+    margin-bottom: 50px;
+    
+}
+
+#maus_tratos {
+    margin-top: 175px;
+}
+
+#pit {
+    margin-top: 55px;
+}

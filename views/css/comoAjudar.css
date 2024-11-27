@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+}
+.container{
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+.corpo{
+    color: #fff;
+    background-color: rgb(68, 128, 63);
+    width: 1124px;
+    padding: 389px;
+    display: flex;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .container {
+    width: 1024px;
+    /* margin: 0 auto; */
+    margin-top: 20px;
+    padding: 0 20px;
+    height: 389px;
+
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+  }
+  
+  .hero img {
+    width: 400px;
+    height: auto;
+  }
+  
+  .hero-text {
+    text-align: left;
+  }
+  
+  .valores-e-pix {
+    padding: 40px 0;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    float: left; 
+    max-width: 100px; 
+    margin-right: 15px; 
+
+  }
+  
+  .card img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .pix {
+    padding: 40px 0;
+  }
+  
+  .qrcode {
+    background-color: rgb(68, 128, 63);
+    width: 329px;
+    margin: auto;
+    height: 310px;
+    border-radius: 8% 3%;
+    text-align: center;
+  }
+  
+  .qrcode img {
+    width: 247px;
+    height: 232px;
+    margin-top: 30px;
+  }
+  
+  .info {
+    text-align: center;
+
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }

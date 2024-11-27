@@ -26,7 +26,7 @@ class Endereco implements Crud {
     }
 
     public function create(){
-            $query = 'INSERT INTO {$this->tabela}(cidade, uf, rua, numero, bairro, complemento) VALUES ("' .$this->cidade . '", "' .$this->uf . '", "' .$this->rua . '", "' .$this->numero . '", "' .$this->bairro . '", "' .$this->complemento . '");';
+            $query = "INSERT INTO {$this->tabela}(cidade, uf, rua, numero, bairro, complemento) VALUES ("' .$this->cidade . '", "' .$this->uf . '", "' .$this->rua . '", "' .$this->numero . '", "' .$this->bairro . '", "' .$this->complemento . '");";
             $resultado = $this->conexao->query($query);
             return $resultado;
     }
@@ -38,7 +38,7 @@ class Endereco implements Crud {
     }
 
     public function update($valores){
-        $query = 'UPDATE {$this->tabela} SET';
+        $query = "UPDATE {$this->tabela} SET";
         $colunasArray = array_keys($valores);
             for($contador = 0; $contador < count($valores); $contador++){
                 $coluna = $colunasArray[$contador];
@@ -46,7 +46,7 @@ class Endereco implements Crud {
 
                 $query .= $contador != (count($valores) - 1) ? $coluna .' = "'. $valor . '", ' : $coluna .' = "'. $valor .'" ';
             }
-            $query += "WHERE id_endereco = {$this->id_endereco};";
+            $query += " WHERE id_endereco = {$this->id_endereco};";
             $resultado = $this->conexao->query($query);
             return $resultado;
     }

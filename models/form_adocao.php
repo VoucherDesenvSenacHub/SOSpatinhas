@@ -15,42 +15,48 @@ class formAdocao{
         $this->conexao = $db;
     }
 
-    public function getIdForm($id_formulario_adocao){
-        $query = "SELECT * FROM {$this->tabela} WHERE id = {$this->id_formulario_adocao}";
-        $resultado = $this->conexao->query($query);
-        return $resultado->fetch_all(MYSQLI_ASSOC);
-    }
+    
 
     public function create(){
-        $query = "INSERT INTO {$this->tabela}(id_formulario_adocao, id_animal, id_usuario, termos, data_adocao) VALUES ('{$this->id_formulario}', '{$this->id_animal}', '{$this->id_usuario}', '{$this->termos}', '{$this->data_adocao}';)";
-        $resultado = $this->conexao->query($query);
-        return $resultado;
+        $query = "INSERT INTO {$this->tabela} (id_animal, id_usuario, termos, data_adocao) VALUES (?, ?, ?, ?)";
+        $stmt = $this->conexap->prepare($query);
+        $stmt->bind_param("isss", $this->id_animal, $this->id_usuario, $this->termos, $this->data_adocao);
+        return $stmt->execute();
     }
 
     public function read(){
-        $query = "SELECT * FROM {$this->tabela} WHERE id_endereco = {$this->id_endereco}";
-        $resultado = $this->conexao->query($query);
-        return $resultado;
+        $query = "SELECT * FROM {$this->tabela} WHERE id_formulario_adocao = ?";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bind_param("i", $this->id_formulario_adocao);
+        $stmt->execute();
+        return $stmt->get_Result()->fetch_all(MYSQLI_ASSOC);
     }
 
     public function update($valores){
         $query = "UPDATE {$this->tabela} SET";
         $colunasArray = array_keys($valores);
-            for($contador = 0; $contador < count($valores); $contador++){
-                $coluna = $colunasArray[$contador];
-                $valor = $valores[$coluna];
+        $tipoParam = str_repeat('s', count($valores));
+        $valorParam = array_values($valores);
 
-                $query .= $contador != (count($valores) - 1) ? $coluna . ' = "'. $valor . '", ' : $coluna . ' = "'. $valor . '" ';
-            }
-            $query += " WHERE id_formulario_adocao = {$this->id_formulario_adocao};";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
+        foreach($colunasArray as $index => $coluna) {
+            $query .= "{$coluna} = ?";
+            if($index < count($colunasArray) - 1){
+                $query .= ", ";
+            } 
+        }
+
+        $query .= "WHERE id_formulario_adocao = ?";
+        $stmt = $this->conexao->prepare($query);
+        $valorParam[] = $this->id_formularo_adocao;
+        $stmt->bind_param($tipoParam . 'i', ...$valorParam);
+        return $stmt->execute();
     }
 
     public function delete(){
-        $query = "DELETE FROM {$this->tabela} WHERE id_formulario_adocao = {$this->id_formulario_adocao}";
-        $resultado = $this->conexao->query($query);
-        return $resultado;
+        $query = "DELETE FROM {$this->tabela} WHERE id_formulario_adocao = ?";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bind_param("i", $this->id_formulario_adocao);
+        return $stmt->execute();
     }
 }
 

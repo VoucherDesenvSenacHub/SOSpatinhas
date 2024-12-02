@@ -16,9 +16,9 @@ class Arrecadacao{
     public $foto;
     public $pagamento;
 
-    public function __construct( $bd, $pagamento) {
+    public function __construct( $bd,$pagamento) {
         $this->conexao = $bd;
-        $this->pagamento = new Pagamento();
+        $this->pagamento = new Pagamento($pagamento);
     }
 
     public function getIdLivro($id_arrecadacao) {

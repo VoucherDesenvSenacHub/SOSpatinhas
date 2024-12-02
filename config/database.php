@@ -17,5 +17,7 @@ class Banco{
         {
             return $this->conexao;
         }
+        $resultado = $this->conexao->query($query);
+        return $resultado->fetch_all(MYSQLI_ASSOC);    
     }
 }

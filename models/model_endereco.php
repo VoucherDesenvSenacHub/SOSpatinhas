@@ -1,7 +1,7 @@
 <?php 
 require_once "../config/database.php";
 require_once "crud.php";
-class Endereco implements Crud {
+class Endereco {
     private $conexao;
     private $tabela = 'endereco';
 

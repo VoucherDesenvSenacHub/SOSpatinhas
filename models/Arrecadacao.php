@@ -16,8 +16,8 @@ class Arrecadacao{
     public $foto;
     public $pagamento;
 
-    public function __construct(Banco $db, Pagamento $pagamento) {
-        $this->conexao = $db;
+    public function __construct( $bd, $pagamento) {
+        $this->conexao = $bd;
         $this->pagamento = new Pagamento();
     }
 

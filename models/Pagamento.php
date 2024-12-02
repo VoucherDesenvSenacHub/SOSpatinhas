@@ -12,8 +12,8 @@ class Pagamento{
     public $conta;
     public $agencia;
 
-    public function __construct($db) {
-        $this->conexao = $db;
+    public function __construct($bd) {
+        $this->conexao = $bd;
     }
 
     public function getIdLivro($id_pagamento) {

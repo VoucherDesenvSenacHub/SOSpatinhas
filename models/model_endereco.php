@@ -43,7 +43,7 @@ class Endereco {
             for($contador = 0; $contador < count($valores); $contador++){
                 $coluna = $colunasArray[$contador];
                 $valor = $valores[$coluna];
-
+ ''
                 $query .= $contador != (count($valores) - 1) ? $coluna .' = "'. $valor . '", ' : $coluna .' = "'. $valor .'" ';
             }
             $query += " WHERE id_endereco = {$this->id_endereco};";

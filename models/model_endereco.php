@@ -19,42 +19,46 @@ class Endereco {
     }
 
 
-    public function getIdEndereco($id_endereco){
-        $query = "SELECT * FROM  {$this->tabela} WHERE id = {$this->id_endereco}";
-        $resultado = $this->conexao->query($query);
-        return $resultado->fetch_all(MYSQLI_ASSOC);
-    }
-
     public function create(){
-            $query = "INSERT INTO {$this->tabela}(cidade, uf, rua, numero, bairro, complemento) VALUES ('{$this->cidade}', '{$this->uf}', '{$this->rua}', '{$this->numero}', '{$this->bairro}', '{$this->complemento}');";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
+        $query = "INSERT INTO {$tihs->tabela} (cidade, uf, rua, numero, bairro, complemento) VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bind_param("ssssss", $this->cidade, $this->uf, $this->rua, $this->numero, $this->bairro, $this->complemento);
+        return $stmt->execute();
     }
 
     public function read(){
-            $query = "SELECT * FROM {$this->tabela} WHERE id_endereco = {$this->id_endereco}";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
+        $query = "SELECT * FROM {$this->tabela} WHERE id_endereco = ?";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bind_param("i", $this->id_endereco);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     }
 
     public function update($valores){
         $query = "UPDATE {$this->tabela} SET";
         $colunasArray = array_keys($valores);
-            for($contador = 0; $contador < count($valores); $contador++){
-                $coluna = $colunasArray[$contador];
-                $valor = $valores[$coluna];
- ''
-                $query .= $contador != (count($valores) - 1) ? $coluna .' = "'. $valor . '", ' : $coluna .' = "'. $valor .'" ';
+        $tipoParam = str_repeat('s', count($colunasArray));
+        $valorParam = array_values($valores);
+
+        foreach($colunasArray as $index => $coluna){
+            $query .= "{$coluna} = ?";
+            if($index < count($colunasArray) - 1){
+                $query .= ", ";
             }
-            $query += " WHERE id_endereco = {$this->id_endereco};";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
+        }
+
+        $query .= " WHERE id_endereco = ?";
+        $stmt = $this->conexao->prepare($query);
+        $valorParam{} = $this->id_endereco;
+        $stmt->bind_param($tipoParam . 'i', ...$valorParam);
+        return $stmt->execute();
     }
 
     public function delete(){
-        $query =  "DELETE FROM {$this->tabela} WHERE id_endereco = {$this->id_endereco}";
-        $resultado = $this->conexao->query($query);      
-        return $resultado;
+        $query = "DELETE FROM {$this->tabela} WHERE id_endereco = ?";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bind_param('i', this->id_endereco);
+        return $stmt->execute();
     }
 
 }

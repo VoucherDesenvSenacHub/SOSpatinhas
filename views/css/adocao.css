@@ -23,18 +23,66 @@ body{
   align-items: center;
 }
 
+
+
+/*--------------------------------------------------------------------------------*/
 .top-texts{
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem;
   margin-top: 3rem;
+}
 
+.top-texts h1{
+  font-size: 30px;
+  font-weight:bold;
+}
+
+.top-texts p{
+  font-size: 17px;
+  font-weight: normal;
 }
 
 
 
+/*--------------------------------------------------------------------------------*/
+.filter{
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.filter-button{
+  background-color: #44803F;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.filter-button:hover{
+  background-color: green;
+}
+
+.form-filter-sexo #sexo-filter, #idade-filter, #porte-filter,#animal-filter{
+  background-color: #C6E1C4;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.filter-option:hover{
+  background-color: #7b9779;
+  text-decoration: none;
+}
 
 
+
+/*--------------------------------------------------------------------------------*/
 .card-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -48,8 +96,8 @@ body{
   border-radius: 6px;
   width: 300px;
   height: 400px;
-  padding: 8px 16px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
 .front-card{
@@ -58,20 +106,55 @@ body{
 }
 
 .front-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.titulo{
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  background: rgba(0,0,0,0.25);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .back-card{
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
-  
+}
+
+.header-card{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.button-card{
+  background-color: #44803F;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button-card a{
+  text-decoration: none;
+  color: white;
 }
 
 .card-animal:hover{
-  background-color: aqua;
+  background-color: #C6E1C4;
 }
 
 .card-animal:hover .front-card {
@@ -82,4 +165,5 @@ body{
 .card-animal:hover .back-card {
   display: block;
   opacity: 1;
+  
 }

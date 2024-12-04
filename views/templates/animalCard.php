@@ -1,9 +1,10 @@
 <div class="card-animal">
     <div class="front-card">
-        
+
         <img src="../images/destaque-gata-tricolor.webp" alt="">
-        
-        <h1 class="nome"><?= $animal['nome']?></h1class>
+        <div class="titulo">
+            <h1 class="nome"><?= $animal['nome']?></h1class>
+        </div>
     </div>
     <div class="back-card">
         <header class="header-card">

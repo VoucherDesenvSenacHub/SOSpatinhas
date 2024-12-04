@@ -12,6 +12,8 @@ body{
     max-width: 1500px;
     margin: auto;
     padding: 12px;
+    background-color: white  ;
+    
 }
 .corpo{
     background-color: rgb(255, 255, 255);
@@ -20,4 +22,107 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+/*IMAGENS*/
+
+#imgAnimal,#imgEventos{
+    text-align: center;
+    margin: 10px;
+    display: flex; /* Alinha os itens em uma linha */
+    justify-content: space-between; /* Espaço entre as divs */
+    padding: 20px; /* Espaço interno no contêiner */
+}
+
+
+.animal{
+    width: 420px; /* Define a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px;
+    
+}
+.eventos{
+    width: 420px; /* Define a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px;
+}
+
+/*Texto*/
+
+.texto{
+    position: relative; /* Permite usar top, right, bottom, left */
+    top: 40px; /* Move o texto 20 pixels para baixo */
+    left: 90px; /* Move o texto 10 pixels para a direita */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px; /* Tamanho do texto */
+}
+
+.texto-overlay {
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    top: 58%; /* Centraliza verticalmente */
+    left: 30%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+    color: white; /* Cor do texto */
+    font-size: 20px; /* Tamanho do texto */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 5px; /* Bordas arredondadas para o fundo */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    
+}
+
+.item {
+    margin: 0 10px; /* Espaço lateral entre os itens */
+    position: relative; /* Para posicionar o texto em relação à imagem */
+}
+
+/*BARRA*/
+
+.box-anim{
+    background-color: #83CE7D;
+    position: absolute;
+    bottom:90px; /* Posiciona a barra a 10px do fundo da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar */
+    width: 80%; /* Largura da barra */
+    height: 40px; /* Altura da barra */
+    border-radius: 30px; /* Bordas arredondadas */
+    display: flex; /* Permite centralizar o texto dentro da barra */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    align-items: center; /* Centraliza verticalmente o texto */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto */
+}
+
+.box-saibamais{
+ 
+    background-color: #ffffff;
+    position: absolute;
+    bottom:40px; 
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar */
+    width: 37%; /* Largura da barra */
+    height: 37px; /* Altura da barra */
+    border-radius: 7px; /* Bordas arredondadas */
+    display: flex; /* Permite centralizar o texto dentro da barra */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    align-items: center; /* Centraliza verticalmente o texto */
+    color: #83CE7D; /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto */
+
+}
+
+
+.box-event{
+    background-color: #44803F;
+    position: absolute;
+    bottom:50px; /* Posiciona a barra a 20px do fundo da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar */
+    width: 85%; /* Largura da barra */
+    height: 120px; /* Altura da barra */
+    display: flex; /* Permite centralizar o texto dentro da barra */
+    justify-content: flex-start ; /* Centraliza horizontalmente o texto */
+    align-items: center; /* Centraliza verticalmente o texto */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto */
 }

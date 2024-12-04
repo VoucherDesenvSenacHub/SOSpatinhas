@@ -86,35 +86,38 @@ body{
 .card-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 40px;
   justify-content: center; 
   margin-bottom: 3rem;
 }
 
 .card-animal{
   border: 1px solid black;
-  border-radius: 6px;
+  border-radius: 40px;
   width: 300px;
   height: 400px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* transition: background-color 0.3s ease, transform 0.3s ease; */
   position: relative;
 }
 
 .front-card{
   display: block;
   transition: opacity 0.3s ease;
+  width: 300px;
+  height: 400px;
 }
 
 .front-card img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+  border-radius: 40px;
 }
 
 .titulo{
   position: absolute;
   top: 0;
+  bottom: 20px;
   left: 0;
   height: 100%;
   width: 100%;
@@ -122,6 +125,12 @@ body{
   color: white;
   font-size: 30px;
   font-weight: bold;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .back-card{

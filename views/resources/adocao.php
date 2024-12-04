@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,7 +44,7 @@
                 <select name="porte-filter" id="porte-filter">
                     <option class="filter-option" value="Selecionar">-- Selecionar --</option>
                     <option class="filter-option" value="Pequeno">Pequeno</option>
-                    <option class="filter-option" value="Medio">Médio</option>
+                    <option class="filter-option" value="Médio">Médio</option>
                     <option class="filter-option" value="Grande">Grande</option>
                 </select>
             </form>
@@ -66,28 +66,47 @@
 
         <div class="card-container">
             <?php
-                $servidor = 'localhost';
-                $usuario = 'root';
-                $senha = '';
-                $banco_de_dados = 'SOS_Patinhas';
-                $conexao = mysqli_connect($servidor,$usuario,$senha,$banco_de_dados);
+                require_once '../../config/database.php';
+                $banco = new Banco();
                 
-                if(isset($_GET['animal-filter']) && $_GET['animal-filter'] != "Selecionar" ){
-                    $tipoFilter = $_GET['animal-filter'];
-                    $selectAnimal = $conexao->query("select * from animal where tipo = '$tipoFilter'");
-                    $rowAnimal = $selectAnimal->fetch_all(MYSQLI_ASSOC);
-                    foreach ($rowAnimal as $animal){
-                        include ('../templates/animalCard.php');
-                    };
-                }else if(!isset($_GET['tipo-filter']) || ($_GET['tipo-filter'] == "Selecionar")){
-                    $selectAnimal = $conexao->query('select * from animal');
-                    $rowAnimal = $selectAnimal->fetch_all(MYSQLI_ASSOC);
-                    foreach ($rowAnimal as $animal){
-                        include ('../templates/animalCard.php');
-                    };
+                $filtros = [];
+                // var_dump($filtros);
+                
+
+                if(isset($_GET['sexo-filter']) && $_GET['sexo-filter'] != "Selecionar"){
+                    $tipoFilter = $banco->escape($_GET['sexo-filter']);
+                    array_push($filtros, "sexo = '$tipoFilter'");
+                    // $filtros[] = "sexo = '$tipoFilter'";
                 }
 
-                $conexao->close();
+                if(isset($_GET['idade-filter']) && $_GET['idade-filter'] != "Selecionar"){
+                    $tipoFilter = $banco->escape($_GET['idade-filter']);
+                    $filtros[] = "idade = '$tipoFilter'";
+                }
+
+                if(isset($_GET['porte-filter']) && $_GET['porte-filter'] != "Selecionar"){
+                    $tipoFilter = $banco->escape($_GET['porte-filter']);
+                    $filtros[] = "porte = '$tipoFilter'";
+                }
+
+                if(isset($_GET['animal-filter']) && $_GET['animal-filter'] != "Selecionar"){
+                    $tipoFilter = $banco->escape($_GET['animal-filter']);
+                    $filtros[] = "tipo = '$tipoFilter'";
+                }
+
+                $query = 'SELECT * FROM animal';
+                if(count($filtros) > 0){
+                    $query .= ' WHERE ' . implode(' AND ', $filtros);
+                }
+
+                $resultado = $banco->query($query);
+
+                $rowAnimal = $banco->fetch_all($resultado);
+                // var_dump($rowAnimal);
+                foreach ($rowAnimal as $animal){
+                    include ('../templates/animalCard.php');
+                };
+                $banco->fechar();
             ?>
         </div>
 

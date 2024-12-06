@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
@@ -6,23 +5,24 @@
     margin: 0;
     border: 0;
 }
-body{
+body {
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
 }
-.container{
+.container {
     max-width: 1500px;
     margin: auto;
     padding: 12px;
 }
-.corpo{
+.corpo {
     background-color: rgb(255, 255, 255);
-    width: 1500px;
+    width: 100%;
     display: flex;
     text-align: center;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .imagem_grupo {
@@ -33,6 +33,37 @@ body{
 .imagem_grupo img {
     width: 100%;
     height: auto;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 30px 0;
+}
+
+.title-container h1 {
+    margin: 0;
+    padding: 0 15px;
+    font-size: 2rem;
+}
+
+.title-container::before,
+.title-container::after {
+    content: "";
+    position: absolute;
+    width: 470px;
+    height: 3px;
+    background-color: green;
+}
+
+.title-container::before {
+    left: 0;
+}
+
+.title-container::after {
+    right: 0;
 }
 
 h1 {
@@ -46,9 +77,9 @@ h1 {
 .card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 100px;
     margin-top: 20px;
-    padding: 0 15px;
+    padding: 0 95px;
 }
 
 .card {
@@ -60,7 +91,7 @@ h1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 250px;  
 }
 
 .card:hover {
@@ -70,7 +101,7 @@ h1 {
 
 .card img {
     width: 100%;
-    height: 100%;
+    height: 80%;  
     object-fit: cover;
 }
 
@@ -80,15 +111,16 @@ h1 {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;  
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: 18px;  
     font-weight: 700;
     color: #333;
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 .card-footer {

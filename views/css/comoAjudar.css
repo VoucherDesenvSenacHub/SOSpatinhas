@@ -12,6 +12,7 @@ body{
     max-width: 1500px;
     margin: auto;
     padding: 12px;
+    background-color: #fff;
 }
 .corpo{
     color: #fff;
@@ -23,7 +24,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 
 body {
     font-family: Arial, sans-serif;

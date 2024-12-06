@@ -1,11 +1,15 @@
 <?php
 
 class Banco{
-    const host = 'localhost';
-    const banco = 'SOS_Patinhas';
-    const usuario = 'root';
-    const senha = '';
-    public $conexao;
+    private $conexao;
+    
+    public function __construct() {
+        $this->conexao = new mysqli('localhost', 'root', '', 'SOS_Patinhas');
+        
+        if ($this->conexao->connect_error) {
+            die("Connection failed: " . $this->conexao->connect_error);
+        }
+    }
 
     
     public function conectar(){
@@ -17,5 +21,21 @@ class Banco{
         {
             return $this->conexao;
         }
+    }
+
+    public function query($sql){
+        return $this->conexao->query($sql);
+    }
+
+    public function fetch_all($resultado){
+        return $resultado->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function escape($string){
+        return $this->conexao->real_escape_string($string);
+    }
+
+    public function fechar(){
+        $this->conexao->close();
     }
 }

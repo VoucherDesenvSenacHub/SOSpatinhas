@@ -61,12 +61,12 @@
             <div class="qrcode">
                 <img src="../images/imagem_qrcode.png" alt="QR Code para Doação">
                 <p>ChaveCNPJ: XX. XXX. XXX/0001-XX</p>
-            </div>
-            <div class="info">
-                <h3>Sos Patinhas</h3>
-                <div class="dados-conta">
+                <div class="info">
+                  <h3>Sos Patinhas</h3>
+                  <div class="dados-conta">
                     <p>Conta: 198655-4</p>
                     <p>Agência: 1193</p>
+                  </div>
                 </div>
             </div>
         </div>

@@ -14,11 +14,11 @@
                 </a>
 
                 <ul class="nav-links">.
-                    <a class="link-navbar" href="blog">Blog</a>
-                    <a class="link-navbar" href="quemSomos">Quem Somos</a>
-                    <a class="link-navbar" href="comoAjudar">Como Ajudar</a>
-                    <a class="link-navbar" href="eventos">Eventos</a>
-                    <a class="link-navbar" href="adocao">Adoção</a>
+                    <a class="link-navbar" href="./blog.php">Blog</a>
+                    <a class="link-navbar" href="./quemSomos.php">Quem Somos</a>
+                    <a class="link-navbar" href="./comoAjudar.php">Como Ajudar</a>
+                    <a class="link-navbar" href="./eventos.php">Eventos</a>
+                    <a class="link-navbar" href="./adocao.php">Adoção</a>
                 </ul>
             </nav>
         </header>
@@ -46,21 +46,21 @@
                 <img src="../images/imgcard1.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Faça uma doação!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                        <a href="./comoAjudar.php" class="buttoncard">Saiba Mais!</a>
                     </div>
                 </div>
             <div class="card">
                 <img src="../images/imgcard2.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Participe dos nossos eventos!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                        <a href="./eventos.php" class="buttoncard">Saiba Mais!</a>
                     </div>
                 </div>
             <div class="card">
                 <img src="../images/imgcard3.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Adote um amigo!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                        <a href="./adocao.php" class="buttoncard">Saiba Mais!</a>
                     </div>
                 </div>
         </section>

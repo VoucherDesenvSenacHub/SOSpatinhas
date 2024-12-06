@@ -36,7 +36,7 @@
                         <option class="filter-option" value="Selecionar">-- Selecionar --</option>
                         <option class="filter-option" value="< 1">-1 ano</option>
                         <option class="filter-option" value="<= 5">Até 5 anos</option>
-                        <option class="filter-option" value=">= 10">Até 10 anos</option>
+                        <option class="filter-option" value="<= 10">Até 10 anos</option>
                         <option class="filter-option" value="> 10">+10 anos</option>
                     </select>
                 </div>
@@ -78,13 +78,12 @@
 
                 if(isset($_GET['sexo-filter']) && $_GET['sexo-filter'] != "Selecionar"){
                     $tipoFilter = $banco->escape($_GET['sexo-filter']);
-                    array_push($filtros, "sexo = '$tipoFilter'");
-                    // $filtros[] = "sexo = '$tipoFilter'";
+                    $filtros[] = "sexo = '$tipoFilter'";
                 }
 
                 if(isset($_GET['idade-filter']) && $_GET['idade-filter'] != "Selecionar"){
                     $tipoFilter = $banco->escape($_GET['idade-filter']);
-                    $filtros[] = "idade '$tipoFilter'";
+                    $filtros[] = "idade $tipoFilter";
                 }
 
                 if(isset($_GET['porte-filter']) && $_GET['porte-filter'] != "Selecionar"){

@@ -46,12 +46,6 @@ body{
 
 
 /*--------------------------------------------------------------------------------*/
-/* .filter{
-  margin-bottom: 5rem;
-  display: flex;
-  gap: 2rem;
-} */
-
 .filter-button{
   background-color: #44803F;
   color: white;
@@ -108,7 +102,6 @@ body{
   border-radius: 40px;
   width: 300px;
   height: 400px;
-  /* transition: background-color 0.3s ease, transform 0.3s ease; */
   position: relative;
 }
 
@@ -156,7 +149,7 @@ body{
   justify-content:center;
   align-items: center;
   flex-direction: column;
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 400;
 }
 
@@ -167,15 +160,28 @@ body{
   border: none;
   cursor: pointer;
   border-radius: 10px;
+  margin-top: 5rem;
+  width: 176px;
+  height: 49px;
 }
 
-.button-card a{
+.button-card a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: white;
+  font-size: 24px;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
 }
 
 .card-animal:hover{
   background-color: #C6E1C4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-animal:hover .front-card {

@@ -13,7 +13,7 @@
             $this->conexao = $db;
         }
 
-        public function getIdLivro($id_pagInicio_carrosel){
+        public function getIdpagInicio_carrosel($id_pagInicio_carrosel){
             $query = "SELECT * FROM {$this->tabela} WHERE id = {$this->id_pagInicio_carrosel}";
             $resultado = $this->conexao->query($query);
             return $resultado->fetch_all(MYSQLI_ASSOC);
@@ -42,7 +42,7 @@
                 $query .= $contador != (count($valores)-1) ? $coluna . '= "'. $valor .'", ': $coluna . '= "'. $valor .'" ';
             }
 
-            $query += "WHERE id_livro = {$this->id_pagInicio_carrosel};";
+            $query += "WHERE id_pagInicio_carrosel = {$this->id_pagInicio_carrosel};";
             $resultado = $this->conexao->query($query);
             return $resultado;
         }

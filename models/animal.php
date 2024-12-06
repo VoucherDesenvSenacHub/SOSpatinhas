@@ -6,14 +6,14 @@ class Animal {
     private $conexao;
     private $tabela = 'animal';
 
-    protected $id_animal;
-    protected $nome;
-    protected $raca;
-    protected $descricao;
-    protected $idade;
-    protected $porte;
-    protected $sexo;
-    protected $foto;
+    public $id_animal;
+    public $nome;
+    public $raca;
+    public $descricao;
+    public $idade;
+    public $porte;
+    public $sexo;
+    public $foto;
 
     public function __construct($db) {
         $this->conexao = $db;

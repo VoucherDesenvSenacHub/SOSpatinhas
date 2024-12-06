@@ -155,6 +155,7 @@ button:hover{
     color: #ffffff;
     background-color: #44803f;
     border-radius: 12px;
+    text-decoration: none;
     border: none;
     cursor: pointer;
 }

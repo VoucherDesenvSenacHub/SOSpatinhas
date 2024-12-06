@@ -6,7 +6,7 @@ class Membros {
     public $id_membro; 
     public $nome;
     public $email;
-    public $senha;
+    public $senha; 
     public $telefone;
 
     public function __construct($db){

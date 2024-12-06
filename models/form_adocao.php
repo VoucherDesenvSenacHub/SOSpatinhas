@@ -5,11 +5,11 @@ class formAdocao{
     private $conexao;
     private $tabela = 'formulario_adocao';
 
-    protected $id_formulario_adocao;
-    protected $id_animal;
-    protected $id_usuario;
-    protected $termos;
-    protected $data_adocao;
+    public $id_formulario_adocao;
+    public $id_animal;
+    public $id_usuario;
+    public $termos;
+    public $data_adocao;
 
     public function __construct($db){
         $this->conexao = $db;
@@ -17,9 +17,10 @@ class formAdocao{
 
     
 
+
     public function create(){
         $query = "INSERT INTO {$this->tabela} (id_animal, id_usuario, termos, data_adocao) VALUES (?, ?, ?, ?)";
-        $stmt = $this->conexap->prepare($query);
+        $stmt = $this->conexao->prepare($query);
         $stmt->bind_param("isss", $this->id_animal, $this->id_usuario, $this->termos, $this->data_adocao);
         return $stmt->execute();
     }

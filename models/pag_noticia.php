@@ -3,7 +3,7 @@ require_once "../config/database.php";
 
 class PagNoticia {
     private $conexao;
-    private $tabela = 'pag_noticia'
+    private $tabela = 'pag_noticia';
 
     public $id_noticia;
     public $titulo;

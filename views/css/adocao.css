@@ -46,11 +46,11 @@ body{
 
 
 /*--------------------------------------------------------------------------------*/
-.filter{
+/* .filter{
   margin-bottom: 5rem;
   display: flex;
   gap: 2rem;
-}
+} */
 
 .filter-button{
   background-color: #44803F;
@@ -60,19 +60,31 @@ body{
   border: none;
   cursor: pointer;
   border-radius: 10px;
+  align-self: flex-end;
 }
 
 .filter-button:hover{
   background-color: green;
 }
 
-.form-filter-sexo #sexo-filter, #idade-filter, #porte-filter,#animal-filter{
+ #sexo-select, #idade-select, #porte-select,#animal-select{
   background-color: #C6E1C4;
   border-radius: 10px;
   padding: 16px;
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.container-select{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-filter{
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .filter-option:hover{

@@ -19,48 +19,51 @@
         
 
         <section class="filter">
-            <form method="get" class="form-filter-sexo">
-                <h2>Sexo</h2>
-                <select name="sexo-filter" id="sexo-filter">
-                    <option class="filter-option" value="Selecionar">-- Selecionar --</option>
-                    <option class="filter-option" value="Macho">Macho</option>
-                    <option class="filter-option" value="Fêmea">Fêmea</option>
-                </select>
-            </form>
+            <form method="get" class="form-filter">
 
-            <form method="get" class="form-filter-idade">
-                <h2>Idade</h2>
-                <select name="idade-filter" id="idade-filter">
-                    <option class="filter-option" value="Selecionar">-- Selecionar --</option>
-                    <option class="filter-option" value="-6meses">-6 meses</option>
-                    <option class="filter-option" value="Ate5anos">Até 5 anos</option>
-                    <option class="filter-option" value="Ate10anos">Até 10 anos</option>
-                    <option class="filter-option" value="+10anos">+10 anos</option>
-                </select>
-            </form>
+                <div class="container-select">
+                    <h2>Sexo</h2>
+                    <select name="sexo-filter" id="sexo-select">
+                        <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                        <option class="filter-option" value="Macho">Macho</option>
+                        <option class="filter-option" value="Fêmea">Fêmea</option>
+                    </select>
+                </div>
+                
+                <div class="container-select">
+                    <h2>Idade</h2>
+                    <select name="idade-filter" id="idade-select">
+                        <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                        <option class="filter-option" value="< 1">-1 ano</option>
+                        <option class="filter-option" value="<= 5">Até 5 anos</option>
+                        <option class="filter-option" value=">= 10">Até 10 anos</option>
+                        <option class="filter-option" value="> 10">+10 anos</option>
+                    </select>
+                </div>
+                
+                <div class="container-select">
+                    <h2>Porte</h2>
+                    <select name="porte-filter" id="porte-select">
+                        <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                        <option class="filter-option" value="Pequeno">Pequeno</option>
+                        <option class="filter-option" value="Médio">Médio</option>
+                        <option class="filter-option" value="Grande">Grande</option>
+                    </select>
+                </div>
+                
+                <div class="container-select">
+                    <h2>Animal</h2>
+                    <select name="animal-filter" id="animal-select">
+                        <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                        <option class="filter-option" value="Cachorro">Cachorro</option>
+                        <option class="filter-option" value="Gato">Gato</option>
+                        <option class="filter-option" value="Passaro">Pássaro</option>
+                        <option class="filter-option" value="Roedor">Roedor</option>
+                    </select>
+                </div>
 
-            <form method="get" class="form-filter-porte">
-                <h2>Porte</h2>
-                <select name="porte-filter" id="porte-filter">
-                    <option class="filter-option" value="Selecionar">-- Selecionar --</option>
-                    <option class="filter-option" value="Pequeno">Pequeno</option>
-                    <option class="filter-option" value="Médio">Médio</option>
-                    <option class="filter-option" value="Grande">Grande</option>
-                </select>
+                <input type="submit" value="Filtrar" class="filter-button">
             </form>
-
-            <form method="get" class="form-filter-animal">
-                <h2>Animal</h2>
-                <select name="animal-filter" id="animal-filter">
-                    <option class="filter-option" value="Selecionar">-- Selecionar --</option>
-                    <option class="filter-option" value="Cachorro">Cachorro</option>
-                    <option class="filter-option" value="Gato">Gato</option>
-                    <option class="filter-option" value="Passaro">Pássaro</option>
-                    <option class="filter-option" value="Roedor">Roedor</option>
-                </select>
-            </form>
-
-            <input type="submit" value="Filtrar" class="filter-button">
         </section>
         
 
@@ -81,7 +84,7 @@
 
                 if(isset($_GET['idade-filter']) && $_GET['idade-filter'] != "Selecionar"){
                     $tipoFilter = $banco->escape($_GET['idade-filter']);
-                    $filtros[] = "idade = '$tipoFilter'";
+                    $filtros[] = "idade '$tipoFilter'";
                 }
 
                 if(isset($_GET['porte-filter']) && $_GET['porte-filter'] != "Selecionar"){

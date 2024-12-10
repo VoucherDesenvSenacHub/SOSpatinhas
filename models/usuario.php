@@ -1,12 +1,12 @@
 <?php
 
-require_once "../config/database.php"
+require_once "../config/database.php";
 
 class Usuario{
     private $conexao;
     private $table = 'usuario';
 
-    public $id;
+    public $id_usuario;
     public $nome;
     public $email;
     public $senha;
@@ -30,23 +30,44 @@ class Usuario{
     }
 
 
-    public function Create(){
-        $query = "INSERT INTO {$this->table} (nome,email,senha,data_nasc,cpf,rg,telefone,foto) VALUES ('{$this->nome}','{$this->email}','{$this->senha}','{$this->data_nasc}','{$this->cpf}','{$this->rg}','{$this->telefone}','{$this->foto}','{$this->id_endereco}');"; 
+    public function create(){
+        $query = "INSERT INTO {$this->table} (nome,email,senha,data_nasc,cpf,rg,telefone,foto) VALUES ('{$this->nome}','{$this->email}','{$this->senha}','{$this->data_nasc}','{$this->cpf}','{$this->rg}','{$this->telefone}','{$this->foto}');"; 
         return $this->conexao->query($query);
         
     }
     
-    public function Read() {
+    public function read() {
         $query = "SELECT * FROM {$this->table}"; 
         return $this->conexao->query($query);
     }
     
-    public function Update(){
-        $query = "UPDATE {$this->table} SET nome = ?, email = ?, senha = ?, data_nasc = ?, cpf = ?, rg = ?, telefone = ?, foto = ?, id_endereco = ? WHERE id = ?";
-        return $this->conexao->query($query);
+    public function update($atualizar) {
+        if ($atualizar) {
+            $query = "UPDATE {$this->table} SET ";
+            $colunasArray = array_keys($atualizar);
+            $params = [];
+            $types = '';
+            foreach ($atualizar as $coluna => $valor) {
+                $query .= $coluna . " = ?, ";
+                $params[] = $valor;
+                $types .= 's';  
+            }
+            $query = rtrim($query, ', ') . " WHERE id_usuario = ?";  
+            $stmt = $this->conexao->prepare($query);
+            $params[] = $this->id_usuario; 
+            $types .= 'i';  
+            $stmt->bind_param($types, ...$params);  
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                throw new Exception('Erro ao atualizar ', 999);
+            }
+        } else {
+            throw new Exception('Erro ao atualizar, dados insuficientes', 999);
+        }
     }
     
-    public function Delete(){
+    public function delete(){
         $query = "DELETE FROM {$this->table} WHERE {$this->id}";
         return $this->conexao->query($query);
     }

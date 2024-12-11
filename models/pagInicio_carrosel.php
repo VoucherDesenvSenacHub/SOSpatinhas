@@ -3,7 +3,7 @@
 
     class PagInicio_carrosel{
         private $conexao;
-        private $tabela = 'pagInicio_carrosel';
+        private $tabela = 'paginicio_carrossel';
 
         public $id_pagInicio_carrosel;
         public $foto;
@@ -20,36 +20,43 @@
         }
 
         public function create(){
-            $query = "INSERT INTO {$this->tabela} (foto, texto) VALUES ($this->foto, '$this->texto');";
+            $query = "INSERT INTO {$this->tabela} (foto, texto) VALUES ('$this->foto', '$this->texto');";
             $resultado = $this->conexao->query($query);
             return $resultado;
         }
 
-        public function read($coluna, $valor){
-            $query = "SELECT * FROM {$this->tabela} WHERE {$coluna} = {$valor};";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
+        public function read() {
+            $query = "SELECT * FROM {$this->tabela}"; 
+            return $this->conexao->query($query);
         }
         
-        public function update($valores){
-            $query = "UPDATE {$this->tabela} SET ";
-            $colunasArray = array_keys($valores);
-
-            for($contador = 0; $contador < count($valores); $contador ++){
-                $coluna = $colunasArray[$contador];
-                $valor = $valores[$coluna];
-
-                $query .= $contador != (count($valores)-1) ? $coluna . '= "'. $valor .'", ': $coluna . '= "'. $valor .'" ';
+        public function update($atualizar) {
+            if ($atualizar) {
+                $query = "UPDATE {$this->tabela} SET ";
+                $colunasArray = array_keys($atualizar);
+                $params = [];
+                $types = '';
+                foreach ($atualizar as $coluna => $valor) {
+                    $query .= $coluna . " = ?, ";
+                    $params[] = $valor;
+                    $types .= 's';  
+                }
+                $query = rtrim($query, ', ') . " WHERE id_pagInicio_carrossel = ?";  
+                $stmt = $this->conexao->prepare($query);
+                $params[] = $this->id_pagInicio_carrossel; 
+                $types .= 'i';  
+                $stmt->bind_param($types, ...$params);  
+                if ($stmt->execute()) {
+                    return true;
+                } else {
+                    throw new Exception('Erro ao atualizar ', 999);
+                }
+            } else {
+                throw new Exception('Erro ao atualizar, dados insuficientes', 999);
             }
-
-            $query += "WHERE id_pagInicio_carrosel = {$this->id_pagInicio_carrosel};";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
         }
-
         public function delete(){
-            $query = "DELETE FROM {$this->tabela} WHERE id_pagInicio_carrosel = {$this->id_pagInicio_carrosel};";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
+            $query = "DELETE FROM {$this->tabela} WHERE {$this->id_pagInicio_carrossel}";
+            return $this->conexao->query($query);
         }
     }

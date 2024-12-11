@@ -1,14 +1,14 @@
 <?php
     require_once "../config/database.php";
-
+ 
     class PagInicio_carrosel{
         private $conexao;
         private $tabela = 'paginicio_carrossel';
-
+ 
         public $id_pagInicio_carrosel;
         public $foto;
         public $texto;
-
+ 
         public function __construct($db){
             $this->conexao = $db;
         }
@@ -18,18 +18,18 @@
             $resultado = $this->conexao->query($query);
             return $resultado->fetch_all(MYSQLI_ASSOC);
         }
-
+ 
         public function create(){
             $query = "INSERT INTO {$this->tabela} (foto, texto) VALUES ('$this->foto', '$this->texto');";
             $resultado = $this->conexao->query($query);
             return $resultado;
         }
-
+ 
         public function read() {
-            $query = "SELECT * FROM {$this->tabela}"; 
+            $query = "SELECT * FROM {$this->tabela}";
             return $this->conexao->query($query);
         }
-        
+       
         public function update($atualizar) {
             if ($atualizar) {
                 $query = "UPDATE {$this->tabela} SET ";

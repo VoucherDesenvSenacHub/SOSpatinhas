@@ -1,20 +1,18 @@
 <?php
-require_once "paginicio_carrosel.php";
+require_once "pagQS_banner.php";
 require_once "../config/database.php";
 
 
 $banco = new Banco(); 
 $db = $banco->conectar();
 
-$pgic =  new PagInicio_carrosel($db);
+$ban =  new PagQS_Banner($db);
 
-// try{
-//     $pgic ->foto  = "test.png";
-//     $pgic ->texto  = "text";
-   
+// try{    
+//     $ban->foto  = "test.png";
 
 
-//     if ($pgic-> create()){
+//     if ($ban-> create()){
 //         echo "foi ";
 //     }
 //     else{
@@ -30,14 +28,13 @@ $pgic =  new PagInicio_carrosel($db);
 
 // try {
 //     // Se o método `read()` deve retornar um array ou lista de usuários
-//     $result = $pgic->read(); 
+//     $result = $ban->read(); 
     
 //     // Exibe o resultado de forma legível
 //     if ($result) {
 //         foreach ($result as $user) {
-//             echo "ID: " . $user['id_pagInicio_carrossel'] . "<br>";
+//             echo "ID: " . $user['id_pagQS_Banner'] . "<br>";
 //             echo "foto: " . $user['foto'] . "<br>";
-//             echo "texto: " . $user['texto'] . "<br><br>";
 //         }
 //     } else {
 //         echo "nada encontrado.";
@@ -48,10 +45,10 @@ $pgic =  new PagInicio_carrosel($db);
 
 // try{
 //     $atualizar = [
-//         'texto' => 'rex atualizado'
+//         'foto' => 'rex.png'
 //     ];
-//     $pgic-> id_pagInicio_carrossel = 1;
-//     if($pgic-> update($atualizar)){
+//     $ban-> id_pagQS_Banner = 1;
+//     if($ban-> update($atualizar)){
 //         echo "atualizou pae";
 //     }
 // }
@@ -61,8 +58,8 @@ $pgic =  new PagInicio_carrosel($db);
 // }
 
 try{
-    $pgic ->id_pagInicio_carrossel = 1;
-    if($pgic->delete())
+    $ban ->id_pagQS_Banner = 2;
+    if($ban->delete())
     echo "deletouuuu";
 }
 catch(Exception $e){

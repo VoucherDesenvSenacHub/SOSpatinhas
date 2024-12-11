@@ -3,7 +3,7 @@
 
     class PagQS_Banner{
         private $conexao;
-        private $tabela = 'pagQS_Banner';
+        private $tabela = 'pagqs_banner';
 
         public $id_pagQS_Banner;
         public $foto;
@@ -19,21 +19,41 @@
         }
 
         public function create(){
-            $query = "INSERT INTO {$this->tabela} (foto) VALUES ($this->foto);";
+            $query = "INSERT INTO {$this->tabela} (foto) VALUES ('{$this->foto}');";
             $resultado = $this->conexao->query($query);
             return $resultado;
         }
 
-        public function read($coluna, $valor){
-            $query = "SELECT * FROM {$this->tabela} WHERE {$coluna} = {$valor};";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
+        public function read() {
+            $query = "SELECT * FROM {$this->tabela}";
+            return $this->conexao->query($query);
         }
         
-        public function update($valores){
-            $query = "UPDATE {$this->tabela} SET foto = {$valores} WHERE id_pagQS_Banner = {$this->id_pagQS_Banner};";
-            $resultado = $this->conexao->query($query);
-            return $resultado;
+        
+        public function update($atualizar) {
+            if ($atualizar) {
+                $query = "UPDATE {$this->tabela} SET ";
+                $colunasArray = array_keys($atualizar);
+                $params = [];
+                $types = '';
+                foreach ($atualizar as $coluna => $valor) {
+                    $query .= $coluna . " = ?, ";
+                    $params[] = $valor;
+                    $types .= 's';  
+                }
+                $query = rtrim($query, ', ') . " WHERE id_pagQS_Banner = ?";  
+                $stmt = $this->conexao->prepare($query);
+                $params[] = $this->id_pagQS_Banner; 
+                $types .= 'i';  
+                $stmt->bind_param($types, ...$params);  
+                if ($stmt->execute()) {
+                    return true;
+                } else {
+                    throw new Exception('Erro ao atualizar ', 999);
+                }
+            } else {
+                throw new Exception('Erro ao atualizar, dados insuficientes', 999);
+            }
         }
 
         public function delete(){
@@ -41,4 +61,4 @@
             $resultado = $this->conexao->query($query);
             return $resultado;
         }
-    }
+    }   

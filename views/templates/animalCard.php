@@ -15,7 +15,7 @@
             <p><?= $animal['raca']?></p>
         </header>
         <button class="button-card">
-            <a href="#">Adotar!</a>
+            <a href="informacaoAnimal.php?id=<?= $animal['id_animal'] ?>">Adotar!</a>
         </button>
     </div>
 </div>

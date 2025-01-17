@@ -13,28 +13,34 @@
     <div class="container">
 
     <section id="slider">
-        <div id="slides">
-            <ul id="slide">
-                <li>
-                    <img src="../images/horto-florestal.png" alt="Horto Florestal 1">
-                </li>
-                <li>
-                    <img src="../images/horto-florestal.png" alt="Horto Florestal 2">
-                </li>
-                <li>
-                    <img src="../images/horto-florestal.png" alt="Horto Florestal 3">
-                </li>
-            </ul>
+        <div class="Slides-fade">
+            <img src="../images/horto-florestal.png" alt="Horto Florestal 1" >
+        </div> 
+
+        <div class="Slides-fade">
+            <img src="../images/horto-florestal.png" alt="Horto Florestal 1" >
         </div>
-        <button class="buttonslider" id="esquerda">&lt;</button>
-        <button class="buttonslider" id="direita">&gt;</button>
+
+        <div class="Slides-fade">
+            <img src="../images/horto-florestal.png" alt="Horto Florestal 1" >
+        </div>
+   
+        <!-- <a class="esquerda" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="direita" onclick="plusSlides(1)">&#10095;</a> -->
+
+        <div>
+            <span class="botao" onclick="currentSlide(1)"></span>
+            <span class="botao" onclick="currentSlide(2)"></span>
+            <span class="botao" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class="event-details">
+            <h1>Feira do Auau</h1>
+            <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
+            <button>Compartilhar</button>
+        </div>
     </section>
 
-    <div class="event-details">
-        <h1>Feira do Auau</h1>
-        <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
-        <button>Compartilhar</button>
-    </div>
 
     <div class="carousel">
 
@@ -73,27 +79,38 @@
     </div>
 </div>
 
-<script>
-    let currentSlide = 0;
+    <script>
+    let PrimeiroSlide = 1;
+    mostrarSlide (PrimeiroSlide);
 
-    function showSlide(index) {
-        const slideList = document.querySelector('#slide');
-        const totalSlides = document.querySelectorAll('#slide li').length;
-        currentSlide = (index + totalSlides) % totalSlides;
-        slideList.style.transform = `translateX(-${currentSlide * 100}%)`;
+    funcion OutroSlide(n){
+        mostrarSlide(PrimeiroSlide += n);
     }
 
-    function prevSlide() {
-        showSlide(currentSlide - 1);
+    function SlideAtual(n){
+        mostrarSlide(PrimeiroSlide = n);
     }
 
-    function nextSlide() {
-        showSlide(currentSlide + 1);
+    function mostrarSlide(n){
+        let i;
+        let slides = document.getElementsByClassName("Slides-fade");
+        let botao = document.getElementsByClassName("botao");
+        if (n > slides. length) {PrimeiroSlide = 1}
+        if (n < 1) {PrimeiroSlide = slides.length}
+        for (i = 0; i < slides.length; i++){
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < botao.length; i++){
+            botao[i].className = botao[i].className.replace(" active", "");
+        }
+        slides[PrimeiroSlide-1].style.display = "block";
+        botao[PrimeiroSlide-1].className += " active";
     }
 
-    document.getElementById('esquerda').addEventListener('click', prevSlide);
-    document.getElementById('direita').addEventListener('click', nextSlide);
-  </script>
+    
+
+
+    </script>
 
     <?php include('../templates/footerUser.php')?>
 </body>

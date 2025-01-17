@@ -41,51 +41,15 @@ body{
 
 .slider {
     position: relative;
-    max-width: 520px;
+    max-width: 560px;
     overflow: hidden;
     border-radius: 15px;
     margin-bottom: 40px;
 }
+
+.PrimeiroSlide-
  
-#slides {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 300%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
- 
-.slide {
-    flex-shrink: 0;
-}
-
-.slide img {
-    width: auto;
-    display: block;
-}
-
-.slider-nav {
-    position: sticky;
-    top: 20px;
-    left: 0px;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex-start;
-    justify-content: space-between;
-}
-
-.slider-nav button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 10
-}
-
-  .slider-nav img {
-    width: 40px;
-    height: 40px;
-  }
+//slide
 
   .event-details {
     text-align: center;

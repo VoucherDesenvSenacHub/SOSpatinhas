@@ -7,7 +7,7 @@ body{
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
 }
 .container{
     max-width: 1500px;
@@ -43,14 +43,17 @@ body{
     position: relative;
     max-width: 520px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 40px;
 }
  
-.slides {
+#slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
     width: 300%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
  
 .slide {
@@ -76,6 +79,7 @@ body{
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 10
 }
 
   .slider-nav img {
@@ -131,14 +135,13 @@ body{
     align-items: center;
     background-color: none;
     border-radius: 15px;
-    box-shadow: 0 4px 6px #0000001a;
     padding: 10px;
     text-align: center;
   }
 
   .card img {
-    width: 100%;
-    height: 150px;
+    width: 318px;
+    height: 320px;
     border-radius: 15px;
     object-fit: cover;
   }
@@ -167,3 +170,5 @@ body{
   .local span {
     margin-right: 5px;
   }
+
+  

@@ -1,51 +1,76 @@
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 body{
-    background-color: rgb(198, 225, 196);
-    background-image: url("../images/Patinhas.png");
-    background-size: 50%;
+  background-color: rgb(198, 225, 196);
+  background-image: url("../images/Patinhas.png");
+  background-size: 50%;
 }
 .container{
-    max-width: 1500px;
-    margin: auto;
-    padding: 12px;
+  max-width: 1500px;
+  margin: auto;
+  padding: 12px;
 }
 .corpo{
-    color: #fff;
-    background-color: rgb(68, 128, 63);
-    width: 1124px;
-    padding: 389px;
-    display: flex;
-    text-align: center; 
-    justify-content: center;
-    align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#pixEValores{
+  display: flex;
+  flex-direction: row;
+}
+
+.pontoArrecadacao{
+  display: flex;
+  background-color: rgb(68, 128, 63);
+  color: #fff;
+  column-gap: 6rem;
+  width: 1500px;
+}
+
+.imagemEndereco{
+  margin-left: 6rem;
+}
+
+.pontoArrecadacaoText{
+  margin-right: 6rem;
 }
 
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f2f2f2;
-    color: #333;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  .container {
-    width: 1024px;
-    /* margin: 0 auto; */
-    margin-top: 20px;
-    padding: 0 20px;
-    height: 389px;
 
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
   
   h1, h2, h3 {
     text-align: center;
@@ -57,26 +82,30 @@ body {
     margin-bottom: 20px;
   }
   
-  .hero {
+  .pontoArrecadacao {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 40px 0;
   }
   
-  .hero img {
-    width: 400px;
+  /* incluir a imagem do cavalo*/
+  .pontoArrecadacao img {
+    width: 400px; 
     height: auto;
   }
-  
-  .hero-text {
+
+
+  .valoresEPix{
+    padding: 40px 0;
+
+    background-color: #fff;
+  }
+
+  .pontoArrecadacaoText {
     text-align: left;
   }
-  
-  .valores-e-pix {
-    padding: 40px 0;
-  }
-  
+
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -120,13 +149,5 @@ body {
   }
   
   .info {
-    text-align: center;
-
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
     text-align: center;
   }

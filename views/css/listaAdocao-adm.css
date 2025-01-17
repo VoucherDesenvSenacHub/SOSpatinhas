@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f9f4;
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+}
+
+.conteiner {
+    padding: 20px;
+    text-align: center;
+}
+
+.pesguisar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.lista-adocao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.animal {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.animal img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.animal h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.animal button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.animal button:hover {
+    background-color: #45a049;
+}
+
+
+.altPag {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.altPag a{
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+}
+
+.altPag a.active{
+    background-color: #4caf50;
+    color: white;
+}
+
+.altPag a:hover{
+    background-color: #ddd;
+}
+
+.botao-add {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.botao-add:hover {
+    background-color: #45a049;
+}

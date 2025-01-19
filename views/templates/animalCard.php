@@ -3,7 +3,7 @@
 
         <img src="../images/destaque-gata-tricolor.webp" alt="">
         <div class="titulo">
-            <h1 class="nome"><?= $animal['nome']?></h1class>
+            <!-- <h1 class="nome"><?= $animal['nome']?></h1class> -->
         </div>
     </div>
     <div class="back-card">

@@ -41,7 +41,8 @@
                 <div class="item">
                     <img src="../images/eventosImg/eventos1.png" class="eventos"alt="">
                     <div class="box-event">
-                        <h1>Feira do AuAu</h1>                
+                        <h1>Feira do AuAu</h1>
+                        <p>feira do arrecadativa de moda.</p>
                     </div>
                 </div>
                 <div class="item">

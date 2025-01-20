@@ -83,7 +83,7 @@
 
                         $idAnimal = $_GET['id'];
 
-                        if($idAnimal != null){$query = 'SELECT * FROM foto where id_animal = ' . $idAnimal;}
+                        if($idAnimal != null){$query = 'SELECT caminho_foto FROM foto where id_animal = ' . $idAnimal;}
                         else{}
 
                         $resultado = $banco->query($query);
@@ -93,7 +93,7 @@
                             
                             ?>
                             <div class="item">
-                                <img src="../images/slide1.png" alt="">
+                                <img src="" alt="">
                             </div>
                             <?php
                         }

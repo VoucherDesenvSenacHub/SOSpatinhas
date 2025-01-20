@@ -22,22 +22,100 @@ body{
     align-items: center;
 }
 
-.conteudoForm{
+.conteudoForm {
     display: flex;
-    flex-direction: row;
-    gap: 10rem;
+    justify-content: space-between;
+    width: 90%;
+    padding: 20px;
+    column-gap: 20rem;
 }
 
-.col1{
+.col1, .col2 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    width: 488px;
 }
 
-.col2{
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.switchBtn {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.switchBtn input {
+    display: none;
+}
+
+.switchBtn label {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.switchBtn input:checked + label {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancelarBtn {
+    background-color: #f44336;
+    color: white;
+    margin-top: 10px;
+}
+
+button a{
+    text-decoration: none;
+    color: #eee;
+    width: 100%;
+    height: 100%;
+}
+
+/* input[type="file"] {
+    display: none;
+} */
+
+label[for="image"] {
+    display: block;
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+}
+
+label[for="image"]:hover {
+    background-color: #ddd;
 }
 
 

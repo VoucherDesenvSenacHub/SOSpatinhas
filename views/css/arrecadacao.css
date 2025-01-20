@@ -23,25 +23,73 @@ body{
     align-items: center;
 }
 
+#section{
+    display:inline;
+}
 #sectionfotoEpix{
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+#sectionfotoEpix h2{
+    font-size: 35px;
+    text-align: left;
+    padding: 0px 0px 10px 15px;
 }
 
 #sectionPix{
-    display: flex;
+    display: inline;
 }
+
 #localEusuario{
     display: flex;
 }
+#nomeAnimal{
+    font-size: 30px;
+    font-weight: 600;
+}
+#userElocal{
+    display: inline;
+    gap: 0.5rem;
+    padding: 0px 0px 10px 10px;
+}
 #divLocalUsuario{
     display: flex;
+    gap: 0.5rem;
 }
+.textoLocalUsuario{
+    font-size: 13px;
+}
+
 #pix{
+    display: inline;
+    text-align: center;
+}
+#banco{
+    display: flex;
+    background-color: #E2F8E0;
+    width: 390px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+}
+#numeroBanco{
     display: flex;
 }
-#numeroEfoto{
+#infosConta{
+    display: inline;
+}
+
+#barraArrecadacao{
     display: flex;
+}
+
+#descricaoArrecadacao{
+    font-size: 20px;
+    width: 1000px;
+    text-align: justify;
+    padding: 15px 0px 10px 0px;
 }
 
 /* iamgens */

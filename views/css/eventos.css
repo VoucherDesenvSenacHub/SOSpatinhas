@@ -126,3 +126,12 @@ body{
     color: white; /* Cor do texto */
     font-size: 16px; /* Tamanho do texto */
 }
+/* Ajuste para o título */
+.box-event h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 30px 10px;
+}
+
+/* Ajuste para o parágrafo */

@@ -19,7 +19,7 @@
         <div class="imgPontoArrecadacao">
           <img src="../images/valinhos07 1.png" alt="Imagem da ONG Sos Patinhas" style="width: 453px; height: 283px;">
         </div>
-        <div class="hero-text">
+        <div class="descricaoPonto">
           <h2>Ponto de Arrecadação</h2>
           <p>"Seu gesto de doação é o elo que une corações humanos e patas amigas, criando um mundo mais compassivo para
             todos."</p>

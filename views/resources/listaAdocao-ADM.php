@@ -3,69 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de adocoes - ADM</title>
+    <title>Lista de Adoções - ADM</title>
     <link rel="stylesheet" href="../css/listaAdocao-adm.css">
 </head>
 <body>
     <?php include('../templates/navbarUser.php')?>
 
     <div class="conteiner">
-        <h1>Lista de Adocões</h1>
+        <h1>Lista de Adoções</h1>
 
-        <div class="pesguisar">
+        <div class="pesquisar">
             <input type="text" placeholder="Pesquisar">
-            <!-- <img src="../images/lupa_pesguisa.png" alt=""> -->
         </div>
+        
         <div class="lista-adocao">
             <div class="animal">
-                <img src="#" alt="#">
-                <h3>Animal 1</h3>
+                <img src="../images/Rectangle 71.png" alt="Rochele">
+                <h3>Rochele</h3>
                 <button>Excluir</button>
             </div>
-        
-
-        
             <div class="animal">
-                <img src="#" alt="#">
-                <h3>Animal 1</h3>
+                <img src="../images/Toby.png" alt="Toby">
+                <h3>Toby</h3>
                 <button>Excluir</button>
             </div>
-        
-
-        
             <div class="animal">
-                <img src="#" alt="#">
-                <h3>Animal 2</h3>
+                <img src="../images/Rumi.png" alt="Rumi">
+                <h3>Rumi</h3>
                 <button>Excluir</button>
             </div>
-        
-
-        
             <div class="animal">
-                <img src="#" alt="#">
-                <h3>Animal 3</h3>
+                <img src="../images/Nobre.png" alt="Nobre">
+                <h3>Nobre</h3>
                 <button>Excluir</button>
             </div>
-        
-
-        
             <div class="animal">
-                <img src="#" alt="#">
-                <h3>Animal 4</h3>
+                <img src="../images/Sir Dougg.png" alt="Sir Dougg">
+                <h3>Sir Dougg</h3>
                 <button>Excluir</button>
             </div>
-        
-
-        
             <div class="animal">
-                <img src="#" alt="#">
-                <h3>Animal 5</h3>
-                <button>Excluir</button>
-            </div>
-        
-            <div class="animal">
-                <img src="#" alt="#">
-                <h3>Animal 6</h3>
+                <img src="../images/Nigel.png" alt="Nigel">
+                <h3>Nigel</h3>
                 <button>Excluir</button>
             </div>
         </div>
@@ -75,13 +54,12 @@
             <a href="#" class="active">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
-            <a href="#">&gt</a>
+            <a href="#">&gt;</a>
         </div>
     </div>
 
     <button class="botao-add">+</button>
 
     <?php include('../templates/footerUser.php')?>
-
 </body>
 </html>

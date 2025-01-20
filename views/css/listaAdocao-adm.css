@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f4f9f4;
@@ -15,10 +17,24 @@ body {
     text-align: center;
 }
 
-.pesguisar {
+.conteiner h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.pesquisar {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+.pesquisar input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    font-size: 1em;
 }
 
 .lista-adocao {
@@ -34,17 +50,21 @@ body {
     overflow: hidden;
     text-align: center;
     padding: 10px;
+    position: relative;
 }
 
 .animal img {
     width: 100%;
-    height: auto;
+    height: 150px;
+    object-fit: cover;
     border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
 }
 
 .animal h3 {
     margin: 10px 0;
     font-size: 1.2em;
+    color: #333;
 }
 
 .animal button {
@@ -61,29 +81,28 @@ body {
     background-color: #45a049;
 }
 
-
 .altPag {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
 
-.altPag a{
+.altPag a {
     text-decoration: none;
     margin: 0 5px;
     padding: 10px 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc00;
     border-radius: 5px;
     color: #333;
 }
 
-.altPag a.active{
+.altPag a.active {
     background-color: #4caf50;
     color: white;
 }
 
-.altPag a:hover{
-    background-color: #ddd;
+.altPag a:hover {
+    background-color: #4caf50;
 }
 
 .botao-add {

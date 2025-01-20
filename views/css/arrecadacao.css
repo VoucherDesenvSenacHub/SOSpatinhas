@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
+    font-family: 'Inter', sans-serif;
 }
 body{
     background-color: rgb(198, 225, 196);
@@ -20,4 +21,44 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+#sectionfotoEpix{
+    display: flex;
+    text-align: center;
+}
+
+#sectionPix{
+    display: flex;
+}
+#localEusuario{
+    display: flex;
+}
+#divLocalUsuario{
+    display: flex;
+}
+#pix{
+    display: flex;
+}
+#numeroEfoto{
+    display: flex;
+}
+
+/* iamgens */
+.iconeInfo{
+    width: 15px;
+    height: 15px;
+}
+#qrcode{
+    width: 160px;
+    height: 160px;
+}
+#imagemBanco{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+#fotoArrecadacao{
+    width: 550px;
+    height: auto;
 }

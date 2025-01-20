@@ -25,7 +25,7 @@ body{
 
 .container{
     max-width: 1500px;
-    margin: 0 Sauto;
+    margin: 0 auto;
     padding: 25px;
     background-color: #FFFFFF;
 }
@@ -39,17 +39,49 @@ body{
     align-items: center;
 }
 
-.slider {
-    position: relative;
-    max-width: 560px;
+/* .Slides-fade{
+  display: none;
+} */
+
+#slideshow-container{
+    position: absolute;
+    top: 50px;
+    max-width: 670px;
+    height: 400px;
     overflow: hidden;
-    border-radius: 15px;
-    margin-bottom: 40px;
+
 }
 
-.PrimeiroSlide-
- 
-//slide
+.Slides-fade img{
+  width: 528px;
+  height: 360px;
+}
+
+
+.botao{
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, botao:hover{
+  background-color: #717171;
+}
+
+.Slides-fade{
+  animation-name: fade ;
+  animation-duration: 1.5s;
+}
+
+@keyframes Slides-fade{
+  from{opacity: .4;}
+  to{opacity: 1;}
+}
 
   .event-details {
     text-align: center;

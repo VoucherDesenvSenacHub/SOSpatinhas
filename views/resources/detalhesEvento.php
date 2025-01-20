@@ -11,35 +11,33 @@
     <?php include('../templates/navbarUser.php')?>
 
     <div class="container">
+        
+    <div id="slideshow-container">
 
-    <section id="slider">
         <div class="Slides-fade">
             <img src="../images/horto-florestal.png" alt="Horto Florestal 1" >
         </div> 
 
         <div class="Slides-fade">
-            <img src="../images/horto-florestal.png" alt="Horto Florestal 1" >
+            <img src="../images/horto-florestal.png" alt="Horto Florestal 2" >
         </div>
 
         <div class="Slides-fade">
-            <img src="../images/horto-florestal.png" alt="Horto Florestal 1" >
+            <img src="../images/horto-florestal.png" alt="Horto Florestal 3" >
         </div>
-   
-        <!-- <a class="esquerda" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="direita" onclick="plusSlides(1)">&#10095;</a> -->
 
         <div>
             <span class="botao" onclick="currentSlide(1)"></span>
             <span class="botao" onclick="currentSlide(2)"></span>
             <span class="botao" onclick="currentSlide(3)"></span>
         </div>
-
         <div class="event-details">
             <h1>Feira do Auau</h1>
             <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
             <button>Compartilhar</button>
         </div>
-    </section>
+        
+    </div>
 
 
     <div class="carousel">
@@ -95,7 +93,7 @@
         let i;
         let slides = document.getElementsByClassName("Slides-fade");
         let botao = document.getElementsByClassName("botao");
-        if (n > slides. length) {PrimeiroSlide = 1}
+        if (n > slides.length) {PrimeiroSlide = 1}
         if (n < 1) {PrimeiroSlide = slides.length}
         for (i = 0; i < slides.length; i++){
             slides[i].style.display = "none";

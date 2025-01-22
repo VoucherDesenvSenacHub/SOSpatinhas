@@ -26,23 +26,73 @@ body{
     border-radius: 8px;
 }
 
-//SLIDE   
+
+.slideshow-container{
+  width: 528px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.EventoSlides{
+  width: 528px;
+  height: 360px;
+  display: none;
+}
+
+.btn-white{
+  text-align: center;
+}
+
+.botao{
+  cursor: pointer;
+  padding: 0;
+  margin: 0 2px;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid #ccc
+}
+
+.active, .botao:hover{
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .event-details {
-  text-align: center;
-  padding: 20px;
-  margin: 20px 0;
+  text-align: left;
+  height: 360px;
+  width: 528px;
 }
 
 .event-details h1 {
   margin-bottom: 10px;
   color: #333;
-  font-size: 24px;
+  font-size: 25px;
+  width: 528px;
 }
 
   .event-details p {
     color: #000000;
     margin-bottom: 20px;
+    font-size: 15px;
+    width: 528px;
   }
 
   .event-details button {
@@ -52,6 +102,8 @@ body{
     border: none;
     border-radius: 12px;
     cursor: pointer;
+    font-size: 20px;
+  
   }
 
   .carousel-container {

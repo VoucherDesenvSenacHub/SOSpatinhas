@@ -13,11 +13,11 @@
   include('../templates/navbarUser.php');
   ?>
   
-  <section class="corpo container">
+  <section class="corpoContainer">
     <section class="pontoArrecadacao">
       <section class="infoDestaque">
         <div class="imgPontoArrecadacao">
-          <img src="../images/valinhos07 1.png" alt="Imagem da ONG Sos Patinhas" style="width: 453px; height: 283px;">
+          <img src="../images/valinhos07 1.png" alt="Imagem da ONG Sos Patinhas" style="width: 100%; height:  auto; max-width: 450px;">
         </div>
         <div class="descricaoPonto">
           <h2>Ponto de Arrecadação</h2>
@@ -66,23 +66,18 @@
                 <h3>Kit Vacinação</h3>
                 <p>R$ 40</p>
               </div>
-          </div>
-        </div>
-        <div class="qrCode">
-          <h2>Pix QR Code ou CNPJ</h2>
-
-          <div class="qrcode">
-            <img src="../images/imagem_qrcode.png" alt="QR Code para Doação">
-            <p>ChaveCNPJ: XX. XXX. XXX/0001-XX</p>
-
-            <div class="info">
-              <h3>Sos Patinhas</h3>
-
-              <div class="dados-conta">
-                <p>Conta: 198655-4</p>
-                <p>Agência: 1193</p>
-              </div>
             </div>
+          </div>
+
+        <div class="qrcode">
+          <h2>Pix QR Code ou CNPJ</h2>
+          <img src="../images/imagem_qrcode.png" alt="QR Code para Doação">
+          <p>ChaveCNPJ: XX. XXX. XXX/0001-XX</p>
+
+          <div class="dadosConta">
+            <h3>Sos Patinhas</h3>
+            <p>Conta: 198655-4</p>
+            <p>Agência: 1193</p>
           </div>
         </div>
       </section>

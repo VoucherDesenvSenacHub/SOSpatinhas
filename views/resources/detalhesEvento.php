@@ -12,32 +12,28 @@
 
     <div class="container">
         
-    <div id="slideshow-container">
-    
-    <div class="slideshow">
-        <div class="Slides-fade">
-            <img src="../images/horto-florestal.png" alt="Horto Florestal 1">
-        </div>
-        <div class="Slides-fade">
-            <img src="../images/horto-florestal.png" alt="Horto Florestal 2">
-        </div>
-        <div class="Slides-fade">
-            <img src="../images/horto-florestal.png" alt="Horto Florestal 3">
-        </div>
+    <div class="slideshow-container">
 
-        <div class="carousel-controls">
-            <span class="botao" onclick="SlideAtual(1)"></span>
-            <span class="botao" onclick="SlideAtual(2)"></span>
-            <span class="botao" onclick="SlideAtual(3)"></span>
-        </div>
+      <img class= "EventoSlides" src="../images/horto-florestal.png" alt="Horto Florestal 1">
+      <img class= "EventoSlides" src="../images/horto-florestal.png" alt="Horto Florestal 2">
+      <img class= "EventoSlides" src="../images/horto-florestal.png" alt="Horto Florestal 3">
+
+      <div class="btn-white">
+      <span class="botao" onclick="SlideAtual(1)" > </span>
+      <span class="botao" onclick="SlideAtual(2)" > </span>
+      <span class="botao" onclick="SlideAtual(3)" > </span>
+      </div>
+      
+      
+      <div class="event-details">
+          <h1>Feira do Auau</h1>
+          <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
+          <button>Compartilhar</button>
+      </div>
+      
     </div>
 
-    <div class="event-details">
-        <h1>Feira do Auau</h1>
-        <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
-        <button>Compartilhar</button>
-    </div>
-    </div>
+
 
 
     <div class="carousel-container">
@@ -80,60 +76,58 @@
   </div>
 </div>
 
-</div>
-
     <script> 
-    // let PrimeiroSlide = 1;
-    // mostrarSlide (PrimeiroSlide);
+    var PrimeiroSlide = 1;
+    mostrarSlide (PrimeiroSlide);
 
-    // function OutroSlide(n){
-    //     mostrarSlide(PrimeiroSlide += n);
-    // }
-
-    // function SlideAtual(n){
-    //     mostrarSlide(PrimeiroSlide = n);
-    // }
-
-    // function mostrarSlide(n){
-    //     let i;
-    //     let slides = document.getElementsByClassName("Slides-fade");
-    //     let botao = document.getElementsByClassName("botao");
-    //     if (n > slides.length) {PrimeiroSlide = 1}
-    //     if (n < 1) {PrimeiroSlide = slides.length}
-    //     for (i = 0; i < slides.length; i++){
-    //         slides[i].style.display = "none";
-    //     }
-    //     for (i = 0; i < botao.length; i++){
-    //         botao[i].className = botao[i].className.replace(" active", "");
-    //     }
-    //     slides[PrimeiroSlide-1].style.display = "block";
-    //     botao[PrimeiroSlide-1].className += " active";
-    // }
-
-    const track = document.querySelector('.carousel-track');
-    const prevButton = document.querySelector('.carousel-btn.prev');
-    const nextButton = document.querySelector('.carousel-btn.next');
-    
-    let currentIndex = 0;
-    
-    function updateCarousel() {
-      const cardWidth = document.querySelector('.card').offsetWidth;
-      track.style.transform = `translateX(-${currentIndex * (cardWidth + 10)}px)`;
+    function OutroSlide(n){
+        mostrarSlide(PrimeiroSlide += n);
     }
+
+    function SlideAtual(n){
+        mostrarSlide(PrimeiroSlide = n);
+    }
+
+    function mostrarSlide(n){
+        var i;
+        var slides = document.getElementsByClassName("EventoSlides");
+        var botao = document.getElementsByClassName("botao");
+        if (n > slides.length) {PrimeiroSlide = 1}
+        if (n < 1) {PrimeiroSlide = slides.length}
+        for (i = 0; i < slides.length; i++){
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < botao.length; i++) {
+          botao[i].classList.remove("active");
+      }
+        slides[PrimeiroSlide-1].style.display = "block";
+        botao[PrimeiroSlide - 1].classList.add("active");
+    }
+
+    // const track = document.querySelector('.carousel-track');
+    // const prevButton = document.querySelector('.carousel-btn.prev');
+    // const nextButton = document.querySelector('.carousel-btn.next');
+    
+    // let currentIndex = 0;
+    
+    // function updateCarousel() {
+    //   const cardWidth = document.querySelector('.card').offsetWidth;
+    //   track.style.transform = `translateX(-${currentIndex * (cardWidth + 10)}px)`;
+    // }
     
     
-    prevButton.addEventListener('click', () => {
-      currentIndex = Math.max(currentIndex - 1, 0);
-      updateCarousel();
-    });
+    // prevButton.addEventListener('click', () => {
+    //   currentIndex = Math.max(currentIndex - 1, 0);
+    //   updateCarousel();
+    // });
     
-    nextButton.addEventListener('click', () => {
-      const cardCount = document.querySelectorAll('.card').length;
-      const visibleCards = Math.floor(track.offsetWidth / (document.querySelector('.card').offsetWidth + 10));
-      currentIndex = Math.min(currentIndex + 1, cardCount - visibleCards);
-      updateCarousel();
-    });
-    window.addEventListener('resize', updateCarousel);
+    // nextButton.addEventListener('click', () => {
+    //   const cardCount = document.querySelectorAll('.card').length;
+    //   const visibleCards = Math.floor(track.offsetWidth / (document.querySelector('.card').offsetWidth + 10));
+    //   currentIndex = Math.min(currentIndex + 1, cardCount - visibleCards);
+    //   updateCarousel();
+    // });
+    // window.addEventListener('resize', updateCarousel);
 
 
 

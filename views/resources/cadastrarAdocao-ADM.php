@@ -58,8 +58,19 @@
                     <input type="text" name="name" placeholder="Nome do Animal" required>
                     <input type="text" name="type" placeholder="Tipo do Animal" required>
                     <input type="text" name="raca" placeholder="Raça">
-                    <input type="text" name="porte" placeholder="Porte"> <!-- change to dropbox -->
-                    <input type="number" name="age" placeholder="Idade"> <!-- change to dropbox/ reference: adocao.php --> 
+                    <select name="porte" id="porte-select" placeholder="Porte">
+                        <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                        <option class="filter-option" value="Pequeno">Pequeno</option>
+                        <option class="filter-option" value="Médio">Médio</option>
+                        <option class="filter-option" value="Grande">Grande</option>
+                    </select> 
+                    <select name="age" id="idade-select" placeholder="Idade">
+                        <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                        <option class="filter-option" value="< 1">-1 ano</option>
+                        <option class="filter-option" value="<= 5">Até 5 anos</option>
+                        <option class="filter-option" value="<= 10">Até 10 anos</option>
+                        <option class="filter-option" value="> 10">+10 anos</option>
+                    </select>
                     <textarea name="descricao" placeholder="Descrição"></textarea>
                 </div>
     

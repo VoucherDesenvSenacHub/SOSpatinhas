@@ -7,12 +7,14 @@ body{
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
+    background-repeat: no-repeat; /*ver*/
     font-family: 'Inter', sans-serif;
 }
 .container{
     max-width: 1500px;
-    margin: auto;
-    padding: 12px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #FFFFFF;
 }
 .corpo{
     background-color: #ffffff;
@@ -21,78 +23,23 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
-}
-
-.container{
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 25px;
-    background-color: #FFFFFF;
-}
-
-.corpo{
-    background-color: rgb(255, 255, 255);
-    width: 1500px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .Slides-fade{
-  display: none;
-} */
-
-#slideshow-container{
-    position: absolute;
-    top: 50px;
-    max-width: 670px;
-    height: 400px;
-    overflow: hidden;
-
-}
-
-.Slides-fade img{
-  width: 528px;
-  height: 360px;
-}
-
-
-.botao{
-  cursor: pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, botao:hover{
-  background-color: #717171;
-}
-
-.Slides-fade{
-  animation-name: fade ;
-  animation-duration: 1.5s;
-}
-
-@keyframes Slides-fade{
-  from{opacity: .4;}
-  to{opacity: 1;}
-}
-
-  .event-details {
-    text-align: center;
     padding: 20px;
-    margin: 20px 0;
-  }
+    border-radius: 8px;
+}
 
-  .event-details h1 {
-    margin-bottom: 10px;
-    color: #333;
-  }
+//SLIDE   
+
+.event-details {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.event-details h1 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 24px;
+}
 
   .event-details p {
     color: #666;
@@ -108,63 +55,104 @@ body{
     cursor: pointer;
   }
 
-  .carousel {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 10px;
+  .carousel-container {
+    text-align: left;
+    margin: 20px;
   }
-
-  .carousel-item {
-    flex: 0 0 auto;
-    width: 300px;
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 8px;
+  
+  .carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 30px;
+  }
+  
+  .card {
+    position: relative;
+    flex: 0 0 300px;
+    border-radius: 15px;
+    overflow: hidden;
     box-shadow: 0 4px 6px #0000001a;
   }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: none;
-    border-radius: 15px;
-    padding: 10px;
-    text-align: center;
-  }
-
+  
   .card img {
-    width: 318px;
-    height: 320px;
-    border-radius: 15px;
+    width: 360px;
+    height: 330px;
     object-fit: cover;
   }
-
+  
   .card-info {
-    margin-top: 10px;
-    background-color: #44803F;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 10px;
+    height: 97px; 
+    background: #44803F;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
   }
-
+  
   .card-info h3 {
-    margin-bottom: 5px;
-    color: #FFFFFF;
+    margin: 0 0 5px;
+    font-size: 16px;
+    text-shadow: 2px 2px 4px #000000b3;
   }
-
+  
   .card-info p {
-    margin-bottom: 10px;
-    color: #FFFFFF;
+    margin: 0;
+    font-size: 14px;
+    text-shadow: 2px 2px 4px #000000b3;
   }
-
+  
   .local {
     display: flex;
     align-items: center;
-    color: #FFFFFF;
+    font-size: 15px;
+    text-shadow: 2px 2px 4px #000000b3;
   }
-
-  .local span {
-    margin-right: 5px;
+  
+  .local img {
+    width: 20px;
+    height: 20px; 
+    margin-right: 5px; 
+    vertical-align: middle;
   }
-
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    z-index: 2;
+  }
+  
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
+  
+  .carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
   

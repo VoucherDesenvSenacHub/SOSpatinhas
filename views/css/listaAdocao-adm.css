@@ -2,60 +2,83 @@
     padding: 0;
     margin: 0;
     border: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: 'Inter', sans-serif;
-    background-color: #f4f9f4;
+}
+body{
+    background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
 }
 
-.conteiner {
-    padding: 20px;
-    text-align: center;
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-.conteiner h1 {
-    margin-bottom: 20px;
-    font-size: 2.5em;
-    color: #333;
+.container{
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+.corpo{
+    background-color: rgb(255, 255, 255);
+    width: 1500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    position: relative;
 }
 
 .pesquisar {
+    position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;
 }
 
 .pesquisar input {
-    width: 50%;
-    padding: 10px;
+    width: 690px;
+    height: 35px;
+    padding: 5px 15px 5px 40px;
+    font-size: 1.2em;
     border: 1px solid #ccc;
     border-radius: 60px;
-    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.pesquisar .lupa{
+    position: absolute;
+    left: 10px;
+    color: #888;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 .lista-adocao {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    position: relative;
 }
 
 .animal {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 10px;
-    position: relative;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.animal:hover {
+    transform: scale(1.05);
 }
 
 .animal img {
     width: 100%;
-    height: 150px;
+    height: auto;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
@@ -70,9 +93,11 @@ body {
 .animal button {
     background-color: #4caf50;
     color: white;
+    width: 100%;
+    height: 40px;
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 9px;
     cursor: pointer;
     font-size: 1em;
 }
@@ -81,41 +106,22 @@ body {
     background-color: #45a049;
 }
 
-.altPag {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
 
-.altPag a {
-    text-decoration: none;
-    margin: 0 5px;
-    padding: 10px 15px;
-    border: 1px solid #cccccc00;
-    border-radius: 5px;
-    color: #333;
-}
-
-.altPag a.active {
-    background-color: #4caf50;
-    color: white;
-}
-
-.altPag a:hover {
-    background-color: #4caf50;
+.botao-add-container {
+    position: absolute;
+    top: 10px;
+    right: -65px;
+    
 }
 
 .botao-add {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
     background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     line-height: 50px;
     cursor: pointer;
@@ -125,3 +131,35 @@ body {
 .botao-add:hover {
     background-color: #45a049;
 }
+
+
+.altPag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.altPag a {
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #cccccc00;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.altPag a.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+.altPag a:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+
+

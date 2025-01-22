@@ -1,44 +1,3 @@
-<?php
-    require_once '../../config/database.php';
-    $banco = new Banco();
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        try{
-            $name = isset($_POST['name']) ? $_POST['name'] : null;
-            $type = isset($_POST['type']) ? $_POST['type'] : null;
-            $raca = isset($_POST['raca']) ? $_POST['raca'] : null;
-            $porte = isset($_POST['porte']) ? $_POST['porte'] : null;
-            $descricao = isset($_POST['descricao']) ? $_POST['descricao'] : null;
-            $tags = isset($_POST['tags']) ? $_POST['tags'] : null;
-            $age = isset($_POST['age']) ? $_POST['age'] : null;
-            $sexo = isset($_POST['sexo']) ? $_POST['sexo'] : null;
-            $target_dir = "uploads/";
-            if (!is_dir($target_dir)) {
-                mkdir($target_dir, 0777, true);
-            }
-    
-            $image_name = isset($_FILES["image"]["name"]) ? basename($_FILES["image"]["name"]) : null;
-            $target_file = $image_name ? $target_dir . time() . "_" . $image_name : null;
-    
-            if ($image_name) {
-                if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                    $sql1 = "INSERT INTO animal (nome, tipo, raca, porte, descricao, tags, idade, sexo) 
-                            VALUES ('$name', '$type', '$raca', '$porte', '$descricao', '$tags', $age, '$sexo')";
-                    $sql2 = "INSERT INTO foto (id_animal, caminho_foto)
-                            VALUES (1, '$target_file')";
-                    $banco->query($sql1);
-                    $banco->query($sql2);
-                    
-                } else {
-                    echo "<script>alert('Erro: " . $e->getMessage() . "');</script>";
-                }
-            }
-
-        }catch (Exception $e) {
-            echo "<script>alert('Erro: " . $e->getMessage() . "');</script>";
-        }
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,29 +15,29 @@
             <div class="conteudoForm">
                 <div class="col1">
                     <input type="text" name="name" placeholder="Nome do Animal" required>
-                    <input type="text" name="type" placeholder="Tipo do Animal" required>
-                    <input type="text" name="raca" placeholder="Raça">
-                    <select name="porte" id="porte-select" placeholder="Porte">
-                        <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                    <input type="text" name="tipo" placeholder="Tipo do Animal" required>
+                    <input type="text" name="raca" placeholder="Raça" required>
+                    <select name="porte" id="porte-select" placeholder="Porte" required>
+                        <option class="filter-option" value="" selected disabled hidden>-- Porte --</option>
                         <option class="filter-option" value="Pequeno">Pequeno</option>
                         <option class="filter-option" value="Médio">Médio</option>
                         <option class="filter-option" value="Grande">Grande</option>
                     </select> 
-                    <select name="age" id="idade-select" placeholder="Idade">
-                        <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                    <select name="idade" id="idade-select" required>
+                        <option class="filter-option" value="" selected disabled hidden>-- Idade --</option>
                         <option class="filter-option" value="< 1">-1 ano</option>
                         <option class="filter-option" value="<= 5">Até 5 anos</option>
                         <option class="filter-option" value="<= 10">Até 10 anos</option>
                         <option class="filter-option" value="> 10">+10 anos</option>
                     </select>
-                    <textarea name="descricao" placeholder="Descrição"></textarea>
+                    <textarea name="descricao" placeholder="Descrição" required></textarea>
                 </div>
     
                 <div class="col2">
-                    <input type="text" name="tags" placeholder="Tags">
+                    <input type="text" name="tags" placeholder="Tags" required>
                     
                     <div class="switchBtn">
-                        <label>Gênero:</label>              <!-- maybe also change to dropbox? -->
+                        <label id="titulo">Gênero:</label>              <!-- maybe also change to dropbox? -->
                         <input type="radio" name="sexo" value="Fêmea" id="female" required>
                         <label for="female">Fêmea</label>
                         <input type="radio" name="sexo" value="Macho" id="male" required>
@@ -103,5 +62,48 @@
 </html>
 
 <?php
+require_once '../../config/database.php';
+$banco = new Banco();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    try {
+        $name = $_POST['name'] ?? null;
+        $tipo = $_POST['tipo'] ?? null;
+        $raca = $_POST['raca'] ?? null;
+        $porte = $_POST['porte'] ?? null;
+        $descricao = $_POST['descricao'] ?? null;
+        $tags = $_POST['tags'] ?? null;
+        $idade = $_POST['idade'] ?? null;
+        $sexo = $_POST['sexo'] ?? null;
+        $target_dir = "uploads/";
+        
+        $insert1 = "INSERT INTO animal (nome, tipo, raca, porte, descricao, tags, idade, sexo) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $query1 = $banco->prepare($insert1);
+        $query1->bind_param("ssssssss", $name, $tipo, $raca, $porte, $descricao, $tags, $idade, $sexo);
+        $query1->execute();
+        
+        $id_animal = $banco->pegaUltimoIdInserido();
+        
+        if (!empty($_FILES["image"]["name"])) {
+            $image_name = basename($_FILES["image"]["name"]);
+            $target_file = $target_dir . $id_animal . "_" . $image_name;
+            
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                $sql2 = "INSERT INTO foto (id_animal, caminho_foto) VALUES (?, ?)";
+                $query2 = $banco->prepare($sql2);
+                $query2->bind_param("is", $id_animal, $target_file);
+                $query2->execute();
+            } else {
+                throw new Exception("Erro ao enviar imagem.");
+            }
+        }
+        
+        echo "<script>alert('Animal registrado com sucesso!');</script>";
+        
+    } catch (Exception $e) {
+        echo "<input type='hidden' id='errorMessage' value='" . htmlspecialchars($e->getMessage()) . "'>";
+    }
+}
 $banco->fechar();
 ?>

@@ -25,6 +25,7 @@ body{
 
 #section{
     display:inline;
+    padding: 30px 0px 30px 0px;
 }
 #sectionfotoEpix{
     display: flex;
@@ -44,19 +45,20 @@ body{
 
 #localEusuario{
     display: flex;
+    padding: 5px;
 }
 #nomeAnimal{
     font-size: 30px;
     font-weight: 600;
+    padding-right: 10px;
 }
 #userElocal{
-    display: inline;
+    display: flex;
     gap: 0.5rem;
-    padding: 0px 0px 10px 10px;
+    flex-direction: column;
 }
 #divLocalUsuario{
     display: flex;
-    gap: 0.5rem;
 }
 .textoLocalUsuario{
     font-size: 13px;
@@ -73,23 +75,76 @@ body{
     height: 250px;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 #numeroBanco{
     display: flex;
 }
-#infosConta{
+#infos{
     display: inline;
 }
 
-#barraArrecadacao{
+#infosConta{
+    display: inline;
+    text-align: left;
+}
+.informacoesPix{
+    font-size: 15px;
+    font-weight: 500;
+}
+#nomeConta{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+#numeroBanco{
     display: flex;
+    align-items: center;
+}
+#numeroBanco img{
+    width: 15px;
+    height: 15px;
+}
+
+#barraArrecadacao{
+    display: inline;
+}
+#barraArrecadacao img{
+    width: 290px;
+}
+#textoBarra{
+    font-size: 10px;
+    font-weight: 600;
 }
 
 #descricaoArrecadacao{
     font-size: 20px;
     width: 1000px;
     text-align: justify;
-    padding: 15px 0px 10px 0px;
+    padding: 25px 0px 10px 0px;
+}
+
+#botaoCompartilhar{
+    padding-top: 15px;
+}
+#compartilharArrecadacao{
+    width: 275px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #44803F;
+
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+#textoCompartilhar{
+    font-size: 9px;
+    font-weight: bold;
+    color: #757575;
+    padding-top: 5px;
 }
 
 /* iamgens */
@@ -100,13 +155,44 @@ body{
 #qrcode{
     width: 160px;
     height: 160px;
+    border-radius: 10px;
 }
 #imagemBanco{
     width: 25px;
     height: 25px;
     border-radius: 50px;
 }
-#fotoArrecadacao{
+
+.fotoArrecadacao {
     width: 550px;
     height: auto;
+    margin: auto;
+    display: block;
+    position: relative;
 }
+
+#slider {
+    position: relative;
+    width: 550px;
+    margin: auto;
+}
+
+#botoesSlider {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.botaoTrocarFoto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.56);
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+
+

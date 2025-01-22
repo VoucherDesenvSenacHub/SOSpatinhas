@@ -15,7 +15,14 @@
             <section id="sectionfotoEpix">
                 <div id="titulo">
                     <h2 class="Titulo">Ajude o Frêgues</h2>
-                    <img id="fotoArrecadacao" src="../images/fregues.png" alt="">
+                    <div id="slider">
+                        <img class="fotoArrecadacao" src="../images/fregues.png" alt="">
+                        <div id="botoesSlider">
+                            <div class="botaoTrocarFoto"></div>
+                            <div class="botaoTrocarFoto"></div>
+                            <div class="botaoTrocarFoto"></div>
+                        </div>
+                    </div>
                 </div>
 
                     <div id="sectionPix">
@@ -36,22 +43,26 @@
                         <div id="pix">
                             <div id="banco">
                                 <img id="qrcode" src="../images/pix.png" alt="QRCode da Conta">
-                                <div id="infosConta">
-                                    <p id="nomeConta">SOS Patinhas</p>
-                                    <div id="numeroBanco">
-                                        <p class="informacoesPix">Conta: 198655-4</p>
-                                        <img id="imagemBanco" src="../images/banco.png" alt="">
+                                <div id="infos">
+                                    <div id="infosConta">
+                                        <p id="nomeConta">SOS Patinhas</p>
+                                        <div id="numeroBanco">
+                                            <p class="informacoesPix">Conta: 198655-4</p>
+                                            <img id="imagemBanco" src="../images/banco.png" alt="">
+                                        </div>
+                                        <p class="informacoesPix">Agência: 1193</p>
                                     </div>
-                                    <p class="informacoesPix">Agência: 1193</p>
                                 </div>
                                 <div id="barraArrecadacao">
-                                    <p id="textoArrecadacao">R$500,00 reais arrecadados de R$1.000,00</p>
+                                    <img src="../images/barraArrecadacao.png" alt="Barra de Arrecadação">
+                                    <!-- A imagem sera trocada por uma barra verdadeira com um código funcional!  -->
+                                    <p id="textoBarra">R$500,00 reais arrecadados de R$1.000,00</p>
                                 </div>
                             </div>
                         </div>
                     
 
-                        <div id="teste">
+                        <div id="botaoCompartilhar">
                             <button id="compartilharArrecadacao">Compartilhar</button>
                             <p id="textoCompartilhar">Verificado e autenticado pelo SOS Patinhas</p>
                         </div>
@@ -66,4 +77,8 @@
 
     <?php include('../templates/footerUser.php')?>
 </body>
+<script>
+
+    
+</script>
 </html>

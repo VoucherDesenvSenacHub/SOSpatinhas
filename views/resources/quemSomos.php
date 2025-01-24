@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -69,10 +68,57 @@
                         <div class="card-title">Gabriel Coelho</div>
                     </div>
                 </div>
-            
+
+                <div class="card">
+                    <img src="../images/jessica.avif" alt="Jessica Torres - Foto do membro da equipe">
+                    <div class="card-content">
+                        <div class="card-title">Jessica Torres</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/junio.jpg" alt="Junio Matos - Foto do membro da equipe">
+                    <div class="card-content">
+                        <div class="card-title">Junio Matos</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/monica.jpg" alt="Monica Carvalho - Foto do membro da equipe">
+                    <div class="card-content">
+                        <div class="card-title">Monica Carvalho</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/david.jpg" alt="David Santana - Foto do membro da equipe">
+                    <div class="card-content">
+                        <div class="card-title">David Santana</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/jasmine.jpg" alt="Jasmine Flores - Foto do membro da equipe">
+                    <div class="card-content">
+                        <div class="card-title">Jasmine Flores</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/leandro.jpg" alt="Leandro Miano- Foto do membro da equipe">
+                    <div class="card-content">
+                        <div class="card-title">Leandro Miano</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/jose.avif" alt="José Santos - Foto do membro da equipe">
+                    <div class="card-content">
+                        <div class="card-title">José Santos</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/lucas.avif" alt="Lucas Vieira - Foto do membro da equipe">
+                    <div class="card-content">
+                        <div class="card-title">Lucas Vieira</div>
+                    </div>
+                </div>
+                <button class="carousel-button next" onclick="moveTeamSlide(1)">❯</button>
             </div>
-            <button class="carousel-button next" onclick="moveTeamSlide(1)">❯</button>
-            <button class="carousel-button prev" onclick="movePartnerSlide(2)">❯</button>
         </div>
 
         <div class="title-container">
@@ -105,7 +151,7 @@
     </section>
 
     <?php include('../templates/footerUser.php'); ?>
-    
+
     <script>
         let currentIndexTeam = 0;
         const teamSlides = document.querySelectorAll('#team-carousel .card');
@@ -125,7 +171,6 @@
                 currentIndexTeam = totalTeamSlides - 1;
             }
             teamWrapper.style.transform = `translateX(-${currentIndexTeam * 100}%)`;
-            
         }
 
         function movePartnerSlide(direction) {
@@ -137,10 +182,6 @@
             }
             partnerWrapper.style.transform = `translateX(-${currentIndexPartner * 100}%)`;
         }
-        
     </script>
-
 </body>
 </html>
-
-

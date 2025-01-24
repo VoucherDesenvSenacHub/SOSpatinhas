@@ -46,7 +46,7 @@
         </ul>
         
         <a class="navbar-logo" href="#">
-            <img src="../images/Icon_Login.png" width="48" height="48" alt="">
+            <img src="../images/adm_perfil.png" width="48" height="48" alt="">
         </a>
     </nav>
 </body>

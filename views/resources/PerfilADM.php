@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="../css/perfilAdm.css">
 </head>
 <body>
-<?php include('../templates/navbarUser.php'); ?>
+    <?php include('../templates/navbarAdm.php'); ?>
 
     <section class="corpo container">
         <div class="adm_foto">
-            <img src="../images/foto_perfil.png" alt="">
-            <p>Nome ID administrador </p>
-            </div>
-        </div>
+            <img src="../images/foto_perfil.png" alt="Foto de perfil do administrador">
+            <h1>Nome</h1>
+            <p>ID administrador</p>
+        </div> 
         
         <button>Editar perfil</button>
 
-        <div>
+        <div class="buttons">
             <button>Adoção</button>
             <button>Eventos</button>
             <button>Arrecadação</button>
@@ -27,8 +27,9 @@
             <button>Usuário</button>
             <button>Editar Formulário</button>
         </div>
-       
-    </section>    
+    </section>
+
     <?php include('../templates/footerUser.php'); ?>   
 
 </body>
+</html>

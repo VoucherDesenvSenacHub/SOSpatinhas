@@ -69,8 +69,10 @@
                         <div class="card-title">Gabriel Coelho</div>
                     </div>
                 </div>
-                <button class="carousel-button next" onclick="moveTeamSlide(1)">❯</button>
+            
             </div>
+            <button class="carousel-button next" onclick="moveTeamSlide(1)">❯</button>
+            <button class="carousel-button prev" onclick="movePartnerSlide(2)">❯</button>
         </div>
 
         <div class="title-container">
@@ -103,7 +105,7 @@
     </section>
 
     <?php include('../templates/footerUser.php'); ?>
-
+    
     <script>
         let currentIndexTeam = 0;
         const teamSlides = document.querySelectorAll('#team-carousel .card');
@@ -123,6 +125,7 @@
                 currentIndexTeam = totalTeamSlides - 1;
             }
             teamWrapper.style.transform = `translateX(-${currentIndexTeam * 100}%)`;
+            
         }
 
         function movePartnerSlide(direction) {
@@ -134,6 +137,10 @@
             }
             partnerWrapper.style.transform = `translateX(-${currentIndexPartner * 100}%)`;
         }
+        
     </script>
+
 </body>
 </html>
+
+

@@ -44,8 +44,16 @@
                         <label for="male">Macho</label>
                     </div>
         
-                    <label for="image">Enviar foto:</label>
-                    <input type="file" name="image" accept="image/*" multiple required>
+                    <div class="uploadImage">
+                        <input type="file" id="image" name="image" accept="image/*" multiple required>
+                        <label for="image" id="imgLabel">
+                            <div class="upload-box">
+                                <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                                <p>Enviar fotos</p>
+                            </div>
+                        </label>
+                        <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPNG*</p>
+                    </div>
         
                     <button type="submit">Adicionar</button>
                     <button class="cancelarBtn" onclick="type='reset'">
@@ -56,6 +64,24 @@
 
         </form>
     </section>
+
+    <script>
+        document.getElementById("image").addEventListener("change", function(event) {
+            let previewContainer = document.createElement("div");
+            previewContainer.classList.add("previewContainer");
+            document.querySelector(".uploadImage").appendChild(previewContainer);
+
+            previewContainer.innerHTML = ""; // Clear previous previews
+            Array.from(event.target.files).forEach(file => {
+                let img = document.createElement("img");
+                img.src = URL.createObjectURL(file);
+                img.style.width = "60px";
+                img.style.margin = "5px";
+                img.style.borderRadius = "5px";
+                previewContainer.appendChild(img);
+            });
+        });
+    </script>
 
     <?php include('../templates/footerUser.php')?>
 </body>

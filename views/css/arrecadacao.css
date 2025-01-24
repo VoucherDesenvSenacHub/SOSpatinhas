@@ -135,6 +135,7 @@ body{
     height: 50px;
     border-radius: 12px;
     background-color: #44803F;
+    cursor: pointer;
 
     font-size: 20px;
     color: #ffffff;

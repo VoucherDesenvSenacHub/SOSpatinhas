@@ -93,6 +93,7 @@ body{
     font-size: 16px; /* Tamanho do texto */
 }
 
+
 .box-saibamais{
  
     background-color: #ffffff;
@@ -112,26 +113,53 @@ body{
 }
 
 
-.box-event{
+.box-event {
     background-color: #44803F;
     position: absolute;
-    bottom:50px; /* Posiciona a barra a 20px do fundo da imagem */
+    bottom: 50px; /* Posiciona a barra a 50px do fundo da imagem */
     left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Ajusta a posição para centralizar */
     width: 85%; /* Largura da barra */
     height: 120px; /* Altura da barra */
-    display: flex; /* Permite centralizar o texto dentro da barra */
-    justify-content: flex-start ; /* Centraliza horizontalmente o texto */
-    align-items: center; /* Centraliza verticalmente o texto */
+    display: flex; /* Permite organizar o conteúdo com flexbox */
+    flex-direction: column; /* Organiza os itens na vertical */
+    justify-content: flex-start; /* Centraliza o conteúdo verticalmente */
+    align-items: flex-start; /* Centraliza o conteúdo horizontalmente */
     color: white; /* Cor do texto */
-    font-size: 16px; /* Tamanho do texto */
+    font-size: 14px; /* Tamanho do texto */
 }
+
 /* Ajuste para o título */
 .box-event h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-    padding: 30px 10px;
+    margin-bottom: 5px; /* Dá um espaçamento abaixo do título */
+    margin-left: 10px;
+    margin-top: 10px ;
+    
+}
+.box-event h2{
+    margin-bottom: 3px; /* Dá um espaçamento abaixo do título */
+    margin-left: 10px;
+    margin-top: 10px ;
+    
 }
 
 /* Ajuste para o parágrafo */
+.box-event h1 {
+    margin-left: 10px;
+    margin-top: 0; /* Remove qualquer espaçamento superior do parágrafo */
+
+}
+.imgtext {
+    display: flex; /* Flexbox para alinhar os itens na horizontal */
+    align-items: center; /* Alinha a imagem e o texto verticalmente no centro */
+}
+.event-img {
+    width: 30px; /* Define o tamanho da imagem */
+    height: 30px; /* Mantém a proporção da imagem */
+    margin-right: 0; /* Remove o espaçamento à direita da imagem */
+}
+.textEvent {
+    margin: 0; /* Remove a margem padrão do título */
+    padding: 0; /* Remove o padding do título */
+    font-size: 20px; /* Tamanho do texto do título */
+}

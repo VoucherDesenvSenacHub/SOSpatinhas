@@ -22,6 +22,11 @@ class Banco{
         return $resultado->fetch_all(MYSQLI_ASSOC);
     }
 
+    //pega só um resultado
+    public function fetch_assoc($resultado){
+        return $resultado->fetch_assoc();
+    }
+
     //evita SQL injections
     public function prepare($sql) {
         return $this->conexao->prepare($sql);

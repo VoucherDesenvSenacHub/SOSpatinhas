@@ -25,15 +25,6 @@ body{
     text-align: center; 
 }
 
-/* .corpo{
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; 
-  padding: 12px;
-} */
-
 .pontoArrecadacao {
   width: 100%;
   max-width: 1024px;
@@ -50,6 +41,10 @@ body{
 .descricaoPonto {
   text-align: center;
   width: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .descricaoPonto h2 {
@@ -85,10 +80,13 @@ body{
 
 .cards h3 { 
   color: black;
+  
 }
 
 .cards p { 
   color: black;
+  margin: 0;
+  font-size: 14px;
 }
 
 .cards {
@@ -99,18 +97,20 @@ body{
 }
 
 .card {
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
   border-radius: 10px;
-  text-align: center;
-  width: 50%;
-  float: left; 
-  max-width: 100px; 
-  margin-right: 15px; 
+  text-align: center; 
+  width: 50%; 
+  max-width: 150px;
+  margin: 10px auto; 
 }
 
 .card img {
   width: 60px;
   height: 60px;
+  margin-right: 15px;
 }
 
 .pix {
@@ -136,8 +136,19 @@ body{
   margin-top: 30px;
 }
 
-.qrcode p{
-  border-top-width: 2em;
+/* .qrcode p{
+  margin-top: 10px;
+} */
+
+.imgQrCode{
+  width: 20px;
+  height: 20px;
+}
+
+/* Ajustar img do banco */
+.imgLogoBanco{
+  width: 20px;
+  height: 20px;
 }
 
 .infoDestaque{

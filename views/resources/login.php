@@ -33,7 +33,7 @@
                         <img src="../images/apple.png" alt="apple">
                     </div>
                 </div>
-                <a href="acesso-adm" class="acesso-adm">Acesso Admin</a>
+                <a href="./loginADM.php" class="acesso-adm">Acesso Admin</a>
             </div>
         </section>
     </section>

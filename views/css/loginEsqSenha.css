@@ -12,7 +12,7 @@ body{
 
 
 
-/* Seção do Login */
+/* Seção do esqSenha */
 .secao-login {
     display: flex;
     justify-content: center;
@@ -21,41 +21,33 @@ body{
 }
 
 /* Cria o fundo branco na área de login */
-.login {
+.esqSenha {
     background-color: white;
-    padding: 40px;
+    padding: 40px 50px 60px 50px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.login h2 {
-    margin-bottom: 25px;
+.esqSenha h2 {
+    padding: 40px 0px 10px 0px;
+}
+.esqSenha p{
+    font-size: 20px;
+    width: 350px;
+    padding: 15px 0px 25px 0px;
 }
 
-/* estrutura das   */
-.login input {
+.esqSenha input {
     width: 93%;
     padding: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 8px;
     border: 1px solid #ccc;
     outline: none;
-
 }
 
-.login .esc_senha {
-    display: block;
-    margin-bottom: 20px;
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.login .esc_senha:hover {
-    text-decoration: underline;
-}
-
-.login button {
+.esqSenha button {
     font-family:  Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 12px;
@@ -65,53 +57,14 @@ body{
     border-radius: 8px;
     cursor: pointer;
 }
-.login a {
+.esqSenha a {
     font-family:  Arial, Helvetica, sans-serif;
     color: white;
     text-decoration: none;
     cursor: pointer;
 }
-
-.login button:hover {
+.esqSenha button:hover {
     transition: .4s;
     background-color: rgb(56, 105, 52);
-}
-
-.login p {
-    margin-top: 20px;
-    color: #666;
-}
-
-.login p a {
-    color: #0066cc;
-    text-decoration: none;
-}
-.login p a:hover {
-    text-decoration: underline;
-
-}
-
-/* Botões das redes sociais */
-.rede-social{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    height: 30px;
-    margin-left: 120px;
-}
-
-/* Botão acesso ADM */
-.acesso-adm {
-    display: block;
-    margin-top: 20px;
-    color:rgb(68, 128, 63);
-    text-decoration: none;
-    margin-right: 285px;
-
-}
-
-.acesso-adm:hover {
-    text-decoration: underline;
 }
 

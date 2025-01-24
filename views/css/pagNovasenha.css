@@ -10,9 +10,6 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
-
-
-/* Seção do Login */
 .secao-login {
     display: flex;
     justify-content: center;
@@ -20,10 +17,9 @@ body{
     height: calc(100vh - 431px);
 }
 
-/* Cria o fundo branco na área de login */
 .login {
     background-color: white;
-    padding: 40px;
+    padding: 65px 55px 65px 55px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -33,26 +29,13 @@ body{
     margin-bottom: 25px;
 }
 
-/* estrutura das   */
 .login input {
     width: 93%;
     padding: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 8px;
     border: 1px solid #ccc;
     outline: none;
-
-}
-
-.login .esc_senha {
-    display: block;
-    margin-bottom: 20px;
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.login .esc_senha:hover {
-    text-decoration: underline;
 }
 
 .login button {
@@ -77,6 +60,7 @@ body{
     background-color: rgb(56, 105, 52);
 }
 
+
 .login p {
     margin-top: 20px;
     color: #666;
@@ -90,28 +74,3 @@ body{
     text-decoration: underline;
 
 }
-
-/* Botões das redes sociais */
-.rede-social{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    height: 30px;
-    margin-left: 120px;
-}
-
-/* Botão acesso ADM */
-.acesso-adm {
-    display: block;
-    margin-top: 20px;
-    color:rgb(68, 128, 63);
-    text-decoration: none;
-    margin-right: 285px;
-
-}
-
-.acesso-adm:hover {
-    text-decoration: underline;
-}
-

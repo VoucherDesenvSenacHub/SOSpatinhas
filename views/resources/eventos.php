@@ -19,19 +19,21 @@
                         <img src="../images/eventosImg/eventos2.png" class="animal"alt="">
                         <h3 class="texto-overlay">Ajude o Freguês</h3>
                         <div class="box-anim"></div>
-                        <div class="box-saibamais">Saiba Mais</div>
+                        <div class="box-saibamais"><h1>Saiba mais</h1></div>
                     </div>
                     <div class="item">
                         <img src="../images/eventosImg/eventos6.png" class="animal"alt="">
                         <h3 class="texto-overlay">Ajude a Nina</h3>
-                        <div class="box-anim"></div>
-                        <div class="box-saibamais">saiba mais</div>
+                        <div class="box-anim">
+                            <div class="box-anim2"></div>
+                        </div>
+                        <div class="box-saibamais"><h1>Saiba mais</h1></div>
                     </div>
                     <div class="item">
                         <img src="../images/eventosImg/eventos3.png" class="animal"alt="">
                         <h3 class="texto-overlay">Ajude o Cascudo</h3>
                         <div class="box-anim"></div>
-                        <div class="box-saibamais">saibamais</div>
+                        <div class="box-saibamais"><h2>Saiba mais</h2></div>
                     </div>
                     
             </div>
@@ -41,17 +43,35 @@
                 <div class="item">
                     <img src="../images/eventosImg/eventos1.png" class="eventos"alt="">
                     <div class="box-event">
-                        <h1>Feira do AuAu</h1>
-                        <p>feira do arrecadativa de moda.</p>
+                        <h2>Feira do AuAu</h2>
+                        <h1>Feira do arrecadativa de moda.</h1>
+                        <div class="imgtext">
+                            <img src="../images/eventosImg/pin.png" alt="" class="event-img">
+                            <h2 class="textEvent">Campo Grande MS, Horto Florestal</h2>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="../images/eventosImg/eventos4.png" class="eventos"alt="">
-                    <div class="box-event"></div>
+                    <div class="box-event">
+                        <h2>Adote um Amigo</h2>
+                        <h1>Feira de adoção.</h1>
+                        <div class="imgtext">
+                            <img src="../images/eventosImg/pin.png" alt="" class="event-img">
+                            <h2 class="textEvent">Campo Grande MS, Parque dos poderes</h2>
+                        </div>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src="../images/eventosImg/eventos5.png" class="eventos"alt="">
-                    <div class="box-event"></div>   
+                    <img src="../images/eventosImg/eventos5.png" class="eventos"alt=""> 
+                    <div class="box-event">
+                        <h2>Juntos por eles</h2>
+                        <h1>Passeata pelos direitos dos animais.</h1>
+                        <div class="imgtext">
+                            <img src="../images/eventosImg/pin.png" alt="" class="event-img">
+                            <h2 class="textEvent">Campo Grande MS, Parque dos poderes</h2>
+                        </div>
+                    </div>   
                 </div>
             </div>
 

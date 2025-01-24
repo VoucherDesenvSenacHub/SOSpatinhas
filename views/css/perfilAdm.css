@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+}
+.container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+.corpo {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+button{
+    padding: 17px 40px;
+    border-radius: 25;
+    border: 0;
+    background-color: greenyellow;
+    box-shadow: #0000000d 0 0 8px;
+
+}
+
+div{
+    display: grid;
+    grid-template-columns: repeat(2,1);
+}

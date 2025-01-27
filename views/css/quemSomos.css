@@ -247,8 +247,10 @@ h1 {
 }
 
 .carousel {
+    position: relative; 
     width: 100%;
-    overflow: hidden;
+    height: 300px; 
+    overflow: hidden; 
 }
 
 
@@ -303,6 +305,12 @@ h1 {
 
 .carousel-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.carousel-button.prev {
+    left: 10px;
+    position: absolute;
 }
 
 

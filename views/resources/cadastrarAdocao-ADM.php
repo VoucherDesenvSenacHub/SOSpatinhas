@@ -10,7 +10,7 @@
     <?php include('../templates/navbarUser.php')?>
 
     <section class="corpo container">
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
             <div class="conteudoForm">
                 <div class="col1">
                     <input type="text" name="name" placeholder="Nome do Animal" required>
@@ -49,7 +49,7 @@
                     </div>
         
                     <div class="upload-container">
-                        <input type="file" id="image" name="image" accept="image/*" multiple hidden>
+                        <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                         <label for="image" id="imgLabel" class="upload-box">
                             <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
                             <p>Enviar fotos</p>
@@ -59,9 +59,7 @@
                     <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
         
                     <button type="submit">Adicionar</button>
-                    <button class="cancelarBtn" onclick="type='reset'">
-                        <a href="listaAdocao-ADM.php">Cancelar</a>
-                    </button>
+                    <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
                 </div>
             </div>
 
@@ -104,6 +102,11 @@
                 filePreview.classList.remove('two-column');
             }
         });
+
+        function resetERedirect(){
+            document.getElementById('frmCadastroAdocao').reset();
+            window.location.href = "listaAdocao-ADM.php";
+        }
     </script>
 
     <?php include('../templates/footerUser.php')?>
@@ -134,22 +137,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $id_animal = $banco->pegaUltimoIdInserido();
         
-        if (!empty($_FILES["image"]["name"])) {
-            $image_name = basename($_FILES["image"]["name"]);
-            $target_file = $target_dir . $id_animal . "_" . $image_name;
+        if (!empty($_FILES["image"]["name"][0])) { 
+            $totalFiles = count($_FILES["image"]["name"]);
             
-            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                $sql2 = "INSERT INTO foto (id_animal, caminho_foto) VALUES (?, ?)";
-                $query2 = $banco->prepare($sql2);
-                $query2->bind_param("is", $id_animal, $target_file);
-                $query2->execute();
-            } else {
-                throw new Exception("Erro ao enviar imagem.");
+            for ($i = 0; $i < $totalFiles; $i++) {
+                $nomeImagem = basename($_FILES["image"]["name"][$i]);
+                $target_file = $target_dir . $id_animal . "_" . $nomeImagem;
+                
+                if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
+                    $sql2 = "INSERT INTO foto (id_animal, caminho_foto) VALUES (?, ?)";
+                    $query2 = $banco->prepare($sql2);
+                    $query2->bind_param("is", $id_animal, $target_file);
+                    $query2->execute();
+                } else {
+                    throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);
+                }
             }
         }
-        
-        echo "<script>alert('Animal registrado com sucesso!');</script>";
-        
     } catch (Exception $e) {
         echo "<input type='hidden' id='errorMessage' value='" . htmlspecialchars($e->getMessage()) . "'>";
     }

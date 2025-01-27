@@ -15,19 +15,19 @@
   
   <section class="corpoContainer">
     <section class="pontoArrecadacao">
-      <section class="infoDestaque">
+      <div class="infoDestaque">
         <div class="imgPontoArrecadacao">
           <img src="../images/valinhos07 1.png" alt="Imagem da ONG Sos Patinhas" >
           <p class="endereco">R. do Parque, 75 - Centro, Campo Grande - MS</p>
         </div>
-        <div class="descricaoPonto">
+        <div class="descricaoPontoArrecadacao">
           <h2>Ponto de Arrecadação</h2>
           <p>"Seu gesto de doação é o elo que une corações humanos e patas amigas, criando um mundo mais compassivo para
             todos."</p>
         </div>
-      </section>
+</div>
 
-      <section class="infoPixPontoArrecadacao">
+      <section class="infoPixECards">
         <div class="infoValores">
           <h2>Valores para Doação</h2>
             <div class="cards">
@@ -81,15 +81,15 @@
             </div>
           </div>
 
-        <div class="qrcode">
+        <div class="qrCode">
           <h2>Pix QR Code ou CNPJ</h2>
-          <img src="../images/imagem_qrcode.png" alt="QR Code para Doação" class="imgQrCode">
+          <img id="imgQrCode" src="../images/imagem_qrcode.png" alt="QR Code para Doação">
           <br></br>
           <h3>Sos Patinhas</h3>
-          <h1>Conta: 198655-4
-            <img src="../images/banco.png" alt="Logo Banco" class="imgLogoBanco"></h1>
-            <h1>Agência: 1193</h1>
-            <p>ChaveCNPJ: XX. XXX. XXX/0001-XX</p>
+          <p>Conta: 198655-4
+          <img id="imgLogoBanco" src="../images/banco.png" alt="Imagem logo Banco"></p>
+          <p>Agência: 1193</p>
+          <p>ChaveCNPJ: XX. XXX. XXX/0001-XX</p>
         </div>
       </section>
     </section>

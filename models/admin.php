@@ -1,29 +1,27 @@
-<?php
+<?php 
 
-class Membro {
-    private $tabela = 'membro';
+class Admin {
+    private $tabela = 'admin';
 
-    public $id_membro;
+    public $id_admin;
     public $nome;
     public $email;
-    public $senha; 
-    public $telefone;
+    public $senha;
+    public $foto;
 
-    public function __construct($id_membro, $nome, $email, $senha, $telefone){
-        $this->id_membro = $id_membro;
+    public function __construct($id_admin, $nome, $email){
+        $this->id_admin = $id_admin;
         $this->nome = $nome;
         $this->email = $email;
-        $this->senha = $senha;
-        $this->telefone = $telefone;
     }
 
     public function create() {
-        $query = "INSERT INTO {$this->tabela} (id_membro, nome, email, senha, telefone) VALUES ('{$this->id_membro}', '{$this->nome}', '{$this->email}', '{$this->senha}', '{$this->telefone}');";
+        $query = "INSERT INTO {$this->tabela} (id_admin, nome, email, senha, foto) VALUES ('{$this->id_admin}', '{$this->nome}', '{$this->email}', '{$this->senha}', '{$this->foto}');";
         return $query;
     }
 
     public function read(){
-        $query = "SELECT * FROM {$this->tabela} WHERE id_membro = '{$this->id_membro}';";
+        $query = "SELECT * FROM {$this->tabela} WHERE id_admin = '{$this->id_admin}';";
         return $query;
     }
 
@@ -38,12 +36,13 @@ class Membro {
             $query .= $contador != (count($valores)-1) ? $coluna . '= "'. $valor .'", ': $coluna . '= "'. $valor .'" ';
         }
 
-        $query += "WHERE id_membro = {$this->id_membro};";
+        $query += "WHERE id_admin = {$this->id_admin};";
         return $query;
     }
 
     public function delete(){
-        $query = "DELETE FROM {$this->tabela} WHERE id_membro = {$this->id_membro};";
+        $query = "DELETE FROM {$this->tabela} WHERE id_admin = {$this->id_admin};";
         return $query;
     }
 }
+?>

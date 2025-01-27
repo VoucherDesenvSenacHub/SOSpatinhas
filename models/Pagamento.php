@@ -17,12 +17,6 @@ class Pagamento{
        $this->conta = $infosPagamento['conta'];
        $this->agencia = $infosPagamento['agencia'];
     }
-
-    // public function getId($id_pagamento) {
-    //     $query = "SELECT * FROM {$this->tabela} WHERE id = {$id_pagamento}";
-    //     $resultado = $this->conexao->query($query);
-    //     return $resultado->fetch_all(MYSQLI_ASSOC);
-    // }
     
     public function create() {
         $query = "INSERT INTO {$this->tabela} (fotoQRCode, chave, nome_da_conta, conta, agencia) VALUES ('{$this->fotoQRCode}', '{$this->chave}', '{$this->nome_da_conta}', '{$this->conta}', '{$this->agencia}');";

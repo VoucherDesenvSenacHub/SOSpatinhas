@@ -1,10 +1,8 @@
 <?php
-
-require_once "../config/database.php";
+require "../models/endereco.php";
 
 class Usuario{
-    private $conexao;
-    private $table = 'usuario';
+    private $tabela = 'usuario';
 
     public $id_usuario;
     public $nome;
@@ -15,60 +13,50 @@ class Usuario{
     public $rg;
     public $telefone;
     public $foto;
-    public $id_endereco;
+    public $endereco;
 
 
-    public function __construct($bd){
-        $this->conexao = $bd;
+    public function __construct($id_usuario, $nome, $email, $senha, $data_nasc, $cpf, $rg, $telefone, $foto, $infosEndereco){
+        $this->id_usuario = $id_usuario;
+        $this->nome = $nome;
+        $this->email = $email;
+        $this->senha = $senha;
+        $this->data_nasc = $data_nasc;
+        $this->cpf = $cpf;
+        $this->rg = $rg;
+        $this->telefone = $telefone;
+        $this->foto = $foto;
+        $this->endereco = new Endereco($infosEndereco);
+
     }
 
-    public function getIdUsuario($id)
-    {
-        $query = "SELECT * FROM {$this->table} WHERE id = {$this->id}";
-        $resultado = $this->conexao->query($query);
-        return $resultado->fetch_all(MSQLI_ASSOC);
+    public function create() {
+        $query = "INSERT INTO {$this->tabela} (id_usuario, nome, email, senha, data_nasc, cpf, rg, telefone, foto, endereco) VALUES ('{$this->id_usuario}', '{$this->nome}', '{$this->email}', '{$this->senha}', '{$this->data_nasc}', '{$this->cpf}', '{$this->rg}', '{$this->telefone}', '{$this->foto}', '{$this->endereco->id_endereco}');";
+        return $query;
     }
 
+    public function read(){
+        $query = "SELECT * FROM {$this->tabela} WHERE id_usuario = '{$this->id_usuario}';";
+        return $query;
+    }
 
-    public function create(){
-        $query = "INSERT INTO {$this->table} (nome,email,senha,data_nasc,cpf,rg,telefone,foto) VALUES ('{$this->nome}','{$this->email}','{$this->senha}','{$this->data_nasc}','{$this->cpf}','{$this->rg}','{$this->telefone}','{$this->foto}');"; 
-        return $this->conexao->query($query);
-        
-    }
-    
-    public function read() {
-        $query = "SELECT * FROM {$this->table}"; 
-        return $this->conexao->query($query);
-    }
-    
-    public function update($atualizar) {
-        if ($atualizar) {
-            $query = "UPDATE {$this->table} SET ";
-            $colunasArray = array_keys($atualizar);
-            $params = [];
-            $types = '';
-            foreach ($atualizar as $coluna => $valor) {
-                $query .= $coluna . " = ?, ";
-                $params[] = $valor;
-                $types .= 's';  
-            }
-            $query = rtrim($query, ', ') . " WHERE id_usuario = ?";  
-            $stmt = $this->conexao->prepare($query);
-            $params[] = $this->id_usuario; 
-            $types .= 'i';  
-            $stmt->bind_param($types, ...$params);  
-            if ($stmt->execute()) {
-                return true;
-            } else {
-                throw new Exception('Erro ao atualizar ', 999);
-            }
-        } else {
-            throw new Exception('Erro ao atualizar, dados insuficientes', 999);
+    public function update($valores){
+        $query = "UPDATE {$this->tabela} SET ";
+        $colunasArray = array_keys($valores);
+
+        for($contador = 0; $contador < count($valores); $contador ++){
+            $coluna = $colunasArray[$contador];
+            $valor = $valores[$coluna];
+
+            $query .= $contador != (count($valores)-1) ? $coluna . '= "'. $valor .'", ': $coluna . '= "'. $valor .'" ';
         }
+
+        $query += "WHERE id_usuario = {$this->id_usuario};";
+        return $query;
     }
-    
+
     public function delete(){
-        $query = "DELETE FROM {$this->table} WHERE {$this->id}";
-        return $this->conexao->query($query);
+        $query = "DELETE FROM {$this->tabela} WHERE id_usuario = {$this->id_usuario};";
+        return $query;
     }
 }

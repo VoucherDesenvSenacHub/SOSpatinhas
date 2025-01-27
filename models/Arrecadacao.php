@@ -1,5 +1,5 @@
 <?php
-require "../models/Pagamento.php";
+require "../models/pagamento.php";
 
 class Arrecadacao{
     private $tabela = 'Arrecadacao';
@@ -23,14 +23,7 @@ class Arrecadacao{
         $this->valorArrecadado = $valorArrecadado;
         $this->foto = $foto;
         $this->pagamento = new Pagamento($infosPagamento);
-
     }
-
-    // public function getId($id_arrecadacao) {
-    //     $query = "SELECT * FROM {$this->tabela} WHERE id = {$id_arrecadacao}";
-    //     $resultado = $this->conexao->query($query);
-    //     return $resultado->fetch_all(MYSQLI_ASSOC);
-    // }
     
     public function create() {
         $query = "INSERT INTO {$this->tabela} (titulo, nomeAnimal, nomeDono, descricao, valorArrecadacao, valorArrecadado, foto, id_pagamento) VALUES ('{$this->titulo}', '{$this->nomeAnimal}', '{$this->nomeDono}', '{$this->descricao}', '{$this->valorArrecadacao}', '{$this->valorArrecadado}', '{$this->foto}', '{$this->pagamento->id_pagamento}');";

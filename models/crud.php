@@ -7,5 +7,4 @@ interface Crud{
     public function delete();
 }
 
-
 ?> 

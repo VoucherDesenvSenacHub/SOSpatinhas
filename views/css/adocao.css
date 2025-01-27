@@ -194,3 +194,33 @@ body{
   opacity: 1;
   
 }
+
+
+
+/*--------------------------------------------------------------------------------*/
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.paginacao a {
+  text-decoration: none;
+  padding: 8px 12px;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.paginacao a:hover {
+  background-color: #ddd;
+}
+
+.paginacao .active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}

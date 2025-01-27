@@ -37,7 +37,7 @@
             <img src="../images/Logo_Navbar.png" width="50" height="50" class="d-inline-block align-top" alt="">
         </a>
 
-        <ul class="nav-links">.
+        <ul class="nav-links">
             <a class="link-navbar" href="./blog.php">Blog</a>
             <a class="link-navbar" href="./quemSomos.php">Quem Somos</a>
             <a class="link-navbar" href="./comoAjudar.php">Como Ajudar</a>

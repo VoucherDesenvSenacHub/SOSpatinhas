@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +16,9 @@
                     <input type="text" name="name" placeholder="Nome do Animal" required>
                     <input type="text" name="tipo" placeholder="Tipo do Animal" required>
                     <input type="text" name="raca" placeholder="Raça" required>
+                    <div class="selectContainer">
+
+                    </div>
                     <select name="porte" id="porte-select" placeholder="Porte" required>
                         <option class="filter-option" value="" selected disabled hidden>-- Porte --</option>
                         <option class="filter-option" value="Pequeno">Pequeno</option>
@@ -30,22 +32,31 @@
                         <option class="filter-option" value="<= 10">Até 10 anos</option>
                         <option class="filter-option" value="> 10">+10 anos</option>
                     </select>
+
                     <textarea name="descricao" placeholder="Descrição" required></textarea>
+
+                    <input type="text" name="tags" placeholder="Tags" required>
                 </div>
     
                 <div class="col2">
-                    <input type="text" name="tags" placeholder="Tags" required>
                     
                     <div class="switchBtn">
-                        <label id="titulo">Gênero:</label>              <!-- maybe also change to dropbox? -->
+                        <label id="titulo">Gênero:</label>              
                         <input type="radio" name="sexo" value="Fêmea" id="female" required>
                         <label for="female">Fêmea</label>
                         <input type="radio" name="sexo" value="Macho" id="male" required>
                         <label for="male">Macho</label>
                     </div>
         
-                    <label for="image">Enviar foto:</label>
-                    <input type="file" name="image" accept="image/*" multiple required>
+                    <div class="upload-container">
+                        <input type="file" id="image" name="image" accept="image/*" multiple hidden>
+                        <label for="image" id="imgLabel" class="upload-box">
+                            <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                            <p>Enviar fotos</p>
+                        </label>
+                        <div id="filePreview"></div>
+                    </div>
+                    <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
         
                     <button type="submit">Adicionar</button>
                     <button class="cancelarBtn" onclick="type='reset'">
@@ -56,6 +67,44 @@
 
         </form>
     </section>
+
+    <script>
+        document.getElementById('image').addEventListener('change', function (event) {
+            const filePreview = document.getElementById('filePreview');
+            filePreview.innerHTML = ""; 
+
+            let files = Array.from(event.target.files);
+
+            if (files.length > 10) {
+                alert("Você só pode enviar até 10 arquivos.");
+                this.value = "";
+                return;
+            }
+
+            files.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.classList.add('file-item');
+                fileItem.innerHTML = `
+                    <span class="file-name" title="${file.name}">${file.name}</span>
+                    <button class="remove-file" data-index="${index}">X</button>
+                `;
+                filePreview.appendChild(fileItem);
+
+                const removeButton = fileItem.querySelector('.remove-file');
+                removeButton.addEventListener('click', () => {
+                    const fileInput = document.getElementById('image');
+                    fileInput.value = ""; 
+                    fileItem.remove(); 
+                });
+            });
+
+            if (files.length > 5) {
+                filePreview.classList.add('two-column');
+            } else {
+                filePreview.classList.remove('two-column');
+            }
+        });
+    </script>
 
     <?php include('../templates/footerUser.php')?>
 </body>

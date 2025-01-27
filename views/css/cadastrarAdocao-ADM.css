@@ -150,7 +150,7 @@ button a{
 
 #filePreview.two-column {
     grid-template-columns: 1fr 1fr; 
-    column-gap: 20px; 
+    column-gap: 2rem; 
 }
 
 .file-item {

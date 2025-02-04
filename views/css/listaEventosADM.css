@@ -99,13 +99,13 @@ h1 {
 
 .evento .localizacao img {
     margin-top: 12px;
-    width: 14px;
-    height: 18px;
+    width: 18px;
+    height: 25px;
 }
 
 .evento img {
     width: 100%;
-    height: auto;
+    height: 170px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;

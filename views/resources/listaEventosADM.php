@@ -55,7 +55,7 @@
             </div>
             <div class="evento">
                 <h3>Título</h3>
-                <img src="../images/evento_default.png" alt="Imagem do evento">
+                <img src="../images/AjudeUPatinha.png" alt="Imagem do evento">
                 <div class="localizacao">
                     <img src="../images/pin_info.png" alt="Localização">
                     <span>Sem localidade</span> 
@@ -64,7 +64,7 @@
             </div>
             <div class="evento">
                 <h3>Título</h3>
-                <img src="../images/evento_default.png" alt="Imagem do evento">
+                <img src="../images/AjudeUPatinha.png" alt="Imagem do evento">
                 <div class="localizacao">
                     <img src="../images/pin_info.png" alt="Localização">
                     <span>Sem localidade</span> 

@@ -26,39 +26,69 @@ body{
     border-radius: 8px;
 }
 
+.conteudo{
+  display: flex;
+  flex-direction: column;
+}
 
 .slideshow-container{
   width: 528px;
+  height: 360px;
   display: flex;
-  flex-direction: row;
   gap: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.slide{
+  display: none;
+}
+
+.slider{
+  width: 528px;
+  height: 360px;
 }
 
 .EventoSlides{
   width: 528px;
   height: 360px;
-  display: none;
 }
 
-.btn-white{
+.btn-slide{
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  bottom: 13cm;
+  width: 528px; 
+  position: absolute;
+
 }
 
 .botao{
   cursor: pointer;
   padding: 0;
   margin: 0 2px;
-  height: 13px;
-  width: 13px;
+  height: 11px;
+  width: 11px;
   border-radius: 50%;
   display: inline-block;
   background-color: transparent;
-  text-align: center;
-  border: 1px solid #ccc
+  border: 2px solid #ffffff
 }
 
 .active, .botao:hover{
-  background-color: #fff;
+  background-color: #ffffff;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 

@@ -16,8 +16,6 @@ body{
     max-width: 1500px;
     margin: auto;
     padding: 12px;
-    background-color: #fff;
-    
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -28,7 +26,8 @@ body{
 .pontoArrecadacao {
   width: 100%;
   max-width: 1024px;
-  margin: 20px 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .imgPontoArrecadacao img{
@@ -37,30 +36,46 @@ body{
   height: auto;
 }
 
-/* texto ponto arrecadacao */
-.descricaoPonto {
-  text-align: center;
-  width: 50%;
-  align-items: center;
+/* Ponto de Arrecadação da section infoDestaque*/
+.infoDestaque{
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.descricaoPonto h2 {
+.infoDestaque img{
+  margin-top: 20px;
+}
+
+.infoDestaque>div{
+  width: 50%;
+  text-align: center;
+  background-color: rgb(68, 128, 63);
+}
+
+/* texto ponto arrecadacao */
+.descricaoPontoArrecadacao {  
+  width: 50%;
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+
+}
+
+.descricaoPontoArrecadacao h2 {
   color: #fff;
   margin-bottom: 10px;
 }
 
-.descricaoPonto p{
+.descricaoPontoArrecadacao p{
   color: #fff;
   margin-bottom: 10px;
 }
 
-.infoPixPontoArrecadacao {
-  margin-top: 30px;
+.infoPixECards {
   background-color: #fff;
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -69,6 +84,7 @@ body{
 }
 
 .infoValores {
+  margin-top: 30px;
   flex: 1;
   max-width: 400px;
 }
@@ -80,7 +96,6 @@ body{
 
 .cards h3 { 
   color: black;
-  
 }
 
 .cards p { 
@@ -117,7 +132,7 @@ body{
   padding: 40px 0;
 }
 
-.qrcode {
+.qrCode {
   background-color: rgb(68, 128, 63);
   padding: 20px;
   border-radius: 10px;
@@ -126,37 +141,17 @@ body{
   max-width: 400px;
 }
 
-.qrcode h2{
+.qrCode h2{
   color: white;
 }
 
-.qrcode img {
+#imgQrCode {
   width: 247px;
   height: 232px;
   margin-top: 30px;
-}
+} 
 
-/* .qrcode p{
-  margin-top: 10px;
-} */
-
-.imgQrCode{
-  width: 20px;
-  height: 20px;
-}
-
-/* Ajustar img do banco */
-.imgLogoBanco{
-  width: 20px;
-  height: 20px;
-}
-
-.infoDestaque{
-  display: flex;
-}
-
-.infoDestaque>div{
-  width: 50%;
-  text-align: center;
-  background-color: rgb(68, 128, 63);
+#imgLogoBanco{
+  width: 23px;
+  height: 23px;
 }

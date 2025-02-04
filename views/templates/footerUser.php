@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
     <style>
         footer{
             text-align: center;
@@ -48,8 +43,7 @@
             margin-right: 0;
         }
     </style>
-</head>
-<body>
+
     <footer>
         <a class="footer-logo" href="./paginaInicio.php">
             <img src="../images/Logo_Footer.png" width="201" height="111" alt="">

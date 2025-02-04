@@ -118,15 +118,15 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../images/emma.jpg" alt="emma - Foto do membro da equipe">
+                        <img src="../images/sara.jpg" alt="sara - Foto do membro da equipe">
                         <div class="card-content">
-                            <div class="card-title">Emma Pinto</div>
+                            <div class="card-title">Sara Santos</div>
                         </div>
                     </div>
                     <div class="card">
                         <img src="../images/jorge.jpg" alt="jorge - Foto do membro da equipe">
                         <div class="card-content">
-                            <div class="card-title">jorge Lucas</div>
+                            <div class="card-title">Jorge Lucas</div>
                         </div>
                     </div>
                     <div class="card">

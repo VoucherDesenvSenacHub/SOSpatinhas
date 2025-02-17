@@ -257,8 +257,9 @@ h1 {
 
 .carousel-container {
     position: relative;
-    width: 100%; 
-    overflow: hidden; 
+    width: 80%; 
+    overflow: hidden;
+    margin: auto;
 }
 
 
@@ -313,6 +314,12 @@ h1 {
     position: absolute;
 }
 
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
 
 @media (max-width: 768px) {
     .carousel-button {
@@ -320,6 +327,12 @@ h1 {
         font-size: 1.5rem;
         width: 50px;
         height: 50px;
+        position: absolute;
     }
 }
+
+.prev { left: 0; }
+.next { right: 0; }
+
+
 

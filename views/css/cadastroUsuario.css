@@ -22,6 +22,7 @@ body{
     max-width: 500px;
     width: 100%;
     text-align: center;
+    margin: 40px auto;
 }
 
 .form{
@@ -70,3 +71,33 @@ p {
     }
 }
 
+.icons { 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.borda-verde {
+    position: relative; 
+    display: inline-block; 
+    margin: 20px 0 20px 0;
+}
+
+.borda-verde::before,
+.borda-verde::after {
+    content: ""; 
+    position: absolute; 
+    top: 50%; 
+    width: 140px; 
+    height: 2px; 
+    background-color: #44803F; 
+}
+
+.borda-verde::before {
+    left: -150px; /
+}
+
+.borda-verde::after {
+    right: -150px; 
+}

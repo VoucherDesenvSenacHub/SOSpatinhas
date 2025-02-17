@@ -33,7 +33,12 @@
             <span class="botao" onclick="OutroSlide(2)" > </span>
             <span class="botao" onclick="OutroSlide(3)" > </span>
             </div>
-    
+
+            <div class="localEvento">
+              <img src="../images/marcador_1.png" alt="marcador_1">
+              <p>Campo Grande MS, Horto Florestal</p>
+            </div>
+
           </div>
     
           <div class="event-details">
@@ -43,15 +48,14 @@
           </div>
           
         </div>
-        
-        
-    
-    
+          
         <div class="carousel-container">
           <h2>Outros eventos...</h2>
+          
           <div class="carousel">
-            <button class="carousel-btn prev">&#10094;</button>
+            <button id="carousel-prev">&#10094;</button>
             <div class="carousel-track">
+
               <div class="card">
                 <img src="../images/horto-florestal.png" alt="Feira do Auau">
                 <div class="card-info">
@@ -62,6 +66,7 @@
                   </div>
                 </div>
               </div>
+              
               <div class="card">
                 <img src="../images/parque-dos-poderes.png" alt="Adote um Amigo">
                 <div class="card-info">
@@ -72,6 +77,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="card">
                 <img src="../images/bosque.png" alt="Junto por eles">
                 <div class="card-info">
@@ -82,14 +88,15 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <button class="carousel-btn next">&#10095;</button>
+
+              
+
+            <!-- </div> -->
+            <button id="carousel-next">&#10095;</button>
           </div>
         </div>
       </div>
     </section>
-
-        
 
     <script> 
     let PrimeiroSlide = 1;
@@ -114,6 +121,25 @@
       slides[PrimeiroSlide-1].style.display = "block";
       dots[PrimeiroSlide-1].className += " active";
     }
+
+
+    // outros eventos
+
+    const carouselContainer = document.querySelector(".carousel-track");
+    const carouselCards = document.querySelector(".carousel-track .card");
+
+    const prevButton = document.getElementById("carousel-prev");
+    const nextButton = document.getElementById("carousel-next");
+
+    nextButton.addEventListener("click", () => {
+      const carouselWidth = carouselCards[0].clientWidth;
+      carouselContainer.scrollBy({ left: carouselWidth, behavior:"smooth"});
+    });
+
+    nextButton.addEventListener("click", () => {
+      const carouselWidth = carouselCards[0].clientWidth;
+      carouselContainer.scrollBy({ left: -carouselWidth, behavior: "smooth"});
+    });
 
     </script>
 

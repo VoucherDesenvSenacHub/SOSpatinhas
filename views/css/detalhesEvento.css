@@ -20,7 +20,7 @@ body{
     width: 1500px;
     display: flex;
     text-align: center;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     padding: 20px;
     border-radius: 8px;
@@ -91,6 +91,18 @@ body{
   to {opacity: 1}
 }
 
+.localEvento {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  font-size: 14px;
+}
+
+.localEvento img{
+  width: 15px;
+  height: 17.07px;
+}
+
 
 
 
@@ -120,13 +132,15 @@ body{
 
   .event-details p {
     color: #000000;
-    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-bottom: 50px;
     font-size: 15px;
-    width: 528px;
+    width: 357px;
+    text-align: justify;
   }
 
   .event-details button {
-    padding: 10px 20px;
+    padding: 10px 49px;
     background-color: #44803F;
     color: #fff;
     border: none;
@@ -137,8 +151,12 @@ body{
   }
 
   .carousel-container {
+    margin-top: 25px;
     text-align: left;
-    margin: 20px;
+  }
+
+  h2{
+    margin-top: 40px;
   }
   
   .carousel {
@@ -153,11 +171,15 @@ body{
     transition: transform 0.3s ease-in-out;
     gap: 30px;
     justify-content: center;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
   }
   
   .card {
     position: relative;
-    flex: 0 0 300px;
+    /* flex: 0 0 300px; */
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 6px #0000001a;
@@ -171,25 +193,25 @@ body{
   
   .card-info {
     position: absolute;
-    bottom: 15px;
+    bottom: 16px;
     left: 20px;
-    right: 10px;
+    right: 13px;
     background: #44803F;
     color: #fff;
-    padding: 12px;
+    padding: 10px;
     text-align: left;
   }
   
   .card-info h3 {
     margin: 0 0 5px;
     font-size: 20px;
-    text-shadow: 2px 2px 4px #000000b9;
+    text-shadow: 2px 2px 4px #0000009a;
   }
   
   .card-info p {
     margin: 0;
-    font-size: 14px;
-    text-shadow: 0px 4px 4px #000000b9;
+    font-size: 15px;
+    text-shadow: 0px 4px 4px #0000005d;
   }
   
   .local {
@@ -225,12 +247,12 @@ body{
     z-index: 2;
   }
   
-  .carousel-btn.prev {
-    left: 10px;
+  #carousel-prev {
+    left: 20px;
   }
   
-  .carousel-btn.next {
-    right: 10px;
+  #carousel-next {
+    right: 20px;
   }
   
   .carousel-btn:hover {

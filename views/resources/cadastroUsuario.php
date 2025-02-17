@@ -33,6 +33,16 @@
                 <button type="submit" name="cadastrar">Cadastrar</button>
             </form>
             <p>Já tem uma conta? <span>Login</span></p>
+
+            <p class="borda-verde">Ou entre usando</p>
+
+            <div class="img-container">
+                <div class="icons">
+                    <img src="../images/google.png">
+                    <img src="../images/facebook_azul.png">
+                    <img src="../images/apple.png">
+                </div>
+            </div>
             
             
     </section>

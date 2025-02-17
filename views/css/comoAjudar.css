@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    border: 0;
     box-sizing: border-box;
 }
 
@@ -12,10 +11,10 @@ body{
     font-family: Arial, sans-serif;
 }
 
+/* fundo branco aqui */
 .corpoContainer{
     max-width: 1500px;
     margin: auto;
-    padding: 12px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -26,23 +25,29 @@ body{
 .pontoArrecadacao {
   width: 100%;
   max-width: 1024px;
-  margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
 }
 
-.imgPontoArrecadacao img{
-  width: 50%; 
-  max-width: 453px;
-  height: auto;
-}
-
-/* Ponto de Arrecadação da section infoDestaque*/
 .infoDestaque{
   display: flex;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(68, 128, 63);
+  padding: 20px;
+  position: relative;
+}
+
+#imgPA{
+  max-width: 100%;
+  height: auto;
   box-sizing: border-box;
+}
+
+#imgCachorro{
+  position: absolute;
+  bottom: 20px;
+  left: 5px;
 }
 
 .infoDestaque img{
@@ -57,11 +62,12 @@ body{
 
 /* texto ponto arrecadacao */
 .descricaoPontoArrecadacao {  
-  width: 50%;
+  width: 100%;
   text-align: center;
+  justify-content: center;
   padding: 50px;
-  box-sizing: border-box;
-
+  box-sizing: border-box ;
+  margin-top: 50px;
 }
 
 .descricaoPontoArrecadacao h2 {
@@ -74,6 +80,7 @@ body{
   margin-bottom: 10px;
 }
 
+/* colocar todo os tamanhos dos valores e do pix aqui */
 .infoPixECards {
   background-color: #fff;
   display: flex;
@@ -81,17 +88,19 @@ body{
   justify-content: space-between;
   gap: 20px;
   width: 100%;
+  height: 600px;
+  padding: 87px 40px 66px;
 }
 
+/* cima, direita, baixo e esquerda */
 .infoValores {
-  margin-top: 30px;
   flex: 1;
   max-width: 400px;
 }
 
 .infoValores h2 {
   color: black;
-  margin-bottom: 20px;
+
 }
 
 .cards h3 { 
@@ -102,6 +111,13 @@ body{
   color: black;
   margin: 0;
   font-size: 14px;
+}
+
+.cards span { 
+  color: #5c5c5c;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .cards {
@@ -141,7 +157,7 @@ body{
   max-width: 400px;
 }
 
-.qrCode h2{
+.qrCode h2 {
   color: white;
 }
 
@@ -151,7 +167,13 @@ body{
   margin-top: 30px;
 } 
 
-#imgLogoBanco{
+.qrCode > .logoBb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  & #imgLogoBanco{
   width: 23px;
   height: 23px;
+  }
 }

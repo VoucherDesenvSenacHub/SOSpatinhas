@@ -69,7 +69,7 @@ nav ul{
 
 #slider img {
     height: 450px;
-    width: auto;
+    width: 100%;
     object-fit: cover;
     display: block;
 }
@@ -123,6 +123,12 @@ button {
     height: 100%;
 }
 
+@media (min-width: 769px) {
+    #sliderDoacao {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     
     #secslider {
@@ -131,6 +137,7 @@ button {
 
     #bannerMobas {
         display: block;
+        width: 100%;
     } /*MOSTRAR O BANNER*/
 
     #seccards {
@@ -138,18 +145,16 @@ button {
     }
     #sliderDoacao{
         width: 100vw;
-        height: 50vh;
         display: flex;
-        overflow: scroll;
-        position: relative;
-        flex-direction: row;
-
+        flex-direction: column;
+        text-align: center;
+        
         & .cardDoacao {
-            width: 100vw;
-            height: 100%;
+            width: auto;
+            margin: 20px 0px 20px 0px;
 
             & .divImg {
-                background: red;
+                
                 width: 100vw;
                 height: 100%;
             }
@@ -167,6 +172,23 @@ button {
             object-fit: cover;
             width: 100%;
         }
+    }
+
+}
+
+@media (max-width: 425px) {
+    
+    #sliderDoacao {
+        transform: scale(0.9);
+        margin: 20px auto;
+    }
+
+    .imgBanner img {
+        width: auto;
+    }
+
+    #sliderDoacao > :first-child {
+        margin-top: -50px;
     }
 
 }

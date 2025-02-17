@@ -74,17 +74,17 @@
         <section id="sliderDoacao">
             <div class="cardDoacao">
                 <div class="divImg">
-                    <!-- <img src="../images/inicial/slider1.png" alt="Foto Animal"> -->
+                    <img src="../images/inicial/slider1.png" alt="Foto Animal">
                 </div>
             </div>
             <div class="cardDoacao">
                 <div class="divImg">
-                    <!-- <img src="../images/inicial/slider2.png" alt="Foto Animal"> -->
+                    <img src="../images/inicial/slider2.png" alt="Foto Animal">
                 </div>
             </div>
             <div class="cardDoacao">
                 <div class="divImg">
-                    <!-- <img src="../images/inicial/slider3.png" alt="Foto Animal"> -->
+                    <img src="../images/inicial/slider3.png" alt="Foto Animal">
                 </div>
             </div>
         </section>

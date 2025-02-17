@@ -69,6 +69,7 @@ body{
     text-align: center;
 }
 #banco{
+    flex:2;
     display: flex;
     background-color: #E2F8E0;
     width: 390px;
@@ -121,6 +122,7 @@ body{
 }
 
 #descricaoArrecadacao{
+    flex:1;
     font-size: 20px;
     width: 1000px;
     text-align: justify;
@@ -223,68 +225,77 @@ body{
 @media (max-width:425px){
 
     .fotoArrecadacao{
-        width: 70%;
-        justify-content: left;
-        
+        width: 100%;
+        display: block;
     }
 
     .container{
-        max-width: 1010px;
+        max-width: 500px;
         margin: auto;
         padding: 12px;
     }
     .corpo{
         background-color: rgb(255, 255, 255);
-        width: 1500px;
+        width: 450px;
         display: flex;
         text-align: center;
         justify-content: center;
         align-items: center;
     }
     #descricaoArrecadacao{
+        order:1;
         font-size: 20px;
         width: 350px;
         text-align: justify;
-        padding: 25px 0px 10px 0px;
+        padding: 25px 0px 10px 30px;
     }
 
     #nomeAnimal{
-        font-size: 20px;
+        font-size: 10px;
         font-weight: 200;
         padding-right: 10px;
+        justify-content: center;
     }
     #slider {
         position: relative;
         width: 450px;
-        margin: auto;
+        margin: 1px;
+        padding: 10px;
+        padding-left: 1%;
     }
     
     .slide {
-        display: none;
+        display: block;
     }
 
+   
     #section{
         display:inline;
-        padding: 30px 0px 30px 0px;
+        padding: 10px 0px 10px 0px;
     }
     #sectionfotoEpix{
-        display: flex;
+        display: block ;
         align-items: center;
         justify-content: center;
         gap: 1rem;
     }
     #sectionfotoEpix h2{
-        font-size: 35px;
-        text-align: left;
+        font-size: 20px;
+        text-align: center;
         padding: 0px 0px 10px 15px;
     }
     
-    #sectionPix{
-        display: flex;
-       
+ 
+    #botaoCompartilhar{
+        padding-right: 50px;
+    }
+    #banco{
+        order:2;
+        width: 410px;
+      
     }
 
-
+  
     
     
   

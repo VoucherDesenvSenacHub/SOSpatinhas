@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "inter", sans-serif;
+}
+
+body {
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:#333;
+}
+
+.conteiner {
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+
+.corpo {
+    background-color: #fff;
+    width: 90%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pesquisar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pesquisar input {
+    width: 690px;
+    height: 35px;
+    padding: 5px 15px 5px 40px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pesquisar .lupa {
+    position: absolute;
+    left: 14px;
+    width: 1.2em;;
+    color: #888;
+    cursor: pointer;
+}
+
+.lista-de-membros {
+    display: grid;
+    grid-template-columns: (4, 1fr);
+    gap: 20px;
+    position: relative;
+}
+

@@ -61,9 +61,9 @@ h1 {
 
 .pesquisar .lupa {
     position: absolute;
-    left: 10px;
+    left: 14px;
     color: #888;
-    font-size: 1.2em;
+    width: 1.2em;
     cursor: pointer;
 }
 

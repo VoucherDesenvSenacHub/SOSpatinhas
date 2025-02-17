@@ -98,7 +98,7 @@ body{
     gap: 10px;
     margin: 20px 0;
     height: 30px;
-    margin-left: 120px;
+    justify-content: center;
 }
 
 /* Botão acesso ADM */

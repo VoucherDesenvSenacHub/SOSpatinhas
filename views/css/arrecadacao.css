@@ -166,7 +166,7 @@ body{
 
 .fotoArrecadacao {
     width: 550px;
-    height: auto;
+    height: 100%;
     margin: auto;
     display: block;
     position: relative;
@@ -218,4 +218,74 @@ body{
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+@media (max-width:425px){
+
+    .fotoArrecadacao{
+        width: 70%;
+        justify-content: left;
+        
+    }
+
+    .container{
+        max-width: 1010px;
+        margin: auto;
+        padding: 12px;
+    }
+    .corpo{
+        background-color: rgb(255, 255, 255);
+        width: 1500px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    #descricaoArrecadacao{
+        font-size: 20px;
+        width: 350px;
+        text-align: justify;
+        padding: 25px 0px 10px 0px;
+    }
+
+    #nomeAnimal{
+        font-size: 20px;
+        font-weight: 200;
+        padding-right: 10px;
+    }
+    #slider {
+        position: relative;
+        width: 450px;
+        margin: auto;
+    }
+    
+    .slide {
+        display: none;
+    }
+
+    #section{
+        display:inline;
+        padding: 30px 0px 30px 0px;
+    }
+    #sectionfotoEpix{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    #sectionfotoEpix h2{
+        font-size: 35px;
+        text-align: left;
+        padding: 0px 0px 10px 15px;
+    }
+    
+    #sectionPix{
+        display: flex;
+       
+    }
+
+
+    
+    
+  
 }

@@ -9,7 +9,7 @@
 <body>
     <?php include('../templates/navbarUser.php')?>
 
-    <section class="corpo container"">
+    <section class="corpo container">
 
         <div id="section">
             <section id="sectionfotoEpix">

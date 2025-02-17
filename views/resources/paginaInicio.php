@@ -23,6 +23,12 @@
             </nav>
         </header>
 
+        <section id="bannerMobas">
+            <div class="imgBanner">
+                <img src="../images/inicial/Telinha1.png" alt="Cachorros Felizes">
+            </div>
+        </section>
+
         <section id="secslider" >
             <div id="divslider">
                 <ul id="slider">
@@ -87,5 +93,19 @@
             const slider = document.getElementById('slider');
             slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
+
+        
+        const largura = window.innerWidth;
+        // ../images/inicial/
+
+        if (largura < 480) {
+            imgSlider1.src = "../images/inicial/Telinha1.png"
+        } 
+        else if (largura >= 480 && largura < 768) {
+
+            console.log("Tela média (entre 480px e 768px)");
+        }
+
+
     </script>
 </html>

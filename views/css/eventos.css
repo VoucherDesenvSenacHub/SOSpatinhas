@@ -31,6 +31,7 @@ body{
     display: flex; /* Alinha os itens em uma linha */
     justify-content: space-between; /* Espaço entre as divs */
     padding: 20px; /* Espaço interno no contêiner */
+
 }
 
 
@@ -73,7 +74,12 @@ body{
 .item {
     margin: 0 10px; /* Espaço lateral entre os itens */
     position: relative; /* Para posicionar o texto em relação à imagem */
+    box-sizing: border-box;
+    text-align: center;
+   
 }
+
+
 
 /*BARRA*/
 
@@ -162,4 +168,44 @@ body{
     margin: 0; /* Remove a margem padrão do título */
     padding: 0; /* Remove o padding do título */
     font-size: 20px; /* Tamanho do texto do título */
+}
+
+
+.carousel-button {
+    position: absolute;
+    top: 35%;
+    right: 190px; 
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.carousel-button.prev {
+    left: 10px;
+    position: absolute;
+}   
+
+/*caroosellll*/
+
+
+.carousel-container {
+    display: flex;  /* Faz as imagens ficarem em uma linha */
+    transition: transform 0.5s ease;  /* Adiciona um efeito de transição suave */
 }

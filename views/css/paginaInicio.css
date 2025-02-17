@@ -125,12 +125,39 @@ button {
 
 @media (max-width: 768px) {
     
-    #bannerMobas {
-        display: block;
-    }
     #secslider {
         display: none;
+    } /*RETIRAR CARROSSEL*/
+
+    #bannerMobas {
+        display: block;
+    } /*MOSTRAR O BANNER*/
+
+    #seccards {
+        display: none;
     }
+    #sliderDoacao{
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        overflow: scroll;
+        position: relative;
+        flex-direction: row;
+
+        & .cardDoacao {
+            width: 100vw;
+            height: 100%;
+
+            & .divImg {
+                background: red;
+                width: 100vw;
+                height: 100%;
+            }
+        }
+
+    }
+
+
 
     .imgBanner{
         

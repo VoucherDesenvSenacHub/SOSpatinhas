@@ -224,3 +224,7 @@ body{
   color: white;
   border-radius: 5px;
 }
+
+@media (max-width: 425px){
+  
+} 

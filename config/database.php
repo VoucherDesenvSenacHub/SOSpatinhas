@@ -2,10 +2,8 @@
 
 class Banco{
     private $conexao;
-    
     public function __construct() {
         $this->conexao = new mysqli('localhost', 'root', '', 'SOS_Patinhas');
-        
         if ($this->conexao->connect_error) {
             die("Connection failed: " . $this->conexao->connect_error);
         }

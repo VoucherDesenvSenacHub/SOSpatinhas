@@ -205,7 +205,3 @@ body{
 /*caroosellll*/
 
 
-.carousel-container {
-    display: flex;  /* Faz as imagens ficarem em uma linha */
-    transition: transform 0.5s ease;  /* Adiciona um efeito de transição suave */
-}

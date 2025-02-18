@@ -13,34 +13,35 @@
 
 <section class="container">
         <h1 class="texto">Arrecadações</h1>
-        <div class="carousel">
-            <div class="carousel-container" id="carouselContainer">
-                <div id="imgAnimal">
-                    <div class="item">
-                        <img src="../images/eventosImg/eventos2.png" class="animal" alt="">
-                        <h3 class="texto-overlay">Ajude o Freguês</h3>
-                        <div class="box-anim"></div>
-                        <div class="box-saibamais"><h1>Saiba mais</h1></div>
-                    </div>
-                    <div class="item">
-                        <img src="../images/eventosImg/eventos6.png" class="animal" alt="">
-                        <h3 class="texto-overlay">Ajude a Nina</h3>
-                        <div class="box-anim">
-                            <div class="box-anim2"></div>
-                        </div>
-                        <div class="box-saibamais"><h1>Saiba mais</h1></div>
-                    </div>
-                    <div class="item">
-                        <img src="../images/eventosImg/eventos3.png" class="animal" alt="">
-                        <h3 class="texto-overlay">Ajude o Cascudo</h3>
-                        <div class="box-anim"></div>
-                        <div class="box-saibamais"><h2>Saiba mais</h2></div>
-                    </div>
-                </div>
+        <div class="conteiner swiper">
+            <div class="carousel">
+                    <ul id="imgAnimal" class="card-list swiper-wrapper">
+                        <li class="item">
+                            <img src="../images/eventosImg/eventos2.png" class="animal" alt="">
+                            <h3 class="texto-overlay">Ajude o Freguês</h3>
+                            <div class="box-anim"></div>
+                            <div class="box-saibamais"><h1>Saiba mais</h1></div>
+                        </li>
+                        <li class="item">
+                            <img src="../images/eventosImg/eventos6.png" class="animal" alt="">
+                            <h3 class="texto-overlay">Ajude a Nina</h3>
+                            <div class="box-anim">
+                                <div class="box-anim2"></div>
+                            </div>
+                            <div class="box-saibamais"><h1>Saiba mais</h1></div>
+                        </li>
+                        <li class="item">
+                            <img src="../images/eventosImg/eventos3.png" class="animal" alt="">
+                            <h3 class="texto-overlay">Ajude o Cascudo</h3>
+                            <div class="box-anim"></div>
+                            <div class="box-saibamais"><h2>Saiba mais</h2></div>
+                        </li>
+                    </ul>  
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
             </div>
-            <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
         </div>
-
         <h1 class="texto">Eventos</h1>
         <div id="imgEventos">
             <div class="item" id="item-carousel">
@@ -83,35 +84,42 @@
 <?php
 @include('../templates/footerUser.php');
 ?>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    new Swiper('.carousel', {
+  
+  loop: true,
+  spaceBetween:30,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints:{
+      0:{
+          slidesPerView: 1
+      },
+      768:{
+          slidesPerView: 2
+      },
+      1024:{
+          slidesPerView: 3
+      }
+  }
+
+
+});
+</script>
+
 </body>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const carouselContainer = document.getElementById('carouselContainer');
-    const items = document.querySelectorAll('#carouselContainer .item'); // Seleciona todos os itens
-    const nextButton = document.querySelector('.carousel-button.next'); // Seleciona o botão de próxima
-
-    // Função para mover a primeira imagem para o final
-    function moveSlide() {
-        // Move o primeiro item para o final
-        const firstItem = items[0];
-        carouselContainer.appendChild(firstItem); // Adiciona o primeiro item ao final
-
-        // Ajusta a posição do carrossel para exibir as imagens corretamente
-        carouselContainer.style.transition = 'none'; // Remove a transição para não ter movimento abrupto
-        carouselContainer.style.transform = 'translateX(0)'; // Reseta o deslocamento
-
-        // Força o navegador a renderizar a mudança
-        setTimeout(() => {
-            // Adiciona uma transição suave e move o carrossel para o próximo item
-            carouselContainer.style.transition = 'transform 0.5s ease';
-            carouselContainer.style.transform = `translateX(-420px)`; // Move para a esquerda
-        }, 10);
-    }
-
-    // Adiciona o evento de clique ao botão
-    nextButton.addEventListener('click', moveSlide);
-});
-
-</script>
 </html>

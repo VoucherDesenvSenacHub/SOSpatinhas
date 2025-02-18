@@ -55,6 +55,28 @@ select {
     color: #888;
     cursor: pointer;
     width: 530px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    padding-right: 40px;
+    position: relative;
+}
+
+.selectContainer {
+    position: relative;
+    display: inline-block;
+    width: 530px;
+}
+
+.selectContainer::after {
+    content: url("../images/cadastroAdocao-ADM/setaBaixoDD.png");
+    color: #888;
+    position: absolute;
+    right: 25px;
+    top: 40%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .switchBtn {
@@ -67,7 +89,7 @@ select {
     display: none;
 }
 
-.switchBtn label {
+#female, #male {
     background-color: white;
     border: 1px solid #4CAF50;
     color: #4CAF50;
@@ -75,6 +97,15 @@ select {
     border-radius: 20px;
     margin: 5px;
     cursor: pointer;
+}
+
+#titulo {
+    background-color: white;
+    color: #337535;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 25px;
 }
 
 .switchBtn input:checked + label {

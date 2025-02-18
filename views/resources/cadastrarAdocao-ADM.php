@@ -17,21 +17,22 @@
                     <input type="text" name="tipo" placeholder="Tipo do Animal" required>
                     <input type="text" name="raca" placeholder="Raça" required>
                     <div class="selectContainer">
-
+                        <select name="porte" id="porte-select" placeholder="Porte" required>
+                            <option class="filter-option" value="" selected disabled hidden>-- Porte --</option>
+                            <option class="filter-option" value="Pequeno">Pequeno</option>
+                            <option class="filter-option" value="Médio">Médio</option>
+                            <option class="filter-option" value="Grande">Grande</option>
+                        </select>
                     </div>
-                    <select name="porte" id="porte-select" placeholder="Porte" required>
-                        <option class="filter-option" value="" selected disabled hidden>-- Porte --</option>
-                        <option class="filter-option" value="Pequeno">Pequeno</option>
-                        <option class="filter-option" value="Médio">Médio</option>
-                        <option class="filter-option" value="Grande">Grande</option>
-                    </select> 
-                    <select name="idade" id="idade-select" required>
-                        <option class="filter-option" value="" selected disabled hidden>-- Idade --</option>
-                        <option class="filter-option" value="< 1">-1 ano</option>
-                        <option class="filter-option" value="<= 5">Até 5 anos</option>
-                        <option class="filter-option" value="<= 10">Até 10 anos</option>
-                        <option class="filter-option" value="> 10">+10 anos</option>
-                    </select>
+                    <div class="selectContainer">
+                        <select name="idade" id="idade-select" required>
+                            <option class="filter-option" value="" selected disabled hidden>-- Idade --</option>
+                            <option class="filter-option" value="< 1">-1 ano</option>
+                            <option class="filter-option" value="<= 5">Até 5 anos</option>
+                            <option class="filter-option" value="<= 10">Até 10 anos</option>
+                            <option class="filter-option" value="> 10">+10 anos</option>
+                        </select>
+                    </div>
 
                     <textarea name="descricao" placeholder="Descrição" required></textarea>
 
@@ -43,9 +44,9 @@
                     <div class="switchBtn">
                         <label id="titulo">Gênero:</label>              
                         <input type="radio" name="sexo" value="Fêmea" id="female" required>
-                        <label for="female">Fêmea</label>
+                        <label for="female" id="female">Fêmea</label>
                         <input type="radio" name="sexo" value="Macho" id="male" required>
-                        <label for="male">Macho</label>
+                        <label for="male" id="male">Macho</label>
                     </div>
         
                     <div class="upload-container">

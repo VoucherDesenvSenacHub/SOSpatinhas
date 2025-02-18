@@ -16,7 +16,8 @@ nome varchar(50) not null,
 descricao varchar(100) not null,
 id_endereco_evento int,
 foreign key (id_endereco_evento) references endereco_evento(id_endereco_evento),
-foto blob
+id_foto int,
+foreign key (id_foto) references foto(id_foto)
 );
 
 create table pagamento(
@@ -36,49 +37,57 @@ nomeDono varchar(50) not null,
 descricao varchar(100) not null,
 valorArrecadacao int not null,
 valorArrecadado int not null,
-foto blob,
+id_foto int,
+foreign key (id_foto) references foto(id_foto),
 id_pagamento int,
 foreign key (id_pagamento) references pagamento(id_pagamento)
 );
 
 create table pagInicio_carrossel(
 id_pagInicio_carrossel int primary key auto_increment,
-foto blob not null,
+id_foto int not null,
+foreign key (id_foto) references foto(id_foto),
 texto varchar(30)
 );
 
 create table pagInicio_fotos(
 id_pagInicio_fotos int primary key auto_increment,
-foto blob not null,
+id_foto int not null,
+foreign key (id_foto) references foto(id_foto),
 texto varchar(30)
 );
 
 create table pag_noticia(
 id_noticia int primary key auto_increment,
 titulo varchar (50) not null,
-foto blob not null,
+id_foto int not null,
+foreign key (id_foto) references foto(id_foto),
 link varchar(2048) not null
 ); 
 
 create table pagQS_Banner(
 id_pagQS_Banner int primary key auto_increment,
-foto blob
+id_foto int,
+foreign key (id_foto) references foto(id_foto)
 );
 
 create table pagQS_carrosselMiddle(
 id_pagQS_carrosselMiddle int primary key auto_increment,
-foto blob,
+id_foto int,
+foreign key (id_foto) references foto(id_foto),
 texto varchar(50)
 );
 
 create table pagQS_carrosselBottom(
 id_pagQS_carrosselBottom int primary key auto_increment,
-foto blob
+id_foto int,
+foreign key (id_foto) references foto(id_foto)
 );
 
 create table pagCA_endereco(
 id_pagCA_endereco int primary key auto_increment,
-foto blob,
+id_foto int,
+foreign key (id_foto) references foto(id_foto),
 texto varchar(50)
 );
 
@@ -135,7 +144,8 @@ data_nasc date not null,
 cpf varchar(14) not null,
 rg varchar(12) not null,
 telefone varchar(20) not null,
-foto blob,
+id_foto int,
+foreign key (id_foto) references foto(id_foto),
 id_endereco int,
 foreign key (id_endereco) references endereco(id_endereco)
 );
@@ -156,10 +166,10 @@ sexo varchar(10)
 );
 
 create table foto(
-id_fot int primary key auto_increment,
-id_animal int,
-foreign key (id_animal) references animal(id_animal),
-caminho_foto varchar(100)
+id_foto int primary key auto_increment,
+id_table int not null,
+tipo_table enum() not null,
+caminho_foto int not null
 );
 
 create table tag(

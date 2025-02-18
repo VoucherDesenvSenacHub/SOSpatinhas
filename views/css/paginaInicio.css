@@ -74,6 +74,28 @@ nav ul{
     display: block;
 }
 
+.ctdcard {
+    gap: 10px;
+    color: white;
+    position: relative;
+    transform: translate(0%, -200%);
+    display: grid;
+
+    & input  {
+        background-color: #44803f;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        font-family: 'Inter', 'serif';
+    }
+}
+
+.textcard {
+    color: white;
+    font-weight: 600;
+    font-family: 'Inter', 'serif';
+}
+
 /* Baner ira sumir no desktop */
 #bannerMobas {
     display: none;
@@ -160,6 +182,10 @@ button {
             }
         }
 
+    }
+
+    .ctdcard {
+        display: flow;
     }
 
 

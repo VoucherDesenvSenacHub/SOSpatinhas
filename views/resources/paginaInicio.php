@@ -76,15 +76,27 @@
                 <div class="divImg">
                     <img src="../images/inicial/slider1.png" alt="Foto Animal">
                 </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                </div>
             </div>
             <div class="cardDoacao">
                 <div class="divImg">
                     <img src="../images/inicial/slider2.png" alt="Foto Animal">
                 </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                </div>
             </div>
             <div class="cardDoacao">
                 <div class="divImg">
                     <img src="../images/inicial/slider3.png" alt="Foto Animal">
+                </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
                 </div>
             </div>
         </section>
@@ -113,18 +125,6 @@
         function updateSlider() {
             const slider = document.getElementById('slider');
             slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        
-        const largura = window.innerWidth;
-        // ../images/inicial/
-
-        if (largura < 480) {
-            imgSlider1.src = "../images/inicial/Telinha1.png"
-        } 
-        else if (largura >= 480 && largura < 768) {
-
-            console.log("Tela média (entre 480px e 768px)");
         }
 
 

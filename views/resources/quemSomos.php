@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-button next" onclick="moveTeamSlide(1)">❯</button>''
+                <button class="carousel-button next" onclick="moveTeamSlide(1)">❯</button>
             </div>
 
             <div class="title-container">
@@ -225,10 +225,16 @@
 
     prevButtons.forEach(button => {
         button.addEventListener('click', () => moveTeamSlide(-1));  
+        
     });
 
     nextButtons.forEach(button => {
-        button.addEventListener('click', () => moveTeamSlide(1));  
+        button.addEventListener('click', () => moveTeamlide(1));  
+    });
+
+    prevButtons.forEach(button => {
+        button.addEventListener('click', () => movePartnerSlide(-1));  
+        
     });
 
     nextButtons.forEach(button => {

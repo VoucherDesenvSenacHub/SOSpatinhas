@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça nossa equipe e nossos parceiros. Somos uma equipe dedicada a fornecer soluções inovadoras para nossos clientes.">
-    <title>Quem Somos</title>
+    <title>Perfil ADM</title>
     <link rel="stylesheet" href="../css/perfilAdm.css">
 </head>
 <body>
@@ -30,6 +30,30 @@
     </section>
 
     <?php include('../templates/footerUser.php'); ?>   
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+        const buttonLinks = {
+            "Adoção": "listaAdocao-ADM.php",
+            "Eventos": "listaEventosADM.php",
+            "Arrecadação": "listaArrecadacoesADM.php",
+            "Membros": "listademembrosadm.php",
+            "Usuário": "usuarios.php",
+            "Editar Formulário": "editar_formulario.php"
+        };
+
+        document.querySelectorAll(".buttons button").forEach(button => {
+            button.addEventListener("click", function () {
+                const page = buttonLinks[this.textContent.trim()];
+                if (page) {
+                    window.location.href = page;
+                }
+            });
+        });
+    });
+
+    </script>
 
 </body>
 </html>

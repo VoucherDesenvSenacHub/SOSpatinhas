@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/eventos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 </head>
 <body>
 <?php
@@ -14,7 +15,7 @@
 <section class="container">
         <h1 class="texto">Arrecadações</h1>
             <div class="wrapper">
-                    <i id="left">l</i>
+                  
                     <ul id="imgAnimal" class="carousel">
                         <li class="card">
                             <img src="../images/eventosImg/eventos2.png" class="animal" alt="">
@@ -37,7 +38,7 @@
                             <div class="box-saibamais"><h2>Saiba mais</h2></div>
                         </li>
                     </ul>
-                    <i id="right">r</i>  
+                  
             </div>
         
         <h1 class="texto">Eventos</h1>

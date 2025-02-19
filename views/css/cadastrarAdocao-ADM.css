@@ -235,3 +235,39 @@ button a{
 
 
 
+@media (max-width: 768px) {
+    .corpo{
+        width: 85%;
+    }
+
+    .conteudoForm {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .col1, .col2 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    select, input, textarea {
+        width: 100%;
+    }
+
+    .upload-container {
+        max-width: 100%;
+    }
+}
+
+/* @media (max-width: 480px) {
+    .corpo {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    input, textarea, select, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+} */

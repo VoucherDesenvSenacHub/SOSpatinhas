@@ -226,5 +226,15 @@ body{
 }
 
 @media (max-width: 425px){
+  .corpo{
+    width: auto;
+  }
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-content: center; 
+    margin-bottom: 3rem;
+  }
   
 } 

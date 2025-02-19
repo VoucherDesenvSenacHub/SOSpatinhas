@@ -181,3 +181,4 @@ data_adocao date
 
 
 select * from pagQS_Banner;
+

@@ -113,9 +113,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $target_file = $target_dir . $id_evento . "_" . $nomeImagem;
                 
                 if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
-                    $sql2 = "INSERT INTO foto (id_evento, caminho_foto) VALUES (?, ?)";
+                    $sql2 = "INSERT INTO foto (id_evento, tipo_table,caminho_foto) VALUES (?, ?, ?)";
                     $query2 = $banco->prepare($sql2);
-                    $query2->bind_param("is", $id_evento, $target_file);
+                    $query2->bind_param("iss", $id_evento, "eventos", $target_file);
                     $query2->execute();
                 } else {
                     throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);

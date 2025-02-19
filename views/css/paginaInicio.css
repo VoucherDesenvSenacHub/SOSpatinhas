@@ -178,7 +178,6 @@ button {
         
         & .cardDoacao {
             width: auto;
-            margin: 20px 0px 20px 0px;
 
             & .divImg {
                 width: 100vw;
@@ -190,10 +189,10 @@ button {
 
     .ctdcard {
         display: flow;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
 
         & input {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
         
     }
@@ -215,7 +214,6 @@ button {
 @media (max-width: 425px) {
     
     #sliderDoacao {
-        transform: scale(0.9);
         margin: 20px auto;
     }
 

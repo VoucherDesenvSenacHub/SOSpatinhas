@@ -51,7 +51,7 @@ body{
 
 .texto{
     position: relative; /* Permite usar top, right, bottom, left */
-    top: 40px; /* Move o texto 20 pixels para baixo */
+    top: 20px; /* Move o texto 20 pixels para baixo */
     left: 90px; /* Move o texto 10 pixels para a direita */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 35px; /* Tamanho do texto */
@@ -210,11 +210,7 @@ body{
 }    */
 
 /*caroosellll*/
-.wrapper{
-    max-width: 1100px;
-    width: 100%;
-    position: relative;
-}
+
 
 .wrapper i{
     height: 50px;

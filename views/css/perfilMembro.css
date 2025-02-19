@@ -86,6 +86,7 @@ body {
     background-color: #83CE7D;
     font-size: 24px;
     color: #fff;
+    border-radius: 5px;
 
     &:hover{
         background-color: #44803F;

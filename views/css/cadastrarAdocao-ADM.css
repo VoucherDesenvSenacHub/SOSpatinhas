@@ -89,7 +89,7 @@ select {
     display: none;
 }
 
-#female, #male {
+.switchBtn label {
     background-color: white;
     border: 1px solid #4CAF50;
     color: #4CAF50;
@@ -100,12 +100,12 @@ select {
 }
 
 #titulo {
-    background-color: white;
-    color: #337535;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin: 5px;
     font-size: 25px;
+    font-weight: bold;
+    color: #44803F;
+    background: none;
+    border: none;
+    cursor: none;
 }
 
 .switchBtn input:checked + label {

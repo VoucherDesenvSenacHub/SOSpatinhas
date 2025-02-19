@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/listamembrosADM.css">
 </head>
 <body>
-    <?php include('../templates/navbarUser.php')?>
+    <?php include_once "../templates/navbarAdm.php"; ?>
 
     <section class="corpo conteiner">
         <h1>Lista de membros</h1>
@@ -16,7 +16,7 @@
             <input type="text" placeholder="Pesquisar">
         </div>
 
-        <div class="lista-de-membros">
+        <div class="lista-de-membros" id="lista-de-membros">
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
                 <h3>...</h3>
@@ -144,21 +144,32 @@
                 </div>
                 <button>Excluir</button>
             </div>
+
+            
+            <div class="membro">
+                <img src="../images/iconeADM.png" alt="">
+                <h3>...</h3>
+                <div class="status">
+                    <div></div>
+                    <span>Online</span>
+                </div>
+                <button>Excluir</button>
+            </div>
+            <div class="botao-add-conteiner">
+                <a href="adicionar-membro.php"><button class="botao-add">+</button></a>
+            </div>
         </div>
 
-        <div class="botao-add-conteiner">
-            <a href="adicionar-membro.php"><button class="botao-add">+</button></a>
-        </div>
         
-        <div class="cta-slide"></div>
-        <button id="prev" class="pagination-btn">&lt;</button>
-        <div class="altPag" id="paginacao">
-            <li class="link-active" value="1">1</li>
-            <li class="link" value="2">2</li>
-            <li class="link" value="3">3</li>
+        <div class="cta-slide">
+            <button id="prev" class="pagination-btn">&lt;</button>
+            <div class="altPag" id="paginacao">
+                <li class="link active" value="1">1</li>
+                <li class="link" value="2">2</li>
+                <li class="link" value="3">3</li>
+            </div>
+            <button id="next" class="pagination-btn">&gt;</button>
         </div>
-
-        <button id="next" class="pagination-btn">&gt;</button>
 
     </section>
 

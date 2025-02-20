@@ -199,7 +199,7 @@ h1 {
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 28px; 
     }
 
     .container {
@@ -251,6 +251,7 @@ h1 {
         width: 45px;
         height: 45px;
         font-size: 1.8em;
+        line-height: 0;
     }
 
     .cta-slide {
@@ -276,5 +277,92 @@ h1 {
     .altPag li {
         padding: 8px 12px;
         font-size: 0.9em;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 32px; 
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .corpo {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .pesquisar input {
+        width: 100%;
+        height: 35px;
+        font-size: 1.1em;
+        padding: 5px 70px 5px 40px;
+    }
+
+    .pesquisar .lupa {
+        left: 14px;
+        width: 1.1em;
+    }
+
+    .lista-adocao {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .animal {
+        padding: 15px;
+    }
+
+    .animal h3 {
+        font-size: 1em;
+    }
+
+    .animal button {
+        height: 35px;
+        font-size: 1em;
+    }
+
+    .botao-add-container {
+        position: fixed;
+        top: 180px;
+        right: 45px;
+
+    }
+
+    .botao-add {
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+    }
+
+    .cta-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .pagination-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+    }
+
+    .altPag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .altPag li {
+        padding: 10px 15px;
+        font-size: 1em;
     }
 }

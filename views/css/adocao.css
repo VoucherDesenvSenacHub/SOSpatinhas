@@ -76,9 +76,12 @@ body{
 }
 
 .form-filter{
-  margin-bottom: 5rem;
+  margin-bottom: 26px;
   display: flex;
   gap: 2rem;
+}
+.box2{
+  margin-bottom: 26px;
 }
 
 .filter-option:hover{
@@ -224,7 +227,55 @@ body{
   color: white;
   border-radius: 5px;
 }
+@media (max-width: 768px){
+  .corpo{
+    width: 100%;
+    padding: 0;
+  }
+  .card-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-filter{
+    margin-bottom: 22px;
+  }
+  .box2{
+    margin-bottom: 16px;
+  }
+
+}
 
 @media (max-width: 425px){
+  .corpo{
+    width: 100%;
+    padding: 0;
+  }
+  .card-container{
+    margin-top: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    justify-content: center; 
+    margin-bottom: 3rem;
+  }
+  .box2{
+    width: 100%;
+  }
+  .filter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    & .form-filter{
+      display: flex;
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    } & .filter-button{
+      align-self: auto;
+      width: 82%;
+    }
+  }
+
   
 } 

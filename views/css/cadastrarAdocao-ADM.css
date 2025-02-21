@@ -258,16 +258,37 @@ button a{
     .upload-container {
         max-width: 100%;
     }
+    
 }
 
-/* @media (max-width: 480px) {
-    .corpo {
-        width: 90%;
-        padding: 15px;
+@media (max-width: 425px) {
+    .corpo{
+        width: 85%;
     }
-    
-    input, textarea, select, button {
-        font-size: 14px;
-        padding: 10px;
+
+    .conteudoForm {
+        flex-direction: column;
+        align-items: center;
     }
-} */
+
+    .col1, .col2 {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    select, input, textarea {
+        width: 100%;
+    }
+    #frmCadastroAdocao{
+        width: 100%;
+    }
+
+    .upload-container {
+        max-width: 80%;
+    }
+
+    .selectContainer{
+        width:115%;
+    }
+}
+

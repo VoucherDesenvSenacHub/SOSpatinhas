@@ -69,6 +69,7 @@
         
 
         <section class="filter">
+
             <form method="get" class="form-filter">
 
                 <div class="container-select">
@@ -111,9 +112,11 @@
                         <option class="filter-option" value="Roedor">Roedor</option>
                     </select>
                 </div>
-
-                <input type="submit" value="Filtrar" class="filter-button">
+                
             </form>
+            <div class="box2">
+                <input type="submit" value="Filtrar" class="filter-button">
+            </div>
         </section>
         
 

@@ -13,42 +13,15 @@
         <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
             <div class="conteudoForm">
                 <div class="col1">
-                    <input type="text" name="name" placeholder="Nome do Animal" required>
-                    <input type="text" name="tipo" placeholder="Tipo do Animal" required>
-                    <input type="text" name="raca" placeholder="Raça" required>
-                    <div class="selectContainer">
-                        <select name="porte" id="porte-select" placeholder="Porte" required>
-                            <option class="filter-option" value="" selected disabled hidden>-- Porte --</option>
-                            <option class="filter-option" value="Pequeno">Pequeno</option>
-                            <option class="filter-option" value="Médio">Médio</option>
-                            <option class="filter-option" value="Grande">Grande</option>
-                        </select>
-                    </div>
-                    <div class="selectContainer">
-                        <select name="idade" id="idade-select" required>
-                            <option class="filter-option" value="" selected disabled hidden>-- Idade --</option>
-                            <option class="filter-option" value="< 1">-1 ano</option>
-                            <option class="filter-option" value="<= 5">Até 5 anos</option>
-                            <option class="filter-option" value="<= 10">Até 10 anos</option>
-                            <option class="filter-option" value="> 10">+10 anos</option>
-                        </select>
-                    </div>
-
+                    <input type="text" name="titulo" placeholder="Titulo da Arrecadaçãp" required>
+                    <input type="text" name="nameAnimal" placeholder="Nome do Animal" required>
                     <textarea name="descricao" placeholder="Descrição" required></textarea>
-
-                    <input type="text" name="tags" placeholder="Tags" required>
+                    <input type="text" name="nameUser" placeholder="Nome do Usuário" required>
+                    <input type="text" name="valorInicio" placeholder="Valor da Arrecadação" required>
+                    <input type="text" name="valorAtual" placeholder="Valor da Arrecadado" required>
                 </div>
     
                 <div class="col2">
-                    
-                    <div class="switchBtn">
-                        <label id="titulo">Gênero:</label>              
-                        <input type="radio" name="sexo" value="Fêmea" id="female" required>
-                        <label for="female" id="female">Fêmea</label>
-                        <input type="radio" name="sexo" value="Macho" id="male" required>
-                        <label for="male" id="male">Macho</label>
-                    </div>
-        
                     <div class="upload-container">
                         <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                         <label for="image" id="imgLabel" class="upload-box">
@@ -106,7 +79,7 @@
 
         function resetERedirect(){
             document.getElementById('frmCadastroAdocao').reset();
-            window.location.href = "listaAdocao-ADM.php";
+            window.location.href = "listaArrecadacoesADM.php";
         }
     </script>
 
@@ -146,9 +119,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $target_file = $target_dir . $id_animal . "_" . $nomeImagem;
                 
                 if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
-                    $sql2 = "INSERT INTO foto (id_animal, caminho_foto) VALUES (?, ?)";
+                    $sql2 = "INSERT INTO foto (id_animal, tipo_table, caminho_foto) VALUES (?, ?, ?)";
                     $query2 = $banco->prepare($sql2);
-                    $query2->bind_param("is", $id_animal, $target_file);
+                    $query2->bind_param("iss", $id_animal, "arrecadacao" ,$target_file);
                     $query2->execute();
                 } else {
                     throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);

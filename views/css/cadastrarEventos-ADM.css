@@ -2,24 +2,30 @@
     padding: 0;
     margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
-body{
+
+body {
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
 }
-.container{
+
+.container {
     max-width: 1500px;
     margin: auto;
     padding: 12px;
 }
-.corpo{
-    background-color: rgb(255, 255, 255);
-    width: 1500px;
+
+.corpo {
+    background-color: white;
+    width: 100%;
+    max-width: 1500px;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .conteudoForm {
@@ -27,7 +33,7 @@ body{
     justify-content: space-between;
     width: 90%;
     padding: 20px;
-    column-gap: 20rem;
+    gap: 5rem;
 }
 
 .col1, .col2 {
@@ -37,9 +43,9 @@ body{
     align-items: center;
 }
 
-input, textarea, select {
+input, textarea {
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -49,68 +55,6 @@ input, textarea, select {
 textarea {
     height: 100px;
     resize: none;
-}
-
-select {
-    color: #888;
-    cursor: pointer;
-    width: 530px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: white;
-    padding-right: 40px;
-    position: relative;
-}
-
-.selectContainer {
-    position: relative;
-    display: inline-block;
-    width: 530px;
-}
-
-.selectContainer::after {
-    content: url("../images/cadastroAdocao-ADM/setaBaixoDD.png");
-    color: #888;
-    position: absolute;
-    right: 25px;
-    top: 40%;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.switchBtn {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.switchBtn input {
-    display: none;
-}
-
-.switchBtn label {
-    background-color: white;
-    border: 1px solid #4CAF50;
-    color: #4CAF50;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-#titulo {
-    font-size: 25px;
-    font-weight: bold;
-    color: #44803F;
-    background: none;
-    border: none;
-    cursor: none;
-}
-
-.switchBtn input:checked + label {
-    background-color: #4CAF50;
-    color: white;
 }
 
 button {
@@ -129,7 +73,7 @@ button[type="submit"], .cancelarBtn {
     height: 42px;
 }
 
-button a{
+button a {
     text-decoration: none;
     color: white;
     width: 100%;
@@ -231,64 +175,3 @@ button a{
 .remove-file {
     margin-top: 5px;
 }
-
-
-
-
-@media (max-width: 768px) {
-    .corpo{
-        width: 85%;
-    }
-
-    .conteudoForm {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .col1, .col2 {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    select, input, textarea {
-        width: 100%;
-    }
-
-    .upload-container {
-        max-width: 100%;
-    }
-    
-}
-
-@media (max-width: 425px) {
-    .corpo{
-        width: 85%;
-    }
-
-    .conteudoForm {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .col1, .col2 {
-        width: 80%;
-        max-width: 80%;
-    }
-
-    select, input, textarea {
-        width: 100%;
-    }
-    #frmCadastroAdocao{
-        width: 100%;
-    }
-
-    .upload-container {
-        max-width: 80%;
-    }
-
-    .selectContainer{
-        width:115%;
-    }
-}
-

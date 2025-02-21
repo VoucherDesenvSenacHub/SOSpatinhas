@@ -2,9 +2,14 @@
     padding: 0;
     margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: #44803f;
+}
+
+img{
+    width: 100%;
 }
 
 /* --- Header --- */
@@ -41,7 +46,7 @@ nav ul{
     font-weight: 550;
 }
 .nav-links a:hover, .nav-links a:active{
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 /* --- Slider --- */
@@ -65,19 +70,45 @@ nav ul{
 
 #slider li {
     min-width: 100%;
-    height: 100%;
 }
 
 #slider img {
-    height: auto;
+    height: 450px;
     width: 100%;
     object-fit: cover;
     display: block;
 }
 
+.ctdcard {
+    gap: 10px;
+    color: white;
+    position: relative;
+    transform: translate(0%, -200%);
+    display: grid;
+
+    & input  {
+        background-color: #44803f;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        font-family: 'Inter', 'serif';
+    }
+}
+
+.textcard {
+    color: white;
+    font-weight: 600;
+    font-family: 'Inter', 'serif';
+}
+
+/* Baner ira sumir no desktop */
+#bannerMobas {
+    display: none;
+}
+
 button {
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -88,21 +119,15 @@ button {
     cursor: pointer;
     z-index: 10; /* Para garantir que os botões fiquem acima das imagens */
 }
-button:hover{
-    background-color: #61925d;
-}
-
 .buttonslider{
     font-weight: 550;
-    font-size: 22px;
     color: #ffffff;
 }
-
 #esquerda {
-    left: 40px;
+    left: 20px;
 }
 #direita {
-    right: 40px;
+    right: 20px;
 }
 
 /* --- Cards --- */
@@ -114,11 +139,9 @@ button:hover{
 
 .card {
     flex: 1; /* Faz cada card ocupar o mesmo espaço */
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
 }
 
 #seccards img {
@@ -127,38 +150,72 @@ button:hover{
     height: 100%;
 }
 
-.ctdcard {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
+@media (min-width: 769px) {
+    #sliderDoacao {
+        display: none;
+    }
 }
 
-.textcard {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: #ffffff;
+@media (max-width: 768px) {
+    
+    #secslider {
+        display: none;
+    } /*RETIRAR CARROSSEL*/
+
+    #bannerMobas {
+        display: block;
+        width: 100%;
+    } /*MOSTRAR O BANNER*/
+
+    #seccards {
+        display: none;
+    }
+    #sliderDoacao{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        & .cardDoacao {
+            width: auto;
+
+            & .divImg {
+                width: 100vw;
+                height: 100%;
+            }
+        }
+
+    }
+
+    .ctdcard {
+        display: flow;
+        font-size: 1.6rem;
+
+        & input {
+            font-size: 1.5rem;
+        }
+        
+    }
+
+
+
+    .imgBanner{
+        
+        max-width: 768px;
+    
+        & img{
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
 }
 
-.buttoncard {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 10px;
-    color: #ffffff;
-    background-color: #44803f;
-    border-radius: 12px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-}
-.buttoncard:hover{
-    background-color: #61925d;
+@media (max-width: 425px) {
+    
+    #sliderDoacao {
+        margin: 20px auto;
+    }
+
+
 }

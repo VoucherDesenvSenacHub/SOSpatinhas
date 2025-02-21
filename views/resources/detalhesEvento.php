@@ -51,18 +51,18 @@
           
         <div class="carousel-container">
           <h2>Outros eventos...</h2>
-          
+
           <div class="carousel">
             <button id="carousel-prev">&#10094;</button>
             <div class="carousel-track">
-
+              
               <div class="card">
                 <img src="../images/horto-florestal.png" alt="Feira do Auau">
                 <div class="card-info">
                   <h3>Feira do Auau</h3>
                   <p>Feira arrecadativa de moda.</p>
                   <div class="local">
-                  <img src="../images/pin_info.png"></img> Campo Grande MS, Horto Florestal
+                    <img src="../images/pin_info.png"></img> Campo Grande MS, Horto Florestal
                   </div>
                 </div>
               </div>
@@ -77,21 +77,53 @@
                   </div>
                 </div>
               </div>
-
+              
               <div class="card">
                 <img src="../images/bosque.png" alt="Junto por eles">
                 <div class="card-info">
                   <h3>Junto por eles</h3>
                   <p>Passeata pelos direitos dos animais.</p>
                   <div class="local">
-                  <img src="../images/pin_info.png"></img> Campo Grande MS, Bosque dos Ipês
+                    <img src="../images/pin_info.png"></img> Campo Grande MS, Bosque dos Ipês
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <img src="../images/horto-florestal.png" alt="Feira do Auau">
+                <div class="card-info">
+                  <h3>Feira do Auau</h3>
+                  <p>Feira arrecadativa de moda.</p>
+                  <div class="local">
+                   <img src="../images/pin_info.png"></img> Campo Grande MS, Horto Florestal
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <img src="../images/parque-dos-poderes.png" alt="Adote um Amigo">
+                <div class="card-info">
+                  <h3>Adote um Amigo</h3>
+                  <p>Feira de adoção.</p>
+                  <div class="local">
+                    <img src="../images/pin_info.png"></img> Campo Grande MS, Parque dos Poderes
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <img src="../images/bosque.png" alt="Junto por eles">
+                <div class="card-info">
+                  <h3>Junto por eles</h3>
+                  <p>Passeata pelos direitos dos animais.</p>
+                  <div class="local">
+                   <img src="../images/pin_info.png"></img> Campo Grande MS, Bosque dos Ipês
                   </div>
                 </div>
               </div>
 
-              
 
-            <!-- </div> -->
+            </div>
             <button id="carousel-next">&#10095;</button>
           </div>
         </div>
@@ -140,6 +172,10 @@
       const carouselWidth = carouselCards[0].clientWidth;
       carouselContainer.scrollBy({ left: -carouselWidth, behavior: "smooth"});
     });
+
+
+
+
 
     </script>
 

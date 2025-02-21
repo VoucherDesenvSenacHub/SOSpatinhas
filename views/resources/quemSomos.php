@@ -18,8 +18,8 @@
             </div>
             
             <div class="carousel-container">
+            <button class="carousel-button prev" onclick="moveTeamSlide(-1)">❮</button>
                 <div class="card-container" id="team-carousel">
-                <button class="carousel-button prev" onclick="moveTeamSlide(-1)">❮</button>
                     <div class="card">
                         <img src="../images/emanuel.png" alt="Emanuel Barros - Foto do membro da equipe">
                         <div class="card-content">
@@ -141,16 +141,16 @@
                             <div class="card-title">Douglas Tangiro</div>
                         </div>
                     </div>
-                    <button class="carousel-button next" onclick="moveTeamSlide(1)">❯</button>
                 </div>
+                <button class="carousel-button next" onclick="moveTeamSlide(1)">❯</button>
             </div>
 
             <div class="title-container">
                 <h2>Nossos Parceiros</h2>
             </div>
             <div class="carousel-container">
+             <button class="carousel-button prev" onclick="moveTeamSlide(-1)">❮</button>
                 <div class="partner-cards" id="partner-carousel">
-                <button class="carousel-button prev" onclick="moveTeamSlide(-1)">❮</button>
                     <div class="partner-card">
                         <img src="../images/Abrigo dos Bichos.png" alt="Parceiro 1">
                         <div class="partner-content">
@@ -169,8 +169,8 @@
                             <div class="partner-title"></div>
                         </div>
                     </div>
-                    <button class="carousel-button next" onclick="movePartnerSlide(1)">❯</button>
                 </div>
+                <button class="carousel-button next" onclick="movePartnerSlide(1)">❯</button>
             </div>
         </section>
 
@@ -225,10 +225,16 @@
 
     prevButtons.forEach(button => {
         button.addEventListener('click', () => moveTeamSlide(-1));  
+        
     });
 
     nextButtons.forEach(button => {
-        button.addEventListener('click', () => moveTeamSlide(1));  
+        button.addEventListener('click', () => moveTeamlide(1));  
+    });
+
+    prevButtons.forEach(button => {
+        button.addEventListener('click', () => movePartnerSlide(-1));  
+        
     });
 
     nextButtons.forEach(button => {

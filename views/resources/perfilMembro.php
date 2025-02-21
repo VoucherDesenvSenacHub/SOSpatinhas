@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <button id="buttonEditarPerfil">Editar Perfil</button>
+                <a href="editarPerfilMembro.php"><button id="buttonEditarPerfil">Editar Perfil</button></a> 
             </div>
         </div>
     </section>

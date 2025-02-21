@@ -14,14 +14,20 @@
                 </a>
 
                 <ul class="nav-links">.
-                    <a class="link-navbar" href="./blog.php">Blog</a>
-                    <a class="link-navbar" href="./quemSomos.php">Quem Somos</a>
-                    <a class="link-navbar" href="./comoAjudar.php">Como Ajudar</a>
-                    <a class="link-navbar" href="./eventos.php">Eventos</a>
-                    <a class="link-navbar" href="./adocao.php">Adoção</a>
+                    <a class="link-navbar" href="blog">Blog</a>
+                    <a class="link-navbar" href="quemSomos">Quem Somos</a>
+                    <a class="link-navbar" href="comoAjudar">Como Ajudar</a>
+                    <a class="link-navbar" href="eventos">Eventos</a>
+                    <a class="link-navbar" href="adocao">Adoção</a>
                 </ul>
             </nav>
         </header>
+
+        <section id="bannerMobas">
+            <div class="imgBanner">
+                <img src="../images/inicial/Telinha1.png" alt="Cachorros Felizes">
+            </div>
+        </section>
 
         <section id="secslider" >
             <div id="divslider">
@@ -46,24 +52,56 @@
                 <img src="../images/imgcard1.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Faça uma doação!</p>
-                        <a href="./comoAjudar.php" class="buttoncard">Saiba Mais!</a>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
                     </div>
-                </div>
+            </div>
             <div class="card">
                 <img src="../images/imgcard2.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Participe dos nossos eventos!</p>
-                        <a href="./eventos.php" class="buttoncard">Saiba Mais!</a>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
                     </div>
-                </div>
+            </div>
             <div class="card">
                 <img src="../images/imgcard3.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Adote um amigo!</p>
-                        <a href="./adocao.php" class="buttoncard">Saiba Mais!</a>
-                    </div>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
                 </div>
+            </div>
         </section>
+
+        <section id="sliderDoacao">
+            <div class="cardDoacao">
+                <div class="divImg">
+                    <img src="../images/inicial/slider1.png" alt="Foto Animal">
+                </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                </div>
+            </div>
+            <div class="cardDoacao">
+                <div class="divImg">
+                    <img src="../images/inicial/slider2.png" alt="Foto Animal">
+                </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                </div>
+            </div>
+            <div class="cardDoacao">
+                <div class="divImg">
+                    <img src="../images/inicial/slider3.png" alt="Foto Animal">
+                </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                </div>
+            </div>
+        </section>
+
+
 
         <?php include('../templates/footerUser.php') ?>
     </body>
@@ -72,6 +110,7 @@
         /* -- Slider -- */
         let currentIndex = 0;
         const slides = document.querySelectorAll('#slider li');
+
         const totalSlides = slides.length;
 
         document.getElementById('direita').addEventListener('click', () => {
@@ -87,5 +126,7 @@
             const slider = document.getElementById('slider');
             slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
+
+
     </script>
 </html>

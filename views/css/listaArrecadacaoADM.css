@@ -126,7 +126,20 @@ h1 {
     font-size: 1em;
     transition: background-color 0.3s;
 }
-
+.divImg{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#letras{
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 20px;
+    color: rgb(255, 255, 255);
+}
 .arrecadacao button:hover {
     background-color: #346430;
 }

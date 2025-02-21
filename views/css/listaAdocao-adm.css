@@ -280,7 +280,7 @@ h1 {
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     body {
         background-size: cover;
     }

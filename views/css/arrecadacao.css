@@ -10,6 +10,7 @@ body{
     background-size: 50%;
 }
 .container{
+    display: flex;
     max-width: 1500px;
     margin: auto;
     padding: 12px;
@@ -28,7 +29,9 @@ body{
     padding: 30px 0px 30px 0px;
 }
 #sectionfotoEpix{
+    
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 5rem;
@@ -40,6 +43,7 @@ body{
 }
 
 #sectionPix{
+    
     display: inline;
 }
 
@@ -65,11 +69,11 @@ body{
 }
 
 #pix{
+    
     display: inline;
     text-align: center;
 }
 #banco{
-    flex:2;
     display: flex;
     background-color: #E2F8E0;
     width: 390px;
@@ -121,12 +125,21 @@ body{
     font-weight: 600;
 }
 
+#titulo h2{
+
+}
+
 #descricaoArrecadacao{
-    flex:1;
+    flex:3;
     font-size: 20px;
     width: 1000px;
     text-align: justify;
     padding: 25px 0px 10px 0px;
+}
+
+#descrição{
+    
+    flex-direction: row;
 }
 
 #botaoCompartilhar{
@@ -138,7 +151,6 @@ body{
     border-radius: 12px;
     background-color: #44803F;
     cursor: pointer;
-
     font-size: 20px;
     color: #ffffff;
     font-weight: 600;
@@ -167,6 +179,7 @@ body{
 }
 
 .fotoArrecadacao {
+    
     width: 550px;
     height: 100%;
     margin: auto;
@@ -188,10 +201,8 @@ body{
     display: flex;
     gap: 1rem;
     justify-content: center;
-
     width: 550px;
     position: absolute;
-
     bottom: 10px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -222,81 +233,126 @@ body{
     to {opacity: 1}
 }
 
-@media (max-width:425px){
-
-    .fotoArrecadacao{
-        width: 100%;
+@media (max-width: 425px) {
+    .fotoArrecadacao {
+        order: 2;
+        width: 400px;
         display: block;
     }
 
-    .container{
-        max-width: 500px;
-        margin: auto;
-        padding: 12px;
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
     }
-    .corpo{
+
+    .container {
+        flex-direction: column; /* Muda a direção para coluna */
+        max-width: 100%; /* Garante que a largura máxima seja 100% */
+        margin: auto; /* Centraliza o contêiner */
+        padding: 1px; /* Padding reduzido */
+        display: flex; /* Mantém o contêiner como flex */
+    }
+
+    .corpo {
+        flex-direction: column; /* Muda a direção para coluna */
         background-color: rgb(255, 255, 255);
-        width: 450px;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-    #descricaoArrecadacao{
-        order:1;
-        font-size: 20px;
-        width: 350px;
-        text-align: justify;
-        padding: 25px 0px 10px 30px;
+        max-width: 100%; /* Garante que a largura máxima seja 100% */
+        display: flex; /* Mantém o contêiner como flex */
+        text-align: center; /* Centraliza o texto */
+        justify-content: center; /* Centraliza os itens */
+        align-items: center; /* Centraliza os itens */
     }
 
-    #nomeAnimal{
-        font-size: 10px;
-        font-weight: 200;
-        padding-right: 10px;
-        justify-content: center;
+    #titulo h2 {
+        order: 1; /* Título em primeiro lugar */
     }
+
+    #descricaoArrecadacao {
+        order: 3; /* Descrição em terceiro lugar */
+        font-size: 20px;
+        width: 350px; /* Largura da descrição */
+        text-align: justify; /* Justifica o texto */
+        padding: 25px 0px 10px 30px; /* Padding ajustado */
+    }
+
+    #sectionPix {
+        order: 4; /* Seção do PIX em último lugar */
+        display: flex; /* Muda para flex para melhor controle */
+        flex-direction: column; /* Coloca os itens em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #banco {
+        order: 4; /* Banco em último lugar */
+        width: 400px; /* Largura do banco */
+        padding: 10px; /* Padding do banco */
+    }
+
+    #numeroBanco img {
+        width: 35px; /* Largura da imagem do banco */
+        height: 35px; /* Altura da imagem do banco */
+        padding: 10px; /* Padding da imagem do banco */
+    }
+
+    #userElocal {
+        display: flex; /* Mantém como flex */
+        gap: 0.5rem; /* Espaçamento entre os itens */
+        flex-direction: column; /* Coloca os itens em coluna */
+    }
+
+    #localEusuario {
+        display: flex; 
+        flex-direction: column; /* Coloca os itens em coluna */
+        padding: 15px; /* Padding do local e usuário */
+        justify-content: flex-start; /* Alinha os itens ao início */
+    }
+
+    #nomeAnimal {
+        font-size: 20px; /* Tamanho da fonte do nome do animal */
+        padding-right: 20px; /* Padding à direita */
+        text-align: left; /* Alinha o texto à esquerda */
+        padding: 10px; /* Padding do nome do animal */
+    }
+
+    #outraDiv, #maisUmaDiv {
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
     #slider {
-        position: relative;
-        width: 450px;
-        margin: 1px;
-        padding: 10px;
-        padding-left: 1%;
+        position: relative; /* Posição relativa para o slider */
+        width: 400px; /* Largura do slider */
+        margin: 1px; /* Margem do slider */
+        padding: 10px; /* Padding do slider */
+        padding-left: 1%; /* Padding à esquerda do slider */
     }
-    
+
     .slide {
-        display: block;
+        display: block; /* Exibe o slide */
     }
 
-   
-    #section{
-        display:inline;
-        padding: 10px 0px 10px 0px;
-    }
-    #sectionfotoEpix{
-        display: block ;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
-    #sectionfotoEpix h2{
-        font-size: 20px;
-        text-align: center;
-        padding: 0px 0px 10px 15px;
-    }
-    
- 
-    #botaoCompartilhar{
-        padding-right: 50px;
-    }
-    #banco{
-        order:2;
-        width: 410px;
-      
+    #section {
+        display: flex; /* Mantém como flex */
+        flex-direction: column; /* Coloca os itens em coluna */
+        padding: 10px 0px; /* Padding do section */
     }
 
-  
-    
-    
-  
+    #sectionfotoEpix {
+        flex-direction: column; /* Coloca os itens em coluna */
+        display: flex; /* Muda para flex */
+        align-items: center; /* Centraliza os itens */
+        justify-content: center; /* Centraliza os itens */
+        gap: 1rem; /* Espaçamento entre os itens */
+    }
+
+    #sectionfotoEpix h2 {
+        font-size: 20px; /* Tamanho da fonte do título da seção */
+        text-align: center; /* Centraliza o texto */
+        padding: 0px 0px 10px 15px; /* Padding do título */
+    }
+
+    #pix {
+        display: inline; /* Mantém como inline */
+        text-align: center; /* Centraliza o texto */
+        width: 400px; /* Largura do PIX */
+    }
 }

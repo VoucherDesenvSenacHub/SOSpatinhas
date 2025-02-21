@@ -1,3 +1,27 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+}
+.container{
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+.corpo{
+    background-color: rgb(255, 255, 255);
+    width: 1500px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+} */
+
 * {
     padding: 0;
     margin: 0;
@@ -16,51 +40,142 @@ body{
     padding: 12px;
 }
 
-.corpo {
+.corpo{
     background-color: rgb(255, 255, 255);
     width: 1150px;
     display: flex;
     text-align: center;
-    align-items: stretch; 
+    justify-content: center;
+    align-items: center;
 }
 
 .principal {
     width: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
     margin-right: 20px;
+}
+ 
+.grandin {
+    margin-bottom: 20px;
+    text-align: center;
 }
  
 .sidebar {
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
  
-.ladin, .grandin {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 .ladin {
-    margin-bottom: 20px;
+
     text-align: center;
 }
  
 h2 {
-    margin-top: 25px;
+    margin-top: 10px;
     font-size: 1.5rem;
     font-family: "Inter", sans-serif;
     color: #333;
     border-bottom: 3.3px solid rgb(85,149,79);
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     width: 62%;
     margin-left: auto;
     margin-right: auto;
 }
 
+.corpo-mobile{
+    display: none;
+}
+
+#tatu{
+    margin-bottom: 50px;
+    
+}
+
 #maus_tratos {
-    margin-top: auto;
+    margin-top: 175px;
+}
+
+#pit {
+    margin-top: 55px;
+}
+
+@media (max-width: 425px) {
+
+    .corpo{
+        display: none;
+    }
+
+    .corpo-mobile{
+        width: 80%;
+        height: auto;
+        margin: 0 30px;
+        flex-direction: column;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        
+    }
+    
+
+    /*
+    .container{
+        width: 80%;
+        height: auto;
+    }
+    .corpo{
+        margin: 0 30px;
+        flex-direction: column;
+    }
+
+    .principal{
+        width: 250px;
+        height: auto;
+        padding-top: 15px;
+        align-self: center;
+        margin: 0px;
+    }
+    .grandin img{
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar{
+        height: auto; 
+        display: block;
+        width: auto;
+        ----margin-top: 60px;-----
+    }
+    .ladin{
+        height: auto;
+
+        & img{
+            width: 80%;
+        };
+        
+    }*/
+
+    .grandin, .ladin{
+        width: 80%;
+        margin: 0px;
+
+        margin: auto;
+    }
+
+    .ladin{
+        margin: 0 auto;
+    }
+
+    .grandin img{
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .ladin img{
+        width: 100%;
+    }
+
+
+
+    #pit, #maus_tratos, #tatu {
+        margin-top: 50px;
+        transition: margin-top 0.3s ease;
+    }
 }

@@ -17,8 +17,7 @@
     <section class="pontoArrecadacao">
       <div class="infoDestaque">
         <div class="imgPontoArrecadacao">
-          <img src="../images/valinhos07 1.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
-          <img src="../images/imagemCachorro.png" id="imgCachorro" alt="Imagem do Cachorro">
+          <img src="../images/cachorro_maldito.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
           <p class="endereco">R. do Parque, 75 - Centro, Campo Grande - MS</p>
         </div>
         <div class="fundoTexto">

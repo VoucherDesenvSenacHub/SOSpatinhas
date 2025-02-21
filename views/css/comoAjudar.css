@@ -47,7 +47,7 @@ body{
 #imgCachorro{
   position: absolute;
   bottom: 20px;
-  left: 5px;
+  left: 100px;
 }
 
 .infoDestaque img{
@@ -103,6 +103,13 @@ body{
 
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
 .cards h3 { 
   color: black;
 }
@@ -116,15 +123,12 @@ body{
 .cards span { 
   color: #5c5c5c;
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.cards strong {
+  font-size: 18px;
 }
 
 .card {

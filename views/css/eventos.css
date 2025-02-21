@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
+    font-family: "inter", sans-serif;
 }
 body{
     background-color: rgb(198, 225, 196);
@@ -174,7 +175,7 @@ body{
 .textEvent {
     margin: 0; /* Remove a margem padrão do título */
     padding: 0; /* Remove o padding do título */
-    font-size: 20px; /* Tamanho do texto do título */
+    font-size: 17px; /* Tamanho do texto do título */
 }
 
 /* 
@@ -295,4 +296,42 @@ body{
     height: 140px;
     object-fit: cover;
     border-radius: 50%;
+}
+@media  (max-width: 786px){
+    .container{
+        width: 80%;   
+
+    }
+
+    #imgEventos,#imgAnimal{
+        overflow: auto;
+    }
+  
+    .texto{
+        position: static;
+        font-size:25px; /* Tamanho do texto */
+    }
+
+}
+
+
+
+@media  (max-width: 425px) {
+    .container{
+        width: 80%;   
+
+    }
+
+    #imgEventos,#imgAnimal {
+       overflow: auto;
+    }
+    
+.card {
+    margin: 0 10px; /* Espaço lateral entre os itens */
+    position: relative; /* Para posicionar o texto em relação à imagem */
+    box-sizing: border-box;
+    text-align: center;
+   
+    }
+   
 }

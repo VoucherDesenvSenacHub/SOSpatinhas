@@ -22,7 +22,10 @@
         <div class="lista-arrecadacoes" id="lista-arrecadacoes">
             <div class="arrecadacao">
                 <h3>Freguês</h3>
-                <img src="../images/listaArrecadacoes-ADM/fregues.png" alt="Imagem do evento">
+                <div class="divImg">
+                    <img src="../images/listaArrecadacoes-ADM/fregues.png" alt="Imagem do evento">
+                    <span id="letras">Em progresso</span>
+                </div>
                 <div class="metas">
                     <span><b>Meta: R$ 1.000,00.</b></span> 
                 </div>
@@ -30,7 +33,10 @@
             </div>
             <div class="arrecadacao">
                 <h3>Nina</h3>
-                <img src="../images/listaArrecadacoes-ADM/nina.png" alt="Imagem do evento">
+                <div class="divImg">
+                    <span id="letras">Em progresso</span>
+                    <img src="../images/listaArrecadacoes-ADM/nina.png" alt="Imagem do evento">
+                </div>
                 <div class="metas">
                 <span><b>Meta: R$ 2.500,00.</b></span> 
                 </div>
@@ -38,7 +44,10 @@
             </div>
             <div class="arrecadacao">
                 <h3>Cascudo</h3>
-                <img src="../images/listaArrecadacoes-ADM/cascudo.png" alt="Imagem do evento">
+                <div class="divImg">
+                    <span id="letras">Em progresso</span>
+                    <img src="../images/listaArrecadacoes-ADM/cascudo.png" alt="Imagem do evento">
+                </div>
                 <div class="metas">
                     <span><b>Meta: R$ 2.500,00.</b></span>  
                 </div>
@@ -46,7 +55,10 @@
             </div>
             <div class="arrecadacao">
                 <h3>Luke</h3>
-                <img src="../images/listaArrecadacoes-ADM/luke.png" alt="Imagem do evento">
+                <div class="divImg">
+                    <span id="letras">Em progresso</span>
+                    <img src="../images/listaArrecadacoes-ADM/luke.png" alt="Imagem do evento">
+                </div>
                 <div class="metas">
                     <span><b>Meta: R$ 870,00.</b></span>  
                 </div>
@@ -54,7 +66,10 @@
             </div>
             <div class="arrecadacao">
                 <h3>Hulk</h3>
-                <img src="../images/listaArrecadacoes-ADM/hulk.png" alt="Imagem do evento">
+                <div class="divImg">
+                    <span id="letras">Em progresso</span>
+                    <img src="../images/listaArrecadacoes-ADM/hulk.png" alt="Imagem do evento">
+                </div>
                 <div class="metas">
                     <span><b>Meta: R$ 1.200,00.</b></span>  
                 </div>
@@ -62,7 +77,10 @@
             </div>
             <div class="arrecadacao">
                 <h3>Godinho</h3>
-                <img src="../images/listaArrecadacoes-ADM/godinho.png" alt="Imagem do evento">
+                <div class="divImg">
+                    <span id="letras">Em progresso</span>
+                    <img src="../images/listaArrecadacoes-ADM/godinho.png" alt="Imagem do evento">
+                </div>
                 <div class="metas">
                     <span><b>Meta: R$ 720,00.</b></span>  
                 </div>

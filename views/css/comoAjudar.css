@@ -1,36 +1,38 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(198, 225, 196);
-    background-image: url("../images/Patinhas.png");
-    background-size: 50%;
-    font-family: Arial, sans-serif;
+body {
+  background-color: rgb(198, 225, 196);
+  background-image: url("../images/Patinhas.png");
+  background-size: 50%;
+  font-family: Arial, sans-serif;
 }
 
-/* fundo branco aqui */
-.corpoContainer{
-    max-width: 1500px;
-    margin: auto;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; 
+/* Ajuste do container principal */
+.corpoContainer {
+  max-width: 1500px;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
+/* Ponto de arrecadação */
 .pontoArrecadacao {
   width: 100%;
   max-width: 90vw;
   padding: 0 20px;
 }
 
-.infoDestaque{
+.infoDestaque {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(68, 128, 63);
@@ -38,36 +40,26 @@ body{
   position: relative;
 }
 
-#imgPA{
+/* Imagem responsiva */
+#imgPA {
   max-width: 100%;
   height: auto;
   box-sizing: border-box;
 }
 
-#imgCachorro{
+#imgCachorro {
   position: absolute;
   bottom: 20px;
   left: 100px;
 }
 
-.infoDestaque img{
-  margin-top: 20px;
-}
-
-.infoDestaque>div{
-  width: 50%;
-  text-align: center;
-  background-color: rgb(68, 128, 63);
-}
-
-/* texto ponto arrecadacao */
-.descricaoPontoArrecadacao {  
+/* Texto ponto de arrecadação */
+.descricaoPontoArrecadacao {
   width: 100%;
   text-align: center;
   justify-content: center;
   padding: 50px;
-  box-sizing: border-box ;
-  margin-top: 50px;
+  box-sizing: border-box;
 }
 
 .descricaoPontoArrecadacao h2 {
@@ -75,12 +67,12 @@ body{
   margin-bottom: 10px;
 }
 
-.descricaoPontoArrecadacao p{
+.descricaoPontoArrecadacao p {
   color: #fff;
   margin-bottom: 10px;
 }
 
-/* colocar todo os tamanhos dos valores e do pix aqui */
+/* Sessão de valores e Pix */
 .infoPixECards {
   background-color: #fff;
   display: flex;
@@ -88,32 +80,16 @@ body{
   justify-content: space-around;
   gap: 20px;
   width: 100%;
-  height: 600px;
-  padding: 87px 40px 66px;
+  padding: 40px 20px;
 }
 
-/* cima, direita, baixo e esquerda */
-.infoValores {
-  flex: 1;
-  max-width: 400px;
-}
-
-.infoValores h2 {
-  color: black;
-
-}
-
+/* Cards de doação */
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
-
-.cards h3 { 
-  color: black;
-}
-
 .cards p { 
   color: black;
   margin: 0;
@@ -136,22 +112,18 @@ body{
   align-items: center;
   padding: 10px;
   border-radius: 10px;
-  text-align: center; 
-  width: 50%; 
-  max-width: 150px;
-  margin: 10px auto; 
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
-  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
-.pix {
-  padding: 40px 0;
-}
-
+/* QR Code */
 .qrCode {
   background-color: rgb(68, 128, 63);
   padding: 20px;
@@ -166,18 +138,59 @@ body{
 }
 
 #imgQrCode {
-  width: 247px;
-  height: 232px;
-  margin-top: 30px;
-} 
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+  margin-top: 20px;
+}
 
-.qrCode > .logoBb {
+/* Mantendo a logo do BB */
+.qrCode .logoBb {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  & #imgLogoBanco{
-  width: 23px;
-  height: 23px;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.logoBb img {
+  width: 30px; /* Ajustável conforme necessário */
+  height: auto;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .infoDestaque {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  #imgCachorro {
+      position: relative;
+      width: 80px;
+      left: 0;
+      margin: 10px auto;
+  }
+
+  .descricaoPontoArrecadacao {
+      padding: 20px;
+  }
+
+  .cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 80%;
+  }
+
+  .qrCode {
+      max-width: 300px;
+  }
+
+  /* Ajustando a logo do BB para telas menores */
+  .logoBb img {
+      width: 25px; /* Mantendo a visibilidade sem ocupar muito espaço */
   }
 }

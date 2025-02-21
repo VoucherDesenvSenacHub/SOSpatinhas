@@ -218,6 +218,15 @@
         const offset = -currentSlidePartners * (partnerItems[0].offsetWidth + 30);  
         carousel.style.transform = `translateX(${offset}px)`;
     }
+        
+    //função para clonar os cards
+    const primeiroClone = slides[0].cloneNode(true);
+    const ultimoClone = slides[totalSlides - 1].cloneNode(true);
+    carousel.appendChild(firstClone);
+    carousel.insertBefore(lastClone, slides[0]);
+
+    // Atualiza a lista de slides (agora com os clones)
+    slides = carousel.querySelectorAll(slideSelector);
 
     
     const prevButtons = document.querySelectorAll('.carousel-button.prev');

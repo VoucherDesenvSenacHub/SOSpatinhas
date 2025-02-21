@@ -5,43 +5,24 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
     font-family: Arial, sans-serif;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #e6f4ea;
-    background-image: url("../images/Patinhas.png");
-    background-size: 50%;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-} */
-
-.container {
+.corpo {
     background-color: white;
     max-width: 800px;
     width: 100%;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
 }
 
 h1, h2 {
@@ -83,14 +64,31 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #44803F;
+    background-color: #41773c;
 }
 
 label {
+    font-size: 14px;
+}
+
+.checkbox {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 14px;
+    gap: 10px; 
+    margin: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 18px; 
+    height: 18px;
+    cursor: pointer;
+    margin: 0; 
+    vertical-align: middle; 
+}
+
+.checkbox label {
+    font-size: 16px;
+    line-height: 18px;
 }
 
 input[type="date"] {
@@ -105,9 +103,9 @@ input[type="date"] {
     outline: none;
     appearance: none;
     position: relative;
-  }
-  
-  input[type="date"]::-webkit-calendar-picker-indicator {
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: url('https://cdn-icons-png.flaticon.com/512/747/747310.png'); 
     background-size: 20px 20px;
     background-position: center;
@@ -116,17 +114,16 @@ input[type="date"] {
     height: 20px;
     cursor: pointer;
     opacity: 0.6;
-  }
-  
-  input[type="date"]::before {
+}
+
+input[type="date"]::before {
     content: attr(data-placeholder);
     color: #aaa;
     position: absolute;
     left: 10px;
-  }
-  
-  input[type="date"]:focus::before,
-  input[type="date"]:valid::before {
-    content: "";
-  }
+}
 
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    content: "";
+}

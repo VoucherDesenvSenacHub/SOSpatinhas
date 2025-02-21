@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,17 +64,19 @@
             meses a 1 ano de detenção e multa, conforme Lei Federal de crimes ambientais
             No.9605, art32 de 12/02/98;</p>
             
-            <p>O adotante é ciente que passará por um período de adaptação com o animal, se
-                comprometendo a proteger, alimentar, e educar sem sofrimento. Sob nenhuma hipótese
-                poderá maltratar o animal ou puni-lo de forma violenta com agressões físicas e NUNCA
-                abandoná-lo por nenhum motivo frívolo, como mudança de endereço, férias, doença,
-                velhice ou quaisquer motivos não citados. Abandono é crime. Lei municipal No.13131
-                de 18 de Maio de 2001.</p>
+        <p>O adotante é ciente que passará por um período de adaptação com o animal, se
+            comprometendo a proteger, alimentar, e educar sem sofrimento. Sob nenhuma hipótese
+            poderá maltratar o animal ou puni-lo de forma violenta com agressões físicas e NUNCA
+            abandoná-lo por nenhum motivo frívolo, como mudança de endereço, férias, doença,
+            velhice ou quaisquer motivos não citados. Abandono é crime. Lei municipal No.13131
+            de 18 de Maio de 2001.</p>
+            
+        <div class="checkbox">
+            <input type="checkbox" name="termo" required>
+            <label for="termo">Compreendo e aceito os Termos de Compromisso</label>
+        </div>
 
-                <input type="checkbox" name="termo" required>
-                <label for="termo">Compreendo e aceito os Termos de Compromisso</label>
-
-                <button type="submit" name="enviar">Enviar</button>
+        <button type="submit" name="enviar">Enviar</button>
     </section>
 
     <?php include('../templates/footerUser.php')?>

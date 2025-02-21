@@ -60,8 +60,7 @@
     <?php include ('../templates/navbarUser.php') ?>
     
 
-    <section class="corpo container" >
-
+    <section class="corpo container">
         <section class="top-texts">
             <h1>Adote um melhor amigo!</h1>
             <p>Adotar um animal salva vidas e traz alegria. Muitos cães e gatos esperam por um lar. Ao adotar, você ganha um amigo fiel e combate o abandono. Adote e transforme vidas!</p>

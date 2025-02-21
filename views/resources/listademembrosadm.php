@@ -19,7 +19,7 @@
         <div class="lista-de-membros" id="lista-de-membros">
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Will Smith</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -29,7 +29,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Everton Silva</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -41,7 +41,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Anthony H. C.</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -53,7 +53,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Gustavo O.</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -65,7 +65,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Kauã Higa</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -77,7 +77,7 @@
        
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Kauã Miguel</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -89,7 +89,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Pedro Lucas</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -101,7 +101,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Yasmin Letícia</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -113,7 +113,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Izabella A.</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -125,7 +125,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Agatha Arantes</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -137,7 +137,7 @@
         
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Will Smith</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>
@@ -148,7 +148,7 @@
             
             <div class="membro">
                 <img src="../images/iconeADM.png" alt="">
-                <h3>...</h3>
+                <h3>Fulano</h3>
                 <div class="status">
                     <div></div>
                     <span>Online</span>

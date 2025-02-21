@@ -87,7 +87,7 @@ h1 {
 
 .arrecadacao .metas{
     font-size: 1.2em;
-    background-color: #4caf50;
+    background-color: #83CE7D;
     color: rgb(0, 0, 0);
     border-radius: 15px;
     display: flex;
@@ -115,7 +115,7 @@ h1 {
 }
 
 .arrecadacao button {
-    background-color: #4caf50;
+    background-color: #44803F;
     color: white;
     width: 100%;
     height: 40px;
@@ -128,7 +128,7 @@ h1 {
 }
 
 .arrecadacao button:hover {
-    background-color: #45a049;
+    background-color: #346430;
 }
 
 .botao-add-container-desktop {

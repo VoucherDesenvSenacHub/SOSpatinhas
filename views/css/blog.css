@@ -64,7 +64,6 @@ body{
 }
  
 .ladin {
-
     text-align: center;
 }
  
@@ -98,63 +97,22 @@ h2 {
 }
 
 @media (max-width: 425px) {
-
+    /* criei um display none para a section desktop sumir caso é convertido para a resolução do mobile. */ 
     .corpo{
         display: none;
     }
-
+    /* aqui o display flex "ativa" a section do mobile. */
     .corpo-mobile{
         width: 80%;
         height: auto;
-        margin: 0 30px;
+        margin: 0 auto;
         flex-direction: column;
         display: flex;
         background-color: rgb(255, 255, 255);
-        
     }
-    
-
-    /*
-    .container{
-        width: 80%;
-        height: auto;
-    }
-    .corpo{
-        margin: 0 30px;
-        flex-direction: column;
-    }
-
-    .principal{
-        width: 250px;
-        height: auto;
-        padding-top: 15px;
-        align-self: center;
-        margin: 0px;
-    }
-    .grandin img{
-        width: 100%;
-        height: auto;
-    }
-
-    .sidebar{
-        height: auto; 
-        display: block;
-        width: auto;
-        ----margin-top: 60px;-----
-    }
-    .ladin{
-        height: auto;
-
-        & img{
-            width: 80%;
-        };
-        
-    }*/
-
+    /* a partir daqui a margin é o ponto chave para o espaçamento requisitado */
     .grandin, .ladin{
         width: 80%;
-        margin: 0px;
-
         margin: auto;
     }
 
@@ -163,16 +121,15 @@ h2 {
     }
 
     .grandin img{
-        width: 100%;
+        width: 85%;
         height: auto;
-        
+        margin-top: 50px;
     }
 
     .ladin img{
-        width: 100%;
+        width: 85%;
+        padding-bottom: 20px;
     }
-
-
 
     #pit, #maus_tratos, #tatu {
         margin-top: 50px;

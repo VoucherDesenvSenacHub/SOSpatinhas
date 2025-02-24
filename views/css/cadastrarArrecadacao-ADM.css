@@ -241,6 +241,15 @@ button a{
         max-width: 100%;
     }
     
+    .QRCode-container {
+        width: 90%;
+        max-width: 400px; 
+    }
+
+    #qrCodeArquivo {
+        max-width: 250px;
+    }
+
 }
 
 @media (max-width: 425px) {
@@ -271,6 +280,24 @@ button a{
 
     .selectContainer{
         width:115%;
+    }
+
+    .QRCode-container {
+        width: 100%;
+        max-width: 320px;
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    #qrCodeLabel {
+        width: 100%;
+        text-align: center;
+    }
+
+    #qrCodeArquivo {
+        max-width: 100%;
+        text-align: center;
     }
 }
 

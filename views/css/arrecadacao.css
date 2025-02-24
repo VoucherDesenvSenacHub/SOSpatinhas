@@ -32,7 +32,7 @@ body{
     
     display: flex;
     flex-direction: row;
-    align-items: center;
+    
     justify-content: center;
     gap: 5rem;
 }
@@ -125,16 +125,12 @@ body{
     font-weight: 600;
 }
 
-#titulo h2{
-
-}
-
 #descricaoArrecadacao{
     flex:3;
     font-size: 20px;
     width: 1000px;
     text-align: justify;
-    padding: 25px 0px 10px 0px;
+    padding: 50px 0px 10px 0px;
 }
 
 #descrição{
@@ -201,9 +197,9 @@ body{
     display: flex;
     gap: 1rem;
     justify-content: center;
-    width: 550px;
+    width: 350px;
     position: absolute;
-    bottom: 10px;
+    bottom: 260px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -222,7 +218,7 @@ body{
     background-color: #ffffff;
 }
 
-/* Fading animation */
+
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -234,9 +230,10 @@ body{
 }
 
 @media (max-width: 425px) {
+
     .fotoArrecadacao {
         order: 2;
-        width: 400px;
+        width: 380px;
         display: block;
     }
 
@@ -246,113 +243,126 @@ body{
     }
 
     .container {
-        flex-direction: column; /* Muda a direção para coluna */
-        max-width: 100%; /* Garante que a largura máxima seja 100% */
-        margin: auto; /* Centraliza o contêiner */
-        padding: 1px; /* Padding reduzido */
-        display: flex; /* Mantém o contêiner como flex */
+        flex-direction: column; 
+        max-width: 100%; 
+        margin: auto; 
+        padding: 1px; 
+        display: flex;
     }
 
     .corpo {
-        flex-direction: column; /* Muda a direção para coluna */
+        flex-direction: column;
         background-color: rgb(255, 255, 255);
-        max-width: 100%; /* Garante que a largura máxima seja 100% */
-        display: flex; /* Mantém o contêiner como flex */
-        text-align: center; /* Centraliza o texto */
-        justify-content: center; /* Centraliza os itens */
-        align-items: center; /* Centraliza os itens */
+        max-width: 99%; 
+        display: flex; 
+        text-align: center; 
+        justify-content: center; 
+        align-items: center; 
     }
 
     #titulo h2 {
-        order: 1; /* Título em primeiro lugar */
+        order: 1; 
+        width: auto;
     }
 
     #descricaoArrecadacao {
-        order: 3; /* Descrição em terceiro lugar */
+        order: 3; 
         font-size: 20px;
-        width: 350px; /* Largura da descrição */
-        text-align: justify; /* Justifica o texto */
-        padding: 25px 0px 10px 30px; /* Padding ajustado */
+        width: 350px; 
+        text-align: justify; 
+        padding: 25px 0px 10px 20px; 
     }
 
     #sectionPix {
-        order: 4; /* Seção do PIX em último lugar */
-        display: flex; /* Muda para flex para melhor controle */
-        flex-direction: column; /* Coloca os itens em coluna */
-        align-items: center; /* Centraliza os itens */
+        order: 4; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
     }
+    #botoesSlider {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: 350px;
+        position: absolute;
+        bottom: 420px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    
 
     #banco {
-        order: 4; /* Banco em último lugar */
-        width: 400px; /* Largura do banco */
-        padding: 10px; /* Padding do banco */
+        order: 4; 
+        width: 360px; 
+        padding: 10px; 
     }
 
     #numeroBanco img {
-        width: 35px; /* Largura da imagem do banco */
-        height: 35px; /* Altura da imagem do banco */
-        padding: 10px; /* Padding da imagem do banco */
+        width: 35px; 
+        height: 35px; 
+        padding: 10px; 
     }
 
     #userElocal {
-        display: flex; /* Mantém como flex */
-        gap: 0.5rem; /* Espaçamento entre os itens */
-        flex-direction: column; /* Coloca os itens em coluna */
+        display: flex; 
+        gap: 0.5rem; 
+        flex-direction: column; 
     }
 
     #localEusuario {
         display: flex; 
-        flex-direction: column; /* Coloca os itens em coluna */
-        padding: 15px; /* Padding do local e usuário */
-        justify-content: flex-start; /* Alinha os itens ao início */
+        flex-direction: column; 
+        padding: 15px; 
+        justify-content: flex-start; 
     }
 
     #nomeAnimal {
-        font-size: 20px; /* Tamanho da fonte do nome do animal */
-        padding-right: 20px; /* Padding à direita */
-        text-align: left; /* Alinha o texto à esquerda */
-        padding: 10px; /* Padding do nome do animal */
+        font-size: 20px; 
+        padding-right: 20px; 
+        text-align: left; 
+        padding: 10px; 
     }
 
     #outraDiv, #maisUmaDiv {
-        text-align: left; /* Alinha o texto à esquerda */
+        text-align: left; 
     }
 
     #slider {
-        position: relative; /* Posição relativa para o slider */
-        width: 400px; /* Largura do slider */
-        margin: 1px; /* Margem do slider */
-        padding: 10px; /* Padding do slider */
-        padding-left: 1%; /* Padding à esquerda do slider */
+        position: relative;
+        width: 380px;
+        margin: 1px; 
+        padding: 10px; 
+        padding-left: 1%; 
     }
 
     .slide {
-        display: block; /* Exibe o slide */
+        display: block; 
     }
 
     #section {
-        display: flex; /* Mantém como flex */
-        flex-direction: column; /* Coloca os itens em coluna */
-        padding: 10px 0px; /* Padding do section */
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
     }
 
     #sectionfotoEpix {
-        flex-direction: column; /* Coloca os itens em coluna */
-        display: flex; /* Muda para flex */
-        align-items: center; /* Centraliza os itens */
-        justify-content: center; /* Centraliza os itens */
-        gap: 1rem; /* Espaçamento entre os itens */
+        flex-direction: column;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 1rem;
     }
 
     #sectionfotoEpix h2 {
-        font-size: 20px; /* Tamanho da fonte do título da seção */
-        text-align: center; /* Centraliza o texto */
-        padding: 0px 0px 10px 15px; /* Padding do título */
+        font-size: 20px; 
+        text-align: center; 
+        padding: 0px 0px 10px 15px; 
     }
 
     #pix {
-        display: inline; /* Mantém como inline */
-        text-align: center; /* Centraliza o texto */
-        width: 400px; /* Largura do PIX */
+        display: inline; 
+        text-align: center; 
+        width: 400px; 
     }
 }

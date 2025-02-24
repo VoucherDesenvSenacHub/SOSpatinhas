@@ -67,16 +67,7 @@ body{
 .form{
     display: flex;
     flex-wrap: wrap;
-}
-
-.width60{
-    width: 60%;
-    display: grid;
-}
-
-.width30{
-    width: 40%;
-    display: grid;
+    justify-content: center;
 }
 
 h1 {
@@ -97,16 +88,19 @@ button {
     padding: 10px;
     width: 97%;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin: 15px 0px 0px 0px;
 }
 
 p {
     margin-top: 5px;
     color: #9B9B9B;
+    font-size: 15px;
     & span{
         color: #44803F;
+        font-size: 15px;
     }
 }
 
@@ -130,7 +124,7 @@ p {
     top: 50%; 
     width: 140px; 
     height: 2px; 
-    background-color: #44803F; 
+    background-color: #64aa5d; 
 }
 
 .borda-verde::before {
@@ -139,4 +133,27 @@ p {
 
 .borda-verde::after {
     right: -150px; 
+}
+
+#divTelefone{
+    display: flex;
+    gap: 10px;
+    width: calc(100% - 15px);
+}
+#inputDDD{
+    width: 150px;
+}
+
+.divInputs{
+    display: flex;
+    gap: 10px;
+    width: calc(100% - 15px);  
+}
+
+@media (max-width: 425px){
+    .corpo-container {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+    }
 }

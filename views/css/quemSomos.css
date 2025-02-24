@@ -17,7 +17,6 @@ body {
 .container {
     max-width: 1500px;
     margin: auto;
-    padding: 12px;
 }
 
 .corpo {
@@ -45,7 +44,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 30px 0;
+    margin: 50px 50px 20px 0;
     width: 100%;
 }
 

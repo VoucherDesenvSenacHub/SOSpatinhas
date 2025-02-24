@@ -212,6 +212,38 @@ h1 {
     border-color: #4caf50;
 }
 
+
+@media (max-width: 768px) {
+    .pesquisar{
+        width: 100%;
+    }
+    .lista-eventos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        position: relative;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .evento{
+        padding: 20px;
+        transition: transform 0.2s;
+        border-radius: 10px;
+        order: 2;
+            & h3{
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    }
+    .botao-add-container{
+        display: block;
+        grid-column: 1 / -1; /* Faz a última ocupar toda a largura */
+        order: 1;
+        position: static;
+    }
+}
 @media (max-width: 425px) {
     .pesquisar{
         width: 100%;
@@ -221,10 +253,19 @@ h1 {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
-        position: relative;
+        /* position: relative; */
+        flex-direction: column;
+        justify-items: center;
+        
+    }
+    .evento{
+        padding: 20px;
+        transition: transform 0.2s;
+        border-radius: 10px;
+        order: 2;
     }
     .botao-add-container{
-        bottom: 0;
-        right: 4;
+        order: 1;
+        position: static;
     }
 }

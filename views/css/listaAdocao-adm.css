@@ -193,93 +193,6 @@ h1 {
     border-color: #4caf50;
 }
 
-@media (max-width: 425px) {
-    body {
-        background-size: cover;
-    }
-
-    h1 {
-        font-size: 28px; 
-    }
-
-    .container {
-        padding: 8px;
-    }
-
-    .corpo {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .pesquisar input {
-        width: 100%;
-        height: 30px;
-        font-size: 1em;
-        padding: 5px 10px 5px 35px;
-    }
-
-    .pesquisar .lupa {
-        left: 10px;
-        width: 1em;
-    }
-
-    .lista-adocao {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .animal {
-        padding: 10px;
-    }
-
-    .animal h3 {
-        font-size: 0.9em;
-    }
-
-    .animal button {
-        height: 30px;
-        font-size: 0.8em;
-    }
-
-    .botao-add-container {
-        position: fixed;
-        top: 170px;
-        right: 15px;
-    }
-
-    .botao-add {
-        width: 45px;
-        height: 45px;
-        font-size: 1.8em;
-        line-height: 0;
-    }
-
-    .cta-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .pagination-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 1.3em;
-    }
-
-    .altPag {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .altPag li {
-        padding: 8px 12px;
-        font-size: 0.9em;
-    }
-}
-
 @media (max-width: 768px) {
     body {
         background-size: cover;
@@ -331,7 +244,7 @@ h1 {
     .botao-add-container {
         position: fixed;
         top: 180px;
-        right: 45px;
+        right: 50px;
 
     }
 
@@ -364,5 +277,92 @@ h1 {
     .altPag li {
         padding: 10px 15px;
         font-size: 1em;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 28px; 
+    }
+
+    .container {
+        padding: 8px;
+    }
+
+    .corpo {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .pesquisar input {
+        width: 100%;
+        height: 30px;
+        font-size: 1em;
+        padding: 5px 10px 5px 35px;
+    }
+
+    .pesquisar .lupa {
+        left: 10px;
+        width: 1em;
+    }
+
+    .lista-adocao {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .animal {
+        padding: 10px;
+    }
+
+    .animal h3 {
+        font-size: 0.9em;
+    }
+
+    .animal button {
+        height: 30px;
+        font-size: 0.8em;
+    }
+
+    .botao-add-container {
+        position: fixed;
+        top: 180px;
+        right: 18px;
+    }
+
+    .botao-add {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8em;
+        line-height: 0;
+    }
+
+    .cta-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pagination-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3em;
+    }
+
+    .altPag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .altPag li {
+        padding: 8px 12px;
+        font-size: 0.9em;
     }
 }

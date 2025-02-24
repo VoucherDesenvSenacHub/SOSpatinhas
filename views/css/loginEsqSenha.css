@@ -10,14 +10,13 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
-
-
 /* Seção do esqSenha */
 .secao-login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 431px);
+    margin: 150px 0px;
 }
 
 /* Cria o fundo branco na área de login */
@@ -68,3 +67,26 @@ body{
     background-color: rgb(56, 105, 52);
 }
 
+@media (max-width: 768px) {
+    .secao-login{
+        margin: 120px 0px;
+    }
+}
+
+@media (max-width: 425px) {
+    /* caso precise arrumar a borda verde, modifique a margin */
+    .secao-login{
+        width: auto;
+        margin: 80px 50px;     
+    }
+
+    .esqSenha{
+        width: auto;
+    }
+
+    .esqSenha p{
+        font-size: 20px;
+        width: auto;
+        padding: 15px 0px 25px 0px;
+    }
+}

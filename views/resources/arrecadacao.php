@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arrecadação</title>
     <link rel="stylesheet" href="../css/arrecadacao.css">
 </head>
 <body>
@@ -16,22 +16,27 @@
                 <div id="titulo">
                     <h2 class="Titulo">Ajude o Frêgues</h2>
 
-                    <div id="slider">
-                        <div class="slide fade">             
-                            <img class="fotoArrecadacao" src="../images/fregues.png" alt="">
+                        <div id="slider">
+                            <div class="slide fade">             
+                                <img class="fotoArrecadacao" src="../images/fregues.png" alt="">
+                            </div>
+                            <div class="slide fade">
+                                <img class="fotoArrecadacao" src="../images/fregues.png" alt="">
+                            </div>
+                            <div class="slide fade">
+                                <img class="fotoArrecadacao" src="../images/fregues.png" alt="">
+                            </div>
+                            <div id="botoesSlider">
+                                <div class="botaoTrocarFoto" onclick="currentSlide(1)"></div>
+                                <div class="botaoTrocarFoto" onclick="currentSlide(2)"></div>
+                                <div class="botaoTrocarFoto" onclick="currentSlide(3)"></div>
+                            </div>
+                            <div id="descricaoArrecadacao">
+                                <p id="descricao">Conheça Freguês, um adorável cachorro de rua com uma pata quebrada e um coração de ouro. Ele foi resgatado por uma equipe de voluntários apaixonados por animais que estão dedicados a ajudá-lo a se recuperar. No entanto, para que Freguês possa receber o tratamento adequado e voltar a correr livremente, é necessário levantar fundos para cobrir as despesas médicas. Cada contribuição, por menor que seja, faz a diferença na vida deste amigo de quatro patas. Vamos unir nossas forças e dar a Freguês a chance de uma vida melhor!</p>
+
+                            </div>
+                           
                         </div>
-                        <div class="slide fade">
-                            <img class="fotoArrecadacao" src="../images/fregues.png" alt="">
-                        </div>
-                        <div class="slide fade">
-                            <img class="fotoArrecadacao" src="../images/fregues.png" alt="">
-                        </div>
-                        <div id="botoesSlider">
-                            <div class="botaoTrocarFoto" onclick="currentSlide(1)"></div>
-                            <div class="botaoTrocarFoto" onclick="currentSlide(2)"></div>
-                            <div class="botaoTrocarFoto" onclick="currentSlide(3)"></div>
-                        </div>
-                    </div>
 
                 </div>
 
@@ -77,10 +82,8 @@
                             <p id="textoCompartilhar">Verificado e autenticado pelo SOS Patinhas</p>
                         </div>
                     </div>
-            </section>
-
-            <section id="descricaoArrecadacao" >
-                <p id="descricao">Conheça Freguês, um adorável cachorro de rua com uma pata quebrada e um coração de ouro. Ele foi resgatado por uma equipe de voluntários apaixonados por animais que estão dedicados a ajudá-lo a se recuperar. No entanto, para que Freguês possa receber o tratamento adequado e voltar a correr livremente, é necessário levantar fundos para cobrir as despesas médicas. Cada contribuição, por menor que seja, faz a diferença na vida deste amigo de quatro patas. Vamos unir nossas forças e dar a Freguês a chance de uma vida melhor!</p>
+           
+              
             </section>
         </div>
     </section>

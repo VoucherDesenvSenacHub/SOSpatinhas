@@ -312,6 +312,7 @@ body{
         font-size:25px; /* Tamanho do texto */
     }
 
+
 }
 
 
@@ -323,15 +324,48 @@ body{
     }
 
     #imgEventos,#imgAnimal {
-       overflow: auto;
+       
     }
     
-.card {
-    margin: 0 10px; /* Espaço lateral entre os itens */
-    position: relative; /* Para posicionar o texto em relação à imagem */
-    box-sizing: border-box;
-    text-align: center;
-   
+    .animal{
+        width: 290px; /* Define a largura */
+        height: auto; /* Mantém a proporção da imagem */
+       
     }
-   
+    .eventos{
+        width: 300px; /* Define a largura */
+        height: auto; /* Mantém a proporção da imagem */
+       
+    }
+    
+    .box-event {
+        width: 80%;
+        height: auto; /* Permitir altura dinâmica conforme o conteúdo */
+        padding: 6px; /* Adicionar um pouco de espaçamento interno */
+        font-size: 15px;
+    }
+    
+    .box-event h1,
+    .box-event h2 {
+        width: auto; 
+        font-size: 15px; 
+        white-space: normal; 
+    }
+
+    .box-anim {
+        width: 70%;
+        height: 12px; /* Permitir altura dinâmica conforme o conteúdo */
+        padding: 6px; /* Adicionar um pouco de espaçamento interno */
+        font-size: 9px;
+        bottom: 120px;
+    }
+    .box-saibamais{
+        bottom: 80px;
+        height: 30px;
+        font-size: 12px;
+    }   
+    .texto-overlay{
+        font-size: 16px;
+        bottom: 100px;
+      }
 }

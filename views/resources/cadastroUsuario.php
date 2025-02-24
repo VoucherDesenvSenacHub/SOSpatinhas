@@ -14,20 +14,23 @@
     <section class="corpo-container">
         <h1>Cadastro</h1>
             <form method="POST" action="" class="form">
-            
-                <div class="width60">
-                    <input type="date" name="data_nascimento" placeholder="Data de Nascimento*" required>
-                    <input type="email" name="email" placeholder="Email*" required>
-                    <input type="text" name="ddd" placeholder="DDD*" required>
-                </div>
+                <input type="text" name="nome" placeholder="Nome Completo*" required>
                 
-                <div class="width30">
+                <div class="divInputs">
                     <input type="text" name="cpf" placeholder="CPF*" required>           
                     <input type="text" name="rg" placeholder="RG*" required>
-                    <input type="text" name="telefone" placeholder="Telefone*" required>
                 </div>
-
-                <input type="text" name="nome" placeholder="Nome Completo*" required>
+                
+                <div class="divInputs">
+                    <input type="email" name="email" placeholder="Email*" required>
+                    <input type="date" name="data_nascimento" placeholder="Data de Nascimento*" required>
+                </div>
+                
+                <div id="divTelefone">
+                    <input id="inputDDD" type="text" name="ddd" placeholder="DDD*" required>
+                    <input id="inputTelefone" type="text" name="telefone" placeholder="Telefone*" required>
+                </div>
+                
                 <input type="password" name="senha" placeholder="Senha:" required>
                 <input type="password" name="confirma_senha" placeholder="Confirmar Senha:" required>
                 <button type="submit" name="cadastrar">Cadastrar</button>

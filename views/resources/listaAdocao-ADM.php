@@ -12,7 +12,7 @@
     <section class="corpo container">
         <h1>Lista de Adoções</h1>
         <div class="pesquisar">
-            <img src="../images/lupa_pesguisa.png" alt="Lupa de pesquisa" class="lupa">
+            <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
             <input type="text" placeholder="Pesquisar">
         </div>
 

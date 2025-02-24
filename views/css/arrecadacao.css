@@ -199,7 +199,7 @@ body{
     justify-content: center;
     width: 350px;
     position: absolute;
-    bottom: 260px;
+    bottom: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -229,15 +229,62 @@ body{
     to {opacity: 1}
 }
 
-@media (max-width: 425px) {
 
-    * {
-        padding: 0;
-        margin: 0;
-        border: 0;
-        font-family: 'Inter', sans-serif;
+
+@media (max-width: 768px) {
+
+    .corpo{
+        max-width: 743px;
+        
     }
 
+  
+
+    #sectionfotoEpix {
+        flex-direction: column;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 1rem;
+    }
+
+    #descricaoArrecadacao {
+        order: 3; 
+        margin:0;
+        font-size: 20px;
+        width: 600px; 
+        text-align: justify; 
+        padding: 25px 0px 10px 0px; 
+    }
+    .fotoArrecadacao {
+        order: 2;
+        width: 600px;
+        display: block;
+    }
+
+    #botoesSlider {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: 350px;
+        position: absolute;
+        bottom: 250px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #sectionfotoEpix h2{
+        font-size: 35px;
+        text-align: center;
+        padding: 0px 0px 10px 15px;
+    }
+    
+
+}
+
+
+@media (max-width: 425px) {
 
 
     .fotoArrecadacao {
@@ -262,7 +309,7 @@ body{
 
     .corpo {
         margin:0;
-        max-width: 425px;
+        max-width: 423px;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         display: flex; 
@@ -378,3 +425,6 @@ body{
         width: 400px; 
     }
 }
+
+
+

@@ -10,6 +10,13 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+.corpo-container{
+
+    max-width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .secao-emailenviado {
     display: flex;
     justify-content: center;
@@ -17,11 +24,13 @@ body{
     height: calc(100vh - 431px);
 }
 .bloco {
+
     background-color: white;
     padding: 65px 55px 65px 55px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    align-items: center;
 }
 
 .bloco h2 {
@@ -34,4 +43,29 @@ body{
 }
 .bloco img{
     width: 260px;
+}
+
+@media (max-width: 768px) {
+
+    .section{
+        max-width: 768px;
+
+    }
+    .corpo-container{
+
+        max-width: 768px;
+    }
+
+    
+    .bloco{
+        max-width: 250px;
+        padding: 25px 55px 25px 55px;
+    }
+    .bloco img{
+        max-width: 130px;
+    }
+    .bloco p {
+        width:175px;
+    }
+   
 }

@@ -20,7 +20,6 @@ body{
   /* width: 1500px; */
   display: flex;
   text-align: center;
-  justify-content: center;
   align-items: center;
   padding: 20px;
   border-radius: 8px;
@@ -269,4 +268,109 @@ h2{
 
 .carousel-btn:hover {
   background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width:1024px) {
+  .btn-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    bottom: 10.6cm;
+    width: 528px;
+    position: absolute;
+  }
+
+  .event-details {
+    text-align: left;
+    height: 360px;
+    width: 295px;
+}
+
+  .event-details h1 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 25px;
+    width: 295px;
+}
+
+.event-details p {
+  color: #000000;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  font-size: 15px;
+  width: 295px;
+  text-align: justify;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 35px;
+  width: 850px;
+}
+}
+
+@media (max-width:768px) {
+  .container {
+    max-width: 615px;
+    margin: 0 auto;
+}
+
+.slideshow-container {
+  width: 528px;
+  height: 360px;
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 0 0 5px;
+}
+
+.slide {
+  width: 528px;
+  height: 360px;
+}
+
+.btn-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  bottom: 12.3cm;
+  width: 400px;
+  position: absolute;
+}
+
+.EventoSlides {
+  width: 400px;
+  height: 300px;
+}
+
+.event-details {
+  text-align: left;
+  height: 360px;
+  width: 295px;
+}
+
+h2 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 35px;
+  width: 570px;
+}
+
 }

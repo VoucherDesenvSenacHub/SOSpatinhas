@@ -231,6 +231,15 @@ body{
 
 @media (max-width: 425px) {
 
+    * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        font-family: 'Inter', sans-serif;
+    }
+
+
+
     .fotoArrecadacao {
         order: 2;
         width: 380px;
@@ -243,17 +252,19 @@ body{
     }
 
     .container {
+        
         flex-direction: column; 
-        max-width: 100%; 
-        margin: auto; 
+        max-width: 425px; 
+        margin: 0; 
         padding: 1px; 
         display: flex;
     }
 
     .corpo {
+        margin:0;
+        max-width: 425px;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
-        max-width: 99%; 
         display: flex; 
         text-align: center; 
         justify-content: center; 
@@ -267,6 +278,7 @@ body{
 
     #descricaoArrecadacao {
         order: 3; 
+        margin:0;
         font-size: 20px;
         width: 350px; 
         text-align: justify; 
@@ -294,7 +306,7 @@ body{
 
     #banco {
         order: 4; 
-        width: 360px; 
+        width: 380px; 
         padding: 10px; 
     }
 

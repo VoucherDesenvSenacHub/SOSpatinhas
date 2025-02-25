@@ -1,255 +1,254 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body{
-    background-color: rgb(198, 225, 196);
-    background-image: url("../images/Patinhas.png");
-    background-size: 50%;
-    font-family: Arial, sans-serif;
+  background-color: rgb(198, 225, 196);
+  background-image: url("../images/Patinhas.png");
+  background-size: 50%;
+  font-family: Arial, sans-serif;
 }
 
 /* fundo branco aqui */
 .corpoContainer{
-    max-width: 1500px;
-    margin: auto;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; 
+  max-width: 1500px;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
 }
 
 .pontoArrecadacao {
-  width: 100%;
-  max-width: 90vw;
-  padding: 0 20px;
+width: 100%;
+max-width: 90vw;
+padding: 0 20px;
 }
 
 .infoDestaque{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(68, 128, 63);
-  padding: 20px;
-  position: relative;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+background-color: rgb(68, 128, 63);
+padding: 20px;
+position: relative;
 }
 
 #imgPA{
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
+max-width: 100%;
+height: auto;
+box-sizing: border-box;
 }
 
 .infoDestaque img{
-  margin-top: 20px;
+margin-top: 20px;
 }
 
 .infoDestaque>div{
-  width: 50%;
-  text-align: center;
-  background-color: rgb(68, 128, 63);
+width: 50%;
+text-align: center;
+background-color: rgb(68, 128, 63);
 }
 
 
 .descricaoPontoArrecadacao {  
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  padding: 50px;
-  box-sizing: border-box ;
-  margin-top: 50px;
+width: 100%;
+text-align: center;
+justify-content: center;
+padding: 50px;
+box-sizing: border-box ;
+margin-top: 50px;
 }
 
 .descricaoPontoArrecadacao h2 {
-  color: #fff;
-  margin-bottom: 10px;
+color: #fff;
+margin-bottom: 10px;
 }
 
 .descricaoPontoArrecadacao p{
-  color: #fff;
-  margin-bottom: 10px;
+color: #fff;
+margin-bottom: 10px;
 }
 
 
 .infoPixECards {
-  background-color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  width: 100%;
-  height: 600px;
-  padding: 87px 40px 66px;
+background-color: #fff;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: 20px;
+width: 100%;
+height: 600px;
+padding: 87px 40px 66px;
 }
 
 
 .infoValores {
-  flex: 1;
-  max-width: 400px;
+flex: 1;
+max-width: 400px;
 }
 
 .infoValores h2 {
-  color: black;
+color: black;
 
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
 }
 
 .cards h3 { 
-  color: black;
+color: black;
 }
 
 .cards p { 
-  color: black;
-  margin: 0;
-  font-size: 14px;
+color: black;
+margin: 0;
+font-size: 14px;
 }
 
 .cards span { 
-  color: #5c5c5c;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 700;
+color: #5c5c5c;
+margin: 0;
+font-size: 16px;
+font-weight: 700;
 }
 
 .cards strong {
-  font-size: 18px;
+font-size: 18px;
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center; 
-  width: 50%; 
-  max-width: 150px;
-  margin: 10px auto; 
+display: flex;
+align-items: center;
+padding: 10px;
+border-radius: 10px;
+text-align: center; 
+width: 50%; 
+max-width: 150px;
+margin: 10px auto; 
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
-  margin-right: 15px;
+width: 60px;
+height: 60px;
+margin-right: 15px;
 }
 
 .pix {
-  padding: 40px 0;
+padding: 40px 0;
 }
 
 .qrCode {
-  background-color: rgb(68, 128, 63);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+background-color: rgb(68, 128, 63);
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .qrCode h2 {
-  color: white;
+color: white;
 }
 
 #imgQrCode {
-  width: 247px;
-  height: 232px;
-  margin-top: 30px;
+width: 247px;
+height: 232px;
+margin-top: 30px;
 } 
 
 .qrCode > .logoBb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  & #imgLogoBanco{
-  width: 23px;
-  height: 23px;
-  }
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+& #imgLogoBanco{
+width: 23px;
+height: 23px;
+}
 }
 
 /* Responsividade para Tablet (768px) */
 @media (max-width: 768px) {
-  
-  .infoDestaque {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-  .infoDestaque > div {
-    width: 100%;
-    margin-bottom: 20px;
-  }
- 
-  .infoPixECards {
-    flex-direction: column;
-    height: auto;
-    padding: 40px 20px;
-  }
-  .infoValores,
-  .cards {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .cards .card {
-    width: 45%; 
-    margin: 10px;
-  }
 
-  #imgQr{
-    width: 247px;
-    height: 232px;
-    margin-top: 30px;
-    left: 20px;
+.infoDestaque {
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+.infoDestaque > div {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-  }
+.infoPixECards {
+  flex-direction: column;
+  height: auto;
+  padding: 40px 20px;
+}
+.infoValores,
+.cards {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.cards .card {
+  width: 45%; 
+  margin: 10px;
+}
+
+#imgQr{
+  width: 247px;
+  height: 232px;
+  margin-top: 30px;
+  left: 20px;
+
+}
 }
 
 /*responsividade celular */
 @media (max-width: 425px) {
-  
-  body {
-    font-size: 14px;
-  }
-  .infoDestaque {
-    padding: 15px;
-  }
-  .infoDestaque > div {
-    width: 100%;
-  }
- 
-  .descricaoPontoArrecadacao {
-    padding: 30px 15px;
-    margin-top: 30px;
-  }
 
-  .infoPixECards {
-    flex-direction: column;
-    padding: 30px 15px;
-    height: auto;
-  }
-  .infoValores,
-  .cards {
-    max-width: 100%;
-  }
-  .cards .card {
-    width: 90%; 
-    margin: 10px auto;
-  }
-  
-  #imgQrCode {
-    width: 200px;
-    height: auto;
-    margin-top: 20px;
-  }
+body {
+  font-size: 14px;
+}
+.infoDestaque {
+  padding: 15px;
+}
+.infoDestaque > div {
+  width: 100%;
+}
+
+.descricaoPontoArrecadacao {
+  padding: 30px 15px;
+  margin-top: 30px;
+}
+
+.infoPixECards {
+  flex-direction: column;
+  padding: 30px 15px;
+  height: auto;
+}
+.infoValores,
+.cards {
+  max-width: 100%;
+}
+.cards .card {
+  width: 90%; 
+  margin: 20px auto;
+}
+
+#imgQrCode {
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+}
 }
 
 

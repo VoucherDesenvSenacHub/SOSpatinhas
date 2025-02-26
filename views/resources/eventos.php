@@ -13,7 +13,7 @@
 ?>
 
 <section class="container">
-        <h1 class="texto">Arrecadações</h1>
+        <!-- <h1 class="texto">Arrecadações</h1>
             <div class="wrapper">
                   
                     <ul id="imgAnimal" class="carousel">
@@ -39,43 +39,50 @@
                         </li>
                     </ul>
                   
-            </div>
+            </div> -->
         
         <h1 class="texto">Eventos</h1>
         <div id="imgEventos">
-            <div class="item" id="item-carousel">
-                <img src="../images/eventosImg/eventos1.png" class="eventos" alt="">
-                <div class="box-event">
-                    <h2>Feira do AuAu</h2>
-                    <h1>Feira arrecadativa de moda.</h1>
-                    <div class="imgtext">
-                        <img src="../images/eventosImg/pin.png" alt="" class="event-img">
-                        <h2 class="textEvent">Campo Grande MS, Horto Florestal</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="../images/eventosImg/eventos4.png" class="eventos" alt="">
-                <div class="box-event">
-                    <h2>Adote um Amigo</h2>
-                    <h1>Feira de adoção.</h1>
-                    <div class="imgtext">
-                        <img src="../images/eventosImg/pin.png" alt="" class="event-img">
-                        <h2 class="textEvent">Campo Grande MS, Parque dos Poderes</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="../images/eventosImg/eventos5.png" class="eventos" alt=""> 
-                <div class="box-event">
-                    <h2>Juntos por Eles</h2>
-                    <h1>Passeata pelos direitos dos animais.</h1>
-                    <div class="imgtext">
-                        <img src="../images/eventosImg/pin.png" alt="" class="event-img">
-                        <h2 class="textEvent">Campo Grande MS, Parque dos Poderes</h2>
-                    </div>
-                </div>   
-            </div>
+            <?php
+            
+            $cards =['<div class="item" id="item-carousel">
+                        <img src="../images/eventosImg/eventos1.png" class="eventos" alt="">
+                        <div class="box-event">
+                            <h2>Feira do AuAu</h2>
+                            <h1>Feira arrecadativa de moda.</h1>
+                            <div class="imgtext">
+                                <img src="../images/eventosImg/pin.png" alt="" class="event-img">
+                                <h2 class="textEvent">Campo Grande MS, Horto Florestal</h2>
+                            </div>
+                        </div>
+                    </div>',
+                    '<div class="item">
+                        <img src="../images/eventosImg/eventos4.png" class="eventos" alt="">
+                        <div class="box-event">
+                            <h2>Adote um Amigo</h2>
+                            <h1>Feira de adoção.</h1>
+                            <div class="imgtext">
+                                <img src="../images/eventosImg/pin.png" alt="" class="event-img">
+                                <h2 class="textEvent">Campo Grande MS, Parque dos Poderes</h2>
+                            </div>
+                        </div>
+                    </div>',
+                    '<div class="item">
+                        <img src="../images/eventosImg/eventos5.png" class="eventos" alt=""> 
+                        <div class="box-event">
+                            <h2>Juntos por Eles</h2>
+                            <h1>Passeata pelos direitos dos animais.</h1>
+                            <div class="imgtext">
+                                <img src="../images/eventosImg/pin.png" alt="" class="event-img">
+                                <h2 class="textEvent">Campo Grande MS, Parque dos Poderes</h2>
+                            </div>
+                        </div>   
+                    </div>'];
+            
+                    @include('../templates/carossel.php');
+            
+            
+            ?>
         </div>
 </section>
 

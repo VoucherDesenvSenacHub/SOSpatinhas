@@ -326,43 +326,38 @@ h1 {
     .title-container::after {
         width: 25%;
     }
-    
-    @media (max-width: 425px) {
-        /* Grid de Cards: 1 coluna com cards maiores */
-        .card-container {
-            grid-template-columns: 1fr;
-            gap: 15px;
-            padding: 0 10px;
-        }
-        .card {
-            height: auto;
-            min-height: 300px; /* aumenta a altura mínima para que os cards pareçam maiores */
-        }
-        
-        /* Parceiros: layout lado a lado */
-        .partner-cards {
-            flex-direction: row; /* exibe os cards lado a lado */
-            gap: 15px;
-            padding: 0 10px;
-            overflow-x: auto; /* permite scroll horizontal se necessário */
-        }
-        .partner-card {
-            width: 48%; /* exibe dois cards por linha */
-        }
-        
-        /* Carousel: largura total e altura reduzida */
-        .carousel-container {
-            width: 100%;
-        }
-        .carousel-item {
-            height: 200px;
-        }
-        
-        /* Botões do carousel: tamanho reduzido para mobile */
-        .carousel-button {
-            width: 35px;
-            height: 35px;
-            font-size: 1.5rem;
-        }
+
+    /* Grid de Cards: 1 coluna com cards maiores */
+    .card-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
     }
-}       
+    .card {
+        height: auto;
+        min-height: 250px; /* aumenta a altura mínima para que os cards pareçam maiores */
+    }
+    
+    /* Parceiros: layout lado a lado */
+    .partner-cards {
+        flex-direction: row; /* exibe os cards lado a lado */
+        gap: 15px;
+        padding: 0 10px;
+        overflow-x: auto; /* permite scroll horizontal se necessário */
+    }
+    .partner-card {
+        width: 48%; /* exibe dois cards por linha */
+    }
+    
+    /* Carousel: largura total e altura reduzida */
+
+    .carousel-item {
+        height: 200px;
+    }
+    
+    /* Botões do carousel: tamanho reduzido para mobile */
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+    }
+}

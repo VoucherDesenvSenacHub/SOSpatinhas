@@ -7,176 +7,176 @@
         <link rel="stylesheet" href="../css/quemSomos.css">
     </head>
     <body>
-        <?php include('../templates/navbarUser.php'); ?>
-
-        <section class="corpo container">
-            <div class="imagem_grupo">
-                <img src="../images/grupo.png" alt="Foto da nossa equipe trabalhando em grupo">
-                <div class="title-container">
-                    <h1>Nossa Equipe</h1>
-                </div>
+      <?php include('../templates/navbarUser.php'); ?>
+      
+      <section class="corpo container">
+        <div class="imagem_grupo">
+          <img src="../images/grupo.png" alt="Foto da nossa equipe trabalhando em grupo">
+          <div class="title-container">
+            <h1>Nossa Equipe</h1>
+          </div>
+        </div>
+        
+        <div class="carousel-container">
+          <button class="carousel-button prev" id="team-prev">❮</button>
+          <div class="card-container" id="team-carousel">
+          <!-- Slides da equipe -->
+            <div class="card">
+              <img src="../images/emanuel.png" alt="Emanuel Barros">
+              <div class="card-content">
+                <div class="card-title">Emanuel Barros</div>
+              </div>
             </div>
-            
-            <div class="carousel-container">
-      <button class="carousel-button prev" id="team-prev">❮</button>
-      <div class="card-container" id="team-carousel">
-        <!-- Slides da equipe -->
-        <div class="card">
-          <img src="../images/emanuel.png" alt="Emanuel Barros">
-          <div class="card-content">
-            <div class="card-title">Emanuel Barros</div>
+            <div class="card">
+              <img src="../images/lobortis.png" alt="Lobortis Mattis">
+              <div class="card-content">
+                <div class="card-title">Lobortis Mattis</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/marlene.png" alt="Marlene Pinho">
+              <div class="card-content">
+                <div class="card-title">Marlene Pinho</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/niter.png" alt="Niter Salomão">
+              <div class="card-content">
+                <div class="card-title">Niter Salomão</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/emanuelle.png" alt="Emanuelle Nascimento">
+              <div class="card-content">
+                <div class="card-title">Emanuelle Nascimento</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/sophia.png" alt="Sophia Silva">
+              <div class="card-content">
+                <div class="card-title">Sophia Silva</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/anna.png" alt="Anna Coelho">
+              <div class="card-content">
+                <div class="card-title">Anna Coelho</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/gabriel.png" alt="Gabriel Coelho">
+              <div class="card-content">
+                <div class="card-title">Gabriel Coelho</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/jessica.avif" alt="Jessica Torres">
+              <div class="card-content">
+                <div class="card-title">Jessica Torres</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/junio.jpg" alt="Junio Matos">
+              <div class="card-content">
+                <div class="card-title">Junio Matos</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/monica.jpg" alt="Monica Carvalho">
+              <div class="card-content">
+                <div class="card-title">Monica Carvalho</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/david.jpg" alt="David Santana">
+              <div class="card-content">
+                <div class="card-title">David Santana</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/jasmine.jpg" alt="Jasmine Flores">
+              <div class="card-content">
+                <div class="card-title">Jasmine Flores</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/leandro.jpg" alt="Leandro Miano">
+              <div class="card-content">
+                <div class="card-title">Leandro Miano</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/jose.avif" alt="José Santos">
+              <div class="card-content">
+                <div class="card-title">José Santos</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/lucas.avif" alt="Lucas Vieira">
+              <div class="card-content">
+                <div class="card-title">Lucas Vieira</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/sara.jpg" alt="Sara Santos">
+              <div class="card-content">
+                <div class="card-title">Sara Santos</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/jorge.jpg" alt="Jorge Lucas">
+              <div class="card-content">
+                <div class="card-title">Jorge Lucas</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/pricila.jpg" alt="Pricila Da Silva">
+              <div class="card-content">
+                <div class="card-title">Pricila Da Silva</div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/douglas.jpg" alt="Douglas Tangiro">
+              <div class="card-content">
+                <div class="card-title">Douglas Tangiro</div>
+              </div>
+            </div>
           </div>
+          <button class="carousel-button next" id="team-next">❯</button>
         </div>
-        <div class="card">
-          <img src="../images/lobortis.png" alt="Lobortis Mattis">
-          <div class="card-content">
-            <div class="card-title">Lobortis Mattis</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/marlene.png" alt="Marlene Pinho">
-          <div class="card-content">
-            <div class="card-title">Marlene Pinho</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/niter.png" alt="Niter Salomão">
-          <div class="card-content">
-            <div class="card-title">Niter Salomão</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/emanuelle.png" alt="Emanuelle Nascimento">
-          <div class="card-content">
-            <div class="card-title">Emanuelle Nascimento</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/sophia.png" alt="Sophia Silva">
-          <div class="card-content">
-            <div class="card-title">Sophia Silva</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/anna.png" alt="Anna Coelho">
-          <div class="card-content">
-            <div class="card-title">Anna Coelho</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/gabriel.png" alt="Gabriel Coelho">
-          <div class="card-content">
-            <div class="card-title">Gabriel Coelho</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/jessica.avif" alt="Jessica Torres">
-          <div class="card-content">
-            <div class="card-title">Jessica Torres</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/junio.jpg" alt="Junio Matos">
-          <div class="card-content">
-            <div class="card-title">Junio Matos</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/monica.jpg" alt="Monica Carvalho">
-          <div class="card-content">
-            <div class="card-title">Monica Carvalho</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/david.jpg" alt="David Santana">
-          <div class="card-content">
-            <div class="card-title">David Santana</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/jasmine.jpg" alt="Jasmine Flores">
-          <div class="card-content">
-            <div class="card-title">Jasmine Flores</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/leandro.jpg" alt="Leandro Miano">
-          <div class="card-content">
-            <div class="card-title">Leandro Miano</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/jose.avif" alt="José Santos">
-          <div class="card-content">
-            <div class="card-title">José Santos</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/lucas.avif" alt="Lucas Vieira">
-          <div class="card-content">
-            <div class="card-title">Lucas Vieira</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/sara.jpg" alt="Sara Santos">
-          <div class="card-content">
-            <div class="card-title">Sara Santos</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/jorge.jpg" alt="Jorge Lucas">
-          <div class="card-content">
-            <div class="card-title">Jorge Lucas</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/pricila.jpg" alt="Pricila Da Silva">
-          <div class="card-content">
-            <div class="card-title">Pricila Da Silva</div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="../images/douglas.jpg" alt="Douglas Tangiro">
-          <div class="card-content">
-            <div class="card-title">Douglas Tangiro</div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-button next" id="team-next">❯</button>
-    </div>
 
     <!-- Seção de Parceiros -->
-    <div class="title-container">
-      <h2>Nossos Parceiros</h2>
-    </div>
-    <div class="carousel-container">
-      <button class="carousel-button prev" id="partner-prev">❮</button>
-      <div class="partner-cards" id="partner-carousel">
-        <!-- Slides dos parceiros -->
-        <div class="partner-card">
-          <img src="../images/Abrigo dos Bichos.png" alt="Parceiro 1">
-          <div class="partner-content">
-            <div class="partner-title">Parceiro 1</div>
-          </div>
+        <div class="title-container">
+          <h2>Nossos Parceiros</h2>
         </div>
-        <div class="partner-card">
-          <img src="../images/amigo.png" alt="Parceiro 2">
-          <div class="partner-content">
-            <div class="partner-title">Parceiro 2</div>
+        <div class="carousel-container">
+          <button class="carousel-button prev" id="partner-prev">❮</button>
+          <div class="partner-cards" id="partner-carousel">
+            <!-- Slides dos parceiros -->
+            <div class="partner-card">
+              <img src="../images/Abrigo dos Bichos.png" alt="Parceiro 1">
+              <div class="partner-content">
+                <div class="partner-title">Parceiro 1</div>
+              </div>
+            </div>
+            <div class="partner-card">
+              <img src="../images/amigo.png" alt="Parceiro 2">
+              <div class="partner-content">
+                <div class="partner-title">Parceiro 2</div>
+              </div>
+            </div>
+            <div class="partner-card">
+              <img src="../images/cão.png" alt="Parceiro 3">
+              <div class="partner-content">
+                <div class="partner-title">Parceiro 3</div>
+              </div>
+            </div>
           </div>
+          <button class="carousel-button next" id="partner-next">❯</button>
         </div>
-        <div class="partner-card">
-          <img src="../images/cão.png" alt="Parceiro 3">
-          <div class="partner-content">
-            <div class="partner-title">Parceiro 3</div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-button next" id="partner-next">❯</button>
-    </div>
-  </section>
+      </section>
 
-        <?php include('../templates/footerUser.php'); ?>
+      <?php include('../templates/footerUser.php'); ?>
 
         <script>
     /**

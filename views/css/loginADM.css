@@ -15,6 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     height: calc(100vh - 431px);
+    margin: 50px 0px;
 }
 
 .login {
@@ -23,6 +24,7 @@ body{
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    
 }
 
 .login h2 {
@@ -38,24 +40,32 @@ body{
     outline: none;
 }
 
-.login button {
-    font-family:  Arial, Helvetica, sans-serif;
+.buttonLogin {
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 12px;
-    background-color: rgb( 68, 128, 63);
+    background-color: rgb(68, 128, 63);
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-}
-.login a {
-    font-family:  Arial, Helvetica, sans-serif;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+    text-decoration: none; /* Remover sublinhado se for um link */
 }
 
-.login button:hover {
+.buttonLogin:hover {
     transition: .4s;
     background-color: rgb(56, 105, 52);
+}
+
+.esqLoginSenha{
+    background-color: blue;
+}
+
+@media (max-width: 425px){
+    .secao-login{
+        margin: 40px;
+    }
+    .login{
+        padding: 70px 25px 130px 25px;
+    }
 }

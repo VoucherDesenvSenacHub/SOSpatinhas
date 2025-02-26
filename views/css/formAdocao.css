@@ -127,3 +127,44 @@ input[type="date"]:focus::before,
 input[type="date"]:valid::before {
     content: "";
 }
+
+.divMetade{
+    display: flex;
+    gap: 1rem;
+}
+    #inputddd{
+        width: 30%;
+    }
+    #inputuf{
+        width: 30%;
+    }
+    #inputnum{
+        width: 30%;
+    }
+
+@media (max-width: 768px){
+    .corpo {
+        border-radius: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 425px){
+    .corpo {
+        border-radius: 0;
+        margin: 0;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="checkbox"] {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+}

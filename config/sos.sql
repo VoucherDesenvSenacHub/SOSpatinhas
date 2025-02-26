@@ -188,7 +188,72 @@ foreign key (id_usuario) references usuario(id_usuario),
 termos boolean,
 data_adocao date
 );
-
+insert into animal values (
+	'',
+    'Bartolomeu',
+    'Gato',
+    'Siamês',
+    'Pequeno',
+    'Descrição alternativamente variada',
+    'Gato Fofo',
+    '4 Meses',
+    'Macho'
+);
+insert into animal values (
+	'',
+    'Bartolomeu',
+    'Gato',
+    'Siamês',
+    'Pequeno',
+    'Descrição alternativamente variada',
+    'Gato Fofo',
+    '4 Meses',
+    'Macho'
+);
+insert into animal values (
+	'',
+    'Bartolomeu',
+    'Gato',
+    'Siamês',
+    'Pequeno',
+    'Descrição alternativamente variada',
+    'Gato Fofo',
+    '4 Meses',
+    'Macho'
+);
+insert into animal values (
+	'',
+    'Bartolomeu',
+    'Gato',
+    'Siamês',
+    'Pequeno',
+    'Descrição alternativamente variada',
+    'Gato Fofo',
+    '4 Meses',
+    'Macho'
+);
+insert into animal values (
+	'',
+    'Bartolomeu',
+    'Gato',
+    'Siamês',
+    'Pequeno',
+    'Descrição alternativamente variada',
+    'Gato Fofo',
+    '4 Meses',
+    'Macho'
+);
+insert into animal values (
+	'',
+    'Bartolomeu',
+    'Gato',
+    'Siamês',
+    'Pequeno',
+    'Descrição alternativamente variada',
+    'Gato Fofo',
+    '4 Meses',
+    'Macho'
+);
 
 select * from pagQS_Banner;
 

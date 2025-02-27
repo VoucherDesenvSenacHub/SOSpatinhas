@@ -21,7 +21,7 @@
                     <input type="password" placeholder="Confirmar senha">
                     <button type="submit" value="login"><a href="./login.php">Enviar</a></button>
                 </form>
-                <p>Não tem uma conta?<a href="cadastrar_conta">Cadastrar</a></p>
+                <p>Não tem uma conta?<a href="cadastrar_conta">  Cadastrar</a></p>
             </div>
         </section>
     </section>

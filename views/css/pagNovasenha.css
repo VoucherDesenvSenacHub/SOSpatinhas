@@ -74,3 +74,46 @@ body{
     text-decoration: underline;
 
 }
+
+/* Responsividade para telas com largura máxima de 768px */
+@media (max-width: 768px) {
+    .secao-login {
+      height: auto;
+      padding: 20px;
+    }
+    .login {
+      padding: 50px 30px;
+      margin: 0 auto;
+    }
+    .login input,
+    .login button {
+      width: 100%;
+    }
+  }
+  
+  /* Responsividade para telas com largura máxima de 425px */
+  @media (max-width: 425px) {
+    .secao-login {
+      height: auto;
+      padding: 15px;
+    }
+    .login {
+      padding: 30px 20px;
+      width: 95%;
+      margin: 0 auto;
+    }
+    .login h2 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    .login input {
+      padding: 10px;
+    }
+    .login button {
+      padding: 10px;
+    }
+    .login p {
+      font-size: 0.9rem;
+    }
+  }
+  

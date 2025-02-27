@@ -153,15 +153,15 @@ p {
 
 
 @media (max-width: 768px) {
-    .body {
-        background-size: 170%;
+    body {
+        background-size: 110%;
         height: auto;
     }
 
     .corpo-container {
         border-radius: 0;
         box-shadow: none;
-        margin: 0;
+        border-radius: 8px;
     }
 
     h1 {
@@ -180,22 +180,17 @@ p {
 
     .borda-verde::before,
     .borda-verde::after {
-        width: 80px;
+        width: 120px;
     }
 
     .borda-verde::before {
-        left: -100px; /
+        left: -140px; /
     }
     
     .borda-verde::after {
-        right: -100px; 
+        right: -140px; 
     }
     
-
-    .form {
-        flex-direction: column;
-    }
-
     .width60{
         width: 60%;
         display: grid;
@@ -218,6 +213,7 @@ p {
         padding: 15px;
         width: 90%;
         margin: 20px auto;
+        border-radius: 8px;
     }
 
     h1 {
@@ -249,11 +245,6 @@ p {
     
     .borda-verde::after {
         right: -100px; 
-    }
-    
-
-    .form {
-        flex-direction: column;
     }
 
     .width60, 

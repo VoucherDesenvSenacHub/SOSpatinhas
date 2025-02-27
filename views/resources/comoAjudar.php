@@ -17,7 +17,7 @@
     <section class="pontoArrecadacao">
       <div class="infoDestaque">
         <div class="imgPontoArrecadacao">
-          <img src="../images/cachorro_maldito.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
+          <img src="../images/cachorro03.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
           <p class="endereco">R. do Parque, 75 - Centro, Campo Grande - MS</p>
         </div>
         <div class="fundoTexto">
@@ -68,7 +68,7 @@
               <div class="card">
                 <img src="../images/iconeAtendimento.png" alt="Ícone de Atendimento">
                 <div>
-                  <p><strong>Kit Atendimento</strong></p>
+                  <p><strong>Kit Abono</strong></p>
                   <span>R$ 60</span>
                 </div>
               </div>
@@ -76,7 +76,7 @@
               <div class="card">
                 <img src="../images/iconeVacina.png" alt="Ícone de Vacina">
                 <div>
-                  <p><strong>Kit Vacinação</strong></p>
+                  <p><strong>Kit Vacina</strong></p>
                   <span>R$ 40</span>
                 </div>
               </div>

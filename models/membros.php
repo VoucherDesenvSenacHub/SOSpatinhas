@@ -42,5 +42,17 @@ class Membros {
         }
     }
 
+    //daqui pra baixo quem ta fazendo sou eu (pedro)
+
+    public function create($criarMembro){
+        if($criarMembro){
+            $query = "INSERT INTO membro (nome, email, senha, telefone) VALUES ('".$this->nome."', '".$this->email."', '".$this->senha."', '".$this->telefone."'";
+            $query .= ")";
+            }else{
+                throw new Exception('Erro ao criar o membro: '. $this->nome, 5);
+            }
+        }
+    public function read($buscarMembro){
+    }
 }
 ?>

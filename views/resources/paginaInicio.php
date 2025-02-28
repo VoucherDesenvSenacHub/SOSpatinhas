@@ -23,6 +23,12 @@
             </nav>
         </header>
 
+        <section id="bannerMobas">
+            <div class="imgBanner">
+                <img src="../images/inicial/Telinha1.png" alt="Cachorros Felizes">
+            </div>
+        </section>
+
         <section id="secslider" >
             <div id="divslider">
                 <ul id="slider">
@@ -48,22 +54,54 @@
                         <p class="textcard">Faça uma doação!</p>
                         <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
                     </div>
-                </div>
+            </div>
             <div class="card">
                 <img src="../images/imgcard2.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Participe dos nossos eventos!</p>
                         <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
                     </div>
-                </div>
+            </div>
             <div class="card">
                 <img src="../images/imgcard3.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Adote um amigo!</p>
                         <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
-                    </div>
                 </div>
+            </div>
         </section>
+
+        <section id="sliderDoacao">
+            <div class="cardDoacao">
+                <div class="divImg">
+                    <img src="../images/inicial/slider1.png" alt="Foto Animal">
+                </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                </div>
+            </div>
+            <div class="cardDoacao">
+                <div class="divImg">
+                    <img src="../images/inicial/slider2.png" alt="Foto Animal">
+                </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                </div>
+            </div>
+            <div class="cardDoacao">
+                <div class="divImg">
+                    <img src="../images/inicial/slider3.png" alt="Foto Animal">
+                </div>
+                <div class="ctdcard">
+                        <p class="textcard">Faça uma doação!</p>
+                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                </div>
+            </div>
+        </section>
+
+
 
         <?php include('../templates/footerUser.php') ?>
     </body>
@@ -72,6 +110,7 @@
         /* -- Slider -- */
         let currentIndex = 0;
         const slides = document.querySelectorAll('#slider li');
+
         const totalSlides = slides.length;
 
         document.getElementById('direita').addEventListener('click', () => {
@@ -87,5 +126,7 @@
             const slider = document.getElementById('slider');
             slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
+
+
     </script>
 </html>

@@ -46,7 +46,7 @@
         display: inline-block;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         footer {
             text-align: center;
             padding: 15px;

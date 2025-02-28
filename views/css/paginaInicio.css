@@ -2,9 +2,14 @@
     padding: 0;
     margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: #44803f;
+}
+
+img{
+    width: 100%;
 }
 
 /* --- Header --- */
@@ -173,10 +178,11 @@ button {
         
         & .cardDoacao {
             width: auto;
-            margin: 20px 0px 20px 0px;
+
 
             & .divImg {
-                
+
+
                 width: 100vw;
                 height: 100%;
             }
@@ -186,6 +192,14 @@ button {
 
     .ctdcard {
         display: flow;
+
+        font-size: 1.6rem;
+
+        & input {
+            font-size: 1.5rem;
+        }
+        
+
     }
 
 
@@ -205,16 +219,8 @@ button {
 @media (max-width: 425px) {
     
     #sliderDoacao {
-        transform: scale(0.9);
+
         margin: 20px auto;
-    }
-
-    .imgBanner img {
-        width: auto;
-    }
-
-    #sliderDoacao > :first-child {
-        margin-top: -50px;
     }
 
 }

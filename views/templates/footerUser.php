@@ -1,58 +1,51 @@
-<style>
-    footer {
-        text-align: center;
-        padding: 3px;
-        background-color: rgb(68, 128, 63);
-        color: white;
-    }
 
-    .footer-links {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        align-items: center;
-    }
 
-    .footer-links a {
-        text-decoration: none;
-        color: white;
-        width: max-content;
-        padding-bottom: 5px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+    <style>
+        footer{
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(68, 128, 63);
+            color: white;
+        }
+        .footer-links{
+            display: flex;
+            flex-direction: column; 
+            margin-bottom: 10px;
+            align-items: center;    
+        }
+        .footer-links a{
+            text-decoration: none;
+            color: white;
+            width: max-content;
+            padding-bottom: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .footer-links-img a, .footer-logo img{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .footer-links-img a{
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .footer-links-img a:last-child{
+            margin-right: 0;
+        }
+        .footer-links-bottom a{
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            margin-right: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+        .footer-links-bottom a:last-child{
+            margin-right: 0;
+        }
+    </style>
 
-    .footer-links-img a,
-    .footer-logo img {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
 
-    .footer-links-img a {
-        display: inline-block;
-        margin-right: 10px;
-        text-decoration: none;
-    }
-
-    .footer-links-img a:last-child {
-        margin-right: 0;
-    }
-
-    .footer-links-bottom a {
-        text-decoration: none;
-        color: white;
-        display: inline-block;
-        margin-right: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
-    }
-
-    .footer-links-bottom a:last-child {
-        margin-right: 0;
-    }
-</style>
-</head>
-
-<body>
     <footer>
         <a class="footer-logo" href="./paginaInicio.php">
             <img src="../images/Logo_Footer.png" width="201" height="111" alt="">

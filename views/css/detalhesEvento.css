@@ -2,27 +2,25 @@
   padding: 0;
   margin: 0;
   border: 0;
+  font-family: "Inter", sans-serif;
 }
 body{
   background-color: rgb(198, 225, 196);
   background-image: url("../images/Patinhas.png");
   background-size: 50%;
-  font-family: 'Inter', sans-serif;
 }
 .container{
   max-width: 1500px;
-  margin: 0 auto;
-  padding: 50px;
-  background-color: #FFFFFF;
+  margin: auto;
+  padding: 12px;
 }
 .corpo{
-  background-color: #ffffff;
-  /* width: 1500px; */
+  background-color: rgb(255, 255, 255);
+  width: 1500px;
   display: flex;
   text-align: center;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  border-radius: 8px;
 }
 
 .conteudo{
@@ -38,6 +36,7 @@ gap: 50px;
 flex-direction: column;
 flex-wrap: wrap;
 padding: 0 0 0 5px;
+align-content: center;
 }
 
 .slide{
@@ -362,4 +361,83 @@ h2 {
   width: 570px;
 }
 
+}
+
+@media (max-width: 1440px){
+  .corpo {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 768px){
+  .EventoSlides {
+    width: 350px;
+    height: 200px;
+  }
+  .slideshow-container {
+    height: auto;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide {
+    height: auto;
+  }
+  .event-details {
+    height: auto;
+  }
+
+  .event-details {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .event-details p{
+    margin: 30px 0px 30px 0px;
+  }
+
+  .localEvento {
+    display: flex;
+    gap: 3px;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 500px;
+  }
+
+  .btn-slide {
+    bottom: 15.5cm;
+    left: 5cm;
+  }
+  .slider {
+    height: auto;
+  }
+
+}
+
+@media (max-width: 425px){
+  .corpo {
+    width: auto;
+  }
+  .btn-slide {
+    bottom: 15.5cm;
+    left: 0.5cm;
+  }
+  .slideshow-container {
+    width: 425px;
+  }
+  .slider {
+    width: 425px;
+  }
+  .slide {
+    width: 425px;
+  }
+  .localEvento {
+    width: 425px;
+  }
 }

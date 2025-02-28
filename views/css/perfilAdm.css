@@ -146,3 +146,13 @@ button:focus {
         padding: 16px 35px;
     }
 }
+
+@media (max-width: 425px) {
+    body{
+        background-size: 130%;
+    }
+
+    .corpo{
+        width: 100%;
+    }
+}

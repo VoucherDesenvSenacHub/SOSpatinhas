@@ -2,306 +2,88 @@
     padding: 0;
     margin: 0;
     border: 0;
-    font-family: "inter", sans-serif;
+    font-family: "Inter", sans-serif;
 }
-body{
+
+body {
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
 }
-.container{
+
+.container {
     max-width: 1500px;
     margin: auto;
     padding: 12px;
-    background-color: white  ;
-    
+    background-color: white;
 }
-.corpo{
+
+.corpo {
     background-color: rgb(255, 255, 255);
-    width: 1500px;
+    width: 100%; 
     display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
-/*IMAGENS*/
 
-#imgAnimal,#imgEventos{
-    text-align: center;
-    margin: 10px;
-    display: flex; 
-    justify-content: space-between; 
-    padding: 20px; 
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;  
 }
 
-.animal{
-    width: 420px; 
-    height: auto; 
-    margin: 20px;
-    
-}
-.eventos{
-    width: 420px; 
-    height: auto; 
-    margin: 20px;
-}
-
-/*Texto*/
-
-.texto{
-    position: relative;
-    top: 20px; 
-    left: 90px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.titulo {
     font-size: 35px;
+    text-align: left;
+    width: 100%; 
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    padding-left: 10rem; 
 }
 
-.texto-overlay {
-    position: absolute; 
-    top: 58%; 
-    left: 30%; 
-    transform: translate(-50%, -50%);
-    color: white; 
-    font-size: 20px; 
-    text-align: center; 
-    border-radius: 5px; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);   
-}
-.card {
-    margin: 0 10px; 
-    position: relative; 
-    box-sizing: border-box;
-    text-align: center;
-   
-    }
-.item {
-    margin: 0 10px; 
-    position: relative; 
-    box-sizing: border-box;
-    text-align: center;  
-}
-/*BARRA*/
-
-.box-anim{
-    background-color: #83CE7D;
-    position: absolute;
-    bottom:90px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 80%; 
-    height: 40px; 
-    border-radius: 30px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    color: white; 
-    font-size: 16px; 
-}
-
-.box-saibamais{
- 
-    background-color: #ffffff;
-    position: absolute;
-    bottom:40px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 37%; 
-    height: 37px; 
-    border-radius: 7px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    color: #83CE7D; 
-    font-size: 16px; 
-
-}
-
-
-.box-event {
-    background-color: #44803F;
-    position: absolute;
-    bottom: 50px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 85%; 
-    height: 120px; 
-    display: flex; 
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; 
-    color: white; 
-    font-size: 14px; 
-}
-
-/* Ajuste para o título */
-.box-event h1 {
-    margin-bottom: 5px; 
-    margin-left: 10px;
-    margin-top: 10px ;
-    
-}
-.box-event h2{
-    margin-bottom: 3px;
-    margin-left: 10px;
-    margin-top: 10px ;
-    
-}
-
-/* Ajuste para o parágrafo */
-.box-event h1 {
-    margin-left: 10px;
-    margin-top: 0; 
-
-}
-.imgtext {
-    display: flex; 
-    align-items: center; 
-}
-.event-img {
-    width: 30px; 
-    height: 30px; 
-    margin-right: 0; 
-}
-.textEvent {
-    margin: 0; 
-    padding: 0; 
-    font-size: 17px; 
-}
-
-.wrapper i{
-    height: 50px;
-    width: 50px;
-    background: #ff5555;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    cursor: pointer;
-    top: 50%;
-    font-size: 1.25em;
-
-    transform: translateY(-50%);
-}
-
-.wrapper i:first-child{
-    left: -22px;
-}
-.wrapper i:last-child{
-    right: -22px;
-}
-
-.wrapper .carousel{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    gap: 16px;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: 0;
-
-}
-
-.carousel::-webkit-scrollbar{
-    display: none;
-}
-.carousel :where(.card, .img){
+.row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.carousel .card{
-    scroll-snap-align: start ;
-    height: 342px;
-    list-style: none;
-    background: #fff;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    padding-bottom: 15px;
-}
-.carousel.no-transition{
-    scroll-behavior: auto;
-}
-
-.carousel.dragging {
-    scroll-behavior: auto;
-    scroll-snap-type: none;
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 40px; 
 }
 
-.carousel.dragging .card{
-    cursor: grab;
-    user-select: none;
+#arrecadacaoCarrosel, #eventosCarrosel {
+    width: 80rem; 
 }
 
-.card .img img{
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-@media  (max-width: 786px){
-    .container{
-        width: 80%;   
-
+@media (max-width: 1024px) {
+    .titulo {
+        padding-left: 5rem; 
+        font-size: 30px; 
     }
 
-    #imgEventos,#imgAnimal{
-        overflow: auto;
-    }
-  
-    .texto{
-        position: static;
-        font-size:25px; /* Tamanho do texto */
+    #arrecadacaoCarrosel, #eventosCarrosel {
+        width: 100%; 
     }
 }
 
-@media  (max-width: 425px) {
-    .container{
-        width: 80%;   
-    }
-    .animal{
-        width: 290px; 
-        height: auto; 
-    }
-    .eventos{
-        width: 300px; 
-        height: auto; 
-    }
-    
-    .box-event {
-        width: 80%;
-        height: auto; 
-        padding: 6px; 
-        font-size: 15px;
-    }
-    
-    .box-event h1,
-    .box-event h2 {
-        width: auto; 
-        font-size: 15px; 
-        white-space: normal; 
+@media (max-width: 768px) {
+    .titulo {
+        padding-left: 2rem; 
+        font-size: 24px; 
     }
 
-    .box-anim {
-        width: 70%;
-        height: 12px; 
-        padding: 6px; 
-        font-size: 9px;
-        bottom: 120px;
+    #arrecadacaoCarrosel, #eventosCarrosel {
+        width: 100%; 
     }
-    .box-saibamais{
-        bottom: 80px;
-        height: 30px;
-        font-size: 12px;
-    }   
-    .texto-overlay{
-        font-size: 16px;
-        bottom: 100px;
-      }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 20px; 
+        padding-left: 1rem; 
+    }
+
+    #arrecadacaoCarrosel, #eventosCarrosel {
+        width: 100%; 
+    }
 }

@@ -12,157 +12,50 @@
 @include('../templates/navbarUser.php');
 ?>
 
-<section class="container">
-        <!-- <h1 class="texto">Arrecadações</h1>
-            <div class="wrapper">
-                  
-                    <ul id="imgAnimal" class="carousel">
-                        <li class="card">
-                            <img src="../images/eventosImg/eventos2.png" class="animal" alt="">
-                            <h3 class="texto-overlay">Ajude o Freguês</h3>
-                            <div class="box-anim"></div>
-                            <div class="box-saibamais"><h1>Saiba mais</h1></div>
-                        </li>
-                        <li class="card">
-                            <img src="../images/eventosImg/eventos6.png" class="animal" alt="">
-                            <h3 class="texto-overlay">Ajude a Nina</h3>
-                            <div class="box-anim">
-                                <div class="box-anim2"></div>
-                            </div>
-                            <div class="box-saibamais"><h1>Saiba mais</h1></div>
-                        </li>
-                        <li class="card">
-                            <img src="../images/eventosImg/eventos3.png" class="animal" alt="">
-                            <h3 class="texto-overlay">Ajude o Cascudo</h3>
-                            <div class="box-anim"></div>
-                            <div class="box-saibamais"><h2>Saiba mais</h2></div>
-                        </li>
-                    </ul>
-                  
-            </div> -->
-        
-        <h1 class="texto">Eventos</h1>
-        <div id="imgEventos">
-            <?php
-            
-            $cards =['<div class="item" id="item-carousel">
-                        <img src="../images/eventosImg/eventos1.png" class="eventos" alt="">
-                        <div class="box-event">
-                            <h2>Feira do AuAu</h2>
-                            <h1>Feira arrecadativa de moda.</h1>
-                            <div class="imgtext">
-                                <img src="../images/eventosImg/pin.png" alt="" class="event-img">
-                                <h2 class="textEvent">Campo Grande MS, Horto Florestal</h2>
-                            </div>
-                        </div>
-                    </div>',
-                    '<div class="item">
-                        <img src="../images/eventosImg/eventos4.png" class="eventos" alt="">
-                        <div class="box-event">
-                            <h2>Adote um Amigo</h2>
-                            <h1>Feira de adoção.</h1>
-                            <div class="imgtext">
-                                <img src="../images/eventosImg/pin.png" alt="" class="event-img">
-                                <h2 class="textEvent">Campo Grande MS, Parque dos Poderes</h2>
-                            </div>
-                        </div>
-                    </div>',
-                    '<div class="item">
-                        <img src="../images/eventosImg/eventos5.png" class="eventos" alt=""> 
-                        <div class="box-event">
-                            <h2>Juntos por Eles</h2>
-                            <h1>Passeata pelos direitos dos animais.</h1>
-                            <div class="imgtext">
-                                <img src="../images/eventosImg/pin.png" alt="" class="event-img">
-                                <h2 class="textEvent">Campo Grande MS, Parque dos Poderes</h2>
-                            </div>
-                        </div>   
-                    </div>'];
-            
+<section class="corpo container">
+    <section class="content">
+        <div class="row">
+            <h1 class="titulo">Arrecadações</h1>
+            <div id="arrecadacaoCarrosel">
+                <?php
+                    $cardComponents1 = array();
+    
+                    for ($i = 0; $i < 5; $i++) {
+                        ob_start(); 
+                        include('../templates/arrecadacaoCard.php'); 
+                        $cardComponents1[] = ob_get_clean();
+                    }
+    
+                    $cardComponents = $cardComponents1;
+                    $carouselId = 'carousel1';
                     @include('../templates/carossel.php');
-            
-            
-            ?>
+                ?>
+            </div> 
         </div>
+            
+        <div class="row">
+    
+            <h1 class="titulo">Eventos</h1>
+            <div id="eventosCarrosel">
+                <?php
+                $cardComponents2 = array();
+    
+                for ($i = 0; $i < 5; $i++) {
+                    ob_start(); 
+                    include('../templates/eventosCard.php');
+                    $cardComponents1[] = ob_get_clean();
+                }
+        
+                $cardComponents = $cardComponents2;
+                $carouselId = 'carousel2';
+                @include('../templates/carossel.php');
+                ?>
+            </div>
+        </div>
+    </section>
 </section>
 
-
-<?php
-@include('../templates/footerUser.php');
-?>
-
-<script>
-    const carousel = document.querySelector(".carousel");
-const arrows = document.querySelectorAll(".wrapper i");
-const firstCard = carousel.querySelector(".card").offsetWidth;
-const carouselChildrens = [...carousel.children];
-
-
-/// carrosselll
-
-
-let cardPerView = Math.round(carousel.offsetWidth / firstCard);
-
-carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-});
-
-carouselChildrens.slice(0, cardPerView).forEach(card => {
-    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
-
-arrows.forEach(btn => {
-    btn.addEventListener("click", () =>{
-        carousel.scrollLeft += btn.id === "left" ? -firstCard : firstCard;
-    });
-});
-
-
-
-// scrolll
-let isDragging = false , startX , startScrollLeft;
-
-const dragStart = (e) =>{
-    isDragging = true;
-    carousel.classList.add("dragging");
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
-}
-
-
-const dragging = (e) => {
-    if(!isDragging) return;
-    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-}
-
-const dragStop = () =>{
-    isDragging = false;
-    carousel.classList.remove("dragging");
-}
-
-const infiniteScroll = () =>{
-    if(carousel.scrollLeft === 0 ){
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth );
-        carousel.classList.remove("no-transition");
-
-    } else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth){
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft =  carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-
-    }
-}
-
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("scroll", infiniteScroll);
-
-
-
-</script>
+<?php @include('../templates/footerUser.php'); ?>
 
 </body>
-
 </html>

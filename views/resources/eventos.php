@@ -12,7 +12,7 @@
 @include('../templates/navbarUser.php');
 ?>
 
-<section class="corpo container">
+<section class="corpo container">   
     <section class="content">
         <div class="row">
             <h1 class="titulo">Arrecadações</h1>

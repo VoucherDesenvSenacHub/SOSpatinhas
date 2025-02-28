@@ -29,34 +29,56 @@ body {
     flex-direction: column;
 }
 
-.imagem_grupo {
+.carouselCompleto{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px; 
 }
 
-.imagem_grupo img {
+.imagemEquipe {
     width: 100%;
+    margin-bottom: 30px;
     height: auto;
 }
 
-.title-container {
-    display: flex;
+.imagemEquipe img{
+    width: 100%;
+}
+
+.descricao {
+    /* display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: 50px 50px 20px 0;
-    width: 100%;
-}
+    width: 100%; */
 
-.title-container h1 {
     margin: 0;
     padding: 0 15px;
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
 }
 
-.title-container::before,
-.title-container::after {
+/* .descricao h1 {
+
+} */
+
+#nomeIntegrante {
+    font-size: 18px;  
+    font-weight: 700;
+    color: #333;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+
+
+
+.descricao::before,
+.descricao::after {
     content: "";
     width: 470px;
     height: 3px;
@@ -65,11 +87,11 @@ body {
     transform: translateY(-50%);
 }
 
-.title-container::before {
+.descricao::before {
     left: 0;
 }
 
-.title-container::after {
+.descricao::after {
     right: 0;
 }
 
@@ -127,14 +149,6 @@ h1 {
     justify-content: flex-start;  
 }
 
-.card-title {
-    font-size: 18px;  
-    font-weight: 700;
-    color: #333;
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
 
 .card-footer {
     text-align: center;
@@ -259,17 +273,20 @@ h1 {
     h1 {
         font-size: 28px;
     }
-    .title-container h1,
-    .title-container h2 {
+    .descricao h1,
+    .descricao h2 {
         font-size: 1.75rem;
         padding: 0 10px;
     }
-    .title-container::before,
-    .title-container::after {
+    .descricao::before,
+    .descricao::after {
         width: 35%;
     }
     
-   
+    .imagem_grupo{
+        
+    }
+
     .card-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 250px;
@@ -314,13 +331,13 @@ h1 {
     h1 {
         font-size: 24px;
     }           
-    .title-container h1,
-    .title-container h2 {
+    .descricao h1,
+    .descricao h2 {
         font-size: 1.5rem;
         padding: 0 5px; 
     }
-    .title-container::before,
-    .title-container::after {
+    .descricao::before,
+    .descricao::after {
         width: 25%;
         padding: 0px 60px 0px 60px; 
     }

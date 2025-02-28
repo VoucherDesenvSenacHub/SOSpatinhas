@@ -1,4 +1,5 @@
-    <html lang="pt-BR">
+   <!-- se basear nos arquivos (eventos, carousel, arrecadacaoCard) para aplicare o carousel -->
+   <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,26 @@
       <?php include('../templates/navbarUser.php'); ?>
       
       <section class="corpo container">
-        <div class="imagem_grupo">
-          <img src="../images/grupo.png" alt="Foto da nossa equipe trabalhando em grupo">
-          <div class="title-container">
-            <h1>Nossa Equipe</h1>
+        <div class="carouselCompleto">
+          <div class="imagemEquipe">
+            <img src="../images/grupo.png" alt="Foto da nossa equipe inteira">
           </div>
+            <h1 class="descricao">Nossa Equipe</h1>
+          
+          <?php
+            $cardComponentEquipe = array();
+
+            for ($i = 0; $i < 3; $i++) {
+              include('../templates/equipeCard.php');
+              $cardComponentEquipe [] = ob_get_clean();
+            }
+
+            $cardComponents = $cardComponentEquipe;
+            $carouselId = '$carouselId';
+            @include('../templates/carossel.php');
+          ?>
         </div>
-        
-        <div class="carousel-container">
-          <button class="carousel-button prev" id="team-prev">❮</button>
-          <div class="card-container" id="team-carousel">
-          <!-- Slides da equipe -->
-            <div class="card">
-              <img src="../images/emanuel.png" alt="Emanuel Barros">
-              <div class="card-content">
-                <div class="card-title">Emanuel Barros</div>
-              </div>
-            </div>
+
             <div class="card">
               <img src="../images/lobortis.png" alt="Lobortis Mattis">
               <div class="card-content">
@@ -172,14 +176,7 @@
 
       <?php include('../templates/footerUser.php'); ?>
 
-        <script>
-    /**
-     * Função para inicializar um carrossel infinito e responsivo.
-     * @param {string} carouselId - ID do container do carrossel.
-     * @param {string} slideSelector - Seletor dos slides (cards) dentro do container.
-     * @param {string} prevBtnId - ID do botão de anterior.
-     * @param {string} nextBtnId - ID do botão de próximo.
-     */
+        <!-- <script>
     function initCarousel(carouselId, slideSelector, prevBtnId, nextBtnId) {
       const carousel = document.getElementById(carouselId);
       let slides = Array.from(carousel.querySelectorAll(slideSelector));
@@ -248,6 +245,6 @@
     initCarousel('team-carousel', '.card', 'team-prev', 'team-next');
     // Inicializa o carrossel dos parceiros
     initCarousel('partner-carousel', '.partner-card', 'partner-prev', 'partner-next');
-        </script>
+        </script> -->
     </body>
     </html>

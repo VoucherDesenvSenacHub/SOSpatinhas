@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     require_once '../../config/database.php';
     $banco = new Banco();
     
@@ -44,8 +44,58 @@
 
     $resultadoTotal = $banco->query($queryTotal);
     $registrosTotal = $resultadoTotal ? $banco->fetch_all($resultadoTotal)[0]['total'] : 0;
+    $registrosTotal = 20;
 
     $totalPag = ceil($registrosTotal / $itensPorPag);
+?> -->
+
+<?php
+    $sexoFilter = isset($_GET['sexo-filter']) && $_GET['sexo-filter'] !== "Selecionar" ? $_GET['sexo-filter'] : null;
+    $idadeFilter = isset($_GET['idade-filter']) && $_GET['idade-filter'] !== "Selecionar" ? $_GET['idade-filter'] : null;
+    $porteFilter = isset($_GET['porte-filter']) && $_GET['porte-filter'] !== "Selecionar" ? $_GET['porte-filter'] : null;
+    $animalFilter = isset($_GET['animal-filter']) && $_GET['animal-filter'] !== "Selecionar" ? $_GET['animal-filter'] : null;
+
+    $animals = [];
+    for ($i = 0; $i < 20; $i++) {
+        $animals[] = [
+            'nome' => 'Animal ' . ($i + 1),
+            'tipo' => ($i % 2 == 0) ? 'Cachorro' : 'Gato',
+            'sexo' => ($i % 2 == 0) ? 'Macho' : 'Fêmea',
+            'idade' => rand(1, 15),
+            'porte' => ($i % 3 == 0) ? 'Pequeno' : (($i % 3 == 1) ? 'Médio' : 'Grande')
+        ];
+    }
+
+    $filteredAnimals = array_filter($animals, function ($animal) use ($sexoFilter, $idadeFilter, $porteFilter, $animalFilter) {
+        if ($sexoFilter && $animal['sexo'] !== $sexoFilter) {
+            return false;
+        }
+
+        if ($idadeFilter) {
+            if ($idadeFilter === "< 1" && $animal['idade'] >= 1) return false;
+            if ($idadeFilter === "<= 5" && $animal['idade'] > 5) return false;
+            if ($idadeFilter === "<= 10" && $animal['idade'] > 10) return false;
+            if ($idadeFilter === "> 10" && $animal['idade'] <= 10) return false;
+        }
+
+        if ($porteFilter && $animal['porte'] !== $porteFilter) {
+            return false;
+        }
+
+        if ($animalFilter && $animal['tipo'] !== $animalFilter) {
+            return false;
+        }
+
+        return true;
+    });
+
+    $itensPorPag = 9;
+    $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
+    $offset = ($paginaAtual - 1) * $itensPorPag; 
+    $registrosTotal = count($filteredAnimals);
+    $totalPag = ceil($registrosTotal / $itensPorPag);
+
+    $rowAnimal = array_slice($filteredAnimals, $offset, $itensPorPag);
 ?>
 
 <!DOCTYPE html>
@@ -112,10 +162,10 @@
                     </select>
                 </div>
                 
+                <div class="box2">
+                    <input type="submit" value="Filtrar" class="filter-button">
+                </div>
             </form>
-            <div class="box2">
-                <input type="submit" value="Filtrar" class="filter-button">
-            </div>
         </section>
         
 
@@ -145,7 +195,7 @@
                     echo '<a href="?pagina=' . ($paginaAtual + 1) . '">&gt;</a>';
                 }
     
-                $banco->fechar();
+                // $banco->fechar();
             ?>
         </div>
 

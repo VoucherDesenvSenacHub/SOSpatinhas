@@ -1,0 +1,368 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+
+.corpo {
+    background-color: #fff;
+    width: 90%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.pesquisar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pesquisar input {
+    width: 690px;
+    height: 35px;
+    padding: 5px 15px 5px 40px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pesquisar .lupa {
+    position: absolute;
+    left: 14px;
+    width: 1.2em;
+    color: #888;;
+    cursor: pointer;
+}
+
+.lista-adocao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: relative;
+}
+
+.animal {
+    padding: 20px;
+    transition: transform 0.2s;
+    border-radius: 10px;
+}
+
+.animal:hover {
+    transform: scale(1.05);
+}
+
+.animal img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.animal h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.animal button {
+    background-color: #4caf50;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.animal button:hover {
+    background-color: #45a049;
+}
+
+.botao-add-container {
+    position: absolute;
+    top: 10px;
+    right: -65px;
+}
+
+.botao-add {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.botao-add:hover {
+    background-color: #45a049;
+}
+
+.cta-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.pagination-btn {
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-btn:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.altPag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.altPag li {
+    list-style: none;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.altPag li.active, .altPag li:hover {
+    background-color: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 32px; 
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .corpo {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .pesquisar input {
+        width: 100%;
+        height: 35px;
+        font-size: 1.1em;
+        padding: 5px 70px 5px 40px;
+    }
+
+    .pesquisar .lupa {
+        left: 14px;
+        width: 1.1em;
+    }
+
+    .lista-adocao {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .animal {
+        padding: 15px;
+    }
+
+    .animal h3 {
+        font-size: 1em;
+    }
+
+    .animal button {
+        height: 35px;
+        font-size: 1em;
+    }
+
+    .botao-add-container {
+        position: fixed;
+        top: 180px;
+        right: 50px;
+
+    }
+
+    .botao-add {
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+    }
+
+    .cta-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .pagination-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+    }
+
+    .altPag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .altPag li {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 28px; 
+    }
+
+    .container {
+        padding: 8px;
+    }
+
+    .corpo {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .pesquisar input {
+        width: 100%;
+        height: 30px;
+        font-size: 1em;
+        padding: 5px 10px 5px 35px;
+    }
+
+    .pesquisar .lupa {
+        left: 10px;
+        width: 1em;
+    }
+
+    .lista-adocao {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .animal {
+        padding: 10px;
+    }
+
+    .animal h3 {
+        font-size: 0.9em;
+    }
+
+    .animal button {
+        height: 30px;
+        font-size: 0.8em;
+    }
+
+    .botao-add-container {
+        position: fixed;
+        top: 180px;
+        right: 18px;
+    }
+
+    .botao-add {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8em;
+        line-height: 0;
+    }
+
+    .cta-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pagination-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3em;
+    }
+
+    .altPag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .altPag li {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}

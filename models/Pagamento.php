@@ -1,8 +1,6 @@
 <?php
-require_once "../config/database.php";
 
 class Pagamento{
-    private $conexao;
     private $tabela = 'pagamento';
 
     public $id_pagamento;
@@ -12,50 +10,26 @@ class Pagamento{
     public $conta;
     public $agencia;
 
-    public function __construct($fotoQRCode, $chave, $nome_da_conta, $conta, $agencia) {
-        $this->fotoQRCode = $fotoQRCode;
-        $this->chave = $chave;
-        $this->nome_da_conta = $nome_da_conta;
-        $this->conta = $conta;
-        $this->agencia = $agencia;
 
-        return $this;
-        
+    public function __construct($infosPagamento) {
+       $this->fotoQRCode = $infosPagamento['fotoQRCode'];
+       $this->chave = $infosPagamento['chave'];
+       $this->nome_da_conta = $infosPagamento['nome_da_conta'];
+       $this->conta = $infosPagamento['conta'];
+       $this->agencia = $infosPagamento['agencia'];
     }
-
-    public function getIdLivro($id_pagamento) {
-        $query = "SELECT * FROM {$this->tabela} WHERE id = {$id_pagamento}";
-        $resultado = $this->conexao->query($query);
-        return $resultado->fetch_all(MYSQLI_ASSOC);
-    }
-
+    
     public function create() {
-        $verificar = "SELECT COUNT(*) FROM {$this->tabela} WHERE id_pagamento = '{$this->id_pagamento}';";
-        $resultadoVerificar = $this->conexao->query($verificar);
-
-        if ($resultadoVerificar && $resultadoVerificar->fetch_row()[0] > 0) {
-            return "Pagamento já cadastrado!";
-        }
-
         $query = "INSERT INTO {$this->tabela} (fotoQRCode, chave, nome_da_conta, conta, agencia) VALUES ('{$this->fotoQRCode}', '{$this->chave}', '{$this->nome_da_conta}', '{$this->conta}', '{$this->agencia}');";
-
-        $resultado = $this->conexao->query($query);
+        return $query;
     }
 
     public function read(){
         $query = "SELECT * FROM {$this->tabela} WHERE id_pagamento = '{$this->id_pagamento}';";
-        $resultado = $this->conexao->query($query);
-        return $resultado;
+        return $query;
     }
 
-    public function update(){
-        $verificaSeExiste = "SELECT COUNT(*) FROM {$this->tabela} WHERE id_pagamento = '{$this->id_pagamento}';";
-        $resultadoVerificacao = $this->conexao->query($verificaSeExiste);
-    
-        if ($resultadoVerificacao && $resultadoVerificacao->fetchColumn() === 0) {
-            return "Pagamento cadastrado não encontrado!";
-        }
-
+    public function update($valores){
         $query = "UPDATE {$this->tabela} SET ";
         $colunasArray = array_keys($valores);
 
@@ -67,13 +41,11 @@ class Pagamento{
         }
 
         $query += "WHERE id_pagamento = {$this->id_pagamento};";
-        $resultado = $this->conexao->query($query);
-        return $resultado;
+        return $query;
     }
 
     public function delete(){
         $query = "DELETE FROM {$this->tabela} WHERE id_pagamento = {$this->id_pagamento};";
-        $resultado = $this->conexao->query($query);
-        return $resultado;
+        return $query;
     }
 }

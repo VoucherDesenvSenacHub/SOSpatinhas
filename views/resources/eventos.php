@@ -34,7 +34,6 @@
         </div>
             
         <div class="row">
-    
             <h1 class="titulo">Eventos</h1>
             <div id="eventosCarrosel">
                 <?php
@@ -43,7 +42,7 @@
                 for ($i = 0; $i < 5; $i++) {
                     ob_start(); 
                     include('../templates/eventosCard.php');
-                    $cardComponents1[] = ob_get_clean();
+                    $cardComponents2[] = ob_get_clean();
                 }
         
                 $cardComponents = $cardComponents2;

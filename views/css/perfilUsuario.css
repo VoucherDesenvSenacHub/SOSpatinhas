@@ -85,6 +85,19 @@ body {
 }
 
 @media (max-width: 425px){
+    body {
+        background-size: 170%;
+        height: auto;
+    }
+
+    .corpo-container {
+        padding: 15px;
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+
+
     #corpocontainer {
         height: 625px;
     }

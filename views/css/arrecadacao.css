@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
+    font-family: 'Inter', sans-serif;
 }
 body{
     background-color: rgb(198, 225, 196);
@@ -9,6 +10,7 @@ body{
     background-size: 50%;
 }
 .container{
+    display: flex;
     max-width: 1500px;
     margin: auto;
     padding: 12px;
@@ -21,3 +23,408 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+#section{
+    display:inline;
+    padding: 30px 0px 30px 0px;
+}
+#sectionfotoEpix{
+    
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    gap: 5rem;
+}
+#sectionfotoEpix h2{
+    font-size: 35px;
+    text-align: left;
+    padding: 0px 0px 10px 15px;
+}
+
+#sectionPix{
+    
+    display: inline;
+}
+
+#localEusuario{
+    display: flex;
+    padding: 5px;
+}
+#nomeAnimal{
+    font-size: 30px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+#userElocal{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+#divLocalUsuario{
+    display: flex;
+}
+.textoLocalUsuario{
+    font-size: 13px;
+}
+
+#pix{
+    
+    display: inline;
+    text-align: center;
+}
+#banco{
+    display: flex;
+    background-color: #E2F8E0;
+    width: 390px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+#numeroBanco{
+    display: flex;
+}
+#infos{
+    display: inline;
+}
+
+#infosConta{
+    display: inline;
+    text-align: left;
+}
+.informacoesPix{
+    font-size: 15px;
+    font-weight: 500;
+}
+#nomeConta{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+#numeroBanco{
+    display: flex;
+    align-items: center;
+}
+#numeroBanco img{
+    width: 15px;
+    height: 15px;
+}
+
+#barraArrecadacao{
+    display: inline;
+}
+#barraArrecadacao img{
+    width: 290px;
+}
+#textoBarra{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#descricaoArrecadacao{
+    flex:3;
+    font-size: 20px;
+    width: 1000px;
+    text-align: justify;
+    padding: 50px 0px 10px 0px;
+}
+
+#descrição{
+    
+    flex-direction: row;
+}
+
+#botaoCompartilhar{
+    padding-top: 15px;
+}
+#compartilharArrecadacao{
+    width: 275px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #44803F;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+#textoCompartilhar{
+    font-size: 9px;
+    font-weight: bold;
+    color: #757575;
+    padding-top: 5px;
+}
+
+/* iamgens */
+.iconeInfo{
+    width: 15px;
+    height: 15px;
+}
+#qrcode{
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+}
+#imagemBanco{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+.fotoArrecadacao {
+    
+    width: 550px;
+    height: 100%;
+    margin: auto;
+    display: block;
+    position: relative;
+}
+
+#slider {
+    position: relative;
+    width: 550px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+#botoesSlider {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 350px;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.botaoTrocarFoto {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.56);
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+.active, .botaoTrocarFoto:hover {
+    background-color: #ffffff;
+}
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+
+@media (max-width: 768px) {
+
+    .corpo{
+        max-width: 743px;
+        
+    }
+
+  
+
+    #sectionfotoEpix {
+        flex-direction: column;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 1rem;
+    }
+
+    #descricaoArrecadacao {
+        order: 3; 
+        margin:0;
+        font-size: 20px;
+        width: 600px; 
+        text-align: justify; 
+        padding: 25px 0px 10px 0px; 
+    }
+    .fotoArrecadacao {
+        order: 2;
+        width: 600px;
+        display: block;
+    }
+
+    #botoesSlider {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: 350px;
+        position: absolute;
+        bottom: 250px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #sectionfotoEpix h2{
+        font-size: 35px;
+        text-align: center;
+        padding: 0px 0px 10px 15px;
+    }
+    
+
+}
+
+
+@media (max-width: 425px) {
+
+
+    .fotoArrecadacao {
+        order: 2;
+        width: 380px;
+        display: block;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    .container {
+        
+        flex-direction: column; 
+        max-width: 425px; 
+        margin: 0; 
+        padding: 1px; 
+        display: flex;
+    }
+
+    .corpo {
+        margin:0;
+        max-width: 423px;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        display: flex; 
+        text-align: center; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    #titulo h2 {
+        order: 1; 
+        width: auto;
+    }
+
+    #descricaoArrecadacao {
+        order: 3; 
+        margin:0;
+        font-size: 20px;
+        width: 350px; 
+        text-align: justify; 
+        padding: 25px 0px 10px 20px; 
+    }
+
+    #sectionPix {
+        order: 4; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    #botoesSlider {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: 350px;
+        position: absolute;
+        bottom: 420px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    
+
+    #banco {
+        order: 4; 
+        width: 380px; 
+        padding: 10px; 
+    }
+
+    #numeroBanco img {
+        width: 35px; 
+        height: 35px; 
+        padding: 10px; 
+    }
+
+    #userElocal {
+        display: flex; 
+        gap: 0.5rem; 
+        flex-direction: column; 
+    }
+
+    #localEusuario {
+        display: flex; 
+        flex-direction: column; 
+        padding: 15px; 
+        justify-content: flex-start; 
+    }
+
+    #nomeAnimal {
+        font-size: 20px; 
+        padding-right: 20px; 
+        text-align: left; 
+        padding: 10px; 
+    }
+
+    #outraDiv, #maisUmaDiv {
+        text-align: left; 
+    }
+
+    #slider {
+        position: relative;
+        width: 380px;
+        margin: 1px; 
+        padding: 10px; 
+        padding-left: 1%; 
+    }
+
+    .slide {
+        display: block; 
+    }
+
+    #section {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+
+    #sectionfotoEpix {
+        flex-direction: column;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 1rem;
+    }
+
+    #sectionfotoEpix h2 {
+        font-size: 20px; 
+        text-align: center; 
+        padding: 0px 0px 10px 15px; 
+    }
+
+    #pix {
+        display: inline; 
+        text-align: center; 
+        width: 400px; 
+    }
+}
+
+
+

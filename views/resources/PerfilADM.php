@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "Eventos": "listaEventosADM.php",
             "Arrecadação": "listaArrecadacoesADM.php",
             "Membros": "listademembrosadm.php",
-            "Usuário": "usuarios.php",
-            "Editar Formulário": "editar_formulario.php"
+            "Usuário": "listaUsuariosADM.php",
+            "Editar Formulário": "formAdocao.php"
         };
 
         document.querySelectorAll(".buttons button").forEach(button => {

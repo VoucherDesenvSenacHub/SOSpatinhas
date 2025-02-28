@@ -1,4 +1,5 @@
 
+
     <style>
         footer{
             text-align: center;
@@ -44,6 +45,7 @@
         }
     </style>
 
+
     <footer>
         <a class="footer-logo" href="./paginaInicio.php">
             <img src="../images/Logo_Footer.png" width="201" height="111" alt="">
@@ -54,23 +56,24 @@
             <a href="./comoAjudar.php">Como Ajudar</a>
             <a href="./eventos.php">Eventos</a>
             <a href="./adocao.php">Adoção</a>
-        </ul>  
+        </ul>
 
         <ul class="footer-links-img">
             <a href="#">
-            <img src="../images/facebook_branco.png" alt="" width="25">
+                <img src="../images/facebook_branco.png" alt="" width="25">
             </a>
             <a href="#">
                 <img src="../images/instagram_branco.png" alt="" width="25">
             </a>
         </ul>
-        
+
         <ul class="footer-links-bottom">
             <a href="#">Acessibilidade</a>
             <a href="#">Política de Privacidade</a>
             <a href="#">Termos e Condições</a>
         </ul>
-            
+
     </footer>
 </body>
+
 </html>

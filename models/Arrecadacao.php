@@ -14,6 +14,18 @@ class Arrecadacao{
     public $foto;
     public $pagamento;
 
+
+   
+    public function criarPagamento(){
+        $this->pagamento = new Pagamento($fotoQRCode, $chave, $nome_da_conta, $conta, $agencia);
+        $this->conexao->query($this->criarPagamento());
+    }
+
+    public function getIdArrecadacao($id_arrecadacao) {
+        $query = "SELECT * FROM {$this->tabela} WHERE id = {$id_arrecadacao}";
+
+    }
+
     public function __construct($titulo, $nomeAnimal, $nomeDono, $descricao, $valorArrecadacao, $valorArrecadado, $foto, $infosPagamento) {
         $this->titulo = $titulo;
         $this->nomeAnimal = $nomeAnimal;
@@ -25,6 +37,7 @@ class Arrecadacao{
         $this->pagamento = new Pagamento($infosPagamento);
     }
     
+
     public function create() {
         $query = "INSERT INTO {$this->tabela} (titulo, nomeAnimal, nomeDono, descricao, valorArrecadacao, valorArrecadado, foto, id_pagamento) VALUES ('{$this->titulo}', '{$this->nomeAnimal}', '{$this->nomeDono}', '{$this->descricao}', '{$this->valorArrecadacao}', '{$this->valorArrecadado}', '{$this->foto}', '{$this->pagamento->id_pagamento}');";
         return $query;

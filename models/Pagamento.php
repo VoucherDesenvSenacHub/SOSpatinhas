@@ -10,6 +10,7 @@ class Pagamento{
     public $conta;
     public $agencia;
 
+
     public function __construct($infosPagamento) {
        $this->fotoQRCode = $infosPagamento['fotoQRCode'];
        $this->chave = $infosPagamento['chave'];

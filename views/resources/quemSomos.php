@@ -147,7 +147,7 @@
 
     <!-- Seção de Parceiros -->
         <div class="title-container">
-          <h2>Nossos Parceiros</h2>
+          <h1>Nossos Parceiros</h1>
         </div>
         <div class="carousel-container">
           <button class="carousel-button prev" id="partner-prev">❮</button>
@@ -155,21 +155,15 @@
             <!-- Slides dos parceiros -->
             <div class="partner-card">
               <img src="../images/Abrigo dos Bichos.png" alt="Parceiro 1">
-              <div class="partner-content">
-                <div class="partner-title">Parceiro 1</div>
-              </div>
+              <div class="partner-content"></div>
             </div>
             <div class="partner-card">
               <img src="../images/amigo.png" alt="Parceiro 2">
-              <div class="partner-content">
-                <div class="partner-title">Parceiro 2</div>
-              </div>
+              <div class="partner-content"></div>
             </div>
             <div class="partner-card">
               <img src="../images/cão.png" alt="Parceiro 3">
-              <div class="partner-content">
-                <div class="partner-title">Parceiro 3</div>
-              </div>
+              <div class="partner-content"></div>
             </div>
           </div>
           <button class="carousel-button next" id="partner-next">❯</button>

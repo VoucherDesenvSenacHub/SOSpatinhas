@@ -58,7 +58,6 @@ body {
 .title-container::before,
 .title-container::after {
     content: "";
-    position: absolute;
     width: 470px;
     height: 3px;
     background-color: green;
@@ -183,13 +182,6 @@ h1 {
     padding: 15px;
 }
 
-.partner-title {
-    font-size: 1.5rem; 
-    font-weight: bold;
-    color: #333;
-    margin-top: 15px;
-}
-
 /* Carousel */
 .carousel {
     position: relative; 
@@ -298,8 +290,13 @@ h1 {
     
    
     .carousel-container {
-        width: 90%;
+        position: relative;
+        width: 80%; 
+        overflow: hidden; 
+        margin: auto;
     }
+    
+
     .carousel-item {
         height: 250px;
     }
@@ -316,15 +313,23 @@ h1 {
     /* Tamanhos dos títulos */
     h1 {
         font-size: 24px;
-    }
+    }           
     .title-container h1,
     .title-container h2 {
         font-size: 1.5rem;
-        padding: 0 5px;
+        padding: 0 5px; 
     }
     .title-container::before,
     .title-container::after {
         width: 25%;
+        padding: 0px 60px 0px 60px; 
+    }
+    /* Parceiros: layout lado a lado */
+    .partner-cards {
+        flex-direction: row; /* exibe os cards lado a lado */
+        gap: 15px;
+        padding: 0 10px;
+        overflow-x: auto; /* permite scroll horizontal se necessário */
     }
 
     /* Grid de Cards: 1 coluna com cards maiores */
@@ -337,13 +342,6 @@ h1 {
         min-height: 250px; /* aumenta a altura mínima para que os cards pareçam maiores */
     }
     
-    /* Parceiros: layout lado a lado */
-    .partner-cards {
-        flex-direction: row; /* exibe os cards lado a lado */
-        gap: 15px;
-        padding: 0 10px;
-        overflow-x: auto; /* permite scroll horizontal se necessário */
-    }
     .partner-card {
         width: 48%; /* exibe dois cards por linha */
     }

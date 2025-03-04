@@ -20,6 +20,7 @@ body{
     height: 100px;
     width: auto;
     padding-right: 100px;
+    margin-right: 100px;
 }
 
 nav{
@@ -29,6 +30,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-right: 200px;
 }
 nav ul{
     padding-left: 50px;

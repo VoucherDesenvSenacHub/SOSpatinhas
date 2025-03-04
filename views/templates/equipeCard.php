@@ -1,5 +1,5 @@
-<div id="cardIntegranteEquipe">
-    <img src="../images/emanuel.png" alt="Integrante da equipe">
+<div class="cardIntegranteEquipe">
+    <img src="../images/sophia.png" alt="Integrante da equipe">
     <div id="nomeIntegrante">Emanuel Barros</div>
 </div>
 
@@ -21,7 +21,7 @@
 #nomeIntegrante {
     font-size: 18px;  
     font-weight: 700;
-    color: #333;
+    color: black;
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
     text-align: center;

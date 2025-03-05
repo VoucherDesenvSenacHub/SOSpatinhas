@@ -98,8 +98,13 @@ h2 {
 
 @media (max-width: 425px) {
     /* criei um display none para a section desktop sumir caso é convertido para a resolução do mobile. */ 
+    body{
+        background-size: 100%;
+    } 
+    
     .corpo{
         display: none;
+
     }
     /* aqui o display flex "ativa" a section do mobile. */
     .corpo-mobile{

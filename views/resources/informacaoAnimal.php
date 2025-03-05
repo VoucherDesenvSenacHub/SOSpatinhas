@@ -15,17 +15,20 @@
       Voltar
     </a>
     <div class="profile">
+     
       <div class="profile-images">
         <img src="../images/rochele.png" 
              alt="rochele 1 " class="main-image">
+
         <div class="gallery">
-          <img src="../images/rochele.png" 
+          <img src="../images/amigo.png" 
                alt="rochele 2" class="gallery-img">
-          <img src="../images/rochele.png" 
+          <img src="../images/anna.png" 
                alt="rochele 3 " class="gallery-img">
           <img src="../images/rochele.png" 
                alt="rochele 4" class="gallery-img">
         </div>
+
       </div>
       <div class="profile-details">
         <h1>Rochele</h1>
@@ -57,49 +60,38 @@
   <?php include('../templates/footerUser.php')?>
 
   <script>
-document.addEventListener("DOMContentLoaded", function() {
-  
-  const backLink = document.querySelector(".back-link");
-  if (backLink) {
-    backLink.addEventListener("click", function(event) {
-      event.preventDefault();
-      window.location.href = "../resources/blog.php";
-    });
-  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const backLink = document.querySelector(".back-link");
+    if (backLink) {
+      backLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location.href = "../resources/blog.php";
+      });
+    }
 
-  
-  const adoptBtn = document.querySelector(".adopt-btn");
-  if (adoptBtn) {
-    adoptBtn.addEventListener("click", function() {
-      window.location.href = "../resources/adocao.php";
-    });
-  }
+    const adoptBtn = document.querySelector(".adopt-btn");
+    if (adoptBtn) {
+      adoptBtn.addEventListener("click", () => {
+        window.location.href = "../resources/adocao.php";
+      });
+    }
 
-//seleciona todas as imgs da gallery
-  const galleryImages = document.querySelectorAll(".gallery-img");
-  //pegando a img principal
-  const mainProductImage = document.getElementById("main-product-image") || document.querySelector(".main-image");
+    // Seleciona todas as mini imgs da galeria
+    const galleryImages = document.querySelectorAll(".gallery-img");
+    // Seleciona a img principal pela class
+    const mainProductImage = document.querySelector(".main-image");
 
-  //atualiza a img principal para a url transform
-  galleryImages.forEach(function(img) {
-    img.addEventListener("click", function() {
-      const newSrc = transformarParaRelativo(img.src);
-      mainProductImage.src = newSrc;
+    // Verifica se a img principal 
+    if (!mainProductImage) return;
+
+    // Ao clicar em qualquer mini img substitui a img principal
+    galleryImages.forEach((img) => {
+      img.addEventListener("click", () => {
+        // Se quiser só trocar direto sem converter URl
+        mainProductImage.src = img.src;
+      });
     });
   });
-
-  // Function para transofrmar url 
-  function transformarParaRelativo(url) {
-    if (url.startsWith("http")) {
-      let partes = url.split('/');
-      partes.splice(0, 3); 
-      return partes.join('/');
-    }
-    //se a url ja for relativa vai retornar sem alteração abuu
-    return url;
-  }
-});
-//deu certo fecho 
 </script>
 
 </body>

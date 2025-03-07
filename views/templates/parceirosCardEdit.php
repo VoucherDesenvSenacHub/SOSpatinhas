@@ -21,6 +21,7 @@
     width: 90%;
     height: auto;
     object-fit: cover;
+    
 }
 
 #btn {

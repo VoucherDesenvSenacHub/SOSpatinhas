@@ -1,20 +1,23 @@
-<div id="parceirosCard">
+<div class="parceirosCard">
     <img src="../images/Cão.png" alt="Imagem dos nossos parceiros">
 </div>
 
 <style>
-#parceirosCard{
-    position: relative;
-    width: 400px; 
-    height: 300px; 
-    border-radius: 15px; 
+.parceirosCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    max-width: 100%;
+    border-radius: 15px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 15px; 
+    margin-bottom: 80px;
 }
 
-#parceirosCard img{
-    width: 100%;
-    height: 100%;
+.parceirosCard img{
+    width: 90%;
+    height: auto;
     object-fit: cover;
 }
 </style>

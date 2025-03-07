@@ -41,7 +41,7 @@
           <?php
           $cardComponentParceiros = array();
 
-          for ($i = 0; $i < 5; $i++) {
+          for ($i = 0; $i < 3; $i++) {
               ob_start(); 
               include('../templates/parceirosCard.php');
               $cardComponentParceiros[] = ob_get_clean(); 

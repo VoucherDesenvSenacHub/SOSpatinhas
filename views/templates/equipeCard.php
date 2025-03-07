@@ -1,25 +1,28 @@
 <div class="cardIntegranteEquipe">
     <img src="../images/sophia.png" alt="Integrante da equipe">
-    <div id="nomeIntegrante">Emanuel Barros</div>
+    <div id="nomeIntegrante">Sophia Silva</div>
 </div>
 
 <style>
 .cardIntegranteEquipe{
-    position: relative;
-    width: 400px; 
-    height: 300px; 
-    border-radius: 15px; 
-    overflow: hidden; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 15px;
 }
 
 .cardIntegranteEquipe img{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: auto;
     object-fit: cover;
+    border-radius: 15px; 
 }
 
 #nomeIntegrante {
-    font-size: 18px;  
+    font-size: 23px;  
     font-weight: 700;
     color: black;
     margin-top: 10px;

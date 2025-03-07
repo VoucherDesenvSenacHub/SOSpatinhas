@@ -7,6 +7,8 @@ class Banco{
         if ($this->conexao->connect_error) {
             die("Connection failed: " . $this->conexao->connect_error);
         }
+        $resultado = $this->conexao->query($query);
+        return $resultado->fetch_all(MYSQLI_ASSOC);    
     }
 
 

@@ -8,6 +8,7 @@ body{
   background-color: rgb(198, 225, 196);
   background-image: url("../images/Patinhas.png");
   background-size: 50%;
+
   font-family: Arial, sans-serif;
 }
 
@@ -220,7 +221,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
 body{
   background-size: 90%;
 }

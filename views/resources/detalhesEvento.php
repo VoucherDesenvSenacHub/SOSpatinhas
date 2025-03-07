@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes Evento</title>
     <link rel="stylesheet" href="../css/detalhesEvento.css">
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 </head>
 <body>
     <?php include('../templates/navbarUser.php')?>
@@ -29,9 +29,9 @@
             </div>
     
             <div class="btn-slide">
-            <span class="botao" onclick="OutroSlide(1)" > </span>
-            <span class="botao" onclick="OutroSlide(2)" > </span>
-            <span class="botao" onclick="OutroSlide(3)" > </span>
+              <span class="botao" onclick="OutroSlide(1)" > </span>
+              <span class="botao" onclick="OutroSlide(2)" > </span>
+              <span class="botao" onclick="OutroSlide(3)" > </span>
             </div>
 
             <div class="localEvento">
@@ -42,14 +42,32 @@
           </div>
     
           <div class="event-details">
-              <h1>Feira do Auau</h1>
-              <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
-              <button>Compartilhar</button>
+            <h1>Feira do Auau</h1>
+            <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
+            <button>Compartilhar</button>
           </div>
           
         </div>
           
-        <div class="carousel-container"></div>
+        <div class="carrossel-container">
+          <h1 class="titulo">Outros Eventos</h1>
+          <div id="eventosCarrosel">
+            <?php
+            $cardComponents2 = array();
+
+            for ($i = 0; $i < 5; $i++) {
+                ob_start(); 
+                include('../templates/eventosCard.php');
+                $cardComponents2[] = ob_get_clean();
+            }
+    
+            $cardComponents = $cardComponents2;
+            $carouselId = 'carousel2';
+            @include('../templates/carossel.php');
+            ?>
+          </div>
+        </div>
+      </div>
 
     </section>
 

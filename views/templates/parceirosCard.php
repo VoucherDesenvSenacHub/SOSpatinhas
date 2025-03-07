@@ -11,7 +11,7 @@
     max-width: 100%;
     border-radius: 15px; 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 15px; 
+    margin: 15px;
 }
 
 .parceirosCard img{

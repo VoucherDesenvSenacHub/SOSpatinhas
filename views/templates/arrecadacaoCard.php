@@ -16,16 +16,19 @@
 
 <style>
 #card-arrecadacao {
-    position: relative;
-    width: 400px; 
-    height: 300px; 
-    border-radius: 15px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     overflow: hidden; 
+    max-width: 100%; 
+    border-radius: 15px; 
+    position: relative;
+    margin: 50;
 }
 
 #card-arrecadacao img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -35,10 +38,9 @@
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    padding: 20px;
+    padding: 24px;
     text-align: center;
     width: 100%;
-    
 }
 
 #titulo-barra{
@@ -74,6 +76,7 @@
 
 #meta{
     margin: 0 10px 0 10px;
+    font-weight: 700;
 }
 
 .button-card{

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/cadastrarEventos-ADM.css">
 </head>
 <body>
-    <?php include('../templates/navbarUser.php')?>
+<?php include('../templates/navbarAdm.php'); ?>
 
     <section class="corpo container">
         <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
@@ -81,7 +81,7 @@
         }
     </script>
 
-    <?php include('../templates/footerUser.php')?>
+<?php include_once "../templates/footerAdm.php"; ?>
 </body>
 </html>
 

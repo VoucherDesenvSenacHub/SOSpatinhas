@@ -49,12 +49,22 @@ body{
     align-items: center;
 }
 
+.btnEditar, .btnEditarM{
+    position: absolute;
+    cursor: pointer;
+    right: 1rem;
+    top: -25px;
+    width: 4rem;
+}
+
 .principal {
     width: 65%;
     margin-right: 20px;
+    margin: 3rem 0;
 }
  
 .grandin {
+    position: relative;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -64,6 +74,7 @@ body{
 }
  
 .ladin {
+    position: relative;
     text-align: center;
 }
  
@@ -132,6 +143,10 @@ h2 {
     #maus_tratos {
         margin-bottom: 20px;
     }
+    .btnEditar{
+        width: 4rem;
+        right: -1rem;
+    }
 }
 
 @media (max-width: 425px) {
@@ -177,5 +192,10 @@ h2 {
     #pit, #maus_tratos, #tatu {
         margin-top: 50px;
         transition: margin-top 0.3s ease;
+    }
+
+    .btnEditar, .btnEditarM{
+        width: 3rem !important;
+        right: 0rem !important;
     }
 }

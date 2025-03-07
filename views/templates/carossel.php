@@ -15,8 +15,8 @@
         }
         ?>
     </div>
-    <button class="prev"><p class="seta">‹</p></button>
-    <button class="next"><p class="seta">›</p></button>
+    <button class="prev"><p class="seta" id="setaPrev">‹</p></button>
+    <button class="next"><p class="seta" id="setaNext">›</p></button>
 </div>
 
 <script>
@@ -102,17 +102,22 @@
         align-items: center;
         z-index: 2;
     }
-
     .seta{
         margin: 0 0.2rem 0.5rem 0;
     }
-
     .prev {
         left: 10px; 
     }
-
     .next {
         right: 10px; 
+    }
+    #setaPrev{
+        position: relative;
+        left: 2px;
+    }
+    #setaNext{
+        position: relative;
+        left: 4px;
     }
 
     @media (max-width: 1024px) {

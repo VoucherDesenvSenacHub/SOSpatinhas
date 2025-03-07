@@ -45,7 +45,6 @@
   .main-image {
     width: 100%;
     max-width: 300px;
-    border: 4px solid #3b82f6; 
     margin-bottom: 16px;
   }
   
@@ -66,7 +65,7 @@
   .profile-details h1 {
     font-size: 2.25rem;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: -15px;
   }
   
   .submitted-by {
@@ -162,9 +161,6 @@
     .gallery {
       flex-wrap: wrap;
     }
-    .gallery-img {
-      width: calc(50% - 4px);
-      margin-bottom: 8px;
-    }
+
   }
   

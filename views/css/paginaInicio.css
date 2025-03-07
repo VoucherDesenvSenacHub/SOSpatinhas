@@ -3,6 +3,7 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 body{
     background-color: #44803f;
@@ -70,7 +71,7 @@ nav ul{
 }
 
 #slider img {
-    height: 450px;
+    height: 675px;
     width: 100%;
     object-fit: cover;
     display: block;
@@ -88,14 +89,13 @@ nav ul{
         color: white;
         padding: 10px;
         border-radius: 6px;
-        font-family: 'Inter', 'serif';
+        font-size: 24px;
     }
 }
 
 .textcard {
     color: white;
     font-weight: 600;
-    font-family: 'Inter', 'serif';
 }
 
 /* Baner ira sumir no desktop */

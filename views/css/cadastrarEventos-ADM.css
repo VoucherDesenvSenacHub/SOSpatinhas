@@ -33,6 +33,8 @@ body {
     width: 90%;
     padding: 20px;
     column-gap: 20rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .col1, .col2 {

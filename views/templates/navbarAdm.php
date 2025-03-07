@@ -111,7 +111,7 @@
 
     <nav class="navbar">
         <a class="navbar-logo" href="./editarPaginaInicio.php">
-            <img src="../images/profileADM.png" alt="Logo">
+            <img src="../images/Logo_Navbar.png" alt="Logo">
         </a>
 
         <ul class="nav-links">
@@ -130,7 +130,7 @@
             </div>
 
             <a class="navbar-logo" href="#">
-                <img src="../images/iconeADM.png" alt="Login">
+                <img src="../images/profileADM.png" alt="Login">
             </a>
         </div>
     </nav>

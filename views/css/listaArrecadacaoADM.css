@@ -236,11 +236,19 @@ h1 {
         display: block;
         margin: 0 2% auto;
     }
+    .botao-add{
+       
+        position:fixed;
+    }
 }
 
 @media (max-width: 1050px) {
     .arrecadacao {
         padding: 10px;
+    }
+    .botao-add{
+       
+        position:fixed;
     }
 }
 @media (max-width: 950px) {
@@ -264,19 +272,33 @@ h1 {
     .botao-add-container-mobile {
         margin: 0;
     }
+    .botao-add{
+       
+        position:fixed;
+    }
 }
 
 @media (max-width: 768px) {
     .pesquisar {
         width: 80vw;
     }
+    .botao-add{
+       
+        position:fixed;
+    }
+
 }
 
 @media (max-width: 680px) {
     .lista-arrecadacoes {
         grid-template-columns: repeat(1, 1fr);
     }
+    .botao-add{
+       
+        position:fixed;
+    }
 }
+
 
 @media (max-width: 470px) {
     .pesquisar {
@@ -285,5 +307,9 @@ h1 {
     .pesquisar input {
         width: 69vw;
         padding: 5px 15px 5px 53px;
+    }
+    .botao-add{
+       
+        position:fixed;
     }
 }

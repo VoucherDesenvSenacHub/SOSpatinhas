@@ -110,14 +110,14 @@
 <body>
 
     <nav class="navbar">
-        <a class="navbar-logo" href="./paginaInicio.php">
-            <img src="../images/Logo_Navbar.png" alt="Logo">
+        <a class="navbar-logo" href="./editarPaginaInicio.php">
+            <img src="../images/profileADM.png" alt="Logo">
         </a>
 
         <ul class="nav-links">
-            <a href="./blog.php">Blog</a>
-            <a href="./quemSomos.php">Quem Somos</a>
-            <a href="./comoAjudar.php">Como Ajudar</a>
+            <a href="./blogEditar.php">Blog</a>
+            <a href="./quemSomosEditaveis.php">Quem Somos</a>
+            <a href="./comoAjudarEditavel.php">Como Ajudar</a>
             <a href="./eventos.php">Eventos</a>
             <a href="./adocao.php">Adoção</a>
         </ul>
@@ -136,11 +136,11 @@
     </nav>
 
     <div class="mobile-menu">
-        <a href="./blog.php">Blog</a>
-        <a href="./quemSomos.php">Quem Somos</a>
-        <a href="./comoAjudar.php">Como Ajudar</a>
-        <a href="./adocao.php">Adoção</a>
+        <a href="./blogEditar.php">Blog</a>
+        <a href="./quemSomosEditaveis.php">Quem Somos</a>
+        <a href="./comoAjudarEditavel.php">Como Ajudar</a>
         <a href="./eventos.php">Eventos</a>
+        <a href="./adocao.php">Adoção</a>
     </div>
 
     <script>

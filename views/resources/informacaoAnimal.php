@@ -21,9 +21,9 @@
              alt="rochele 1 " class="main-image">
 
         <div class="gallery">
-          <img src="../images/amigo.png" 
+          <img src="../images/rochele.png" 
                alt="rochele 2" class="gallery-img">
-          <img src="../images/anna.png" 
+          <img src="../images/rochele.png" 
                alt="rochele 3 " class="gallery-img">
           <img src="../images/rochele.png" 
                alt="rochele 4" class="gallery-img">
@@ -65,14 +65,14 @@
     if (backLink) {
       backLink.addEventListener("click", (event) => {
         event.preventDefault();
-        window.location.href = "../resources/blog.php";
+        window.location.href = "../resources/adocao.php";
       });
     }
 
     const adoptBtn = document.querySelector(".adopt-btn");
     if (adoptBtn) {
       adoptBtn.addEventListener("click", () => {
-        window.location.href = "../resources/adocao.php";
+        window.location.href = "../resources/formAdocao.php";
       });
     }
 

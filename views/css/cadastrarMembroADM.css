@@ -16,7 +16,7 @@ body {
     max-width: 1500px;
     margin: 0 auto;
     background-color: #fff;
-    width: 100%;
+    width: 90%;
     height:522px;
     display: flex;
     flex-direction: column;
@@ -106,8 +106,13 @@ body {
 }
 
 @media (max-width: 768px){
+
+    body{
+        background-size: 70%;
+    }
     #corpocontainer {
-        height: 750px;
+        height: 800px;
+        width: 87%;
     }
 
     #contentEditarPerfil{
@@ -116,12 +121,25 @@ body {
 }
 
 @media (max-width: 425px){
+
+    body{
+        background-size: 100%;
+    }
+
     #corpocontainer {
-        height:  750px;
+        height:  800px;
     }
 
     #contentEditarPerfil{
         flex-direction: column;
+    }
+
+    #formEditarPerfilMembro{
+        margin-top: 40px;
+    }
+
+    #divButtons {
+        margin-bottom: 40px;
     }
 
     .inputPerfil{

@@ -180,42 +180,6 @@ height: 23px;
 }
 }
 
-/* Responsividade para Tablet (768px) */
-@media (max-width: 768px) {
-
-.infoDestaque {
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;
-}
-.infoDestaque > div {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.infoPixECards {
-  flex-direction: column;
-  height: auto;
-  padding: 40px 20px;
-}
-.infoValores,
-.cards {
-  margin: 0 auto;
-}
-.cards .card {
-  width: 45%; 
-  margin: 10px;
-}
-
-#imgQr{
-  width: 247px;
-  height: 232px;
-  margin-top: 30px;
-  left: 20px;
-
-}
-}
-
 /*responsividade celular */
 @media (max-width: 425px) {
 
@@ -239,6 +203,7 @@ body {
   padding: 30px 15px;
   height: auto;
 }
+
 .infoValores,
 .cards {
   max-width: 100%;
@@ -255,124 +220,50 @@ body {
 }
 }
 
-
-=======
-}
-.container{
-  max-width: 1500px;
-  margin: auto;
-  padding: 12px;
-}
-.corpo{
-  background-color: rgb(255, 255, 255);
-  width: 1500px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 768px) {
+body{
+  background-size: 90%;
 }
 
-#pixEValores{
-  display: flex;
-  flex-direction: row;
-}
-
-.pontoArrecadacao{
-  display: flex;
-  background-color: rgb(68, 128, 63);
-  color: #fff;
-  column-gap: 6rem;
-  width: 1500px;
-}
-
-.imagemEndereco{
-  margin-left: 6rem;
-}
-
-.pontoArrecadacaoText{
-  margin-right: 6rem;
-}
-
-/* 
-  
-  h1, h2, h3 {
+  .infoDestaque {
+    flex-direction: column;
     text-align: center;
-    margin-bottom: 10px;
+    padding: 20px;
   }
-  
-  p {
-    text-align: center;
+  .infoDestaque > div {
+    width: 100%;
     margin-bottom: 20px;
   }
   
-  .pontoArrecadacao {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 0;
-  }
-  
-  /* incluir a imagem do cavalo*/
-  .pontoArrecadacao img {
-    width: 400px; 
+  .infoPixECards {
+    flex-direction: column;
     height: auto;
+    padding: 40px 20px;
   }
-
-
-  .valoresEPix{
-    padding: 40px 0;
-
-    background-color: #fff;
-  }
-
-  .pontoArrecadacaoText {
-    text-align: left;
-  }
-
+  .infoValores,
   .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    margin: 0 auto;
+  }
+  .cards .card {
+    width: 45%; 
+    margin: 10px;
   }
   
-  .card {
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 50%;
-    float: left; 
-    max-width: 100px; 
-    margin-right: 15px; 
-
-  }
+  .qrCode h2 {
+    font-size: 17px;
+    }
+    
+  .qrCode{
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+    }
   
-  .card img {
-    width: 60px;
-    height: 60px;
-  }
+  #imgQrCode{
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
   
-  .pix {
-    padding: 40px 0;
   }
-  
-  .qrcode {
-    background-color: rgb(68, 128, 63);
-    width: 329px;
-    margin: auto;
-    height: 310px;
-    border-radius: 8% 3%;
-    text-align: center;
   }
-  
-  .qrcode img {
-    width: 247px;
-    height: 232px;
-    margin-top: 30px;
-  }
-  
-  .info {
-    text-align: center;
-  }
-

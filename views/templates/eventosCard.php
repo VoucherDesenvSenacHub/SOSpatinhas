@@ -1,16 +1,58 @@
-<div class="eventosCard">
+<div class="eventosCard" onclick="window.location.href='detalhesEvento.php'">
     <img src="../images/horto-florestal.png" alt="Feira do Auau">
     <div class="card-info">
-        <h3>Feira do Auau</h3>
-        <p>Feira arrecadativa de moda.</p>
-        
-        <div class="local">
-            <img src="../images/pin_info.png"></img> Campo Grande MS, Horto Florestal
-        </div>
+      <h3>Feira do Auau</h3>
+      <p>Feira arrecadativa de moda.</p>
+      <div class="local">
+          <img src="../images/pin_info.png"></img> Campo Grande MS, Horto Florestal
+      </div>
     </div>
 </div>
+
 <style>
-    .card {
+.eventosCard {
+  position: relative;
+  width: 400px; 
+  height: 450px; 
+  border-radius: 15px; 
+  overflow: hidden; 
+  cursor: pointer;
+}
+
+.eventosCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info{
+  background-color: #44803F;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: larger;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.local{
+  display: flex;
+  align-items: flex-end;
+}
+
+.local img{
+  width: 25px;
+  height: 25px;
+}
+
+    /* .card {
     position: relative;
     flex: 0 0 300px;
     border-radius: 15px;
@@ -54,6 +96,6 @@
     height: 20px; 
     margin-right: 5px; 
     vertical-align: middle;
-  }
+  } */
 
 </style>

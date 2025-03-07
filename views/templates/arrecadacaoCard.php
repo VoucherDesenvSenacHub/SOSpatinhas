@@ -38,6 +38,7 @@
     padding: 20px;
     text-align: center;
     width: 100%;
+    
 }
 
 #titulo-barra{
@@ -49,7 +50,7 @@
 #titulo {
     font-size: 24px;
     color:rgb(255, 255, 255);
-
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #barra-progresso {

@@ -1,55 +1,166 @@
 * {
-    padding: 0;
     margin: 0;
-    border: 0;
-}
-body{
-    background-color: rgb(198, 225, 196);
-    background-image: url("../images/Patinhas.png");
-    background-size: 50%;
-}
-.container{
-    max-width: 1500px;
-    margin: auto;
-    padding: 12px;
-}
-.corpo{
-    background-color: rgb(255, 255, 255);
-    width: 1500px;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.conteudo{
-    display: flex;
-    flex-direction: row;
-}
-
-.sliderFotos{
-    margin-right: 68px;
-}
-
-.imgPrincipal img{
-    height: 375px;
-    width: 393px;
-    margin-bottom: 23px;
-}
-
-.containerMiniaturas{
-    display: flex;
-    flex-direction: row;
-}
-.containerMiniaturas img{
-    height: 75px;
-    width: 75px;
-}
-
-.info{
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+ 
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+ 
+  .back-link {
+    display: inline-block;
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .back-link i {
+    margin-right: 8px;
+  }
+  
+  
+  .profile {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
+    gap: 16px;
+  }
+  
+  .profile-images {
+    flex: 1;
+  }
+  
+  .main-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 16px;
+  }
+  
+  .gallery {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .gallery-img {
+    width: calc(33.33% - 5.33px);
+  }
+  
+ 
+  .profile-details {
+    flex: 2;
+  }
+  
+  .profile-details h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: -15px;
+  }
+  
+  .submitted-by {
+    color: #10b981; 
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  
+  .profile-details h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .profile-details p {
+    margin-bottom: 16px;
+  }
+  
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .tags span {
+    background: #bbf7d0; 
+    color: #065f46;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+  }
+  
+  
+  .adopt-btn {
+    background: #10b981;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .adopt-btn:hover {
+    background: #059669;
+  }
+  
+
+@media (min-width: 768px) {
+    .profile {
+      flex-direction: row;
+      gap: 32px;
+    }
+    .profile-images {
+      width: 33.33%;
+    }
+    .profile-details {
+      width: 66.66%;
+      padding-left: 32px;
+    }
+  }
+  
+ 
+  @media (max-width: 425px) {
+    .container {
+      padding: 8px;
+    }
+    .back-link {
+      font-size: 1rem;
+    }
+    .main-image {
+      max-width: 100%;
+      border-width: 3px;
+    }
+    .profile-details h1 {
+      font-size: 1.75rem;
+    }
+    .profile-details h2 {
+      font-size: 1.25rem;
+    }
+    .submitted-by {
+      font-size: 0.875rem;
+    }
+    .adopt-btn {
+      font-size: 1rem;
+      padding: 6px 12px;
+    }
+    .gallery {
+      flex-wrap: wrap;
+    }
+
+  }
+  

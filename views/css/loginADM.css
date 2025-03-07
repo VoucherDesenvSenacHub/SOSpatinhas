@@ -15,12 +15,12 @@ body{
     justify-content: center;
     align-items: center;
     height: calc(100vh - 431px);
-    margin: 50px 0px;
+    margin: 100px 0px;
 }
 
 .login {
     background-color: white;
-    padding: 50px 40px 50px 40px;
+    padding: 50px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -42,8 +42,12 @@ body{
 
 .buttonLogin {
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    padding: 12px;
+    font-size: 22px;
+    width: 93%;
+    height: 47px;
+    margin-top: 47px;
+    margin-bottom: 21px;
+    padding: 10px;
     background-color: rgb(68, 128, 63);
     color: white;
     border: none;
@@ -57,13 +61,14 @@ body{
     background-color: rgb(56, 105, 52);
 }
 
-.esqLoginSenha{
-    background-color: blue;
-}
+
 
 @media (max-width: 768px){
     body{
         background-size: 100%;
+    }
+    .secao-login{
+        margin: 80px 0px;
     }
 }
 
@@ -72,11 +77,14 @@ body{
         background-size: 150%;
     }
 
-
     .secao-login{
-        margin: 40px;
+        margin: 53px 53px 90px 53px;
     }
     .login{
-        padding: 70px 25px 130px 25px;
+        padding: 40px 25px 65px 25px;
+    }
+    .buttonLogin{
+        margin-top: 35px;
+        margin-bottom: 20px;
     }
 }

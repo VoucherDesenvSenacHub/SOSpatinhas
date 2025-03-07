@@ -19,9 +19,6 @@
                 <form>
                     <input type="email" placeholder="Email">
                     <input type="password" placeholder="Senha">
-                    <button class="esqLoginSenha" type="button" onclick="window.location.href='./loginEsqSenha.php'">
-                        Esqueci a senha
-                    </button>
                     <button class="buttonLogin" type="button" onclick="window.location.href='./PerfilADM.php'">
                         Login
                     </button>

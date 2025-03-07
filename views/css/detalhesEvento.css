@@ -2,27 +2,25 @@
   padding: 0;
   margin: 0;
   border: 0;
+  font-family: "Inter", sans-serif;
 }
 body{
   background-color: rgb(198, 225, 196);
   background-image: url("../images/Patinhas.png");
   background-size: 50%;
-  font-family: 'Inter', sans-serif;
 }
 .container{
   max-width: 1500px;
-  margin: 0 auto;
-  padding: 50px;
-  background-color: #FFFFFF;
+  margin: auto;
+  padding: 12px;
 }
 .corpo{
-  background-color: #ffffff;
-  /* width: 1500px; */
+  background-color: rgb(255, 255, 255);
+  width: 1500px;
   display: flex;
   text-align: center;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  border-radius: 8px;
 }
 
 .conteudo{
@@ -30,14 +28,32 @@ display: flex;
 flex-direction: column;
 }
 
+#eventosCarrosel {
+  width: 80rem; 
+}
+
+.titulo {
+  font-size: 35px;
+  text-align: left;
+  width: 100%; 
+  margin-top: 20px;
+  margin-bottom: 20px; 
+}
+
+.carrossel-container{
+  margin-top: 10rem;
+}
+
 .slideshow-container{
 width: 528px;
 height: 360px;
 display: flex;
-gap: 50px;
+gap: 160px;
 flex-direction: column;
 flex-wrap: wrap;
 padding: 0 0 0 5px;
+margin-top: 3rem;
+margin-bottom: 5rem;
 }
 
 .slide{
@@ -50,8 +66,9 @@ height: 360px;
 }
 
 .EventoSlides{
-width: 528px;
-height: 360px;
+  width: 570px;
+  height: 420px;
+  border-radius: 1rem;
 }
 
 .btn-slide{
@@ -59,22 +76,23 @@ text-align: center;
 display: flex;
 justify-content: center;
 gap: 1rem;
-bottom: 13cm;
+bottom: 26rem;
 width: 528px; 
 position: absolute;
-
 }
 
 .botao{
 cursor: pointer;
 padding: 0;
 margin: 0 2px;
-height: 11px;
-width: 11px;
+height: 15px;
+width: 15px;
 border-radius: 50%;
 display: inline-block;
 background-color: transparent;
-border: 2px solid #ffffff
+border: 2px solid #ffffff;
+box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.5);
+background: rgba(0, 0, 0, 0.5);
 }
 
 .active, .botao:hover{
@@ -103,9 +121,6 @@ width: 15px;
 height: 17.07px;
 }
 
-
-
-
 .event-details {
 text-align: left;
 height: 360px;
@@ -115,16 +130,16 @@ width: 357px;
 .event-details h1 {
 margin-bottom: 10px;
 color: #333;
-font-size: 25px;
-width: 528px;
+font-size: 35px;
+width: 585px;
 }
 
 .event-details p {
   color: #000000;
   margin-top: 35px;
   margin-bottom: 50px;
-  font-size: 15px;
-  width: 357px;
+  font-size: 20px;
+  width: 553px;
   text-align: justify;
 }
 
@@ -136,230 +151,7 @@ width: 528px;
   border-radius: 12px;
   cursor: pointer;
   font-size: 20px;
-
+  display: block;
+  margin: 0 11rem;
 }
 
-.carousel-container {
-  margin-top: 25px;
-  text-align: left;
-}
-
-h2{
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding-left: 35px;
-  width: 1000px;
-}
-
-.carousel-track {
-  transition: transform 0.3s ease-in-out;
-  gap: 35px;
-  /* justify-content: center; */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-
-.carousel-track::-webkit-scrollbar {
-  display: none;
-}
-
-
-.card {
-  position: relative;
-  flex: 0 0 300px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px #0000001a;
-}
-
-.card img {
-  width: 360px;
-  height: 330px;
-  object-fit: cover;
-}
-
-.card-info {
-  position: absolute;
-  bottom: 16px;
-  left: 20px;
-  right: 13px;
-  background: #44803F;
-  color: #fff;
-  padding: 10px;
-  text-align: left;
-}
-
-.card-info h3 {
-  margin: 0 0 5px;
-  font-size: 20px;
-  text-shadow: 2px 2px 4px #0000009a;
-}
-
-.card-info p {
-  margin: 0;
-  font-size: 15px;
-  text-shadow: 0px 4px 4px #0000005d;
-}
-
-.local {
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  text-shadow: 2px 2px 4px #000000b9;
-  align-items: center;
-}
-
-.local img {
-  width: 20px;
-  height: 20px; 
-  margin-right: 5px; 
-  vertical-align: middle;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  z-index: 2;
-}
-
-#carousel-prev {
-  left: 5px;
-  position: absolute;
-}
-
-#carousel-next {
-  right: 1px;
-  position: absolute;
-}
-
-.carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-@media (max-width:1024px) {
-  .btn-slide {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    bottom: 10.6cm;
-    width: 528px;
-    position: absolute;
-  }
-
-  .event-details {
-    text-align: left;
-    height: 360px;
-    width: 295px;
-}
-
-  .event-details h1 {
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 25px;
-    width: 295px;
-}
-
-.event-details p {
-  color: #000000;
-  margin-top: 35px;
-  margin-bottom: 50px;
-  font-size: 15px;
-  width: 295px;
-  text-align: justify;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding-left: 35px;
-  width: 850px;
-}
-}
-
-@media (max-width:768px) {
-  .container {
-    max-width: 615px;
-    margin: 0 auto;
-}
-
-.slideshow-container {
-  width: 528px;
-  height: 360px;
-  display: flex;
-  gap: 2px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 0 0 0 5px;
-}
-
-.slide {
-  width: 528px;
-  height: 360px;
-}
-
-.btn-slide {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  bottom: 12.3cm;
-  width: 400px;
-  position: absolute;
-}
-
-.EventoSlides {
-  width: 400px;
-  height: 300px;
-}
-
-.event-details {
-  text-align: left;
-  height: 360px;
-  width: 295px;
-}
-
-h2 {
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding-left: 35px;
-  width: 570px;
-}
-
-}

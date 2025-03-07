@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Arrecadação</title>
-    <link rel="stylesheet" href="../css/editarArrecadacao-ADM.css">
+    <title>Edição de Eventos</title>
+    <link rel="stylesheet" href="../css/editarEventos-ADM.css">
 </head>
 <body>
     <?php include('../templates/navbarUser.php')?>
@@ -13,23 +13,13 @@
         <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
             <div class="conteudoForm">
                 <div class="col1">
-                    <input type="text" name="titulo" placeholder="Titulo da Arrecadaçãp" required>
-                    <input type="text" name="nameAnimal" placeholder="Nome do Animal" required>
+                    <input type="text" name="name" placeholder="Nome do Evento" required>
                     <textarea name="descricao" placeholder="Descrição" required></textarea>
-                    <input type="text" name="nameUser" placeholder="Nome do Usuário" required>
-                    <input type="text" name="valorInicio" placeholder="Valor da Arrecadação" required>
-                    <input type="text" name="valorAtual" placeholder="Valor Arrecadado" required>
+                    <input type="text" name="cidadeEstado" placeholder="Cidade/Estado" required>
+                    <input type="text" name="local" placeholder="Local" required>
                 </div>
     
                 <div class="col2">
-                    <input type="text" name="nmConta" placeholder="Nome da Conta" required>
-                    <input type="text" name="nuConta" placeholder="Número da Conta" required>
-                    <input type="text" name="nuAgencia" placeholder="Número da Agência" required>
-                    <div class="QRCode-container">
-                        <input type="file" name="qrCodePix" id="qrCodePix" onchange="updateFileName()" />
-                        <label for="qrCodePix" id="qrCodeLabel">Enviar QR Code</label>
-                        <p id="qrCodeArquivo">Nenhum arquivo selecionado</p>
-                    </div>
                     <div class="upload-container">
                         <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                         <label for="image" id="imgLabel" class="upload-box">
@@ -49,20 +39,6 @@
     </section>
 
     <script>
-        function updateFileName() {
-            const input = document.getElementById("qrCodePix");
-            const label = document.getElementById("qrCodeLabel");
-            const fileNameText = document.getElementById("qrCodeArquivo");
-
-            if (input.files.length > 0) {
-                label.textContent = "Arquivo Selecionado";
-                fileNameText.textContent = input.files[0].name;
-            } else {
-                label.textContent = "Enviar QR Code";
-                fileNameText.textContent = "Nenhum arquivo selecionado";
-            }
-        }
-
         document.getElementById('image').addEventListener('change', function (event) {
             const filePreview = document.getElementById('filePreview');
             filePreview.innerHTML = ""; 
@@ -101,7 +77,7 @@
 
         function resetERedirect(){
             document.getElementById('frmCadastroAdocao').reset();
-            window.location.href = "listaArrecadacoesADM.php";
+            window.location.href = "listaEventosADM.php";
         }
     </script>
 
@@ -115,50 +91,31 @@ $banco = new Banco();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-        $titulo = $_POST['titulo'] ?? null;
-        $nameAnimal = $_POST['nameAnimal'] ?? null;
+        $name = $_POST['name'] ?? null;
         $descricao = $_POST['descricao'] ?? null;
-        $nameUser = $_POST['nameUser'] ?? null;
-        $valorInicio = $_POST['valorInicio'] ?? null;
-        $valorAtual = $_POST['valorAtual'] ?? null;
-        $nmConta = $_POST['nmConta'] ?? null;
-        $nuConta = $_POST['nuConta'] ?? null;
-        $nuAgencia = $_POST['nuAgencia'] ?? null;
-
-        $insert1 = "INSERT INTO arrecadacao (titulo, nomeAnimal, descricao, nomeDono, valorArrecadaco, valorArrecadado, nmConta, nuConta, nuAgencia) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        $query1 = $banco->prepare($insert1);
-        $query1->bind_param("ssssss", $titulo, $nameAnimal, $descricao, $nameUser, $valorInicio, $valorAtual, $nmConta, $nuConta, $nuAgencia);
-        $query1->execute();
-
-        $id_animal = $banco->pegaUltimoIdInserido();
+        $cidadeEstado = $_POST['cidadeEstado'];
+        $local = $_POST['local'];
         $target_dir = "uploads/";
-
-        if (!empty($_FILES["qrCodePix"]["name"])) {
-            $nomeQrCode = basename($_FILES["qrCodePix"]["name"]);
-            $target_qr = $target_dir . $id_animal . "_qr_" . $nomeQrCode;
-
-            if (move_uploaded_file($_FILES["qrCodePix"]["tmp_name"], $target_qr)) {
-                $sqlQr = "INSERT INTO foto (id_animal, tipo_table, caminho_foto) VALUES (?, ?, ?)";
-                $queryQr = $banco->prepare($sqlQr);
-                $queryQr->bind_param("iss", $id_animal, $tipo_table = "qrCodePix", $target_qr);
-                $queryQr->execute();
-            } else {
-                throw new Exception("Erro ao enviar QR Code.");
-            }
-        }
-
+        
+        $insert1 = "INSERT INTO evento (nome, descricao, cidade_estado, endereco) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $query1 = $banco->prepare($insert1);
+        $query1->bind_param("ssssssss", $name, $descricao, $cidadeEstado, $local);
+        $query1->execute();
+        
+        $id_evento = $banco->pegaUltimoIdInserido();
+        
         if (!empty($_FILES["image"]["name"][0])) { 
             $totalFiles = count($_FILES["image"]["name"]);
-
+            
             for ($i = 0; $i < $totalFiles; $i++) {
                 $nomeImagem = basename($_FILES["image"]["name"][$i]);
-                $target_file = $target_dir . $id_animal . "_" . $nomeImagem;
-
+                $target_file = $target_dir . $id_evento . "_" . $nomeImagem;
+                
                 if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
-                    $sql2 = "INSERT INTO foto (id_animal, tipo_table, caminho_foto) VALUES (?, ?, ?)";
+                    $sql2 = "INSERT INTO foto (id_evento, tipo_table,caminho_foto) VALUES (?, ?, ?)";
                     $query2 = $banco->prepare($sql2);
-                    $query2->bind_param("iss", $id_animal, $tipo_table = "arrecadacao", $target_file);
+                    $query2->bind_param("iss", $id_evento, "eventos", $target_file);
                     $query2->execute();
                 } else {
                     throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);

@@ -18,6 +18,7 @@ body {
 
 
 .container {
+
     max-width: 1500px;
     margin: 0 auto;
     padding: 20px;
@@ -26,13 +27,12 @@ body {
 
 .corpo {
     background-color: #fff;
-    width: 100%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -120,13 +120,24 @@ button:focus {
 
 
 @media (max-width: 768px) {
+    body{
+        background-size: 80%;
+    }
+
     .container {
         padding: 10px;
     }
 
     .buttons {
         grid-template-columns: 1fr 1fr; 
+        gap: 30px;
+        width: 77%;
+        margin-bottom: 30px;
     }
+
+    .buttons button {
+        font-size: 17px; 
+        }
 
     .adm_foto img {
         width:100x;
@@ -145,4 +156,35 @@ button:focus {
         font-size: 16px;
         padding: 16px 35px;
     }
+}
+
+@media (max-width: 425px) {
+    body{
+        background-size: 130%;
+    }
+
+    .corpo{
+        width: 87%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .buttons {
+        gap: 20px;
+        width: 90%;
+    }
+
+    button {
+        font-size: 15px; 
+        padding: 10px 25px;
+        }
+    
+    .buttons button {
+        font-size: 14px; 
+        padding: 17px 2px;
+        height: auto;
+        }
+    
 }

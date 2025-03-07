@@ -238,10 +238,11 @@ h1 {
             }
     }
     .botao-add-container{
-        display: block;
-        grid-column: 1 / -1; /* Faz a última ocupar toda a largura */
-        order: 1;
-        position: static;
+        /* display: block;
+        grid-column: 1 / -1; Faz a última ocupar toda a largura */
+        /* order: 1; */
+        position: fixed;
+        bottom: 0;
     }
 }
 @media (max-width: 425px) {

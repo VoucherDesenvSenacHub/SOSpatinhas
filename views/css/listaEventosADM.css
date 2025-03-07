@@ -219,9 +219,9 @@ h1 {
     }
     .lista-eventos {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        position: relative;
+        /* position: relative; */
         flex-direction: column;
         justify-items: center;
     }
@@ -230,20 +230,21 @@ h1 {
         transition: transform 0.2s;
         border-radius: 10px;
         order: 2;
+        width: 260px;
             & h3{
                 height: 60px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
-    }
-    .botao-add-container{
-        /* display: block;
-        grid-column: 1 / -1; Faz a última ocupar toda a largura */
-        /* order: 1; */
-        position: fixed;
-        bottom: 0;
-    }
+        }
+        .meuJeito{
+            position: relative;
+        }
+        .botao-add-container{
+            position: absolute;
+            left: 260px;
+        }
 }
 @media (max-width: 425px) {
     .pesquisar{
@@ -256,17 +257,21 @@ h1 {
         gap: 20px;
         /* position: relative; */
         flex-direction: column;
-        justify-items: center;
-        
+        justify-items: center;   
     }
+    .meuJeito{
+        position: relative;
+    }
+    .botao-add-container{
+        position: absolute;
+        left: 260px;
+    }
+    
     .evento{
         padding: 20px;
         transition: transform 0.2s;
         border-radius: 10px;
         order: 2;
     }
-    .botao-add-container{
-        order: 1;
-        position: static;
-    }
+    
 }

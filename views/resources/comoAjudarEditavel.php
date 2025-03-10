@@ -11,7 +11,7 @@
 <body>
 
   <?php
-    include('../templates/navbarUser.php');
+    include('../templates/navbarAdm.php');
   ?>
   
   <section class="corpoContainer">
@@ -131,7 +131,7 @@
   </section>
 
   <?php 
-    include('../templates/footerUser.php');
+    include('../templates/footerAdm.php');
   ?>
 
 </body>

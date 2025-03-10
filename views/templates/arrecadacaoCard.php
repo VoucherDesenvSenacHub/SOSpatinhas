@@ -2,7 +2,7 @@
     <img src="../images/eventosImg/eventos2.png" alt="">
     <div id="bottomContent">
         <div id="tituloBarra">
-            <h1 id="titulo">Ajude o Fregês</h1>
+            <h1>Ajude o Fregês</h1>
             <div id="barraProgresso">
                 <div id="barra"></div>
                 <p id="meta">R$1.000,00</p>
@@ -23,11 +23,11 @@
     max-width: 100%; 
     border-radius: 15px; 
     position: relative;
-    margin: 50;
+    margin: 1em;
 }
 
 #cardArrecadacao img {
-    width: 90%;
+    width: 97%;
     height: 24rem;
     object-fit: cover;
     border-radius: 15px;
@@ -48,12 +48,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-#titulo {
-    font-size: 24px;
-    color:rgb(255, 255, 255);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #barraProgresso {
@@ -90,7 +84,7 @@
     color: #83CE7D;
     font-weight: bold;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 </style>

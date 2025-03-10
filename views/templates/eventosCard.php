@@ -19,12 +19,12 @@
     max-width: 100%; 
     border-radius: 15px; 
     position: relative;
-    margin: 50;
+    margin: 1em;
     cursor: pointer;
 }
 
 .eventosCard img {
-  width: 90%;
+  width: 97%;
   height: 26rem;
   object-fit: cover;
   border-radius: 15px;
@@ -47,8 +47,16 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.cardInfo p{
+  font-size: 15px;
+}
+
 .local{
   display: flex;
+}
+
+.local p{
+  font-size: 15px;
 }
 
 .local img{

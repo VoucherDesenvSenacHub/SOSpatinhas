@@ -29,7 +29,7 @@
         </div>
     </section>
 
-    <?php include('../templates/footerUser.php'); ?>   
+    <?php include('../templates/footerAdm.php'); ?>   
 
     <script>
 

@@ -67,10 +67,14 @@ body{
     position: relative;
     margin-bottom: 20px;
     text-align: center;
+    & #imgMain {
+        width: 600px;
+    }
 }
  
 .sidebar {
     width: 30%;
+    position: relative;
 }
  
 .ladin {
@@ -95,16 +99,22 @@ h2 {
 }
 
 #tatu{
-    margin-bottom: 50px;
-    margin-top: 0.5rem;
+    position: absolute;
+    top: 251px;
+    left: 18px;
+    & h2{
+        width: fit-content;
+    }
 }
 
 #maus_tratos {
-    margin-top: 10px;
+    bottom: 50px;
 }
 
 #pit {
-    margin-top: 55px;
+    position: absolute;
+    bottom: 148.3%;
+    left: 18px;
 }
 
 @media (max-width: 768px) {

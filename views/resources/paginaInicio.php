@@ -21,6 +21,7 @@
                     <a href="./comoAjudar.php">Como Ajudar</a>
                     <a href="./eventos.php">Eventos</a>
                     <a href="./adocao.php">Adoção</a>
+                    <a href="./login.php">Login</a>
                 </ul>
 
                 <div class="nav-right">

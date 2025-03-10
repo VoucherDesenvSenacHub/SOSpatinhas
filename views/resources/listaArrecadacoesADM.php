@@ -14,9 +14,6 @@
         <div class="pesquisar">
             <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
             <input type="text" placeholder="Pesquisar">
-            <div class="botao-add-container-mobile">
-                <a href="adicionar-animal.php"><button class="botao-add">+</button></a>
-            </div>
         </div>
 
         <div class="lista-arrecadacoes" id="lista-arrecadacoes">
@@ -86,7 +83,7 @@
                 </div>
                 <button>Excluir</button>
             </div>
-            <div class="botao-add-container-desktop">
+            <div class="botao-add-container">
                 <a href="adicionar-animal.php"><button class="botao-add">+</button></a>
             </div>
         </div>

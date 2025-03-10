@@ -18,7 +18,7 @@
         <div class="principal">
             <div class="grandin" id="cima">
                 <img src="../images/btnEditar.png" alt="" class="btnEditar">
-                <img src="../images/Rectangle 272.png" alt="Article Image 1">
+                <img src="../images/Rectangle 272.png"  id="imgMain" alt="Article Image 1">
                 <h2>Título da Notícia</h2>
             </div>
             <div class="grandin" id="baixo">

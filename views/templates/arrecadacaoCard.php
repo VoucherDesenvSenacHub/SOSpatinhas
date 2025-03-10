@@ -1,21 +1,21 @@
-<div id="card-arrecadacao">
+<div id="cardArrecadacao">
     <img src="../images/eventosImg/eventos2.png" alt="">
-    <div id="bottom-content">
-        <div id="titulo-barra">
+    <div id="bottomContent">
+        <div id="tituloBarra">
             <h1 id="titulo">Ajude o Fregês</h1>
-            <div id="barra-progresso">
+            <div id="barraProgresso">
                 <div id="barra"></div>
                 <p id="meta">R$1.000,00</p>
             </div>
         </div>
-        <button class="button-card">
+        <button class="buttonCard">
             <a href="arrecadacao.php">Saiba Mais</a>
         </button>
     </div>
 </div>
 
 <style>
-#card-arrecadacao {
+#cardArrecadacao {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,24 +26,25 @@
     margin: 50;
 }
 
-#card-arrecadacao img {
+#cardArrecadacao img {
     width: 90%;
-    height: auto;
+    height: 24rem;
     object-fit: cover;
+    border-radius: 15px;
 }
 
-#bottom-content {
+#bottomContent {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    padding: 24px;
+    padding: 24px 35px 8px  35px;
     text-align: center;
     width: 100%;
 }
 
-#titulo-barra{
+#tituloBarra{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -55,7 +56,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#barra-progresso {
+#barraProgresso {
     margin: 10px 0;
     border: 4px solid #83CE7D;
     border-radius: 15px;
@@ -79,16 +80,17 @@
     font-weight: 700;
 }
 
-.button-card{
+.buttonCard{
     height: 40px;
     width: 150px;
     border-radius: 15px;
 }
 
-.button-card a {
+.buttonCard a {
     color: #83CE7D;
     font-weight: bold;
     text-decoration: none;
     font-size: 20px;
 }
+
 </style>

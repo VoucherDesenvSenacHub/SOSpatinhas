@@ -78,8 +78,12 @@ body {
 
 @media (max-width: 480px) {
     .titulo {
-        font-size: 23px; 
+        font-size: 24px; 
         padding-left: 1rem; 
+    }
+    
+    #tituloBarra h1{
+        font-size: 20px;
     }
 
     #arrecadacaoCarrosel, #eventosCarrosel {

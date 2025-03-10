@@ -86,45 +86,45 @@
 </html>
 
 <?php
-require_once '../../config/database.php';
-$banco = new Banco();
+// require_once '../../config/database.php';
+// $banco = new Banco();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    try {
-        $name = $_POST['name'] ?? null;
-        $descricao = $_POST['descricao'] ?? null;
-        $cidadeEstado = $_POST['cidadeEstado'];
-        $local = $_POST['local'];
-        $target_dir = "uploads/";
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     try {
+//         $name = $_POST['name'] ?? null;
+//         $descricao = $_POST['descricao'] ?? null;
+//         $cidadeEstado = $_POST['cidadeEstado'];
+//         $local = $_POST['local'];
+//         $target_dir = "uploads/";
         
-        $insert1 = "INSERT INTO evento (nome, descricao, cidade_estado, endereco) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        $query1 = $banco->prepare($insert1);
-        $query1->bind_param("ssssssss", $name, $descricao, $cidadeEstado, $local);
-        $query1->execute();
+//         $insert1 = "INSERT INTO evento (nome, descricao, cidade_estado, endereco) 
+//                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+//         $query1 = $banco->prepare($insert1);
+//         $query1->bind_param("ssssssss", $name, $descricao, $cidadeEstado, $local);
+//         $query1->execute();
         
-        $id_evento = $banco->pegaUltimoIdInserido();
+//         $id_evento = $banco->pegaUltimoIdInserido();
         
-        if (!empty($_FILES["image"]["name"][0])) { 
-            $totalFiles = count($_FILES["image"]["name"]);
+//         if (!empty($_FILES["image"]["name"][0])) { 
+//             $totalFiles = count($_FILES["image"]["name"]);
             
-            for ($i = 0; $i < $totalFiles; $i++) {
-                $nomeImagem = basename($_FILES["image"]["name"][$i]);
-                $target_file = $target_dir . $id_evento . "_" . $nomeImagem;
+//             for ($i = 0; $i < $totalFiles; $i++) {
+//                 $nomeImagem = basename($_FILES["image"]["name"][$i]);
+//                 $target_file = $target_dir . $id_evento . "_" . $nomeImagem;
                 
-                if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
-                    $sql2 = "INSERT INTO foto (id_evento, tipo_table,caminho_foto) VALUES (?, ?, ?)";
-                    $query2 = $banco->prepare($sql2);
-                    $query2->bind_param("iss", $id_evento, "eventos", $target_file);
-                    $query2->execute();
-                } else {
-                    throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);
-                }
-            }
-        }
-    } catch (Exception $e) {
-        echo "<input type='hidden' id='errorMessage' value='" . htmlspecialchars($e->getMessage()) . "'>";
-    }
-}
-$banco->fechar();
+//                 if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
+//                     $sql2 = "INSERT INTO foto (id_evento, tipo_table,caminho_foto) VALUES (?, ?, ?)";
+//                     $query2 = $banco->prepare($sql2);
+//                     $query2->bind_param("iss", $id_evento, "eventos", $target_file);
+//                     $query2->execute();
+//                 } else {
+//                     throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);
+//                 }
+//             }
+//         }
+//     } catch (Exception $e) {
+//         echo "<input type='hidden' id='errorMessage' value='" . htmlspecialchars($e->getMessage()) . "'>";
+//     }
+// }
+// $banco->fechar();
 ?>

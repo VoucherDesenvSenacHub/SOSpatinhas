@@ -110,64 +110,64 @@
 </html>
 
 <?php
-require_once '../../config/database.php';
-$banco = new Banco();
+// require_once '../../config/database.php';
+// $banco = new Banco();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    try {
-        $titulo = $_POST['titulo'] ?? null;
-        $nameAnimal = $_POST['nameAnimal'] ?? null;
-        $descricao = $_POST['descricao'] ?? null;
-        $nameUser = $_POST['nameUser'] ?? null;
-        $valorInicio = $_POST['valorInicio'] ?? null;
-        $valorAtual = $_POST['valorAtual'] ?? null;
-        $nmConta = $_POST['nmConta'] ?? null;
-        $nuConta = $_POST['nuConta'] ?? null;
-        $nuAgencia = $_POST['nuAgencia'] ?? null;
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     try {
+//         $titulo = $_POST['titulo'] ?? null;
+//         $nameAnimal = $_POST['nameAnimal'] ?? null;
+//         $descricao = $_POST['descricao'] ?? null;
+//         $nameUser = $_POST['nameUser'] ?? null;
+//         $valorInicio = $_POST['valorInicio'] ?? null;
+//         $valorAtual = $_POST['valorAtual'] ?? null;
+//         $nmConta = $_POST['nmConta'] ?? null;
+//         $nuConta = $_POST['nuConta'] ?? null;
+//         $nuAgencia = $_POST['nuAgencia'] ?? null;
 
-        $insert1 = "INSERT INTO arrecadacao (titulo, nomeAnimal, descricao, nomeDono, valorArrecadaco, valorArrecadado, nmConta, nuConta, nuAgencia) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        $query1 = $banco->prepare($insert1);
-        $query1->bind_param("ssssss", $titulo, $nameAnimal, $descricao, $nameUser, $valorInicio, $valorAtual, $nmConta, $nuConta, $nuAgencia);
-        $query1->execute();
+//         $insert1 = "INSERT INTO arrecadacao (titulo, nomeAnimal, descricao, nomeDono, valorArrecadaco, valorArrecadado, nmConta, nuConta, nuAgencia) 
+//                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+//         $query1 = $banco->prepare($insert1);
+//         $query1->bind_param("ssssss", $titulo, $nameAnimal, $descricao, $nameUser, $valorInicio, $valorAtual, $nmConta, $nuConta, $nuAgencia);
+//         $query1->execute();
 
-        $id_animal = $banco->pegaUltimoIdInserido();
-        $target_dir = "uploads/";
+//         $id_animal = $banco->pegaUltimoIdInserido();
+//         $target_dir = "uploads/";
 
-        if (!empty($_FILES["qrCodePix"]["name"])) {
-            $nomeQrCode = basename($_FILES["qrCodePix"]["name"]);
-            $target_qr = $target_dir . $id_animal . "_qr_" . $nomeQrCode;
+//         if (!empty($_FILES["qrCodePix"]["name"])) {
+//             $nomeQrCode = basename($_FILES["qrCodePix"]["name"]);
+//             $target_qr = $target_dir . $id_animal . "_qr_" . $nomeQrCode;
 
-            if (move_uploaded_file($_FILES["qrCodePix"]["tmp_name"], $target_qr)) {
-                $sqlQr = "INSERT INTO foto (id_animal, tipo_table, caminho_foto) VALUES (?, ?, ?)";
-                $queryQr = $banco->prepare($sqlQr);
-                $queryQr->bind_param("iss", $id_animal, $tipo_table = "qrCodePix", $target_qr);
-                $queryQr->execute();
-            } else {
-                throw new Exception("Erro ao enviar QR Code.");
-            }
-        }
+//             if (move_uploaded_file($_FILES["qrCodePix"]["tmp_name"], $target_qr)) {
+//                 $sqlQr = "INSERT INTO foto (id_animal, tipo_table, caminho_foto) VALUES (?, ?, ?)";
+//                 $queryQr = $banco->prepare($sqlQr);
+//                 $queryQr->bind_param("iss", $id_animal, $tipo_table = "qrCodePix", $target_qr);
+//                 $queryQr->execute();
+//             } else {
+//                 throw new Exception("Erro ao enviar QR Code.");
+//             }
+//         }
 
-        if (!empty($_FILES["image"]["name"][0])) { 
-            $totalFiles = count($_FILES["image"]["name"]);
+//         if (!empty($_FILES["image"]["name"][0])) { 
+//             $totalFiles = count($_FILES["image"]["name"]);
 
-            for ($i = 0; $i < $totalFiles; $i++) {
-                $nomeImagem = basename($_FILES["image"]["name"][$i]);
-                $target_file = $target_dir . $id_animal . "_" . $nomeImagem;
+//             for ($i = 0; $i < $totalFiles; $i++) {
+//                 $nomeImagem = basename($_FILES["image"]["name"][$i]);
+//                 $target_file = $target_dir . $id_animal . "_" . $nomeImagem;
 
-                if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
-                    $sql2 = "INSERT INTO foto (id_animal, tipo_table, caminho_foto) VALUES (?, ?, ?)";
-                    $query2 = $banco->prepare($sql2);
-                    $query2->bind_param("iss", $id_animal, $tipo_table = "arrecadacao", $target_file);
-                    $query2->execute();
-                } else {
-                    throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);
-                }
-            }
-        }
-    } catch (Exception $e) {
-        echo "<input type='hidden' id='errorMessage' value='" . htmlspecialchars($e->getMessage()) . "'>";
-    }
-}
-$banco->fechar();
+//                 if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
+//                     $sql2 = "INSERT INTO foto (id_animal, tipo_table, caminho_foto) VALUES (?, ?, ?)";
+//                     $query2 = $banco->prepare($sql2);
+//                     $query2->bind_param("iss", $id_animal, $tipo_table = "arrecadacao", $target_file);
+//                     $query2->execute();
+//                 } else {
+//                     throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);
+//                 }
+//             }
+//         }
+//     } catch (Exception $e) {
+//         echo "<input type='hidden' id='errorMessage' value='" . htmlspecialchars($e->getMessage()) . "'>";
+//     }
+// }
+// $banco->fechar();
 ?>

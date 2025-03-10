@@ -161,7 +161,7 @@ h1 {
 }
 
 .cta-slide {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
@@ -242,8 +242,9 @@ h1 {
             position: relative;
         }
         .botao-add-container{
-            position: absolute;
-            left: 260px;
+            position: fixed;
+            top: unset;
+            right: 9%;
         }
 }
 @media (max-width: 425px) {
@@ -260,11 +261,14 @@ h1 {
         justify-items: center;   
     }
     .meuJeito{
-        position: relative;
+        display: flex;
     }
     .botao-add-container{
-        position: absolute;
-        left: 260px;
+        position: fixed;
+        left: 330px;
+        bottom: 530px;
+        top:unset;
+        right: unset;
     }
     
     .evento{

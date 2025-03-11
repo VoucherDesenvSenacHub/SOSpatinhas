@@ -30,10 +30,22 @@ body{
     margin: 5rem 5rem;
 }
 
+.col{
+    display: flex;
+    flex-direction: column;
+    width: 37rem;
+    align-items: center;
+}
+
+#btns{
+    width: 50%;
+}
+
 #btn-photo{
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    width: 37rem;
 }
 
 #imgUpload{
@@ -43,7 +55,10 @@ body{
 }
 
 #previewImg{
-    
+    width: 265px;
+    height: 257px;
+    border: 1px solid #ccc;
+    border-radius: 10rem;
 }
 
 input{
@@ -80,4 +95,95 @@ button a{
 
 button:hover{
     background-color: #69a565;
+}
+
+
+@media (max-width: 425px){
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .corpo{
+        width: 85%;
+    }
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 2rem
+    }
+
+    .col{
+        width: 80%;
+        max-width: 80%;
+    }
+
+    input{
+        width: 65%;
+    }
+
+    #btn-photo{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #imgUpload{
+        right: 17rem;
+        bottom: 8rem
+    }
+}
+
+
+@media (max-width: 768px){
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .corpo{
+        width: 85%;
+    }
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 2rem
+    }
+
+    .col{
+        width: 144%;
+        max-width: 200%;
+    }
+
+    input{
+        width: 65%;
+    }
+
+    #btn-photo{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #imgUpload{
+        right: 38rem;
+        bottom: 8rem
+    }
+}
+
+
+@media (max-width: 1440px){
+    
+    #imgUpload{
+        right: 18rem;
+        bottom: 23rem;
+    }
+
+    .corpo{
+        width: 93%;
+    }
 }

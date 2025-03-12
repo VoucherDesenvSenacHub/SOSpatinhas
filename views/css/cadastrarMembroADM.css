@@ -3,11 +3,11 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
-    font-family: 'Roboto', sans-serif;
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
 }

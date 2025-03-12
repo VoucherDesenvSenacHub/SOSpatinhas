@@ -32,6 +32,7 @@
                     <span>Horto Florestal</span> 
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="evento">
                 <h3>Adote um Amigo</h3>
@@ -41,6 +42,7 @@
                     <span>Parque dos Poderes</span> 
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="evento">
                 <h3>Juntos por Eles</h3>
@@ -50,6 +52,7 @@
                     <span>Bosque dos Ipês</span> 
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="evento">
                 <h3>Ajude uma patinha</h3>
@@ -59,6 +62,7 @@
                     <span>Parque das Nações</span> 
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="evento">
                 <h3>Título</h3>
@@ -68,6 +72,7 @@
                     <span>Sem localidade</span> 
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="evento">
                 <h3>Título</h3>
@@ -77,6 +82,7 @@
                     <span>Sem localidade</span> 
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             
         </div>

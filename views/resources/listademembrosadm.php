@@ -25,6 +25,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
         
             <div class="membro">
@@ -35,6 +36,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
         
 
@@ -47,6 +49,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
        
 
@@ -59,6 +62,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
         
 
@@ -71,6 +75,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
         
 
@@ -83,6 +88,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
         
 
@@ -95,6 +101,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
         
 
@@ -107,6 +114,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
         
 
@@ -119,6 +127,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
        
 
@@ -131,6 +140,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
         
 
@@ -143,6 +153,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
 
             
@@ -154,6 +165,7 @@
                     <span>Online</span>
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="botao-add-conteiner">
                 <a href="adicionar-membro.php"><button class="botao-add">+</button></a>

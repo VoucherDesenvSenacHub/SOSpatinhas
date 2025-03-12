@@ -21,31 +21,37 @@
                 <h3>Rochele</h3>
                 <img src="../images/Rectangle 71.png" alt="Rochele">
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="animal">
                 <h3>Toby</h3>
                 <img src="../images/Toby.png" alt="Toby">
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="animal">
                 <h3>Rumi</h3>
                 <img src="../images/Rumi.png" alt="Rumi">
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="animal">
                 <h3>Nobre</h3>
                 <img src="../images/Nobre.png" alt="Nobre">
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="animal">
                 <h3>Sir Dougg</h3>
                 <img src="../images/Sir Dougg.png" alt="Sir Dougg">
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="animal">
                 <h3>Nigel</h3>
                 <img src="../images/Nigel.png" alt="Nigel">
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="botao-add-container">
                 <a href="adicionar-animal.php"><button class="botao-add">+</button></a>
@@ -57,8 +63,8 @@
                 <li class="link active" value="1">1</li>
                 <li class="link" value="2">2</li>
                 <li class="link" value="3">3</li>
+                <button id="next" class="pagination-btn">&gt;</button>
             </div>
-            <button id="next" class="pagination-btn">&gt;</button>
         </div>
     </section>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Arrecadação</title>
+    <title>SOS Patinhas</title>
     <link rel="stylesheet" href="../css/cadastrarArrecadacao-ADM.css">
 </head>
 <body>
@@ -40,7 +40,7 @@
                     </div>
                     <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
         
-                    <button type="submit">Adicionar</button>
+                    <button type="button" onclick="adicionar()">Adicionar</button>
                     <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
                 </div>
             </div>
@@ -102,6 +102,14 @@
         function resetERedirect(){
             document.getElementById('frmCadastroAdocao').reset();
             window.location.href = "listaArrecadacoesADM.php";
+        }
+
+        function adicionar(){
+            if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
+                alert("Arrecadação cadastrada com sucesso!")
+            }else{
+                alert("Preencha todos os campos.")
+            }
         }
     </script>
 

@@ -35,7 +35,7 @@
                 <input type="password" name="confirma_senha" placeholder="Confirmar Senha:" required>
                 <button type="submit" name="cadastrar">Cadastrar</button>
             </form>
-            <p>Já tem uma conta? <span>Login</span></p>
+            <p>Já tem uma conta? <a href="login.php">Login</a></p>
 
             <p class="borda-verde">Ou entre usando</p>
 

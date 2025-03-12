@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça nossa equipe e nossos parceiros. Somos uma equipe dedicada a fornecer soluções inovadoras para nossos clientes.">
-    <title>Perfil ADM</title>
+    <title>SOS Patinhas</title>
     <link rel="stylesheet" href="../css/perfilAdm.css">
 </head>
 <body>
@@ -17,15 +17,29 @@
             <p>ID administrador</p>
         </div> 
         
-        <button>Editar perfil</button>
+        <button>
+            <a href="editarPerfil-ADM.php">Editar Perfil</a>
+        </button>
 
         <div class="buttons">
-            <button>Adoção</button>
-            <button>Eventos</button>
-            <button>Arrecadação</button>
-            <button>Membros</button>
-            <button>Usuário</button>
-            <button>Editar Formulário</button>
+            <button>
+                <a href="listaAdocao-ADM.php">Adoção</a>
+            </button>
+            <button>
+                <a href="listaEventosADM.php">Eventos</a>
+            </button>
+            <button>
+                <a href="listaArrecadacoesADM.php">Arrecadação</a>
+            </button>
+            <button>
+                <a href="listademembrosadm.php">Membros</a>
+            </button>
+            <button>
+                <a href="listaUsuariosADM.php">Usuário</a>
+            </button>
+            <button>
+                <a href="formAdocaoEditavel.php">Editar Formulário</a>
+            </button>
         </div>
     </section>
 
@@ -33,26 +47,26 @@
 
     <script>
 
-document.addEventListener("DOMContentLoaded", function () {
-        const buttonLinks = {
-            "Adoção": "listaAdocao-ADM.php",
-            "Eventos": "listaEventosADM.php",
-            "Arrecadação": "listaArrecadacoesADM.php",
-            "Membros": "listademembrosadm.php",
-            "Usuário": "listaUsuariosADM.php",
-            "Editar Formulário": "formAdocao.php"
-            "Editar perfil": "editarPerfil-ADM.php"
-        };
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const buttonLinks = {
+    //         "Adoção": "listaAdocao-ADM.php",
+    //         "Eventos": "listaEventosADM.php",
+    //         "Arrecadação": "listaArrecadacoesADM.php",
+    //         "Membros": "listademembrosadm.php",
+    //         "Usuário": "listaUsuariosADM.php",
+    //         "Editar Formulário": "formAdocao.php"
+    //         "Editar perfil": "editarPerfil-ADM.php"
+    //     };
 
-        document.querySelectorAll(".buttons button").forEach(button => {
-            button.addEventListener("click", function () {
-                const page = buttonLinks[this.textContent.trim()];
-                if (page) {
-                    window.location.href = page;
-                }
-            });
-        });
-    });
+    //     document.querySelectorAll(".buttons button").forEach(button => {
+    //         button.addEventListener("click", function () {
+    //             const page = buttonLinks[this.textContent.trim()];
+    //             if (page) {
+    //                 window.location.href = page;
+    //             }
+    //         });
+    //     });
+    // });
 
     </script>
 

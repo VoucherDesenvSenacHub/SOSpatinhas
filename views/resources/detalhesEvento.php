@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes Evento</title>
+    <title>SOS Patinhas</title>
     <link rel="stylesheet" href="../css/detalhesEvento.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 </head>
@@ -44,7 +44,7 @@
           <div class="event-details">
             <h1>Feira do Auau</h1>
             <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
-            <button>Compartilhar</button>
+            <button onclick="compartilhar()">Compartilhar</button>
           </div>
           
         </div>
@@ -72,6 +72,13 @@
     </section>
 
     <script> 
+    function compartilhar() {
+        if (navigator.share) {
+            navigator.share({ url: window.location.href }).catch((error) => console.log("Erro de Compartilhamento:", error));
+        } else {
+            alert("Sharing not supported on this browser.");
+        }
+    }
     let PrimeiroSlide = 1;
     mostrarSlide (PrimeiroSlide);
 

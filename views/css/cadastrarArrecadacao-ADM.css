@@ -60,7 +60,7 @@ button {
     cursor: pointer;
 }
 
-button[type="submit"], .cancelarBtn {
+button[type="button"], .cancelarBtn {
     background-color: #83CE7D;
     color: white;
     margin-top: 1rem;

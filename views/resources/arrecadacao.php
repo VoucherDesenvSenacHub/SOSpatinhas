@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrecadação</title>
+    <title>SOS Patinhas</title>
     <link rel="stylesheet" href="../css/arrecadacao.css">
 </head>
 <body>
@@ -78,7 +78,7 @@
                     
 
                         <div id="botaoCompartilhar">
-                            <button id="compartilharArrecadacao">Compartilhar</button>
+                            <button id="compartilharArrecadacao" onclick="compartilhar()">Compartilhar</button>
                             <p id="textoCompartilhar">Verificado e autenticado pelo SOS Patinhas</p>
                         </div>
                     </div>
@@ -91,6 +91,13 @@
     <?php include('../templates/footerUser.php')?>
 </body>
 <script>
+    function compartilhar() {
+        if (navigator.share) {
+            navigator.share({ url: window.location.href }).catch((error) => console.log("Erro de Compartilhamento:", error));
+        } else {
+            alert("Sharing not supported on this browser.");
+        }
+    }
 
     let slideIndex = 1;
     showSlides(slideIndex);

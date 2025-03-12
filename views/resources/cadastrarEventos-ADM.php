@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Eventos</title>
+    <title>SOS Patinhas</title>
     <link rel="stylesheet" href="../css/cadastrarEventos-ADM.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
                     </div>
                     <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
         
-                    <button type="submit">Adicionar</button>
+                    <button type="button" onclick="adicionar()">Adicionar</button>
                     <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
                 </div>
             </div>
@@ -39,6 +39,14 @@
     </section>
 
     <script>
+        function adicionar(){
+            if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
+                alert("Arrecadação cadastrada com sucesso!")
+            }else{
+                alert("Preencha todos os campos.")
+            }
+        }
+
         document.getElementById('image').addEventListener('change', function (event) {
             const filePreview = document.getElementById('filePreview');
             filePreview.innerHTML = ""; 

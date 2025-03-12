@@ -23,7 +23,7 @@
         <div class="gallery">
           <img src="../images/rochele.png" 
                alt="rochele 2" class="gallery-img">
-          <img src="../images/rochele.png" 
+          <img src="../images/anna.png" 
                alt="rochele 3 " class="gallery-img">
           <img src="../images/rochele.png" 
                alt="rochele 4" class="gallery-img">

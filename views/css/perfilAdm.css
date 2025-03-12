@@ -136,7 +136,8 @@ button:focus {
     }
 
     .buttons button {
-        font-size: 17px; 
+        font-size: 19px; 
+        padding: 15px 20px;
         }
 
     .adm_foto img {
@@ -153,7 +154,7 @@ button:focus {
     }
 
     button {
-        font-size: 16px;
+        font-size: 18px;
         padding: 16px 35px;
     }
 }
@@ -172,17 +173,17 @@ button:focus {
     }
 
     .buttons {
-        gap: 20px;
-        width: 90%;
+        gap: 14px;
+        width: 100%;
     }
 
     button {
-        font-size: 15px; 
+        font-size: 17px; 
         padding: 10px 25px;
         }
     
     .buttons button {
-        font-size: 14px; 
+        font-size: 17px; 
         padding: 17px 2px;
         height: auto;
         }

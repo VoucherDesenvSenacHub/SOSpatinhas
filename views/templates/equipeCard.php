@@ -8,7 +8,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
     overflow: hidden;
     max-width: 100%;
     border-radius: 15px;
@@ -18,7 +17,6 @@
     width: 90%;
     height: auto;
     object-fit: cover;
-    border-radius: 15px; 
 }
 
 #nomeIntegrante {

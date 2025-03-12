@@ -34,7 +34,7 @@ body {
 }
 
 .titulo {
-    font-size: 35px;
+    font-size: 28px;
     text-align: center;
     width: 100%; 
     margin-top: 20px;
@@ -78,7 +78,7 @@ body {
 
 @media (max-width: 1024px) {
     .titulo {
-        font-size: 30px; 
+        font-size: 28px; 
     }
 
     #carouselEquipe, #carouselParceiros{
@@ -88,7 +88,7 @@ body {
 
 @media (max-width: 768px) {
     .titulo {
-        font-size: 24px; 
+        font-size: 28px;
     }
 
     #carouselEquipe, #carouselParceiros{
@@ -98,7 +98,7 @@ body {
 
 @media (max-width: 480px) {
     .titulo {
-        font-size: 20px; 
+        font-size: 28px; 
     }
 
     #carouselEquipe, #carouselParceiros{

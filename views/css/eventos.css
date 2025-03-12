@@ -35,11 +35,10 @@ body {
 }
 
 .titulo {
-    font-size: 35px;
+    font-size: 25px;
     text-align: left;
     width: 100%; 
     margin-top: 20px;
-    margin-bottom: 20px; 
     padding-left: 10rem; 
 }
 
@@ -51,6 +50,10 @@ body {
     margin-bottom: 40px; 
 }
 
+#tituloBarra h1{
+    font-size: 24px;
+}
+
 #arrecadacaoCarrosel, #eventosCarrosel {
     width: 80rem; 
 }
@@ -58,11 +61,18 @@ body {
 @media (max-width: 1024px) {
     .titulo {
         padding-left: 5rem; 
-        font-size: 30px; 
+        font-size: 25px; 
     }
-
+    #tituloBarra h1 {
+        font-size: 23px;
+        color:rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
     #arrecadacaoCarrosel, #eventosCarrosel {
         width: 100%; 
+    }
+    .buttonCard a{
+        font-size: 18px;
     }
 }
 
@@ -71,18 +81,33 @@ body {
         padding-left: 2rem; 
         font-size: 24px; 
     }
-
+    #tituloBarra h1 {
+        font-size: 24px;
+        color:rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
     #arrecadacaoCarrosel, #eventosCarrosel {
         width: 100%; 
     }
+    .buttonCard {
+        width: 100%;
+        height: 50px; 
+    }
+    .buttonCard a{
+        font-size: 18px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
     .titulo {
-        font-size: 20px; 
+        font-size: 24px; 
         padding-left: 1rem; 
     }
-
+    #tituloBarra h1 {
+        font-size: 24px;
+        color:rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
     #arrecadacaoCarrosel, #eventosCarrosel {
         width: 100%; 
     }

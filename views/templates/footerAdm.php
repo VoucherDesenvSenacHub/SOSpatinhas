@@ -92,14 +92,14 @@
 </style>
 
 <footer>
-    <a class="footer-logo" href="./paginaInicio.php">
+    <a class="footer-logo" href="./editarPaginaInicio.php">
         <img src="../images/Logo_Footer.png" alt="SOS Patinhas">
     </a>
 
     <ul class="footer-links">
-        <a href="./blog.php">Blog</a>
-        <a href="./quemSomos.php">Quem Somos</a>
-        <a href="./comoAjudar.php">Como Ajudar</a>
+        <a href="./blogEditar.php">Blog</a>
+        <a href="./quemSomosEditaveis.php">Quem Somos</a>
+        <a href="./comoAjudarEditavel.php">Como Ajudar</a>
         <a href="./eventos.php">Eventos</a>
         <a href="./adocao.php">Adoção</a>
     </ul>  

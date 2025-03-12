@@ -94,7 +94,6 @@
     $offset = ($paginaAtual - 1) * $itensPorPag; 
     $registrosTotal = count($filteredAnimals);
     $totalPag = ceil($registrosTotal / $itensPorPag);
-
     $rowAnimal = array_slice($filteredAnimals, $offset, $itensPorPag);
 ?>
 
@@ -176,29 +175,42 @@
                 };
             ?>
         </div>
+
+
+
+
+
+
         
         <div class="paginacao">
             <?php
-                if($paginaAtual > 1){
-                    echo '<a href="?pagina=' . ($paginaAtual - 1) . '">&lt;</a>';
-                }
-    
-                for ($i = 1; $i <= $totalPag; $i++) {
-                    if ($i == $paginaAtual) {
-                        echo '<a href="?pagina=' . $i . '" class="active">' . $i . '</a>';
-                    } else {
-                        echo '<a href="?pagina=' . $i . '">' . $i . '</a>';
-                    }
-                }
-    
-                if ($paginaAtual < $totalPag) {
-                    echo '<a href="?pagina=' . ($paginaAtual + 1) . '">&gt;</a>';
-                }
-    
-                // $banco->fechar();
-            ?>
+            // Se não estiver na primeira página, exibe o link "Anterior"
+            if ($paginaAtual > 1) {
+                echo '<a href="?pagina=' . ($paginaAtual - 1) . '">&lt; Anterior</a>';
+            }
 
+            // Exibe os links para cada página
+            for ($i = 1; $i <= $totalPag; $i++) {
+                if ($i == $paginaAtual) {
+                    // Página atual recebe uma classe especial
+                    echo '<a href="?pagina=' . $i . '" class="active">' . $i . '</a>';
+                } else {
+                    // Link para as outras páginas
+                    echo '<a href="?pagina=' . $i . '">' . $i . '</a>';
+                }
+            }
+
+            // Se não estiver na última página, exibe o link "Próxima"
+            if ($paginaAtual < $totalPag) {
+                echo '<a href="?pagina=' . ($paginaAtual + 1) . '">Próxima &gt;</a>';
+            }
+            ?>
         </div>
+
+
+
+
+        
                 <div class="vermais">
                     <?php if ($paginaAtual < $totalPag) : ?>
                         <button id="btnVerMais" data-proxima="<?= $paginaAtual + 1 ?>">Ver Mais</button>

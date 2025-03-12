@@ -1,361 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 * {
     padding: 0;
     margin: 0;
     border: 0;
-    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 body {
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
-    font-family: 'Roboto', sans-serif;
 }
 
 .container {
     max-width: 1500px;
     margin: auto;
+    background-color: white;
 }
 
 .corpo {
     background-color: rgb(255, 255, 255);
     width: 100%;
     display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
 }
 
-.imagem_grupo {
+.carroseis{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 28px;
+    text-align: center;
+    width: 100%; 
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo::before,
+.titulo::after {
+    content: "";
+    flex: 1;
+    height: 2px; /* Espessura da linha */
+    background-color: rgb(68, 128, 63); /* Cor da linha */
+    margin: 0 15px; /* Espaçamento entre a linha e o texto */
+}
+
+.carouselParceiros, .carouselEquipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 40px; 
+}
+
+.imagemEquipe {
     width: 100%;
     margin-bottom: 30px;
-}
-
-.imagem_grupo img {
-    width: 100%;
     height: auto;
 }
 
-.title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 50px 50px 20px 0;
+.imagemEquipe img{
     width: 100%;
 }
 
-.title-container h1 {
-    margin: 0;
-    padding: 0 15px;
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
+#carouselEquipe, #carouselParceiros{
+    width: 80rem;
 }
 
-.title-container::before,
-.title-container::after {
-    content: "";
-    width: 470px;
-    height: 3px;
-    background-color: green;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.title-container::before {
-    left: 0;
-}
-
-.title-container::after {
-    right: 0;
-}
-
-h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.card-container {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 285px;
-    margin-top: 20px;
-    padding: 0 95px;
-    transition: transform 0.5s ease-in-out;
-}
-
-.card {
-    background-color: #fff;
-    aspect-ratio: 1;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 250px;  
-}
-
-.card:nth-child(even) {
-    background-color: rgb(255, 255, 255);
-    grid-row: 2;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-    width: 100%;
-    height: 80%;  
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 10px;
-    text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;  
-}
-
-.card-title {
-    font-size: 18px;  
-    font-weight: 700;
-    color: #333;
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.card-footer {
-    text-align: center;
-    padding: 10px 15px;
-    background-color: #f7f7f7;
-    font-size: 14px;
-    font-weight: 600;
-    color: #444;
-    border-top: 1px solid #ddd;
-    border-radius: 0 0 12px 12px;
-}
-
-/* Parceiros */
-.partner-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 80px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-}
-
-.partner-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 32%;
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.partner-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.partner-card img {
-    width: 100%;
-    height: 350px; 
-    object-fit: cover;
-}
-
-.partner-content {
-    padding: 15px;
-}
-
-/* Carousel */
-.carousel {
-    position: relative; 
-    width: 100%;
-    height: 300px; 
-    overflow: hidden; 
-}
-
-.carousel-container {
-    position: relative;
-    width: 80%; 
-    overflow: hidden;
-    margin: auto;
-}
-
-.carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease; 
-}
-
-.carousel-item {
-    min-width: 100%; 
-    height: 300px; 
-    overflow: hidden;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    right: 20px; 
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    width: 40px; 
-    height: 40px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.carousel-button.prev {
-    left: 10px;
-    position: absolute;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-/* Responsividade para Tablet (max-width: 728px) */
-@media (max-width: 768px) {
- 
-    .container {
-        padding: 10px;
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 28px; 
     }
-    
-  
-    h1 {
+
+    #carouselEquipe, #carouselParceiros{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
         font-size: 28px;
     }
-    .title-container h1,
-    .title-container h2 {
-        font-size: 1.75rem;
-        padding: 0 10px;
-    }
-    .title-container::before,
-    .title-container::after {
-        width: 35%;
-    }
-    
-   
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 250px;
-        padding: 0 20px;
-    }
-    .card {
-        height: 220px;
-    }
-    
-   
-    .partner-cards {
-        gap: 20px;
-        padding: 0 20px;
-    }
-    .partner-card {
-        width: 48%;
-    }
-    
-   
-    .carousel-container {
-        position: relative;
-        width: 80%; 
-        overflow: hidden; 
-        margin: auto;
-    }
-    
 
-    .carousel-item {
-        height: 250px;
+    #carouselEquipe, #carouselParceiros{
+        width: 100%;
     }
 }
-/*sasd*/
 
-/* Responsividade para Mobile (max-width: 425px) */
-@media (max-width: 425px) {
-    /* Ajuste de container */
-    .container {
-        padding: 5px;
-    }
-    
-    /* Tamanhos dos títulos */
-    h1 {
-        font-size: 24px;
-    }           
-    .title-container h1,
-    .title-container h2 {
-        font-size: 1.5rem;
-        padding: 0 5px; 
-    }
-    .title-container::before,
-    .title-container::after {
-        width: 25%;
-        padding: 0px 60px 0px 60px; 
-    }
-    /* Parceiros: layout lado a lado */
-    .partner-cards {
-        flex-direction: row; /* exibe os cards lado a lado */
-        gap: 15px;
-        padding: 0 10px;
-        overflow-x: auto; /* permite scroll horizontal se necessário */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 28px; 
     }
 
-    /* Grid de Cards: 1 coluna com cards maiores */
-    .card-container {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-    .card {
-        height: auto;
-        min-height: 250px; /* aumenta a altura mínima para que os cards pareçam maiores */
-    }
-    
-    .partner-card {
-        width: 48%; /* exibe dois cards por linha */
-    }
-    
-    /* Carousel: largura total e altura reduzida */
-
-    .carousel-item {
-        height: 200px;
-    }
-    
-    /* Botões do carousel: tamanho reduzido para mobile */
-    .carousel-button {
-        width: 35px;
-        height: 35px;
-        font-size: 1.5rem;
+    #carouselEquipe, #carouselParceiros{
+        width: 100%;
     }
 }

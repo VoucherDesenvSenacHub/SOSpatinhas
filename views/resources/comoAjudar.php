@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <?php
   include('../templates/navbarUser.php');
   ?>
@@ -25,6 +26,7 @@
             <h2>Ponto de Arrecadação</h2>
             <p>"Seu gesto de doação é o elo que une corações humanos e patas amigas, criando um mundo mais compassivo para
               todos."</p>
+
           </div>
         </div>
       </div>
@@ -102,5 +104,6 @@
   <?php 
   include('../templates/footerUser.php');
   ?>
+
 </body>
 </html>

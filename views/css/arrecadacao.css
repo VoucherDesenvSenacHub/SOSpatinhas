@@ -232,13 +232,18 @@ body{
 
 
 @media (max-width: 768px) {
-
+    body{
+        background-size: 80%;
+    }
+    
     .corpo{
-        max-width: 743px;
-        
+        max-width: 768px;
+        width: 85%;
     }
 
-  
+    #descricao{
+        width: 550px;
+    }
 
     #sectionfotoEpix {
         flex-direction: column;
@@ -254,11 +259,11 @@ body{
         font-size: 20px;
         width: 600px; 
         text-align: justify; 
-        padding: 25px 0px 10px 0px; 
+        padding: 25px 0px 25px 0px;
     }
     .fotoArrecadacao {
         order: 2;
-        width: 600px;
+    
         display: block;
     }
 
@@ -268,7 +273,7 @@ body{
         justify-content: center;
         width: 350px;
         position: absolute;
-        bottom: 250px;
+        bottom: 290px;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -280,12 +285,17 @@ body{
         padding: 0px 0px 10px 15px;
     }
     
-
+    .botaoTrocarFoto {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 
 @media (max-width: 425px) {
-
+    #descricao {
+        width: 380px;
+    }
 
     .fotoArrecadacao {
         order: 2;
@@ -309,7 +319,7 @@ body{
 
     .corpo {
         margin:0;
-        max-width: 423px;
+        max-width: auto;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         display: flex; 
@@ -329,7 +339,7 @@ body{
         font-size: 20px;
         width: 350px; 
         text-align: justify; 
-        padding: 25px 0px 10px 20px; 
+        padding: 25px 0px 10px 0px;
     }
 
     #sectionPix {
@@ -344,12 +354,16 @@ body{
         justify-content: center;
         width: 350px;
         position: absolute;
-        bottom: 420px;
+        bottom: 360px;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
     }
     
+    .botaoTrocarFoto {
+        width: 15px;
+        height: 15px;
+    }
 
     #banco {
         order: 4; 
@@ -370,10 +384,10 @@ body{
     }
 
     #localEusuario {
-        display: flex; 
-        flex-direction: column; 
-        padding: 15px; 
-        justify-content: flex-start; 
+        display: flex;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
     }
 
     #nomeAnimal {
@@ -390,9 +404,9 @@ body{
     #slider {
         position: relative;
         width: 380px;
-        margin: 1px; 
-        padding: 10px; 
-        padding-left: 1%; 
+        /* margin: 1px; */
+        /* padding: 10px; */
+        /* padding-left: 1%; */
     }
 
     .slide {

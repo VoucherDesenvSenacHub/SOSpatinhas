@@ -135,10 +135,11 @@ h1 {
     background-color: #45a049;
 }
 
-.botao-add-container {
-    position: absolute;
-    top: 10px;
-    right: -65px;
+.botao-add-container{
+    position: fixed;
+    top: unset;
+    right: 420px;
+
 }
 
 .botao-add {
@@ -161,7 +162,7 @@ h1 {
 }
 
 .cta-slide {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
@@ -219,9 +220,9 @@ h1 {
     }
     .lista-eventos {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        position: relative;
+        /* position: relative; */
         flex-direction: column;
         justify-items: center;
     }
@@ -230,19 +231,22 @@ h1 {
         transition: transform 0.2s;
         border-radius: 10px;
         order: 2;
+        width: 260px;
             & h3{
                 height: 60px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
-    }
-    .botao-add-container{
-        display: block;
-        grid-column: 1 / -1; /* Faz a última ocupar toda a largura */
-        order: 1;
-        position: static;
-    }
+        }
+        .meuJeito{
+            position: relative;
+        }
+        .botao-add-container{
+            position: fixed;
+            top: unset;
+            right: 9%;
+        }
 }
 @media (max-width: 425px) {
     .pesquisar{
@@ -255,17 +259,24 @@ h1 {
         gap: 20px;
         /* position: relative; */
         flex-direction: column;
-        justify-items: center;
-        
+        justify-items: center;   
     }
+    .meuJeito{
+        display: flex;
+    }
+    .botao-add-container{
+        position: fixed;
+        left: 330px;
+        bottom: 530px;
+        top:unset;
+        right: unset;
+    }
+    
     .evento{
         padding: 20px;
         transition: transform 0.2s;
         border-radius: 10px;
         order: 2;
     }
-    .botao-add-container{
-        order: 1;
-        position: static;
-    }
+    
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes Evento</title>
     <link rel="stylesheet" href="../css/detalhesEvento.css">
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
 </head>
 <body>
     <?php include('../templates/navbarUser.php')?>
@@ -29,9 +29,9 @@
             </div>
     
             <div class="btn-slide">
-            <span class="botao" onclick="OutroSlide(1)" > </span>
-            <span class="botao" onclick="OutroSlide(2)" > </span>
-            <span class="botao" onclick="OutroSlide(3)" > </span>
+              <span class="botao" onclick="OutroSlide(1)" > </span>
+              <span class="botao" onclick="OutroSlide(2)" > </span>
+              <span class="botao" onclick="OutroSlide(3)" > </span>
             </div>
 
             <div class="localEvento">
@@ -42,92 +42,33 @@
           </div>
     
           <div class="event-details">
-              <h1>Feira do Auau</h1>
-              <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
-              <button>Compartilhar</button>
+            <h1>Feira do Auau</h1>
+            <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
+            <button>Compartilhar</button>
           </div>
           
         </div>
           
-        <div class="carousel-container">
-          <h2>Outros eventos...</h2>
+        <div class="carrossel-container">
+          <h1 class="titulo">Outros Eventos</h1>
+          <div id="eventosCarrosel">
+            <?php
+            $cardComponents2 = array();
 
-          <div class="carousel">
-            <button id="carousel-prev">&#10094;</button>
-            <div class="carousel-track">
-              
-              <div class="card">
-                <img src="../images/horto-florestal.png" alt="Feira do Auau">
-                <div class="card-info">
-                  <h3>Feira do Auau</h3>
-                  <p>Feira arrecadativa de moda.</p>
-                  <div class="local">
-                    <img src="../images/pin_info.png"></img> Campo Grande MS, Horto Florestal
-                  </div>
-                </div>
-              </div>
-              
-              <div class="card">
-                <img src="../images/parque-dos-poderes.png" alt="Adote um Amigo">
-                <div class="card-info">
-                  <h3>Adote um Amigo</h3>
-                  <p>Feira de adoção.</p>
-                  <div class="local">
-                    <img src="../images/pin_info.png"></img> Campo Grande MS, Parque dos Poderes
-                  </div>
-                </div>
-              </div>
-              
-              <div class="card">
-                <img src="../images/bosque.png" alt="Junto por eles">
-                <div class="card-info">
-                  <h3>Junto por eles</h3>
-                  <p>Passeata pelos direitos dos animais.</p>
-                  <div class="local">
-                    <img src="../images/pin_info.png"></img> Campo Grande MS, Bosque dos Ipês
-                  </div>
-                </div>
-              </div>
-              
-              <div class="card">
-                <img src="../images/horto-florestal.png" alt="Feira do Auau">
-                <div class="card-info">
-                  <h3>Feira do Auau</h3>
-                  <p>Feira arrecadativa de moda.</p>
-                  <div class="local">
-                   <img src="../images/pin_info.png"></img> Campo Grande MS, Horto Florestal
-                  </div>
-                </div>
-              </div>
-              
-              <div class="card">
-                <img src="../images/parque-dos-poderes.png" alt="Adote um Amigo">
-                <div class="card-info">
-                  <h3>Adote um Amigo</h3>
-                  <p>Feira de adoção.</p>
-                  <div class="local">
-                    <img src="../images/pin_info.png"></img> Campo Grande MS, Parque dos Poderes
-                  </div>
-                </div>
-              </div>
-              
-              <div class="card">
-                <img src="../images/bosque.png" alt="Junto por eles">
-                <div class="card-info">
-                  <h3>Junto por eles</h3>
-                  <p>Passeata pelos direitos dos animais.</p>
-                  <div class="local">
-                   <img src="../images/pin_info.png"></img> Campo Grande MS, Bosque dos Ipês
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-            <button id="carousel-next">&#10095;</button>
+            for ($i = 0; $i < 5; $i++) {
+                ob_start(); 
+                include('../templates/eventosCard.php');
+                $cardComponents2[] = ob_get_clean();
+            }
+    
+            $cardComponents = $cardComponents2;
+            $carouselId = 'carousel2';
+            @include('../templates/carossel.php');
+            ?>
           </div>
         </div>
       </div>
+
     </section>
 
     <script> 
@@ -156,26 +97,6 @@
 
 
     // outros eventos
-
-    const carouselContainer = document.querySelector(".carousel-track");
-    const carouselCards = document.querySelector(".carousel-track .card");
-
-    const prevButton = document.getElementById("carousel-prev");
-    const nextButton = document.getElementById("carousel-next");
-
-    nextButton.addEventListener("click", () => {
-      const carouselWidth = carouselCards[0].clientWidth;
-      carouselContainer.scrollBy({ left: carouselWidth, behavior:"smooth"});
-    });
-
-    nextButton.addEventListener("click", () => {
-      const carouselWidth = carouselCards[0].clientWidth;
-      carouselContainer.scrollBy({ left: -carouselWidth, behavior: "smooth"});
-    });
-
-
-
-
 
     </script>
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/listaAdocao-ADM.css">
 </head>
 <body>
-    <?php include('../templates/navbarUser.php')?>
+<?php include('../templates/navbarAdm.php'); ?>
 
     <section class="corpo container">
         <h1>Lista de Adoções</h1>
@@ -106,6 +106,6 @@
         
     </script>
 
-    <?php include('../templates/footerUser.php')?>
+<?php include_once "../templates/footerAdm.php"; ?>
 </body>
 </html>

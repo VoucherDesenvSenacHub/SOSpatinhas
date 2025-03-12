@@ -1,97 +1,98 @@
-<?php
-    require_once '../../config/database.php';
-    $banco = new Banco();
-
-    $idAnimal = $_GET['id'];
-
-    if($idAnimal != null){
-        $query = 'SELECT caminho_foto FROM foto where id_animal = ' . $idAnimal;
-        $resultado = $banco->query($query);
-        $fotos = $banco->fetch_all($resultado);
-        
-        foreach ($fotos as $miniaturas) {
-            echo '<img class="imgs" src="' . $miniaturas['caminho_foto'] . '" alt="">';
-        }
-    }
-    else{}
-    $banco->fechar();   
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informação do Animal</title>
-    <link rel="stylesheet" href="../css/informacaoAnimal.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Rochele</title>
+  <link rel="stylesheet" href="../css/informacaoAnimal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <?php include('../templates/navbarUser.php')?>
-    <section class="corpo container" >
-        <section class="conteudo">
-            <section class="sliderFotos">
-                <button class="arrow prev" onclick="changeSlide(-1)">&#10094;</button>
-                <img 
-                src="<?php echo $fotos[0]['caminho_foto'] ?? 'placeholder.jpg'; ?>" 
-                alt="" 
-                id="imgPrincipal">
-                <button class="arrow next" onclick="changeSlide(1)">&#10095;</button>
+<?php include('../templates/navbarUser.php')?>
+  <div class="container">
+    <a class="back-link" href="#">
+      <i class="fas fa-arrow-left"></i>
+      Voltar
+    </a>
+    <div class="profile">
+     
+      <div class="profile-images">
+        <img src="../images/rochele.png" 
+             alt="rochele 1 " class="main-image">
 
-                <div class="miniContainer">
-                    <?php foreach ($fotos as $index => $miniatura): ?>
-                        <img class="thumbnail <?php echo $index === 0 ? 'active' : ''; ?>"
-                            src="<?php echo $miniatura['caminho_foto']; ?>"
-                            onclick="selectImage(<?php echo $index; ?>)">
-                    <?php endforeach; ?>
-                </div>
-            </section>
+        <div class="gallery">
+          <img src="../images/rochele.png" 
+               alt="rochele 2" class="gallery-img">
+          <img src="../images/anna.png" 
+               alt="rochele 3 " class="gallery-img">
+          <img src="../images/rochele.png" 
+               alt="rochele 4" class="gallery-img">
+        </div>
 
-            <section class="info">
-                <h1 id="tituloNome">Rochele</h1>
-                <h2 id="tituloHistoria">História</h2>
-                <p id="descricao">Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto</p>
-                <h2 id="tituloMaisDetalhes">Mais Detalhes</h2>
-                 pegar tds as palavras da tabela tag pelo id do animal da url fazer um foreach 
-                <button id="btnAdotar" >Adotar!</button>
-            </section>
-        </section>
-    </section>
+      </div>
+      <div class="profile-details">
+        <h1>Rochele</h1>
+        <p class="submitted-by">
+          <i class="fas fa-user"></i> enviado por Mitski
+        </p>
+        <h2>História</h2>
+        <p>
+          Olá, me chamo Rochele. Tenho 4 anos, mas se engana quem acha que já estou velha. Isso é puro preconceito.
+          Tenho muita energia, sou esperta e vou aprender tudo que me ensinarem. Como todos os outros cães do abrigo,
+          ainda tenho esperança de ser adotada.
+        </p>
+        <h2>Mais detalhes</h2>
+        <div class="tags">
+          <span>Doce</span>
+          <span>Brincalhona</span>
+          <span>Sociável</span>
+          <span>Independente</span>
+          <span>Castrado</span>
+          <span>Vacinado</span>
+          <span>Vermifugado</span>
+          <span>Sociável com cachorros</span>
+        </div>
+        <button class="adopt-btn">Adotar!</button>
+      </div>
+    </div>
+  </div>
 
-    <?php include('../templates/footerUser.php')?>
+  <?php include('../templates/footerUser.php')?>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const backLink = document.querySelector(".back-link");
+    if (backLink) {
+      backLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location.href = "../resources/adocao.php";
+      });
+    }
+
+    const adoptBtn = document.querySelector(".adopt-btn");
+    if (adoptBtn) {
+      adoptBtn.addEventListener("click", () => {
+        window.location.href = "../resources/formAdocao.php";
+      });
+    }
+
+    // Seleciona todas as mini imgs da galeria
+    const galleryImages = document.querySelectorAll(".gallery-img");
+    // Seleciona a img principal pela class
+    const mainProductImage = document.querySelector(".main-image");
+
+    // Verifica se a img principal 
+    if (!mainProductImage) return;
+
+    // Ao clicar em qualquer mini img substitui a img principal
+    galleryImages.forEach((img) => {
+      img.addEventListener("click", () => {
+        // Se quiser só trocar direto sem converter URl
+        mainProductImage.src = img.src;
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search)
-        const idAnimal = parseInt(urlParams.get('id')) || 0
-        
-        let indexAtual = 0;
-        let imgPrincipal = document.getElementById('imgPrincipal')
-        let thumbnails = document.querySelectorAll('thumbnail')
-        let imgs = <?php echo json_encode(array_column($fotos, 'caminho_foto')); ?>;
-        let btnAdotar = document.getElementById('btnAdotar')
-
-        btnAdotar.addEventListener('click', () => {
-            window.location.href = `formAdocao.php?id=${idAnimal}`;
-        });
-
-        function selectImage(index) {
-            indexAtual = index;
-            updateGallery();
-        }
-
-        function changeSlide(step) {
-            indexAtual = (indexAtual + step + imgs.length) % imgs.length;
-            updateGallery();
-        }
-
-        function updateGallery() {
-            imgPrincipal.src = imgs[indexAtual];
-
-            thumbnails.forEach((thumb, idx) => {
-                thumb.classList.toggle("active", idx === indexAtual);
-            });
-        }
-    </script>
-
-

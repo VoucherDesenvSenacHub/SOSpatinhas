@@ -197,7 +197,30 @@
     
                 // $banco->fechar();
             ?>
+
         </div>
+                <div class="vermais">
+                    <?php if ($paginaAtual < $totalPag) : ?>
+                        <button id="btnVerMais" data-proxima="<?= $paginaAtual + 1 ?>">Ver Mais</button>
+                    <?php endif; ?>
+                </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let btnVerMais = document.getElementById("btnVerMais");
+
+                if (btnVerMais) {
+                    btnVerMais.addEventListener("click", function () {
+                        let proximaPagina = btnVerMais.getAttribute("data-proxima");
+                        
+                        // Redireciona para a próxima página com PHP
+                        window.location.href = "?pagina=" + proximaPagina;
+                    });
+                }
+            });
+        </script>
+
+       
 
     </section>
     <?php include ('../templates/footerUser.php') ?>

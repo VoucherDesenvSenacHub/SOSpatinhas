@@ -29,7 +29,7 @@
         </div>
     </section>
 
-    <?php include('../templates/footerUser.php'); ?>   
+    <?php include('../templates/footerAdm.php'); ?>   
 
     <script>
 
@@ -39,8 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
             "Eventos": "listaEventosADM.php",
             "Arrecadação": "listaArrecadacoesADM.php",
             "Membros": "listademembrosadm.php",
-            "Usuário": "usuarios.php",
-            "Editar Formulário": "editar_formulario.php"
+            "Usuário": "listaUsuariosADM.php",
+            "Editar Formulário": "formAdocao.php"
+            "Editar perfil": "editarPerfil-ADM.php"
         };
 
         document.querySelectorAll(".buttons button").forEach(button => {

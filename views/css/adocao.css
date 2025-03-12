@@ -81,7 +81,8 @@ body{
   gap: 2rem;
 }
 .box2{
-  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
 }
 
 .filter-option:hover{

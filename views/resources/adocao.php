@@ -1,52 +1,52 @@
 <!-- <?php
-    require_once '../../config/database.php';
-    $banco = new Banco();
+    // require_once '../../config/database.php';
+    // $banco = new Banco();
     
-    $filtros = [];
-    $itensPorPag = 9;
-    $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
-    $offset = ($paginaAtual - 1) * $itensPorPag; 
+    // $filtros = [];
+    // $itensPorPag = 9;
+    // $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
+    // $offset = ($paginaAtual - 1) * $itensPorPag; 
     
 
-    if(isset($_GET['sexo-filter']) && $_GET['sexo-filter'] != "Selecionar"){
-        $tipoFilter = $banco->escape($_GET['sexo-filter']);
-        $filtros[] = "sexo = '$tipoFilter'";
-    }
+    // if(isset($_GET['sexo-filter']) && $_GET['sexo-filter'] != "Selecionar"){
+    //     $tipoFilter = $banco->escape($_GET['sexo-filter']);
+    //     $filtros[] = "sexo = '$tipoFilter'";
+    // }
 
-    if(isset($_GET['idade-filter']) && $_GET['idade-filter'] != "Selecionar"){
-        $tipoFilter = $banco->escape($_GET['idade-filter']);
-        $filtros[] = "idade $tipoFilter"; //tranformar em string 
-    }
+    // if(isset($_GET['idade-filter']) && $_GET['idade-filter'] != "Selecionar"){
+    //     $tipoFilter = $banco->escape($_GET['idade-filter']);
+    //     $filtros[] = "idade $tipoFilter"; //tranformar em string 
+    // }
 
-    if(isset($_GET['porte-filter']) && $_GET['porte-filter'] != "Selecionar"){
-        $tipoFilter = $banco->escape($_GET['porte-filter']);
-        $filtros[] = "porte = '$tipoFilter'";
-    }
+    // if(isset($_GET['porte-filter']) && $_GET['porte-filter'] != "Selecionar"){
+    //     $tipoFilter = $banco->escape($_GET['porte-filter']);
+    //     $filtros[] = "porte = '$tipoFilter'";
+    // }
 
-    if(isset($_GET['animal-filter']) && $_GET['animal-filter'] != "Selecionar"){
-        $tipoFilter = $banco->escape($_GET['animal-filter']);
-        $filtros[] = "tipo = '$tipoFilter'";
-    }
+    // if(isset($_GET['animal-filter']) && $_GET['animal-filter'] != "Selecionar"){
+    //     $tipoFilter = $banco->escape($_GET['animal-filter']);
+    //     $filtros[] = "tipo = '$tipoFilter'";
+    // }
 
-    $query = 'SELECT * FROM animal';
-    if(count($filtros) > 0){
-        $query .= ' WHERE ' . implode(' AND ', $filtros);
-    }
+    // $query = 'SELECT * FROM animal';
+    // if(count($filtros) > 0){
+    //     $query .= ' WHERE ' . implode(' AND ', $filtros);
+    // }
 
-    $query .= " LIMIT $itensPorPag OFFSET $offset";
-    $resultado = $banco->query($query);
-    $rowAnimal = $banco->fetch_all($resultado);
+    // $query .= " LIMIT $itensPorPag OFFSET $offset";
+    // $resultado = $banco->query($query);
+    // $rowAnimal = $banco->fetch_all($resultado);
 
-    $queryTotal = 'SELECT COUNT(*) as total FROM animal';
-    if(count($filtros) > 0){
-        $queryTotal .= ' WHERE ' . implode(' AND ', $filtros);
-    }
+    // $queryTotal = 'SELECT COUNT(*) as total FROM animal';
+    // if(count($filtros) > 0){
+    //     $queryTotal .= ' WHERE ' . implode(' AND ', $filtros);
+    // }
 
-    $resultadoTotal = $banco->query($queryTotal);
-    $registrosTotal = $resultadoTotal ? $banco->fetch_all($resultadoTotal)[0]['total'] : 0;
-    $registrosTotal = 20;
+    // $resultadoTotal = $banco->query($queryTotal);
+    // $registrosTotal = $resultadoTotal ? $banco->fetch_all($resultadoTotal)[0]['total'] : 0;
+    // $registrosTotal = 20;
 
-    $totalPag = ceil($registrosTotal / $itensPorPag);
+    // $totalPag = ceil($registrosTotal / $itensPorPag);
 ?> -->
 
 <?php

@@ -8,7 +8,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url("../images/Patinhas.png");
+    background-color: rgb(198, 225, 196);
+    background-image: url(../images/Patinhas.png);
     background-size: 50%;
 }
 
@@ -80,13 +81,29 @@ body {
     color: #272727;
 }
 
-@media (max-width: 728px){
+@media (max-width: 768px){
+    body {
+        /* background-size: 130%; */
+        height: auto;
+        background-size: 80%;
+    }
+    #corpocontainer{
+        width: 85%;
+    }
 
 }
 
 @media (max-width: 425px){
+    body {
+        background-size: 130%;
+        height: auto;
+    }
+
     #corpocontainer {
-        height: 625px;
+        /* padding: 15px; */
+        /* margin: 20px auto; */
+        /* border-radius: 8px; */
+        width: 87%;
     }
 
     #perfil{

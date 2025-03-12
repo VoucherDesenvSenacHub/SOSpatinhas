@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #44803f;
+
+}
+
+/* --- Header --- */
+#header{
+    background-color: #44803f;
+    height: 150px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header img{
+    height: 100px;
+    width: auto;
+    padding-right: 100px;
+    margin-right: 100px;
+}
+
+nav{
+    position: sticky;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 200px;
+}
+nav ul{
+    padding-left: 50px;
+}
+.nav-links a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 550;
+}
+.nav-links a:hover, .nav-links a:active{
+    border-bottom: 1px solid #ffffff;
+}
+
+/* --- Slider --- */
+#secslider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#divslider {
+    position: relative;
+}
+
+#slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#slider li {
+    min-width: 100%;
+}
+
+#slider .btnEditar{
+    width: 74px;
+    height: 72px;
+    position: absolute;
+    right: 1px;
+    cursor: pointer;
+}
+
+#slider img {
+    height: 675px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ctdcard {
+    gap: 45px;
+    color: white;
+    position: relative;
+    transform: translate(0%, -200%);
+    display: grid;
+
+    & .btnEditar{
+        width: 74px;
+        height: 72px;
+        position: absolute;
+        right: 1px;
+    }
+    }
+
+    & input  {
+        background-color: #44803f;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+.textcard {
+    color: white;
+    font-weight: 600;
+}
+
+/* Baner ira sumir no desktop */
+#bannerMobas {
+    display: none;
+}
+
+button {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #44803f;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Para garantir que os botões fiquem acima das imagens */
+}
+.buttonslider{
+    font-weight: 550;
+    color: #ffffff;
+}
+#esquerda {
+    left: 20px;
+}
+#direita {
+    right: 20px;
+}
+
+/* --- Cards --- */
+#seccards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card {
+    flex: 1; /* Faz cada card ocupar o mesmo espaço */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.btnEditar{
+    position: absolute;
+    right: 1px;
+    width: 74px !important;
+    height: 72px !important;
+}
+
+
+#seccards img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 769px) {
+    #sliderDoacao {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    #secslider {
+        display: none;
+    } /*RETIRAR CARROSSEL*/
+
+    #bannerMobas {
+        display: block;
+        width: 100%;
+    } /*MOSTRAR O BANNER*/
+
+    #seccards {
+        display: none;
+    }
+    #sliderDoacao{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        & .cardDoacao {
+            width: auto;
+
+            & .divImg {
+                width: 100vw;
+                height: 100%;
+            }
+        }
+
+    }
+
+    .ctdcard {
+        display: flow;
+        font-size: 1.6rem;
+
+        & input {
+            font-size: 1.5rem;
+        }
+        
+    }
+
+
+
+    .imgBanner{
+        
+        max-width: 768px;
+    
+        & img{
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 425px) {
+    
+    #sliderDoacao {
+        margin: 20px auto;
+    }
+
+
+}

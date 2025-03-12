@@ -85,21 +85,68 @@ h2 {
 
 #tatu{
     margin-bottom: 50px;
-    
+    margin-top: 8.5rem;
 }
 
 #maus_tratos {
-    margin-top: 175px;
+    margin-top: 10px;
+
 }
 
 #pit {
     margin-top: 55px;
 }
 
+
+@media (max-width: 768px) {
+    .corpo{
+        width: auto;
+        flex-direction: column;
+    }
+    img {
+        width: 480px;
+    }
+    h2{
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-family: "Inter", sans-serif;
+        color: #333;
+        border-bottom: 3.3px solid rgb(85, 149, 79);
+        padding-bottom: 8px;
+        width: 62%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #pit{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .principal {
+        width: 65%;
+        margin-right: 0;
+    }
+    .sidebar {
+        width: 65%;
+    }
+    #tatu {
+        margin-bottom: 20px;
+    }
+    #maus_tratos {
+        margin-bottom: 20px;
+    }
+}
+
+
+
 @media (max-width: 425px) {
     /* criei um display none para a section desktop sumir caso é convertido para a resolução do mobile. */ 
+    body{
+        background-size: 100%;
+    } 
+    
     .corpo{
         display: none;
+
     }
     /* aqui o display flex "ativa" a section do mobile. */
     .corpo-mobile{
@@ -136,3 +183,12 @@ h2 {
         transition: margin-top 0.3s ease;
     }
 }
+
+
+/* @media (max-width: 1440px) {
+    #tatu{
+        margin-bottom: 50px;
+
+    }
+    
+} */

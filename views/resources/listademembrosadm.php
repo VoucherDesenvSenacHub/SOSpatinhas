@@ -206,6 +206,6 @@
         });
     </script>
 
-    <?php include('../templates/footerUser.php')?>
+<?php include_once "../templates/footerAdm.php"; ?>
 </body>
 </html>

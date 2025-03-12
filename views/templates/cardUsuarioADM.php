@@ -6,4 +6,5 @@
         <span>Online</span>
     </div>
     <button>Excluir</button>
+    <button>Editar</button>
 </div>

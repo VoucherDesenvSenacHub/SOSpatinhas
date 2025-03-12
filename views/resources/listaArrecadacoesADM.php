@@ -27,6 +27,7 @@
                     <span><b>Meta: R$ 1.000,00.</b></span> 
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Nina</h3>
@@ -38,6 +39,7 @@
                 <span><b>Meta: R$ 2.500,00.</b></span> 
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Cascudo</h3>
@@ -49,6 +51,7 @@
                     <span><b>Meta: R$ 2.500,00.</b></span>  
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Luke</h3>
@@ -60,6 +63,7 @@
                     <span><b>Meta: R$ 870,00.</b></span>  
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Hulk</h3>
@@ -71,6 +75,7 @@
                     <span><b>Meta: R$ 1.200,00.</b></span>  
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Godinho</h3>
@@ -82,6 +87,7 @@
                     <span><b>Meta: R$ 720,00.</b></span>  
                 </div>
                 <button>Excluir</button>
+                <button>Editar</button>
             </div>
             <div class="botao-add-container">
                 <a href="adicionar-animal.php"><button class="botao-add">+</button></a>

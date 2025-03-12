@@ -3,10 +3,11 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     background-color: #44803f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /* --- Header --- */
 

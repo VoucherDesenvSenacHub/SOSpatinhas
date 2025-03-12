@@ -35,6 +35,7 @@
                 <li class="link" value="3">3</li>
             </div>
             <button id="next" class="pagination-btn">&gt;</button>
+            
         </div>
         <!-- parte da animação fake do row-slide -->
         <script>

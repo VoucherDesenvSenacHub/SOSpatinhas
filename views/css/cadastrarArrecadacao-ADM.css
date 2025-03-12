@@ -218,6 +218,10 @@ button a{
 
 
 @media (max-width: 768px) {
+    body{
+        background-size: 80%;
+    }
+    
     .corpo{
         width: 85%;
     }
@@ -226,6 +230,8 @@ button a{
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .col1, .col2 {
@@ -253,13 +259,19 @@ button a{
 }
 
 @media (max-width: 425px) {
+    body{
+        background-size: 130%;
+    }
+    
     .corpo{
-        width: 85%;
+        width: 87%;
     }
 
     .conteudoForm {
         flex-direction: column;
         align-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .col1, .col2 {

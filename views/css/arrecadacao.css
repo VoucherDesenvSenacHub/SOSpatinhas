@@ -232,8 +232,13 @@ body{
 
 
 @media (max-width: 768px) {
+    body{
+        background-size: 80%;
+    }
+    
     .corpo{
         max-width: 768px;
+        width: 85%;
     }
 
     #descricao{

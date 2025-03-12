@@ -106,6 +106,10 @@
                 display: flex;
             }
         }
+
+        .navbar-especial {
+            background-color: #C6E1C4 !important;
+        }
     </style>
 </head>
 <body>

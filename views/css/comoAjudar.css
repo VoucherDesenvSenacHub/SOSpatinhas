@@ -180,49 +180,49 @@ height: 23px;
 }
 }
 
-/*responsividade celular */
 @media (max-width: 425px) {
 
-body {
-  font-size: 14px;
-}
-.infoDestaque {
-  padding: 15px;
-}
-.infoDestaque > div {
-  width: 100%;
-}
+  body {
+    font-size: 14px;
+    background-size: 130%;
+  }
+  .infoDestaque {
+    padding: 15px;
+  }
+  .infoDestaque > div {
+    width: 100%;
+  }
 
-.descricaoPontoArrecadacao {
-  padding: 30px 15px;
-  margin-top: 30px;
-}
+  .descricaoPontoArrecadacao {
+    padding: 30px 15px;
+    margin-top: 30px;
+  }
 
-.infoPixECards {
-  flex-direction: column;
-  padding: 30px 15px;
-  height: auto;
-}
+  .infoPixECards {
+    flex-direction: column;
+    padding: 30px 15px;
+    height: auto;
+  }
 
-.infoValores,
-.cards {
-  max-width: 100%;
-}
-.cards .card {
-  width: 90%; 
-  margin: 20px auto;
-}
+  .infoValores,
+  .cards {
+    max-width: 100%;
+  }
+  .cards .card {
+    width: 90%; 
+    margin: 20px auto;
+  }
 
-#imgQrCode {
-  width: 200px;
-  height: auto;
-  margin-top: 20px;
-}
+  #imgQrCode {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-body{
-  background-size: 90%;
+  body{
+  background-size: 80%;
 }
 
   .infoDestaque {

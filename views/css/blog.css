@@ -85,16 +85,18 @@ h2 {
 
 #tatu{
     margin-bottom: 50px;
-    
+    margin-top: 8.5rem;
 }
 
 #maus_tratos {
     margin-top: 10px;
+
 }
 
 #pit {
     margin-top: 55px;
 }
+
 
 @media (max-width: 768px) {
     .corpo{
@@ -133,6 +135,8 @@ h2 {
         margin-bottom: 20px;
     }
 }
+
+
 
 @media (max-width: 425px) {
     /* criei um display none para a section desktop sumir caso é convertido para a resolução do mobile. */ 
@@ -179,3 +183,12 @@ h2 {
         transition: margin-top 0.3s ease;
     }
 }
+
+
+/* @media (max-width: 1440px) {
+    #tatu{
+        margin-bottom: 50px;
+
+    }
+    
+} */

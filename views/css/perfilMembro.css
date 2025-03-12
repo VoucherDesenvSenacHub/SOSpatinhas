@@ -94,16 +94,27 @@ body {
     }
 }
 
-@media (max-width: 728px){
-
+@media (max-width: 768px){
+    #corpocontainer {
+        width: 87%;
 }
 
+    body{
+        background-size: 80%;
+    }
+
 @media (max-width: 425px){
+    body{
+        background-size: 130%;
+    }
+    
     #corpocontainer {
         height: 625px;
+        width: 87%;
     }
 
     #perfil{
         flex-direction: column;
     }
+}
 }

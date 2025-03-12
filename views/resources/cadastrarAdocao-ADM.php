@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/cadastrarAdocao-ADM.css">
 </head>
 <body>
-    <?php include('../templates/navbarUser.php')?>
+<?php include('../templates/navbarAdm.php'); ?>
 
     <section class="corpo container">
         <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
@@ -110,54 +110,54 @@
         }
     </script>
 
-    <?php include('../templates/footerUser.php')?>
+<?php include_once "../templates/footerAdm.php"; ?>
 </body>
 </html>
 
 <?php
-require_once '../../config/database.php';
-$banco = new Banco();
+// require_once '../../config/database.php';
+// $banco = new Banco();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    try {
-        $name = $_POST['name'] ?? null;
-        $tipo = $_POST['tipo'] ?? null;
-        $raca = $_POST['raca'] ?? null;
-        $porte = $_POST['porte'] ?? null;
-        $descricao = $_POST['descricao'] ?? null;
-        $tags = $_POST['tags'] ?? null;
-        $idade = $_POST['idade'] ?? null;
-        $sexo = $_POST['sexo'] ?? null;
-        $target_dir = "uploads/";
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     try {
+//         $name = $_POST['name'] ?? null;
+//         $tipo = $_POST['tipo'] ?? null;
+//         $raca = $_POST['raca'] ?? null;
+//         $porte = $_POST['porte'] ?? null;
+//         $descricao = $_POST['descricao'] ?? null;
+//         $tags = $_POST['tags'] ?? null;
+//         $idade = $_POST['idade'] ?? null;
+//         $sexo = $_POST['sexo'] ?? null;
+//         $target_dir = "uploads/";
         
-        $insert1 = "INSERT INTO animal (nome, tipo, raca, porte, descricao, tags, idade, sexo) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        $query1 = $banco->prepare($insert1);
-        $query1->bind_param("ssssssss", $name, $tipo, $raca, $porte, $descricao, $tags, $idade, $sexo);
-        $query1->execute();
+//         $insert1 = "INSERT INTO animal (nome, tipo, raca, porte, descricao, tags, idade, sexo) 
+//                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+//         $query1 = $banco->prepare($insert1);
+//         $query1->bind_param("ssssssss", $name, $tipo, $raca, $porte, $descricao, $tags, $idade, $sexo);
+//         $query1->execute();
         
-        $id_animal = $banco->pegaUltimoIdInserido();
+//         $id_animal = $banco->pegaUltimoIdInserido();
         
-        if (!empty($_FILES["image"]["name"][0])) { 
-            $totalFiles = count($_FILES["image"]["name"]);
+//         if (!empty($_FILES["image"]["name"][0])) { 
+//             $totalFiles = count($_FILES["image"]["name"]);
             
-            for ($i = 0; $i < $totalFiles; $i++) {
-                $nomeImagem = basename($_FILES["image"]["name"][$i]);
-                $target_file = $target_dir . $id_animal . "_" . $nomeImagem;
+//             for ($i = 0; $i < $totalFiles; $i++) {
+//                 $nomeImagem = basename($_FILES["image"]["name"][$i]);
+//                 $target_file = $target_dir . $id_animal . "_" . $nomeImagem;
                 
-                if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
-                    $sql2 = "INSERT INTO foto (id_animal, tipo_table,caminho_foto) VALUES (?, ?)";
-                    $query2 = $banco->prepare($sql2);
-                    $query2->bind_param("iss", $id_animal, $target_file);
-                    $query2->execute();
-                } else {
-                    throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);
-                }
-            }
-        }
-    } catch (Exception $e) {
-        echo "<input type='hidden' id='errorMessage' value='" . htmlspecialchars($e->getMessage()) . "'>";
-    }
-}
-$banco->fechar();
+//                 if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file)) {
+//                     $sql2 = "INSERT INTO foto (id_animal, tipo_table,caminho_foto) VALUES (?, ?)";
+//                     $query2 = $banco->prepare($sql2);
+//                     $query2->bind_param("iss", $id_animal, $target_file);
+//                     $query2->execute();
+//                 } else {
+//                     throw new Exception("Erro ao enviar imagem: " . $_FILES["image"]["name"][$i]);
+//                 }
+//             }
+//         }
+//     } catch (Exception $e) {
+//         echo "<input type='hidden' id='errorMessage' value='" . htmlspecialchars($e->getMessage()) . "'>";
+//     }
+// }
+// $banco->fechar();
 ?>

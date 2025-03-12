@@ -186,29 +186,40 @@ h1 {
 }
 
 @media (max-width: 768px){
+    .conteiner{
+        padding: 40px 0px 60px 0px;
+    }
     .lista-de-usuarios {
         grid-template-columns: repeat(2, 1fr);
     }
-    
     .pesquisar input {
         width: 500px;
     }
     h1 {
         font-size: 35px;
     }
+    .cta-slide{
+        display: none;
+    }
 }
 
 @media (max-width: 480px){
-    .lista-de-usuarios {
+    .conteiner{
+        padding: 40px 0px 60px 0px;
+    }
+    .lista-de-usuarios{
         grid-template-columns: repeat(1, 1fr);
     }
-    .pesquisar input {
+    .pesquisar input{
         width: 300px;
     }
-    h1 {
+    h1{
         font-size: 25px;
     }
-    .corpo {
+    .corpo{
         width: 100%;
+    }
+    .cta-slide{
+        display: none;
     }
 }

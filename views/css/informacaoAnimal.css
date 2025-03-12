@@ -46,15 +46,18 @@
     width: 100%;
     max-width: 300px;
     margin-bottom: 16px;
+    object-fit: fill;
   }
   
   .gallery {
     display: flex;
     gap: 8px;
+    object-fit: fill;
   }
   
   .gallery-img {
     width: calc(33.33% - 5.33px);
+    object-fit: fill;
   }
   
  

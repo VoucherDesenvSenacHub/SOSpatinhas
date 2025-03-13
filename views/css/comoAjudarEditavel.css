@@ -1,17 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-body {
-  background-color: rgb(198, 225, 196);
-  background-image: url("../images/Patinhas.png");
-  background-size: 50%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .iconeAcao {
   width: 28px;
   height: 28px;
@@ -25,16 +11,6 @@ body {
   align-items: center;
   gap: 5px;
 } 
-
-.corpoContainer {
-  max-width: 1500px;
-  margin: auto;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; 
-}
 
 .pontoArrecadacao {
   width: 100%;

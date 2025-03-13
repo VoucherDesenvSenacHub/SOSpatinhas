@@ -72,5 +72,5 @@
     </style>
 </head>
 <body>
-<?php include('../templates/navbarAdm.php'); ?>
+<?php include('../templates/navbar'.$tipo.'.php'); ?>
 <section class="corpo container" >

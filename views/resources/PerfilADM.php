@@ -1,5 +1,6 @@
 <?php
     $cssLink  = '../css/perfilAdm.css';
+    $tipo = 'Adm';
     include('../templates/default/topHTML.php');
 ?>
 

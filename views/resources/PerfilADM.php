@@ -15,6 +15,9 @@
 </button>
 
 <div class="buttons">
+
+    
+
     <button>
         <a href="listaAdocao-ADM.php">Adoção</a>
     </button>

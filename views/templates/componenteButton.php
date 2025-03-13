@@ -1,4 +1,4 @@
-<button><a href="<?php $link ?>"><?php $tiulo ?></a></button>
+<button><a href="<?php echo $link ?>"><?php echo $titulo ?></a></button>
 
 <style>
     button {

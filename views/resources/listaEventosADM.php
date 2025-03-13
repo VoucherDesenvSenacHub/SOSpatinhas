@@ -17,7 +17,7 @@
         </div>
         <div class="meuJeito">
             <div class="botao-add-container">
-                <a href="adicionar-animal.php">
+                <a href="cadastrarEventos-ADM.php">
                     <button class="botao-add">+</button>
                 </a>
             </div>
@@ -31,8 +31,8 @@
                     <img src="../images/pin_info.png" alt="Localização">
                     <span>Horto Florestal</span> 
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="evento">
                 <h3>Adote um Amigo</h3>
@@ -41,8 +41,8 @@
                     <img src="../images/pin_info.png" alt="Localização">
                     <span>Parque dos Poderes</span> 
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="evento">
                 <h3>Juntos por Eles</h3>
@@ -51,8 +51,8 @@
                     <img src="../images/pin_info.png" alt="Localização">
                     <span>Bosque dos Ipês</span> 
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="evento">
                 <h3>Ajude uma patinha</h3>
@@ -61,8 +61,8 @@
                     <img src="../images/pin_info.png" alt="Localização">
                     <span>Parque das Nações</span> 
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="evento">
                 <h3>Título</h3>
@@ -71,8 +71,8 @@
                     <img src="../images/pin_info.png" alt="Localização">
                     <span>Sem localidade</span> 
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="evento">
                 <h3>Título</h3>
@@ -81,8 +81,8 @@
                     <img src="../images/pin_info.png" alt="Localização">
                     <span>Sem localidade</span> 
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             
         </div>
@@ -127,6 +127,24 @@
                 valorAtual++;
                 activeLink();
             }
+        });
+
+        let botaoDeletar = document.querySelectorAll('.evento #btnExcluir');
+
+        botaoDeletar.forEach(button => {
+            button.addEventListener('click', function() {
+            let animalDiv = this.parentElement;
+            animalDiv.remove();
+            alert('Animal excluído com sucesso!');
+            });
+        });
+
+        let botaoEditar = document.querySelectorAll('.evento #btnEditar');
+
+        botaoEditar.forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = "editarEventos-ADM.php";
+            });
         });
     </script>
 

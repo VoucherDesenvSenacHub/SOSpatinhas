@@ -134,7 +134,7 @@
                 <div></div>
             </div>
 
-            <a class="navbar-logo" href="#">
+            <a class="navbar-logo" href="login.php">
                 <img src="../images/Icon_Login.png" alt="Login">
             </a>
         </div>

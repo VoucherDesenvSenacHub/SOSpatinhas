@@ -20,41 +20,41 @@
             <div class="animal">
                 <h3>Rochele</h3>
                 <img src="../images/Rectangle 71.png" alt="Rochele">
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="animal">
                 <h3>Toby</h3>
                 <img src="../images/Toby.png" alt="Toby">
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="animal">
                 <h3>Rumi</h3>
                 <img src="../images/Rumi.png" alt="Rumi">
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="animal">
                 <h3>Nobre</h3>
                 <img src="../images/Nobre.png" alt="Nobre">
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="animal">
                 <h3>Sir Dougg</h3>
                 <img src="../images/Sir Dougg.png" alt="Sir Dougg">
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="animal">
                 <h3>Nigel</h3>
                 <img src="../images/Nigel.png" alt="Nigel">
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="botao-add-container">
-                <a href="adicionar-animal.php"><button class="botao-add">+</button></a>
+                <a href="cadastrarAdocao-ADM.php"><button class="botao-add">+</button></a>
             </div>
         </div>
         <div class="cta-slide">
@@ -100,13 +100,21 @@
             }
         });
 
-        let botaoDeletar = document.querySelectorAll('.animal button');
+        let botaoDeletar = document.querySelectorAll('.animal #btnExcluir');
 
         botaoDeletar.forEach(button => {
             button.addEventListener('click', function() {
             let animalDiv = this.parentElement;
             animalDiv.remove();
             alert('Animal excluído com sucesso!');
+            });
+        });
+
+        let botaoEditar = document.querySelectorAll('.animal #btnEditar');
+
+        botaoEditar.forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = "editarAdocao-ADM.php";
             });
         });
         

@@ -26,13 +26,22 @@
                     <button id="buttonEditarFoto">+</button>
                 </div>
 
-                <a href="perfilMembro.php"><button class="buttonsPerfil" id="buttonSalvar">Salvar</button></a>
-                <a href="perfilMembro.php"><button class="buttonsPerfil" id="buttonCancelar">Cancelar</button></a>
+                <a href="#"><button class="buttonsPerfil" id="buttonSalvar" onclick="adicionar()">Salvar</button></a>
+                <a href="listademembrosadm.php"><button class="buttonsPerfil" id="buttonCancelar">Cancelar</button></a>
             </div>
 
         </div>
     </section>
-
+    <script>
+        function adicionar(){
+            if([...document.querySelectorAll("#formEditarPerfilMembro input")].every(input => input.value.trim() !== "")){
+                alert("Update realizado com sucesso!")
+                window.location.href = "listademembrosadm.php";
+            }else{
+                alert("Preencha todos os campos.")
+            }
+        }
+    </script>
     <?php include('../templates/footerUser.php'); ?>   
 </body>
 </html>

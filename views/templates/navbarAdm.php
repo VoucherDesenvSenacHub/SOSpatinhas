@@ -129,7 +129,7 @@
                 <div></div>
             </div>
 
-            <a class="navbar-logo" href="#">
+            <a class="navbar-logo" href="PerfilADM.php">
                 <img src="../images/profileADM.png" alt="Login">
             </a>
         </div>

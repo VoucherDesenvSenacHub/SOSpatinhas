@@ -26,8 +26,8 @@
                 <div class="metas">
                     <span><b>Meta: R$ 1.000,00.</b></span> 
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Nina</h3>
@@ -38,8 +38,8 @@
                 <div class="metas">
                 <span><b>Meta: R$ 2.500,00.</b></span> 
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Cascudo</h3>
@@ -50,8 +50,8 @@
                 <div class="metas">
                     <span><b>Meta: R$ 2.500,00.</b></span>  
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Luke</h3>
@@ -62,8 +62,8 @@
                 <div class="metas">
                     <span><b>Meta: R$ 870,00.</b></span>  
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Hulk</h3>
@@ -74,8 +74,8 @@
                 <div class="metas">
                     <span><b>Meta: R$ 1.200,00.</b></span>  
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="arrecadacao">
                 <h3>Godinho</h3>
@@ -86,11 +86,11 @@
                 <div class="metas">
                     <span><b>Meta: R$ 720,00.</b></span>  
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="botao-add-container">
-                <a href="adicionar-animal.php"><button class="botao-add">+</button></a>
+                <a href="cadastrarArrecadacao-ADM.php"><button class="botao-add">+</button></a>
             </div>
         </div>
         <div class="cta-slide">
@@ -134,6 +134,24 @@
                 valorAtual++;
                 activeLink();
             }
+        });
+
+        let botaoDeletar = document.querySelectorAll('.arrecadacao #btnExcluir');
+
+        botaoDeletar.forEach(button => {
+            button.addEventListener('click', function() {
+            let animalDiv = this.parentElement;
+            animalDiv.remove();
+            alert('Animal excluído com sucesso!');
+            });
+        });
+
+        let botaoEditar = document.querySelectorAll('.arrecadacao #btnEditar');
+
+        botaoEditar.forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = "editarArrecadacao-ADM.php";
+            });
         });
     </script>
 

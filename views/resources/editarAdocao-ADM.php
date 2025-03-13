@@ -59,7 +59,7 @@
                     </div>
                     <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
         
-                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="adicionar()">Salvar</button>
                     <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
                 </div>
             </div>
@@ -68,6 +68,15 @@
     </section>
 
     <script>
+        function adicionar(){
+            if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
+                alertalert("Update realizado com sucesso!")
+                window.location.href = "listaAdocao-ADM.php";
+            }else{
+                alert("Preencha todos os campos.")
+            }
+        }
+
         document.getElementById('image').addEventListener('change', function (event) {
             const filePreview = document.getElementById('filePreview');
             filePreview.innerHTML = ""; 

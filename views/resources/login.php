@@ -22,7 +22,7 @@
                     <a href="./loginEsqSenha.php" class="esc_senha">Esqueci a senha</a>
                     <button type="submit" value="login"><a href="./perfilUsuario.php">Login</a></button>
                 </form>
-                <p>Não tem uma conta? <a href="cadastrar_conta"> Cadastrar</a></p>
+                <p>Não tem uma conta? <a href="cadastroUsuario.php"> Cadastrar</a></p>
                 <div class="login-social">
                     <div id="divSpan">
                         <hr>

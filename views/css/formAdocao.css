@@ -53,7 +53,7 @@ input[type="checkbox"] {
     font-size: 16px;
 }
 
-button[type="submit"] {
+button[type="button"] {
     width: 100%;
     background-color: #44803F;
     color: white;
@@ -64,7 +64,7 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button[type="button"]:hover {
     background-color: #41773c;
 }
 

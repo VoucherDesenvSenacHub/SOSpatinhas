@@ -200,6 +200,7 @@ nav {
         padding: 10px;
         border-radius: 6px;
         font-size: 24px;
+        cursor: pointer;
     }
 }
 

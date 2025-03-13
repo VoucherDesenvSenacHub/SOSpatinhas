@@ -18,14 +18,35 @@
                 <h2>Esqueci a senha</h2>
                 <p>Não se preocupe! Um link será enviado na sua caixa de entrada.</p>
                 <form>
-                    <input type="email" placeholder="Email">
-                    <button type="submit" value="enviar"><a href="./confirmacaoEmail.php">Enviar</a></button>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <button type="button" value="enviar" onclick="adicionar()">Enviar</button>
                 </form>
             </div>
         </section>
 
     </section>
+    <script>
+        function adicionar(){
+            let input = document.getElementById('email');
 
+            function emailValido(email) {
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailPattern.test(email);
+            }
+
+            if (input.value.trim() == "") {
+                alert("Preencha todos os campos.");
+                return;
+            }
+
+            if (input.value.trim() !== "" && emailValido(input.value) == false) {
+                alert("Por favor, insira um e-mail válido.");
+                return;
+            }
+
+            window.location.href = "confirmacaoEmail.php";
+        }
+    </script>
     <?php include('../templates/footerUser.php')?>
 </body>
 </html>

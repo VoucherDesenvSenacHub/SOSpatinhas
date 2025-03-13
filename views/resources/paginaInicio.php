@@ -78,21 +78,36 @@
                 <img src="../images/imgcard1.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Faça uma doação!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                        <input 
+                            type="button" 
+                            value="Saiba Mais!" 
+                            scr="" 
+                            class="buttoncard" 
+                            onclick="window.location.href = 'comoAjudar.php'">
                     </div>
             </div>
             <div class="card">
                 <img src="../images/imgcard2.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Participe dos nossos eventos!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                        <input 
+                            type="button" 
+                            value="Saiba Mais!" 
+                            scr="" 
+                            class="buttoncard" 
+                            onclick="window.location.href = 'eventos.php'">
                     </div>
             </div>
             <div class="card">
                 <img src="../images/imgcard3.png" alt="Imagem Card">
                     <div class="ctdcard">
                         <p class="textcard">Adote um amigo!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
+                        <input 
+                            type="button" 
+                            value="Saiba Mais!" 
+                            scr="" 
+                            class="buttoncard" 
+                            onclick="window.location.href = 'adocao.php'">
                 </div>
             </div>
         </section>

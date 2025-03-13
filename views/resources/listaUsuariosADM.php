@@ -69,6 +69,24 @@
                     activeLink();
                 }
             });
+
+            let botaoDeletar = document.querySelectorAll('.membro #btnExcluir');
+
+            botaoDeletar.forEach(button => {
+                button.addEventListener('click', function() {
+                let animalDiv = this.parentElement;
+                animalDiv.remove();
+                alert('Membro excluído com sucesso!');
+                });
+            });
+
+            let botaoEditar = document.querySelectorAll('.membro #btnVer');
+
+            botaoEditar.forEach(button => {
+                button.addEventListener('click', function() {
+                    window.location.href = "perfilUsuario.php";
+                });
+            });
         </script>
     </section>
 

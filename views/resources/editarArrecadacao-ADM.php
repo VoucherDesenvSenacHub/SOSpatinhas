@@ -40,7 +40,7 @@
                     </div>
                     <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
         
-                    <button type="submit">Adicionar</button>
+                    <button type="button" onclick="adicionar()">Adicionar</button>
                     <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
                 </div>
             </div>
@@ -49,6 +49,15 @@
     </section>
 
     <script>
+        function adicionar(){
+            if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
+                alert("Update realizado com sucesso!")
+                window.location.href = "listaArrecadacoesADM.php";
+            }else{
+                alert("Preencha todos os campos.")
+            }
+        }
+
         function updateFileName() {
             const input = document.getElementById("qrCodePix");
             const label = document.getElementById("qrCodeLabel");

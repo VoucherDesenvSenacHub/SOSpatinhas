@@ -24,8 +24,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
         
             <div class="membro">
@@ -35,8 +35,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
         
 
@@ -48,8 +48,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
        
 
@@ -61,8 +61,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
         
 
@@ -74,8 +74,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
         
 
@@ -87,8 +87,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
         
 
@@ -100,8 +100,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
         
 
@@ -113,8 +113,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
         
 
@@ -126,8 +126,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
        
 
@@ -139,8 +139,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
         
 
@@ -152,8 +152,8 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
 
             
@@ -164,11 +164,11 @@
                     <div></div>
                     <span>Online</span>
                 </div>
-                <button>Excluir</button>
-                <button>Editar</button>
+                <button id="btnExcluir">Excluir</button>
+                <button id="btnEditar">Editar</button>
             </div>
             <div class="botao-add-conteiner">
-                <a href="adicionar-membro.php"><button class="botao-add">+</button></a>
+                <a href="cadastrarMembroADM.php"><button class="botao-add">+</button></a>
             </div>
         </div>
 
@@ -216,6 +216,24 @@
                 activeLink();
             }
         });
+
+        let botaoDeletar = document.querySelectorAll('.membro #btnExcluir');
+
+            botaoDeletar.forEach(button => {
+                button.addEventListener('click', function() {
+                let animalDiv = this.parentElement;
+                animalDiv.remove();
+                alert('Membro excluído com sucesso!');
+                });
+            });
+
+            let botaoEditar = document.querySelectorAll('.membro #btnEditar');
+
+            botaoEditar.forEach(button => {
+                button.addEventListener('click', function() {
+                    window.location.href = "editarPerfilMembro.php";
+                });
+            });
     </script>
 
 <?php include_once "../templates/footerAdm.php"; ?>

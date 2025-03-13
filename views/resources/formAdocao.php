@@ -90,9 +90,18 @@
             <label for="termo">Compreendo e aceito os Termos de Compromisso</label>
         </div>
 
-        <button type="submit" name="enviar">Enviar</button>
+        <button type="button" name="enviar" onclick="adicionar()">Enviar</button>
     </section>
-
+    <script>
+        function adicionar(){
+            if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
+                alert("Formulário enviado com sucesso!")
+                window.location.href = "adocao.php";
+            }else{
+                alert("Preencha todos os campos.")
+            }
+        }
+    </script>
     <?php include('../templates/footerUser.php')?>
 </body>
 </html>

@@ -91,10 +91,19 @@
 
     $itensPorPag = 9;
     $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
-    $offset = ($paginaAtual - 1) * $itensPorPag; 
+    $offset = ($paginaAtual - 1) * $itensPorPag;
+    
     $registrosTotal = count($filteredAnimals);
     $totalPag = ceil($registrosTotal / $itensPorPag);
     $rowAnimal = array_slice($filteredAnimals, $offset, $itensPorPag);
+    
+    if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
+        foreach ($rowAnimal as $animal) {
+            include('../templates/animalCard.php'); 
+        }
+        exit; 
+    }
+    ?>
 ?>
 
 <!DOCTYPE html>
@@ -103,11 +112,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="../css/adocao.css">
+    <!-- <link rel="stylesheet" href="../css/adocao.css"> -->
 </head>
+
 <body>
-    <?php include ('../templates/navbarUser.php') ?>
-    
+<?php
+    $cssLink  = '../css/adocao.css';
+    $tipo = 'User';
+    include('../templates/default/topHTML.php');
+?>
 
     <section class="corpo container">
         <section class="top-texts">
@@ -177,32 +190,25 @@
         </div>
 
 
-
-
-
-
-        
         <div class="paginacao">
             <?php
-            // Se não estiver na primeira página, exibe o link "Anterior"
             if ($paginaAtual > 1) {
-                echo '<a href="?pagina=' . ($paginaAtual - 1) . '">&lt; Anterior</a>';
+                echo '<a href="?pagina=' . ($paginaAtual - 1) . '">&lt; </a>';
             }
 
-            // Exibe os links para cada página
             for ($i = 1; $i <= $totalPag; $i++) {
                 if ($i == $paginaAtual) {
-                    // Página atual recebe uma classe especial
+
                     echo '<a href="?pagina=' . $i . '" class="active">' . $i . '</a>';
                 } else {
-                    // Link para as outras páginas
+
                     echo '<a href="?pagina=' . $i . '">' . $i . '</a>';
                 }
             }
 
             // Se não estiver na última página, exibe o link "Próxima"
             if ($paginaAtual < $totalPag) {
-                echo '<a href="?pagina=' . ($paginaAtual + 1) . '">Próxima &gt;</a>';
+                echo '<a href="?pagina=' . ($paginaAtual + 1) . '"> &gt;</a>';
             }
             ?>
         </div>
@@ -210,31 +216,42 @@
 
 
 
-        
-                <div class="vermais">
-                    <?php if ($paginaAtual < $totalPag) : ?>
-                        <button id="btnVerMais" data-proxima="<?= $paginaAtual + 1 ?>">Ver Mais</button>
-                    <?php endif; ?>
-                </div>
+        <div class="vermais">
+            <?php if ($paginaAtual < $totalPag) : ?>
+                <button id="btnVerMais" data-proxima="<?= $paginaAtual + 1 ?>">Ver Mais</button>
+            <?php endif; ?>
+        </div>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                let btnVerMais = document.getElementById("btnVerMais");
+        document.addEventListener("DOMContentLoaded", function () {
+        let btnVerMais = document.getElementById("btnVerMais");
 
-                if (btnVerMais) {
-                    btnVerMais.addEventListener("click", function () {
-                        let proximaPagina = btnVerMais.getAttribute("data-proxima");
-                        
-                        // Redireciona para a próxima página com PHP
-                        window.location.href = "?pagina=" + proximaPagina;
-                    });
-                }
+        if (btnVerMais) {
+            btnVerMais.addEventListener("click", function () {
+                let proximaPagina = btnVerMais.getAttribute("data-proxima");
+
+                fetch("?pagina=" + proximaPagina + "&ajax=1")
+                    .then(response => response.text())
+                    .then(data => {
+
+                        document.querySelector(".card-container").insertAdjacentHTML('beforeend', data);
+
+                        let novaPagina = parseInt(proximaPagina) + 1;
+                        btnVerMais.setAttribute("data-proxima", novaPagina);
+
+                        if (novaPagina > <?= $totalPag ?>) {
+                            btnVerMais.style.display = "none";
+                        }
+                    })
+                    .catch(error => console.error("Erro ao carregar mais itens:", error));
             });
-        </script>
+        }
+    });
+</script>
 
        
 
     </section>
-    <?php include ('../templates/footerUser.php') ?>
+    <?php include('../templates/default/bottomHTML.php'); ?>
 </body>
 </html>

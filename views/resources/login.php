@@ -24,9 +24,10 @@
                 </form>
                 <p>Não tem uma conta? <a href="cadastroUsuario.php"> Cadastrar</a></p>
                 <div class="login-adm">
-                        <a href="./loginADM.php">
-                              <img src="../images/iconeADM.png" alt="acesso-adm">
-                        </a>
+                    <img src="../images/iconeADM.png" alt="acesso-adm " id="icone-adm">
+                    <a href="./loginADM.php" id="acesso-adm">Acesso Admin</a>
+                </div>
+                  
         </section>
     </section>
         

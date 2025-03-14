@@ -1,6 +1,8 @@
 #contentEditarPerfil{
     display: flex;
     gap: 3rem;
+    margin-top: 1px;
+    margin-bottom: 15rem;
 }
 
 #divForm{

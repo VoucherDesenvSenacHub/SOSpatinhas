@@ -1,14 +1,16 @@
 .conteudo{
     display: flex;
     flex-direction: row;
-    gap: 5rem;
-    margin: 5rem 5rem;
+    column-gap: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 19px;
 }
 
 .col{
     display: flex;
     flex-direction: column;
-    width: 37rem;
+    width: 34rem;
     align-items: center;
 }
 
@@ -20,7 +22,7 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    width: 37rem;
+    width: 34rem;
 }
 
 #imgUpload{

@@ -52,6 +52,7 @@
   margin-bottom: 26px;
   display: flex;
   gap: 2rem;
+
 }
 .box2{
   display: flex;
@@ -237,11 +238,48 @@
   .card-container{
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .filter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;}
+
   .form-filter{
-    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+   
   }
+
+  .filter-button{
+   margin-left: 18px;
+   padding-right: 90px;
+   
+  }
+
+  .card-animal{
+   
+    width: 270px;
+    height: 370px;
+   
+  }
+  
+  .front-card{
+  
+    width: 270px;
+    height: 370px;
+  }
+  
+
   .box2{
-    margin-bottom: 16px;
+   width: 100%;
+   margin-left: 100px;
+   padding-left: 55px;
   }
   
 
@@ -261,33 +299,27 @@
   }
   .box2{
     width: 100%;
-    margin-left: 68px;
+    margin-left: 53px;
+    
   }
-  .filter{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 25px;
-    & .form-filter{
-      display: flex;
-      margin: 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    } & .filter-button{
+  
+  /* .filter-button{
       align-self: auto;
       width: 82%;
-    }
+    } */
+  
+  .form-filter{
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    
   }
   .paginacao{
     display: none;
   }
 
-
-
   #btnVerMais {
     display: inline-block;
     
 }
-} 
+}

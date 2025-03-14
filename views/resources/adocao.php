@@ -108,6 +108,7 @@
 <?php
     $cssLink  = '../css/adocao.css';
     $tipo = 'User';
+
     include('../templates/default/topHTML.php');
 ?>
 
@@ -231,6 +232,8 @@
             });
         }
     });
+
+
 </script>
 
 <?php

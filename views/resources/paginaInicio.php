@@ -7,47 +7,7 @@
         <link rel="stylesheet" href="../css/paginaInicio.css">
     </head>
     <body class ="pagina-inicio">
-        <!-- <?php include('../templates/navbarUser.php'); ?> -->
-
-        <header id="header">
-            <nav class="navbar">
-                <a class="navbar-logo" href="./paginaInicio.php">
-                    <img src="../images/Logo_Footer.png" alt="Logo">
-                </a>
-
-                <ul class="nav-links">
-                    <a href="./blog.php">Blog</a>
-                    <a href="./quemSomos.php">Quem Somos</a>
-                    <a href="./comoAjudar.php">Como Ajudar</a>
-                    <a href="./eventos.php">Eventos</a>
-                    <a href="./adocao.php">Adoção</a>
-                    <a href="./login.php">Login</a>
-                </ul>
-
-                <div class="nav-right">
-                    <div class="hamburger" onclick="toggleMenu()">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="mobile-menu">
-                <a href="./blog.php">Blog</a>
-                <a href="./quemSomos.php">Quem Somos</a>
-                <a href="./comoAjudar.php">Como Ajudar</a>
-                <a href="./adocao.php">Adoção</a>
-                <a href="./eventos.php">Eventos</a>
-            </div>
-
-            <script>
-                function toggleMenu() {
-                    const mobileMenu = document.querySelector('.mobile-menu');
-                    mobileMenu.classList.toggle('show');
-                }
-            </script>
-        </header>
+       <?php include('../templates/navbarUser.php'); ?>
 
         <section id="bannerMobas">
             <div class="imgBanner">

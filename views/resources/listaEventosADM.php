@@ -1,6 +1,6 @@
 <?php
   $cssLink  = '../css/listaEventosADM.css';
-  $tipo = 'Adm'
+  $tipo = 'Adm';
   include('../templates/default/topHTML.php');
 ?>
 <h1>Lista de Eventos</h1>

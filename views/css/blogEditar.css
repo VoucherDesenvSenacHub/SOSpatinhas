@@ -1,3 +1,10 @@
+.corpo-desktop{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+}
+
 .btnEditar, .btnEditarM{
     position: absolute;
     cursor: pointer;

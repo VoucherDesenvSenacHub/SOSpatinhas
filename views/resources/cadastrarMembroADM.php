@@ -1,6 +1,6 @@
 <?php
     $cssLink  = '../css/cadastrarMembroADM.css';
-    $tipo = 'Adm'
+    $tipo = 'Adm';
     include('../templates/default/topHTML.php');
 ?>
 

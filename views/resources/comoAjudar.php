@@ -1,6 +1,6 @@
 <?php
   $cssLink  = '../css/comoAjudar.css';
-  $tipo = 'User'
+  $tipo = 'User';
   include('../templates/default/topHTML.php');
 ?>
 

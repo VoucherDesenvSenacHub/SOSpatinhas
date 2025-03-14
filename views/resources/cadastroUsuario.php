@@ -60,6 +60,6 @@
             }
         }
     </script>
-    <?php include('../templates/footerUser.php')?>
 </body>
+<?php include('../templates/footerUser.php')?>
 </html> 

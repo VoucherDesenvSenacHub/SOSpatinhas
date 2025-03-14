@@ -1,17 +1,15 @@
 <div class="carousel-container" id="carousel-<?php echo $carouselId; ?>">
     <div class="carousel-track">
-        <?php 
+    <?php 
         $totalCards = count($cardComponents);
-        for ($i = $totalCards - 3; $i < $totalCards; $i++) {
-            echo "<div class='carousel-item'>" . $cardComponents[$i] . "</div>";
-        }
+        $loopItems = array_merge(
+            array_slice($cardComponents, -3), 
+            $cardComponents,      
+            array_slice($cardComponents, 0, 3) 
+        );
 
-        foreach ($cardComponents as $card) {
+        foreach ($loopItems as $card) {
             echo "<div class='carousel-item'>$card</div>";
-        }
-
-        for ($i = 0; $i < 3; $i++) {
-            echo "<div class='carousel-item'>" . $cardComponents[$i] . "</div>";
         }
         ?>
     </div>
@@ -37,9 +35,9 @@
 
         function updateCarousel() {
             visibleCards = getVisibleCards();
-            itemWidth = carouselContainer.offsetWidth / visibleCards;
-            items.forEach(item => item.style.flex = `0 0 ${itemWidth}px`);
-            index = visibleCards; 
+            itemWidth = Math.floor(carouselContainer.clientWidth / visibleCards);
+            items.forEach(item => item.style.width = `${itemWidth}px`);
+            index = visibleCards;
             carouselTrack.style.transform = `translateX(${-index * itemWidth}px)`;
         }
 

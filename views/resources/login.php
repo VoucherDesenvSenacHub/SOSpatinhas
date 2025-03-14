@@ -23,21 +23,10 @@
                     <button type="submit" value="login"><a href="./perfilUsuario.php">Login</a></button>
                 </form>
                 <p>Não tem uma conta? <a href="cadastroUsuario.php"> Cadastrar</a></p>
-                <div class="login-social">
-                    <div id="divSpan">
-                        <hr>
-                        <span>Ou entre usando</span>
-                        <hr>
-                    </div>
-
-                    <div class="rede-social">
-                        <img src="../images/google.png" alt="Google">
-                        <img src="../images/facebook_azul.png" alt="Facebook">
-                        <img src="../images/apple.png" alt="apple">
-                    </div>
-                </div>
-                <a href="./loginADM.php" id="acesso-adm">Acesso Admin</a>
-            </div>
+                <div class="login-adm">
+                        <a href="./loginADM.php">
+                              <img src="../images/iconeADM.png" alt="acesso-adm">
+                        </a>
         </section>
     </section>
         

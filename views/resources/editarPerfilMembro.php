@@ -4,37 +4,38 @@
   include('../templates/default/topHTML.php');
 ?>
 
-        <div id="contentEditarPerfil">
-            <div id="divForm">
-                <form id="formEditarPerfilMembro">
-                    <input class="inputPerfil" type="text" placeholder="  Nome ">
-                    <input class="inputPerfil" type="text" placeholder="  E-mail  ">
-                    <input class="inputPerfil" type="text" placeholder="  Número Telefone/Celular  ">
-                    <input class="inputPerfil" type="text" placeholder="  Senha  ">
-                </form>
-            </div>
-            <div id="divButtons">
-                <div id="editarFoto">
-                    <img id="fotoMembro" src="../images/fotoPerfilMembro.png" alt="icone foto do Membro">
-                    <button id="buttonEditarFoto">+</button>
-                </div>
-
-                <a href="#"><button class="buttonsPerfil" id="buttonSalvar" onclick="adicionar()">Salvar</button></a>
-                <a href="listademembrosadm.php"><button class="buttonsPerfil" id="buttonCancelar">Cancelar</button></a>
-            </div>
-
+<div id="contentEditarPerfil">
+    <div id="divForm">
+        <form id="formEditarPerfilMembro">
+            <input class="inputPerfil" type="text" placeholder="  Nome ">
+            <input class="inputPerfil" type="text" placeholder="  E-mail  ">
+            <input class="inputPerfil" type="text" placeholder="  Número Telefone/Celular  ">
+            <input class="inputPerfil" type="text" placeholder="  Senha  ">
+        </form>
+    </div>
+    <div id="divButtons">
+        <div id="editarFoto">
+            <img id="fotoMembro" src="../images/fotoPerfilMembro.png" alt="icone foto do Membro">
+            <button id="buttonEditarFoto">+</button>
         </div>
-    </section>
-    <script>
-        function adicionar(){
-            if([...document.querySelectorAll("#formEditarPerfilMembro input")].every(input => input.value.trim() !== "")){
-                alert("Update realizado com sucesso!")
-                window.location.href = "listademembrosadm.php";
-            }else{
-                alert("Preencha todos os campos.")
-            }
+
+        <a href="#"><button class="buttonsPerfil" id="buttonSalvar" onclick="adicionar()">Salvar</button></a>
+        <a href="listademembrosadm.php"><button class="buttonsPerfil" id="buttonCancelar">Cancelar</button></a>
+    </div>
+
+</div>
+
+<script>
+    function adicionar(){
+        if([...document.querySelectorAll("#formEditarPerfilMembro input")].every(input => input.value.trim() !== "")){
+            alert("Update realizado com sucesso!")
+            window.location.href = "listademembrosadm.php";
+        }else{
+            alert("Preencha todos os campos.")
         }
-    </script>
-    <?php include('../templates/footerUser.php'); ?>   
-</body>
-</html>
+    }
+</script>
+
+<?php
+    include('../templates/default/bottomHTML.php');
+?>

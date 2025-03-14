@@ -3,6 +3,7 @@
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
 ?>
+<body>
 <section class="carroseis">
   <div class="carouselEquipe">
     <div class="imagemEquipe">
@@ -21,7 +22,7 @@
 
             $cardComponents = $cardComponentEquipe;
             $carouselId = 'carouselEquipe';
-            @include('../templates/carossel.php');
+            @include_once('../templates/carossel.php');
         ?>
       </div>
   </div>
@@ -47,5 +48,6 @@
 </section>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+  include('../templates/modalEditar.php');
+  include('../templates/default/bottomHTML.php');
 ?>

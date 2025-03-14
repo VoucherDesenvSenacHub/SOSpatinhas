@@ -1,21 +1,9 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-</style>
- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS PATINHAS</title>
-    <link rel="stylesheet" href="../css/blog.css">
-    <script src="../script/blog.js"></script>
-</head>
-<body>
-    <?php 
-    include('../templates/navbarUser.php') 
-    ?>
-    <section class="corpo container">
+<?php
+    $cssLink  = '../css/blog.css';
+    $tipo = 'User';
+    include('../templates/default/topHTML.php');
+?>
+
         <div class="principal">
 
             <div class="grandin" id="cima">

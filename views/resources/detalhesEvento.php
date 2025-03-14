@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="../css/detalhesEvento.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
-</head>
-<body>
-    <?php include('../templates/navbarUser.php')?>
-
-    <section class="corpo container" >
+<?php
+  $cssLink  = '../css/detalhesEvento.css';
+  $tipo = 'User'
+  include('../templates/default/topHTML.php');
+?>
       <div class="conteudo">
 
         <div class="slideshow-container">

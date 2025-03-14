@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="../css/listaUsuariosADM.css">
-</head>
-<body>
-    <?php include("../templates/navbarAdm.php")?>
-
-    <section class="corpo conteiner">
+<?php
+  $cssLink  = '../css/listaUsuariosADM.css';
+  $tipo = 'Adm'
+  include('../templates/default/topHTML.php');
+?>
     <h1>Lista de Usuários</h1>
         <div class="pesquisar">
             <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">

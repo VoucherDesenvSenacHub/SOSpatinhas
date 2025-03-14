@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php
+  $cssLink  = '../css/comoAjudar.css';
+  $tipo = 'User'
+  include('../templates/default/topHTML.php');
+?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sos Patinhas</title>
-  <link rel="stylesheet" href="../css/comoAjudar.css">
-</head>
-
-<body>
-
-  <?php
-  include('../templates/navbarUser.php');
-  ?>
-  
-  <section class="corpoContainer">
     <section class="pontoArrecadacao">
       <div class="infoDestaque">
         <div class="imgPontoArrecadacao">

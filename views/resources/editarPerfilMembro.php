@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="../css/editarPerfilMembro.css">
-</head>
-<body>
-    <?php include('../templates/navbarAdm.php'); ?>
-
-    <section id="corpocontainer">
+<?php
+  $cssLink  = '../css/editarPerfilMembro.css';
+  $tipo = 'Adm'
+  include('../templates/default/topHTML.php');
+?>
 
         <div id="contentEditarPerfil">
             <div id="divForm">

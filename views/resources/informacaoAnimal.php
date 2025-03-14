@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOS Patinhas</title>
-  <link rel="stylesheet" href="../css/informacaoAnimal.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-<?php include('../templates/navbarUser.php')?>
+<?php
+  $cssLink  = '../css/informacaoAnimal.css';
+  $tipo = 'User'
+  include('../templates/default/topHTML.php');
+?>
+
   <div class="container">
     <a class="back-link" href="#">
       <i class="fas fa-arrow-left"></i>

@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sos Patinhas</title>
-  <link rel="stylesheet" href="../css/comoAjudarEditavel.css">
-</head>
-
-<body>
-
-  <?php
-    include('../templates/navbarAdm.php');
-  ?>
-  
-  <section class="corpoContainer">
+<?php
+  $cssLink  = '../css/comoAjudarEditavel.css';
+  $tipo = 'Adm'
+  include('../templates/default/topHTML.php');
+?>
     <section class="pontoArrecadacao">
       <div class="infoDestaque">
         <div class="imgPontoArrecadacao">

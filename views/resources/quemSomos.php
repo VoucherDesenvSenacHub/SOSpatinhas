@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça nossa equipe e nossos parceiros. Somos uma equipe dedicada a fornecer soluções inovadoras para nossos clientes.">
-    <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="../css/quemSomos.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
-</head>
-<body>
-  <?php include('../templates/navbarUser.php'); ?>
-  
-<section class="corpo container">
+<?php
+  $cssLink  = '../css/quemSomos.css';
+  $tipo = 'Adm';
+  include('../templates/default/topHTML.php');
+?>
   <section class="carroseis">
     <div class="carouselEquipe">
       <div class="imagemEquipe">

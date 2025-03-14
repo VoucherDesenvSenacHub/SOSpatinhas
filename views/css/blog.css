@@ -1,7 +1,6 @@
 .corpo-desktop{
     display: flex;
     flex-direction: row;
-    gap: 5rem;
 }
 
 .principal {
@@ -20,6 +19,9 @@
  
 .ladin {
     text-align: center;
+    display: flex;
+    width: 500px;
+    height: 300px;
 }
  
 h2 {
@@ -45,11 +47,21 @@ h2 {
 
 #maus_tratos {
     margin-top: 10px;
+    display: flex;
 
 }
 
 #pit {
     margin-top: 55px;
+    display: flex;
+}
+.img-ladin{
+    width: 200px;
+    height: 200px;
+}
+.img-first{
+    width: 500px;
+    height: 400px;
 }
 
 

@@ -11,44 +11,7 @@ body{
 
 }
 
-/* --- Header --- */
-#header{
-    background-color: #44803f;
-    height: 150px;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#header img{
-    height: 100px;
-    width: auto;
-    padding-right: 100px;
-    margin-right: 100px;
-}
 
-nav{
-    position: sticky;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-right: 200px;
-}
-nav ul{
-    padding-left: 50px;
-}
-.nav-links a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 8px 16px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 550;
-}
-.nav-links a:hover, .nav-links a:active{
-    border-bottom: 1px solid #ffffff;
-}
 
 /* --- Slider --- */
 #secslider {
@@ -78,6 +41,7 @@ nav ul{
     height: 72px;
     position: absolute;
     right: 1px;
+    top: 2px;
     cursor: pointer;
 }
 

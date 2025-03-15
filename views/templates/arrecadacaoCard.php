@@ -1,5 +1,5 @@
 <div id="cardArrecadacao">
-    <img src="../images/eventosImg/eventos2.png" alt="">
+    <img src="../images/eventosImg/eventos2.png" alt="Imagem do Cachorro Freguês">
     <div id="bottomContent">
         <div id="tituloBarra">
             <h1>Ajude o Fregês</h1>
@@ -28,7 +28,7 @@
 
 #cardArrecadacao img {
     width: 97%;
-    height: 24rem;
+    height: 23rem;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -48,6 +48,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+#tituloBarra h1{
+    font-size: 22px;
 }
 
 #barraProgresso {
@@ -86,5 +90,43 @@
     text-decoration: none;
     font-size: 18px;
 }
+
+@media (max-width: 1024px) {
+    #tituloBarra h1 {
+        font-size: 20px;
+        color:rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #cardArrecadacao img {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #tituloBarra h1 {
+        font-size: 24px;
+        color:rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #cardArrecadacao img {
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 425px) {
+    #tituloBarra h1 {
+        font-size: 24px;
+        color:rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding-left: 16%;
+    }
+    #cardArrecadacao img {
+        width: 23rem;
+        height: 23rem;
+    }
+}
+
 
 </style>

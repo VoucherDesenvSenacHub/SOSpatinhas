@@ -3,25 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Editar Página de Inicio</title>
+        <title>SOS Patinhas</title>
         <link rel="stylesheet" href="../css/editarPaginaInicio.css">
     </head>
     <body>
-        <header id="header">
-            <nav class="navbar">
-                <a class="navbar-logo" href="./paginaInicio.php">
-                <img src="../images/logobranca.png" alt="Logo SOSPatinhas">
-                </a>
-
-                <ul class="nav-links">.
-                    <a class="link-navbar" href="blog">Blog</a>
-                    <a class="link-navbar" href="quemSomos">Quem Somos</a>
-                    <a class="link-navbar" href="comoAjudar">Como Ajudar</a>
-                    <a class="link-navbar" href="eventos">Eventos</a>
-                    <a class="link-navbar" href="adocao">Adoção</a>
-                </ul>
-            </nav>
-        </header>
+        <?php include('../templates/navbarUser.php'); ?>
 
         <section id="bannerMobas">
             <div class="imgBanner">

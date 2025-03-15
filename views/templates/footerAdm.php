@@ -1,4 +1,5 @@
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
     footer {
         text-align: center;
         padding: 3px;
@@ -119,3 +120,4 @@
         <a href="#">Termos e Condições</a>
     </ul>
 </footer>
+

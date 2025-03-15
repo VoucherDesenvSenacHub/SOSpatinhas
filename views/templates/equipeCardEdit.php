@@ -1,6 +1,6 @@
 <div class="cardIntegranteEquipe">
     <img src="../images/sophia.png" alt="Integrante da equipe">
-    <img src="../images/btnEditar.png" alt="" id="btn">
+    <img src="../images/btnEditar.png" alt="" class="btn-card-equipe">
     <div id="nomeIntegrante">Sophia Silva</div>
 </div>
 
@@ -32,11 +32,11 @@
     text-align: center;
 }
 
-#btn {
+.cardIntegranteEquipe .btn-card-equipe {
     position: absolute;
     top: 10px;  
     right: 1px; 
-    width: 30px; 
+    width: 50px;
     cursor: pointer; 
 }
 </style>

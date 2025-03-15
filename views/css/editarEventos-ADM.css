@@ -1,48 +1,31 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: rgb(198, 225, 196);
-    background-image: url("../images/Patinhas.png");
-    background-size: 50%;
-}
-
-.container {
-    max-width: 1500px;
-    margin: auto;
-    padding: 12px;
-}
-
-.corpo {
-    background-color: white;
-    width: 100%;
-    max-width: 1500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
 .conteudoForm {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    /* width: 90%; */
     padding: 20px;
-    column-gap: 20rem;
+    column-gap: 5rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
 
-.col1, .col2 {
+.col1 {
+    display: flex;
+    flex-direction: column;
+    width: 37rem;
+    align-items: center;
+}
+.col2{
     display: flex;
     flex-direction: column;
     width: 488px;
     align-items: center;
 }
+/* .col1, .col2 {
+    display: flex;
+    flex-direction: column;
+    width: 488px;
+    align-items: center;
+} */
 
 input, textarea {
     width: 100%;
@@ -67,7 +50,7 @@ button {
     cursor: pointer;
 }
 
-button[type="submit"], .cancelarBtn {
+button[type="button"], .cancelarBtn {
     background-color: #83CE7D;
     color: white;
     margin-top: 1rem;

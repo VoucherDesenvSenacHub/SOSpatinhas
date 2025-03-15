@@ -15,17 +15,24 @@
 
         <section class="secao-login">
             <div class="login">
-                <h2>Login</h2>
+                <h2>Nova Senha</h2>
                 <form>
-                    <input type="email" placeholder="Digitar nova senha">
+                    <input type="password" placeholder="Digitar nova senha">
                     <input type="password" placeholder="Confirmar senha">
-                    <button type="submit" value="login"><a href="./login.php">Enviar</a></button>
+                    <button type="button" value="enviar" onclick="adicionar()">Enviar</button>
                 </form>
-                <p>Não tem uma conta?<a href="cadastrar_conta">  Cadastrar</a></p>
             </div>
         </section>
     </section>
-        
+    <script>
+        function adicionar(){
+            if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
+                window.location.href = "login.php";
+            }else{
+                alert("Insira uma nova senha.")
+            }
+        }
+    </script>
     <?php include('../templates/footerUser.php')?>
 </body>
 </html>

@@ -1,35 +1,11 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(198, 225, 196);
-    background-image: url(../images/Patinhas.png);
-    background-size: 50%;
-}
-
-#corpocontainer {
-    max-width: 1500px;
-    margin: 0 auto;
-    background-color: #fff;
-    width: 100%;
-    height:522px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 #perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+#perfil2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +20,20 @@ body {
     gap: 1rem;
 }
 
+#iconscontainers{
+
+    display:flex;
+    flex-direction: row;
+    gap:5rem;
+}
+
 #contentInfosMembro{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#contentInfosMembro2{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -75,10 +64,11 @@ body {
 }
 .titulos{
     font-size: 24px;
+    font-weight:bold;
 }
 .conteudoTitulos{
     font-size: 20px;
-    color: #272727;
+    color: #696969;
 }
 
 @media (max-width: 768px){

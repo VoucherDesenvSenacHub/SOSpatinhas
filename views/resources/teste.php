@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    ---hello
+    <?php 
+        $link = "./paginaInicio.php";
+        $titulo = "Login";
+        include("../templates/componenteButton.php"); 
+    ?>
 </body>
 </html>

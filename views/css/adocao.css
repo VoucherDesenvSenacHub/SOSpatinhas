@@ -1,30 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-body{
-  background-color: rgb(198, 225, 196);
-  background-image: url("../images/Patinhas.png");
-  background-size: 50%;
-}
-.container{
-  max-width: 1500px;
-  margin: auto;
-  padding: 12px;
-}
-.corpo{
-  background-color: rgb(255, 255, 255);
-  width: 1500px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
 /*--------------------------------------------------------------------------------*/
 .top-texts{
   display: flex;
@@ -79,6 +52,7 @@ body{
   margin-bottom: 26px;
   display: flex;
   gap: 2rem;
+
 }
 .box2{
   display: flex;
@@ -228,6 +202,34 @@ body{
   color: white;
   border-radius: 5px;
 }
+
+
+.vermais {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#btnVerMais {
+  background-color:#4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: none; /* Escondido por padrão */
+}
+
+#btnVerMais:hover {
+  background-color: #C6E1C4;
+
+}
+
+
+
+
+
+
 @media (max-width: 768px){
   .corpo{
     width: 100%;
@@ -236,12 +238,50 @@ body{
   .card-container{
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .filter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;}
+
   .form-filter{
-    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+   
   }
+
+  .filter-button{
+   margin-left: 18px;
+   padding-right: 90px;
+   
+  }
+
+  .card-animal{
+   
+    width: 270px;
+    height: 370px;
+   
+  }
+  
+  .front-card{
+  
+    width: 270px;
+    height: 370px;
+  }
+  
+
   .box2{
-    margin-bottom: 16px;
+   width: 100%;
+   margin-left: 100px;
+   padding-left: 55px;
   }
+  
 
 }
 
@@ -259,24 +299,27 @@ body{
   }
   .box2{
     width: 100%;
+    margin-left: 53px;
+    
   }
-  .filter{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 25px;
-    & .form-filter{
-      display: flex;
-      margin: 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    } & .filter-button{
+  
+  /* .filter-button{
       align-self: auto;
       width: 82%;
-    }
+    } */
+  
+  .form-filter{
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    
+  }
+  .paginacao{
+    display: none;
   }
 
-  
-} 
+  #btnVerMais {
+    display: inline-block;
+    
+}
+}

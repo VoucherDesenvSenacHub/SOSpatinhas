@@ -1,6 +1,6 @@
 <?php
   $cssLink  = '../css/eventos.css';
-  $tipo = 'User';
+  $tipo = $_GET['type'] ?? 'User';
   include('../templates/default/topHTML.php');
 ?>
 

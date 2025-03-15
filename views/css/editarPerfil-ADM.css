@@ -1,39 +1,16 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;    
-    font-family: 'Inter', sans-serif;
-}
-body{
-    background-color: rgb(198, 225, 196);
-    background-image: url("../images/Patinhas.png");
-    background-size: 50%;
-}
-.container{
-    max-width: 1500px;
-    margin: auto;
-    padding: 12px;
-}
-.corpo{
-    background-color: rgb(255, 255, 255);
-    width: 1500px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
 .conteudo{
     display: flex;
     flex-direction: row;
-    gap: 5rem;
-    margin: 5rem 5rem;
+    column-gap: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 19px;
 }
 
 .col{
     display: flex;
     flex-direction: column;
-    width: 37rem;
+    width: 34rem;
     align-items: center;
 }
 
@@ -45,7 +22,7 @@ body{
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    width: 37rem;
+    width: 34rem;
 }
 
 #imgUpload{
@@ -79,7 +56,7 @@ button {
     cursor: pointer;
 }
 
-button[type="submit"], .cancelarBtn {
+button[type="button"], .cancelarBtn {
     background-color: #83CE7D;
     color: white;
     margin-top: 1rem;

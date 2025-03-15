@@ -33,9 +33,9 @@
                 
                 <input type="password" name="senha" placeholder="Senha:" required>
                 <input type="password" name="confirma_senha" placeholder="Confirmar Senha:" required>
-                <button type="submit" name="cadastrar">Cadastrar</button>
+                <button type="button" name="cadastrar" onclick="adicionar()">Cadastrar</button>
             </form>
-            <p>Já tem uma conta? <span>Login</span></p>
+            <p>Já tem uma conta? <a href="login.php">Login</a></p>
 
             <p class="borda-verde">Ou entre usando</p>
 
@@ -49,7 +49,17 @@
             
             
     </section>
-        
-    <?php include('../templates/footerUser.php')?>
+    <script>
+        function adicionar(){
+            if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
+                window.location.href = "login.php";
+                alert("Conta criada com sucesso!")
+                
+            }else{
+                alert("Preencha todos os campos.")
+            }
+        }
+    </script>
 </body>
+<?php include('../templates/footerUser.php')?>
 </html> 

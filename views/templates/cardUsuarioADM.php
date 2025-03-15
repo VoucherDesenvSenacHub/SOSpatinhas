@@ -5,5 +5,6 @@
         <div></div>
         <span>Online</span>
     </div>
-    <button>Excluir</button>
+    <button id="btnExcluir">Excluir</button>
+    <button id="btnVer">Ver</button>
 </div>

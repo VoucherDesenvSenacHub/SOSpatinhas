@@ -2,12 +2,14 @@
     padding: 0;
     margin: 0;
     border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
-    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -21,7 +23,8 @@ body{
 }
 
 /* Cria o fundo branco na área de login */
-.login {
+.login {  
+   
     background-color: white;
     padding: 40px;
     border-radius: 16px;
@@ -119,10 +122,10 @@ body{
     text-decoration: underline;
 }
 
-.login-social img{
+.login-adm img{
     height: 30px;
 }
-.login-social span{
+.login-adm span{
     color: #9B9B9B;
 }
 

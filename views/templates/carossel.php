@@ -59,10 +59,27 @@
             }, 500);
         }
 
+        // Função de troca de imagem automática
+        function autoMoveSlide() {
+            moveSlide(1);
+        }
+
         updateCarousel();
 
-        carouselContainer.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
-        carouselContainer.querySelector('.next').addEventListener('click', () => moveSlide(1));
+        let intervaloImagem = setInterval(autoMoveSlide, 5000);
+
+        carouselContainer.querySelector('.prev').addEventListener('click', () => {
+            moveSlide(-1);
+            clearInterval(intervaloImagem); 
+            intervaloImagem = setInterval(autoMoveSlide, 5000);
+        });
+
+        carouselContainer.querySelector('.next').addEventListener('click', () => {
+            moveSlide(1);
+            clearInterval(intervaloImagem);
+            intervaloImagem = setInterval(autoMoveSlide, 5000);
+        });
+
         window.addEventListener('resize', updateCarousel);
     })();
 </script>
@@ -77,11 +94,10 @@
     }
     .carousel-track {
         display: flex;
-        transition: transform 0.5s ease-in-out;
     }
     .carousel-item {
         flex: 0 0 auto;
-        transition: transform 0.3s ease; 
+        transition: transform 2s ; 
     }
     .prev, .next {
         position: absolute;

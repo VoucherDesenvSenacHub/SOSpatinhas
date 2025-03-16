@@ -29,6 +29,21 @@ function gerarCardArrecadacao($nome, $imagem, $progresso, $meta) {
     ';
 }
 
+function gerarCardEventos($nome, $imagem, $data, $local) {
+    echo '
+        <div class="Card">
+            <h3>'.$nome.'</h3>
+            <img src="'.$imagem.'" alt="Imagem do evento">
+            <div class="localizacao">
+                <img src="../images/pin_info.png" alt="Localização">
+                <span>'.$local.'</span> 
+            </div>
+            <button class="btnExcluir">Excluir</button>
+            <button class="btnEditar">Editar</button>
+        </div>
+    ';
+}
+
 ?>
 
 <style>
@@ -73,7 +88,7 @@ function gerarCardArrecadacao($nome, $imagem, $progresso, $meta) {
 }
 
 .Card .meta {
-    font-size: 1em;  /* Diminua caso esteja muito grande */
+    font-size: 1em;  
     background-color: #83CE7D;
     color: black;
     border-radius: 15px;
@@ -81,25 +96,25 @@ function gerarCardArrecadacao($nome, $imagem, $progresso, $meta) {
     justify-content: center;
     align-items: center;
     margin: 5px;
-    padding: 8px 10px; /* Ajuste menor */
+    padding: 8px 10px; 
 }
 
 
 
 .divImg {
     width: 100%;
-    height: 250px; /* Mesmo valor da imagem */
+    height: 250px; 
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Para evitar que a imagem ultrapasse */
+    overflow: hidden; 
 }
 
 .divImg img {
     width: 100%;
-    height: 100%; /* Garantir que a imagem ocupe todo o espaço da div */
-    object-fit: cover; /* Para manter a proporção */
+    height: 100%; 
+    object-fit: cover; 
 }
 
 
@@ -107,7 +122,26 @@ function gerarCardArrecadacao($nome, $imagem, $progresso, $meta) {
     font-weight: bold;
     font-size: 1em;
     position: absolute;
-    bottom: 10px; /* Ajuste fino */
+    bottom: 10px; 
     color: white;
 }
+
+.Card .localizacao{
+    font-size: 14px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.Card .localizacao img {
+    margin-top: 12px;
+    width: 18px;
+    height: 25px;
+}
+
 </style>

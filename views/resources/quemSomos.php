@@ -1,6 +1,6 @@
 <?php
   $cssLink  = '../css/quemSomos.css';
-  $tipo = 'Adm';
+  $tipo = 'User';
   include('../templates/default/topHTML.php');
 ?>
 

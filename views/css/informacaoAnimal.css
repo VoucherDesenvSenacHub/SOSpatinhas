@@ -18,17 +18,19 @@
   margin-bottom: 16px;
   color: #000;
   text-decoration: none;
+  margin-right:95% ;
 }
 
-.back-link i {
-  margin-right: 8px;
-}
 
+img.Voltar{
+  width: 60%;
+  height: 60%;
+}
 
 .profile {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 36px;
 }
 
 .profile-images {
@@ -44,15 +46,16 @@
 
 .gallery {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   object-fit: fill;
+  margin-left: 18%;
 }
 
 .gallery-img {
-  width: calc(33.33% - 5.33px);
+  width: calc(25.33% - 2.33px);
   object-fit: fill;
-}
 
+}
 
 .profile-details {
   flex: 2;
@@ -61,40 +64,56 @@
 .profile-details h1 {
   font-size: 2.25rem;
   font-weight: bold;
-  margin-bottom: -15px;
+  margin-bottom: 5px;
+  display: flex;
 }
 
 .submitted-by {
   color: #10b981; 
   font-size: 1rem;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+img.Icon{
+  width: 28px;
+  height: 28px;
+  margin: -2px 0px 0px 10px;
 }
 
 .profile-details h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
 }
 
 .profile-details p {
-  margin-bottom: 16px;
+  margin-bottom: 36px;
+  padding: initial;
+  
 }
 
 
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
+  flex-wrap:  wrap;
+  gap: 5px;
+  margin-bottom: 30px;
+  padding: 20px ;
+  display: inline-flex;
+  padding: initial;
 }
 
 .tags span {
   background: #bbf7d0; 
   color: #065f46;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  font-size: 0.875rem;
+  padding: 4px 5px;
+  border-radius: 99px;
+  font-size: 0.975rem;
+  padding: 15px;
+  
+
 }
 
 
@@ -103,9 +122,9 @@
   color: #fff;
   font-size: 1.125rem;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 8px 36px;
   border: none;
-  border-radius: 9999px;
+  border-radius: 99px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -156,6 +175,11 @@
     }
     .gallery {
       flex-wrap: wrap;
+    }
+
+    .img.Voltar{
+      width: 20px;
+      height: 20px;
     }
 
   }

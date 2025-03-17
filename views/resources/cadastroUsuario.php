@@ -1,3 +1,50 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome= trim($_POST['nome']);
+    $cpf= trim($_POST['cpf']);
+    $rg= trim($_POST['rg']);
+    $email= trim($_POST['email']);
+    $dtNasc= trim($_POST['dtNasc']);
+    $ddd= trim($_POST['ddd']);
+    $telefone= trim($_POST['telefone']);
+    $senha= trim($_POST['senha']);
+
+    $usersFile = '../script/userData.json';
+    $users = [];
+
+    if (file_exists($usersFile)) {
+        $jsonData = file_get_contents($usersFile);
+        $users = json_decode($jsonData, true);
+    }
+
+    foreach ($users as $user) {
+        if ($user['email'] === $email) {
+            echo "Email já cadastrado.";
+            exit();
+        }
+    }
+
+    $hashedPassword = password_hash($senha, PASSWORD_DEFAULT);
+
+    $novoUser  = [
+        'nome' => $nome,
+        'cpf' => $cpf,
+        'rg' => $rg,
+        'email' => $email,
+        'dtNasc' => $dtNasc,
+        'ddd' => $ddd,
+        'telefone' => $telefone,
+        'senha' => $hashedPassword
+    ];
+
+    $users[] = $novoUser ;
+
+    file_put_contents($usersFile, json_encode($users, JSON_PRETTY_PRINT));
+
+    header('Location: login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,53 +60,35 @@
     
     <section class="corpo-container">
         <h1>Cadastro</h1>
-            <form method="POST" action="" class="form">
-                <input type="text" name="nome" placeholder="Nome Completo*" required>
-                
-                <div class="divInputs">
-                    <input type="text" name="cpf" placeholder="CPF*" required>           
-                    <input type="text" name="rg" placeholder="RG*" required>
-                </div>
-                
-                <div class="divInputs">
-                    <input type="email" name="email" placeholder="Email*" required>
-                    <input type="date" name="data_nascimento" placeholder="Data de Nascimento*" required>
-                </div>
-                
-                <div id="divTelefone">
-                    <input id="inputDDD" type="text" name="ddd" placeholder="DDD*" required>
-                    <input id="inputTelefone" type="text" name="telefone" placeholder="Telefone*" required>
-                </div>
-                
-                <input type="password" name="senha" placeholder="Senha:" required>
-                <input type="password" name="confirma_senha" placeholder="Confirmar Senha:" required>
-                <button type="button" name="cadastrar" onclick="adicionar()">Cadastrar</button>
-            </form>
-            <p>Já tem uma conta? <a href="login.php">Login</a></p>
-
-            <p class="borda-verde">Ou entre usando</p>
-
-            <div class="img-container">
-                <div class="icons">
-                    <img src="../images/google.png">
-                    <img src="../images/facebook_azul.png">
-                    <img src="../images/apple.png">
-                </div>
+        <form method="POST" action="" class="form" id="formCadastro">
+            <input type="text" name="nome" placeholder="Nome Completo*" required>
+            
+            <div class="divInputs">
+                <input type="text" name="cpf" placeholder="CPF*" required>           
+                <input type="text" name="rg" placeholder="RG*" required>
             </div>
             
+            <div class="divInputs">
+                <input type="email" name="email" placeholder="Email*" required>
+                <input type="date" name="dtNasc" placeholder="Data de Nascimento*" required>
+            </div>
             
+            <div id="divTelefone">
+                <input id="inputDDD" type="text" name="ddd" placeholder="DDD*" required>
+                <input id="inputTelefone" type="text" name="telefone" placeholder="Telefone*" required>
+            </div>
+            
+            <input type="password" name="senha" placeholder="Senha:" required>
+
+            <?php
+                $funcaoClick = "submitComValidacao('formCadastro')";
+                $titulo = "Cadastrar";
+                include('../templates/componenteButton.php');
+            ?>
+        </form>
+        <p>Já tem uma conta? <a href="login.php">Login</a></p>
+   
     </section>
-    <script>
-        function adicionar(){
-            if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
-                window.location.href = "login.php";
-                alert("Conta criada com sucesso!")
-                
-            }else{
-                alert("Preencha todos os campos.")
-            }
-        }
-    </script>
 </body>
 <?php include('../templates/footerUser.php')?>
 </html> 

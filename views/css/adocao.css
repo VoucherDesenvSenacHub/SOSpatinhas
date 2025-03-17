@@ -57,6 +57,7 @@
 .box2{
   display: flex;
   align-items: center;
+  margin-top: 26px;
 }
 
 .filter-option:hover{
@@ -210,13 +211,14 @@
 }
 
 #btnVerMais {
-  background-color:#4CAF50;
-  color: white;
+  background-color:#44803F;
+  font-size: 20px;
+  color: #ffffff;
+  /* font-weight: 600; */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
   display: none; /* Escondido por padrão */
 }
 
@@ -298,8 +300,8 @@
     margin-bottom: 3rem;
   }
   .box2{
-    width: 100%;
-    margin-left: 53px;
+    
+    margin-left: 70px;
     
   }
   

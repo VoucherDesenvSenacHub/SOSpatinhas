@@ -5,6 +5,7 @@ function gerarCard($nome, $imagem) {
         <div class="Card">
             <h3>'.$nome.'</h3>
             <img src="'.$imagem.'" alt="'.$nome.'">
+            <div></div>
             <button class="btnExcluir">Excluir</button>
             <button class="btnEditar">Editar</button>
         </div>
@@ -55,7 +56,6 @@ function gerarCardEventos($nome, $imagem, $data, $local) {
     transition: transform 0.2s;
     text-align: center;
 }
-
 
 .Card:hover {
     transform: scale(1.05);

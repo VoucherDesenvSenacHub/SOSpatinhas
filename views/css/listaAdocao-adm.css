@@ -44,15 +44,7 @@ h1 {
     position: relative;
 }
 
-.animal {
-    padding: 20px;
-    transition: transform 0.2s;
-    border-radius: 10px;
-}
 
-.animal:hover {
-    transform: scale(1.05);
-}
 
 
 

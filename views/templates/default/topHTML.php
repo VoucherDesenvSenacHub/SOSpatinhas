@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,9 +22,13 @@
             background-image: url("../images/Patinhas.png");
             background-size: 50%;
             background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .container {
+            flex: 1;
             max-width: 1500px;
             margin: auto;
             padding: 12px;
@@ -57,6 +62,10 @@
             body {
                 background-size: 70%;
             }
+
+            .sidebar{
+                display: none;
+            }
         }
 
         @media (max-width: 425px) {
@@ -68,9 +77,19 @@
             body {
                 background-size: 100%; 
             }
+
+            .sidebar{
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
 <?php include('../templates/navbar'.$tipo.'.php'); ?>
+
+<?php if ($tipo == "Adm"): ?>
+<?php include('../templates/sidebarAdm.php'); ?>
+<?php endif; ?>
+    
+
 <section class="corpo container" >

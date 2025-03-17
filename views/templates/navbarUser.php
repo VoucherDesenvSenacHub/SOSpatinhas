@@ -28,7 +28,6 @@
         text-decoration: none;
         color: black;
         padding: 8px 16px;
-        font-family: 'Inter', sans-serif;
         font-weight: 550;
         transition: 0.3s;
     }
@@ -61,7 +60,7 @@
     .mobile-menu {
         display: none;
         position: fixed;
-        top: 0;
+        top: 60px;
         right: 0;
         width: 100%;
         height: 100vh;
@@ -70,7 +69,7 @@
         flex-direction: column;
         align-items: center;
         padding-top: 80px;
-        z-index: 999;
+        z-index: 1300;
     }
 
     .mobile-menu a {
@@ -91,6 +90,11 @@
         display: flex;
     }
 
+    #btnLoginRegister{
+        display: flex;
+        
+    }
+
     @media (max-width: 768px) {
         .nav-links {
             display: none;
@@ -105,6 +109,8 @@
         background-color: #C6E1C4 !important;
     }
 </style>
+
+<?php $taLogado = isset($_SESSION['taLogado']) && $_SESSION['taLogado'] === true; ?>
 
 <nav class="navbar">
     <a class="navbar-logo" href="./paginaInicio.php">
@@ -126,9 +132,26 @@
             <div></div>
         </div>
 
-        <a class="navbar-logo" href="login.php">
-            <img src="../images/Icon_Login.png" alt="Login">
-        </a>
+        <?php if ($taLogado): ?>
+            <a class="navbar-logo" href="perfilUsuario.php">
+                <img src="../images/Icon_Login.png" alt="Login">
+            </a>
+        <?php else: ?>
+            <div id="btnLoginRegister">
+                <?php
+                    // btn Entrar
+                    $funcaoClick = "redirecionar('login.php')";
+                    $titulo = "Entrar";
+                    $funcaoLoad = "mudarTamanho('142px', '42px', '16px')";
+                    include('../templates/componenteButton.php');
+                
+                    // btn Cadastro
+                    $funcaoClick = "redirecionar('login.php')";
+                    $titulo = "Cadastrar";
+                    include('../templates/componenteButton.php');
+                ?>
+            </div>
+        <?php endif; ?>
     </div>
 </nav>
 

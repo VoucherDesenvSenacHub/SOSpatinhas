@@ -1,16 +1,13 @@
+#frmCadastroAdocao{
+    width: 100%;
+}
+
 .conteudoForm {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     padding: 20px;
-    column-gap: 20rem;
-}
-
-.col1, .col2 {
-    display: flex;
-    flex-direction: column;
-    width: 488px;
-    align-items: center;
+    column-gap: 10rem;
 }
 
 input, textarea {
@@ -50,6 +47,13 @@ button a{
     height: 100%;
 }
 
+.col1, .col2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
 .QRCode-container {
     height: 50px;
     display: flex;
@@ -58,7 +62,7 @@ button a{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 508px;
+    width: 100%;
     text-align: center;
     margin-bottom: 1rem;
     background: white;
@@ -189,17 +193,41 @@ button a{
 .remove-file {
     margin-top: 5px;
 }
+.conteudoForm {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    column-gap: 3rem;
+}
 
+@media (max-width: 1024px) {
+    #frmCadastroAdocao{
+        width: 100%;
+    }
 
+    .conteudoForm {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        column-gap: 2rem;
+    }
 
+    .col1, .col2 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+    }
+    .QRCode-container {
+        width: 100%;
+    }
+}
 
 @media (max-width: 768px) {
     body{
         background-size: 80%;
-    }
-    
-    .corpo{
-        width: 85%;
     }
 
     .conteudoForm {
@@ -234,15 +262,7 @@ button a{
 
 }
 
-@media (max-width: 425px) {
-    body{
-        background-size: 130%;
-    }
-    
-    .corpo{
-        width: 87%;
-    }
-
+@media (max-width: 425px) {    
     .conteudoForm {
         flex-direction: column;
         align-items: center;
@@ -272,7 +292,6 @@ button a{
 
     .QRCode-container {
         width: 100%;
-        max-width: 320px;
         flex-direction: column;
         height: auto;
         padding: 15px;

@@ -2,6 +2,7 @@
   $cssLink  = '../css/listamembrosADM.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
+  include ('../templates/cardUsuarioADM.php');
 ?>
 
 <h1>Lista de membros</h1>
@@ -11,156 +12,23 @@
 </div>
 
 <div class="lista-de-membros" id="lista-de-membros">
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Will Smith</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Everton Silva</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
 
 
+    <?php 
+       gerarCardMembros('Will Smith', 'Online');
+       gerarCardMembros('Everton Silva', 'Online');
+       gerarCardMembros('Anthony H. C.', 'Online');  
+       gerarCardMembros('Gustavo O.', 'Online');
+       gerarCardMembros('Kauã Higa', 'Online');
+       gerarCardMembros('Kauã Miguel', 'Online');
+       gerarCardMembros('Pedro Lucas', 'Online');
+       gerarCardMembros('Yasmin Letícia', 'Online');
+       gerarCardMembros('Izabella A.', 'Online');
+       gerarCardMembros('Agatha Arantes', 'Online');
+       gerarCardMembros('Will Smith', 'Online');
+       gerarCardMembros('Fulano', 'Online');
+    ?>
 
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Anthony H. C.</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Gustavo O.</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Kauã Higa</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Kauã Miguel</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Pedro Lucas</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Yasmin Letícia</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Izabella A.</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Agatha Arantes</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-
-
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Will Smith</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-
-    
-    <div class="membro">
-        <img src="../images/iconeADM.png" alt="">
-        <h3>Fulano</h3>
-        <div class="status">
-            <div></div>
-            <span>Online</span>
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
     <div class="botao-add-conteiner">
         <a href="cadastrarMembroADM.php"><button class="botao-add">+</button></a>
     </div>

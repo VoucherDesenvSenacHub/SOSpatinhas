@@ -4,7 +4,7 @@
         background-color: white;
         position: sticky;
         top: 0;
-        width: 100%;
+        /*width: 100%;*/
         padding: 10px 20px;
         display: flex;
         align-items: center;

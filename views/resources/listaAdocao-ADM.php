@@ -14,12 +14,12 @@
 
 <div class="lista-adocao" id="lista-adocao">
     <?php
-        gerarCard("Rochele", "../images/Rectangle 71.png");
-        gerarCard("Toby", "../images/Toby.png");
-        gerarCard("Rumi", "../images/Rumi.png");
-        gerarCard("Nobre", "../images/Nobre.png");
-        gerarCard("Sir Dougg", "../images/Sir Dougg.png");
-        gerarCard("Nigel", "../images/Nigel.png");
+        gerarCard("Rochele", "../images/Rectangle 71.png", "Campo Grande - MS");
+        gerarCard("Toby", "../images/Toby.png", "Campo Grande - MS");
+        gerarCard("Rumi", "../images/Rumi.png", "Campo Grande - MS");
+        gerarCard("Nobre", "../images/Nobre.png", "Campo Grande - MS");
+        gerarCard("Sir Dougg", "../images/Sir Dougg.png", "Campo Grande - MS");
+        gerarCard("Nigel", "../images/Nigel.png", "Campo Grande - MS");
     ?>
     <div class="botao-add-container">
         <a href="cadastrarAdocao-ADM.php"><button class="botao-add">+</button></a>

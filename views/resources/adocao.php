@@ -161,7 +161,11 @@
         </div>
         
         <div class="box2">
-            <input type="submit" value="Filtrar" class="filter-button">
+            <?php
+                $funcaoClick = "submitSimples(filtros)";
+                $titulo = "Filtrar"; 
+                include("../templates/componenteButton.php");
+            ?>
         </div>
     </form>
 </section>

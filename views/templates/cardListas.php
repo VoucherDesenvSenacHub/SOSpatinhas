@@ -5,6 +5,7 @@ function gerarCard($nome, $imagem) {
         <div class="Card">
             <h3>'.$nome.'</h3>
             <img src="'.$imagem.'" alt="'.$nome.'">
+            <div></div>
             <button class="btnExcluir">Excluir</button>
             <button class="btnEditar">Editar</button>
         </div>
@@ -35,7 +36,7 @@ function gerarCardEventos($nome, $imagem, $data, $local) {
             <h3>'.$nome.'</h3>
             <img src="'.$imagem.'" alt="Imagem do evento">
             <div class="localizacao">
-                <img src="../images/pin_info.png" alt="Localização">
+                <img src="../images/icons/iconMarcador2.png" alt="Localização">
                 <span>'.$local.'</span> 
             </div>
             <button class="btnExcluir">Excluir</button>
@@ -55,7 +56,6 @@ function gerarCardEventos($nome, $imagem, $data, $local) {
     transition: transform 0.2s;
     text-align: center;
 }
-
 
 .Card:hover {
     transform: scale(1.05);
@@ -127,15 +127,16 @@ function gerarCardEventos($nome, $imagem, $data, $local) {
 }
 
 .Card .localizacao{
-    font-size: 14px;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 19px;
+    font-size: 18px;
+    background-color: #fff;
+    /* border: 1px solid #44803F; */
+    color: #4caf50;
+    /* border-radius: 5px; */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
 }
 
 .Card .localizacao img {

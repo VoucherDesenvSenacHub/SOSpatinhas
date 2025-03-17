@@ -66,7 +66,7 @@
 
         updateCarousel();
 
-        let intervaloImagem = setInterval(autoMoveSlide, 5000);
+        let intervaloImagem = setInterval(autoMoveSlide, 3000);
 
         carouselContainer.querySelector('.prev').addEventListener('click', () => {
             moveSlide(-1);

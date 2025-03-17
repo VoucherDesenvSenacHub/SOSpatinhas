@@ -1,13 +1,20 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+    footer {
+        width: 100%;
+        position: relative; 
+        z-index: 1200;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    }
+
     .footer-desktop {
         width: 100%;
         background-color: rgb(68, 128, 63);
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
     }
     
     .footer-desktop .container {

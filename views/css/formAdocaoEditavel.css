@@ -60,6 +60,16 @@ body {
     align-items: center;
 }
 
+.redimensionar-top{
+    width:80%;
+    margin-bottom: 30px;
+}
+
+.redimensionar-bottom{
+    width:80%;
+    margin-bottom: 35px;
+}
+
 .corpo {
     background-color: white;
     max-width: 800px;
@@ -80,9 +90,18 @@ p {
     margin-bottom: 15px;
 }
 
+#p-feliz{
+    display: flex;
+    justify-content: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 20px;
 }
 
 input[type="text"],
@@ -121,6 +140,8 @@ label {
     align-items: center;
     gap: 10px; 
     margin: 10px;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .checkbox input[type="checkbox"] {
@@ -208,6 +229,22 @@ input[type="date"]:valid::before {
         cursor: pointer;
     }
 
+    form{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    h1{
+        margin-bottom: 50px;
+    }
+
+    .redimensionar-bottom{
+        width: 100%;
+    }
+    
+    .redimensionar-top{
+        width: 100%;
+    }
 }
 
 @media (max-width: 425px){

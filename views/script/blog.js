@@ -8,15 +8,11 @@ async function obterNoticia() {
         const titulo = document.getElementsByTagName('h2') 
         const imgGrande = document.querySelectorAll('.img-first')
         const imgLado = document.querySelectorAll('.img-ladin')
+        const subTitulo = document.getElementsByTagName('p')
         console.log(imgGrande)
         for (var i = 0; i < 5; i++){
             console.log("1")
         }
-
-        
-        // for (let img of imgGrande){
-        //     img.src = `http://localhost/codez/sospatinhas/views/images/${urlImg}`
-        // }
         
         console.log(titulo)
         const response = await fetch(url);
@@ -32,19 +28,23 @@ async function obterNoticia() {
         let noticia = dataEncurt;
         let imagens = [];
         let titulos = [];
+        let subTitulos = [];
 
         // Armazena URLs das imagens e títulos
         noticia.forEach(not => {
             let urlJSON = not.urlToImage;
             let titleJSON = not.title;
+            let subTitleJSON = not.description;
 
             imagens.push(urlJSON);
             titulos.push(titleJSON);
+            subTitulos.push(subTitleJSON);
         });
 
         // Junta todos os elementos <img> desejados
         const todasImagens = [...imgGrande, ...imgLado]; 
         const todosTitulos = [...titulo]; // Converte `titulo` para array se necessário
+        const todosSubTitulos = [...subTitulo]; // Converte `titulo` para array se necessário
 
         // Atualiza imagens
         todasImagens.forEach((imgDiv, index) => {
@@ -57,6 +57,12 @@ async function obterNoticia() {
         todosTitulos.forEach((titleDiv, index) => {
             if (titulos[index]) {
                 titleDiv.innerText = titulos[index];
+            }
+        });
+
+        todosSubTitulos.forEach((subTitleDiv, index) => {
+            if (subTitulos[index]) {
+                subTitleDiv.innerText = subTitulos[index];
             }
         });
 

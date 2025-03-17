@@ -115,8 +115,8 @@ h1 {
 
 .botao-add-container{
     position: absolute;
-    top: 10px;
-    right: -65px;
+    top: -60px;
+    right: 200px;
 }
 
 .botao-add{
@@ -210,14 +210,11 @@ h1 {
         }
     }
     .botao-add-container{
-        right: 100px;
-        top: 143px;
         position:fixed;
+        top: 140px;
+        right: 8%;
     }
-    .botao-add{
-       
-        position:fixed;
-    }
+
 }
 
 
@@ -234,17 +231,20 @@ h1 {
     .arrecadacao {
         padding: 10px;
     }
-    .pesquisar {
-        width:100%
+    .pesquisar{
+        width: 100%;
+        margin-bottom: 60px;
     }
     .pesquisar input {
         width: 69vw;
         padding: 5px 15px 5px 53px;
     }
     .botao-add-container{
-        right: 74px;
-        top: 260px;
-        position:fixed;
+        position: fixed;
+        left: 360px;
+        bottom: 530px;
+        top:250px;
+        right: unset;
     }
     .cta-slide{
         display: none;

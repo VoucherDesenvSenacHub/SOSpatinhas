@@ -54,18 +54,6 @@ h1 {
     transform: scale(1.05);
 }
 
-.evento .localizacao{
-    font-size: 14px;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 19px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0;
-}
-
 .evento .localizacao img {
     margin-top: 12px;
     width: 18px;
@@ -105,9 +93,9 @@ h1 {
 }
 
 .botao-add-container{
-    position: fixed;
-    top: unset;
-    right: 420px;
+    position: absolute;
+    top: -60px;
+    right: 200px;
 
 }
 
@@ -184,8 +172,16 @@ h1 {
 
 
 @media (max-width: 768px) {
-    .pesquisar{
-        width: 100%;
+    .pesquisar {
+        width: 70vw;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 60px;
+        & input {
+            border: none;
+            box-shadow: none;
+            background: transparent;
+        }
     }
     .lista-eventos {
         display: grid;
@@ -208,13 +204,10 @@ h1 {
                 justify-content: center;
             }
         }
-        .meuJeito{
-            position: relative;
-        }
         .botao-add-container{
             position: fixed;
-            top: unset;
-            right: 9%;
+            top: 140px;
+            right: 8%;
         }
 }
 @media (max-width: 425px) {
@@ -230,14 +223,12 @@ h1 {
         flex-direction: column;
         justify-items: center;   
     }
-    .meuJeito{
-        display: flex;
-    }
+    
     .botao-add-container{
         position: fixed;
-        left: 330px;
+        left: 360px;
         bottom: 530px;
-        top:unset;
+        top:200px;
         right: unset;
     }
     

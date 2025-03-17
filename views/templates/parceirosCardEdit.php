@@ -1,5 +1,5 @@
 <div class="parceirosCard">
-    <img src="../images/btnEditar.png" alt="" id="btn">
+    <img src="../images/btnEditar.png" alt="" class="btn-card-parceiro">
     <img src="../images/Cão.png" alt="Imagem dos nossos parceiros">
 </div>
 
@@ -24,7 +24,7 @@
     
 }
 
-#btn {
+.parceirosCard .btn-card-parceiro {
     position: absolute;
     top: 1px;  
     right: 1px; 

@@ -21,7 +21,7 @@
             }
         }
 
-        echo "ID ou senha inválidos.";
+        
     }
 ?>
 <!DOCTYPE html>

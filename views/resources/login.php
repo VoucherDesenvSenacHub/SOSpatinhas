@@ -1,6 +1,9 @@
 <?php
     session_start();
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'], $_POST['senha'])) {
+        $tentouLogar = true;
+
         $email = trim($_POST['email']);
         $senha = trim($_POST['senha']);
 
@@ -21,7 +24,9 @@
             }
         }
 
-        echo "Email ou senha inválidos.";
+        $_SESSION['erroLogin'] = "Email ou senha inválidos.";
+        header('Location: login.php');
+        exit();
     }
 ?>
 <!DOCTYPE html>
@@ -46,6 +51,10 @@
                     <input type="email" name="email" placeholder="Email">
                     <input type="password" name="senha" placeholder="Senha">
                     <a href="./loginEsqSenha.php" class="esc_senha">Esqueci a senha</a>
+                    <?php if (isset($_SESSION['erroLogin'])): ?>
+                        <p style="color:red;"><?php echo htmlspecialchars($_SESSION['erroLogin']); ?></p>
+                        <?php unset($_SESSION['erroLogin']); ?>
+                    <?php endif; ?>
                     <?php
                         $funcaoClick = "submitComValidacao('formLogin')";
                         $titulo = "Entrar";

@@ -146,7 +146,7 @@
                     include('../templates/componenteButton.php');
                 
                     // btn Cadastro
-                    $funcaoClick = "redirecionar('login.php')";
+                    $funcaoClick = "redirecionar('cadastroUsuario.php')";
                     $titulo = "Cadastrar";
                     include('../templates/componenteButton.php');
                 ?>

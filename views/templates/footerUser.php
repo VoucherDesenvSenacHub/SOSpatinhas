@@ -7,7 +7,10 @@
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
+        position: relative; 
+        z-index: 1200;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
     }
     
     .footer-desktop .container {

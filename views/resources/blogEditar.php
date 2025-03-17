@@ -18,21 +18,21 @@
         </div>
     </div>
     
-    <aside class="sidebar">
+    <aside class="sidebarFoto">
 
         <div class="ladin" id="pit">
             <img src="../images/btnEditar.png" alt="" class="btnEditar">
-            <img src="../images/Rectangle 274.png" alt="Sidebar Image 1">
+            <img src="../images/Rectangle 274.png" alt="SidebarFoto Image 1">
             <h2>Título da Notícia</h2>
         </div>
         <div class="ladin" id="maus_tratos">
             <img src="../images/btnEditar.png" alt="" class="btnEditar">
-            <img src="../images/Rectangle 275.png" alt="Sidebar Image 2">
+            <img src="../images/Rectangle 275.png" alt="SidebarFoto Image 2">
             <h2>Título da Notícia</h2>
         </div>
         <div class="ladin" id="tatu">
             <img src="../images/btnEditar.png" alt="" class="btnEditar">
-            <img src="../images/Rectangle 276.png" alt="Sidebar Image 3">
+            <img src="../images/Rectangle 276.png" alt="SidebarFoto Image 3">
             <h2>Título da Notícia</h2>
         </div>
     </aside>
@@ -52,17 +52,17 @@
 
     <div class="ladin" id="pit">
         <img src="../images/btnEditar.png" alt="" class="btnEditarM">
-        <img src="../images/Rectangle 274.png" alt="Sidebar Image 1">
+        <img src="../images/Rectangle 274.png" alt="SidebarFoto Image 1">
         <h2>Título da Notícia</h2>
     </div>
     <div class="ladin" id="maus_tratos">
         <img src="../images/btnEditar.png" alt="" class="btnEditarM">
-        <img src="../images/Rectangle 275.png" alt="Sidebar Image 2">
+        <img src="../images/Rectangle 275.png" alt="SidebarFoto Image 2">
         <h2>Título da Notícia</h2>
     </div>
     <div class="ladin" id="tatu">
         <img src="../images/btnEditar.png" alt="" class="btnEditarM">
-        <img src="../images/Rectangle 276.png" alt="Sidebar Image 3">
+        <img src="../images/Rectangle 276.png" alt="SidebarFoto Image 3">
         <h2>Título da Notícia</h2>
     </div>
 </section>

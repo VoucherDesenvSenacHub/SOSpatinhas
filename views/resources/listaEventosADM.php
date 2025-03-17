@@ -2,6 +2,7 @@
   $cssLink  = '../css/listaEventosADM.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
+  include('../templates/cardListas.php');
 ?>
 <h1>Lista de Eventos</h1>
 <div class="pesquisar">
@@ -17,67 +18,14 @@
 </div>
 
 <div class="lista-eventos" id="lista-eventos">
-    <div class="evento">
-        <h3>Feira do AuAu</h3>
-        <img src="../images/feiraAuAu.png" alt="Imagem do evento">
-        <div class="localizacao">
-            <img src="../images/pin_info.png" alt="Localização">
-            <span>Horto Florestal</span> 
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-    <div class="evento">
-        <h3>Adote um Amigo</h3>
-        <img src="../images/AdoteAmigo.png" alt="Imagem do evento">
-        <div class="localizacao">
-            <img src="../images/pin_info.png" alt="Localização">
-            <span>Parque dos Poderes</span> 
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-    <div class="evento">
-        <h3>Juntos por Eles</h3>
-        <img src="../images/JuntosPEles.png" alt="Imagem do evento">
-        <div class="localizacao">
-            <img src="../images/pin_info.png" alt="Localização">
-            <span>Bosque dos Ipês</span> 
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-    <div class="evento">
-        <h3>Ajude uma patinha</h3>
-        <img src="../images/AjudeUPatinha.png" alt="Imagem do evento">
-        <div class="localizacao">
-            <img src="../images/pin_info.png" alt="Localização">
-            <span>Parque das Nações</span> 
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-    <div class="evento">
-        <h3>Título</h3>
-        <img src="../images/AjudeUPatinha.png" alt="Imagem do evento">
-        <div class="localizacao">
-            <img src="../images/pin_info.png" alt="Localização">
-            <span>Sem localidade</span> 
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-    <div class="evento">
-        <h3>Título</h3>
-        <img src="../images/AjudeUPatinha.png" alt="Imagem do evento">
-        <div class="localizacao">
-            <img src="../images/pin_info.png" alt="Localização">
-            <span>Sem localidade</span> 
-        </div>
-        <button id="btnExcluir">Excluir</button>
-        <button id="btnEditar">Editar</button>
-    </div>
-    
+    <?php 
+        gerarCardEventos('Feira do AuAu', '../images/feiraAuAu.png', '10/10/2021', 'Horto Florestal');
+        gerarCardEventos('Adote um Amigo', '../images/AdoteAmigo.png', '15/10/2021', 'Parque dos Poderes');
+        gerarCardEventos('Juntos por Eles', '../images/JuntosPEles.png', '20/10/2021', 'Bosque dos Ipês');
+        gerarCardEventos('Ajude uma patinha', '../images/AjudeUPatinha.png', '25/10/2021', 'Parque das Nações');
+        gerarCardEventos('Título', '../images/AjudeUPatinha.png', 'Sem data', 'Sem localidade');
+        gerarCardEventos('Título', '../images/AjudeUPatinha.png', 'Sem data', 'Sem localidade');
+    ?>
 </div>
 <div class="cta-slide">
     <button id="prev" class="pagination-btn">&lt;</button>

@@ -28,7 +28,7 @@
     }
 }
  
-.sidebar {
+.sidebarFoto {
     width: 30%;
     position: relative;
 }
@@ -100,7 +100,7 @@ h2 {
         width: 65%;
         margin-right: 0;
     }
-    .sidebar {
+    .sidebarFoto {
         width: 65%;
     }
     #tatu {

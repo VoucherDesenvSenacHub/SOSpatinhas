@@ -100,7 +100,7 @@ h1 {
 /* cards */
 .membro {
     background: white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 15px;
     width: 200px;
     text-align: center;
@@ -142,7 +142,7 @@ h1 {
     color: white;
     border: none;
     padding: 8px 12px;
-    border-radius: 30px;
+    border-radius: 8px;
     cursor: pointer;
 }
 

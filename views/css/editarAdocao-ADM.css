@@ -1,9 +1,9 @@
 .conteudoForm {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    /* width: 90%; */
     padding: 20px;
-    column-gap: 20rem;
+    column-gap: 10rem;
 }
 
 .col1, .col2 {
@@ -30,19 +30,19 @@ textarea {
 select {
     color: #888;
     cursor: pointer;
-    width: 530px;
+    width: 488px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     background-color: white;
-    padding-right: 40px;
+    padding-right: 30px;
     position: relative;
 }
 
 .selectContainer {
     position: relative;
     display: inline-block;
-    width: 530px;
+    width: 488px;
 }
 
 .selectContainer::after {

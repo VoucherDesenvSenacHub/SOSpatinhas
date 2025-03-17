@@ -34,8 +34,22 @@
             </div>
             <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
 
-            <button type="button" onclick="adicionar()">Adicionar</button>
-            <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
+            <!-- <button type="button" onclick="adicionar()">Adicionar</button>
+            <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button> -->
+
+    <?php
+        $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
+        $funcaoLoad = "mudarTamanho('300px', '44px', '20px')";  //o primeiro valor é a largura, -- é opcional o segundo a altura e o terceiro o tamanho da fonte 
+        $titulo = "Adicionar";           
+        include('../templates/componenteButton.php');
+    ?>
+    <?php
+        $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
+        $funcaoLoad = "mudarTamanho('300px', '44px', '20px')";
+        $titulo = "Cancelar";
+        include('../templates/componenteButton.php');
+    ?>
+
         </div>
     </div>
 

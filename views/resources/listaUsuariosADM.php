@@ -2,6 +2,7 @@
   $cssLink  = '../css/listaUsuariosADM.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
+  include ('../templates/cardUsuarioADM.php');
 ?>
 
 <h1>Lista de Usuários</h1>
@@ -14,7 +15,7 @@
 
     <?php  
         for ($i = 0; $i < 12; $i++){
-            include ('../templates/cardUsuarioADM.php');
+            gerarCardUsuario('Usuário', 'Online');
         }
     ?>
 

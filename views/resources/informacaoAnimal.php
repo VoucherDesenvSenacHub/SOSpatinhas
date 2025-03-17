@@ -6,8 +6,8 @@
 
 <div class="container">
   <a class="back-link" href="#">
-    <i class="fas fa-arrow-left"></i>
-    Voltar
+    <img src="../images/icons/btn_esquerdo.png" 
+       alt="voltar" class="Voltar">
   </a>
   <div class="profile">
     
@@ -18,7 +18,7 @@
       <div class="gallery">
         <img src="../images/rochele.png" 
               alt="rochele 2" class="gallery-img">
-        <img src="../images/anna.png" 
+        <img src="../images/galgo.png" 
               alt="rochele 3 " class="gallery-img">
         <img src="../images/rochele.png" 
               alt="rochele 4" class="gallery-img">

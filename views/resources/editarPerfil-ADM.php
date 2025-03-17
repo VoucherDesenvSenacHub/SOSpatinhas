@@ -15,10 +15,24 @@
         <div class="col">
             <input type="text" name="senha" placeholder="Senha">
             <div id="btn-photo">
-                <div id="btns">
+                <!-- <div id="btns">
                     <button type="button" onclick="adicionar()">Salvar</button>
                     <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
-                </div>
+                </div> -->
+
+    <?php
+        $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
+        $funcaoLoad = "mudarTamanho('100%', '44px', '20px')";  //o primeiro valor é a largura, -- é opcional o segundo a altura e o terceiro o tamanho da fonte 
+        $titulo = "Salvar";           
+        include('../templates/componenteButton.php');
+    ?>
+    <?php
+        $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
+        $funcaoLoad = "mudarTamanho('100%', '44px', '20px')";
+        $titulo = "Cancelar";
+        include('../templates/componenteButton.php');
+    ?>
+
                 <div class="upload-container">
                     <div id="imgUpload">
                         <input type="file" id="image" name="image[]" accept="image/*" hidden>

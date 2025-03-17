@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/editarPaginaInicio.css">
     </head>
     <body>
-        <?php include('../templates/navbarUser.php'); ?>
+        <?php include('../templates/navbarAdm.php'); ?>
 
         <section id="bannerMobas">
             <div class="imgBanner">

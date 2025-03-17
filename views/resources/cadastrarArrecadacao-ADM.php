@@ -7,7 +7,7 @@
 <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
     <div class="conteudoForm">
         <div class="col1">
-            <input type="text" name="titulo" placeholder="Titulo da Arrecadaçãp" required>
+            <input type="text" name="titulo" placeholder="Titulo da Arrecadação" required>
             <input type="text" name="nameAnimal" placeholder="Nome do Animal" required>
             <textarea name="descricao" placeholder="Descrição" required></textarea>
             <input type="text" name="nameUser" placeholder="Nome do Usuário" required>
@@ -29,13 +29,22 @@
                 <label for="image" id="imgLabel" class="upload-box">
                     <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
                     <p>Enviar fotos</p>
-                </label>
+                </label>    
                 <div id="filePreview"></div>
             </div>
             <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
 
-            <button type="button" onclick="adicionar()">Adicionar</button>
-            <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
+            <?php
+            $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
+            $funcaoLoad = "mudarTamanho('400px')";
+            $titulo = "Cadastrar";
+            include('../templates/componenteButton.php');
+
+            $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
+            $funcaoLoad = "mudarTamanho('400px')";
+            $titulo = "Cancelar";
+            include('../templates/componenteButton.php');
+            ?>
         </div>
     </div>
 </form>

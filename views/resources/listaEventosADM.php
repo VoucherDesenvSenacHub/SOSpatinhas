@@ -9,13 +9,7 @@
     <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
     <input type="text" placeholder="Pesquisar">
 </div>
-<div class="meuJeito">
-    <div class="botao-add-container">
-        <a href="cadastrarEventos-ADM.php">
-            <button class="botao-add">+</button>
-        </a>
-    </div>
-</div>
+
 
 <div class="lista-eventos" id="lista-eventos">
     <?php 
@@ -26,6 +20,9 @@
         gerarCardEventos('Título', '../images/AjudeUPatinha.png', 'Sem data', 'Sem localidade');
         gerarCardEventos('Título', '../images/AjudeUPatinha.png', 'Sem data', 'Sem localidade');
     ?>
+    <div class="botao-add-container">
+        <a href="cadastrarEventos-ADM.php"><button class="botao-add">+</button></a>
+    </div>
 </div>
 <div class="cta-slide">
     <button id="prev" class="pagination-btn">&lt;</button>

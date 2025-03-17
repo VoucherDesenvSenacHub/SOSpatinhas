@@ -1,3 +1,29 @@
+<?php
+    session_start();
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $email = trim($_POST['email']);
+        $senha = trim($_POST['senha']);
+
+        $usersFile = '../script/userData.json';
+        $users = [];
+
+        if (file_exists($usersFile)) {
+            $jsonData = file_get_contents($usersFile);
+            $users = json_decode($jsonData, true);
+        }
+
+        foreach ($users as $user) {
+            if ($user['email'] === $email && password_verify($senha, $user['senha'])) {
+                $_SESSION['email'] = $email;
+                $_SESSION['taLogado'] = true;
+                header('Location: perfilUsuario.php');
+                exit();
+            }
+        }
+
+        echo "Email ou senha inválidos.";
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,20 +42,25 @@
         <section class="secao-login">
             <div class="login">
                 <h2>Login</h2>
-                <form action="./paginaInicio.php">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Senha">
+                <form action="" method="POST" id="formLogin">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="senha" placeholder="Senha">
                     <a href="./loginEsqSenha.php" class="esc_senha">Esqueci a senha</a>
-                    <button type="submit" value="login"><a href="./perfilUsuario.php">Login</a></button>
+                    <?php
+                        $funcaoClick = "submitComValidacao('formLogin')";
+                        $titulo = "Entrar";
+                        include('../templates/componenteButton.php');
+                    ?>
                 </form>
                 <p>Não tem uma conta? <a href="cadastroUsuario.php"> Cadastrar</a></p>
                 <div class="login-adm">
-                        <a href="./loginADM.php">
-                              <img src="../images/iconeADM.png" alt="acesso-adm">
-                        </a>
+                    <a href="./loginADM.php">
+                        <img src="../images/iconeADM.png" alt="acesso-adm">
+                    </a>
+                </div>
+            </div>
         </section>
     </section>
-        
     <?php include('../templates/footerUser.php')?>
 </body>
 </html>

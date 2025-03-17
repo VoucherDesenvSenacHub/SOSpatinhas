@@ -10,9 +10,8 @@
 
 
 <button 
-
     onclick = "<?php echo $funcaoClick ?>" 
-    id = "btnComp"
+    class = "btnComp"
     >
 <?php echo $titulo ?></button>
 
@@ -34,9 +33,9 @@
 
     // função para fazer submit dos forms com uma msg personalizada Ex: msg = "talCoisa foi adicionada com sucesso", mais pra frente colocar 
     // uma variavel para saber o nome do form q tem q fazer o submit
-    function adicionarComMsg(msgAdicionar){ // colocar nomeForm depois  
+    function adicionarComValidacao(ValidacaoAdicionar){ // colocar nomeForm depois  
         if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
-            alert($msgAdicionar)
+            alert($ValidacaoAdicionar)
         }else{
             alert("Preencha todos os campos.")
         }
@@ -44,11 +43,23 @@
     }
 
     // função q faz o submit do form, precisa passar o nome do form
-    function adicionarSimples(nomeForm){
+    function submitSimples(nomeForm){
         document.getElementById(nomeForm).submit();
     }
 
-    // é tipo a adicionarComMsg() e cancelarForm() só q especifico pra modal
+    function submitComValidacao(nomeForm){
+        if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
+            document.getElementById(nomeForm).submit();
+        }else{
+            alert("Preencha todos os campos.")
+        }
+    }
+
+    function sair(){
+        window.location.href = "../script/logout.php";
+    }
+
+    // é tipo a adicionarComValidacao() e cancelarForm() só q especifico pra modal
     function btnModal(acao){
         if(acao == 'S'){
             if(![...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
@@ -92,16 +103,17 @@
 
     // função para mudar o width, height e font-size do botão, única função q coloca no $funcaoLoad invês de no funcaoClick
     function mudarTamanho(width, height, fontSize) {
-        const btn = document.getElementById('btnComp');
-        if (btn && btn.id == 'btnComp') {
-            btn.style.width = width || '275px';  
-            btn.style.height = height || '50px'; 
+        document.querySelectorAll('.btnComp').forEach(btn => {
+            btn.style.width = width || '275px';
+            btn.style.height = height || '50px';
             btn.style.fontSize = fontSize || '20px';
-        }else{
+        });
+
+        document.querySelectorAll('.btnSaibaMais').forEach(btn => {
             btn.style.width = width || '150px';  
             btn.style.height = height || '40px'; 
             btn.style.fontSize = fontSize || '18px';
-        }
+        });
     }
     document.addEventListener("DOMContentLoaded", function() {
         <?php 
@@ -112,30 +124,37 @@
         }
         ?>
         
-        const btn = document.getElementById('btnComp');
-        let funcaoClick = btn.getAttribute("onclick");
-        if (funcaoClick && funcaoClick.startsWith("saibaMais")) {
-            btn.id = 'btnSaibaMais'
-        }
+        document.querySelectorAll(".btnComp").forEach(btn => {
+            let funcaoClick = btn.getAttribute("onclick");
+            if (funcaoClick && funcaoClick.startsWith("saibaMais")) {
+                btn.classList.add("btnSaibaMais");
+            }
+        });
 
     });
 </script>
 
 <style>
-    #btnComp {
+    .btnComp{
         border-radius: 12px;
         background-color: #44803F;
         cursor: pointer;
         font-size: 24px;
         color: #ffffff;
         font-weight: 600;
+        margin: 0.5rem;
     }
 
-    #btnSaibaMais{
+    .btnSaibaMais{
         border-radius: 12px;
         cursor: pointer;
         font-size: 24px;
         color: rgb(131, 206, 125);
         font-weight: bold;
+        margin: 0.5rem;
+    }
+
+    .btnComp:hover {
+        background-color:rgb(49, 90, 45);
     }
 </style>

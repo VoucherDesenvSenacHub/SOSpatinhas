@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Teste",
+        "cpf": "07688516102",
+        "rg": "45454545",
+        "email": "loryfpinheiro@gmail.com",
+        "dtNasc": "2025-03-15",
+        "ddd": "67",
+        "telefone": "991929737",
+        "senha": "teste123"
+    },
+    {
+        "nome": "Teste123",
+        "cpf": "07688516102",
+        "rg": "45454545",
+        "email": "lorykpinheiro@gmail.com",
+        "dtNasc": "2025-03-13",
+        "ddd": "67",
+        "telefone": "991929737",
+        "senha": "$2y$10$gk0IPvP\/3Hj6ei\/vt\/nJi.1HTE\/m6OsZ.JitFFbDprgFPpeL6NrXG"
+    }
+]

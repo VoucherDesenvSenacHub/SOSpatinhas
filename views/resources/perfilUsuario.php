@@ -1,4 +1,8 @@
 <?php
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true) {
+    //     header("Location: login.php");
+    //     exit();
+    // }
     $cssLink  = '../css/perfilUsuario.css';
     $tipo = 'User';
     include('../templates/default/topHTML.php');
@@ -8,6 +12,11 @@
     <div id="contentFotoMembro">
         <img id="fotoMembro" src="../images/icons/iconUser.png" alt="icone foto do Usuário">
         <p id="nomeMembro">Will Smith</p>
+        <?php
+            $funcaoClick = "sair()";
+            $titulo = "Sair";
+            include('../templates/componenteButton.php');
+        ?>
     </div>
 
     <div id="iconscontainers">

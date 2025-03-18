@@ -4,6 +4,13 @@
     cursor: pointer;  
 }
 
+.tracinho{
+    background-color: #44803F;
+    height: 0.2px;
+    width: 90%;
+    margin-bottom: 35px;
+}
+
 .p-container {
     display: flex;
     align-items: center; /* Centraliza verticalmente */
@@ -209,6 +216,10 @@ input[type="date"]:valid::before {
         margin: 0;
     }
 
+    .tracinho{
+        width: 100%;
+    }
+
     .p-container {
         position: relative;
         display: flex;
@@ -240,7 +251,7 @@ input[type="date"]:valid::before {
     .redimensionar-top{
         width: 100%;
     }
-
+    
     .botao{
         width: 180px;
         height: 50px;

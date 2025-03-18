@@ -50,6 +50,16 @@
     margin-top: 10px;
 }
 
+.botao{
+    width: 275px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 body {
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
@@ -114,21 +124,6 @@ input[type="checkbox"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-}
-
-button[type="submit"] {
-    width: 100%;
-    background-color: #44803F;
-    color: white;
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #41773c;
 }
 
 label {
@@ -244,6 +239,16 @@ input[type="date"]:valid::before {
     
     .redimensionar-top{
         width: 100%;
+    }
+
+    .botao{
+        width: 180px;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
     }
 }
 

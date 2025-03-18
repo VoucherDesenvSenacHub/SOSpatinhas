@@ -121,13 +121,15 @@
             <label for="termo">Compreendo e aceito os Termos de Compromisso</label>
         </div>
 </div>
-       
-<?php
-        $funcaoClick = "compartilhar()";                             
-        $funcaoLoad = "mudarTamanho('')";                                                                     
-        $titulo = "Enviar";                                           
-        include('../templates/componenteButton.php');
-?>
+
+<div class="botao">
+    <?php
+            $funcaoClick = "compartilhar()";                             
+            $funcaoLoad = "mudarTamanho('100%', '100%')";                                                                     
+            $titulo = "Enviar";                                           
+            include('../templates/componenteButton.php');
+    ?>
+</div>
 
 <?php
     include('../templates/default/bottomHTML.php');

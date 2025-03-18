@@ -45,6 +45,7 @@
             $titulo = "Cancelar";
             include('../templates/componenteButton.php');
             ?>
+            
         </div>
     </div>
 </form>

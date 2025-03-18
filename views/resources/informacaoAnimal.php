@@ -51,8 +51,8 @@
       </div>
 
       <?php
-         $funcaoClick = "compartilhar()";                             
-         $funcaoLoad = "mudarTamanho('142px', '42px', '16px')";     
+         $funcaoClick = "formAdocao.php()";                             
+         $funcaoLoad = "mudarTamanho('146px', '88px', '16px')";     
          $titulo = "Adotar";                                           
          include('../templates/componenteButton.php');
     ?>

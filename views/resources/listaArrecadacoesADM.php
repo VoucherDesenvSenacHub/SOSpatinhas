@@ -14,12 +14,26 @@
 
 <div class="lista-arrecadacoes" id="lista-arrecadacoes">
     <?php
-        gerarCardArrecadacao("Freguês", "../images/listaArrecadacoes-ADM/fregues.png", "Em progresso", "Meta: R$ 1.000,00.");
-        gerarCardArrecadacao("Nina", "../images/listaArrecadacoes-ADM/nina.png", "Em progresso",  "Meta: R$ 2.500,00.");
-        gerarCardArrecadacao("Cascudo", "../images/listaArrecadacoes-ADM/cascudo.png", "Em progresso", "Meta: R$ 2.500,00.");
-        gerarCardArrecadacao("Luke", "../images/listaArrecadacoes-ADM/luke.png", "Em progresso", "Meta: R$ 870,00.");
-        gerarCardArrecadacao("Hulk", "../images/listaArrecadacoes-ADM/hulk.png", "Em progresso", "Meta: R$ 1.200,00.");
-        gerarCardArrecadacao("Godinho", "../images/listaArrecadacoes-ADM/godinho.png", "Em progresso", "Meta: R$ 720,00.");
+        $arrecadacoes = [
+            ["nome" => "Rochele", "imagem" => "../images/Rectangle 71.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Toby", "imagem" => "../images/Toby.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Rumi", "imagem" => "../images/Rumi.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nobre", "imagem" => "../images/Nobre.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Sir Dougg", "imagem" => "../images/Sir Dougg.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+        ];
+
+        $itensPorPagina = 6;
+        foreach ($arrecadacoes as $index => $arrecadacoes) {
+            $pagina = floor($index / $itensPorPagina) + 1;
+            echo '<div class="item-arrecadacao" data-paginas="' . $pagina . '">';
+            gerarCard($arrecadacoes['nome'], $animal['imagem'], $animal['localizacao']);
+            echo '</div>';
+        }
+
     ?>
     <div class="botao-add-container">
         <a href="cadastrarArrecadacao-ADM.php"><button class="botao-add">+</button></a>
@@ -29,9 +43,7 @@
 <div class="cta-slide">
     <button id="prev" class="pagination-btn">&lt;</button>
     <div class="altPag" id="paginacao">
-        <li class="link active" value="1">1</li>
-        <li class="link" value="2">2</li>
-        <li class="link" value="3">3</li>
+        
     </div>
     <button id="next" class="pagination-btn">&gt;</button>
 </div>
@@ -78,6 +90,64 @@
             window.location.href = "editarArrecadacao-ADM.php";
         });
     });
+
+    let paginaAtual = 1;
+    let totalPaginas = 0;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        recalcularPaginacao();
+    });
+
+    function recalcularPaginacao() {
+        const itensPorPagina = 6;
+        const listaAdocao = document.getElementById('lista-arrecadacoes');
+        const itens = listaAdocao.querySelectorAll('.item-arrecadacao');
+        totalPaginas = Math.ceil(itens.length / itensPorPagina);
+
+        itens.forEach((item, index) => {
+            const pagina = math.floor(index / itensPorPagina) + 1;
+            item.setAttribute('data-pagina', pagina);
+        });
+
+        atualizarPaginacao(totalPaginas);
+
+        exibirPagina(paginaAtual);
+    }
+
+    function atualizarPaginacao(totalPaginas) {
+        const paginacao = document.getElementById('paginacao');
+        paginacao.innerHTML = '';
+
+        for (let i = 1; i <= totalPaginas; i++) {
+            cosnt link = document.createElement('li');
+            link.className = 'link' + (i === paginaAtual ? ' active ' : '');
+            link.textContent = i;
+            link.addEventListener('clicl', () => mudarPagina(i));
+            paginacao.appendChild(link);
+        }
+    }
+
+    function exibirPagina(pagina) {
+        const itens = document.querySelectorAll('.item-arrecadacao');
+        itens.forEach((item) => {
+            const paginaItem = parseInt(item.getAttribute('data-pagina'));
+            if (paginaItem === pagina) {
+                item.style.displat = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    function mudarPagina(pagina) {
+        if (pagina < 1 || pagina > totalPaginas) return;
+        paginaAtual = pagina;
+        exibirPagina(paginaAtual);
+        atualizarPaginacao(totalPaginas);
+    }
+
+    document.getElementById('prev').addEventListener('click', function () => mudarPagina(paginaAtual - 1));
+    document.getElementById('next').addEventListener('click', function () => mudarPagina(paginaAtual + 1));
 </script>
 
 <?php

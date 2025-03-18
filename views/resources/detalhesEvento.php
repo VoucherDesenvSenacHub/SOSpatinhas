@@ -81,7 +81,7 @@
     let i;
     let slides = document.getElementsByClassName("slide");
     let dots =  document.getElementsByClassName("botao");
-    if (n > slides.length) {PrimeroSlide = 1}
+    if (n > slides.length) {PrimeiroSlide = 1}
     if (n < 1) {PrimeiroSlide = slides.length}
     for (i = 0; i < slides.length; i++){
       slides[i].style.display = "none";

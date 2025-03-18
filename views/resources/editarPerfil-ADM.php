@@ -22,7 +22,7 @@
 
     <?php
         $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
-        $funcaoLoad = "mudarTamanho('100%', '44px', '20px')";  //o primeiro valor é a largura, -- é opcional o segundo a altura e o terceiro o tamanho da fonte 
+        $funcaoLoad = "mudarTamanho('100%', '44px', '20px')";  
         $titulo = "Salvar";           
         include('../templates/componenteButton.php');
     ?>

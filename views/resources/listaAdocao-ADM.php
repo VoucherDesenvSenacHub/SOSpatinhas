@@ -14,12 +14,25 @@
 
 <div class="lista-adocao" id="lista-adocao">
     <?php
-        gerarCard("Rochele", "../images/Rectangle 71.png", "Campo Grande - MS");
-        gerarCard("Toby", "../images/Toby.png", "Campo Grande - MS");
-        gerarCard("Rumi", "../images/Rumi.png", "Campo Grande - MS");
-        gerarCard("Nobre", "../images/Nobre.png", "Campo Grande - MS");
-        gerarCard("Sir Dougg", "../images/Sir Dougg.png", "Campo Grande - MS");
-        gerarCard("Nigel", "../images/Nigel.png", "Campo Grande - MS");
+        $animais = [
+            ["nome" => "Rochele", "imagem" => "../images/Rectangle 71.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Toby", "imagem" => "../images/Toby.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Rumi", "imagem" => "../images/Rumi.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nobre", "imagem" => "../images/Nobre.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Sir Dougg", "imagem" => "../images/Sir Dougg.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+        ];
+
+        $itensPorPagina = 6; 
+        foreach ($animais as $index => $animal) {
+            $pagina = floor($index / $itensPorPagina) + 1; 
+            echo '<div class="item-adocao" data-pagina="' . $pagina . '">';
+            gerarCard($animal['nome'], $animal['imagem'], $animal['localizacao']);
+            echo '</div>';
+        }
     ?>
     <div class="botao-add-container">
         <a href="cadastrarAdocao-ADM.php"><button class="botao-add">+</button></a>
@@ -29,15 +42,14 @@
 <div class="cta-slide">
     <button id="prev" class="pagination-btn">&lt;</button>
     <div class="altPag" id="paginacao">
-        <li class="link active" value="1">1</li>
-        <li class="link" value="2">2</li>
-        <li class="link" value="3">3</li>
-        <button id="next" class="pagination-btn">&gt;</button>
+       
     </div>
+    <button id="next" class="pagination-btn">&gt;</button>
 </div>
 
 <script>
-    let links = document.querySelectorAll('.link');
+
+let links = document.querySelectorAll('.link');
     let valorAtual = 0;
 
     function activeLink() {
@@ -52,19 +64,7 @@
         });
     });
 
-    document.getElementById('prev').addEventListener('click', function() {
-        if (valorAtual > 0) {
-            valorAtual--;
-            activeLink();
-        }
-    });
-
-    document.getElementById('next').addEventListener('click', function() {
-        if (valorAtual < links.length - 1) {
-            valorAtual++;
-            activeLink();
-        }
-    });
+    
 
     document.querySelectorAll('.btnExcluir').forEach(button => {
         button.addEventListener('click', function() {
@@ -78,6 +78,71 @@
             window.location.href = "editarAdocao-ADM.php";
         });
     });
+
+
+    let paginaAtual = 1;
+    let totalPaginas = 0;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        recalcularPaginacao();
+    });
+
+    
+
+    function recalcularPaginacao() {
+        const itensPorPagina = 6;
+        const listaAdocao = document.getElementById('lista-adocao');
+        const itens = listaAdocao.querySelectorAll('.item-adocao');
+        totalPaginas = Math.ceil(itens.length / itensPorPagina);
+
+        itens.forEach((item, index) => {
+            const pagina = Math.floor(index / itensPorPagina) + 1;
+            item.setAttribute('data-pagina', pagina);
+        });
+
+        
+        atualizarPaginacao(totalPaginas);
+
+        
+        exibirPagina(paginaAtual);
+    }
+
+    function atualizarPaginacao(totalPaginas) {
+        const paginacao = document.getElementById('paginacao');
+        paginacao.innerHTML = '';
+
+        for (let i = 1; i <= totalPaginas; i++) {
+            const link = document.createElement('li');
+            link.className = 'link' + (i === paginaAtual ? ' active' : '');
+            link.textContent = i;
+            link.addEventListener('click', () => mudarPagina(i));
+            paginacao.appendChild(link);
+        }
+    }
+
+    function exibirPagina(pagina) {
+        const itens = document.querySelectorAll('.item-adocao');
+        itens.forEach((item) => {
+            const paginaItem = parseInt(item.getAttribute('data-pagina'));
+            if (paginaItem === pagina) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    function mudarPagina(pagina) {
+        if (pagina < 1 || pagina > totalPaginas) return; // Verifica os limites
+        paginaAtual = pagina;
+        exibirPagina(paginaAtual);
+        atualizarPaginacao(totalPaginas);
+    }
+
+    document.getElementById('prev').addEventListener('click', () => mudarPagina(paginaAtual - 1));
+    document.getElementById('next').addEventListener('click', () => mudarPagina(paginaAtual + 1));
+
+    
 </script>
 
 <?php

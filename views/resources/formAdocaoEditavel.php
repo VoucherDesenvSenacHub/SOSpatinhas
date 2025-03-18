@@ -17,6 +17,7 @@
     Portanto, solicitamos que você responda todas as perguntas com cuidado e atenção. Analisaremos suas respostas minuciosamente e entraremos em contato assim que possível!</p>
 </div>
 
+<div class="tracinho"></div>
 
 <form>
 
@@ -123,8 +124,7 @@
 </div>
 
 <div class="botao">
-    <?php
-            $funcaoClick = "compartilhar()";                             
+    <?php                          
             $funcaoLoad = "mudarTamanho('100%', '100%')";                                                                     
             $titulo = "Enviar";                                           
             include('../templates/componenteButton.php');

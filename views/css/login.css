@@ -145,10 +145,20 @@ hr{
     .login{
         height: auto;    
         border-radius: 0;
-        margin: 0;
+        
+        width: 50%;
+       
     }
 }
 
 @media (max-width: 425px){
+
+   
+    .login{
+
+        width: 65%;
+       
+    }
+   
 
 }

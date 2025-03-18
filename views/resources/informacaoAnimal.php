@@ -18,9 +18,9 @@
       <div class="gallery">
         <img src="../images/rochele.png" 
               alt="rochele 2" class="gallery-img">
-        <img src="../images/galgo.png" 
+        <img src="../images/rochele5.png" 
               alt="rochele 3 " class="gallery-img">
-        <img src="../images/rochele.png" 
+        <img src="../images/rochele6.png" 
               alt="rochele 4" class="gallery-img">
       </div>
 
@@ -49,12 +49,19 @@
         <span>Vermifugado</span>
         <span>Sociável com cachorros</span>
       </div>
-      <button class="adopt-btn">Adotar!</button>
+
+      <?php
+         $funcaoClick = "compartilhar()";                             
+         $funcaoLoad = "mudarTamanho('142px', '42px', '16px')";     
+         $titulo = "Adotar";                                           
+         include('../templates/componenteButton.php');
+    ?>
+
     </div>
   </div>
 </div>
 
-<script>
+<script>  
   document.addEventListener("DOMContentLoaded", () => {
     const backLink = document.querySelector(".back-link");
     if (backLink) {

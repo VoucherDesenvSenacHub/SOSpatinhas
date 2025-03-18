@@ -28,5 +28,15 @@
         "ddd": "067",
         "telefone": "992895662",
         "senha": "$2y$10$FB\/qx2DAfqpAw1DrrWvFwuAshcyJDGUDOODBUe\/vqlOgtQy3Ku896"
+    },
+    {
+        "nome": "ederson123",
+        "cpf": "123456578",
+        "rg": "123424452",
+        "email": "ederson69@gmail.com",
+        "dtNasc": "2025-01-29",
+        "ddd": "67",
+        "telefone": "9993993993",
+        "senha": "$2y$10$OkPjKe3wFqF3A4Y\/hBHyc.8kFjrutbBcGpuRBD7JqbTEXye\/Whn1K"
     }
 ]

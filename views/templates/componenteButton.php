@@ -10,6 +10,7 @@
 
 
 <button 
+    <?php echo !empty($idBtn) ? "id='$idBtn'" : ""; ?>
     onclick = "<?php echo $funcaoClick ?>" 
     class = "btnComp"
     >
@@ -102,18 +103,29 @@
     }
 
     // função para mudar o width, height e font-size do botão, única função q coloca no $funcaoLoad invês de no funcaoClick
-    function mudarTamanho(width, height, fontSize) {
-        document.querySelectorAll('.btnComp').forEach(btn => {
-            btn.style.width = width || '275px';
-            btn.style.height = height || '50px';
-            btn.style.fontSize = fontSize || '20px';
-        });
+    function mudarTamanho(idbtn, width, height, fontSize) {
+        if(typeof idbtn !== "undefined" && idbtn != "idPadrao"){
+            let btnEspecifico = document.getElementById(idbtn);
+            if (btnEspecifico) {  // Ensure element exists before applying styles
+                btnEspecifico.style.width = width;
+                btnEspecifico.style.height = height;
+                btnEspecifico.style.fontSize = fontSize;
+            }
+        }else{
+            document.querySelectorAll('.btnComp').forEach(btn => {
+                btn.style.width = width || '275px';
+                btn.style.height = height || '50px';
+                btn.style.fontSize = fontSize || '20px';
+            });
+    
+            document.querySelectorAll('.btnSaibaMais').forEach(btn => {
+                btn.style.width = width || '150px';  
+                btn.style.height = height || '40px'; 
+                btn.style.fontSize = fontSize || '18px';
+            });
 
-        document.querySelectorAll('.btnSaibaMais').forEach(btn => {
-            btn.style.width = width || '150px';  
-            btn.style.height = height || '40px'; 
-            btn.style.fontSize = fontSize || '18px';
-        });
+        }
+        
     }
     document.addEventListener("DOMContentLoaded", function() {
         <?php 

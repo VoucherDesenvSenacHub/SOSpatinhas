@@ -55,6 +55,8 @@ input{
     color: #ffffff;
     font-weight: 600;
     margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .btnSaibaMais{

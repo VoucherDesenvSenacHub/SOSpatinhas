@@ -1,22 +1,36 @@
+#frmCadastroAdocao {
+    width: 100%;
+}
+
 .conteudoForm {
     display: flex;
     justify-content: space-between;
-    /* width: 90%; */
+    width: 100%;
     padding: 20px;
-    column-gap: 10rem;
+    column-gap: 4rem;
 }
 
-.col1, .col2 {
+.col1{
     display: flex;
     flex-direction: column;
-    width: 488px;
+    width: 100%;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.col2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -10px;
 }
 
 input, textarea, select {
     width: 100%;
     padding: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -30,19 +44,19 @@ textarea {
 select {
     color: #888;
     cursor: pointer;
-    width: 488px;
+    width: 100%;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     background-color: white;
-    padding-right: 30px;
+    padding-right: 40px;
     position: relative;
 }
 
 .selectContainer {
     position: relative;
     display: inline-block;
-    width: 488px;
+    width: 100%
 }
 
 .selectContainer::after {
@@ -89,7 +103,7 @@ select {
     color: white;
 }
 
-button {
+/* button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -110,11 +124,11 @@ button a{
     color: white;
     width: 100%;
     height: 100%;
-}
+} */
 
 .upload-container {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     text-align: center;
 }
 
@@ -146,13 +160,16 @@ button a{
     font-size: 15px;
     color: black;
     margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 #filePreview {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px; 
-    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; 
+    max-width: 600px; 
+    overflow: hidden;
 }
 
 #filePreview.two-column {
@@ -173,7 +190,7 @@ button a{
 }
 
 .file-name {
-    max-width: 150px; 
+    max-width: 200px; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -191,6 +208,7 @@ button a{
     cursor: pointer;
     display: inline-block;
     text-align: center;
+    margin-top: 5px;
 }
 
 .remove-file:hover {
@@ -208,18 +226,48 @@ button a{
     margin-top: 5px;
 }
 
+@media (max-width: 1024px) {
+    #frmCadastroAdocao{
+        width: 100%;
+    }
+
+    .conteudoForm {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        column-gap: 2rem;
+    }
+
+    .col1, .col2 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .switchBtn {
+        width: 100%;
+    }
+}
 
 
 
 @media (max-width: 768px) {
     .corpo{
-        width: 85%;
+        width: 80%;
     }
 
     .conteudoForm {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .col1, .col2 {
@@ -234,17 +282,26 @@ button a{
     .upload-container {
         max-width: 100%;
     }
+    .upload-box {
+        width: 100%;
+    }
+
+    .switchBtn {
+        width: 60%;
+    }
     
 }
 
 @media (max-width: 425px) {
     .corpo{
-        width: 85%;
+        width: 87%;
     }
 
     .conteudoForm {
         flex-direction: column;
         align-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .col1, .col2 {

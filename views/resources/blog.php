@@ -12,21 +12,28 @@
             <img src="../images/Rectangle 272.png" alt="Article Image 1"  class="img-first">
             <div class="titulo">
                 <h2>Título da notícia</h2>
+                <p class="p-none">Display none</p>
             </div>
         </a>    
-        </div>
-        <div class="grandin" id="baixo">
+    </div>
+    <div class="grandin" id="baixo">
         <a href="" class="link-not">
-
+            
             <img src="../images/Rectangle 273.png" alt="Article Image 2"  class="img-first">
             <div class="titulo">
                 <h2>Título da notícia</h2>
+                <p class="p-none">Display none</p>
             </div>
         </a>    
         </div>
     </div>
+    <style>
+        .p-none{
+            display: none;
+        }
+    </style>
     
-    <aside class="sidebar">
+    <aside class="sidebarBlog">
         
         <div class="ladin" id="pit">
         <a href="" class="link-not">
@@ -68,6 +75,7 @@
         <img src="../images/Rectangle 272.png" alt="Article Image 1" class="img-ladin">
         <div class="titulo">
             <h2>Título da notícia</h2>
+            <p>sahudihausd</p>
         </div>
     </a>    
     </div>
@@ -77,6 +85,7 @@
         <img src="../images/Rectangle 273.png" alt="Article Image 2" class="img-ladin">
         <div class="titulo">
             <h2>Título da notícia</h2>
+            <p>asuifhusead</p>
         </div>
     </a>    
     </div>
@@ -87,15 +96,17 @@
         <img src="../images/Rectangle 274.png" alt="Sidebar Image 1" class="img-ladin">
         <div class="titulo">
             <h2>Título da notícia</h2>
+            <p>IODJIOWDOINHQDWION</p>
         </div>
     </a>    
-    </div>
-    <div class="ladin" id="maus_tratos">
+</div>
+<div class="ladin" id="maus_tratos">
     <a href="" class="link-not">
-
+        
         <img src="../images/Rectangle 275.png" alt="Sidebar Image 2" class="img-ladin">
         <div class="titulo">
             <h2>Título da notícia</h2>
+            <p>IODJIOWDOINHQDWION</p>
         </div>
     </a>    
     </div>
@@ -105,10 +116,13 @@
         <img src="../images/Rectangle 276.png" alt="Sidebar Image 3" class="img-ladin">
         <div class="titulo">
             <h2>Título da notícia</h2>
+            <p>fehweihwei</p>
         </div>
     </a>    
     </div>
 </section>
+
+
 <script src="../script/blog.js"></script>
 
 <?php

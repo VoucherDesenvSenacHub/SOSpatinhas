@@ -65,6 +65,10 @@ async function obterNoticia() {
                 subTitleDiv.innerText = subTitulos[index];
             }
         });
+        for (sub of subTitulo){
+            console.log(sub);
+            limitarTexto(sub, 23); // Limite de palavras
+        }
 
 
     }
@@ -72,4 +76,16 @@ async function obterNoticia() {
         console.log("Problem " + e)
     }
 }
+function limitarTexto(elemento, limite) {
+    let palavras = elemento.innerText.split(" ");
+    if (palavras.length > limite) {
+      elemento.innerText = palavras.slice(0, limite).join(" ") + "...";
+    }
+  }
 obterNoticia()
+
+// let paragrafo = document.getElementsByTagName('p');
+// for (sub of paragrafo){
+//     console.log(sub);
+//     limitarTexto(sub, 10); // Limite de 10 palavras
+// }

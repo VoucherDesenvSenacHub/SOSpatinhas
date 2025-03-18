@@ -12,11 +12,11 @@
   <div class="profile">
     
     <div class="profile-images">
-      <img src="../images/rochele.png" 
+      <img src="../images/rocheleInfoAnimal.jpg" 
             alt="rochele 1 " class="main-image">
 
       <div class="gallery">
-        <img src="../images/rochele.png" 
+        <img src="../images/rocheleInfoAnimal.jpg" 
               alt="rochele 2" class="gallery-img">
         <img src="../images/rochele5.png" 
               alt="rochele 3 " class="gallery-img">

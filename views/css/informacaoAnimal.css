@@ -42,6 +42,8 @@ img.Voltar{
   max-width: 300px;
   margin-bottom: 16px;
   object-fit: fill;
+  height: 300px;
+  overflow: hidden;
 }
 
 .gallery {
@@ -49,6 +51,8 @@ img.Voltar{
   gap: 10px;
   object-fit: fill;
   margin-left: 18%;
+  height: 20%;
+  width: 80%;
 }
 
 .gallery-img {
@@ -69,7 +73,7 @@ img.Voltar{
 }
 
 .submitted-by {
-  color: #10b981; 
+  color: #44803F; 
   font-size: 1rem;
   margin-bottom: 20px;
   display: flex;
@@ -81,6 +85,13 @@ img.Icon{
   margin: -2px 0px 0px 10px;
 }
 
+img.User{
+  width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 37%;
+}
+
 .profile-details h2 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -89,10 +100,9 @@ img.Icon{
   display: flex;
 }
 
-.profile-details p {
+.descrição{
   margin-bottom: 36px;
-  padding: initial;
-  
+  text-align: justify;
 }
 
 
@@ -106,8 +116,8 @@ img.Icon{
 }
 
 .tags span {
-  background: #bbf7d0; 
-  color: #065f46;
+  background: #44803F; 
+  color: #fff;
   padding: 4px 5px;
   border-radius: 99px;
   font-size: 0.975rem;
@@ -118,7 +128,7 @@ img.Icon{
 
 
 .adopt-btn {
-  background: #10b981;
+  background: #44803F;
   color: #fff;
   font-size: 1.125rem;
   font-weight: bold;

@@ -29,9 +29,11 @@
       <h1>Rochele</h1>
       <p class="submitted-by">
         <i class="fas fa-user"></i> enviado por Mitski
+        <img src="../images/icons/iconUser.png" 
+        alt="" class="User">
       </p>
       <h2>História</h2>
-      <p>
+      <p class="descrição">
         Olá, me chamo Rochele. Tenho 4 anos, mas se engana quem acha que já estou velha. Isso é puro preconceito.
         Tenho muita energia, sou esperta e vou aprender tudo que me ensinarem. Como todos os outros cães do abrigo,
         ainda tenho esperança de ser adotada.

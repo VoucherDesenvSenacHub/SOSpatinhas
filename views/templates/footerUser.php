@@ -53,7 +53,7 @@
         padding: 3px;
         background-color: rgb(68, 128, 63);
         color: white;
-        width: 100%;
+        /*width: 100%;*/
         position: relative;
         z-index: 1200;
         box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);

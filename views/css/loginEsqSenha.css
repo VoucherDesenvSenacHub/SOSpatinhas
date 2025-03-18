@@ -78,6 +78,7 @@ body{
     /* caso precise arrumar a borda verde, modifique a margin */
     .secao-login{
         width: auto;
+        height: 70vh;
         margin: 80px 50px;     
     }
 

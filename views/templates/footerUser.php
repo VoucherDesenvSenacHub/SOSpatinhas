@@ -175,11 +175,5 @@
                 <a href="https://www.instagram.com">
                     <img src="../images/icons/instagramBranco.png" alt="Instagram">
                 </a>
-        </ul>
-        <ul class="footer-links-bottom">
-            <a href="#">Acessibilidade</a>
-            <a href="#">Política de Privacidade</a>
-            <a href="#">Termos e Condições</a>
-        </ul>
     </div>
 </footer>

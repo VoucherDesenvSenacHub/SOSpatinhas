@@ -115,16 +115,6 @@
 #botaoCompartilhar{
     padding-top: 15px;
 }
-#compartilharArrecadacao{
-    width: 275px;
-    height: 50px;
-    border-radius: 12px;
-    background-color: #44803F;
-    cursor: pointer;
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: 600;
-}
 #textoCompartilhar{
     font-size: 9px;
     font-weight: bold;
@@ -247,7 +237,7 @@
         justify-content: center;
         width: 350px;
         position: absolute;
-        bottom: 290px;
+        bottom: 318px;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -328,7 +318,7 @@
         justify-content: center;
         width: 350px;
         position: absolute;
-        bottom: 360px;
+        bottom: 445px;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;

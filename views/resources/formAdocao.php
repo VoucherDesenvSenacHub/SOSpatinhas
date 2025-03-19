@@ -92,14 +92,15 @@
 
 <div class="botao">
     <?php
-            $funcaoClick = "redirecionar('Adocao.php')";                             
-            $funcaoLoad = "mudarTamanho('100%', '100%')";                                                                     
-            $titulo = "Enviar";                                           
-            include('../templates/componenteButton.php');
+        $idBtn = "btnEnviar";
+        $funcaoClick = "adicionarComValidacao('Formulário eviado com sucesso', 1, 'adocao.php')";                             
+        $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
+        $titulo = "Enviar";                                           
+        include('../templates/componenteButton.php');
     ?>
 </div>
     
-<script>
+<!-- <script>
     function adicionar(){
         if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
             alert("Formulário enviado com sucesso!")
@@ -108,7 +109,7 @@
             alert("Preencha todos os campos.")
         }
     }
-</script>
+</script> -->
 
 <?php
     include('../templates/default/bottomHTML.php');

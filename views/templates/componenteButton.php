@@ -1,18 +1,18 @@
 <!-- Exemplo de como implementar -->
 
 <!--<?php
-        // $funcaoClick = "compartilhar()";                             ---> variavel que chama uma função quando clicar no botão -- é obrigatória
-        // $funcaoLoad = "mudarTamanho('100rem', '10rem', '100px')";    ---> função para mudar o tamanho do botão, o primeiro valor é a largura, -- é opcional
-        //                                                                   o segundo a altura e o terceiro o tamanho da fonte 
-        // $titulo = "teste";                                           ---> variavel que armazena o que vai estar escrito no botão -- é obrigatória
-        // include('../templates/componenteButton.php');
-    ?>  -->
+// $funcaoClick = "compartilhar()";                             ---> variavel que chama uma função quando clicar no botão -- é obrigatória
+// $funcaoLoad = "mudarTamanho('100rem', '10rem', '100px')";    ---> função para mudar o tamanho do botão, o primeiro valor é a largura, -- é opcional
+//                                                                   o segundo a altura e o terceiro o tamanho da fonte 
+// $titulo = "teste";                                           ---> variavel que armazena o que vai estar escrito no botão -- é obrigatória
+// include('../templates/componenteButton.php');
+?>  -->
 
 
 <button 
-    <?php echo !empty($idBtn) ? "id='$idBtn'" : ""; ?>
     onclick = "<?php echo $funcaoClick ?>" 
     class = "btnComp"
+    id="<?php echo !empty($idBtn) ? $idBtn : 'idDefault'; ?>"
     >
 <?php echo $titulo ?></button>
 
@@ -34,11 +34,15 @@
 
     // função para fazer submit dos forms com uma msg personalizada Ex: msg = "talCoisa foi adicionada com sucesso", mais pra frente colocar 
     // uma variavel para saber o nome do form q tem q fazer o submit
-    function adicionarComValidacao(ValidacaoAdicionar){ // colocar nomeForm depois  
+    function adicionarComValidacao(msgAdicionar, acao, linkRedirecionamento){ // colocar nomeForm depois  
         if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
-            alert($ValidacaoAdicionar)
+            alert(msgAdicionar)
         }else{
             alert("Preencha todos os campos.")
+        }
+
+        if(acao == 1){
+            window.location.href = linkRedirecionamento;
         }
         //document.getElementById(nomeForm).submit();
     }
@@ -103,31 +107,22 @@
     }
 
     // função para mudar o width, height e font-size do botão, única função q coloca no $funcaoLoad invês de no funcaoClick
-    function mudarTamanho(idbtn, width, height, fontSize) {
-        if(typeof idbtn !== "undefined" && idbtn != "idPadrao"){
-            let btnEspecifico = document.getElementById(idbtn);
-            if (btnEspecifico) {  // Ensure element exists before applying styles
-                btnEspecifico.style.width = width;
-                btnEspecifico.style.height = height;
-                btnEspecifico.style.fontSize = fontSize;
-            }
-        }else{
-            document.querySelectorAll('.btnComp').forEach(btn => {
-                btn.style.width = width || '275px';
-                btn.style.height = height || '50px';
-                btn.style.fontSize = fontSize || '20px';
-            });
-    
-            document.querySelectorAll('.btnSaibaMais').forEach(btn => {
-                btn.style.width = width || '150px';  
-                btn.style.height = height || '40px'; 
-                btn.style.fontSize = fontSize || '18px';
-            });
-
-        }
-        
-    }
     document.addEventListener("DOMContentLoaded", function() {
+        function mudarTamanho(idbtn, width='275px', height='50px', fontSize='20px') {
+            if(idbtn){
+                console.log("idbtn = ",idbtn)
+                btnId = document.getElementById(idbtn);
+                console.log("btnId = ",btnId)
+                btnId.style.width = width || '275px';
+                btnId.style.height = height || '50px';
+                btnId.style.fontSize = fontSize || '20px';
+            }else{
+                btnId = document.getElementById('idDefault');
+                btnId.style.width = '275px';
+                btnId.style.height = '50px';
+                btnId.style.fontSize = '20px';
+            }
+        }
         <?php 
         if (!empty($funcaoLoad)) {
             echo $funcaoLoad . ';';
@@ -139,6 +134,7 @@
         document.querySelectorAll(".btnComp").forEach(btn => {
             let funcaoClick = btn.getAttribute("onclick");
             if (funcaoClick && funcaoClick.startsWith("saibaMais")) {
+                btn.classList.remove("btnComp");
                 btn.classList.add("btnSaibaMais");
             }
         });
@@ -151,7 +147,6 @@
         border-radius: 12px;
         background-color: #44803F;
         cursor: pointer;
-        font-size: 24px;
         color: #ffffff;
         font-weight: 600;
         margin: 0.5rem;
@@ -164,6 +159,8 @@
         color: rgb(131, 206, 125);
         font-weight: bold;
         margin: 0.5rem;
+        height: 40px;
+        width: 150px;
     }
 
     .btnComp:hover {

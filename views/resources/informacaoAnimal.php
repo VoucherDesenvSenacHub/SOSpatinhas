@@ -51,11 +51,10 @@
       </div>
 
       <?php
-         $funcaoClick = "formAdocao.php()";                             
-         $funcaoLoad = "mudarTamanho('146px', '88px', '16px')";     
-         $titulo = "Adotar";                                           
-         include('../templates/componenteButton.php');
-    ?>
+        $funcaoClick = "redirecionar('formAdocao.php')";                             
+        $titulo = "Adotar";     
+        include('../templates/componenteButton.php');
+      ?>
 
     </div>
   </div>

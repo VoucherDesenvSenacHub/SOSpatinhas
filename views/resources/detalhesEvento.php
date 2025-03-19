@@ -37,7 +37,12 @@
     <div class="event-details">
       <h1>Feira do Auau</h1>
       <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
-      <button onclick="compartilhar()">Compartilhar</button>
+      <?php
+        // btn Compartilhar
+        $funcaoClick = "compartilhar()";
+        $titulo = "Compartilhar";
+        include('../templates/componenteButton.php');
+      ?>
     </div>
     
   </div>
@@ -63,13 +68,6 @@
 </div>
 
 <script> 
-  function compartilhar() {
-      if (navigator.share) {
-          navigator.share({ url: window.location.href }).catch((error) => console.log("Erro de Compartilhamento:", error));
-      } else {
-          alert("Sharing not supported on this browser.");
-      }
-  }
   let PrimeiroSlide = 1;
   mostrarSlide (PrimeiroSlide);
 

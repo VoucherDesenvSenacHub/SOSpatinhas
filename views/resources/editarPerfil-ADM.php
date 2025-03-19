@@ -5,22 +5,32 @@
 ?>
 
 <form action="" method="post" id="frmEditarPerfilADM">
-    <dv class="conteudo">
+    <div class="col">
+        <div id="btn-photo">
+            <div class="upload-container">
+                <div id="imgUpload">
+                    <input type="file" id="image" name="image[]" accept="image/*" hidden>
+                    <label for="image" id="imgLabel" class="upload-box">
+                        <img src="..\images\btnAdicionar.png" alt="Upload Icon">
+                    </label>
+                </div>
+                <div id="filePreview">
+                    <img src="..\images\userProfile.png" alt="" id="previewImg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conteudo">
         <div class="col">
             <input type="text" name="nome" placeholder="Nome">
             <input type="text" name="cpf" placeholder="CPF">
             <input type="text" name="email" placeholder="E-mail">
             <input type="text" name="telefone" placeholder="Número de Telefone/Celular">
-        </div>
-        <div class="col">
             <input type="text" name="senha" placeholder="Senha">
-            <div id="btn-photo">
-                <!-- <div id="btns">
-                    <button type="button" onclick="adicionar()">Salvar</button>
-                    <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
-                </div> -->
-
-    <?php
+        </div>
+        
+        <div>
+        <?php
         $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
         $funcaoLoad = "mudarTamanho('100%', '44px', '20px')";  
         $titulo = "Salvar";           
@@ -32,21 +42,8 @@
         $titulo = "Cancelar";
         include('../templates/componenteButton.php');
     ?>
-
-                <div class="upload-container">
-                    <div id="imgUpload">
-                        <input type="file" id="image" name="image[]" accept="image/*" hidden>
-                        <label for="image" id="imgLabel" class="upload-box">
-                            <img src="..\images\btnAdicionar.png" alt="Upload Icon">
-                        </label>
-                    </div>
-                    <div id="filePreview">
-                        <img src="..\images\userProfile.png" alt="" id="previewImg">
-                    </div>
-                </div>
-            </div>
         </div>
-    </dv>
+    </div>
 
 </form>
 

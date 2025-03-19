@@ -1,6 +1,6 @@
 .conteudo{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 5rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -10,7 +10,7 @@
 .col{
     display: flex;
     flex-direction: column;
-    width: 34rem;
+    width: 100%;
     align-items: center;
 }
 
@@ -23,12 +23,14 @@
     flex-direction: row;
     /* gap: 2rem; */
     width: 34rem;
+    justify-content: center;
 }
 
 #imgUpload{
-    position: absolute;
-    bottom: 21rem;
-    right: 31rem;
+    display: flex;
+    position: relative;
+    bottom: -16rem;
+    right: -2rem;
 }
 
 #previewImg{
@@ -178,7 +180,7 @@ button:hover{
 }
 
 
-@media (max-width: 1440px){
+/* @media (max-width: 1440px){
     
     #imgUpload{
         right: 21rem;
@@ -188,4 +190,4 @@ button:hover{
     .corpo{
         width: 93%;
     }
-}
+} */

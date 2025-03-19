@@ -18,10 +18,6 @@
             <img id="fotoMembro" src="../images/fotoPerfilMembro.png" alt="icone foto do Membro">
             <button id="buttonEditarFoto">+</button>
         </div>
-
-        <!-- <a href="#"><button class="buttonsPerfil" id="buttonSalvar" onclick="adicionar()">Salvar</button></a>
-        <a href="listademembrosadm.php"><button class="buttonsPerfil" id="buttonCancelar">Cancelar</button></a> -->
-
     <?php
         $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
         $funcaoLoad = "mudarTamanho('250px', '44px', '20px')";  //o primeiro valor é a largura, -- é opcional o segundo a altura e o terceiro o tamanho da fonte 

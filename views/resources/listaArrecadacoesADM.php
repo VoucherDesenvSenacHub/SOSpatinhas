@@ -15,25 +15,21 @@
 <div class="lista-arrecadacoes" id="lista-arrecadacoes">
     <?php
         $arrecadacoes = [
-            ["nome" => "Rochele", "imagem" => "../images/Rectangle 71.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Toby", "imagem" => "../images/Toby.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Rumi", "imagem" => "../images/Rumi.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nobre", "imagem" => "../images/Nobre.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Sir Dougg", "imagem" => "../images/Sir Dougg.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Rochele", "imagem" => "../images/Rectangle 71.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 1000,00"],
+            ["nome" => "Toby", "imagem" => "../images/Toby.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 2500,00"],
+            ["nome" => "Rumi", "imagem" => "../images/Rumi.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 2500,00"],
+            ["nome" => "Nobre", "imagem" => "../images/Nobre.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 870,00"],
+            ["nome" => "Sir Dougg", "imagem" => "../images/Sir Dougg.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 1200,00"],
+            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 720,00"],
         ];
 
         $itensPorPagina = 6;
         foreach ($arrecadacoes as $index => $arrecadacoes) {
             $pagina = floor($index / $itensPorPagina) + 1;
             echo '<div class="item-arrecadacao" data-paginas="' . $pagina . '">';
-            gerarCard($arrecadacoes['nome'], $animal['imagem'], $animal['localizacao']);
+            gerarCardArrecadacao($arrecadacoes['nome'], $arrecadacoes['imagem'], $arrecadacoes['progresso'], $arrecadacoes['meta']);
             echo '</div>';
         }
-
     ?>
     <div class="botao-add-container">
         <a href="cadastrarArrecadacao-ADM.php"><button class="botao-add">+</button></a>
@@ -105,7 +101,7 @@
         totalPaginas = Math.ceil(itens.length / itensPorPagina);
 
         itens.forEach((item, index) => {
-            const pagina = math.floor(index / itensPorPagina) + 1;
+            const pagina = Math.floor(index / itensPorPagina) + 1;
             item.setAttribute('data-pagina', pagina);
         });
 
@@ -119,10 +115,10 @@
         paginacao.innerHTML = '';
 
         for (let i = 1; i <= totalPaginas; i++) {
-            cosnt link = document.createElement('li');
+            const link = document.createElement('li');
             link.className = 'link' + (i === paginaAtual ? ' active ' : '');
             link.textContent = i;
-            link.addEventListener('clicl', () => mudarPagina(i));
+            link.addEventListener('click', () => mudarPagina(i));
             paginacao.appendChild(link);
         }
     }
@@ -132,7 +128,7 @@
         itens.forEach((item) => {
             const paginaItem = parseInt(item.getAttribute('data-pagina'));
             if (paginaItem === pagina) {
-                item.style.displat = 'block';
+                item.style.display = 'block';
             } else {
                 item.style.display = 'none';
             }
@@ -146,8 +142,8 @@
         atualizarPaginacao(totalPaginas);
     }
 
-    document.getElementById('prev').addEventListener('click', function () => mudarPagina(paginaAtual - 1));
-    document.getElementById('next').addEventListener('click', function () => mudarPagina(paginaAtual + 1));
+    document.getElementById('prev').addEventListener('click',  () => mudarPagina(paginaAtual - 1));
+    document.getElementById('next').addEventListener('click',  () => mudarPagina(paginaAtual + 1));
 </script>
 
 <?php

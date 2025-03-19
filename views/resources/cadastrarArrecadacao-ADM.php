@@ -31,8 +31,8 @@
                     <p>Enviar fotos</p>
                 </label>    
                 <div id="filePreview"></div>
+                <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>
-            <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
 
             <?php
             $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
@@ -45,6 +45,7 @@
             $titulo = "Cancelar";
             include('../templates/componenteButton.php');
             ?>
+            
         </div>
     </div>
 </form>

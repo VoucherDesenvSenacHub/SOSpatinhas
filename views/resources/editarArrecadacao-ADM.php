@@ -31,8 +31,8 @@
                     <p>Enviar fotos</p>
                 </label>
                 <div id="filePreview"></div>
+                <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>
-            <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
 
             <!-- <button type="button" onclick="adicionar()">Adicionar</button>
             <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button> -->

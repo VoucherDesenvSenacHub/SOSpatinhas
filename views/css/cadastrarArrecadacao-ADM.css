@@ -1,15 +1,6 @@
-#frmCadastroAdocao{
+#frmCadastroAdocao {
     width: 100%;
 }
-
-.conteudoForm {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px;
-    column-gap: 10rem;
-}
-
 input, textarea {
     width: 100%;
     padding: 20px;
@@ -33,13 +24,6 @@ button {
     cursor: pointer;
 }
 
-button[type="button"], .cancelarBtn {
-    background-color: #83CE7D;
-    color: white;
-    margin-top: 1rem;
-    height: 42px;
-}
-
 button a{
     text-decoration: none;
     color: white;
@@ -55,13 +39,12 @@ button a{
 }
 
 .QRCode-container {
-    height: 50px;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
@@ -74,7 +57,7 @@ button a{
 }
 
 #qrCodeLabel {
-    background-color: #4CAF50;
+    background-color: #44803F;
     color: white;
     padding: 10px 16px;
     border-radius: 10px;
@@ -86,7 +69,7 @@ button a{
 }
 
 #qrCodeLabel:hover {
-    background-color: #388E3C;
+    background-color: rgb(49, 90, 45);
 }
 
 #qrCodeArquivo {
@@ -100,7 +83,7 @@ button a{
 
 .upload-container {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     text-align: center;
 }
 
@@ -131,6 +114,7 @@ button a{
 .file-info {
     font-size: 15px;
     color: black;
+    margin-bottom: 20px;
     margin-top: 5px;
 }
 
@@ -154,12 +138,12 @@ button a{
     padding: 10px;
     border-radius: 5px;
     width: 100%;
-    max-width: 300px; 
+    max-width: 600px; 
     overflow: hidden;
 }
 
 .file-name {
-    max-width: 150px; 
+    max-width: 200px; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -177,27 +161,19 @@ button a{
     cursor: pointer;
     display: inline-block;
     text-align: center;
+    width: 20%; 
+    margin-top: 5px;
 }
 
 .remove-file:hover {
     background-color: #d32f2f;
 }
 
-.remove-file {
-    width: 100px; 
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
-}
-
-.remove-file {
-    margin-top: 5px;
-}
 .conteudoForm {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
+    padding: 70px;
     column-gap: 3rem;
 }
 
@@ -220,6 +196,7 @@ button a{
         width: 50%;
         align-items: center;
     }
+
     .QRCode-container {
         width: 100%;
     }
@@ -252,14 +229,13 @@ button a{
     }
     
     .QRCode-container {
-        width: 90%;
-        max-width: 400px; 
+        width: 100%;
+        max-width: 600px; 
     }
 
     #qrCodeArquivo {
         max-width: 250px;
     }
-
 }
 
 @media (max-width: 425px) {    
@@ -278,12 +254,18 @@ button a{
     select, input, textarea {
         width: 100%;
     }
+    
     #frmCadastroAdocao{
         width: 100%;
     }
 
     .upload-container {
-        max-width: 80%;
+        max-width: 100%;
+    }
+
+    .upload-box {
+        width: 100%;
+
     }
 
     .selectContainer{
@@ -305,6 +287,13 @@ button a{
     #qrCodeArquivo {
         max-width: 100%;
         text-align: center;
+    }    
+    
+    .remove-file {
+        width: 27%;
+    }
+
+    .file-info {
+        font-size: 14px;
     }
 }
-

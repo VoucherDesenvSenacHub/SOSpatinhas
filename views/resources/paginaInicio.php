@@ -29,8 +29,8 @@
                     </li>
                 </ul>
             </div>
-            <button class="buttonslider" id="esquerda"><</button>
-            <button class="buttonslider" id="direita">></button>
+            <button class="buttonslider" id="esquerda"></button>
+            <button class="buttonslider" id="direita"><img src="../images/icons/btn_direito.png" alt=""></button>
         </section>
 
         <section id="seccards">

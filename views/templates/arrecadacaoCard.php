@@ -8,9 +8,12 @@
                 <p id="meta">R$1.000,00</p>
             </div>
         </div>
-        <button class="buttonCard">
-            <a href="arrecadacao.php">Saiba Mais</a>
-        </button>
+        <?php
+            // btn Saiba Mais
+            $funcaoClick = "saibaMais('arrecadacao.php')";
+            $titulo = "Saiba Mais";
+            include('../templates/componenteButton.php');
+        ?>
     </div>
 </div>
 
@@ -76,19 +79,6 @@
 #meta{
     margin: 0 10px 0 10px;
     font-weight: 700;
-}
-
-.buttonCard{
-    height: 40px;
-    width: 150px;
-    border-radius: 15px;
-}
-
-.buttonCard a {
-    color: #83CE7D;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
 }
 
 @media (max-width: 1024px) {

@@ -103,6 +103,10 @@
         .hamburger {
             display: flex;
         }
+
+        #btnCadastro{
+            display:none;
+        }
     }
 
     .navbar-especial {
@@ -126,32 +130,44 @@
     </ul>
 
     <div class="nav-right">
+        <?php if ($taLogado): ?>
+            <a class="navbar-logo" href="perfilUsuario.php">
+                <img src="../images/icons/iconUser.png" alt="Login">
+            </a>
+        <?php else: ?>
+            <div id="btnLoginRegister">
+                <div id="btnEntrarDiv">
+                    <?php
+                        // btn Entrar
+                        $idBtn = "btnEntrar";
+                        $funcaoClick = "redirecionar('login.php')";
+                        $titulo = "Entrar";
+                        $funcaoLoad = "mudarTamanho('btnEntrar', '142px', '42px', '16px')";
+                        include('../templates/componenteButton.php');
+                    ?>
+                </div>
+                <div id="btnCadastroDiv">
+                    <?php
+                        // btn Cadastro
+                        $idBtn = "btnCadastro";
+                        $funcaoClick = "redirecionar('cadastroUsuario.php')";
+                        $titulo = "Cadastrar";
+                        $funcaoLoad = "mudarTamanho('btnCadastro', '142px', '42px', '16px')";
+                        include('../templates/componenteButton.php');
+                        $idBtn = "";
+                        $funcaoClick = "";
+                        $titulo = "";
+                        $funcaoLoad = "";
+                    ?>
+                </div>
+            </div>
+        <?php endif; ?>
+
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
             <div></div>
             <div></div>
         </div>
-
-        <?php if ($taLogado): ?>
-            <a class="navbar-logo" href="perfilUsuario.php">
-                <img src="../images/Icon_Login.png" alt="Login">
-            </a>
-        <?php else: ?>
-            <div id="btnLoginRegister">
-                <?php
-                    // btn Entrar
-                    $funcaoClick = "redirecionar('login.php')";
-                    $titulo = "Entrar";
-                    $funcaoLoad = "mudarTamanho('142px', '42px', '16px')";
-                    include('../templates/componenteButton.php');
-                
-                    // btn Cadastro
-                    $funcaoClick = "redirecionar('cadastroUsuario.php')";
-                    $titulo = "Cadastrar";
-                    include('../templates/componenteButton.php');
-                ?>
-            </div>
-        <?php endif; ?>
     </div>
 </nav>
 

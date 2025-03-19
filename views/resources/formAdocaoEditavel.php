@@ -17,6 +17,7 @@
     Portanto, solicitamos que você responda todas as perguntas com cuidado e atenção. Analisaremos suas respostas minuciosamente e entraremos em contato assim que possível!</p>
 </div>
 
+<div class="tracinho"></div>
 
 <form>
 
@@ -121,13 +122,16 @@
             <label for="termo">Compreendo e aceito os Termos de Compromisso</label>
         </div>
 </div>
-       
-<?php
-        $funcaoClick = "compartilhar()";                             
-        $funcaoLoad = "mudarTamanho('')";                                                                     
+
+<div class="botao">
+    <?php
+        $idBtn = "btnEnviar";
+        $funcaoClick = "adicionarComValidacao('Formulário eviado com sucesso', 1, 'adocao.php')";                             
+        $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
         $titulo = "Enviar";                                           
         include('../templates/componenteButton.php');
-?>
+    ?>
+</div>
 
 <?php
     include('../templates/default/bottomHTML.php');

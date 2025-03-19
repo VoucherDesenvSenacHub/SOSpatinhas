@@ -2,6 +2,7 @@
   $cssLink  = '../css/quemSomos.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
+  include('../templates/modalEditar.php')
 ?>
 <body>
 <section class="carroseis">
@@ -46,6 +47,27 @@
     </div>
   </div>
 </section>
+
+<script> 
+    // popup do layout input simples
+    const btn_temp = document.querySelectorAll('.btn-card-equipe');
+    btn_temp.forEach(button => {
+        button.onclick = function()
+        {
+          chamar_popup('input');
+        };
+    });
+
+    // popup do layout upload img
+    const btn_no_input = document.querySelectorAll('.btn-card-parceiro');
+    btn_no_input.forEach(button =>
+    {
+        button.onclick = function()
+        {
+          chamar_popup('textArea');
+        };
+    });
+</script>
 
 <?php
   include('../templates/modalEditar.php');

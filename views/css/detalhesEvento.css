@@ -57,6 +57,7 @@ position: absolute;
 }
 
 .botao{
+
 cursor: pointer;
 padding: 0;
 margin: 0 2px;
@@ -131,6 +132,17 @@ width: 585px;
 }
 
 @media (max-width: 768px) {
+
+  .carrossel-container{
+    margin-top: 4rem;
+  }
+
+  .conteudo{
+
+    padding-right: 10px;
+    width: 100%;
+  }
+
   .corpo {
     width: 100%;
     flex-direction: column;
@@ -155,7 +167,7 @@ width: 585px;
   }
   .EventoSlides {
     width: 100%;
-    height: auto;
+    /*height: auto;*/
   }
   .event-details {
     width: 90%;
@@ -178,13 +190,16 @@ width: 585px;
     font-size: 18px;
   }
   .btn-slide {
-    width: 90%;
-    bottom: 15rem; 
+    width: 75%;
+    bottom: 70rem; 
+    
   }
 }
 
 
 @media (max-width: 425px) {
+
+  
   .container {
     padding: 8px;
   }
@@ -228,8 +243,9 @@ width: 585px;
     font-size: 16px;
   }
   .btn-slide {
-    width: 100%;
-    bottom: 32rem; 
+    width: 75%;
+    bottom: 70rem;
+    
   }
 }
 

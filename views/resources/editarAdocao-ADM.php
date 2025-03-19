@@ -56,16 +56,17 @@
             <!-- <button type="button" onclick="adicionar()">Salvar</button>
             <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button> -->
 
-
     <?php
+        $bnt = "btn";
         $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
-        $funcaoLoad = "mudarTamanho('310px', '44px', '20px')";
+        $funcaoLoad = "mudarTamanho('btn')";
         $titulo = "Salvar";           
         include('../templates/componenteButton.php');
     ?>
     <?php
+        $btnCancelar = "btnCancelar";
         $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
-        $funcaoLoad = "mudarTamanho('310px', '44px', '20px')";
+        $funcaoLoad = "mudarTamanho('400px')";
         $titulo = "Cancelar";
         include('../templates/componenteButton.php');
     ?>

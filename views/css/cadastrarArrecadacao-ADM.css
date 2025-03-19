@@ -69,7 +69,7 @@ button a{
 }
 
 #qrCodeLabel:hover {
-    background-color: rgb(49, 90, 45);
+    background-color: #315a2d;
 }
 
 #qrCodeArquivo {

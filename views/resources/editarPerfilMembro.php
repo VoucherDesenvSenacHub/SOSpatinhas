@@ -1,7 +1,5 @@
 <?php
 
-    session_start();
-
     if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
     echo '<script type="text/javascript">
             alert("Você precisa estar logado como administrador para acessar esta página.");

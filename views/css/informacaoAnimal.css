@@ -168,24 +168,22 @@ img.User{
   }
   .gallery {
     display: flex;
-      gap: 10px;
-      object-fit: fill;
-      width: 45%;
-      position: relative;
-      left: 12%;
-  }
-  .main-image {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto 16px auto; 
+    gap: 10px;
     object-fit: fill;
-    height: auto;
-    overflow: hidden;
-    border-radius: 5px;
+    width: 77%;
+    position: relative;
+    left: 0%;
+    }
+    .main-image {
+      width: 100%;
+      max-width: 80%;
+      object-fit: fill;
+      height: auto;
+      overflow: hidden;
+      border-radius: 5px;
+      }
   }
-}
-
-
+  
 @media (max-width: 425px) {
   .container {
     padding: 8px;

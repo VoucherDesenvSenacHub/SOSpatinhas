@@ -15,27 +15,34 @@
 
         <div class="col2">
             <div class="upload-container">
-                <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
-                <label for="image" id="imgLabel" class="upload-box">
-                    <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
-                    <p>Enviar fotos</p>
-                </label>
-                <div id="filePreview"></div>
-                <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
+                <div class="top">
+                    <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
+                    <label for="image" id="imgLabel" class="upload-box">
+                        <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                        <p>Enviar fotos</p>
+                    </label>
+                    <div class="descricaoEBtn">
+                    <div id="filePreview"></div>
+                        <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
+                    </div>
+                </div>
+
+                <div class="btnContainer">
+                    <?php
+                        $idBtn = "btn";
+                        $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
+                        // $funcaoLoad = "mudarTamanho('btn', '275px', '50px', '20px')";
+                        $titulo = "Cadastrar";
+                        include('../templates/componenteButton.php');
+                        
+                        $idBtn = "btnCancelar";
+                        $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
+                        // $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
+                        $titulo = "Cancelar";
+                        include('../templates/componenteButton.php');
+                    ?>
+                </div>
             </div>
-
-            <?php
-            $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
-            $funcaoLoad = "mudarTamanho('400px')";
-            $titulo = "Cadastrar";
-            include('../templates/componenteButton.php');
-
-            $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
-            $funcaoLoad = "mudarTamanho('400px')";
-            $titulo = "Cancelar";
-            include('../templates/componenteButton.php');
-            ?>
-
         </div>
     </div>
 </form>

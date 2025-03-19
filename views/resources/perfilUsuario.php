@@ -83,8 +83,9 @@
                     </p>
                 </div>
             </div>
-
-            <div class="contentItensPerfil">
+            
+            
+            <div class="contentItensPerfil" id="rg">
                 <img class="icones" src="../images/icons/rg.png" alt="icone rg">
                 <div class="contentItens">
                     <p class="titulos">RG:</p>

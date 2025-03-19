@@ -124,10 +124,12 @@
 </div>
 
 <div class="botao">
-    <?php                          
-            $funcaoLoad = "mudarTamanho('100%', '100%')";                                                                     
-            $titulo = "Enviar";                                           
-            include('../templates/componenteButton.php');
+    <?php
+        $idBtn = "btnEnviar";
+        $funcaoClick = "adicionarComValidacao('Formulário eviado com sucesso', 1, 'adocao.php')";                             
+        $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
+        $titulo = "Enviar";                                           
+        include('../templates/componenteButton.php');
     ?>
 </div>
 

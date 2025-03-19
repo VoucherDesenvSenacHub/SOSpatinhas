@@ -53,7 +53,7 @@
         padding: 3px;
         background-color: rgb(68, 128, 63);
         color: white;
-        width: 100%;
+        /*width: 100%;*/
         position: relative;
         z-index: 1200;
         box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
@@ -153,11 +153,11 @@
                 <img src="../images/Logo_Footer.png" alt="SOS Patinhas">
             </a>
             <div class="footer-balsonaro-direita">
-                <a href="#">
-                    <img src="../images/facebook_branco.png" alt="Facebook">
+                <a href="https://www.facebook.com/?locale=pt_BR">
+                    <img src="../images/icons/facebookBranco.png" alt="Facebook">
                 </a>
-                <a href="#">
-                    <img src="../images/instagram_branco.png" alt="Instagram">
+                <a href="https://www.instagram.com">
+                    <img src="../images/icons/instagramBranco.png" alt="Instagram">
                 </a>
             </div>
         </div>
@@ -169,12 +169,12 @@
             <img src="../images/Logo_Footer.png" alt="SOS Patinhas">
         </a>
         <ul class="footer-links-img">
-            <a href="#">
-                <img src="../images/facebook_branco.png" alt="Facebook">
-            </a>
-            <a href="#">
-                <img src="../images/instagram_branco.png" alt="Instagram">
-            </a>
+                <a href="https://www.facebook.com/?locale=pt_BR">
+                    <img src="../images/icons/facebookBranco.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="../images/icons/instagramBranco.png" alt="Instagram">
+                </a>
         </ul>
         <ul class="footer-links-bottom">
             <a href="#">Acessibilidade</a>

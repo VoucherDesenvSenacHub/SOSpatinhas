@@ -74,7 +74,7 @@
     <nav id="navSidebar">
         <ul id="sidebarUl">
             <li class="sidebarLi" class="sidebarLi">
-                <a href="">
+                <a href="editarPaginaInicio.php">
                     <img src="../images/icons/casa.png" alt="">
                     <p>Inicio</p>
                 </a>

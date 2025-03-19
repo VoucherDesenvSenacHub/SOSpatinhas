@@ -11,7 +11,7 @@
       <div class="ruaIcone">
         <p class="endereco">
           R. do Parque, 75 - Centro, Campo Grande - MS
-          <img src="../images/btnEditar.png" alt="Editar" class="iconeAcao">  
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconeAcao">  
         </p>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="pontoArrecadacaoIcone">
           <h2>
             Ponto de Arrecadação
-            <img src="../images/btnEditar.png" alt="Editar" class="iconeAcao">
+            <img src="../images/icons/iconEditar.png" alt="Editar" class="iconeAcao">
           </h2>
         </div>
         <p>"Seu gesto de doação é o elo que une corações humanos e patas amigas, criando um mundo mais compassivo para
@@ -35,7 +35,7 @@
       <h2>Valores para Doação</h2>
       <div class="cards">
         <div class="card">
-          <img src="../images/btnEditar.png" alt="Editar" class="iconEdit">
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconEdit">
           
           <img src="../images/iconeTalher.png" alt="Ícone de talher">
           <div>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="card">
-          <img src="../images/btnEditar.png" alt="Editar" class="iconEdit">
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconEdit">
 
           <img src="../images/iconeLimpeza.png" alt="Ícone de Limpeza">
           <div>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="card">
-          <img src="../images/btnEditar.png" alt="Editar" class="iconEdit">
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconEdit">
 
           <img src="../images/iconeConforto.png" alt="Ícone de Conforto">
           <div>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="card">
-          <img src="../images/btnEditar.png" alt="Editar" class="iconEdit">
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconEdit">
 
           <img src="../images/iconeMedico.png" alt="Ícone de Médico">
           <div>
@@ -75,7 +75,7 @@
         </div>
 
         <div class="card">
-          <img src="../images/btnEditar.png" alt="Editar" class="iconEdit">
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconEdit">
 
           <img src="../images/iconeAtendimento.png" alt="Ícone de Atendimento">
           <div>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="card">
-          <img src="../images/btnEditar.png" alt="Editar" class="iconEdit">
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconEdit">
 
           <img src="../images/iconeVacina.png" alt="Ícone de Vacina">
           <div>
@@ -100,7 +100,7 @@
       <div class="qrCode">
         <h2>
           Pix QR Code ou CNPJ
-          <img src="../images/btnEditar.png" alt="Editar" class="iconeAcao">
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconeAcao">
           <img src="../images/Icon_de_excluir.png" alt="Excluir" class="iconeAcao">
         </h2>
         

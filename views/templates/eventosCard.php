@@ -4,7 +4,7 @@
       <h3>Feira do Auau</h3>
       <p>Feira arrecadativa de moda.</p>
       <div class="local">
-          <img src="../images/pin_info.png" alt="Icone de local">
+          <img src="../images/icons/iconmarcador3.png" alt="Icone de local">
           <p>Campo Grande MS, Horto Florestal</p>
       </div>
     </div>

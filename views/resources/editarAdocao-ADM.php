@@ -12,7 +12,7 @@
             <input type="text" name="raca" placeholder="Raça" required>
             <div class="selectContainer">
                 <select name="porte" id="porte-select" placeholder="Porte" required>
-                    <option class="filter-option" value="" selected disabled hidden>-- Porte --</option>
+                    <option class="filter-option" value="" selected disabled hidden> Porte </option>
                     <option class="filter-option" value="Pequeno">Pequeno</option>
                     <option class="filter-option" value="Médio">Médio</option>
                     <option class="filter-option" value="Grande">Grande</option>
@@ -20,7 +20,7 @@
             </div>
             <div class="selectContainer">
                 <select name="idade" id="idade-select" required>
-                    <option class="filter-option" value="" selected disabled hidden>-- Idade --</option>
+                    <option class="filter-option" value="" selected disabled hidden> Idade </option>
                     <option class="filter-option" value="< 1">-1 ano</option>
                     <option class="filter-option" value="<= 5">Até 5 anos</option>
                     <option class="filter-option" value="<= 10">Até 10 anos</option>
@@ -50,8 +50,8 @@
                     <p>Enviar fotos</p>
                 </label>
                 <div id="filePreview"></div>
+                <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>
-            <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
 
             <!-- <button type="button" onclick="adicionar()">Salvar</button>
             <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button> -->

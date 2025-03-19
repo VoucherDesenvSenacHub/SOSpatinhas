@@ -180,7 +180,7 @@ select {
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    width: 20%; 
+    width: 17%; 
     text-align: center;
     display: inline-block;
     font-size: 14px;
@@ -263,6 +263,10 @@ select {
     .switchBtn {
         width: 60%;
     }
+
+    .remove-file {
+        width: 15%;
+    }
 }
 
 @media (max-width: 425px) {
@@ -311,7 +315,7 @@ select {
     }
 
     .remove-file {
-        width: 27%;
+        width: 24%;
     }
 
     .file-info {

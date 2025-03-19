@@ -21,16 +21,24 @@
                     <p>Enviar fotos</p>
                 </label>
                 <div id="filePreview"></div>
+                <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>
-            <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
 
-            <button type="button" onclick="adicionar()">Adicionar</button>
-            <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button>
+            <?php
+            $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
+            $funcaoLoad = "mudarTamanho('400px')";
+            $titulo = "Cadastrar";
+            include('../templates/componenteButton.php');
+
+            $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
+            $funcaoLoad = "mudarTamanho('400px')";
+            $titulo = "Cancelar";
+            include('../templates/componenteButton.php');
+            ?>
+
         </div>
     </div>
-
 </form>
-
 <script>
     function adicionar(){
         if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){

@@ -33,6 +33,15 @@ input{
     left: 1rem;
 }
 
-#imgUpload{
+#previewImg{
+    width: 265px;
+    height: 257px;
+    border: 1px solid #ccc;
+    border-radius: 10rem;
+}
 
+@media (max-width: 425px) {
+    .conteudoFrm{
+        padding: 30px;
+    }
 }

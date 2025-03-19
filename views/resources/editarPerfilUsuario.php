@@ -18,12 +18,6 @@
                     </label>
                 </div>
             </div>
-            
-            <div class="btnContainer">
-                <?php
-                    $funcaoClick = "";
-                ?>
-            </div>
         </div>
     
     
@@ -34,6 +28,23 @@
             <input type="email" name="email" placeholder="Email" required>
             <input type="text" name="cpf" placeholder="CPF" required>
             <input type="text" name="rg" placeholder="RG" required>
+            <div class="btnContainer">
+                <?php
+                    // btn Salvar
+                    $idBtn = "btnSalvar";
+                    $funcaoClick = "adicionarComValidacao('Dasos salvos com sucesso!', 1, 'perfilUsuario.php')";
+                    $funcaoLoad = "mudarTamanho('btnSalvar')";
+                    $titulo = "Salvar";
+                    include('../templates/componenteButton.php');
+
+                    // btn Cancelar
+                    $idBtn = "btnCancelar";
+                    $funcaoClick = "adicionarComValidacao('Dasos salvos com sucesso!', 1, 'perfilUsuario.php')";
+                    $funcaoLoad = "mudarTamanho('btnCancelar')";
+                    $titulo = "Cancelar";
+                    include('../templates/componenteButton.php');
+                ?>
+            </div>
         </div>
     </div>
 </form>

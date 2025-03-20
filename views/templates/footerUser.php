@@ -100,11 +100,8 @@
     }
 
     @media (min-width: 769px) {
-        .footer-desktop { display: block; }
+        .footer-desktop { display: flex; }
         .mobile-footer { display: none; }
-    }
-    @media (max-width: 768px) {
-        .footer-desktop { display: none; }
     }
 </style>
 

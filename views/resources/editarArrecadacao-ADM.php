@@ -42,18 +42,19 @@
                 <div id="filePreview"></div>
                 <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>  
-    <?php
-        $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
-        $funcaoLoad = "mudarTamanho('400px')";  //o primeiro valor é a largura, -- é opcional o segundo a altura e o terceiro o tamanho da fonte 
-        $titulo = "Adicionar";           
-        include('../templates/componenteButton.php');
-    ?>
-    <?php
-        $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
-        $funcaoLoad = "mudarTamanho('400px')";
-        $titulo = "Cancelar";
-        include('../templates/componenteButton.php');
-    ?>
+            <?php
+            $idBtn = "btnAdicionar";
+            $funcaoClick = "adicionarComValidacao('Arrecadação editada com sucesso!', 1, 'listaArrecadacoesADM.php')";
+            $funcaoLoad = "mudarTamanho('btnAdicionar', '100%', '39px', '16px')"; 
+            $titulo = "Adicionar";           
+            include('../templates/componenteButton.php');
+
+            $idBtn = "btnCancelar";
+            $funcaoClick = "cancelarForm('frmCadastroAdocao', listaArrecadacoesADM.php)";
+            $funcaoLoad = "mudarTamanho('btnCancelar', '100%', '39px', '16px')";
+            $titulo = "Cancelar";
+            include('../templates/componenteButton.php');
+            ?>
 
         </div>
     </div>

@@ -1,6 +1,14 @@
 #frmCadastroAdocao {
     width: 100%;
 }
+
+.conteudoForm {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    column-gap: 3rem;
+}
 input, textarea {
     width: 100%;
     padding: 20px;
@@ -15,6 +23,22 @@ textarea {
     resize: none;
 }
 
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
 .col1, .col2 {
     display: flex;
     flex-direction: column;
@@ -27,31 +51,7 @@ textarea {
     margin-top: 10px;
 }
 
-/* button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button[type="button"], .cancelarBtn {
-    background-color: #83CE7D;
-    color: white;
-    margin-top: 1rem;
-    height: 42px;
-}
-
-button a{
-    text-decoration: none;
-    color: white;
-    width: 100%;
-    height: 100%;
-} */
-
 .QRCode-container {
-    /* height: 61px; */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -182,21 +182,7 @@ button a{
     background-color: #d32f2f;
 }
 
-/* .remove-file {
-    width: 100px; 
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
-} */
 
-
-.conteudoForm {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 70px;
-    column-gap: 3rem;
-}
 
 @media (max-width: 1024px){
     #frmCadastroAdocao{
@@ -220,6 +206,9 @@ button a{
 
     .QRCode-container {
         width: 100%;
+    }
+    .remove-file {
+        width: 18%;
     }
 }
 
@@ -262,13 +251,12 @@ button a{
 }
 
 @media (max-width: 425px) {
-    .corpo{
+    /* .corpo{
         width: 85%;
-    }
+    } */
 
     .conteudoForm {
-        flex-direction: column;
-        align-items: center;
+        padding: 0;
     }
 
     .col1, .col2 {
@@ -284,7 +272,12 @@ button a{
     }
 
     .upload-container {
-        max-width: 80%;
+        max-width: 100%;
+    }
+
+    .upload-box {
+        width: 100%;
+
     }
 
     .selectContainer{
@@ -293,7 +286,7 @@ button a{
 
     .QRCode-container {
         width: 100%;
-        max-width: 320px;
+        /* max-width: 320px; */
         flex-direction: column;
         height: auto;
         padding: 15px;
@@ -308,5 +301,14 @@ button a{
         max-width: 100%;
         text-align: center;
     }
+
+    .remove-file {
+        width: 25%;
+    }
+
+    .file-info {
+        font-size: 14px;
+    }
+
 }
 

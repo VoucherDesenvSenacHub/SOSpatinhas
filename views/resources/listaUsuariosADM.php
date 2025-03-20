@@ -22,27 +22,31 @@
 
 <div class="lista-de-usuarios" id="lista-de-usuarios">
 
-    <?php  
-        for ($i = 0; $i < 12; $i++){
+    <?php
+        $itensPorPagina = 12; 
+        for ($i = 0; $i < 12; $i++) {
+            $pagina = floor($i / $itensPorPagina) + 1;
+            echo '<div class="item-usuario" data-pagina="' . $pagina . '">';
             gerarCardUsuario('Usuário', 'Online');
+            echo '</div>';
         }
     ?>
-
 </div>
-
 
 <div class="cta-slide">
     <button id="prev" class="pagination-btn">&lt;</button>
     <div class="altPag" id="paginacao">
-        <li class="link active" value="1">1</li>
-        <li class="link" value="2">2</li>
-        <li class="link" value="3">3</li>
+
     </div>
     <button id="next" class="pagination-btn">&gt;</button>
-    
 </div>
 
-<!-- parte da animação fake do row-slide -->
+</div>
+
+
+
+
+
 <script>
     let links = document.getElementsByClassName('link');
     let valorAtual = 0;
@@ -92,6 +96,63 @@
             window.location.href = "perfilUsuario.php";
         });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        recalcularPaginacao();
+    });
+
+    let paginaAtual = 1;
+    let totalPaginas = 0;
+
+    function recalcularPaginacao() {
+        const itensPorPagina = 12;
+        const listaUsuarios = document.getElementById('lista-de-usuarios');
+        const itens = listaUsuarios.querySelectorAll('.item-usuario');
+        totalPaginas = Math.ceil(itens.length / itensPorPagina);
+
+        itens.forEach((item, index) => {
+            const pagina = Math.floor(index / itensPorPagina) + 1;
+            item.setAttribute('data-pagina', pagina);
+        });
+
+        atualizarPaginacao(totalPaginas);
+        exibirPagina(paginaAtual);
+    }
+
+    function atualizarPaginacao(totalPaginas) {
+        const paginacao = document.getElementById('paginacao');
+        paginacao.innerHTML = '';
+
+        for (let i = 1; i <= totalPaginas; i++) {
+            const link = document.createElement('li');
+            link.classList = 'link' + (i === paginaAtual ? ' active ' : '');
+            link.textContent = i;
+            link.addEventListener('click', () => mudarPagina(i));
+            paginacao.appendChild(link);
+        }
+    }
+
+    function exibirPagina(pagina) {
+        const itens = document.querySelectorAll('.item-usuario');
+        itens.forEach((item) => {
+            const paginaItem = parseInt(item.getAttribute('data-pagina'));
+            if (paginaItem === pagina) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    function mudarPagina(pagina) {
+        if (pagina < 1 || pagina > totalPaginas) return;
+        paginaAtual = pagina;
+        exibirPagina(paginaAtual);
+        atualizarPaginacao(totalPaginas);
+    }
+
+    document.getElementById('prev').addEventListener('click', () => mudarPagina(paginaAtual - 1));
+    document.getElementById('next').addEventListener('click', () => mudarPagina(paginaAtual + 1));
 </script>
 
 <?php

@@ -1,15 +1,43 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página de Inicio</title>
-        <link rel="stylesheet" href="../css/paginaInicio.css">
-    </head>
-    <body class ="pagina-inicio">
-       <?php include('../templates/navbarUser.php'); ?>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Patinhas</title>
+    <link rel="stylesheet" href="<?php echo $cssLink; ?>">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
+</head>
+<body>
+<?php include('../templates/navbar'.$tipo.'.php'); ?>
 
-        <section id="bannerMobas">
+<?php if ($tipo == "Adm"): ?>
+<?php include('../templates/sidebarAdm.php'); ?>
+<?php endif; ?>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section id="bannerMobas">
             <div class="imgBanner">
                 <img src="../images/inicial/Telinha1.png" alt="Cachorros Felizes">
             </div>
@@ -101,13 +129,7 @@
                 </div>
             </div>
         </section>
-
-
-
-        <?php include('../templates/footerUser.php') ?>
-    </body>
-
-    <script>
+<script>
         /* -- Slider -- */
         let currentIndex = 0;
         const slides = document.querySelectorAll('#slider li');
@@ -129,5 +151,4 @@
         }
 
 
-    </script>
-</html>
+    </script> -->

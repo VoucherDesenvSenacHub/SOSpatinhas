@@ -59,7 +59,7 @@
                 </label>
                 <div id="filePreview"></div>
                 <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
-            </div>''
+            </div>
             <?php
             $idBtn = "btnCadastrar";
             $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";

@@ -1,4 +1,4 @@
-<?php 
+g<?php 
 
 function gerarCard($nome, $imagem) {
     echo'

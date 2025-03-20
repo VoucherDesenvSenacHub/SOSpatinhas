@@ -40,10 +40,10 @@
          ];
 
 
-            $itensPorPagina = 6;
+            $itensPorPagina = 12;
             foreach ($membro as $index => $membros) {
                 $pagina = floor($index / $itensPorPagina) + 1;
-                echo '<div class="item-membro" data-paginas="' . $pagina . '">';
+                echo '<div class="item-membro" data-pagina="' . $pagina . '">';
                 gerarCardMembros($membros['nome'], $membros['status']);
                 echo '</div>';
             }
@@ -116,10 +116,14 @@
     let paginaAtual = 1;
     let totalPaginas = 0;
 
+    document.addEventListener('DOMContentLoaded', () => {
+        recalcularPaginacao();
+    });
+
     function recalcularPaginacao() {
-        const intensPorPagina = 6;
+        const itensPorPagina = 12;
         const listaMembros = document.getElementById('lista-de-membros');
-        const itens = listaMembros.querySelectorAll('.membro');
+        const itens = listaMembros.querySelectorAll('.item-membro');
         totalPaginas = Math.ceil(itens.length / itensPorPagina);
 
         itens.forEach((item, index) => {
@@ -138,13 +142,14 @@
         for (let i = 1; i <= totalPaginas; i++) {
             const link = document.createElement('li');
             link.classList = 'link' + (i === paginaAtual ? ' active ' : '');
+            link.textContent = i;
             link.addEventListener('click', () => mudarPagina(i));
             paginacao.appendChild(link);
         }
     }
 
     function exibirPagina(pagina){
-        const itens = document.querySelectorAll('.membro');
+        const itens = document.querySelectorAll('.item-membro');
         itens.forEach((item) => {
             const paginaItem = parseInt(item.getAttribute('data-pagina'));
             if (paginaItem == pagina) {

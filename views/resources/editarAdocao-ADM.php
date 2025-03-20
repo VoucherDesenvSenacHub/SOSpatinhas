@@ -45,15 +45,15 @@
 
         <div class="col2">
             
-            <div class="switchBtn">
-                <label id="titulo">Gênero:</label>              
-                <input type="radio" name="sexo" value="Fêmea" id="female" required>
-                <label for="female" id="female">Fêmea</label>
-                <input type="radio" name="sexo" value="Macho" id="male" required>
-                <label for="male" id="male">Macho</label>
-            </div>
+        <div class="upload-container">
+                <div class="switchBtn">
+                    <label id="titulo">Gênero:</label>              
+                    <input type="radio" name="sexo" value="Fêmea" id="female" required>
+                    <label for="female" id="female">Fêmea</label>
+                    <input type="radio" name="sexo" value="Macho" id="male" required>
+                    <label for="male" id="male">Macho</label>
+                </div>
 
-            <div class="upload-container">
                 <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                 <label for="image" id="imgLabel" class="upload-box">
                     <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
@@ -62,39 +62,26 @@
                 <div id="filePreview"></div>
                 <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>
+            <?php
+                $idBtn = "btnCadastrar";
+                $funcaoClick = "adicionarComValidacao('Animal editado com sucesso!', 1, 'listaAdocao-ADM.php' )";
+                $funcaoLoad = "mudarTamanho('btnCadastrar', '275px', '50px', '20px' )";
+                $titulo = "Salvar";           
+                include('../templates/componenteButton.php');
 
-            <!-- <button type="button" onclick="adicionar()">Salvar</button>
-            <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button> -->
+                $idBtn = "btnCancelar";
+                $funcaoClick = "cancelarForm('frmCadastroAdocao', 'listaAdocao-ADM.php')";
+                $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
+                $titulo = "Cancelar";
+                include('../templates/componenteButton.php');
+            ?>
 
-    <?php
-        $bnt = "btn";
-        $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
-        $funcaoLoad = "mudarTamanho('btn')";
-        $titulo = "Salvar";           
-        include('../templates/componenteButton.php');
-    ?>
-    <?php
-        $btnCancelar = "btnCancelar";
-        $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
-        $funcaoLoad = "mudarTamanho('400px')";
-        $titulo = "Cancelar";
-        include('../templates/componenteButton.php');
-    ?>
         </div>
     </div>
 
 </form>
     
 <script>
-    function adicionar(){
-        if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
-            alertalert("Update realizado com sucesso!")
-            window.location.href = "listaAdocao-ADM.php";
-        }else{
-            alert("Preencha todos os campos.")
-        }
-    }
-
     document.getElementById('image').addEventListener('change', function (event) {
         const filePreview = document.getElementById('filePreview');
         filePreview.innerHTML = ""; 

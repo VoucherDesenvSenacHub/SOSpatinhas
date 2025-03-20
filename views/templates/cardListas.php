@@ -1,4 +1,4 @@
-g<?php 
+<?php 
 
 function gerarCard($nome, $imagem) {
     echo'
@@ -82,8 +82,8 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     padding: 10px;
     transition: transform 0.2s;
     text-align: center;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 .Card:hover {
@@ -94,9 +94,7 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
-    border-radius: 10px 10px 0 0;
 }
 .Card button {
     background-color: #44803F;
@@ -116,6 +114,12 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     transform: scale(1.05);
 }
 
+.Card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
 .Card .meta {
     font-size: 1em;  
     background-color: #83CE7D;
@@ -129,17 +133,12 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
 }
 
 
-/* .btnListaFormulario {
-    font-size: 1em;  
-    background-color: #83CE7D;
-    color: black;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    padding: 8px 10px; 
-} */
+.btnListaFormulario {
+    width: 82% !important;
+    display: flex !important;
+    margin: 10px auto ;
+    justify-content: center !important;
+}
 
 
 .divImg {

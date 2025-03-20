@@ -1,12 +1,12 @@
 <?php
-
+/*
     if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
     echo '<script type="text/javascript">
             alert("Você precisa estar logado como administrador para acessar esta página.");
             window.location.href = "loginADM.php";
           </script>';
     exit();
-    }
+    }     */
 
   $cssLink  = '../css/quemSomos.css';
   $tipo = 'Adm';
@@ -59,22 +59,23 @@
 
 <script> 
     // popup do layout input simples
-    const btn_temp = document.querySelectorAll('.btn-card-equipe');
-    btn_temp.forEach(button => {
-        button.onclick = function()
-        {
-          chamar_popup('input');
-        };
+    const btn_popup1 = document.querySelectorAll('.btn-card-equipe');
+    btn_popup1.forEach(button =>
+    {
+      button.onclick = function()
+      {
+        chamar_popup('input');
+      };
     });
 
     // popup do layout upload img
-    const btn_no_input = document.querySelectorAll('.btn-card-parceiro');
-    btn_no_input.forEach(button =>
+    const btn_popup2 = document.querySelectorAll('.btn-card-parceiro');
+    btn_popup2.forEach(button =>
     {
-        button.onclick = function()
-        {
-          chamar_popup('textArea');
-        };
+      button.onclick = function()
+      {
+        chamar_popup('upload');
+      };
     });
 </script>
 

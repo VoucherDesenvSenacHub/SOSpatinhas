@@ -60,20 +60,22 @@
                 <div id="filePreview"></div>
                 <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>
-            <?php
-            $idBtn = "btnCadastrar";
-            $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
-            $funcaoLoad = "mudarTamanho('btnCadastrar', '275px', '50px', '20px')";
-            $titulo = "Cadastrar";
-            include('../templates/componenteButton.php');
 
-            $idBtn = "btnCancelar";
-            $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
-            $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
-            $titulo = "Cancelar";
-            include('../templates/componenteButton.php');
-            ?>
+            <div class="btnContainer">
+                <?php
+                $idBtn = "btnCadastrar";
+                $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
+                $funcaoLoad = "mudarTamanho('btnCadastrar', '275px', '50px', '20px')";
+                $titulo = "Cadastrar";
+                include('../templates/componenteButton.php');
 
+                $idBtn = "btnCancelar";
+                $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
+                $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
+                $titulo = "Cancelar";
+                include('../templates/componenteButton.php');
+                ?>
+            </div>
         </div>
     </div>
 </form>

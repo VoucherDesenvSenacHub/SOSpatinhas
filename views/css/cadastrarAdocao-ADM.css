@@ -110,6 +110,10 @@ select {
     text-align: center;
 }
 
+.btnContainer {
+    margin-top: 10px;
+}
+
 .upload-box {
     width: 100%;
     height: 150px;
@@ -218,6 +222,10 @@ select {
         width: 100%;
     }
 
+    .remove-file {
+        width: 19%;
+    }
+
     select {
         width: 100%;
     }
@@ -306,11 +314,7 @@ select {
     }
 
     .remove-file {
-        width: 24%;
-    }
-
-    .switchBtn {
-        margin-left: -40px;
+        width: 19%;
     }
 
     .file-info {

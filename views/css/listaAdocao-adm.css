@@ -57,6 +57,7 @@ item-adocao {
     margin: 10px 0;
     font-size: 1.2em;
     color: #333;
+    
 }
 
 .botao-add-container {
@@ -172,7 +173,7 @@ item-adocao {
     }
 
     .lista-adocao {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 15px;
     }
 

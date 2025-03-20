@@ -5,7 +5,9 @@ function gerarCard($nome, $imagem) {
         <div class="Card">
             <h3>'.$nome.'</h3>
             <img src="'.$imagem.'" alt="'.$nome.'">
-            <div></div>
+            <button onclick="window.location.href=`listaFormulario.php`"class="btnListaFormulario">
+                Lista Formulário
+            </button>
             <button class="btnExcluir">Excluir</button>
             <button class="btnEditar">Editar</button>
         </div>
@@ -126,6 +128,18 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     padding: 8px 10px; 
 }
 
+
+/* .btnListaFormulario {
+    font-size: 1em;  
+    background-color: #83CE7D;
+    color: black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 8px 10px; 
+} */
 
 
 .divImg {

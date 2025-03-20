@@ -104,11 +104,31 @@
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+#titlePopup{
+    width: 400px;
+    height: 50px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 7px;
+    display: none;
+}
+
 #popup-textoArea {
     width: 400px;
     height: 400px;
     resize: none;
     margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 7px;
+}
+
+#pricePopup{
+    display:none;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;

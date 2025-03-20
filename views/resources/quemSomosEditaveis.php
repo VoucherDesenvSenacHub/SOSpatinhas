@@ -58,16 +58,15 @@
 </section>
 
 <script> 
-    // popup do layout input simples
+    // popup do layout input para apenas nome
     const btn_popup1 = document.querySelectorAll('.btn-card-equipe');
     btn_popup1.forEach(button =>
     {
       button.onclick = function()
       {
-        chamar_popup('input');
+        chamar_popup('input_name');
       };
     });
-
     // popup do layout upload img
     const btn_popup2 = document.querySelectorAll('.btn-card-parceiro');
     btn_popup2.forEach(button =>

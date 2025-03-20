@@ -9,6 +9,9 @@
         <p>Enviar foto</p>
         <input type="file" id="inputFilePopup" accept="image/*">
     </div>
+
+    <input type='text' id='titlePopup' placeholder='Digite o título...'>
+    <input type='text' id='pricePopup' placeholder='Digite o novo valor...'>
     <h6 id="line_h6">Enviar arquivos: JPG, PNG, JPNG</h6>
     <input type="text" id="inputBoxPopup" placeholder="Digite o nome da pessoa">
     <textarea id="popup-textoArea" name="popup-textoArea" placeholder="Digite sua descrição..."></textarea>
@@ -27,7 +30,7 @@
         document.getElementById('popupEditar').style.display = 'flex';
         
         // condição para mostrar qual tipo de layout será exibido
-        if (layout_type === 'input') // layout com input 
+        if (layout_type === 'input_name') // layout com upload e nome 
         { 
             document.getElementById('inputBoxPopup').style.display = 'block';
             document.getElementById('popup-textoArea').style.display = 'none';
@@ -43,6 +46,26 @@
             document.getElementById('input_img').style.display = 'none';
             document.getElementById('line_h6').style.display = 'none';
             document.getElementById('popup-textoArea').style.display = 'block';
+        } else if (layout_type ==='input_titulo') // layout com titulo e descrição
+        {
+            document.getElementById('inputBoxPopup').style.display = 'none';
+            document.getElementById('input_img').style.display = 'none';
+            document.getElementById('line_h6').style.display = 'none';
+            document.getElementById('popupEditar').style.justifycontent = 'space-evenly';
+            document.getElementById('titlePopup').style.display = 'block';
+            document.getElementById('popup-textoArea').style.height = '255px';
+            document.getElementById('popup-textoArea').style.display = 'block';
+        } else if (layout_type === 'a') // layout com imagem, titulo e valor
+        {
+            document.getElementById('inputBoxPopup').style.display = 'none';
+            document.getElementById('line_h6').style.display = 'none';
+            document.getElementById('popup-textoArea').style.display = 'none';
+            document.getElementById('titlePopup').style.display = 'block';
+            document.getElementById('pricePopup').style.display = 'block';
+
+            document.getElementById('input_img').style.marginTop = '25px';
+            
+            document.getElementById('titlePopup').style.placeholder = 'teste';
         }
     };
         // fecha caso clique fora do popup
@@ -81,7 +104,7 @@
                 grampo.style.height = 'calc(100% + 10px)';
                 grampo.style.objectFit = 'cover';
                 grampo.style.zIndex = '0';
-                document.getElementById('input-img').style.visibility = 'none';
+                document.getElementById('input_img').style.visibility = 'none';
                 document.getElementById('inputFilePopup').style.display = 'none';
             }
             reader.readAsDataURL(file);

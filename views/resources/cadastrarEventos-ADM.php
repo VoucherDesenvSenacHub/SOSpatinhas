@@ -14,7 +14,7 @@
     include('../templates/default/topHTML.php');
 ?>
 
-<form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
+<form action="" method="POST" enctype="multipart/form-data" id="formCadastroEvento">
     <div class="conteudoForm">
         <div class="col1">
             <input type="text" name="name" placeholder="Nome do Evento" required>
@@ -41,13 +41,14 @@
             <div class="btnContainer">
                 <?php
                     $idBtn = "btn";
-                    $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
+                    $funcaoClick = "adicionarComValidacao('Evento cadastrado com sucesso!')";
                     $funcaoLoad = "mudarTamanho('btn', '275px', '50px', '20px')";
                     $titulo = "Cadastrar";
                     include('../templates/componenteButton.php');
                     
+                    //  arrumar o direcionamento
                     $idBtn = "btnCancelar";
-                    $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
+                    $funcaoClick = "cancelarForm('frmCadastroAdocao','listaEventosADM.php')";
                     $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
                     $titulo = "Cancelar";
                     include('../templates/componenteButton.php');
@@ -57,14 +58,6 @@
     </div>
 </form>
 <script>
-    function adicionar(){
-        if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
-            alert("Arrecadação cadastrada com sucesso!")
-        }else{
-            alert("Preencha todos os campos.")
-        }
-    }
-
     document.getElementById('image').addEventListener('change', function (event) {
         const filePreview = document.getElementById('filePreview');
         filePreview.innerHTML = ""; 

@@ -73,6 +73,7 @@ select {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    left: 100px;
 }
 
 .switchBtn input {
@@ -160,7 +161,7 @@ select {
     padding: 10px;
     border-radius: 5px;
     width: 100%;
-    max-width: 600px; 
+    max-width: 606px; 
     overflow: hidden;
 }
 
@@ -230,10 +231,6 @@ select {
     body {
         background-size: 80%;
     }
-    
-    .corpo {
-        width: 85%;
-    }
 
     .conteudoForm {
         flex-direction: column;
@@ -261,33 +258,31 @@ select {
     }
 
     .switchBtn {
-        width: 60%;
+        justify-content: center;
     }
 
     .remove-file {
         width: 15%;
     }
+
+    #filePreview {
+        width: 100%;
+    }
 }
 
 @media (max-width: 425px) {
     body{
-        background-size: 130%;
-    }
-    
-    .corpo {
-        width: 87%;
+        background-size: contain;
     }
 
     .conteudoForm {
-        flex-direction: column;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 10px;
     }
 
     .col1, .col2 {
-        width: 80%;
-        max-width: 80%;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
     }
 
     select, input, textarea {
@@ -310,12 +305,12 @@ select {
         width:100%;
     }
 
-    .switchBtn {
-        width: 125%;
-    }
-
     .remove-file {
         width: 24%;
+    }
+
+    .switchBtn {
+        margin-left: -40px;
     }
 
     .file-info {

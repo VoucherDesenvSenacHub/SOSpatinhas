@@ -137,8 +137,8 @@ let links = document.querySelectorAll('.link');
 
     function recalcularPaginacao() {
         const itensPorPagina = 6;
-        const listaAdocao = document.getElementById('lista-adocao');
-        const itens = listaAdocao.querySelectorAll('.item-adocao');
+        const listaFormulario = document.getElementById('lista-formulario');
+        const itens = listaFormulario.querySelectorAll('.item-formulario');
         totalPaginas = Math.ceil(itens.length / itensPorPagina);
 
         itens.forEach((item, index) => {
@@ -167,7 +167,7 @@ let links = document.querySelectorAll('.link');
     }
 
     function exibirPagina(pagina) {
-        const itens = document.querySelectorAll('.item-adocao');
+        const itens = document.querySelectorAll('.item-formulario');
         itens.forEach((item) => {
             const paginaItem = parseInt(item.getAttribute('data-pagina'));
             if (paginaItem === pagina) {

@@ -1,8 +1,7 @@
-.Card{
+/* .Card{
     border-radius: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-}
+} */
 
 .contentCard{
     display: flex;
@@ -28,9 +27,16 @@
     padding-top: 0.5rem;
 }
 
-.ftAnimal, .ftUser{
+/* .ftAnimal, .ftUser{
     width: 100%;
     height: 100%;
+} */
+
+.fts{
+    border: 1px solid #ccc;
+    border-radius: 10rem;
+    height: 14rem;
+    width: 14rem;
 }
 
 h1 {
@@ -72,18 +78,18 @@ h1 {
     cursor: pointer;
 }
 
-.lista-adocao {
+.lista-formulario {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     position: relative;
 }
 
-item-adocao {
+item-formulario {
     display: none;
 }
 
-.item-adocao[data-pagina="1"] {
+.item-formulario[data-pagina="1"] {
     display: block;
 }
 
@@ -206,7 +212,7 @@ item-adocao {
         width: 1.1em;
     }
 
-    .lista-adocao {
+    .lista-formulario {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
@@ -296,7 +302,7 @@ item-adocao {
         width: 1em;
     }
 
-    .lista-adocao {
+    .lista-formulario {
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
     }

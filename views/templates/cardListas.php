@@ -80,6 +80,8 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     padding: 10px;
     transition: transform 0.2s;
     text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .Card:hover {

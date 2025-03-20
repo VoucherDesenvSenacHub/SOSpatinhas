@@ -98,8 +98,18 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     width: 100%;
     height: 250px;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
+
+.btnListaFormulario {
+    width: 82% !important ;
+    display: flex ;
+    margin: 5px auto ;
+    margin-bottom: 5px ;
+    margin-top: -4px;
+    justify-content: center ;
+}
+
 .Card button {
     background-color: #44803F;
     color: white;
@@ -137,12 +147,7 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
 }
 
 
-.btnListaFormulario {
-    width: 82% !important;
-    display: flex !important;
-    margin: 10px auto ;
-    justify-content: center !important;
-}
+
 
 
 .divImg {

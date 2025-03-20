@@ -228,8 +228,6 @@ h2 {
     }
 }
 
-
-
 @media (max-width: 1024px) {
     .corpo-desktop{
         display: flex;

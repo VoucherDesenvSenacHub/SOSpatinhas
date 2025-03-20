@@ -10,11 +10,11 @@ const devCard = (dev) => {
             </h5>
         </div>
         <div class="links">
-            <a href="${dev.linkedin}" class="a-links">
-                <img src="" alt="Linkedin" class="img-links">
-            </a>
             <a href="${dev.github}" class="a-links">
                 <img src="" alt="GitHub" class="img-links">
+            </a>
+            <a href="${dev.linkedin}" class="a-links">
+                <img src="" alt="Linkedin" class="img-links">
             </a>
             <a href="${dev.insta}" class="a-links">
                 <img src="" alt="Insta" class="img-links">
@@ -23,4 +23,4 @@ const devCard = (dev) => {
     </section>   
     `;
 };
-export default editCard;  // 🔹 Certifique-se de que está exportando como default
+export default devCard;  // 🔹 Certifique-se de que está exportando como default

@@ -28,7 +28,7 @@
             </a>
         </div>
     </section>    
-    <script type="module" src="../../Components/editCard.js" defer></script>
-    <script src="../edit/script.js" type="module" defer></script>
+    <script type="module" src="../script/developers.js" defer></script>
+    <script src="../script/dev2.js" type="module" defer></script>
 </body>
 </html>

@@ -14,46 +14,47 @@
 ?>
 
 <form action="" method="post" id="frmEditarPerfilADM">
-    <div class="col">
-        <div id="btn-photo">
+    <div class="conteudoFrm">
+        <div class="col">
             <div class="upload-container">
+                <div id="filePreview">
+                    <img src="..\images\userProfile.png" alt="" id="previewImg">
+                </div>
                 <div id="imgUpload">
                     <input type="file" id="image" name="image[]" accept="image/*" hidden>
                     <label for="image" id="imgLabel" class="upload-box">
                         <img src="..\images\btnAdicionar.png" alt="Upload Icon">
                     </label>
                 </div>
-                <div id="filePreview">
-                    <img src="..\images\userProfile.png" alt="" id="previewImg">
-                </div>
-            </div>
+            </div>   
         </div>
-    </div>
-    <div class="conteudo">
+        
+
         <div class="col">
             <input type="text" name="nome" placeholder="Nome">
             <input type="text" name="cpf" placeholder="CPF">
             <input type="text" name="email" placeholder="E-mail">
             <input type="text" name="telefone" placeholder="Número de Telefone/Celular">
             <input type="text" name="senha" placeholder="Senha">
-        </div>
-        
-        <div>
-        <?php
-        $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
-        $funcaoLoad = "mudarTamanho('100%', '44px', '20px')";  
-        $titulo = "Salvar";           
-        include('../templates/componenteButton.php');
-    ?>
-    <?php
-        $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
-        $funcaoLoad = "mudarTamanho('100%', '44px', '20px')";
-        $titulo = "Cancelar";
-        include('../templates/componenteButton.php');
-    ?>
+            <div class = "btnContainer">
+                <?php
+                    //btn Salvar
+                    $idBtn = "btnSalvar";
+                    $funcaoClick = "adicionarComValidacao('Dados salvos com sucesso!', 1, 'editarPerfil-ADM.php')";
+                    $funcaoLoad = "mudarTamanho('btnSalvar')";  
+                    $titulo = "Salvar";           
+                    include('../templates/componenteButton.php');
+            
+                    //btn Cancelar
+                    $idBtn = "btnCancelar";
+                    $funcaoClick = "cancelarForm(nomeForm, 1, 'PerfilADM.php')";
+                    $funcaoLoad = "mudarTamanho('btnCancelar')";
+                    $titulo = "Cancelar";
+                    include('../templates/componenteButton.php');
+                ?>
+            </div>
         </div>
     </div>
-
 </form>
 
 <script>
@@ -81,6 +82,7 @@
         document.getElementById('frmEditarPerfilADM').reset();
         window.location.href = "PerfilADM.php";
     }
+
 </script>
 
 <?php

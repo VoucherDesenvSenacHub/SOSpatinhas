@@ -3,15 +3,15 @@
     //     header("Location: login.php");
     //     exit();
     // }
-    session_start();
+    // session_start();
 
-    if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
-        echo '<script type="text/javascript">
-                alert("Você precisa estar logado para prosseguir.");
-                window.location.href = "login.php";
-              </script>';
-        exit();
-    }
+    // if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
+    //     echo '<script type="text/javascript">
+    //             alert("Você precisa estar logado para prosseguir.");
+    //             window.location.href = "login.php";
+    //           </script>';
+    //     exit();
+    // }
 
     $cssLink  = '../css/perfilUsuario.css';
     $tipo = 'User';

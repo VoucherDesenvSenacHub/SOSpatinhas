@@ -200,6 +200,10 @@ button a{
     .QRCode-container {
         width: 100%;
     }
+
+    .remove-file {
+        width: 18%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -290,7 +294,7 @@ button a{
     }    
     
     .remove-file {
-        width: 27%;
+        width: 25%;
     }
 
     .file-info {

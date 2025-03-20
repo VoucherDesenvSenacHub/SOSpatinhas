@@ -1,12 +1,12 @@
 <?php
 
-    if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
-    echo '<script type="text/javascript">
-            alert("Você precisa estar logado como administrador para acessar esta página.");
-            window.location.href = "loginADM.php";
-          </script>';
-    exit();
-    }
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
 
 
     $cssLink  = '../css/cadastrarEventos-ADM.css';
@@ -32,26 +32,26 @@
                         <p>Enviar fotos</p>
                     </label>
                     <div class="descricaoEBtn">
-                    <div id="filePreview"></div>
                         <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
+                    <div id="filePreview"></div>
                     </div>
                 </div>
 
-                <div class="btnContainer">
-                    <?php
-                        $idBtn = "btn";
-                        $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
-                        // $funcaoLoad = "mudarTamanho('btn', '275px', '50px', '20px')";
-                        $titulo = "Cadastrar";
-                        include('../templates/componenteButton.php');
-                        
-                        $idBtn = "btnCancelar";
-                        $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
-                        // $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
-                        $titulo = "Cancelar";
-                        include('../templates/componenteButton.php');
-                    ?>
-                </div>
+            </div>
+            <div class="btnContainer">
+                <?php
+                    $idBtn = "btn";
+                    $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
+                    $funcaoLoad = "mudarTamanho('btn', '275px', '50px', '20px')";
+                    $titulo = "Cadastrar";
+                    include('../templates/componenteButton.php');
+                    
+                    $idBtn = "btnCancelar";
+                    $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
+                    $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
+                    $titulo = "Cancelar";
+                    include('../templates/componenteButton.php');
+                ?>
             </div>
         </div>
     </div>

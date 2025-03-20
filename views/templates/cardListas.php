@@ -45,6 +45,31 @@ function gerarCardEventos($nome, $imagem, $data, $local) {
     ';
 }
 
+function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser, $nomeUser) {
+    echo '
+        <div class="Card">
+            <div class="contentCard">
+                <h3 class="tituloFrm">'.$tituloFrm.'</h3>
+                <div class="topCont">
+                    <div class="ftAnimal">
+                        <img src="'.$imagemAnimal.'" alt="" class="fts">
+                        <p class="nomes">'.$nomeAnimal.'</p>
+                    </div>
+                    <div class="ftUser">
+                        <img src="'.$imagemUser.'" alt="" class="fts">
+                        <p class="nomes">'.$nomeUser.'</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <button class="btnEditar">Ver Detalhes</button>
+                    <button>Aceitar</button>
+                    <button class="btnExcluir" >Negar</button>
+                </div>
+            </div>
+        </div>
+    ';
+}
+
 ?>
 
 <style>

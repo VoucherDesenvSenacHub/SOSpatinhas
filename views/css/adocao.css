@@ -291,7 +291,7 @@
 
 
 
-/* @media (max-width: 425px){
+@media (max-width: 425px){
   .corpo{
     width: 100%;
     padding: 0;
@@ -324,4 +324,4 @@
     display: inline-block;
     
   }
-} */
+}

@@ -58,15 +58,6 @@
 </form>
 
 <script>
-    function adicionar(){
-        if([...document.querySelectorAll("#frmEditarPerfilADM input")].every(input => input.value.trim() !== "")){
-            alert("Update realizado com sucesso!")
-            window.location.href = "PerfilADM.php";
-        }else{
-            alert("Preencha todos os campos.")
-        }
-    }
-
     document.getElementById('image').addEventListener('change', function (event) {
         const file = event.target.files[0]; 
         if (file) {

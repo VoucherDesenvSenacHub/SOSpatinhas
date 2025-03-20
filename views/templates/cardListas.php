@@ -54,18 +54,22 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
                 <h3 class="tituloFrm">'.$tituloFrm.'</h3>
                 <div class="topCont">
                     <div class="ftAnimal">
-                        <img src="'.$imagemAnimal.'" alt="" class="fts">
+                        <div class="imgConatiner">
+                            <img src="'.$imagemAnimal.'" alt="" style="height: 10rem">
+                        </div>
                         <p class="nomes">'.$nomeAnimal.'</p>
                     </div>
                     <div class="ftUser">
-                        <img src="'.$imagemUser.'" alt="" class="fts">
+                        <div class="imgConatiner">
+                            <img src="'.$imagemUser.'" alt="" style="height: 10rem; background-color: #44803F;">
+                        </div>
                         <p class="nomes">'.$nomeUser.'</p>
                     </div>
                 </div>
                 <div class="bottom">
-                    <button class="btnEditar">Ver Detalhes</button>
-                    <button>Aceitar</button>
-                    <button class="btnExcluir" >Negar</button>
+                    <button class="btnEditar">Ver</button>
+                    <button class="btnAceitar">Aceitar</button>
+                    <button class="btnExcluir" >Recusar</button>
                 </div>
             </div>
         </div>

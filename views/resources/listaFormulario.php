@@ -109,8 +109,27 @@
 </div>
 
 <script>
+    document.querySelectorAll('.btnExcluir').forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.remove();
+            confirm('Certeza que deseja recusar esse formulário?');
+        });
+    });
 
-let links = document.querySelectorAll('.link');
+    document.querySelectorAll('.btnAceitar').forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.remove();
+            confirm('Certeza que deseja aceitar esse formulário?');
+        });
+    });
+
+    document.querySelectorAll('.btnEditar').forEach(button => {
+        button.addEventListener('click', function() {
+            window.location.href = "formulario.php";
+        });
+    });
+
+    let links = document.querySelectorAll('.link');
     let valorAtual = 0;
 
     function activeLink() {

@@ -18,7 +18,7 @@
         <form id="formEditarPerfilMembro">
             <input required class="inputPerfil" type="text" placeholder="  Nome ">
             <input required class="inputPerfil" type="text" placeholder="  E-mail  ">
-            <input required class="inputPerfil" type="text" placeholder="  Número Telefone/Celular  ">
+            <input required class="inputPerfil" type="text" placeholder="  Telefone">
             <input required class="inputPerfil" type="text" placeholder="  Senha  ">
             <input required class="inputPerfil" type="text" placeholder="  Confirmar Senha  ">
         </form>

@@ -10,29 +10,76 @@
 </head>
 <body>
 <?php include('../templates/navbar'.$tipo.'.php'); ?>
+<div class="row" id="cima">
+    <div class="containerCarrossel">
+        <div id="homeCarrosel">
+            <?php
+                $cardComponents1 = array();
 
-<?php if ($tipo == "Adm"): ?>
-<?php include('../templates/sidebarAdm.php'); ?>
-<?php endif; ?>
+                for ($i = 0; $i < 5; $i++) {
+                    ob_start(); 
+                    include('../templates/homeCard.php'); 
+                    $cardComponents1[] = ob_get_clean();
+                }
+
+                $cardComponents = $cardComponents1;
+                $carouselId = 'homeCarrosel1';
+                @include('../templates/carossel.php');
+            ?>
+        </div> 
+    </div>
+</div>
+</div>
+
+<div class="row" id="meio">
+    <div class="texto">
+        <h1></h1>
+        <p></p>
+    </div>
+    <div class="imgBtn">
+        <div class="divImgMeio">
+            <img src="" alt="">
+        </div>
+        <div class="divBtnMeio">
+            <!-- componente do btn -->
+        </div>
+    </div>
+</div>
+
+<div class="row" id="baixo">
+    <div class="cardSaibaMais">
+        <p class="titulo"></p>
+        <div class="divImgBaixo">
+            <!-- componete do btn -->
+        </div>
+        <div class="divBtnBaixo">
+            <!-- componete do btn -->
+        </div> 
+    </div>
+
+    <div class="cardSaibaMais">
+        <p class="titulo"></p>
+        <div class="divImgBaixo">
+            <!-- componete do btn -->
+        </div>
+        <div class="divBtnBaixo">
+            <!-- componete do btn -->
+        </div> 
+    </div>
+
+    <div class="cardSaibaMais">
+        <p class="titulo"></p>
+        <div class="divImgBaixo">
+            <!-- componete do btn -->
+        </div>
+        <div class="divBtnBaixo">
+            <!-- componete do btn -->
+        </div> 
+    </div>
+</div>
     
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

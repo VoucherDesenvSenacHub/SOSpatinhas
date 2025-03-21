@@ -5,203 +5,33 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
-    background-color: #44803f;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-
-/* --- Slider --- */
-#secslider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-#divslider {
-    position: relative;
-}
-
-#slider {
-    display: flex;
-    transition: transform 0.5s ease;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-#slider li {
-    min-width: 100%;
-}
-
-#slider img {
-    height: 675px;
-    width: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.ctdcard {
-    gap: 10px;
-    color: white;
-    position: relative;
-    transform: translate(0%, -200%);
-    display: grid;
-
-    & input  {
-        background-color: #44803f;
-        color: white;
-        padding: 10px;
-        border-radius: 6px;
-        font-size: 24px;
-        cursor: pointer;
-    }
-}
-
-.textcard {
-    color: white;
-    font-weight: 600;
-}
-
-/* Baner ira sumir no desktop */
-#bannerMobas {
-    display: none;
-}
-
-button {
-    height: 35px;
-    width: 35px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #44803f;
-    border: none;
-    border-radius: 50px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10; 
-    display: none;
-}
-
-button img{
-    width: 40px;
-}
-.buttonslider{
-    font-weight: 550;
-    color: #ffffff;
-}
-#esquerda {
-    left: 20px;
-}
-#direita {
-    right: 20px;
-}
-
-/* --- Cards --- */
-#seccards {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.card {
-    flex: 1; /* Faz cada card ocupar o mesmo espaço */
+.row { 
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-#seccards img {
-    object-fit: cover;
     width: 100%;
-    height: 100%;
 }
 
-@media (min-width: 769px) {
-    #sliderDoacao {
-        display: none;
+.homeCarrosel {
+    width: 100;
+}
+
+
+@media (max-width: 1024px) {
+    .homeCarrosel{
+        max-height: 70rem;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-
-    .navbar-logo img {
-        width: 190px;
-        height: 102px;
-    }
-
-    .hamburger div {
-        width: 30px;
-        height: 4px;
-        background-color: white;
-        transition: 0.3s;
-    }
-
-    /* .navbar{
-        display: none;
-    } */
-
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-    
-    #secslider {
-        display: none;
-    } /*RETIRAR CARROSSEL*/
-
-    #bannerMobas {
-        display: block;
+    .homeCarrosel{
         width: 100%;
-    } /*MOSTRAR O BANNER*/
-
-    #seccards {
-        display: none;
     }
-    #sliderDoacao{
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        
-        & .cardDoacao {
-            width: auto;
-
-            & .divImg {
-                width: 100vw;
-                height: 100%;
-            }
-        }
-    }
-
-    .ctdcard {
-        display: flow;
-        font-size: 1.6rem;
-
-        & input {
-            font-size: 1.5rem;
-        }
-    }
-
-    .imgBanner{
-        
-        max-width: 768px;
-    
-        & img{
-            object-fit: cover;
-            width: 100%;
-        }
-    }
-
 }
 
 @media (max-width: 425px) {
-    
-    #sliderDoacao {
-        margin: 20px auto;
+    .homeCarrosel{
+        width: 100%;
     }
-
 }

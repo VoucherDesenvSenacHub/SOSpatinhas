@@ -12,7 +12,6 @@
             <p><?= $animal['sexo']?></p>
             <p><?= $animal['idade']?> anos</p>
             <p>Porte <?= $animal['porte']?></p>
-            <p><?= $animal['tipo']?></p>
         </header>
         <button class="button-card">
             <a href="informacaoAnimal.php?id=1"><!--<?= $animal['id_animal'] ?>-->Adotar!</a>

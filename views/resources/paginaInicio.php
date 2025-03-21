@@ -1,182 +1,113 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="<?php echo $cssLink; ?>">
-    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
-</head>
-<body>
-<?php include('../templates/navbar'.$tipo.'.php'); ?>
-<div class="row" id="cima">
-    <div class="containerCarrossel">
-        <div id="homeCarrosel">
-            <?php
-                $cardComponents1 = array();
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SOS Patinhas</title>
+        <link rel="stylesheet" href="../css/paginaInicio.css">
+        <link rel="icon" type="image/png" href="../images/icons/favicon.png">
+    </head>
+    <body>
+    <?php include('../templates/navbarUser.php'); ?>
 
-                for ($i = 0; $i < 5; $i++) {
-                    ob_start(); 
-                    include('../templates/homeCard.php'); 
-                    $cardComponents1[] = ob_get_clean();
-                }
-
-                $cardComponents = $cardComponents1;
-                $carouselId = 'homeCarrosel1';
-                @include('../templates/carossel.php');
-            ?>
-        </div> 
-    </div>
-</div>
-</div>
-
-<div class="row" id="meio">
-    <div class="texto">
-        <h1></h1>
-        <p></p>
-    </div>
-    <div class="imgBtn">
-        <div class="divImgMeio">
-            <img src="" alt="">
-        </div>
-        <div class="divBtnMeio">
-            <!-- componente do btn -->
+    <div class="row" id="cima">
+        <div class="containerCarrossel">
+            <section id="secslider" >
+                <div id="divslider">
+                    <ul id="slider">
+                        <li>
+                            <img src="../images/fotoinicio1.png" alt="Foto do Carrosel">
+                        </li>
+                        <li>
+                            <img src="../images/fotoinicio2.png" alt="Foto do Carrosel">
+                        </li>
+                        <li>
+                            <img src="../images/fotoinicio3.png" alt="Foto do Carrosel">
+                        </li>
+                    </ul>
+                </div>
+                <img src="../images/icons/btn_esquerdo.png" alt="" class="buttonslider" id="esquerda">
+                <img src="../images/icons/btn_direito.png" alt="" class="buttonslider" id="direita">
+            </section>
         </div>
     </div>
-</div>
 
-<div class="row" id="baixo">
-    <div class="cardSaibaMais">
-        <p class="titulo"></p>
-        <div class="divImgBaixo">
-            <!-- componete do btn -->
+    <div class="row" id="meio">
+        <div class="texto">
+            <h1>Sobre Nós</h1>
+            <p>A SOS Patinhas nasceu do amor e compromisso com os animais em situação de vulnerabilidade. Nossa missão é resgatar, cuidar e encontrar lares amorosos para cães e gatos abandonados, oferecendo a eles uma nova chance de vida.
+                Com o apoio de voluntários e doações, realizamos resgates, tratamentos veterinários, castrações e campanhas de adoção. Além disso, trabalhamos para conscientizar a sociedade sobre a importância do respeito e proteção aos animais.
+                Junte-se a nós e faça parte dessa corrente do bem. Juntos, podemos mudar vidas – uma patinha de cada vez!
+            </p>
         </div>
-        <div class="divBtnBaixo">
-            <!-- componete do btn -->
-        </div> 
+        <div class="imgBtn">
+            <div class="divImgMeio">
+                <img src="../images/imgcard1.png" alt="">
+            </div>
+            <div class="divBtnMeio">
+                <?php
+                    $idBtn = "btnEquipe";
+                    $funcaoClick = "redirecionar('quemSomos.php')";
+                    $funcaoLoad = "mudarTamanho('btnEquipe')";
+                    $titulo = "Conheça nossa equipe!";
+                    include("../templates/componenteButton.php");
+                ?>
+            </div>
+        </div>
     </div>
 
-    <div class="cardSaibaMais">
-        <p class="titulo"></p>
-        <div class="divImgBaixo">
-            <!-- componete do btn -->
+    <div class="row" id="baixo">
+        <div class="cardSaibaMais">
+            <p class="titulo">Faça uma doação!</p>
+            <div class="divImgBaixo">
+                <img src="../images/imgcard1.png" alt="">
+            </div>
+            <div class="divBtnBaixo">
+                <?php
+                    $idBtn = "btnDoacao";
+                    $funcaoClick = "redirecionar('comoAjudar.php')";
+                    $funcaoLoad = "mudarTamanho('btnDoacao')";
+                    $titulo = "Saiba Mais!";
+                    include("../templates/componenteButton.php");
+                ?>
+            </div> 
         </div>
-        <div class="divBtnBaixo">
-            <!-- componete do btn -->
-        </div> 
+
+        <div class="cardSaibaMais">
+            <p class="titulo">Participe de nossos eventos!</p>
+            <div class="divImgBaixo">
+                <img src="../images/imgcard2.png" alt="">
+            </div>
+            <div class="divBtnBaixo">
+                <?php
+                    $idBtn = "btnEventos";
+                    $funcaoClick = "redirecionar('eventos.php')";
+                    $funcaoLoad = "mudarTamanho('btnEventos')";
+                    $titulo = "Saiba Mais!";
+                    include("../templates/componenteButton.php");
+                ?>
+            </div> 
+        </div>
+
+        <div class="cardSaibaMais">
+            <p class="titulo">Adote um amigo!</p>
+            <div class="divImgBaixo">
+                <img src="../images/imgcard3.png" alt="">
+            </div>
+            <div class="divBtnBaixo">
+                <?php
+                    $idBtn = "btnAdocao";
+                    $funcaoClick = "redirecionar('adocao.php')";
+                    $funcaoLoad = "mudarTamanho('btnAdocao')";
+                    $titulo = "Saiba Mais!";
+                    include("../templates/componenteButton.php");
+                ?>
+            </div> 
+        </div>
     </div>
 
-    <div class="cardSaibaMais">
-        <p class="titulo"></p>
-        <div class="divImgBaixo">
-            <!-- componete do btn -->
-        </div>
-        <div class="divBtnBaixo">
-            <!-- componete do btn -->
-        </div> 
-    </div>
-</div>
-    
-</body>
-</html>
-
-
-
-
-<!-- <section id="bannerMobas">
-            <div class="imgBanner">
-                <img src="../images/inicial/Telinha1.png" alt="Cachorros Felizes">
-            </div>
-        </section>
-
-        <section id="secslider" >
-            <div id="divslider">
-                <ul id="slider">
-                    <li>
-                        <img src="../images/fotoinicio1.png" alt="Foto do Carrosel">
-                    </li>
-                    <li>
-                        <img src="../images/fotoinicio2.png" alt="Foto do Carrosel">
-                    </li>
-                    <li>
-                        <img src="../images/fotoinicio3.png" alt="Foto do Carrosel">
-                    </li>
-                </ul>
-            </div>
-            <button class="buttonslider" id="esquerda"></button>
-            <button class="buttonslider" id="direita"><img src="../images/icons/btn_direito.png" alt=""></button>
-        </section>
-
-        <section id="seccards">
-            <div class="card">
-                <img src="../images/imgcard1.png" alt="Imagem Card">
-                    <div class="ctdcard">
-                        <p class="textcard">Faça uma doação!</p>
-                        <input 
-                            type="button" 
-                            value="Saiba Mais!" 
-                            scr="" 
-                            class="buttoncard" 
-                            onclick="window.location.href = 'comoAjudar.php'">
-                    </div>
-            </div>
-            <div class="card">
-                <img src="../images/imgcard2.png" alt="Imagem Card">
-                    <div class="ctdcard">
-                        <p class="textcard">Participe dos nossos eventos!</p>
-                        <input 
-                            type="button" 
-                            value="Saiba Mais!" 
-                            scr="" 
-                            class="buttoncard" 
-                            onclick="window.location.href = 'eventos.php'">
-                    </div>
-            </div>
-            <div class="card">
-                <img src="../images/imgcard3.png" alt="Imagem Card">
-                    <div class="ctdcard">
-                        <p class="textcard">Adote um amigo!</p>
-                        <input 
-                            type="button" 
-                            value="Saiba Mais!" 
-                            scr="" 
-                            class="buttoncard" 
-                            onclick="window.location.href = 'adocao.php'">
-                </div>
-            </div>
-        </section>
-
-        <section id="sliderDoacao">
-            <div class="cardDoacao">
-                <div class="divImg">
-                    <img src="../images/inicial/slider1.png" alt="Foto Animal">
-                </div>
-                <div class="ctdcard">
-                        <p class="textcard">Faça uma doação!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
-                </div>
-            </div>
-            <div class="cardDoacao">
-                <div class="divImg">
-                    <img src="../images/inicial/slider2.png" alt="Foto Animal">
-                </div>
-                <div class="ctdcard">
-                        <p class="textcard">Faça uma doação!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
-                </div>
-            </div>
-            <div class="cardDoacao">
-                <div class="divImg">
-                    <img src="../images/inicial/slider3.png" alt="Foto Animal">
-                </div>
-                <div class="ctdcard">
-                        <p class="textcard">Faça uma doação!</p>
-                        <input type="button" value="Saiba Mais!" scr="" class="buttoncard">
-                </div>
-            </div>
-        </section>
-<script>
+    <script>
         /* -- Slider -- */
         let currentIndex = 0;
         const slides = document.querySelectorAll('#slider li');
@@ -198,4 +129,8 @@
         }
 
 
-    </script> -->
+    </script>
+        
+    <?php include('../templates/footerAdm.php'); ?>
+    </body>
+</html>

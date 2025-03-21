@@ -34,6 +34,12 @@
         font-size: 14px;
         border-bottom: 1px solid white; 
         white-space: nowrap; 
+        ;
+    }
+
+    .footer-lula-esquerda a {
+        text-decoration: none;
+        color: white
     }
 
     .footer-desktop .footer-logo img {
@@ -113,7 +119,7 @@
     
     <div class="footer-desktop">
         <div class="container">
-            <div class="footer-lula-esquerda">© 2025 Voucher Desenv. 141</div>
+            <div class="footer-lula-esquerda"><a href="developers.php">© 2025 Voucher Desenv. 141</a></div>
             <a class="footer-logo" href="./paginaInicio.php">
                 <img src="../images/Logo_Footer.png" alt="SOS Patinhas">
             </a>

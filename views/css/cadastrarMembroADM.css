@@ -1,13 +1,13 @@
-#contentEditarPerfil{
+.contentEditarPerfil{
     width: 100%;
 }
 
-#divForm{
+#conteudoForm{
     display: flex;
     flex-direction: column;
     width: 100%;
     column-gap: 3rem;
-    padding: 70px;
+    padding: 60px;
 }
 
 #divButtons{
@@ -84,6 +84,13 @@
     }
 }
 
+.col{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
 @media (max-width: 768px){
     body{
         background-size: 80%;
@@ -93,8 +100,13 @@
         width: 100%;
     }
 
-    #contentEditarPerfil{
+    .contentEditarPerfil{
         flex-direction: column;
+    }
+
+    #imgUpload{
+        right: 38rem;
+        bottom: 8rem
     }
 }
 
@@ -108,7 +120,7 @@
         width: 87%;
     }
 
-    #contentEditarPerfil{
+    .contentEditarPerfil{
         flex-direction: column;
     }
 

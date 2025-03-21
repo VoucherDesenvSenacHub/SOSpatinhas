@@ -58,5 +58,15 @@
         "ddd": "32",
         "telefone": "9992323311",
         "senha": "$2y$10$cjJ82Q2zY1viTY2Hh2C0WOh7BO8..vJIUYzM8V0NaJi3o9I8hZCKG"
+    },
+    {
+        "nome": "Kau\u00e3 Miguel",
+        "cpf": "00000000000",
+        "rg": "111111",
+        "email": "aaaaaaaaaa@gmail.com.br",
+        "dtNasc": "2006-05-01",
+        "ddd": "67",
+        "telefone": "67991609526",
+        "senha": "$2y$10$\/WXl0nSqUPy\/kDL0Gqji1.MuBWd4MOXYkRmgzxBilTtl42AoqomMG"
     }
 ]

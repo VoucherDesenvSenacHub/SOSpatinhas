@@ -1,4 +1,13 @@
 <?php
+
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
+
   $cssLink  = '../css/editarArrecadacao-ADM.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
@@ -7,7 +16,7 @@
 <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
     <div class="conteudoForm">
         <div class="col1">
-            <input type="text" name="titulo" placeholder="Titulo da Arrecadaçãp" required>
+            <input type="text" name="titulo" placeholder="Titulo da Arrecadação" required>
             <input type="text" name="nameAnimal" placeholder="Nome do Animal" required>
             <textarea name="descricao" placeholder="Descrição" required></textarea>
             <input type="text" name="nameUser" placeholder="Nome do Usuário" required>
@@ -32,23 +41,20 @@
                 </label>
                 <div id="filePreview"></div>
                 <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
-            </div>
+            </div>  
+            <?php
+            $idBtn = "btnAdicionar";
+            $funcaoClick = "adicionarComValidacao('Arrecadação editada com sucesso!', 1, 'listaArrecadacoesADM.php')";
+            $funcaoLoad = "mudarTamanho('btnAdicionar', '100%', '39px', '16px')"; 
+            $titulo = "Adicionar";           
+            include('../templates/componenteButton.php');
 
-            <!-- <button type="button" onclick="adicionar()">Adicionar</button>
-            <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button> -->
-
-    <?php
-        $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
-        $funcaoLoad = "mudarTamanho('300px', '44px', '20px')";  //o primeiro valor é a largura, -- é opcional o segundo a altura e o terceiro o tamanho da fonte 
-        $titulo = "Adicionar";           
-        include('../templates/componenteButton.php');
-    ?>
-    <?php
-        $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
-        $funcaoLoad = "mudarTamanho('300px', '44px', '20px')";
-        $titulo = "Cancelar";
-        include('../templates/componenteButton.php');
-    ?>
+            $idBtn = "btnCancelar";
+            $funcaoClick = "cancelarForm('frmCadastroAdocao', listaArrecadacoesADM.php)";
+            $funcaoLoad = "mudarTamanho('btnCancelar', '100%', '39px', '16px')";
+            $titulo = "Cancelar";
+            include('../templates/componenteButton.php');
+            ?>
 
         </div>
     </div>

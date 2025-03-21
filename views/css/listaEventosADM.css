@@ -69,6 +69,14 @@ h1 {
     border-radius: 10px 10px 0 0;
 }
 
+item-evento {
+    display: none;
+}
+
+.item-evento[data-pagina="1"] {
+    display: block;
+}
+
 .evento h3 {
     margin: 10px 0;
     font-size: 1.2em;

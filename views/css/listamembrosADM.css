@@ -58,6 +58,14 @@ h1 {
     margin-bottom: 10px;
 }
 
+item-membro {
+    display: none;
+}
+
+.item-membro[data-pagina="1"] {
+    display: block;
+}
+
 .membro h3 {
     font-size: 16px;
     color: #333;
@@ -88,7 +96,7 @@ h1 {
     color: white;
     border: none;
     padding: 8px 12px;
-    border-radius: 30px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -98,8 +106,8 @@ h1 {
 
 .botao-add-conteiner {
     position: absolute;
-    top: 10px;
-    right: -10%;
+    top: -60px;
+    right: 20px;
 }
 
 .botao-add {
@@ -115,7 +123,7 @@ h1 {
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
-    position: fixed;
+    /*  */
 }
 
 .botao-add:hover {
@@ -191,8 +199,8 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-    .botao-add-conteinergit{
-        left: 115%;
+    .botao-add-conteiner{
+        left: 90%;
     }
     .cta-slide{
         display: none;

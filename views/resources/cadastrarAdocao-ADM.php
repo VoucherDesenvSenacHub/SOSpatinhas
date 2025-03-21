@@ -1,4 +1,13 @@
 <?php
+
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
+
     $cssLink  = '../css/cadastrarAdocao-ADM.css';
     $tipo = 'Adm';
     include('../templates/default/topHTML.php');
@@ -34,16 +43,15 @@
         </div>
 
         <div class="col2">
-            
-            <div class="switchBtn">
-                <label id="titulo">Gênero:</label>              
-                <input type="radio" name="sexo" value="Fêmea" id="female" required>
-                <label for="female" id="female">Fêmea</label>
-                <input type="radio" name="sexo" value="Macho" id="male" required>
-                <label for="male" id="male">Macho</label>
-            </div>
-
             <div class="upload-container">
+                <div class="switchBtn">
+                    <label id="titulo">Gênero:</label>              
+                    <input type="radio" name="sexo" value="Fêmea" id="female" required>
+                    <label for="female" id="female">Fêmea</label>
+                    <input type="radio" name="sexo" value="Macho" id="male" required>
+                    <label for="male" id="male">Macho</label>
+                </div>
+
                 <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                 <label for="image" id="imgLabel" class="upload-box">
                     <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
@@ -52,19 +60,22 @@
                 <div id="filePreview"></div>
                 <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>
-            
-            <?php
-            $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
-            $funcaoLoad = "mudarTamanho('400px')";
-            $titulo = "Cadastrar";
-            include('../templates/componenteButton.php');
 
-            $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
-            $funcaoLoad = "mudarTamanho('400px')";
-            $titulo = "Cancelar";
-            include('../templates/componenteButton.php');
-            ?>
+            <div class="btnContainer">
+                <?php
+                $idBtn = "btnCadastrar";
+                $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
+                $funcaoLoad = "mudarTamanho('btnCadastrar', '275px', '50px', '20px')";
+                $titulo = "Cadastrar";
+                include('../templates/componenteButton.php');
 
+                $idBtn = "btnCancelar";
+                $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
+                $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
+                $titulo = "Cancelar";
+                include('../templates/componenteButton.php');
+                ?>
+            </div>
         </div>
     </div>
 </form>

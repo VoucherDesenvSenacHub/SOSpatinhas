@@ -1,24 +1,40 @@
+#formCadastroEvento {
+    width: 100%;
+}
+
 .conteudoForm {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     padding: 20px;
-    column-gap: 5rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    column-gap: 4rem;
+    flex-direction: column;
 }
 
 .col1 {
     display: flex;
     flex-direction: column;
-    width: 37rem;
+    width: 100%;
     align-items: center;
+    justify-content: flex-start;
 }
 .col2{
     display: flex;
     flex-direction: column;
-    width: 488px;
+    width: 100%;
     align-items: center;
-    gap: 8px;
+    justify-content: space-around;
+}
+
+.descricaoEBtn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.btnContainer {
+    margin-top: 10px;
 }
 
 input, textarea {
@@ -35,38 +51,20 @@ textarea {
     resize: none;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button[type="button"], .cancelarBtn {
-    background-color: #83CE7D;
-    color: white;
-    margin-top: 1rem;
-    height: 42px;
-}
-
-button a {
-    text-decoration: none;
-    color: white;
-    width: 100%;
-    height: 100%;
-}
-
 .upload-container {
     width: 100%;
-    max-width: 300px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
 }
 
 .upload-box {
     width: 100%;
-    height: 150px;
     border: 2px dashed #ccc;
     background: #e6e6e6;
     display: flex;
@@ -75,6 +73,7 @@ button a {
     justify-content: center;
     border-radius: 5px;
     cursor: pointer;
+    min-height: 150px;
 }
 
 .upload-box img {
@@ -99,6 +98,7 @@ button a {
     grid-template-columns: 1fr;
     gap: 10px; 
     margin-top: 20px;
+    width: 94%;
 }
 
 #filePreview.two-column {
@@ -114,7 +114,7 @@ button a {
     padding: 10px;
     border-radius: 5px;
     width: 100%;
-    max-width: 300px; 
+    max-width: 606px; 
     overflow: hidden;
 }
 
@@ -137,22 +137,21 @@ button a {
     cursor: pointer;
     display: inline-block;
     text-align: center;
+    width: 17%;
+    margin-top: 5px;
 }
 
 .remove-file:hover {
     background-color: #d32f2f;
 }
 
-.remove-file {
-    width: 100px; 
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
+#btn, #btnCancelar {
+    width: 74%;
+    height: 50px;
+    font-size: 20px;
 }
 
-.remove-file {
-    margin-top: 5px;
-}
+
 
 @media (max-width: 768px) {
     .corpo{

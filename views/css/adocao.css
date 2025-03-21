@@ -233,17 +233,51 @@
 
 
 
-
-
-@media (max-width: 768px){
+@media(max-width:1024px){
   .corpo{
-    width: 100%;
+    width: 80%;
     padding: 0;
+
   }
+
+  .card-container{
+    width: 80%;
+  }
+  .card-animal{
+    width: 250px;
+    height: 350px;
+  }
+  .card-animal img{
+    
+    width: 250px;
+    height: 350px;
+    margin-right: 50px;
+    
+  }
+  .nome{
+    font-size: 30px;
+
+  }
+  .form-filter{
+    flex-wrap: wrap;
+  }
+  .box2{
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+}
+@media(max-width:768px){
   .card-container{
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
+  .form-filter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+   
+  }
   .filter{
     width: 100%;
     display: flex;
@@ -252,43 +286,10 @@
     flex-direction: column;
     gap: 25px;}
 
-  .form-filter{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-   
-  }
-
-  .filter-button{
-   margin-left: 18px;
-   padding-right: 90px;
-   
-  }
-
-  .card-animal{
-   
-    width: 270px;
-    height: 370px;
-   
-  }
   
-  .front-card{
-  
-    width: 270px;
-    height: 370px;
-  }
-  
-
-  .box2{
-   width: 100%;
-   margin-left: 125 px;
-   padding-left: 55px;
-  }
-  
-
 }
+
+
 
 @media (max-width: 425px){
   .corpo{
@@ -296,23 +297,19 @@
     padding: 0;
   }
   .card-container{
-    margin-top: 20px;
+   margin-right: 20px;
     grid-template-columns: repeat(1, 1fr);
-    gap: 40px;
-    justify-content: center; 
-    margin-bottom: 3rem;
+   
   }
   .box2{
     
-    margin-left: 70px;
+    right: 100px;;
+    
     
   }
-  
-  /* .filter-button{
-      align-self: auto;
-      width: 82%;
-    } */
-  
+ .card-animal{
+    margin: 0 auto;
+ }
   .form-filter{
     flex-wrap: wrap;
     display: flex;
@@ -326,35 +323,5 @@
   #btnVerMais {
     display: inline-block;
     
+  }
 }
-}
-/* 
-@media (max-width: 1024px) {
-  .card-animal {
-      width: 200px ;
-      height: 300px ;
-  }
-
-  .card-animal img {
-      width: 200px ;
-      height: 300px ;
-      display: flex;
-  }
-  
-  .titulo{
-    font-size: 15px;
-  }
-
-  .container-select{
-    width: 100px;
-  }
-  .container-select h2{
-    font-size: 20px;
-  }
-  .container-select select{
-    font-size: 1px;
-  }
-
-
-  
-} */

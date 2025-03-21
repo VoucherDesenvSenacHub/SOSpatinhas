@@ -1,10 +1,19 @@
 <?php
+
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
+
   $cssLink  = '../css/editarEventos-ADM.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
 ?>
 
-<form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
+<form action="" method="POST" enctype="multipart/form-data" id="formCadastroEvento">
     <div class="conteudoForm">
         <div class="col1">
             <input type="text" name="name" placeholder="Nome do Evento" required>
@@ -15,29 +24,36 @@
 
         <div class="col2">
             <div class="upload-container">
-                <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
-                <label for="image" id="imgLabel" class="upload-box">
-                    <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
-                    <p>Enviar fotos</p>
-                </label>
-                <div id="filePreview"></div>
+                <div class="top">
+                    <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
+                    <label for="image" id="imgLabel" class="upload-box">
+                        <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                        <p>Enviar fotos</p>
+                    </label>
+                    <div class="descricaoEBtn">
+                        <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
+                    <div id="filePreview"></div>
+                    </div>
+                </div>
+                
             </div>
-            <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
-
-            <!-- <button type="button" onclick="adicionar()">Salvar</button>
-            <button type="button" class="cancelarBtn" onclick="resetERedirect()">Cancelar</button> -->
-    <?php
-        $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
-        $funcaoLoad = "mudarTamanho('300px', '44px', '20px')";  //o primeiro valor é a largura, -- é opcional o segundo a altura e o terceiro o tamanho da fonte 
-        $titulo = "Salvar";           
-        include('../templates/componenteButton.php');
-    ?>
-    <?php
-        $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
-        $funcaoLoad = "mudarTamanho('300px', '44px', '20px')";
-        $titulo = "Cancelar";
-        include('../templates/componenteButton.php');
-    ?>
+            
+            <div class="btnContainer">
+                <?php
+                    $idBtn = "btnSalvar";
+                    $funcaoClick = "adicionarComValidacao('Evento editado com sucesso!', 1, 'listaEventosADM.php')";
+                    $funcaoLoad = "mudarTamanho('btnSalvar', '275px', '50px', '20px')";
+                    $titulo = "Salvar";
+                    include('../templates/componenteButton.php');
+                    
+                    //  arrumar o direcionamento
+                    $idBtn = "btnCancelar";
+                    $funcaoClick = "cancelarForm('frmCadastroAdocao','listaEventosADM.php')";
+                    $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
+                    $titulo = "Cancelar";
+                    include('../templates/componenteButton.php');
+                ?>
+            </div>
         </div>
     </div>
 

@@ -10,7 +10,8 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-} 
+  color: white;
+}
 
 .pontoArrecadacao {
   width: 100%;
@@ -66,11 +67,11 @@
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
   width: 100%;
   height: 600px;
-  padding: 87px 40px 66px;
+  padding: 87px 10px 66px;
 }
 
 .infoValores {
@@ -169,16 +170,29 @@
   margin-top: 30px;
 } 
 
-.qrCode > .logoBb {
+.qrCode > #logoBb {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
+  color:white;
 }
 
 #imgLogoBanco {
   width: 23px;
   height: 23px;
+}
+
+#title_qrcode {
+  color: white;
+}
+
+#pAgencia {
+  color: white;
+}
+
+#pCNPJ {
+  color: white;
 }
 
 /* RESPONSIVIDADE CELULAR */

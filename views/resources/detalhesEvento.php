@@ -14,11 +14,11 @@
       </div>
 
       <div class="slide fade">
-        <img class= "EventoSlides" src="../images/slide1.png" alt="Horto Florestal 2">
+        <img class= "EventoSlides" src="../images/eventosImg/feira.jpeg" alt="Horto Florestal 2">
       </div>
 
       <div class="slide fade">
-        <img class= "EventoSlides" src="../images/slide2.png" alt="Horto Florestal 3">
+        <img class= "EventoSlides" src="../images/eventosImg/feira1.jpg" alt="Horto Florestal 3">
       </div>
 
       <div class="btn-slide">

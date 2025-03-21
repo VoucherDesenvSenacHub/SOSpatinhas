@@ -90,13 +90,14 @@
         height: auto;
     }
 
-    .mobile-footer .voucherDesenv {
+    .mobile-footer .voucherDesenv .a-dev{
         text-align: center;
         margin-top: 10px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 15px;
         border-bottom: 1px solid white;
         display: inline-block;
+        color: white;
     }
 
     @media (min-width: 769px) {
@@ -144,6 +145,9 @@
             </div>
         </div>
         
-        <div class="voucherDesenv">© 2025 Voucher Desenv. 141</div>
+        <div class="voucherDesenv">
+            <a href="../resources/developers.php" class="a-dev">
+                © 2025 Voucher Desenv. 141
+            </a></div>
     </div>
 </footer>

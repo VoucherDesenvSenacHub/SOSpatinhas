@@ -7,11 +7,13 @@
     //       </script>';
     // exit();
     // }
-
+  
   $cssLink  = '../css/comoAjudarEditavel.css';
   $tipo = 'Adm';
+
   include('../templates/default/topHTML.php');
   include('../templates/modalEditar.php');
+  
 ?>
 
 <section class="pontoArrecadacao">
@@ -111,7 +113,7 @@
         <h2>
           Pix QR Code ou CNPJ
           
-          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconeAcao">
+          <img src="../images/icons/iconEditar.png" alt="Editar" class="iconEditPix">
           <!--
           <img src="../images/Icon_de_excluir.png" alt="Excluir" class="iconeAcao">
           -->
@@ -146,7 +148,16 @@
   {
     button.onclick = function()
     {
-      chamar_popup('a');
+      chamar_popup('input_preco');
+    };
+  });
+
+  const btn_popup3 = document.querySelectorAll('.iconEditPix');
+  btn_popup3.forEach(button =>
+  {
+    button.onclick = function()
+    {
+      chamar_popup('pix');
     };
   });
 </script>

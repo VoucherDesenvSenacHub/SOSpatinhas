@@ -37,13 +37,13 @@
     width: 380px;
     height: 325px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     border: 1px solid #ccc;
-    display: flex;
     flex-direction: column;
     justify-content: space-around; /* espaço entre a imagem (do grampo) e o texto */
     align-items: center;
     position: relative;
+    display:none;
 }
 
 #grampo { 
@@ -56,6 +56,20 @@
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+#enviar_foto {
+    color: black; 
+    font-size: 16px; 
+    line-height: 1.5;
+    display:none;
+}
+
+#enviar_foto_pix {
+    color: black; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    display:none;
 }
 
 #inputFilePopup {
@@ -104,6 +118,11 @@
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 #titlePopup{
     width: 400px;
     height: 50px;
@@ -125,18 +144,25 @@
     border-radius: 5px;
     font-size: 16px;
     padding: 7px;
+    display: none;
 }
 
 #pricePopup{
-    display:none;
+    width: 35%;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     padding: 7px;
+    margin-bottom: 70px;
+    display:none;
+}
+#price_label{
+    display: none;
 }
 
 #line_h6 {
     margin-bottom: 20px;
+    display: none;
 }
 
 /* Caixa do input */
@@ -147,4 +173,33 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 30px;
+    display: none;
+}
+
+#kits {
+    width: 40%; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    text-align: center;
+    display: none;
+}
+
+#kits .option_kit {
+    text-align: center;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px;
+    line-height: 3;
+}
+
+#kit_label {
+    display: none;
 }

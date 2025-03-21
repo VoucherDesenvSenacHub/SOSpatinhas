@@ -84,6 +84,13 @@
 
     }
 
+    // essa função é uma gambiarra, será apagada futuramente
+    function reload() {
+        alert("Enviado com sucesso");
+        location.reload();
+    }
+
+
     // função pra limpar o form e mandar pra outra pág
     function cancelarForm(nomeForm, linkRedirecionamento){
         document.getElementById(nomeForm).reset();

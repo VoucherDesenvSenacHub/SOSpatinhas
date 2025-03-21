@@ -84,7 +84,8 @@ body{
     display: none;
 }
 
-button {
+
+#direita {
     height: 35px;
     width: 35px;
     position: absolute;
@@ -95,18 +96,31 @@ button {
     border-radius: 50px;
     padding: 10px;
     cursor: pointer;
-    z-index: 10; /* Para garantir que os botões fiquem acima das imagens */
+    z-index: 10;
+    right: 20px;
 }
+
+#esquerda {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #44803f;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    left: 20px;
+}
+
+
 .buttonslider{
     font-weight: 550;
     color: #ffffff;
 }
-#esquerda {
-    left: 20px;
-}
-#direita {
-    right: 20px;
-}
+
 
 /* --- Cards --- */
 #seccards {

@@ -99,10 +99,24 @@
         display: inline-block;
     }
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
         .footer-desktop { display: flex; }
         .mobile-footer { display: none; }
     }
+    @media (max-width: 767px) {
+    .footer-desktop {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-footer {
+        display: none !important;
+    }
+}
+
+
+    
 </style>
 
 <footer>

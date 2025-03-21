@@ -7,7 +7,10 @@
         <link rel="stylesheet" href="../css/editarPaginaInicio.css">
     </head>
     <body>
-        <?php include('../templates/navbarAdm.php'); ?>
+        <?php 
+            include('../templates/navbarAdm.php');
+            include('../templates/modalEditar.php')
+         ?>
 
         <section id="bannerMobas">
             <div class="imgBanner">
@@ -119,6 +122,14 @@
             slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
 
-
+        // script popup
+        const btn_popup1 = document.querySelectorAll('.btnEditar');
+        btn_popup1.forEach(button =>
+        {
+        button.onclick = function()
+        {
+            chamar_popup('upload');
+        };
+        });
     </script>
 </html>

@@ -1,4 +1,13 @@
 <?php
+
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
+
   $cssLink  = '../css/listaAdocao-ADM.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
@@ -20,9 +29,6 @@
             ["nome" => "Rumi", "imagem" => "../images/Rumi.png", "localizacao" => "Campo Grande - MS"],
             ["nome" => "Nobre", "imagem" => "../images/Nobre.png", "localizacao" => "Campo Grande - MS"],
             ["nome" => "Sir Dougg", "imagem" => "../images/Sir Dougg.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
             ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
         ];
 
@@ -133,7 +139,7 @@ let links = document.querySelectorAll('.link');
     }
 
     function mudarPagina(pagina) {
-        if (pagina < 1 || pagina > totalPaginas) return; // Verifica os limites
+        if (pagina < 1 || pagina > totalPaginas) return; 
         paginaAtual = pagina;
         exibirPagina(paginaAtual);
         atualizarPaginacao(totalPaginas);

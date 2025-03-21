@@ -1,7 +1,17 @@
 <?php
+/*
+    if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    echo '<script type="text/javascript">
+            alert("Você precisa estar logado como administrador para acessar esta página.");
+            window.location.href = "loginADM.php";
+          </script>';
+    exit();
+    }     */
+
   $cssLink  = '../css/quemSomos.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
+  include('../templates/modalEditar.php')
 ?>
 <body>
 <section class="carroseis">
@@ -46,6 +56,27 @@
     </div>
   </div>
 </section>
+
+<script> 
+    // popup do layout input para apenas nome
+    const btn_popup1 = document.querySelectorAll('.btn-card-equipe');
+    btn_popup1.forEach(button =>
+    {
+      button.onclick = function()
+      {
+        chamar_popup('input_name');
+      };
+    });
+    // popup do layout upload img
+    const btn_popup2 = document.querySelectorAll('.btn-card-parceiro');
+    btn_popup2.forEach(button =>
+    {
+      button.onclick = function()
+      {
+        chamar_popup('upload');
+      };
+    });
+</script>
 
 <?php
   include('../templates/modalEditar.php');

@@ -116,6 +116,13 @@
             </li>
 
             <li class="sidebarLi">
+                <a href="listaFormulario.php">
+                    <img src="../images/icons/formsBranco.png" alt="">
+                    <p>Formulários</p>
+                </a>
+            </li>
+
+            <li class="sidebarLi">
                 <a href="formAdocaoEditavel.php">
                     <img src="../images/icons/editarForm.png" alt="">
                     <p>Editar Formulário</p>

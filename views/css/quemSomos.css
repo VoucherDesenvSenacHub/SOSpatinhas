@@ -46,6 +46,12 @@
 #carouselEquipe, #carouselParceiros{
     width: 80rem;
 }
+@media(max-width:1440px){
+    
+    #carouselEquipe, #carouselParceiros{
+        width: 75rem;
+    }
+}
 
 @media (max-width: 1024px) {
     .titulo {

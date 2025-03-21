@@ -14,7 +14,10 @@
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
-        justify-content: center;
+        justify-content: center; 
+        position: relative; 
+        z-index: 1200;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
     }
     
     .footer-desktop .container {
@@ -30,7 +33,6 @@
     .footer-desktop .footer-lula-esquerda {
         font-size: 14px;
         border-bottom: 1px solid white; 
-        padding-bottom: 3px;
         white-space: nowrap; 
     }
 
@@ -53,99 +55,72 @@
         padding: 3px;
         background-color: rgb(68, 128, 63);
         color: white;
-        /*width: 100%;*/
+        width: 100%;
         position: relative;
         z-index: 1200;
         box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
     }
-    .mobile-footer .footer-links {
+
+    .mobile-footer-top {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
         align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 15px 0;
     }
-    .mobile-footer .footer-links a {
-        text-decoration: none;
-        color: white;
-        width: max-content;
-        padding-bottom: 5px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .mobile-footer .footer-links-img a,
+
     .mobile-footer .footer-logo img {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        width: 120px;
+        height: auto;
+        margin-bottom: 5px;
     }
-    .mobile-footer .footer-links-img a {
-        display: inline-block;
-        margin-right: 10px;
-        text-decoration: none;
-    }
-    .mobile-footer .footer-links-img a:last-child {
-        margin-right: 0;
-    }
-    .mobile-footer .footer-links-bottom {
+
+    .mobile-footer .footer-links-img {
         display: flex;
         justify-content: center;
         gap: 10px;
+        margin: 5px 0;
+        padding: 0;
+    }
+    .mobile-footer .footer-links-img a {
+        text-decoration: none;
+    }
+    .mobile-footer .footer-links-img a img {
+        width: 30px;
+        height: auto;
+    }
+
+    .mobile-footer .voucherDesenv {
+        text-align: center;
+        margin-top: 10px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 15px;
-        margin-top: 5px;
-    }
-    .mobile-footer .footer-links-bottom a {
-        text-decoration: none;
-        color: white;
+        border-bottom: 1px solid white;
         display: inline-block;
     }
 
-    @media (max-width: 768px) {
-        .mobile-footer {
-            text-align: center;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .mobile-footer .footer-logo img {
-            width: 120px;
-            height: auto;
-            margin-bottom: 5px;
-        }
-        .mobile-footer .footer-links {
-            display: none;
-        }
-        .mobile-footer .footer-links-img {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 5px 0;
-        }
-        .mobile-footer .footer-links-img a img {
-            width: 30px;
-            height: auto;
-        }
-        .mobile-footer .footer-links-bottom {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-    }
-
-    @media (min-width: 769px) {
-        .footer-desktop { display: block; }
+    @media (min-width: 768px) {
+        .footer-desktop { display: flex; }
         .mobile-footer { display: none; }
     }
-    @media (max-width: 768px) {
-        .footer-desktop { display: none; }
-        .mobile-footer { display: block; }
+    @media (max-width: 767px) {
+    .footer-desktop {
+        display: none !important;
     }
+}
+
+@media (min-width: 768px) {
+    .mobile-footer {
+        display: none !important;
+    }
+}
+
+
+    
 </style>
 
 <footer>
-<!-- footer pc -->
+    
     <div class="footer-desktop">
         <div class="container">
             <div class="footer-lula-esquerda">© 2025 Voucher Desenv. 141</div>
@@ -163,23 +138,23 @@
         </div>
     </div>
 
-<!-- footer mobilador deitador de playhard papakill tudo fraco clipa krlll -->
+    
     <div class="mobile-footer">
-        <a class="footer-logo" href="./paginaInicio.php">
-            <img src="../images/Logo_Footer.png" alt="SOS Patinhas">
-        </a>
-        <ul class="footer-links-img">
+        
+        <div class="mobile-footer-top">
+            <a class="footer-logo" href="./paginaInicio.php">
+                <img src="../images/Logo_Footer.png" alt="SOS Patinhas">
+            </a>
+            <div class="footer-links-img">
                 <a href="https://www.facebook.com/?locale=pt_BR">
                     <img src="../images/icons/facebookBranco.png" alt="Facebook">
                 </a>
                 <a href="https://www.instagram.com">
                     <img src="../images/icons/instagramBranco.png" alt="Instagram">
                 </a>
-        </ul>
-        <ul class="footer-links-bottom">
-            <a href="#">Acessibilidade</a>
-            <a href="#">Política de Privacidade</a>
-            <a href="#">Termos e Condições</a>
-        </ul>
+            </div>
+        </div>
+        
+        <div class="voucherDesenv">© 2025 Voucher Desenv. 141</div>
     </div>
 </footer>

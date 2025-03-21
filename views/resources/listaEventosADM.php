@@ -1,4 +1,13 @@
 <?php
+
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
+
   $cssLink  = '../css/listaEventosADM.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
@@ -12,13 +21,24 @@
 
 
 <div class="lista-eventos" id="lista-eventos">
-    <?php 
-        gerarCardEventos('Feira do AuAu', '../images/feiraAuAu.png', '10/10/2021', 'Horto Florestal');
-        gerarCardEventos('Adote um Amigo', '../images/AdoteAmigo.png', '15/10/2021', 'Parque dos Poderes');
-        gerarCardEventos('Juntos por Eles', '../images/JuntosPEles.png', '20/10/2021', 'Bosque dos Ipês');
-        gerarCardEventos('Ajude uma patinha', '../images/AjudeUPatinha.png', '25/10/2021', 'Parque das Nações');
-        gerarCardEventos('Título', '../images/AjudeUPatinha.png', 'Sem data', 'Sem localidade');
-        gerarCardEventos('Título', '../images/AjudeUPatinha.png', 'Sem data', 'Sem localidade');
+    <?php
+        $eventos = [
+            ["nome" => "Feira do AuAu", "imagem" => "../images/feiraAuAu.png", "data" => "10/10/2021", "local" => "Horto Florestal"],
+            ["nome" => "Adote um Amigo", "imagem" => "../images/AdoteAmigo.png", "data" => "15/10/2021", "local" => "Parque dos Poderes"],
+            ["nome" => "Juntos por Eles", "imagem" => "../images/JuntosPEles.png", "data" => "20/10/2021", "local" => "Bosque dos Ipês"],
+            ["nome" => "Ajude uma patinha", "imagem" => "../images/AjudeUPatinha.png", "data" => "25/10/2021", "local" => "Parque das Nações"],
+            ["nome" => "Título", "imagem" => "../images/AjudeUPatinha.png", "data" => "Sem data", "local" => "Sem localidade"],
+            ["nome" => "Título", "imagem" => "../images/AjudeUPatinha.png", "data" => "Sem data", "local" => "Sem localidade"],
+        ];
+
+        $itensPorPagina = 6;
+        foreach ($eventos as $index => $eventos) {
+            $pagina = floor($index / $itensPorPagina) + 1;
+            echo '<div class="item-evento" data-paginas="' . $pagina . '">';
+            gerarCardEventos($eventos['nome'], $eventos['imagem'], $eventos['data'], $eventos['local']);
+            echo '</div>';
+        }
+
     ?>
     <div class="botao-add-container">
         <a href="cadastrarEventos-ADM.php"><button class="botao-add">+</button></a>
@@ -27,9 +47,7 @@
 <div class="cta-slide">
     <button id="prev" class="pagination-btn">&lt;</button>
     <div class="altPag" id="paginacao">
-        <li class="link active" value="1">1</li>
-        <li class="link" value="2">2</li>
-        <li class="link" value="3">3</li>
+        
     </div>
     <button id="next" class="pagination-btn">&gt;</button>
 </div>
@@ -83,6 +101,68 @@
             window.location.href = "editarEventos-ADM.php";
         });
     });
+
+    let paginaAtual = 1;
+    let totalPaginas = 0;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        recalcularPaginacao();
+    });
+
+    function recalcularPaginacao(){
+        const itensPorPagina = 6;
+        const listaEventos = document.getElementById('lista-eventos');
+        const itens = listaEventos.querySelectorAll('.item-evento');
+        totalPaginas = Math.ceil(itens.length / itensPorPagina);
+
+        itens.forEach((item, index) => {
+            const pagina = Math.floor(index / itensPorPagina) + 1;
+            item.setAttribute('data-pagina', pagina);
+
+        });
+
+        atualizarPaginacao(totalPaginas);
+
+        exibirPagina(paginaAtual);
+    }
+
+    function atualizarPaginacao(totalPaginas) {
+        const paginacao = document.getElementById('paginacao');
+        paginacao.innerHTML = '';
+
+        for (let i = 1; i <= totalPaginas; i++) {
+            const link = document.createElement('li');
+            link.classList = 'link' + (i === paginaAtual ? ' active ' : '');
+            link.textContent = i;
+            link.addEventListener('click', () => mudarPagina(i));
+            paginacao.appendChild(link);
+        }
+    }
+
+    function exibirPagina(pagina) {
+        const itens = document.querySelectorAll('.item-evento');
+        itens.forEach((item) => {
+            const paginaItem = parseInt(item.getAttribute('data-pagina'));
+            if (paginaItem == pagina) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    function mudarPagina(pagina) {
+        if (pagina < 1 || pagina > totalPaginas) return;
+        paginaAtual = pagina;
+        exibirPagina(paginaAtual);
+        atualizarPaginacao(totalPaginas);
+    }
+
+    document.getElementById('prev').addEventListener('click', () => mudarPagina(paginaAtual - 1));
+    document.getElementById('next').addEventListener('click', () => mudarPagina(paginaAtual + 1));
+
+
+
 </script>
 
 <?php

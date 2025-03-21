@@ -1,7 +1,17 @@
 <?php
+
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
+
   $cssLink  = '../css/comoAjudarEditavel.css';
   $tipo = 'Adm';
   include('../templates/default/topHTML.php');
+  include('../templates/modalEditar.php');
 ?>
 
 <section class="pontoArrecadacao">
@@ -100,23 +110,46 @@
       <div class="qrCode">
         <h2>
           Pix QR Code ou CNPJ
+          
           <img src="../images/icons/iconEditar.png" alt="Editar" class="iconeAcao">
+          <!--
           <img src="../images/Icon_de_excluir.png" alt="Excluir" class="iconeAcao">
+          -->
         </h2>
         
         <img id="imgQrCode" src="../images/imagem_qrcode.png" alt="QR Code para Doação">
         <br><br>
-        <h3>Sos Patinhas</h3>
-        <div class="logoBb">
+        <h3 id='title_qrcode'>Sos Patinhas</h3>
+        <div id="logoBb">
           Conta: 198655-4
           <img id="imgLogoBanco" src="../images/banco.png" alt="Imagem da logo do banco">
         </div>
-        <p>Agência: 1193</p>
-        <p>ChaveCNPJ: XX. XXX. XXX/0001-XX</p>
+        <p id='pAgencia'>Agência: 1193</p>
+        <p id='pCNPJ'>ChaveCNPJ: XX. XXX. XXX/0001-XX</p>
       </div>
     </div>
   </section>
 </section>
+
+<script>
+  const btn_popup1 = document.querySelectorAll('.iconeAcao');
+  btn_popup1.forEach(button =>
+  {
+    button.onclick = function()
+    {
+      chamar_popup('input_titulo');
+    };
+  });
+
+  const btn_popup2 = document.querySelectorAll('.iconEdit');
+  btn_popup2.forEach(button =>
+  {
+    button.onclick = function()
+    {
+      chamar_popup('a');
+    };
+  });
+</script>
 
 <?php
   include('../templates/default/bottomHTML.php');

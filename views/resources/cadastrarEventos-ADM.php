@@ -1,10 +1,20 @@
 <?php
+
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
+
+
     $cssLink  = '../css/cadastrarEventos-ADM.css';
     $tipo = 'Adm';
     include('../templates/default/topHTML.php');
 ?>
 
-<form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
+<form action="" method="POST" enctype="multipart/form-data" id="formCadastroEvento">
     <div class="conteudoForm">
         <div class="col1">
             <input type="text" name="name" placeholder="Nome do Evento" required>
@@ -15,39 +25,39 @@
 
         <div class="col2">
             <div class="upload-container">
-                <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
-                <label for="image" id="imgLabel" class="upload-box">
-                    <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
-                    <p>Enviar fotos</p>
-                </label>
-                <div id="filePreview"></div>
-                <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
+                <div class="top">
+                    <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
+                    <label for="image" id="imgLabel" class="upload-box">
+                        <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                        <p>Enviar fotos</p>
+                    </label>
+                    <div class="descricaoEBtn">
+                        <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
+                    <div id="filePreview"></div>
+                    </div>
+                </div>
+
             </div>
-
-            <?php
-            $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
-            $funcaoLoad = "mudarTamanho('400px')";
-            $titulo = "Cadastrar";
-            include('../templates/componenteButton.php');
-
-            $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
-            $funcaoLoad = "mudarTamanho('400px')";
-            $titulo = "Cancelar";
-            include('../templates/componenteButton.php');
-            ?>
-
+            <div class="btnContainer">
+                <?php
+                    $idBtn = "btn";
+                    $funcaoClick = "adicionarComValidacao('Evento cadastrado com sucesso!')";
+                    $funcaoLoad = "mudarTamanho('btn', '275px', '50px', '20px')";
+                    $titulo = "Cadastrar";
+                    include('../templates/componenteButton.php');
+                    
+                    //  arrumar o direcionamento
+                    $idBtn = "btnCancelar";
+                    $funcaoClick = "cancelarForm('frmCadastroAdocao','listaEventosADM.php')";
+                    $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
+                    $titulo = "Cancelar";
+                    include('../templates/componenteButton.php');
+                ?>
+            </div>
         </div>
     </div>
 </form>
 <script>
-    function adicionar(){
-        if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
-            alert("Arrecadação cadastrada com sucesso!")
-        }else{
-            alert("Preencha todos os campos.")
-        }
-    }
-
     document.getElementById('image').addEventListener('change', function (event) {
         const filePreview = document.getElementById('filePreview');
         filePreview.innerHTML = ""; 

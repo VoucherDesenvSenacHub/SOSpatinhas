@@ -40,13 +40,33 @@
         "senha": "$2y$10$OkPjKe3wFqF3A4Y\/hBHyc.8kFjrutbBcGpuRBD7JqbTEXye\/Whn1K"
     },
     {
-        "nome": "Bakaa",
-        "cpf": "696969696",
-        "rg": "696969696",
-        "email": "skibidisigma@gmail.com",
-        "dtNasc": "2025-03-19",
-        "ddd": "067",
-        "telefone": "4002 8922",
-        "senha": "$2y$10$Ods85pzEpPuvG5p7tYeNdObL5CExotnCoeh546YejmLhoZJJ9mEK."
+        "nome": "caique",
+        "cpf": "0212642165423156",
+        "rg": "216452413254",
+        "email": "caiky23@gmail.com",
+        "dtNasc": "2025-03-03",
+        "ddd": "32",
+        "telefone": "9992323311",
+        "senha": "$2y$10$t6p723a6YNNDLmtmfztaNef.phX1ICu1b1cmiM\/h0cLiFA5qC7hZO"
+    },
+    {
+        "nome": "caique",
+        "cpf": "0212642165423156",
+        "rg": "216452413254",
+        "email": "caiky2223@gmail.com",
+        "dtNasc": "2025-03-03",
+        "ddd": "32",
+        "telefone": "9992323311",
+        "senha": "$2y$10$cjJ82Q2zY1viTY2Hh2C0WOh7BO8..vJIUYzM8V0NaJi3o9I8hZCKG"
+    },
+    {
+        "nome": "Kau\u00e3 Miguel",
+        "cpf": "00000000000",
+        "rg": "111111",
+        "email": "aaaaaaaaaa@gmail.com.br",
+        "dtNasc": "2006-05-01",
+        "ddd": "67",
+        "telefone": "67991609526",
+        "senha": "$2y$10$\/WXl0nSqUPy\/kDL0Gqji1.MuBWd4MOXYkRmgzxBilTtl42AoqomMG"
     }
 ]

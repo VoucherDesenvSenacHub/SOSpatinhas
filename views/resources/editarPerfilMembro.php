@@ -13,35 +13,48 @@
   include('../templates/default/topHTML.php');
 ?>
 
-<div id="contentEditarPerfil">
-    <div id="divForm">
-        <form id="formEditarPerfilMembro">
-            <input class="inputPerfil" type="text" placeholder="  Nome ">
-            <input class="inputPerfil" type="text" placeholder="  E-mail  ">
-            <input class="inputPerfil" type="text" placeholder="  Número Telefone/Celular  ">
-            <input class="inputPerfil" type="text" placeholder="  Senha  ">
-        </form>
-    </div>
-    <div id="divButtons">
-        <div id="editarFoto">
-            <img id="fotoMembro" src="../images/fotoPerfilMembro.png" alt="icone foto do Membro">
-            <button id="buttonEditarFoto">+</button>
+<form action="" method="post" id="frmEditarPerfilMembro">
+    <div class="conteudoFrm">
+        <div class="col">
+            <div class="upload-container">
+                <div id="filePreview">
+                    <img src="..\images\userProfile.png" alt="" id="previewImg">
+                </div>
+                <div id="imgUpload">
+                    <input type="file" id="image" name="image[]" accept="image/*" hidden>
+                    <label for="image" id="imgLabel" class="upload-box">
+                        <img src="..\images\btnAdicionar.png" alt="Upload Icon">
+                    </label>
+                </div>
+            </div>   
         </div>
-    <?php
-        $funcaoClick = "adicionarComValidacao(ValidacaoAdicionar)";
-        $funcaoLoad = "mudarTamanho('250px', '44px', '20px')";  //o primeiro valor é a largura, -- é opcional o segundo a altura e o terceiro o tamanho da fonte 
-        $titulo = "Salvar";           
-        include('../templates/componenteButton.php');
-    ?>
-    <?php
-        $funcaoClick = "cancelarForm(nomeForm, linkRedirecionamento)";
-        $funcaoLoad = "mudarTamanho('250px', '44px', '20px')";
-        $titulo = "Cancelar";
-        include('../templates/componenteButton.php');
-    ?>
-    </div>
+        
 
-</div>
+        <div class="col">
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="email" placeholder="E-mail">
+            <input type="text" name="telefone" placeholder="Número de Telefone/Celular">
+            <input type="text" name="senha" placeholder="Senha">
+            <div class = "btnContainer">
+                <?php
+                    //btn Salvar
+                    $idBtn = "btnSalvar";
+                    $funcaoClick = "adicionarComValidacao('Dados salvos com sucesso!', 1, 'perfilMembro.php')";
+                    $funcaoLoad = "mudarTamanho('btnSalvar')";  
+                    $titulo = "Salvar";           
+                    include('../templates/componenteButton.php');
+            
+                    //btn Cancelar
+                    $idBtn = "btnCancelar";
+                    $funcaoClick = "cancelarForm(nomeForm, 1, 'perfilMembro.php')";
+                    $funcaoLoad = "mudarTamanho('btnCancelar')";
+                    $titulo = "Cancelar";
+                    include('../templates/componenteButton.php');
+                ?>
+            </div>
+        </div>
+    </div>
+</form>
 
 <script>
     function adicionar(){

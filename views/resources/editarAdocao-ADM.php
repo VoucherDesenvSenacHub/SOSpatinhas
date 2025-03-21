@@ -62,6 +62,8 @@
                 <div id="filePreview"></div>
                 <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
             </div>
+
+            <div class="btnContainer">
             <?php
                 $idBtn = "btnCadastrar";
                 $funcaoClick = "adicionarComValidacao('Animal editado com sucesso!', 1, 'listaAdocao-ADM.php' )";
@@ -75,7 +77,7 @@
                 $titulo = "Cancelar";
                 include('../templates/componenteButton.php');
             ?>
-
+            </div>
         </div>
     </div>
 

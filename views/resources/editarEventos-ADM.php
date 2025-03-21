@@ -13,7 +13,7 @@
   include('../templates/default/topHTML.php');
 ?>
 
-<form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
+<form action="" method="POST" enctype="multipart/form-data" id="formCadastroEvento">
     <div class="conteudoForm">
         <div class="col1">
             <input type="text" name="name" placeholder="Nome do Evento" required>
@@ -35,6 +35,7 @@
                     <div id="filePreview"></div>
                     </div>
                 </div>
+                
             </div>
             
             <div class="btnContainer">
@@ -42,7 +43,7 @@
                     $idBtn = "btnSalvar";
                     $funcaoClick = "adicionarComValidacao('Evento editado com sucesso!', 1, 'listaEventosADM.php')";
                     $funcaoLoad = "mudarTamanho('btnSalvar', '275px', '50px', '20px')";
-                    $titulo = "Cadastrar";
+                    $titulo = "Salvar";
                     include('../templates/componenteButton.php');
                     
                     //  arrumar o direcionamento
@@ -53,9 +54,7 @@
                     include('../templates/componenteButton.php');
                 ?>
             </div>
-            
         </div>
-    
     </div>
 
 </form>

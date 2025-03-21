@@ -73,6 +73,7 @@ select {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    left: 100px;
 }
 
 .switchBtn input {
@@ -109,6 +110,10 @@ select {
     text-align: center;
 }
 
+.btnContainer {
+    margin-top: 10px;
+}
+
 .upload-box {
     width: 100%;
     height: 150px;
@@ -132,6 +137,7 @@ select {
     font-size: 14px;
     color: #333;
 }
+
 
 .file-info {
     font-size: 15px;
@@ -160,7 +166,7 @@ select {
     padding: 10px;
     border-radius: 5px;
     width: 100%;
-    max-width: 600px; 
+    max-width: 606px; 
     overflow: hidden;
 }
 
@@ -184,18 +190,18 @@ select {
     display: inline-block;
     text-align: center;
     margin-top: 5px;
-    width: 20%;
+    width: 17%;
 }
 
 .remove-file:hover {
     background-color: #d32f2f;
 }
 
-#btn  #btnCancelar{
+/* #btn  #btnCancelar{
     width: 400px;
     height: 44px;
     font-size: 16px;
-}
+} */
 
 @media (max-width: 1024px) {
     #frmCadastroAdocao{

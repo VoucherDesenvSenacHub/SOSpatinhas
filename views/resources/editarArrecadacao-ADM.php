@@ -16,7 +16,7 @@
 <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
     <div class="conteudoForm">
         <div class="col1">
-            <input type="text" name="titulo" placeholder="Titulo da Arrecadaçãp" required>
+            <input type="text" name="titulo" placeholder="Titulo da Arrecadação" required>
             <input type="text" name="nameAnimal" placeholder="Nome do Animal" required>
             <textarea name="descricao" placeholder="Descrição" required></textarea>
             <input type="text" name="nameUser" placeholder="Nome do Usuário" required>

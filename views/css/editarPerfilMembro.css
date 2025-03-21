@@ -1,104 +1,119 @@
-#contentEditarPerfil{
+#frmEditarPerfilMembro{
+    width: 100%;
+}
+.conteudoFrm {
     display: flex;
-    column-gap: 14rem;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
-    padding: 19px;
+    flex-direction: column;
+    width: 100%;
+    column-gap: 3rem;
+    padding: 70px;
 }
 
-#divForm{
+.col{
     display: flex;
-}
-#formEditarPerfilMembro{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 1rem;
+    width: 100%;
+    align-items: center;
 }
-.inputPerfil{
-    width: 592px;
+
+input{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    padding: 20px
-}
+} 
 
-#divButtons{
+#imgUpload{
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    bottom: 3rem;
+    right: -1rem;
 }
 
-#editarFoto{
-    display: flex;
-    flex-direction: column; 
-    position:relative;
-    text-align:center;
-}
-#fotoMembro{
-    width: 190px;
-}
-#buttonEditarFoto{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #44803F;
-    color: #fff;
-    border-radius: 50px;
-    font-size: 25px;
-
-    position:absolute;
-    z-index:1;
-    top: 75%;
-    left: 15%;
-    padding:0;
-    margin:-15px 0 0 -30px;
-
-    &:hover{
-        background-color: #83CE7D;
-        cursor: pointer;
-    }
+#previewImg{
+    width: 265px;
+    height: 257px;
+    border: 1px solid #ccc;
+    border-radius: 10rem;
 }
 
-.buttonsPerfil{
-    background-color: #83CE7D;
-    color: #fff;
-    width: 250px;
-    height: 44px;
-    font-size: 20px;
-    border-radius: 5px;
 
-    &:hover{
-        background-color: #44803F;
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 768px){
-    #corpocontainer {
-        height: 750px;
-    }
-
-    #contentEditarPerfil{
-        flex-direction: column;
-    }
-}
 
 @media (max-width: 425px){
-    #corpocontainer {
-        height:  750px;
+    html, body {
+        overflow-x: hidden;
     }
 
-    #contentEditarPerfil{
+    .corpo{
+        width: 85%;
+    }
+
+    .conteudo{
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 2rem
     }
 
-    .inputPerfil{
-        width: 300px;
+    .col{
+        width: 80%;
+        max-width: 80%;
+    }
+
+    input{
+        width: 65%;
+    }
+
+    #btn-photo{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #imgUpload{
+        right: 18rem;
+        bottom: 8rem
+    }
+}
+
+
+@media (max-width: 768px){
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .corpo{
+        width: 85%;
+    }
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 2rem
+    }
+
+    .col{
+        width: 144%;
+        max-width: 200%;
+    }
+
+    input{
+        width: 65%;
+    }
+
+    #btn-photo{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #imgUpload{
+        right: 38rem;
+        bottom: 8rem
     }
 }

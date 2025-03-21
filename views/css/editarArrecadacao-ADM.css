@@ -7,7 +7,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 20px;
-    column-gap: 3rem;
+    column-gap: 4rem;
 }
 input, textarea {
     width: 100%;

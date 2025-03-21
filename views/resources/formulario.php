@@ -5,8 +5,18 @@
     include('../templates/cardListas.php');
 ?>
 
-<form>
+<!-- Container para os cards -->
+<div class="CardIcons-container">
+    <a href="../resources/informacaoAnimal.php" class="card">
+        <?php gerarCardIconsAnimal("../images/Rectangle 71.png", "Rochele","Femea", "Cachorro", "2", ); ?>
+    </a>
+    <a href="../resources/perfilUsuarioAdm.php" class="card">
+        <?php gerarCardIconsUser("../images/icons/iconUser.png", "Betina de Souza Silva", "368.148.968-04
+", "67 372422124",true); ?>
+    </a>
+</div>
 
+<form>
     <input type="text" name="nome" placeholder="Nome Completo*">
 
     <div class="divMetade">
@@ -53,6 +63,26 @@
     <input type="text" name="pergunta6" placeholder="Pergunta6:">
 </form>
 
+<div class="btnContainer">
+    <?php
+        $idBtn = "btnAceitar";
+        $funcaoClick = "redirecionar('listaFormulario.php')";
+        $funcaoLoad = "mudarTamanho('btnAceitar')";
+        $titulo = "Aceitar";
+        include('../templates/componenteButton.php');
+
+        $idBtn = "btnRecusar";
+        $funcaoClick = "redirecionar('listaFormulario.php')";
+        $funcaoLoad = "mudarTamanho('btnRecusar')";
+        $titulo = "Recusar";
+        include('../templates/componenteButton.php');
+?>
+</div>
+
 <?php
     include('../templates/default/bottomHTML.php');
 ?>
+
+
+
+

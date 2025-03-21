@@ -76,6 +76,37 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     ';
 }
 
+function gerarCardIconsAnimal($imagem,$nome, $sexo, $tipoAnimal, $idade ) {
+   
+    echo '
+        <div class="CardIcons">
+            <img src="'.$imagem.'" alt="'.$nome.'">
+            <div class="info"> 
+                <h3>Nome: '.$nome.'</h3>
+                <h3>Sexo: '.$sexo.'</h3>
+                <h3>Tipo: '.$tipoAnimal.'</h3>
+                <h3>Idade: '.$idade.' anos</h3>
+            </div>
+            
+        </div>
+    ';
+}
+
+
+function gerarCardIconsUser($imagem, $nome, $cpf, $telefone, $isUser = false) {
+    $class = $isUser ? "user" : "";
+    echo '
+        <div class="CardIconsUser">
+            <img src="'.$imagem.'" alt="'.$nome.'" class="'.$class.'">
+            <div class="infoUser"> 
+                <h3>Nome: '.$nome.'</h3>
+                <h3>CPF: '.$cpf.'</h3>
+                <h3>Tel: '.$telefone.'</h3>
+            </div>
+        </div>
+    ';
+}
+
 ?>
 
 <style>
@@ -86,8 +117,6 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     padding: 10px;
     transition: transform 0.2s;
     text-align: center;
-    /* border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 .Card:hover {
@@ -129,6 +158,8 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
 }
 
 .Card h3 {
+    display: flex;
+    justify-content columns: center;
     margin: 10px 0;
     font-size: 1.2em;
     color: #333;
@@ -146,7 +177,69 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
     padding: 8px 10px; 
 }
 
+.CardIcons-container {
+    display: flex; 
+    /* flex-wrap: wrap; */
+    gap: 2em; 
+    margin-bottom: 20px;
+    justify-content: center;
+    text-decoration: none;
+}
 
+.CardIcons-container a {
+    text-decoration: none;
+}
+
+.CardIcons{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 450px; 
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    transition: transform ease-out  0.2s;
+}
+
+.CardIconsUser {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 590px; 
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    transition: transform ease-out  0.2s;
+    
+}
+
+.CardIcons:hover, .CardIconsUser:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+.CardIcons img, .CardIconsUser img {
+    width: 200px; 
+    height: 200px;  
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.CardIconsUser img {
+    background-color: rgb(68, 128, 63);
+}
+
+
+.CardIcons h3, .CardIconsUser h3 {
+    font-size: 1.2em; 
+    color: black;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
 
 
 
@@ -178,20 +271,82 @@ function gerarCardFormulario($tituloFrm, $imagemAnimal, $nomeAnimal, $imagemUser
 .Card .localizacao{
     font-size: 18px;
     background-color: #fff;
-    /* border: 1px solid #44803F; */
     color: #4caf50;
-    /* border-radius: 5px; */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* margin: 10px 0; */
 }
 
 .Card .localizacao img {
     margin-top: 12px;
     width: 18px;
     height: 25px;
+}
+
+@media (max-width: 1024px) {
+
+    .CardIcons img, .CardIconsUser img {
+        width: 150px; 
+        height: 150px;  
+        object-fit: cover; 
+        border-radius: 10px; 
+        padding: auto;
+    }
+
+    .CardIcons {
+        width: 320px;
+        height: 150px;
+    }
+
+    .CardIconsUser {
+        width: 450px;
+        height: 150px;
+        align-items: center;
+    }
+
+    .CardIcons h3, .CardIconsUser h3 {
+        font-size: 13px; 
+    }
+}
+
+@media (max-width: 768px) {
+
+    .CardIcons-container {
+        flex-wrap: wrap;
+    }
+
+    .CardIcons  {
+        width: 450px;
+    }
+    .CardIcons h3 {
+        margin-left: 65px;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .CardIcons img, .CardIconsUser img {
+        width: 125px;
+        height: 125px;
+    }
+    .CardIcons, .CardIconsUser {
+        width: 366px;
+        height: 125px;
+    }
+
+    .CardIcons h3, .CardIconsUser h3 {
+        font-size: 12px; 
+    }
+
+    .CardIcons h3 {
+        margin-left: 55px;
+    }
+
+    .CardIconsUser h3 {
+        margin-left: 8px;
+
+    }
 }
 
 </style>

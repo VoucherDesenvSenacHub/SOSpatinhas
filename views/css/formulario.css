@@ -46,6 +46,8 @@ input[type="checkbox"] {
     margin-bottom: 40px;
 }
 
+
+
 /* ! tentativa falha de ajustar os botões do header sem interfirir em nada no restante da minha pag
 button[name=Entrar]{
     margin: 8px;
@@ -153,7 +155,68 @@ input[type="date"]:valid::before {
         width: 30%;
     }
 
+
+
+@media (max-width: 1024px){
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+
+    form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .corpo {
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .tracinho{
+        width: 100%;
+    }
+
+    .botao{
+        width: 180px;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    form{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .redimensionar-bottom{
+        width: 100%;
+    }
+    
+    .redimensionar-top{
+        width: 100%;
+    }
+
+    
+}
+
+
+
 @media (max-width: 768px){
+
+    form {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
     .corpo {
         border-radius: 0;
         margin: 0;

@@ -11,6 +11,7 @@
     $cssLink  = '../css/blogEditar.css';
     $tipo = 'Adm';
     include('../templates/default/topHTML.php');
+    include('../templates/modalEditar.php')
 ?>
 
 <section class="corpo-desktop">
@@ -75,6 +76,16 @@
         <h2>Título da Notícia</h2>
     </div>
 </section>
+
+<script>
+    const btn_popup = document.querySelectorAll('.btnEditar');
+    btn_popup.forEach(button =>{
+        button.onclick = function()
+        {
+            chamar_popup('upload');
+        };
+    });
+</script>
 
 <?php
     include('../templates/default/bottomHTML.php');

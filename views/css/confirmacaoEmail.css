@@ -75,4 +75,8 @@ body{
     .bloco{
         padding:45px 65px;
     }
+
+    .secao-emailenviado {
+        height: calc(127vh - 431px);
+    }
 }

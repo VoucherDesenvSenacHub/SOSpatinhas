@@ -1,10 +1,12 @@
-.conteudo{
-display: flex;
-flex-direction: column;
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
 }
 
 #eventosCarrosel {
-  width: 80rem; 
+  width: 90%; 
 }
 
 .titulo {
@@ -15,102 +17,101 @@ flex-direction: column;
   margin-bottom: 20px; 
 }
 
-.carrossel-container{
+.carrosselContainer {
   margin-top: 10rem;
 }
 
-.slideshow-container{
-width: 528px;
-height: 360px;
-display: flex;
-gap: 160px;
-flex-direction: column;
-flex-wrap: wrap;
-padding: 0 0 0 5px;
-margin-top: 3rem;
-margin-bottom: 5rem;
+.imgEDetalhesEvento {
+  width: 528px;
+  height: 360px;
+  display: flex;
+  gap: 160px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 0 0 5px;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
-.slide{
-display: none;
+.slide {
+  display: none;
 }
 
-.slider{
-width: 528px;
-height: 360px;
+.slider {
+  width: 528px;
+  height: 360px;
 }
 
-.EventoSlides{
+.eventoSlides {
   width: 570px;
   height: 420px;
   border-radius: 1rem;
 }
 
-.btn-slide{
-text-align: center;
-display: flex;
-justify-content: center;
-gap: 1rem;
-bottom: 26rem;
-width: 528px; 
-position: absolute;
+.btnSlide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  bottom: 2rem;
 }
 
-.botao{
-
-cursor: pointer;
-padding: 0;
-margin: 0 2px;
-height: 15px;
-width: 15px;
-border-radius: 50%;
-display: inline-block;
-background-color: transparent;
-border: 2px solid #ffffff;
-box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.5);
-background: rgba(0, 0, 0, 0.5);
+.botao {
+  cursor: pointer;
+  padding: 0;
+  margin: 0 2px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.active, .botao:hover{
-background-color: #ffffff;
+.active, .botao:hover {
+  background-color: #ffffff;
 }
 
 .fade {
-animation-name: fade;
-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 .localEvento {
-display: flex;
-flex-direction: row;
-gap: 3px;
-font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  font-size: 14px;
 }
 
-.localEvento img{
-width: 15px;
-height: 17.07px;
+.localEvento img {
+  width: 15px;
+  height: 17.07px;
 }
 
-.event-details {
-text-align: left;
-height: 360px;
-width: 357px;
+.detalhesEvento {
+  text-align: left;
+  height: 360px;
+  width: 357px;
 }
 
-.event-details h1 {
-margin-bottom: 10px;
-color: #333;
-font-size: 35px;
-width: 585px;
+.detalhesEvento h1 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 35px;
+  width: 585px;
 }
 
-.event-details p {
+/* descricao evento */
+.detalhesEvento p {
   color: #000000;
   margin-top: 35px;
   margin-bottom: 50px;
@@ -119,7 +120,7 @@ width: 585px;
   text-align: justify;
 }
 
-.event-details button {
+.detalhesEvento button {
   padding: 10px 49px;
   background-color: #44803F;
   color: #fff;
@@ -131,18 +132,18 @@ width: 585px;
   margin: 0 11rem;
 }
 
-@media (max-width: 768px) {
 
-  .carrossel-container{
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+  .carrosselContainer {
     margin-top: 4rem;
   }
-
-  .conteudo{
-
+  .conteudo {
     padding-right: 10px;
-    width: 100%;
   }
-
   .corpo {
     width: 100%;
     flex-direction: column;
@@ -150,56 +151,46 @@ width: 585px;
   #eventosCarrosel {
     width: 100%;
   }
-  .slideshow-container {
-    width: 90%;
+  .imgEDetalhesEvento {
+    width: 100%;
     height: auto;
     gap: 20px;
-    margin: 2rem auto;
     padding: 0 5px;
   }
-
-  .titulo{
+  .titulo {
     margin-left: 32px;
   }
   .slider {
     width: 100%;
     height: auto;
   }
-  .EventoSlides {
+  .eventoSlides {
     width: 100%;
-    /*height: auto;*/
   }
-  .event-details {
+  .detalhesEvento {
     width: 90%;
     height: auto;
     margin: 0 auto;
     padding: 1rem;
   }
-  .event-details h1 {
+  .detalhesEvento h1 {
     font-size: 28px;
     width: 100%;
   }
-  .event-details p {
+  .detalhesEvento p {
     font-size: 16px;
     width: 100%;
     margin: 1rem 0;
   }
-  .event-details button {
+  .detalhesEvento button {
     margin: 0 auto;
     padding: 10px 30px;
     font-size: 18px;
-  }
-  .btn-slide {
-    width: 75%;
-    bottom: 70rem; 
-    
   }
 }
 
 
 @media (max-width: 425px) {
-
-  
   .container {
     padding: 8px;
   }
@@ -207,7 +198,7 @@ width: 585px;
     width: 100%;
     flex-direction: column;
   }
-  .slideshow-container {
+  .imgEDetalhesEvento {
     width: 100%;
     height: auto;
     gap: 10px;
@@ -218,35 +209,28 @@ width: 585px;
     width: 100%;
     height: auto;
   }
-  .EventoSlides {
+  .eventoSlides {
     width: 100%;
     height: auto;
   }
-  .event-details {
+  .detalhesEvento {
     width: 95%;
     height: auto;
     margin: 0 auto;
     padding: 0.5rem;
   }
-  .event-details h1 {
+  .detalhesEvento h1 {
     font-size: 22px;
     width: 100%;
   }
-  .event-details p {
+  .detalhesEvento p {
     font-size: 14px;
     width: 100%;
     margin: 0.5rem 0;
   }
-  .event-details button {
+  .detalhesEvento button {
     margin: 0 auto;
     padding: 8px 20px;
     font-size: 16px;
   }
-  .btn-slide {
-    width: 85%;
-    bottom: 77rem;
-    
-  }
 }
-
-

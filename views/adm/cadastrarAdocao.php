@@ -1,15 +1,15 @@
 <?php
-    $cssLink  = 'cadastrarAdocao.css';
+    $cssLink  = '../../public/css/cadastrarAdocao.css';
     $tipo = 'Adm';
-    include('../../../componentes/default/topHTML.php');
+    include('../../public/componentes/default/topHTML.php');
 
-    if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
-    echo '<script type="text/javascript">
-            alert("Você precisa estar logado como administrador para acessar esta página.");
-            window.location.href = "loginADM.php";
-          </script>';
-    exit();
-    }
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    // echo '<script type="text/javascript">
+    //         alert("Você precisa estar logado como administrador para acessar esta página.");
+    //         window.location.href = "loginADM.php";
+    //       </script>';
+    // exit();
+    // }
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
@@ -53,7 +53,7 @@
 
                 <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                 <label for="image" id="imgLabel" class="upload-box">
-                    <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                    <img src="../../public/images/cadastroAdocao-ADM/grampoBranco.png" alt="Upload Icon">
                     <p>Enviar fotos</p>
                 </label>
                 <div id="filePreview"></div>
@@ -66,13 +66,13 @@
                 $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
                 $funcaoLoad = "mudarTamanho('btnCadastrar', '275px', '50px', '20px')";
                 $titulo = "Cadastrar";
-                include('../../../componentes/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
 
                 $idBtn = "btnCancelar";
                 $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
                 $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
                 $titulo = "Cancelar";
-                include('../../../componentes/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
                 ?>
             </div>
         </div>
@@ -115,23 +115,10 @@
             filePreview.classList.remove('two-column');
         }
     });
-
-    function resetERedirect(){
-        document.getElementById('frmCadastroAdocao').reset();
-        window.location.href = "listaAdocao-ADM.php";
-    }
-
-    function adicionar(){
-        if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
-            alert("Animal cadastrado com sucesso!")
-        }else{
-            alert("Preencha todos os campos.")
-        }
-    }
 </script>
 
 <?php
-    include('../../../componentes/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>
 
 <?php

@@ -8,15 +8,15 @@
     // exit();
     // }
 
-    $cssLink  = '../css/perfilAdm.css';
+    $cssLink  = '../../public/css/perfilAdm.css';
     $tipo = 'Adm';
-    include('../../../componentes/default/topHTML.php');
+    include('../../public/componentes/default/topHTML.php');
 ?>
 
-<div id="coteudo">
+<div id="conteudo">
     <div id="topConteudo">
         <div class="adm_foto">
-            <img src="../images/icons/iconUserAdm.png" alt="Foto de perfil do administrador">
+            <img src="../../public/images/iconeADM.png" alt="Foto de perfil do administrador">
             <div id="infoAdm">
                 <h1>Nome</h1>
                 <p>ID administrador</p>
@@ -29,13 +29,13 @@
                 $funcaoClick = "redirecionar('editarPerfil-ADM.php')";
                 $titulo = "Editar Perfil";
                 $funcaoLoad = "mudarTamanho('354px', '64px', '30px')";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
     
                 
                 //btn Sair
                 $funcaoClick = "sair()";
                 $titulo = "Sair";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
             ?>
         </div>
     </div>
@@ -46,17 +46,17 @@
                 // btn Adoção
                 $funcaoClick = "redirecionar('listaAdocao-ADM.php')";
                 $titulo = "Adoção";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
     
                 // btn Eventos
                 $funcaoClick = "redirecionar('listaEventosADM.php')";
                 $titulo = "Eventos";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
     
                 // btn Arrecadação
                 $funcaoClick = "redirecionar('listaArrecadacoesADM.php')";
                 $titulo = "Arrecadação";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
             ?>
         </div>
     
@@ -65,17 +65,17 @@
                 // btn Membros
                 $funcaoClick = "redirecionar('listademembrosadm.php')";
                 $titulo = "Membros";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
     
                 // btn Usuários
                 $funcaoClick = "redirecionar('listaUsuariosADM.php')";
                 $titulo = "Usuário";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
     
                 // btn Editar Formulário
                 $funcaoClick = "redirecionar('formAdocaoEditavel.php')";
                 $titulo = "Editar Formulário";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
             ?>
         </div>
     </div>
@@ -84,5 +84,5 @@
 
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

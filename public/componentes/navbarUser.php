@@ -118,7 +118,7 @@
 
 <nav class="navbar">
     <a class="navbar-logo" href="./paginaInicio.php">
-        <img src="../images/Logo_Navbar.png" alt="Logo">
+        <img src="../../public/images/Logo_Navbar.png" alt="Logo">
     </a>
 
     <ul class="nav-links">
@@ -132,7 +132,7 @@
     <div class="nav-right">
         <?php if ($taLogado): ?>
             <a class="navbar-logo" href="perfilUsuario.php">
-                <img src="../images/icons/iconUser.png" alt="Login">
+                <img src="../../public/images/icons/iconUser.png" alt="Login">
             </a>
         <?php else: ?>
             <div id="btnLoginRegister">
@@ -143,7 +143,7 @@
                         $funcaoClick = "redirecionar('login.php')";
                         $titulo = "Entrar";
                         $funcaoLoad = "mudarTamanho('btnEntrar', '142px', '42px', '16px')";
-                        include('../componenteButton.php');
+                        include('../../public/componentes/componenteButton.php');
                     ?>
                 </div>
                 <div id="btnCadastroDiv">
@@ -153,7 +153,7 @@
                         $funcaoClick = "redirecionar('cadastroUsuario.php')";
                         $titulo = "Cadastrar";
                         $funcaoLoad = "mudarTamanho('btnCadastro', '142px', '42px', '16px')";
-                        include('../componenteButton.php');
+                        include('../../public/componentes/componenteButton.php');
                         $idBtn = "";
                         $funcaoClick = "";
                         $titulo = "";

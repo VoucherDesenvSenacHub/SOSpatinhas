@@ -1,6 +1,6 @@
 <nav class="navbar">
     <a class="navbar-logo" href="../../views/user/paginaInicio.php">
-        <img src="../images/Logo_Navbar.png" alt="Logo">
+        <img src="../../public/images/Logo_Navbar.png" alt="Logo">
     </a>
 
     <ul class="nav-links">

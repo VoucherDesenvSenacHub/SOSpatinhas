@@ -1,15 +1,14 @@
 <div class="eventosCard" onclick="window.location.href='detalhesEvento.php'">
-    <img src="../images/horto-florestal.png" alt="Feira do Auau">
+    <img src="../../public/images/horto-florestal.png" alt="Feira do Auau">
     <div class="cardInfo">
       <h3>Feira do Auau</h3>
       <p>Feira arrecadativa de moda.</p>
       <div class="local">
-          <img src="../images/icons/iconmarcador3.png" alt="Icone de local">
+          <img src="../../public/images/icons/iconmarcador3.png" alt="Icone de local">
           <p>Campo Grande MS, Horto Florestal</p>
       </div>
     </div>
 </div>
-
 
 
 <style>
@@ -62,12 +61,13 @@
 }
 
 .local p {
-  font-size: 14px;
+  font-size: 12px;
+  padding-left: 3px;
 }
 
 .local img {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 17px;
 }
 
 @media (max-width: 1024px) {
@@ -81,6 +81,9 @@
   }
   .cardInfo p {
     font-size: 12px;
+  }
+  .cardInfo h3 { 
+    font-size: 18px;
   }
   .local p {
     font-size: 12px ;

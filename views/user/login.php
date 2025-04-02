@@ -36,11 +36,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="login.css">
+    
+    <link rel="stylesheet" href="../../public/css/default.css">
+    <link rel="stylesheet" href="../../public/css/login.css">
 </head>
 
 <body>
-    <?php include('../templates/navbarUser.php')?>
+    <?php include('../../public/componentes/navbar.php')?>
     
     <section class="corpo-container">
 
@@ -58,18 +60,18 @@
                     <?php
                         $funcaoClick = "submitComValidacao('formLogin')";
                         $titulo = "Entrar";
-                        include('../templates/componenteButton.php');
+                        include('../../public/componentes/componenteButton.php');
                     ?>
                 </form>
                 <p>Não tem uma conta? <a href="cadastroUsuario.php"> Cadastrar</a></p>
                 <div class="login-adm">
                     <a href="./loginADM.php">
-                        <img src="../images/iconeADM.png" alt="acesso-adm">
+                        <img src="../../public/images/iconeAdm.png" alt="acesso-adm">
                     </a>
                 </div>
             </div>
         </section>
     </section>
-    <?php include('../../../componentes/footerAdm.php'); ?>
+    <?php include('../../public/componentes/footer.php'); ?>
 </body>
 </html>

@@ -108,7 +108,7 @@
 <?php
     $cssLink  = 'adocao.css';
     $tipo = $_GET['type'] ?? 'User';
-    include('../../../componentes/default/topHTML.php');
+    include('../../public/componentes/default/topHTML.php');
 ?>
 
 <section class="top-texts">
@@ -118,7 +118,7 @@
 
 
 <section class="filter">
-    <form method="get" class="form-filter">
+    <form method="get" class="form-filter" id="frmFiltroAdocao">
         <div class="container-select">
             <h2>Sexo</h2>
             <select name="sexo-filter" id="sexo-select">
@@ -164,7 +164,8 @@
             <?php
                 $funcaoClick = "submitSimples(filtros)";
                 $titulo = "Filtrar"; 
-                include("../templates/componenteButton.php");
+                include("../../public/componentes/componenteButton.php");
+
             ?>
         </div>
     </form>
@@ -174,7 +175,7 @@
 <div class="card-container">
     <?php
         foreach ($rowAnimal as $animal){
-            include ('../templates/animalCard.php');
+            include ('../../public/componentes/animalCard.php');
         };
     ?>
 </div>
@@ -240,5 +241,5 @@
 </script>
 
 <?php
-    include('../../../componentes/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

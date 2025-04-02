@@ -12,10 +12,9 @@
             <p><?= $animal['sexo']?></p>
             <p><?= $animal['idade']?> anos</p>
             <p>Porte <?= $animal['porte']?></p>
-<<<<<<< HEAD:views/templates/animalCard.php
             <p><!--<?= $animal['raca']?>--></p>
-=======
->>>>>>> 4778b96d94f9a942ef719b277eadc1b4aadcea39:public/componentes/animalCard.php
+
+
         </header>
         <button class="button-card">
             <a href="informacaoAnimal.php?id=1"><!--<?= $animal['id_animal'] ?>-->Adotar!</a>

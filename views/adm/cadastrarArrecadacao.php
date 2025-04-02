@@ -8,9 +8,9 @@
     // exit();
     // }
 
-    $cssLink  = '../css/cadastrarArrecadacao-ADM.css';
+    $cssLink  = '../../public/css/cadastrarArrecadacao.css';
     $tipo = 'Adm';
-    include('../../../componentes/default/topHTML.php');
+    include('../../public/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
@@ -36,7 +36,7 @@
             <div class="upload-container">
                 <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                 <label for="image" id="imgLabel" class="upload-box">
-                    <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                    <img src="../../public/images/cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
                     <p>Enviar fotos</p>
                 </label>    
                 <div id="filePreview"></div>
@@ -47,12 +47,12 @@
             $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
             $funcaoLoad = "mudarTamanho('400px')";
             $titulo = "Cadastrar";
-            include('../templates/componenteButton.php');
+            include('../../public/componentes/componenteButton.php');
 
             $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
             $funcaoLoad = "mudarTamanho('400px')";
             $titulo = "Cancelar";
-            include('../templates/componenteButton.php');
+            include('../../public/componentes/componenteButton.php');
             ?>
             
         </div>
@@ -125,7 +125,7 @@
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>
 
 <?php

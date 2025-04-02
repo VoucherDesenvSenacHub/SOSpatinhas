@@ -45,7 +45,8 @@ body {
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: <?php echo ($isAdm) ? "center;" : "space-between;"; ?>;
+    justify-content: center;
+    /* <?php echo ($isAdm) ? "center;" : "space-between;"; ?>; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -232,14 +233,14 @@ footer {
     box-sizing: border-box;
 }
 
-.footer-desktop .footer-lula-esquerda {
+.footer-desktop .esquerda {
     font-size: 14px;
     border-bottom: 1px solid white; 
     white-space: nowrap; 
     ;
 }
 
-.footer-lula-esquerda a {
+.esquerda a {
     text-decoration: none;
     color: white
 }
@@ -249,11 +250,11 @@ footer {
     height: auto;
 }
 
-.footer-desktop .footer-balsonaro-direita {
+.footer-desktop .direita {
     display: flex;
     gap: 15px;      
 }
-.footer-desktop .footer-balsonaro-direita img {
+.footer-desktop .direita img {
     width: 40px;    
     height: auto;
 }

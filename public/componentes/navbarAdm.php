@@ -128,16 +128,16 @@
 </head>
 <body>
     <nav class="navbar">
-        <a class="navbar-logo" href="./editarPaginaInicio.php">
+        <a class="navbar-logo" href="../../views/adm/editarPaginaInicio.php">
             <img src="../images/Logo_Navbar.png" alt="Logo">
         </a>
 
         <ul class="nav-links">
-            <a href="./blogEditar.php">Blog</a>
-            <a href="./quemSomosEditaveis.php">Quem Somos</a>
-            <a href="./comoAjudarEditavel.php">Como Ajudar</a>
-            <a href="./eventos.php?type=Adm">Eventos</a>
-            <a href="./adocao.php?type=Adm">Adoção</a>
+            <a href="../../views/adm/blogEditar.php">Blog</a>
+            <a href="../../views/adm/quemSomosEditaveis.php">Quem Somos</a>
+            <a href="../../views/adm/comoAjudarEditavel.php">Como Ajudar</a>
+            <a href="../../views/adm/eventos.php?type=Adm">Eventos</a>
+            <a href="../../views/adm/adocao.php?type=Adm">Adoção</a>
         </ul>
 
         <div class="nav-right">
@@ -151,18 +151,18 @@
     </nav>
 
     <div class="mobile-menu">
-        <a href="./blogEditar.php">Blog</a>
-        <a href="./quemSomosEditaveis.php">Quem Somos</a>
-        <a href="./comoAjudarEditavel.php">Como Ajudar</a>
-        <a href="./eventos.php">Eventos</a>
-        <a href="./adocao.php">Adoção</a>
+        <a href="../../views/user/blogEditar.php">Blog</a>
+        <a href="../../views/user/quemSomosEditaveis.php">Quem Somos</a>
+        <a href="../../views/user/comoAjudarEditavel.php">Como Ajudar</a>
+        <a href="../../views/user/eventos.php">Eventos</a>
+        <a href="../../views/user/adocao.php">Adoção</a>
         <hr>
-        <a href="./listaAdocao-ADM.php">Adoções</a>
-        <a href="./listaEventosADM.php">Eventos</a>
-        <a href="./listaArrecadacoesADM.php">Arrecadações</a>
-        <a href="./listademembrosadm.php">Membros</a>
-        <a href="./listaUsuariosADM.php">Usuários</a>
-        <a href="./formAdocaoEditavel.php">Editar Formulário</a>
+        <a href="../../views/adm/listaAdocao-ADM.php">Adoções</a>
+        <a href="../../views/adm/listaEventosADM.php">Eventos</a>
+        <a href="../../views/adm/listaArrecadacoesADM.php">Arrecadações</a>
+        <a href="../../views/adm/listademembrosadm.php">Membros</a>
+        <a href="../../views/adm/listaUsuariosADM.php">Usuários</a>
+        <a href="../../views/adm/formAdocaoEditavel.php">Editar Formulário</a>
     </div>
 
     <script>

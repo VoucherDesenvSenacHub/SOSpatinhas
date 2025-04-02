@@ -122,11 +122,11 @@
     </a>
 
     <ul class="nav-links">
-        <a href="./blog.php">Blog</a>
-        <a href="./quemSomos.php">Quem Somos</a>
-        <a href="./comoAjudar.php">Como Ajudar</a>
-        <a href="./eventos.php">Eventos</a>
-        <a href="./adocao.php">Adoção</a>
+        <a href="../../views/user/blog.php">Blog</a>
+        <a href="../../views/user/quemSomos.php">Quem Somos</a>
+        <a href="../../views/user/comoAjudar.php">Como Ajudar</a>
+        <a href="../../views/user/eventos.php">Eventos</a>
+        <a href="../../views/user/adocao.php">Adoção</a>
     </ul>
 
     <div class="nav-right">
@@ -143,7 +143,7 @@
                         $funcaoClick = "redirecionar('login.php')";
                         $titulo = "Entrar";
                         $funcaoLoad = "mudarTamanho('btnEntrar', '142px', '42px', '16px')";
-                        include('../templates/componenteButton.php');
+                        include('../componenteButton.php');
                     ?>
                 </div>
                 <div id="btnCadastroDiv">
@@ -153,7 +153,7 @@
                         $funcaoClick = "redirecionar('cadastroUsuario.php')";
                         $titulo = "Cadastrar";
                         $funcaoLoad = "mudarTamanho('btnCadastro', '142px', '42px', '16px')";
-                        include('../templates/componenteButton.php');
+                        include('../componenteButton.php');
                         $idBtn = "";
                         $funcaoClick = "";
                         $titulo = "";
@@ -172,11 +172,11 @@
 </nav>
 
 <div class="mobile-menu">
-    <a href="./blog.php">Blog</a>
-    <a href="./quemSomos.php">Quem Somos</a>
-    <a href="./comoAjudar.php">Como Ajudar</a>
-    <a href="./adocao.php">Adoção</a>
-    <a href="./eventos.php">Eventos</a>
+    <a href="../../views/user/blog.php">Blog</a>
+    <a href="../../views/user/quemSomos.php">Quem Somos</a>
+    <a href="../../views/user/comoAjudar.php">Como Ajudar</a>
+    <a href="../../views/user/adocao.php">Adoção</a>
+    <a href="../../views/user/eventos.php">Eventos</a>
 </div>
 
 <script>

@@ -13,16 +13,16 @@
 
 .p-container {
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Joga o botão para a direita */
-    width: 100%; /* Garante que ocupe toda a largura disponível */
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
     margin-bottom: 15px;
 }
 
 .p-container p {
-    flex: 1; /* Ocupa o espaço restante para empurrar o botão para a direita */
-    margin: 0; /* Remove margens indesejadas */
-    line-height: 1.5; /* Mantém o espaçamento correto do texto */
+    flex: 1; 
+    margin: 0; 
+    line-height: 1.5; 
 }
 
 .p-container .botaozin {

@@ -1,16 +1,7 @@
 <?php
-
-    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
-    // echo '<script type="text/javascript">
-    //         alert("Você precisa estar logado como administrador para acessar esta página.");
-    //         window.location.href = "loginADM.php";
-    //       </script>';
-    // exit();
-    // }
-
-  $cssLink  = '../css/formAdocaoEditavel.css';
+  $cssLink  = '../../public/css/editarFrmAdocao.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
+  include ('../../public/componentes/default/topHTML.php');
 ?>
 
 <div class="redimensionar-top">
@@ -18,7 +9,7 @@
 
     <div class="p-container">
         <p id="p-feliz">Olá! Estamos muito felizes por você escolher adotar um animalzinho do SOS Patinhas 🙂</p>
-        <img src="../images/btnEditar.png" class="botaozin">
+        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
     </div>
     <p>Para adotar um dos nossos cãezinhos, é necessário ter mais de 18 anos, preencher este formulário, enviar fotos do seu lar e, caso a adoção seja aprovada, assinar um termo de responsabilidade. Também solicitamos que nos mantenha atualizados sobre o bem-estar do animalzinho após a adoção, enviando notícias de tempos em tempos. Este é o procedimento padrão adotado por diversas outras organizações não governamentais (ONGs) comprometidas com a adoção responsável.</p>
 
@@ -61,49 +52,49 @@
     
     <div class="perguntaIcon">
         <label for="pergunta1"></label>
-        <img src="../images/Icon_de_excluir.png" class="botaozin">
-        <img src="../images/btnEditar.png" class="botaozin">
+        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
         <input type="text" name="pergunta1" placeholder="Pergunta1:">
     </div>
     
     <div class="perguntaIcon">
-        <img src="../images/Icon_de_excluir.png" class="botaozin">
-        <img src="../images/btnEditar.png" class="botaozin">
+        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta2"></label>
         <input type="text" name="pergunta2" placeholder="Pergunta2:">
     </div>
 
     
     <div class="perguntaIcon">
-        <img src="../images/Icon_de_excluir.png" class="botaozin">
-        <img src="../images/btnEditar.png" class="botaozin">
+        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta3"></label>
         <input type="text" name="pergunta3" placeholder="Pergunta3:">
     </div>
 
     <div class="perguntaIcon">
-        <img src="../images/Icon_de_excluir.png" class="botaozin">
-        <img src="../images/btnEditar.png" class="botaozin">
+        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta4"></label>
         <input type="text" name="pergunta4" placeholder="Pergunta4:">  
     </div>
     
     <div class="perguntaIcon">   
-        <img src="../images/Icon_de_excluir.png" class="botaozin">
-        <img src="../images/btnEditar.png" class="botaozin">
+        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta5"></label>
         <input type="text" name="pergunta5" placeholder="Pergunta5:">
     </div>
     
     <div class="perguntaIcon">     
-        <img src="../images/Icon_de_excluir.png" class="botaozin">
-        <img src="../images/btnEditar.png" class="botaozin">
+        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta6"></label>
         <input type="text" name="pergunta6" placeholder="Pergunta6:">
     </div>
     
     <div class="botaozao-container">
-        <img src="../images/plusButton.png" class="botaozao">
+        <img src="../../public/images/plusButton.png" class="botaozao">
     </div>
     
 </form>
@@ -138,10 +129,10 @@
         $funcaoClick = "adicionarComValidacao('Formulário eviado com sucesso', 1, 'adocao.php')";                             
         $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
         $titulo = "Enviar";                                           
-        include('../templates/componenteButton.php');
+        include('../../public/componentes/componenteButton.php');
     ?>
 </div>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

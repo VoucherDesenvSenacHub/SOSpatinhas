@@ -1,7 +1,7 @@
 <?php
-  $cssLink  = 'frmAdocao.css';
+  $cssLink  = '../../public/css/frmAdocao.css';
   $tipo = 'User';
-  include('../../../componentes/default/topHTML.php');
+  include('../../public/componentes/default/topHTML.php');
 ?>
     
 <div class="redimensionar-top">
@@ -18,8 +18,7 @@
 
 <div class="tracinho"></div>
 
-<form>
-
+<form id="frmAdc">
     <input type="text" name="nome" placeholder="Nome Completo*">
 
     <div class="divMetade">
@@ -96,21 +95,10 @@
         $funcaoClick = "adicionarComValidacao('Formulário eviado com sucesso', 1, 'adocao.php')";                             
         $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
         $titulo = "Enviar";                                           
-        include('../templates/componenteButton.php');
+        include('../../public/componentes/componenteButton.php');
     ?>
 </div>
-    
-<!-- <script>
-    function adicionar(){
-        if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
-            alert("Formulário enviado com sucesso!")
-            window.location.href = "adocao.php";
-        }else{
-            alert("Preencha todos os campos.")
-        }
-    }
-</script> -->
 
 <?php
-    include('../../../componentes/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

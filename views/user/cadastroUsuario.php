@@ -52,11 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="cadastroUsuario.css">
+    <link rel="stylesheet" href="../../public/css/cadastroUsuario.css">
+    <link rel="stylesheet" href="../../public/css/default.css">
+    
 </head>
 
 <body>
-    <?php include('../templates/navbarUser.php')?>
+    <?php include('../../public/componentes/navbar.php')?>
     
     <section class="corpo-container">
         <h1>Cadastro</h1>
@@ -83,12 +85,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php
                 $funcaoClick = "submitComValidacao('formCadastro')";
                 $titulo = "Cadastrar";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
             ?>
         </form>
         <p>Já tem uma conta? <a href="login.php">Login</a></p>
    
     </section>
 </body>
-<?php include('../../../componentes/default/bottomHTML.php'); ?>
+<?php include('../../public/componentes/footer.php'); ?>
 </html> 

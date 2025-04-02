@@ -1,5 +1,7 @@
 <?php
-
+    $cssLink  = '../../public/css/cadastrarEventos.css';
+    $tipo = 'Adm';
+    include('../../public/componentes/default/topHTML.php');
     // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
     // echo '<script type="text/javascript">
     //         alert("Você precisa estar logado como administrador para acessar esta página.");
@@ -9,9 +11,6 @@
     // }
 
 
-    $cssLink  = '../css/cadastrarEventos-ADM.css';
-    $tipo = 'Adm';
-    include('../../../componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="formCadastroEvento">
@@ -26,15 +25,16 @@
         <div class="col2">
             <div class="upload-container">
                 <div class="top">
-                    <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
-                    <label for="image" id="imgLabel" class="upload-box">
-                        <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
-                        <p>Enviar fotos</p>
-                    </label>
-                    <div class="descricaoEBtn">
+                    <div class="imgContainer">
+                        <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
+                        <label for="image" id="imgLabel" class="upload-box">
+                            <img src="../../public/images/cadastroAdocao-ADM/grampoBranco.png" alt="Upload Icon">
+                            <p>Enviar fotos</p>
+                        </label>
                         <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
-                    <div id="filePreview"></div>
                     </div>
+
+                    <div id="filePreview"></div>
                 </div>
 
             </div>
@@ -44,14 +44,14 @@
                     $funcaoClick = "adicionarComValidacao('Evento cadastrado com sucesso!')";
                     $funcaoLoad = "mudarTamanho('btn', '275px', '50px', '20px')";
                     $titulo = "Cadastrar";
-                    include('../templates/componenteButton.php');
+                    include('../../public/componentes/componenteButton.php');
                     
                     //  arrumar o direcionamento
                     $idBtn = "btnCancelar";
                     $funcaoClick = "cancelarForm('frmCadastroAdocao','listaEventosADM.php')";
                     $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
                     $titulo = "Cancelar";
-                    include('../templates/componenteButton.php');
+                    include('../../public/componentes/componenteButton.php');
                 ?>
             </div>
         </div>
@@ -93,15 +93,10 @@
             filePreview.classList.remove('two-column');
         }
     });
-
-    function resetERedirect(){
-        document.getElementById('frmCadastroAdocao').reset();
-        window.location.href = "listaEventosADM.php";
-    }
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+   include('../../public/componentes/default/bottomHTML.php');
 ?>
 
 <?php

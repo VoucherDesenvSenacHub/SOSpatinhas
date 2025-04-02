@@ -9,9 +9,9 @@
     // }
 
 
-  $cssLink  = '../css/editarAdocao-ADM.css';
+  $cssLink  = '../../public/css/editarAdocao-ADM.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
+  include('../../public/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
@@ -56,7 +56,7 @@
 
                 <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                 <label for="image" id="imgLabel" class="upload-box">
-                    <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                    <img src='../../public/images/cadastroAdocao-ADM\grampoBranco.png' alt="Upload Icon">
                     <p>Enviar fotos</p>
                 </label>
                 <div id="filePreview"></div>
@@ -69,13 +69,13 @@
                 $funcaoClick = "adicionarComValidacao('Animal editado com sucesso!', 1, 'listaAdocao-ADM.php' )";
                 $funcaoLoad = "mudarTamanho('btnCadastrar', '275px', '50px', '20px' )";
                 $titulo = "Salvar";           
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
 
                 $idBtn = "btnCancelar";
                 $funcaoClick = "cancelarForm('frmCadastroAdocao', 'listaAdocao-ADM.php')";
                 $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
                 $titulo = "Cancelar";
-                include('../templates/componenteButton.php');
+                include('../../public/componentes/componenteButton.php');
             ?>
             </div>
         </div>
@@ -127,5 +127,5 @@
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

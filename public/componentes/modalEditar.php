@@ -4,27 +4,22 @@
 <link rel="stylesheet" href="../css/modalEditar.css">
 <div class="popupEditar" id="popupEditar">
     <button id="btnFecharPopup" arial-label="fechar"></button>
-    <div id="input_img">
-        <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" id="grampo">
-        <p id="enviar_foto">Enviar foto</p>
-        <p id="enviar_foto_pix">Selecionar Qr Code</p>
-        <input type="file" id="inputFilePopup" accept="image/*">
-    </div>
-    <label id="kit_label" for="kits">Escolha o kit</label>
-    <select id="kits" name="kits">
-        <option class="option_kit" value="kit_racao">Kit Ração</option>
-        <option class="option_kit" value="kit_limpeza">Kit Limpeza</option>
-        <option class="option_kit" value="kit_conforto">Kit Conforto</option>
-        <option class="option_kit" value="kit_medico">Kit Médico</option>
-        <option class="option_kit" value="kit_abono">Kit Abono</option>
-        <option class="option_kit" value="kit_vacina">Kit Vacina</option>
-    </select>
-    <input type='text' id='titlePopup' placeholder='Digite o título...'>
-    <label id="price_label">Digite o novo valor</label>
-    <input type='text' id='pricePopup' placeholder='Ex: 50,00'>
-    <h6 id="line_h6">Enviar arquivos: JPG, PNG, JPNG</h6>
-    <input type="text" id="inputBoxPopup" placeholder="Digite o nome da pessoa">
-    <textarea id="popup-textoArea" name="popup-textoArea" placeholder="Digite sua descrição..."></textarea>
+
+    <?php if ($imagem == true): ?>
+        <div id="input_img">
+            <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" id="grampo">
+            <p id="enviar_foto">Enviar foto</p>
+            <input type="file" id="inputFilePopup" accept="image/*">
+        </div>
+    <?php endif; ?>
+
+    <?php if ($input == true): ?>
+        <input type="text" id="inputBoxPopup" placeholder="Digite o nome da pessoa">
+    <?php endif; ?>
+
+    <?php if ($textarea == true): ?>
+        <textarea id="popup-textoArea" name="popup-textoArea" placeholder="Digite sua descrição..."></textarea>
+    <?php endif; ?>
     
     <?php 
         $funcaoClick = "reload()"; 

@@ -1,7 +1,7 @@
 <?php
-    $cssLink  = '../css/perfilMembro.css';
+    $cssLink  = '../../public/css/perfilMembro.css';
     $tipo = 'Adm';
-    include('../../../componentes/default/topHTML.php');
+    include('../../public/componentes/default/topHTML.php');
     
     if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
         echo '<script type="text/javascript">
@@ -14,13 +14,13 @@
 
 <div id="perfil">
     <div id="contentFotoMembro">
-        <img id="fotoMembro" src="../images/fotoPerfilMembro.png" alt="icone foto do Membro">
+        <img id="fotoMembro" src="../../public/images/fotoPerfilMembro.png" alt="icone foto do Membro">
         <p id="nomeMembro">Felipe Paes</p>
     </div>
 
     <div id="contentInfosMembro">
         <div class="contentItensPerfil">
-            <img class="icones" src="../images/telefonePerfilMembro.png" alt="icone telefone">
+            <img class="icones" src="../../public/images/telefonePerfilMembro.png" alt="icone telefone">
             <div class="contentItens">
                 <p class="titulos">Telefone</p>
                 <p class="conteudoTitulos">+12 3456 7892</p>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="contentItensPerfil">
-            <img class="icones" src="../images/emailPerfilMembro.png" alt="icone email">
+            <img class="icones" src="../../public/images/emailPerfilMembro.png" alt="icone email">
             <div class="contentItens">
                 <p class="titulos">E-mail</p>
                 <p class="conteudoTitulos">example@gmail.com</p>
@@ -40,5 +40,5 @@
 </div>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

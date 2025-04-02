@@ -1,6 +1,15 @@
 <?php
-require_once "../models/Arrecadacao.php";
+require_once 'models/teste.php';
 
-$bd = new Banco();
-$pagamento = new Pagamento($bd->conectar());
-$arrecadacao = new Arrecadacao ($bd->conectar(),$pagamento);
+class TesteController {
+
+    public function crud() {
+        $data = file_get_contents("php://input");
+
+        $teste = new TesteModel();
+        $resultado = $teste->crud($data);
+
+        echo json_encode($resultado);
+    }
+}
+?>

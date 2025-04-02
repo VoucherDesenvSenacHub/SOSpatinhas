@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(198, 225, 196);
+    background-image: url("../../../images/Patinhas.png");
+    background-size: 50%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+
+.corpo {
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: <?php echo ($isAdm) ? "center;" : "space-between;"; ?>;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    font-weight: 550;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+    border-bottom: solid #C6E1C4;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    z-index: 1300;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu a:hover {
+    background-color: #C6E1C4;
+}
+
+.mobile-menu.show {
+    display: flex;
+}
+
+#btnLoginRegister{
+    display: flex;
+}
+
+#logos{
+    gap: 1rem;
+}
+
+.navbar-logo{
+    display: none;
+}
+
+.sidebar{
+    height: 100vh;
+    min-height: 50px;
+    width: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    background-color: rgb(68, 128, 63);
+    overflow: hidden;
+    transition: width 0.2s;
+}
+
+.sidebar:hover{
+    width: 230px;
+    overflow: visible;
+}
+
+.logo{
+    margin-bottom: 1rem;
+}
+
+.logo img{
+    width: 60px;
+    padding: 0 4px;
+}
+
+#navSidebar{
+    height: 60vh;
+    min-height: 300px;
+}
+
+.sidebarLi a, .logo a, #logout a{
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    padding: 10px 0;
+    color: white;
+    font-weight: bold;
+}
+
+.sidebarLi a:hover, #logout a:hover{
+    background-image: linear-gradient(to right, #C6E1C4 7px, rgba(255, 255, 255, 0.1) 7px);
+    color: white;
+}
+
+#logout{
+    margin-top: 4.5rem;
+}
+
+#navSidebar img{
+    width: 35px;
+    text-align: right;
+}
+
+.sidebarLi p, #logout p{
+    width: 123px;
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 0.3px;
+}
+
+footer {
+    width: 100%;
+    position: relative; 
+    z-index: 1200;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-desktop {
+    width: 100%;
+    background-color: rgb(68, 128, 63);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center; 
+    position: relative; 
+    z-index: 1200;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-desktop .container {
+    max-width: 1200px;    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px 40px;  
+    box-sizing: border-box;
+}
+
+.footer-desktop .footer-lula-esquerda {
+    font-size: 14px;
+    border-bottom: 1px solid white; 
+    white-space: nowrap; 
+    ;
+}
+
+.footer-lula-esquerda a {
+    text-decoration: none;
+    color: white
+}
+
+.footer-desktop .footer-logo img {
+    width: 180px;   
+    height: auto;
+}
+
+.footer-desktop .footer-balsonaro-direita {
+    display: flex;
+    gap: 15px;      
+}
+.footer-desktop .footer-balsonaro-direita img {
+    width: 40px;    
+    height: auto;
+}
+
+.mobile-footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(68, 128, 63);
+    color: white;
+    width: 100%;
+    position: relative;
+    z-index: 1200;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.mobile-footer .footer-logo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.mobile-footer .footer-links-img {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px 0;
+    padding: 0;
+}
+.mobile-footer .footer-links-img a {
+    text-decoration: none;
+}
+.mobile-footer .footer-links-img a img {
+    width: 30px;
+    height: auto;
+}
+
+.mobile-footer .voucherDesenv .a-dev{
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    color: white;
+}
+
+
+@media (max-width: 1440px) {
+    .corpo {
+        width: 85%;
+    }
+}
+
+@media (min-width: 769px) {
+    .footer-desktop { display: block; }
+    .mobile-footer { display: none; }
+}
+
+@media (max-width: 768px) {
+    .corpo {
+        width: 88%;
+        padding: 15px;
+    }
+    
+    body {
+        background-size: 70%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar{
+        justify-content: right;
+    }
+
+    .navbar-logo{
+        display: block;
+        position: relative;
+        right: 40rem;
+    }
+
+    #btnCadastro{
+        display:none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .footer-desktop { 
+        display: none; 
+    }
+}
+
+@media (max-width: 425px) {
+    .corpo {
+        width: 100%;
+        padding: 10px;
+    }
+
+    body {
+        background-size: 100%; 
+    }
+
+    .navbar-logo{
+        right: 19rem;
+    }
+
+    .sidebar{
+        display: none;
+    }
+}
+
+.navbar-especial {
+    background-color: #C6E1C4 !important;
+}

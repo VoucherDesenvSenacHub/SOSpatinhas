@@ -1,0 +1,236 @@
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+#eventosCarrosel {
+  width: 90%; 
+}
+
+.titulo {
+  font-size: 35px;
+  text-align: left;
+  width: 100%; 
+  margin-top: 20px;
+  margin-bottom: 20px; 
+}
+
+.carrosselContainer {
+  margin-top: 10rem;
+}
+
+.imgEDetalhesEvento {
+  width: 528px;
+  height: 360px;
+  display: flex;
+  gap: 160px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 0 0 5px;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.slide {
+  display: none;
+}
+
+.slider {
+  width: 528px;
+  height: 360px;
+}
+
+.eventoSlides {
+  width: 570px;
+  height: 420px;
+  border-radius: 1rem;
+}
+
+.btnSlide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  bottom: 2rem;
+}
+
+.botao {
+  cursor: pointer;
+  padding: 0;
+  margin: 0 2px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.active, .botao:hover {
+  background-color: #ffffff;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.localEvento {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  font-size: 14px;
+}
+
+.localEvento img {
+  width: 15px;
+  height: 17.07px;
+}
+
+.detalhesEvento {
+  text-align: left;
+  height: 360px;
+  width: 357px;
+}
+
+.detalhesEvento h1 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 35px;
+  width: 585px;
+}
+
+/* descricao evento */
+.detalhesEvento p {
+  color: #000000;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  width: 553px;
+  text-align: justify;
+}
+
+.detalhesEvento button {
+  padding: 10px 49px;
+  background-color: #44803F;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+  margin: 0 11rem;
+}
+
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+  .carrosselContainer {
+    margin-top: 4rem;
+  }
+  .conteudo {
+    padding-right: 10px;
+  }
+  .corpo {
+    width: 100%;
+    flex-direction: column;
+  }
+  #eventosCarrosel {
+    width: 100%;
+  }
+  .imgEDetalhesEvento {
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 0 5px;
+  }
+  .titulo {
+    margin-left: 32px;
+  }
+  .slider {
+    width: 100%;
+    height: auto;
+  }
+  .eventoSlides {
+    width: 100%;
+  }
+  .detalhesEvento {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .detalhesEvento h1 {
+    font-size: 28px;
+    width: 100%;
+  }
+  .detalhesEvento p {
+    font-size: 16px;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .detalhesEvento button {
+    margin: 0 auto;
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .container {
+    padding: 8px;
+  }
+  .corpo {
+    width: 100%;
+    flex-direction: column;
+  }
+  .imgEDetalhesEvento {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    margin: 1rem auto;
+    padding: 0 5px;
+  }
+  .slider {
+    width: 100%;
+    height: auto;
+  }
+  .eventoSlides {
+    width: 100%;
+    height: auto;
+  }
+  .detalhesEvento {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0.5rem;
+  }
+  .detalhesEvento h1 {
+    font-size: 22px;
+    width: 100%;
+  }
+  .detalhesEvento p {
+    font-size: 14px;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .detalhesEvento button {
+    margin: 0 auto;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}

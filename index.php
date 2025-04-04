@@ -1,13 +1,33 @@
 <?php
-// Configuration and Dependencies
-require_once 'config/database.php';
-require_once 'models/Arrecadacao.php';
-// ...
+session_start();
+$tipoUsuario = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'visitante';
+$pagina = isset($_GET['page']) ? $_GET['page'] : 'paginaInicio';
 
-// Routing
-$uri = $_SERVER['REQUEST_URI'];
-$method = $_SERVER['REQUEST_METHOD'];
+$paginasAdm = // vai pegar o json pagsAdm - tem q criar;
+$paginasUsuario = ['editarPerfilUsuario', 'frmAdocao', 'perfilUsuario'];
 
+
+if (in_array($pagina, $paginasAdm)) {
+    if ($tipoUsuario === 'Admin'){
+        switch ($pagina){
+            case "cadastrarAdocao":
+                include()
+                break;
+            case
+        }
+    }
+    if ($userRole === 'admin' && $page === 'admin-dashboard') {
+        include('admin/admin-dashboard.php');
+    } elseif ($userRole === 'user' && $page === 'user-dashboard') {
+        include('user/user-dashboard.php');
+    } else {
+        echo "Access Denied: You do not have permission to view this page.";
+    }
+}
+
+
+
+    
 // Route Handling
 if ($method === 'GET') {
     if ($uri === '/') {

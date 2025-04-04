@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="novaSenha.css">
-</head>
+<?php
+  $cssLink  = '../../public/css/novaSenha.css';
+  $tipo = 'Adm';
+  include ('../../public/componentes/default/topHTML.php');
+?>
 
 <body>
-    <?php include('../templates/navbarUser.php')?>
+    
     
     <section class="corpo-container">
 
@@ -19,20 +15,18 @@
                 <form>
                     <input type="password" placeholder="Digitar nova senha">
                     <input type="password" placeholder="Confirmar senha">
-                    <button type="button" value="enviar" onclick="adicionar()">Enviar</button>
+                    <?php
+        $idBtn = "btnEnviar";
+        $funcaoClick = "adicionarComValidacao('Enviado com sucesso')";                             
+        $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
+        $titulo = "Enviar";                                           
+        include('../../public/componentes/componenteButton.php');
+    ?>
                 </form>
             </div>
         </section>
     </section>
-    <script>
-        function adicionar(){
-            if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
-                window.location.href = "login.php";
-            }else{
-                alert("Insira uma nova senha.")
-            }
-        }
-    </script>
-    <?php include('../../../componentes/footerAdm.php'); ?>
+    
+    <?php include('../../public/componentes/default/bottomHTML.php'); ?>
 </body>
 </html>

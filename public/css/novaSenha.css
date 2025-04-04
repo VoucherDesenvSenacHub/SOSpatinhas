@@ -76,7 +76,7 @@ body{
 
 }
 
-/* Responsividade para telas com largura máxima de 768px */
+
 @media (max-width: 768px) {
     .secao-login {
       padding: 20px;
@@ -91,7 +91,7 @@ body{
     }
   }
   
-  /* Responsividade para telas com largura máxima de 425px */
+ 
   @media (max-width: 425px) {
     .secao-login {
       padding: 15px;

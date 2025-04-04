@@ -11,7 +11,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Seção do esqSenha */
+
 .secao-login {
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ body{
     margin: 150px 0px;
 }
 
-/* Cria o fundo branco na área de login */
+
 .esqSenha {
     background-color: white;
     padding: 40px 50px 60px 50px;
@@ -75,7 +75,7 @@ body{
 }
 
 @media (max-width: 425px) {
-    /* caso precise arrumar a borda verde, modifique a margin */
+   
     .secao-login{
         width: auto;
         height: 70vh;

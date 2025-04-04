@@ -1,14 +1,11 @@
 <?php
   $cssLink  = '../../public/css/novaSenha.css';
-  $tipo = 'Adm';
+  $tipo = 'User';
   include ('../../public/componentes/default/topHTML.php');
 ?>
 
 <body>
-    
-    
     <section class="corpo-container">
-
         <section class="secao-login">
             <div class="login">
                 <h2>Nova Senha</h2>
@@ -26,7 +23,7 @@
             </div>
         </section>
     </section>
-    
+
     <?php include('../../public/componentes/default/bottomHTML.php'); ?>
 </body>
 </html>

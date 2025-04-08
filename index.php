@@ -3,25 +3,43 @@ session_start();
 $tipoUsuario = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'visitante';
 $pagina = isset($_GET['page']) ? $_GET['page'] : 'paginaInicio';
 
-$paginasAdm = // vai pegar o json pagsAdm - tem q criar;
-$paginasUsuario = ['editarPerfilUsuario', 'frmAdocao', 'perfilUsuario'];
+$paginasRestritas = // Talvez criar um json com tds as pags restritas; ['editarPerfilUsuario', 'frmAdocao', 'perfilUsuario'];
 
-
-if (in_array($pagina, $paginasAdm)) {
+if (in_array($pagina, $paginasRestritas)) {
     if ($tipoUsuario === 'Admin'){
         switch ($pagina){
             case "cadastrarAdocao":
-                include()
+                include("views/adm/cadastrarAdocao.php")
                 break;
             case
         }
-    }
-    if ($userRole === 'admin' && $page === 'admin-dashboard') {
-        include('admin/admin-dashboard.php');
-    } elseif ($userRole === 'user' && $page === 'user-dashboard') {
-        include('user/user-dashboard.php');
+    } elseif ($tipoUsuario === 'Usuario') {
+        switch ($pagina){
+            case "editarPerfilUsuario":
+                include("views/adm/editarPerfilUsuario.php")
+                break;
+            case "frmAdocao":
+                include("views/adm/frmAdocao.php")
+                break;
+            case "perfilUsuario":
+                include("views/adm/perfilUsuario.php")
+                break;
+        }
     } else {
-        echo "Access Denied: You do not have permission to view this page.";
+        echo "<script>alert('Acesso Negado: Você não possui permissão para acessar esta página.');</script>";
+    }
+} else {
+    switch ($pagina){
+        case "adocao":
+            include("views/adm/adocao.php")
+            break;
+        case "arrecadacao":
+            include("views/adm/arrecadacao.php")
+            break;
+        default:
+            header("HTTP/1.0 404 Not Found");
+            include("views/adm/404.php")
+            break
     }
 }
 

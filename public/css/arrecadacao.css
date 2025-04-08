@@ -122,7 +122,6 @@
     padding-top: 5px;
 }
 
-/* iamgens */
 .iconeInfo{
     width: 15px;
     height: 15px;
@@ -368,9 +367,6 @@
     #slider {
         position: relative;
         width: 380px;
-        /* margin: 1px; */
-        /* padding: 10px; */
-        /* padding-left: 1%; */
     }
 
     .slide {

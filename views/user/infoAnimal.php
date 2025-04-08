@@ -1,26 +1,26 @@
 <?php
-  $cssLink  = 'infoAnimal.css';
+  $cssLink  = '../../public/css/infoAnimal.css';
   $tipo = 'User';
-  include('../../../componentes/default/topHTML.php');
+  include('../../public/componentes/default/topHTML.php');
 ?>
 
 <div class="container">
   <a class="back-link" href="#">
-    <img src="../images/icons/btn_esquerdo.png" 
+    <img src="../../public/images/icons/btn_esquerdo.png" 
        alt="voltar" class="Voltar">
   </a>
   <div class="profile">
     
     <div class="profile-images">
-      <img src="../images/rocheleInfoAnimal.jpg" 
+      <img src="../../public/images/rocheleInfoAnimal.jpg" 
             alt="rochele 1 " class="main-image">
 
       <div class="gallery">
-        <img src="../images/rocheleInfoAnimal.jpg" 
+        <img src="../../public/images/rocheleInfoAnimal.jpg" 
               alt="rochele 2" class="gallery-img">
-        <img src="../images/rochele5.png" 
+        <img src="../../public/images/rochele5.png" 
               alt="rochele 3 " class="gallery-img">
-        <img src="../images/rochele6.png" 
+        <img src="../../public/images/rochele6.png" 
               alt="rochele 4" class="gallery-img">
       </div>
 
@@ -29,7 +29,7 @@
       <h1>Rochele</h1>
       <p class="submitted-by">
         <i class="fas fa-user"></i> enviado por Mitski
-        <img src="../images/icons/iconUser.png" 
+        <img src="../../public/images/icons/iconUser.png" 
         alt="" class="User">
       </p>
       <h2>História</h2>
@@ -53,9 +53,8 @@
       <?php
         $funcaoClick = "redirecionar('formAdocao.php')";                             
         $titulo = "Adotar";     
-        include('../templates/componenteButton.php');
+        include('../../public/componentes/componenteButton.php');
       ?>
-
     </div>
   </div>
 </div>
@@ -96,5 +95,5 @@
 </script>
 
 <?php
-  include('../../../componentes/default/bottomHTML.php');
+  include('../../public/componentes/default/bottomHTML.php');
 ?>

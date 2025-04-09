@@ -8,9 +8,9 @@
     // exit();
     // }
 
-  $cssLink  = '../css/editarPerfil-ADM.css';
+  $cssLink  = '../../public/css/editarPerfil-ADM.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
+  include('../../public/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="post" id="frmEditarPerfilADM">
@@ -18,12 +18,12 @@
         <div class="col">
             <div class="upload-container">
                 <div id="filePreview">
-                    <img src="..\images\userProfile.png" alt="" id="previewImg">
+                    <img src="../../public/images/userProfile.png" alt="" id="previewImg">
                 </div>
                 <div id="imgUpload">
                     <input type="file" id="image" name="image[]" accept="image/*" hidden>
                     <label for="image" id="imgLabel" class="upload-box">
-                        <img src="..\images\btnAdicionar.png" alt="Upload Icon">
+                        <img src="../../public/images/btnAdicionar.png" alt="Upload Icon">
                     </label>
                 </div>
             </div>   
@@ -38,19 +38,17 @@
             <input type="text" name="senha" placeholder="Senha">
             <div class = "btnContainer">
                 <?php
-                    //btn Salvar
                     $idBtn = "btnSalvar";
                     $funcaoClick = "adicionarComValidacao('Dados salvos com sucesso!', 1, 'editarPerfil-ADM.php')";
                     $funcaoLoad = "mudarTamanho('btnSalvar')";  
                     $titulo = "Salvar";           
-                    include('../templates/componenteButton.php');
-            
-                    //btn Cancelar
+                    include('../../public/componentes/componenteButton.php');
+
                     $idBtn = "btnCancelar";
                     $funcaoClick = "cancelarForm(nomeForm, 1, 'PerfilADM.php')";
                     $funcaoLoad = "mudarTamanho('btnCancelar')";
                     $titulo = "Cancelar";
-                    include('../templates/componenteButton.php');
+                    include('../../public/componentes/componenteButton.php');
                 ?>
             </div>
         </div>
@@ -63,9 +61,9 @@
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
-                document.getElementById('previewImg').src = e.target.result; // Display the image
+                document.getElementById('previewImg').src = e.target.result;
             }
-            reader.readAsDataURL(file); // Convert file to base64
+            reader.readAsDataURL(file);
         }
     });
 
@@ -77,5 +75,5 @@
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

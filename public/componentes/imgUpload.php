@@ -52,7 +52,7 @@
     .upload-container {
         width: 100%;
         text-align: center;
-        flex-direction: row;
+        flex-direction: <?php echo ($deLado == true) ? 'row' : 'column'; ?>;
         display: flex;
     }
 

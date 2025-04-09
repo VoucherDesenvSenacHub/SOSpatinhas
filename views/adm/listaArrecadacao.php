@@ -8,28 +8,28 @@
     // exit();
     // }
 
-  $cssLink  = '../css/listaArrecadacaoADM.css';
+  $cssLink  = '../../public/css/listaArrecadacao.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
-  include('../templates/cardListas.php');
+  include('../../public/componentes/default/topHTML.php');
+  include('../../public/componentes/cardListas.php');
 ?>
 
 <h1>Lista de Arrecadações</h1>
 
 <div class="pesquisar">
-    <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
+    <img src="../../public/images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
     <input type="text" placeholder="Pesquisar">
 </div>
 
 <div class="lista-arrecadacoes" id="lista-arrecadacoes">
     <?php
         $arrecadacoes = [
-            ["nome" => "Rochele", "imagem" => "../images/Rectangle 71.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 1000,00"],
-            ["nome" => "Toby", "imagem" => "../images/Toby.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 2500,00"],
-            ["nome" => "Rumi", "imagem" => "../images/Rumi.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 2500,00"],
-            ["nome" => "Nobre", "imagem" => "../images/Nobre.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 870,00"],
-            ["nome" => "Sir Dougg", "imagem" => "../images/Sir Dougg.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 1200,00"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 720,00"],
+            ["nome" => "Rochele", "imagem" => "../../public/images/Rectangle 71.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 1000,00"],
+            ["nome" => "Toby", "imagem" => "../../public/images/Toby.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 2500,00"],
+            ["nome" => "Rumi", "imagem" => "../../public/images/Rumi.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 2500,00"],
+            ["nome" => "Nobre", "imagem" => "../../public/images/Nobre.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 870,00"],
+            ["nome" => "Sir Dougg", "imagem" => "../../public/images/Sir Dougg.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 1200,00"],
+            ["nome" => "Nigel", "imagem" => "../../public/images/Nigel.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 720,00"],
         ];
 
         $itensPorPagina = 6;
@@ -156,5 +156,5 @@
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

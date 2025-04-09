@@ -1,13 +1,14 @@
 <!-- modal dos popUps das páginas editaveis (adm) -->
 
 <div class="overlayEditar" id="overlayEditar"></div>
-<link rel="stylesheet" href="../css/modalEditar.css">
+    <link rel="stylesheet" href="../../public/componentes/modalEditar.css">
 <div class="popupEditar" id="popupEditar">
     <button id="btnFecharPopup" arial-label="fechar"></button>
 
+    
     <?php if ($imagem == true): ?>
         <div id="input_img">
-            <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" id="grampo">
+            <img src="../../public\images\cadastroAdocao-ADM\grampoBranco.png" id="grampo">
             <p id="enviar_foto">Enviar foto</p>
             <input type="file" id="inputFilePopup" accept="image/*">
         </div>
@@ -24,7 +25,7 @@
     <?php 
         $funcaoClick = "reload()"; 
         $titulo = "Enviar";
-        include("../templates/componenteButton.php")
+        include("../../public/componentes/componenteButton.php")
     ?>
 </div>
 

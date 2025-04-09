@@ -1,14 +1,14 @@
 <?php
-    $cssLink  = '../css/listaFormulario.css';
+    $cssLink  = '../../public/css/listaFormulario.css';
     $tipo = 'Adm';
-    include('../../../componentes/default/topHTML.php');
-    include('../templates/cardListas.php');
+    include('../../public/componentes/default/topHTML.php');
+    include('../../public/componentes/cardListas.php');
 ?>
 
 <h1>Lista de Formulários de Adoções</h1>
 
 <div class="pesquisar">
-    <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
+    <img src="../../public/images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
     <input type="text" placeholder="Pesquisar">
 </div>
 
@@ -16,75 +16,75 @@
     <?php
         $formularios = [
             [   "tituloFrm" => "Formulario 1", 
-                "imagemAnimal" => "../images/Rumi.png", 
+                "imagemAnimal" => "../../public/images/Rumi.png", 
                 "nomeAnimal" => "Rumi", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "João"
             ],
             [   "tituloFrm" => "Formulario 2", 
-                "imagemAnimal" => "../images/Nobre.png", 
+                "imagemAnimal" => "../../public/images/Nobre.png", 
                 "nomeAnimal" => "Nobre", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Maria"
             ],
             [   "tituloFrm" => "Formulario 3", 
-                "imagemAnimal" => "../images/Nobre.png", 
+                "imagemAnimal" => "../../public/images/Nobre.png", 
                 "nomeAnimal" => "Nobre", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Carlos"
             ],
             [   "tituloFrm" => "Formulario 4", 
-                "imagemAnimal" => "../images/Nigel.png", 
+                "imagemAnimal" => "../../public/images/Nigel.png", 
                 "nomeAnimal" => "Nigel", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Ana"
             ],
             [   "tituloFrm" => "Formulario 5", 
-                "imagemAnimal" => "../images/Rumi.png", 
+                "imagemAnimal" => "../../public/images/Rumi.png", 
                 "nomeAnimal" => "Rumi", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Pedro"
             ],
             [   "tituloFrm" => "Formulario 6", 
-                "imagemAnimal" => "../images/Rumi.png", 
+                "imagemAnimal" => "../../public/images/Rumi.png", 
                 "nomeAnimal" => "Rumi", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Juliana"
             ],
             [   "tituloFrm" => "Formulario 7", 
-                "imagemAnimal" => "../images/Toby.png", 
+                "imagemAnimal" => "../../public/images/Toby.png", 
                 "nomeAnimal" => "Toby", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "João"
             ],
             [   "tituloFrm" => "Formulario 8", 
-                "imagemAnimal" => "../images/Nobre.png", 
+                "imagemAnimal" => "../../public/images/Nobre.png", 
                 "nomeAnimal" => "Nobre", 
-                "imagemUser" => "../images/icons/iconUser.png",
+                "imagemUser" => "../../public/images/icons/iconUser.png",
                 "nomeUser" => "Fernanda"
             ],
             [   "tituloFrm" => "Formulario 9", 
-                "imagemAnimal" => "../images/Nigel.png", 
+                "imagemAnimal" => "../../public/images/Nigel.png", 
                 "nomeAnimal" => "Nigel", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Lucas"
             ],
             [   "tituloFrm" => "Formulario 10", 
-                "imagemAnimal" => "../images/Nigel.png", 
+                "imagemAnimal" => "../../public/images/Nigel.png", 
                 "nomeAnimal" => "Nigel", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Ana"
             ],
             [   "tituloFrm" => "Formulario 11", 
-                "imagemAnimal" => "../images/Sir Dougg.png", 
+                "imagemAnimal" => "../../public/images/Sir Dougg.png", 
                 "nomeAnimal" => "Sir Dougg", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Ricardo"
             ],
             [   "tituloFrm" => "Formulario 12", 
-                "imagemAnimal" => "../images/Toby.png", 
+                "imagemAnimal" => "../../public/images/Toby.png", 
                 "nomeAnimal" => "Toby", 
-                "imagemUser" => "../images/icons/iconUser.png", 
+                "imagemUser" => "../../public/images/icons/iconUser.png", 
                 "nomeUser" => "Maria"
                 ]
         ];
@@ -211,5 +211,5 @@
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

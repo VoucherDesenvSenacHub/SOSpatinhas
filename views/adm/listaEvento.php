@@ -8,14 +8,14 @@
     // exit();
     // }
 
-  $cssLink  = '../css/listaEventosADM.css';
+  $cssLink  = '../../public/css/listaEvento.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
-  include('../templates/cardListas.php');
+  include('../../public/componentes/default/topHTML.php');
+  include('../../public/componentes/cardListas.php');
 ?>
 <h1>Lista de Eventos</h1>
 <div class="pesquisar">
-    <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
+    <img src="../../public/images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
     <input type="text" placeholder="Pesquisar">
 </div>
 
@@ -23,12 +23,12 @@
 <div class="lista-eventos" id="lista-eventos">
     <?php
         $eventos = [
-            ["nome" => "Feira do AuAu", "imagem" => "../images/feiraAuAu.png", "data" => "10/10/2021", "local" => "Horto Florestal"],
-            ["nome" => "Adote um Amigo", "imagem" => "../images/AdoteAmigo.png", "data" => "15/10/2021", "local" => "Parque dos Poderes"],
-            ["nome" => "Juntos por Eles", "imagem" => "../images/JuntosPEles.png", "data" => "20/10/2021", "local" => "Bosque dos Ipês"],
-            ["nome" => "Ajude uma patinha", "imagem" => "../images/AjudeUPatinha.png", "data" => "25/10/2021", "local" => "Parque das Nações"],
-            ["nome" => "Título", "imagem" => "../images/AjudeUPatinha.png", "data" => "Sem data", "local" => "Sem localidade"],
-            ["nome" => "Título", "imagem" => "../images/AjudeUPatinha.png", "data" => "Sem data", "local" => "Sem localidade"],
+            ["nome" => "Feira do AuAu", "imagem" => "../../public/images/feiraAuAu.png", "data" => "10/10/2021", "local" => "Horto Florestal"],
+            ["nome" => "Adote um Amigo", "imagem" => "../../public/images/AdoteAmigo.png", "data" => "15/10/2021", "local" => "Parque dos Poderes"],
+            ["nome" => "Juntos por Eles", "imagem" => "../../public/images/JuntosPEles.png", "data" => "20/10/2021", "local" => "Bosque dos Ipês"],
+            ["nome" => "Ajude uma patinha", "imagem" => "../../public/images/AjudeUPatinha.png", "data" => "25/10/2021", "local" => "Parque das Nações"],
+            ["nome" => "Título", "imagem" => "../../public/images/AjudeUPatinha.png", "data" => "Sem data", "local" => "Sem localidade"],
+            ["nome" => "Título", "imagem" => "../../public/images/AjudeUPatinha.png", "data" => "Sem data", "local" => "Sem localidade"],
         ];
 
         $itensPorPagina = 6;
@@ -166,5 +166,5 @@
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

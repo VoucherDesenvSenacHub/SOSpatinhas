@@ -38,7 +38,7 @@ function gerarCardEventos($nome, $imagem, $data, $local) {
             <h3>'.$nome.'</h3>
             <img src="'.$imagem.'" alt="Imagem do evento">
             <div class="localizacao">
-                <img src="../images/icons/iconMarcador2.png" alt="Localização">
+                <img src="../../public/images/icons/iconMarcador2.png" alt="Localização">
                 <span>'.$local.'</span> 
             </div>
             <button class="btnExcluir">Excluir</button>

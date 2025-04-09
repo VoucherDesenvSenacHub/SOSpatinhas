@@ -9,7 +9,7 @@
     // }
 
 
-  $cssLink  = '../../public/css/editarAdocao-ADM.css';
+  $cssLink  = '../../public/css/editarAdocao.css';
   $tipo = 'Adm';
   include('../../public/componentes/default/topHTML.php');
 ?>

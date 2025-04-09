@@ -2,7 +2,7 @@
     function gerarCardUsuario($nome, $status) {
         echo '
             <div class="membro">
-                <img src="../images/userListaUsersADM.png">
+                <img src="../../public/images/userListaUsersADM.png">
                 <h3>'.$nome.'</h3>
                 <div class="status">
                     <div></div>
@@ -17,7 +17,7 @@
     function gerarCardMembros($nome, $status) {
         echo '
             <div class="membro">
-                <img src="../images/iconeADM.png" alt="">
+                <img src="../../public/images/iconeADM.png" alt="">
                 <h3>'.$nome.'</h3>
                 <div class="status">
                     <div></div>

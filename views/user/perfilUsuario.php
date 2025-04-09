@@ -1,25 +1,28 @@
 <?php
-    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true) {
-    //     header("Location: login.php");
-    //     exit();
-    // }
-    // session_start();
 
-    // if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
-    //     echo '<script type="text/javascript">
-    //             alert("Você precisa estar logado para prosseguir.");
-    //             window.location.href = "login.php";
-    //           </script>';
-    //     exit();
-    // }
+    if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true) {
+        header("Location: login.php");
+        exit();
+    }
+    session_start();
+    $taLogado = isset($_SESSION['taLogado']) && $_SESSION['taLogado'] === true; 
+    $isAdm = isset($_SESSION['id']) && $_SESSION['id'] === "Admin";
 
-    $cssLink  = 'perfilUsuario.css';
+     if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
+         echo '<script type="text/javascript">
+                alert("Você precisa estar logado para prosseguir.");
+                window.location.href = "../../login.php";
+               </script>';
+        exit();
+     }
+
+    $cssLink  = '../../public/componentes/css/perfilUsuario.css';
     $tipo = 'User';
-    include('../../../componentes/default/topHTML.php');
+    include('../../public/componentes/default/topHTML.php');
 
     $emailLogado = $_SESSION['email'];
 
-    $usersFile = '../script/userData.json';
+    $usersFile = '../../public/componentes/script/userData.json';
     $users = json_decode(file_get_contents($usersFile), true);
 
     $usuarioAtual = null;
@@ -34,19 +37,19 @@
 
 <div id="perfil">
     <div id="contentFotoMembro">
-        <img id="fotoMembro" src="../images/icons/iconUser.png" alt="icone foto do Usuário">
+        <img id="fotoMembro" src="../../public/componentes/images/icons/iconUser.png" alt="icone foto do Usuário">
         <p id="nomeMembro"><?=$usuarioAtual['nome']; ?></p>
         <?php
             $funcaoClick = "sair()";
             $titulo = "Sair";
-            include('../templates/componenteButton.php');
+            include('../../public/componentes/componenteButton.php');
         ?>
 </div>
 
 <div id="iconscontainers">
         <div id="contentInfosMembro">
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/iconUser_2.png" alt="icone telefone">
+                <img class="icones" src="../../public/componentes/images/icons/iconUser_2.png" alt="icone telefone">
                 <div class="contentItens">
                     <p class="titulos">Nome:</p>
                     <p class="conteudoTitulos"><?=$usuarioAtual['nome']; ?></p>
@@ -54,7 +57,7 @@
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/data.png" alt="icone data de nascimento">
+                <img class="icones" src="../../public/componentes/images/icons/data.png" alt="icone data de nascimento">
                 <div class="contentItens">
                     <p class="titulos">Data Nascimento:</p>
                     <p class="conteudoTitulos">
@@ -64,7 +67,7 @@
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/Telefone.png" alt="icone telefone">
+                <img class="icones" src="../../public/componentes/images/icons/Telefone.png" alt="icone telefone">
                 <div class="contentItens">
                     <p class="titulos">Telefone:</p>
                     <p class="conteudoTitulos">
@@ -76,7 +79,7 @@
 
         <div id="contentInfosMembro2">
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/email.png" alt="icone email">
+                <img class="icones" src="../../public/componentes/images/icons/email.png" alt="icone email">
                 <div class="contentItens">
                     <p class="titulos">Email:</p>
                     <p class="conteudoTitulos"><?=$usuarioAtual['email']; ?></p>
@@ -84,7 +87,7 @@
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/rg.png" alt="icone cpf">
+                <img class="icones" src="../../public/componentes/images/icons/rg.png" alt="icone cpf">
                 <div class="contentItens">
                     <p class="titulos">CPF:</p>
                     <p class="conteudoTitulos">
@@ -111,5 +114,5 @@
 </div>
         
 <?php
-    include('../../../componentes/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

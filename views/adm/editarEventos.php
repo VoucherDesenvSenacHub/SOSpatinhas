@@ -8,9 +8,9 @@
     // exit();
     // }
 
-  $cssLink  = '../css/editarEventos-ADM.css';
+  $cssLink  = '../../public/css/editarEventos.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
+  include('../../public/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="formCadastroEvento">
@@ -27,7 +27,7 @@
                 <div class="top">
                     <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                     <label for="image" id="imgLabel" class="upload-box">
-                        <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                        <img src="../../public/images/cadastroAdocao-ADM/grampoBranco.png" alt="Upload Icon">
                         <p>Enviar fotos</p>
                     </label>
                     <div class="descricaoEBtn">
@@ -44,15 +44,15 @@
                     $funcaoClick = "adicionarComValidacao('Evento editado com sucesso!', 1, 'listaEventosADM.php')";
                     $funcaoLoad = "mudarTamanho('btnSalvar', '275px', '50px', '20px')";
                     $titulo = "Salvar";
-                    include('../templates/componenteButton.php');
+                    include('../../public/componentes/componenteButton.php');
                     
-                    //  arrumar o direcionamento
+                    
                     $idBtn = "btnCancelar";
                     $funcaoClick = "cancelarForm('frmCadastroAdocao','listaEventosADM.php')";
                     $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
                     $titulo = "Cancelar";
-                    include('../templates/componenteButton.php');
-                ?>
+                    include('../../public/componentes/componenteButton.php');
+                    ?>
             </div>
         </div>
     </div>
@@ -112,7 +112,7 @@
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>
 
 <?php

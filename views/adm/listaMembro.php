@@ -8,15 +8,15 @@
     // exit();
     // }
 
-  $cssLink  = '../css/listamembrosADM.css';
+  $cssLink  = '../../public/css/listaMembro.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
-  include ('../templates/cardUsuarioADM.php');
+  include('../../public/componentes/default/topHTML.php');
+  include ('../../public/componentes/cardUsuarioADM.php');
 ?>
 
 <h1>Lista de membros</h1>
 <div class="pesquisar">
-    <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
+    <img src="../../public/images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
     <input type="text" placeholder="Pesquisar">
 </div>
 
@@ -172,5 +172,5 @@
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

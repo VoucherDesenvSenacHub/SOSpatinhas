@@ -3,19 +3,11 @@
 }
 
 #conteudoForm{
+    flex-direction: row;
     display: flex;
-    flex-direction: column;
     width: 100%;
     column-gap: 3rem;
     padding: 60px;
-}
-
-#divButtons{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
 }
 
 #formEditarPerfilMembro{
@@ -44,6 +36,12 @@
 
 #fotoMembro{
     width: 190px;
+}
+
+img.mais{
+    position: relative;
+    top: -3rem;
+    left: -35%;
 }
 
 #buttonEditarFoto{
@@ -84,12 +82,15 @@
     }
 }
 
-.colunaForm{
+.colunaForm {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
 }
+
+
+
 
 @media (max-width: 768px){
     body{

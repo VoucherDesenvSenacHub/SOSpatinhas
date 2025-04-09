@@ -1,6 +1,6 @@
 <?php
 
-    $cssLink  = '../../public/css/cadastrarMembroADM.css';
+    $cssLink  = '../../public/css/cadastrarMembro.css';
     $tipo = 'Adm';
     include('../../public/componentes/default/topHTML.php');
 ?>
@@ -15,13 +15,13 @@
             <div id="imgUpload">
                 <input type="file" id="image" name="image[]" accept="image/*" hidden>
                 <label for="image" id="imgLabel" class="upload-box">
-                    <img src="../../public/images/btnAdicionar.png" alt="Upload Icon">
+                    <img src="../../public/images/btnAdicionar.png" alt="Upload Icon" class="mais">
                 </label>
             </div>
         </div>   
     </div>
 
-        <form id="colunaForm">
+        <class id="colunaForm">
             <input required class="inputPerfil" type="text" placeholder="  Nome ">
             <input required class="inputPerfil" type="text" placeholder="  E-mail  ">
             <input required class="inputPerfil" type="text" placeholder="  Telefone">
@@ -29,6 +29,9 @@
             <input required class="inputPerfil" type="text" placeholder="  Confirmar Senha  ">
             
             <div class="btnContainer">
+
+            
+
                 <?php
         $idBtn = "btnCadastrar";
         $funcaoClick = "adicionarComValidacao('Membro cadastrado com sucesso!')";
@@ -42,6 +45,7 @@
         $titulo = "Cancelar";
         include('../../public/componentes//componenteButton.php');
         ?>
+        
         </form>
     </div>
     </div>

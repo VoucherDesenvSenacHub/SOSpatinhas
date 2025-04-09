@@ -46,23 +46,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* <?php echo ($isAdm) ? "center;" : "space-between;"; ?>; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-.navbar-logo img {
+.navbarLogo img {
     width: 50px;
     height: 50px;
 }
 
-.nav-links {
+.navLinks {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-.nav-links a {
+.navLinks a {
     text-decoration: none;
     color: black;
     padding: 8px 16px;
@@ -70,12 +69,12 @@ body {
     transition: 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a:active {
+.navLinks a:hover,
+.navLinks a:active {
     border-bottom: solid #C6E1C4;
 }
 
-.nav-right {
+.navRight {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -95,7 +94,7 @@ body {
     transition: 0.3s;
 }
 
-.mobile-menu {
+.mobileMenu {
     display: none;
     position: fixed;
     top: 60px;
@@ -110,7 +109,7 @@ body {
     z-index: 1300;
 }
 
-.mobile-menu a {
+.mobileMenu a {
     text-decoration: none;
     color: black;
     padding: 15px;
@@ -120,27 +119,27 @@ body {
     text-align: center;
 }
 
-.mobile-menu a:hover {
+.mobileMenu a:hover {
     background-color: #C6E1C4;
 }
 
-.mobile-menu.show {
+.mobileMenu.show {
     display: flex;
 }
 
-#btnLoginRegister{
+#btnLoginRegister {
     display: flex;
 }
 
-#logos{
+#logos {
     gap: 1rem;
 }
 
-.navbar-logo{
+.navbarLogo {
     display: none;
 }
 
-.sidebar{
+.sidebar {
     height: 100vh;
     min-height: 50px;
     width: 80px;
@@ -153,26 +152,26 @@ body {
     transition: width 0.2s;
 }
 
-.sidebar:hover{
+.sidebar:hover {
     width: 230px;
     overflow: visible;
 }
 
-.logo{
+.logo {
     margin-bottom: 1rem;
 }
 
-.logo img{
+.logo img {
     width: 60px;
     padding: 0 4px;
 }
 
-#navSidebar{
+#navSidebar {
     height: 60vh;
     min-height: 300px;
 }
 
-.sidebarLi a, .logo a, #logout a{
+.sidebarLi a, .logo a, #logout a {
     width: 230px;
     display: flex;
     align-items: center;
@@ -183,21 +182,21 @@ body {
     font-weight: bold;
 }
 
-.sidebarLi a:hover, #logout a:hover{
+.sidebarLi a:hover, #logout a:hover {
     background-image: linear-gradient(to right, #C6E1C4 7px, rgba(255, 255, 255, 0.1) 7px);
     color: white;
 }
 
-#logout{
+#logout {
     margin-top: 4.5rem;
 }
 
-#navSidebar img{
+#navSidebar img {
     width: 35px;
     text-align: right;
 }
 
-.sidebarLi p, #logout p{
+.sidebarLi p, #logout p {
     width: 123px;
     font-size: 16px;
     text-align: left;
@@ -291,15 +290,17 @@ footer {
     margin: 5px 0;
     padding: 0;
 }
+
 .mobile-footer .footer-links-img a {
     text-decoration: none;
 }
+
 .mobile-footer .footer-links-img a img {
     width: 30px;
     height: auto;
 }
 
-.mobile-footer .voucherDesenv .a-dev{
+.mobile-footer .voucherDesenv .a-dev {
     text-align: center;
     margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -331,7 +332,7 @@ footer {
         background-size: 70%;
     }
 
-    .nav-links {
+    .navLinks {
         display: none;
     }
 
@@ -339,21 +340,21 @@ footer {
         display: flex;
     }
 
-    .navbar{
+    .navbar {
         justify-content: right;
     }
 
-    .navbar-logo{
+    .navbarLogo {
         display: block;
         position: relative;
         right: 40rem;
     }
 
-    #btnCadastro{
+    #btnCadastro {
         display:none;
     }
 
-    .sidebar{
+    .sidebar {
         display: none;
     }
 
@@ -372,11 +373,11 @@ footer {
         background-size: 100%; 
     }
 
-    .navbar-logo{
+    .navbarLogo {
         right: 19rem;
     }
 
-    .sidebar{
+    .sidebar {
         display: none;
     }
 }

@@ -1,126 +1,85 @@
-create database SOS_Patinhas;
-use SOS_Patinhas;
+CREATE DATABASE SOS_PATINHAS;
+USE SOS_PATINHAS;
 
--- Partes Editáveis
-
-create table endereco_evento(
-id_endereco_evento int primary key auto_increment,
-rua varchar(50) not null,
-bairro varchar(50) not null,
-complemento varchar(50) not null
+CREATE TABLE ANIMAL(
+ID_ANIMAL INT PRYMARY KEY AUTO_INCREMENT,
+ID_TIPO_ANIMAL INT,
+RACA VARCHAR(100),
+ID_PORTE INT,
+ID_IDADE INT,
+DESCRICAO VARCHAR(100),
+FOREIGN KEY (ID_TIPO_ANIMAL) REFERENCES TIPO_ANIMAL(ID_TIPO_ANIMAL),
+FOREIGN KEY (ID_PORTE) REFERENCES PORTE(ID_PORTE),
+FOREIGN KEY (ID_IDADE) REFERENCES IDADE(ID_IDADE)
 );
 
-create table evento(
-id_evento int primary key auto_increment,
-nome varchar(50) not null,
-descricao varchar(100) not null,
-id_endereco_evento int,
-foreign key (id_endereco_evento) references endereco_evento(id_endereco_evento),
-id_foto int,
-foreign key (id_foto) references foto(id_foto)
+CREATE TABLE IDADE(
+ID_IDADE INT PRYMARY KEY AUTO_INCREMENT,
+DS_IDADE VARCHAR(100)
 );
 
-create table pagamento(
-id_pagamento int primary key auto_increment,
-fotoQRCode blob not null,
-chave varchar(20) not null,
-nome_da_conta varchar(50) not null,
-conta varchar(8) not null,
-agencia varchar(4) not null
+CREATE TABLE PORTE(
+ID_PORTE INT PRYMARY KEY AUTO_INCREMENT,
+DS_PORTE VARCHAR(100)
 );
 
-create table arrecadacao(
-id_arrecadacao int primary key auto_increment,
-titulo varchar(50) not null,
-nomeAnimal varchar(50) not null,
-nomeDono varchar(50) not null,
-descricao varchar(100) not null,
-valorArrecadacao int not null,
-valorArrecadado int not null,
-id_foto int,
-foreign key (id_foto) references foto(id_foto),
-id_pagamento int,
-foreign key (id_pagamento) references pagamento(id_pagamento)
+CREATE TABLE TAG(
+ID_TAG INT PRYMARY KEY AUTO_INCREMENT,
+DS_TAG VARCHAR(100),
+ID_ANIMAL INT,
+FOREIGN KEY (ID_ANIMAL) REFERENCES ANIMAL(ID_ANIMAL)
 );
 
-create table pagInicio_carrossel(
-id_pagInicio_carrossel int primary key auto_increment,
-id_foto int not null,
-foreign key (id_foto) references foto(id_foto),
-texto varchar(30)
+CREATE TABLE TIPO_ANIMAL();
+
+CREATE TABLE FOTO(
+ID_FOTO INT PRYMARY KEY AUTO_INCREMENT,
+ID_TABELA INT,
+NM_TABELA,
+CAMINHO_FOTO VARCHAR(100)
 );
 
-create table pagInicio_fotos(
-id_pagInicio_fotos int primary key auto_increment,
-id_foto int not null,
-foreign key (id_foto) references foto(id_foto),
-texto varchar(30)
+CREATE TABLE ARRECADACAO(
+ID_ARRECADACAO INT PRYMARY KEY AUTO_INCREMENT,
+VL_ARRECADACAO INT,
+VL_ARRECADADO INT,
+NM_CONTA VARCHAR(100),
+NU_CONTA INT,
+NU_AGENCIA INT
 );
 
-create table pag_noticia(
-id_noticia int primary key auto_increment,
-titulo varchar (50) not null,
-id_foto int not null,
-foreign key (id_foto) references foto(id_foto),
-link varchar(2048) not null
-); 
+CREATE TABLE EVENTO();
+CREATE TABLE MEMBRO();
 
-create table pagQS_Banner(
-id_pagQS_Banner int primary key auto_increment,
-id_foto int,
-foreign key (id_foto) references foto(id_foto)
+CREATE TABLE PERMISSAO(
+ID_PERMISSAO INT PRYMARY KEY AUTO_INCREMENT,
+PAGINA VARCHAR()
 );
 
-create table pagQS_carrosselMiddle(
-id_pagQS_carrosselMiddle int primary key auto_increment,
-id_foto int,
-foreign key (id_foto) references foto(id_foto),
-texto varchar(50)
+CREATE TABLE PERMISSAO_MEMBRO(
+ID_PERMISSAO_MEMBRO INT PRYMARY KEY AUTO_INCREMENT,
+ID_MEMBRO INT,
+ID_PERMISSAO INT,
+FG_ACESSO BOOL,
+FOREIGN KEY (ID_MEMBRO) REFERENCES MEMBRO(ID_MEMBRO),
+FOREIGN KEY (ID_ANIMAL) REFERENCES ANIMAL(ID_ANIMAL)
+);
+CREATE TABLE USUARIO();
+CREATE TABLE CIDADE();
+CREATE TABLE ESTADO();
+
+CREATE TABLE PARTE_EDITAVEL(
+ID_PARTE_EDITAVEL VARCHAR(100),
+INPUT_SIMPLES VARCHAR(100),
+TEXTAREA VARCHAR(100),
+
 );
 
-create table pagQS_carrosselBottom(
-id_pagQS_carrosselBottom int primary key auto_increment,
-id_foto int,
-foreign key (id_foto) references foto(id_foto)
-);
-
-create table pagCA_endereco(
-id_pagCA_endereco int primary key auto_increment,
-id_foto int,
-foreign key (id_foto) references foto(id_foto),
-texto varchar(50)
-);
-
-create table pagCA_texto(
-id_pagCA_texto int primary key auto_increment,
-titulo varchar(30),
-texto varchar(50)
-);
-
-create table pagCA_valores(
-id_pagCA_valores int primary key,
-texto varchar(50)
-);
+CREATE TABLE FORMULARIO();
+CREATE TABLE FORMULARIO_PERGUNTA();
 
 
--- Area do Admin
 
-create table Adm(
-id_adm int primary key auto_increment,
-nome varchar(50) not null,
-email varchar(254) not null,
-senha varchar(128) not null,
-cpf varchar(14) not null,
-telefone varchar(20) not null
-);
-
-create table membro(
-id_membro int primary key auto_increment,
-nome varchar(50) unique not null,
-email varchar(254) not null,
-senha varchar(128) not null,
-telefone varchar(20) not null
-);
 
 
 -- Area do Usuario

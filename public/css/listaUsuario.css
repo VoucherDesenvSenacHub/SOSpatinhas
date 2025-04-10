@@ -37,7 +37,7 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.lista-de-usuarios {
+.listaUsuarios {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -151,7 +151,7 @@ h1 {
 }
 
 @media (max-width: 1040px) {
-    .lista-de-usuarios {
+    .listaUsuarios {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -161,7 +161,7 @@ h1 {
     .conteiner{
         padding: 40px 0px 60px 0px;
     }
-    .lista-de-usuarios {
+    .listaUsuarios {
         grid-template-columns: repeat(2, 1fr);
     }
     .pesquisar input {
@@ -179,7 +179,7 @@ h1 {
     .conteiner{
         padding: 40px 0px 60px 0px;
     }
-    .lista-de-usuarios{
+    .listaUsuarios{
         grid-template-columns: repeat(1, 1fr);
     }
     .pesquisar input{

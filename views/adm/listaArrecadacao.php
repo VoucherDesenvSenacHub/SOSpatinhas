@@ -21,7 +21,7 @@
     <input type="text" placeholder="Pesquisar">
 </div>
 
-<div class="lista-arrecadacoes" id="lista-arrecadacoes">
+<div class="listaArrecadacoes" id="lista-arrecadacoes">
     <?php
         $arrecadacoes = [
             ["nome" => "Rochele", "imagem" => "../../public/images/Rectangle 71.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 1000,00"],
@@ -40,17 +40,17 @@
             echo '</div>';
         }
     ?>
-    <div class="botao-add-container">
-        <a href="cadastrarArrecadacao-ADM.php"><button class="botao-add">+</button></a>
+    <div class="btnAddContainer">
+        <a href="cadastrarArrecadacao-ADM.php"><button class="btnAdd">+</button></a>
     </div>
 </div>
 
-<div class="cta-slide">
-    <button id="prev" class="pagination-btn">&lt;</button>
+<div class="ctaSlide">
+    <button id="prev" class="btnPagination">&lt;</button>
     <div class="altPag" id="paginacao">
         
     </div>
-    <button id="next" class="pagination-btn">&gt;</button>
+    <button id="next" class="btnPagination">&gt;</button>
 </div>
 
 <script>

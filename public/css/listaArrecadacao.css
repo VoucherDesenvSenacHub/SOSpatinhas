@@ -37,7 +37,7 @@ h1 {
     cursor: pointer;
 }
 
-.lista-arrecadacoes {
+.listaArrecadacoes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -121,13 +121,13 @@ item-arrecadacao {
     background-color: #346430;
 }
 
-.botao-add-container{
+.btnAddContainer{
     position: absolute;
     top: -60px;
     right: 200px;
 }
 
-.botao-add{
+.btnAdd{
     background-color: #4caf50;
     color: white;
     border: none;
@@ -142,11 +142,11 @@ item-arrecadacao {
     transition: background-color 0.3s;
 }
 
-.botao-add:hover{
+.btnAdd:hover{
     background-color: #45a049;
 }
 
-.cta-slide{
+.ctaSlide{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,7 +154,7 @@ item-arrecadacao {
     gap: 10px;
 }
 
-.pagination-btn{
+.btnPagination{
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
@@ -167,7 +167,7 @@ item-arrecadacao {
     transition: background-color 0.3s;
 }
 
-.pagination-btn:hover{
+.btnPagination:hover{
     background-color: #45a049;
     color: white;
 }
@@ -198,12 +198,12 @@ item-arrecadacao {
     border-color: #4caf50;
 }
 
-.botao-add-container-mobile {
+.btnAddContainer-mobile {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .lista-arrecadacoes {
+    .listaArrecadacoes {
         grid-template-columns: repeat(2, 1fr);
     }
     .pesquisar {
@@ -217,7 +217,7 @@ item-arrecadacao {
             background: transparent;
         }
     }
-    .botao-add-container{
+    .btnAddContainer{
         position:fixed;
         top: 140px;
         right: 8%;
@@ -230,7 +230,7 @@ item-arrecadacao {
     .container{
         padding: 40px 20px;
     }
-    .lista-arrecadacoes {
+    .listaArrecadacoes {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
@@ -247,14 +247,14 @@ item-arrecadacao {
         width: 69vw;
         padding: 5px 15px 5px 53px;
     }
-    .botao-add-container{
+    .btnAddContainer{
         position: fixed;
         left: 360px;
         bottom: 530px;
         top:250px;
         right: unset;
     }
-    .cta-slide{
+    .ctaSlide{
         display: none;
     }
 }

@@ -1,5 +1,5 @@
 <div id="cardArrecadacao">
-    <img src="../images/eventosImg/eventos2.png" alt="Imagem do Cachorro Freguês">
+    <img src="../../public/images/eventosImg/eventos2.png" alt="Imagem do Cachorro Freguês">
     <div id="bottomContent">
         <div id="tituloBarra">
             <h1>Ajude o Fregês</h1>
@@ -12,7 +12,7 @@
             // btn Saiba Mais
             $funcaoClick = "saibaMais('arrecadacao.php')";
             $titulo = "Saiba Mais";
-            include('../templates/componenteButton.php');
+            include('../../public/componentes/componenteButton.php');
         ?>
     </div>
 </div>

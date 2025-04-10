@@ -110,6 +110,7 @@ if (isset($paginasRestritas[$tipoUsuario]) && in_array($pagina, $paginasRestrita
         case "blog":
         case "comoAjudar":
         case "quemSomos":
+        case "paginaInicio":
             incluirPagina($pagina, 'compartilhada');
             break;
         default:

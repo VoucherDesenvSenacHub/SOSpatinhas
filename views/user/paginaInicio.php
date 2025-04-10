@@ -5,11 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SOS Patinhas</title>
-        <link rel="stylesheet" href="paginaInicio.css">
-        <link rel="icon" type="image/png" href="../images/icons/favicon.png">
+        <link rel="stylesheet" href="../../public/css/paginaInicio.css">
+        <link rel="stylesheet" href="../../public/css/default.css">
+        <link rel="icon" type="image/png" href="../../public/images/icons/favicon.png">
     </head>
     <body>
-    <?php include('../templates/navbarUser.php'); ?>
+    <?php include('../../public/componentes/navbarUser.php'); ?>
 
     <div class="row" id="cima">
         <div class="containerCarrossel">
@@ -17,18 +18,18 @@
                 <div id="divslider">
                     <ul id="slider">
                         <li>
-                            <img src="../images/fotoinicio1.png" alt="Foto do Carrosel">
+                            <img src="../../public/images/fotoinicio1.png" alt="Foto do Carrosel">
                         </li>
                         <li>
-                            <img src="../images/fotoinicio2.png" alt="Foto do Carrosel">
+                            <img src="../../public/images/fotoinicio2.png" alt="Foto do Carrosel">
                         </li>
                         <li>
-                            <img src="../images/fotoinicio3.png" alt="Foto do Carrosel">
+                            <img src="../../public/images/fotoinicio3.png" alt="Foto do Carrosel">
                         </li>
                     </ul>
                 </div>
-                <img src="../images/icons/btn_esquerdo.png" alt="" class="buttonslider" id="esquerda">
-                <img src="../images/icons/btn_direito.png" alt="" class="buttonslider" id="direita">
+                <img src="../../public/images/icons/btn_esquerdo.png" alt="" class="buttonslider" id="esquerda">
+                <img src="../../public/images/icons/btn_direito.png" alt="" class="buttonslider" id="direita">
             </section>
         </div>
     </div>
@@ -43,7 +44,7 @@
         </div>
         <div class="imgBtn">
             <div class="divImgMeio">
-                <img src="../images/imgcard1.png" alt="">
+                <img src="../../public/images/imgcard1.png" alt="">
             </div>
             <div class="divBtnMeio">
                 <?php
@@ -51,7 +52,7 @@
                     $funcaoClick = "redirecionar('quemSomos.php')";
                     $funcaoLoad = "mudarTamanho('btnEquipe')";
                     $titulo = "Conheça nossa equipe!";
-                    include("../templates/componenteButton.php");
+                    include("../../public/componentes/componenteButton.php");
                 ?>
             </div>
         </div>
@@ -61,7 +62,7 @@
         <div class="cardSaibaMais">
             <p class="titulo">Faça uma doação!</p>
             <div class="divImgBaixo">
-                <img src="../images/imgcard1.png" alt="">
+                <img src="../../public/images/imgcard1.png" alt="">
             </div>
             <div class="divBtnBaixo">
                 <?php
@@ -69,7 +70,7 @@
                     $funcaoClick = "redirecionar('comoAjudar.php')";
                     $funcaoLoad = "mudarTamanho('btnDoacao')";
                     $titulo = "Saiba Mais!";
-                    include("../templates/componenteButton.php");
+                    include("../../public/componentes/componenteButton.php");
                 ?>
             </div> 
         </div>
@@ -77,7 +78,7 @@
         <div class="cardSaibaMais">
             <p class="titulo">Participe de nossos eventos!</p>
             <div class="divImgBaixo">
-                <img src="../images/imgcard2.png" alt="">
+                <img src="../../public/images/imgcard2.png" alt="">
             </div>
             <div class="divBtnBaixo">
                 <?php
@@ -85,7 +86,7 @@
                     $funcaoClick = "redirecionar('eventos.php')";
                     $funcaoLoad = "mudarTamanho('btnEventos')";
                     $titulo = "Saiba Mais!";
-                    include("../templates/componenteButton.php");
+                    include("../../public/componentes/componenteButton.php");
                 ?>
             </div> 
         </div>
@@ -93,7 +94,7 @@
         <div class="cardSaibaMais">
             <p class="titulo">Adote um amigo!</p>
             <div class="divImgBaixo">
-                <img src="../images/imgcard3.png" alt="">
+                <img src="../../public/images/imgcard3.png" alt="">
             </div>
             <div class="divBtnBaixo">
                 <?php
@@ -101,7 +102,7 @@
                     $funcaoClick = "redirecionar('adocao.php')";
                     $funcaoLoad = "mudarTamanho('btnAdocao')";
                     $titulo = "Saiba Mais!";
-                    include("../templates/componenteButton.php");
+                    include("../../public/componentes/componenteButton.php");
                 ?>
             </div> 
         </div>
@@ -131,6 +132,6 @@
 
     </script>
         
-    <?php include('../../../componentes/footerAdm.php'); ?>
+    <?php include('../../public/componentes/footer.php'); ?>
     </body>
 </html>

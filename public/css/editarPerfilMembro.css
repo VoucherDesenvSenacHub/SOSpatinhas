@@ -98,12 +98,13 @@ input{
     }
 
     .col{
-        width: 144%;
-        max-width: 200%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     input{
-        width: 65%;
+        width: 105%;
     }
 
     #btn-photo{

@@ -20,7 +20,7 @@
     <input type="text" placeholder="Pesquisar">
 </div>
 
-<div class="lista-de-membros" id="lista-de-membros">
+<div class="listaMembros" id="lista-de-membros">
 
 
     <?php
@@ -49,18 +49,18 @@
             }
     ?>
 
-    <div class="botao-add-conteiner">
-        <a href="cadastrarMembroADM.php"><button class="botao-add">+</button></a>
+    <div class="btnAddConteiner">
+        <a href="cadastrarMembroADM.php"><button class="btnAdd">+</button></a>
     </div>
 </div>
 
 
-<div class="cta-slide">
-    <button id="prev" class="pagination-btn">&lt;</button>
+<div class="ctaSlide">
+    <button id="prev" class="btnPagination">&lt;</button>
     <div class="altPag" id="paginacao">
         
     </div>
-    <button id="next" class="pagination-btn">&gt;</button>
+    <button id="next" class="btnPagination">&gt;</button>
 </div>
 
 <script>

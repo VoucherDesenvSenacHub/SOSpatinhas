@@ -1,55 +1,102 @@
-<div class="upload-container">
+<div class="uploadContainer">
     <div class="imgContainer">
         <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
         <label for="image" id="imgLabel" class="upload-box">
             <img src="../../public/images/cadastroAdocao-ADM/grampoBranco.png" alt="Upload Icon">
             <p>Enviar fotos</p>
         </label>
-        <p class="file-info">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
+        <p class="fileInfo">Enviar até 10 arquivos: JPG, PNG, JPEG*</p>
     </div>
     <div id="filePreview"></div>
 </div>
 
 <script>
+    let selectedFiles = [];
+
     document.getElementById('image').addEventListener('change', function (event) {
-        const filePreview = document.getElementById('filePreview');
-        filePreview.innerHTML = ""; 
+        const newFiles = Array.from(event.target.files);
 
-        let files = Array.from(event.target.files);
+        const filteredNewFiles = newFiles.filter(newFile => {
+            return !selectedFiles.some(existingFile =>
+                existingFile.name === newFile.name && existingFile.size === newFile.size
+            );
+        });
 
-        if (files.length > 10) {
+        if ((selectedFiles.length + filteredNewFiles.length) > 10) {
             alert("Você só pode enviar até 10 arquivos.");
             this.value = "";
             return;
         }
 
-        files.forEach((file, index) => {
+        selectedFiles = selectedFiles.concat(filteredNewFiles);
+        renderFilePreview();
+        this.value = "";
+    });
+
+    function renderFilePreview() {
+        const filePreview = document.getElementById('filePreview');
+        filePreview.innerHTML = "";
+
+        selectedFiles.forEach((file, index) => {
             const fileItem = document.createElement('div');
-            fileItem.classList.add('file-item');
-            fileItem.innerHTML = `
-                <span class="file-name" title="${file.name}">${file.name}</span>
-                <button class="remove-file" data-index="${index}">X</button>
+            fileItem.classList.add('fileItem');
+
+            const imgPreview = document.createElement('img');
+            imgPreview.src = URL.createObjectURL(file);
+            imgPreview.classList.add('previewThumb');
+            imgPreview.onload = () => URL.revokeObjectURL(imgPreview.src); 
+            const fileDetails = document.createElement('div');
+            fileDetails.classList.add('fileDetails');
+            fileDetails.innerHTML = `
+                <span class="fileName" title="${file.name}">${file.name}</span>
+                <button class="removeFile" data-index="${index}">X</button>
             `;
+
+            fileItem.appendChild(imgPreview);
+            fileItem.appendChild(fileDetails);
             filePreview.appendChild(fileItem);
 
-            const removeButton = fileItem.querySelector('.remove-file');
-            removeButton.addEventListener('click', () => {
-                const fileInput = document.getElementById('image');
-                fileInput.value = ""; 
-                fileItem.remove(); 
+            fileDetails.querySelector('.removeFile').addEventListener('click', () => {
+                selectedFiles.splice(index, 1);
+                renderFilePreview();
             });
         });
+        
+        const fileNames = document.querySelectorAll('.fileName');
+        if (selectedFiles.length > 5 && window.innerWidth > 425) {
+            filePreview.classList.add('duasColunas');
 
-        if (files.length > 5) {
-            filePreview.classList.add('two-column');
-        } else {
-            filePreview.classList.remove('two-column');
+            fileNames.forEach(name => {
+                name.style.maxWidth = "120px";
+            });
+        } else if (selectedFiles.length < 5 || window.innerWidth < 425) {
+            filePreview.classList.remove('duasColunas');
+
+            fileNames.forEach(name => {
+                name.style.maxWidth = ""; 
+            });
         }
-    });
+        // || (window.innerWidth <= 1024 && window.innerWidth > 768)
+    }
 </script>
 
 <style>
-    .upload-container {
+    .previewThumb {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .fileDetails {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+
+    .uploadContainer {
         width: 100%;
         text-align: center;
         flex-direction: <?php echo ($deLado == true) ? 'row' : 'column'; ?>;
@@ -95,7 +142,7 @@
         color: #333;
     }
 
-    .file-info {
+    .fileInfo {
         font-size: 15px;
         color: black;
         margin-top: 5px;
@@ -110,12 +157,12 @@
         width: 94%;
     }
 
-    #filePreview.two-column {
+    #filePreview.duasColunas {
         grid-template-columns: 1fr 1fr; 
         column-gap: 2rem; 
     }
 
-    .file-item {
+    .fileItem {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -127,7 +174,7 @@
         overflow: hidden;
     }
 
-    .file-name {
+    .fileName {
         max-width: 150px; 
         white-space: nowrap;
         overflow: hidden;
@@ -135,7 +182,7 @@
         font-size: 14px;
     }
 
-    .remove-file {
+    .removeFile {
         margin-left: 10px;
         padding: 5px 10px;
         color: white;
@@ -150,7 +197,7 @@
         margin-top: 5px;
     }
 
-    .remove-file:hover {
+    .removeFile:hover {
         background-color: #d32f2f;
     }
 </style>

@@ -20,7 +20,7 @@
 </div>
 
 
-<div class="lista-eventos" id="lista-eventos">
+<div class="listaEventos" id="lista-eventos">
     <?php
         $eventos = [
             ["nome" => "Feira do AuAu", "imagem" => "../../public/images/feiraAuAu.png", "data" => "10/10/2021", "local" => "Horto Florestal"],
@@ -40,16 +40,16 @@
         }
 
     ?>
-    <div class="botao-add-container">
-        <a href="cadastrarEventos-ADM.php"><button class="botao-add">+</button></a>
+    <div class="btnAddContainer">
+        <a href="cadastrarEventos-ADM.php"><button class="btnAdd">+</button></a>
     </div>
 </div>
-<div class="cta-slide">
-    <button id="prev" class="pagination-btn">&lt;</button>
+<div class="ctaSlide">
+    <button id="prev" class="btnPagination">&lt;</button>
     <div class="altPag" id="paginacao">
         
     </div>
-    <button id="next" class="pagination-btn">&gt;</button>
+    <button id="next" class="btnPagination">&gt;</button>
 </div>
 
 <script>

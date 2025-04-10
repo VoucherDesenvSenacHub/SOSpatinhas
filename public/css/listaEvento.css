@@ -36,7 +36,7 @@ h1 {
     cursor: pointer;
 }
 
-.lista-eventos {
+.listaEventos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -100,14 +100,14 @@ item-evento {
     background-color: #45a049;
 }
 
-.botao-add-container{
+.btnAddContainer{
     position: absolute;
     top: -60px;
     right: 200px;
 
 }
 
-.botao-add {
+.btnAdd {
     background-color: #4caf50;
     color: white;
     border: none;
@@ -122,11 +122,11 @@ item-evento {
     transition: background-color 0.3s;
 }
 
-.botao-add:hover {
+.btnAdd:hover {
     background-color: #45a049;
 }
 
-.cta-slide {
+.ctaSlide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +134,7 @@ item-evento {
     gap: 10px;
 }
 
-.pagination-btn {
+.btnPagination {
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
@@ -147,7 +147,7 @@ item-evento {
     transition: background-color 0.3s;
 }
 
-.pagination-btn:hover {
+.btnPagination:hover {
     background-color: #45a049;
     color: white;
 }
@@ -191,7 +191,7 @@ item-evento {
             background: transparent;
         }
     }
-    .lista-eventos {
+    .listaEventos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -212,7 +212,7 @@ item-evento {
                 justify-content: center;
             }
         }
-        .botao-add-container{
+        .btnAddContainer{
             position: fixed;
             top: 140px;
             right: 8%;
@@ -223,7 +223,7 @@ item-evento {
         width: 100%;
         margin-bottom: 60px;
     }
-    .lista-eventos {
+    .listaEventos {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
@@ -232,7 +232,7 @@ item-evento {
         justify-items: center;   
     }
     
-    .botao-add-container{
+    .btnAddContainer{
         position: fixed;
         left: 360px;
         bottom: 530px;

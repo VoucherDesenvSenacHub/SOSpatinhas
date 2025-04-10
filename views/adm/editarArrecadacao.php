@@ -8,12 +8,12 @@
     // exit();
     // }
 
-  $cssLink  = '../css/editarArrecadacao-ADM.css';
+  $cssLink  = '../../public/css/editarArrecadacao.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
+  include('../../public/componentes/default/topHTML.php');
 ?>
 
-<form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
+<form action="" method="POST" enctype="multipart/form-data" id="frmEditarArrecadacao">
     <div class="conteudoForm">
         <div class="col1">
             <input type="text" name="titulo" placeholder="Titulo da Arrecadação" required>
@@ -36,7 +36,7 @@
             <div class="upload-container">
                 <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
                 <label for="image" id="imgLabel" class="upload-box">
-                    <img src="..\images\cadastroAdocao-ADM\grampoBranco.png" alt="Upload Icon">
+                    <img src="../../public/images/cadastroAdocao-ADM/grampoBranco.png" alt="Upload Icon">
                     <p>Enviar fotos</p>
                 </label>
                 <div id="filePreview"></div>
@@ -44,16 +44,16 @@
             </div>  
             <?php
             $idBtn = "btnAdicionar";
-            $funcaoClick = "adicionarComValidacao('Arrecadação editada com sucesso!', 1, 'listaArrecadacoesADM.php')";
+            $funcaoClick = "adicionarComValidacao('Arrecadação editada com sucesso!', 1, 'listaArrecadacao.php')";
             $funcaoLoad = "mudarTamanho('btnAdicionar', '100%', '39px', '16px')"; 
             $titulo = "Adicionar";           
-            include('../templates/componenteButton.php');
+            include('../../public/componentes/componenteButton.php');
 
             $idBtn = "btnCancelar";
-            $funcaoClick = "cancelarForm('frmCadastroAdocao', listaArrecadacoesADM.php)";
+            $funcaoClick = "cancelarForm('frmEditarArrecadacao', 'editarArrecadacao.php')";
             $funcaoLoad = "mudarTamanho('btnCancelar', '100%', '39px', '16px')";
             $titulo = "Cancelar";
-            include('../templates/componenteButton.php');
+            include('../../public/componentes/componenteButton.php');
             ?>
 
         </div>
@@ -62,15 +62,7 @@
 </form>
 
 <script>
-    function adicionar(){
-        if([...document.querySelectorAll("#frmCadastroAdocao input")].every(input => input.value.trim() !== "")){
-            alert("Update realizado com sucesso!")
-            window.location.href = "listaArrecadacoesADM.php";
-        }else{
-            alert("Preencha todos os campos.")
-        }
-    }
-
+    
     function updateFileName() {
         const input = document.getElementById("qrCodePix");
         const label = document.getElementById("qrCodeLabel");
@@ -121,14 +113,11 @@
         }
     });
 
-    function resetERedirect(){
-        document.getElementById('frmCadastroAdocao').reset();
-        window.location.href = "listaArrecadacoesADM.php";
-    }
+
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>
 
 <?php

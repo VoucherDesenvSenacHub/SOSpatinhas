@@ -20,7 +20,7 @@
     <input type="text" placeholder="Pesquisar">
 </div>
 
-<div class="lista-de-usuarios" id="lista-de-usuarios">
+<div class="listaUsuarios" id="lista-de-usuarios">
 
     <?php
         $itensPorPagina = 12; 

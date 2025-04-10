@@ -9,26 +9,19 @@ btnEditar.addEventListener('click', function()
 
   const inputSimples = divPai.querySelector('h2');
   const textarea = divPai.querySelector('p');
-  const imagem = divPai.querySelector('img');
-
-  
-    abreModalEditar(inputSimples, textarea, imagem, idDivPai);
+  const imagem = divPai.querySelector('img:nth-of-type(2)');
+  abreModalEditar(inputSimples, textarea, imagem, idDivPai);
             
 });
 
 function abreModalEditar(input, textarea, img, idPai) {
   let conteudoModal = `
-    <div class="overlayEditar">
-      <link rel="stylesheet" href="../../public/css/modalEditar.css">
-    </div>
+    <div class="overlayEditar"></div>
     
     <div class="popupEditar">
+        <link rel="stylesheet" href="../../public/css/modalEditar.css">
         <button id="btnFecharPopup" aria-label="fechar">X</button>
-        <div id="input_img">
-            <img src="../public/images/cadastroAdocao-ADM/grampoBranco.png" id="grampo">
-            <p id="enviar_foto">Enviar foto</p>
-            <input type="file" id="inputFilePopup" accept="image/*">
-        </div>`;
+        ;
   
   if (input) {
       conteudoModal += `
@@ -38,17 +31,17 @@ function abreModalEditar(input, textarea, img, idPai) {
   
   if (textarea) {
       conteudoModal += `
-        <textarea id="popup-textoArea" name="popup-textoArea">${textarea.value}</textarea>
+        <textarea id="popup-textoArea" name="popup-textoArea">${textarea.textContent}</textarea>
       `;
   }
   
   if (img) {
       conteudoModal += `
-        <div>
-          <label for="imageUpload">Upload New Image:</label>
-          <input type="file" id="imageUpload" accept="image/*">
-          <p>Current Image:</p>
-          <img src="${img.src}" id="currentImgPreview" style="max-width: 100px;">
+        <div id="input_img">
+            <img src="../public/images/cadastroAdocao-ADM/grampoBranco.png" id="grampo">
+            <p id="enviar_foto">Enviar foto</p>
+            <input type="file" id="inputFilePopup" accept="image/*">
+            <img src="${img.src}" id="currentImgPreview" style="max-width: 100px;">
         </div>
       `;
   }
@@ -80,8 +73,8 @@ function fecharModal(conteudoModal) {
   
 function submitForm(novoInput, novoTextarea, novoCaminhoImg, id) {
     const formData = {
-        id: id || null,
-        input: novoInput || null,
+        id: id,
+        input: novoInput,
         textarea: novoTextarea,
         caminhoImg: novoCaminhoImg
     };

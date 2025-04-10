@@ -37,7 +37,7 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.lista-de-membros {
+.listaMembros {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -104,13 +104,13 @@ item-membro {
     background: #388e3c;
 }
 
-.botao-add-conteiner {
+.btnAddConteiner {
     position: absolute;
     top: -60px;
     right: 20px;
 }
 
-.botao-add {
+.btnAdd {
     background-color: #4caf50;
     color: white;
     border: none;
@@ -126,11 +126,11 @@ item-membro {
     /*  */
 }
 
-.botao-add:hover {
+.btnAdd:hover {
     background: #388e3c;
 }
 
-.cta-slide {
+.ctaSlide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +138,7 @@ item-membro {
     gap: 10px;
 }
 
-.pagination-btn {
+.btnPagination {
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
@@ -151,7 +151,7 @@ item-membro {
     transition: background-color 0.3s;
 }
 
-.pagination-btn:hover {
+.btnPagination:hover {
     background-color: #45a049;
     color: white;
 }
@@ -195,14 +195,14 @@ item-membro {
     .pesquisar .lupa{
         left: 12px;
     }
-    .lista-de-membros{
+    .listaMembros{
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-    .botao-add-conteiner{
+    .btnAddConteiner{
         left: 90%;
     }
-    .cta-slide{
+    .ctaSlide{
         display: none;
     }
 }
@@ -217,7 +217,7 @@ item-membro {
         width: 90%;
         max-width: 280px;
     }
-    .lista-de-membros{
+    .listaMembros{
         grid-template-columns: 1fr;
         gap: 10px;
     }
@@ -228,10 +228,10 @@ item-membro {
     h1{
         font-size: 32px;
     }
-    .cta-slide{
+    .ctaSlide{
         display: none;
     }
-    .botao-add{
+    .btnAdd{
         right: 42px;
         top: 200px;
         position: fixed;

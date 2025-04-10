@@ -1,6 +1,6 @@
 /* overlay padrão para encaixar o popup */
 .overlayEditar {
-    display: none;
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
 
 /* css da janela que será exibida */
 .popupEditar {
-    display: none;
+    
     position: fixed;
     left: 50%;
     top: 50%;

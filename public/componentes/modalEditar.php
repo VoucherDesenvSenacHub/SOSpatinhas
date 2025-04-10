@@ -1,31 +1,20 @@
-<!-- modal dos popUps das páginas editaveis (adm) -->
+modal dos popUps das páginas editaveis (adm) -->
 
 <div class="overlayEditar" id="overlayEditar"></div>
-    <link rel="stylesheet" href="../../public/componentes/modalEditar.css">
+    <link rel="stylesheet" href="../public/css/modalEditar.css">
 <div class="popupEditar" id="popupEditar">
     <button id="btnFecharPopup" arial-label="fechar"></button>
-
-    
-    <?php if ($imagem == true): ?>
-        <div id="input_img">
-            <img src="../../public\images\cadastroAdocao-ADM\grampoBranco.png" id="grampo">
-            <p id="enviar_foto">Enviar foto</p>
-            <input type="file" id="inputFilePopup" accept="image/*">
-        </div>
-    <?php endif; ?>
-
-    <?php if ($input == true): ?>
-        <input type="text" id="inputBoxPopup" placeholder="Digite o nome da pessoa">
-    <?php endif; ?>
-
-    <?php if ($textarea == true): ?>
-        <textarea id="popup-textoArea" name="popup-textoArea" placeholder="Digite sua descrição..."></textarea>
-    <?php endif; ?>
+    <div id="input_img">
+        <img src="../public/images/cadastroAdocao-ADM/grampoBranco.png" id="grampo">
+        <p id="enviar_foto">Enviar foto</p>
+        <input type="file" id="inputFilePopup" accept="image/*">
+    <input type="text" id="inputBoxPopup" placeholder="Digite o nome da pessoa">
+    <textarea id="popup-textoArea" name="popup-textoArea" placeholder="Digite sua descrição..."></textarea>
     
     <?php 
         $funcaoClick = "reload()"; 
         $titulo = "Enviar";
-        include("../../public/componentes/componenteButton.php")
+        include("../public/componentes/componenteButton.php")
     ?>
 </div>
 
@@ -37,87 +26,179 @@
         document.getElementById('popupEditar').style.display = 'flex';
         
         // condição para mostrar qual tipo de layout será exibido
-        if (layout_type === 'input_name') // layout com upload e nome 
-        { 
-            document.getElementById('inputBoxPopup').style.display = 'block';
-            document.getElementById('input_img').style.display = 'flex';
-            document.getElementById('enviar_foto').style.display = 'block';
-            document.getElementById('line_h6').style.display = 'block';
+
+        switch(layout_type)
+        {
+            case 'input_name':
+                document.getElementById('inputBoxPopup').style.display = 'block';
+                document.getElementById('input_img').style.display = 'flex';
+                document.getElementById('enviar_foto').style.display = 'block';
+                document.getElementById('line_h6').style.display = 'block';
+        
+            case 'upload':
+                document.getElementById('input_img').style.display = 'flex';
+                document.getElementById('enviar_foto').style.display = 'block';
+                document.getElementById('line_h6').style.display = 'block';
+                document.getElementById('inputBoxPopup').style.display = 'none';
+    
+            case 'textArea':
+                document.getElementById('popup-textoArea').style.display = 'block';
             
-        } else if (layout_type === 'upload') // layout apenas com upload da img 
-        { 
-            document.getElementById('input_img').style.display = 'flex';
-            document.getElementById('enviar_foto').style.display = 'block';
-            document.getElementById('line_h6').style.display = 'block';
-            document.getElementById('inputBoxPopup').style.display = 'none';
+            case 'input_titulo':
+                document.getElementById('popupEditar').style.justifycontent = 'space-evenly';
+                document.getElementById('titlePopup').style.display = 'block';
+                document.getElementById('popup-textoArea').style.height = '255px';
+                document.getElementById('popup-textoArea').style.display = 'block';
 
-        } else if (layout_type === 'textArea') // layout do textArea
-        {
-            document.getElementById('popup-textoArea').style.display = 'block';
-            
-        } else if (layout_type ==='input_titulo') // layout com titulo e descrição
-        {
-            document.getElementById('popupEditar').style.justifycontent = 'space-evenly';
-            document.getElementById('titlePopup').style.display = 'block';
-            document.getElementById('popup-textoArea').style.height = '255px';
-            document.getElementById('popup-textoArea').style.display = 'block';
+            case 'input_preco':
+                document.getElementById('pricePopup').style.display = 'block';
+                document.getElementById('price_label').style.display = 'block';
+                document.getElementById('kits').style.display = 'block';
+                document.getElementById('kit_label').style.display = 'block';
 
-        } else if (layout_type === 'input_preco') // layout com imagem, titulo e valor
-        {
-            document.getElementById('pricePopup').style.display = 'block';
-            document.getElementById('price_label').style.display = 'block';
-            document.getElementById('kits').style.display = 'block';
-            document.getElementById('kit_label').style.display = 'block';
+                document.getElementById('input_img').style.marginTop = '25px';
+                document.getElementById('titlePopup').style.placeholder = 'teste';
 
-            document.getElementById('input_img').style.marginTop = '25px';
-            document.getElementById('titlePopup').style.placeholder = 'teste';
-
-        } else if (layout_type === 'pix') // layout trocar pix
-        {
-            document.getElementById('input_img').style.display = 'flex';
-            document.getElementById('enviar_foto_pix').style.display = 'block';
-            document.getElementById('line_h6').style.display = 'block';
-
-        }    
+            case 'pix':
+                document.getElementById('input_img').style.display = 'flex';
+                document.getElementById('enviar_foto_pix').style.display = 'block';
+                document.getElementById('line_h6').style.display = 'block';
+        }
     };
+
+        // if (layout_type === 'input_name') // layout com upload e nome 
+        // { 
+        //     document.getElementById('inputBoxPopup').style.display = 'block';
+        //     document.getElementById('input_img').style.display = 'flex';
+        //     document.getElementById('enviar_foto').style.display = 'block';
+        //     document.getElementById('line_h6').style.display = 'block';
+            
+        // } else if (layout_type === 'upload') // layout apenas com upload da img 
+        // { 
+        //     document.getElementById('input_img').style.display = 'flex';
+        //     document.getElementById('enviar_foto').style.display = 'block';
+        //     document.getElementById('line_h6').style.display = 'block';
+        //     document.getElementById('inputBoxPopup').style.display = 'none';
+
+        // } else if (layout_type === 'textArea') // layout do textArea
+        // {
+        //     document.getElementById('popup-textoArea').style.display = 'block';
+            
+        // } else if (layout_type ==='input_titulo') // layout com titulo e descrição
+        // {
+        //     document.getElementById('popupEditar').style.justifycontent = 'space-evenly';
+        //     document.getElementById('titlePopup').style.display = 'block';
+        //     document.getElementById('popup-textoArea').style.height = '255px';
+        //     document.getElementById('popup-textoArea').style.display = 'block';
+
+        // } else if (layout_type === 'input_preco') // layout com imagem, titulo e valor
+        // {
+        //     document.getElementById('pricePopup').style.display = 'block';
+        //     document.getElementById('price_label').style.display = 'block';
+        //     document.getElementById('kits').style.display = 'block';
+        //     document.getElementById('kit_label').style.display = 'block';
+
+        //     document.getElementById('input_img').style.marginTop = '25px';
+        //     document.getElementById('titlePopup').style.placeholder = 'teste';
+
+        // } else if (layout_type === 'pix') // layout trocar pix
+        // {
+        //     document.getElementById('input_img').style.display = 'flex';
+        //     document.getElementById('enviar_foto_pix').style.display = 'block';
+        //     document.getElementById('line_h6').style.display = 'block';
+
+        // }    
+
+
+
         // fecha caso clique fora do popup
     document.getElementById('overlayEditar').onclick = function()
     {
         this.style.display = 'none';
         document.getElementById('overlayEditar').style.display = 'none';
         document.getElementById('popupEditar').style.display = 'none';
-        document.getElementById('line_h6').style.display = 'none';
-        document.getElementById('popup-textoArea').style.display = 'none';
-        document.getElementById('inputBoxPopup').style.display = 'none';
-        document.getElementById('input_img').style.display = 'none';
-        document.getElementById('titlePopup').style.display = 'none';
-        document.getElementById('pricePopup').style.display = 'none';
-        document.getElementById('enviar_foto_pix').style.display = 'none';
-        document.getElementById('kit_label').style.display = 'none';
-        document.getElementById('kits').style.display = 'none';
-        document.getElementById('price_label').style.display = 'none';
+
+        switch(layout_type)
+        {
+            case 'input_name':
+                document.getElementById('inputBoxPopup').style.display = 'none';
+                document.getElementById('input_img').style.display = 'none';
+                document.getElementById('line_h6').style.display = 'none';
+                document.getElementById('enviar_foto').style.display = 'none';
+        
+            case 'upload':
+                document.getElementById('input_img').style.display = 'none';
+                document.getElementById('enviar_foto').style.display = 'none';
+                document.getElementById('line_h6').style.display = 'none';
+                document.getElementById('inputBoxPopup').style.display = 'none';
+    
+            case 'textArea':
+                document.getElementById('popup-textoArea').style.display = 'none';
+            
+            case 'input_titulo':
+                document.getElementById('popupEditar').style.display = 'none';
+                document.getElementById('titlePopup').style.display = 'none';
+                document.getElementById('popup-textoArea').style.display = 'none';
+                document.getElementById('popup-textoArea').style.display = 'none';
+
+            case 'input_preco':
+                document.getElementById('pricePopup').style.display = 'none';
+                document.getElementById('price_label').style.display = 'none';
+                document.getElementById('kits').style.display = 'none';
+                document.getElementById('kit_label').style.display = 'none';
+
+            case 'pix':
+                document.getElementById('input_img').style.display = 'none';
+                document.getElementById('enviar_foto_pix').style.display = 'none';
+                document.getElementById('line_h6').style.display = 'none';
+        }
     };
     // fecha caso clique no X
     document.getElementById('btnFecharPopup').onclick = function()
     {
         document.getElementById('overlayEditar').style.display = 'none';
         document.getElementById('popupEditar').style.display = 'none';
-        document.getElementById('line_h6').style.display = 'none';
-        document.getElementById('popup-textoArea').style.display = 'none';
-        document.getElementById('inputBoxPopup').style.display = 'none';
-        document.getElementById('input_img').style.display = 'none';
-        document.getElementById('titlePopup').style.display = 'none';
-        document.getElementById('pricePopup').style.display = 'none';
-        document.getElementById('enviar_foto_pix').style.display = 'none';
-        document.getElementById('kit_label').style.display = 'none';
-        document.getElementById('kits').style.display = 'none';
-        document.getElementById('price_label').style.display = 'none';
+
+        switch(layout_type)
+        {
+            case 'input_name':
+                document.getElementById('inputBoxPopup').style.display = 'none';
+                document.getElementById('input_img').style.display = 'none';
+                document.getElementById('line_h6').style.display = 'none';
+                document.getElementById('enviar_foto').style.display = 'none';
+        
+            case 'upload':
+                document.getElementById('input_img').style.display = 'none';
+                document.getElementById('enviar_foto').style.display = 'none';
+                document.getElementById('line_h6').style.display = 'none';
+                document.getElementById('inputBoxPopup').style.display = 'none';
+    
+            case 'textArea':
+                document.getElementById('popup-textoArea').style.display = 'none';
+            
+            case 'input_titulo':
+                document.getElementById('popupEditar').style.display = 'none';
+                document.getElementById('titlePopup').style.display = 'none';
+                document.getElementById('popup-textoArea').style.display = 'none';
+                document.getElementById('popup-textoArea').style.display = 'none';
+
+            case 'input_preco':
+                document.getElementById('pricePopup').style.display = 'none';
+                document.getElementById('price_label').style.display = 'none';
+                document.getElementById('kits').style.display = 'none';
+                document.getElementById('kit_label').style.display = 'none';
+
+            case 'pix':
+                document.getElementById('input_img').style.display = 'none';
+                document.getElementById('enviar_foto_pix').style.display = 'none';
+                document.getElementById('line_h6').style.display = 'none';
+        }
     };
 
     // função para fazer upload da imagem
     document.getElementById('inputFilePopup').addEventListener('change', function (event) 
     {
-        const file = event.target.files[0]; 
+        const file = event.target.files[0];
         if (file)
         {
             const reader = new FileReader();
@@ -221,4 +302,4 @@ document.addEventListener('DOMContentLoaded', function()
         document.getElementById('overlay').style.display = 'none';
         document.getElementById('popup').style.display = 'none';
     }; */
-    -->
+   

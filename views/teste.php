@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-        $link = "./paginaInicio.php";
-        $titulo = "Login";
-        include("../templates/componenteButton.php"); 
-    ?>
+
+<div id="divPai">
+  <h2>teste</h2>
+  <p>teste teste tes test tese</p>
+  <?php include("../public/componentes/btnEditar.php")?>
+</div>
 </body>
 </html>
+
+<script> 
+
+</script>
+

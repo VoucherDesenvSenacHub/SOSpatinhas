@@ -8,13 +8,6 @@ p {
     margin-bottom: 15px;
 }
 
-.tracinho{
-    background-color: #44803F;
-    height: 0.2px;
-    width: 90%;
-    margin-bottom: 35px;
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -45,23 +38,6 @@ input[type="checkbox"] {
     align-items: center;
     margin-bottom: 40px;
 }
-
-
-
-/* ! tentativa falha de ajustar os botões do header sem interfirir em nada no restante da minha pag
-button[name=Entrar]{
-    margin: 8px;
-    padding: 1px 6px;
-    height: 26px;
-    width: 82.27px;
-}
-
-button[name=Cadastrar]{
-    margin: 8px;
-    padding: 1px 6px;
-    height: 26px;
-    width: 121.41px;
-} */
 
 .redimensionar-top{
     width:80%;
@@ -203,11 +179,8 @@ input[type="date"]:valid::before {
     .redimensionar-top{
         width: 100%;
     }
-
-    
+  
 }
-
-
 
 @media (max-width: 768px){
 

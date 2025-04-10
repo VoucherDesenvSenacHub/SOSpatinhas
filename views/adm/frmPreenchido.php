@@ -1,17 +1,17 @@
 <?php
-    $cssLink  = '../css/formulario.css';
+    $cssLink  = '../../public/css/frmPreenchido.css';
     $tipo = 'Adm';
-    include('../../../componentes/default/topHTML.php');
-    include('../templates/cardListas.php');
+    include('../../public/componentes/default/topHTML.php');
+    include('../../public/componentes/cardListas.php');
 ?>
 
 <!-- Container para os cards -->
 <div class="CardIcons-container">
-    <a href="../resources/informacaoAnimal.php" class="card">
-        <?php gerarCardIconsAnimal("../images/Rectangle 71.png", "Rochele","Femea", "Cachorro", "2", ); ?>
+    <a href="../resources/infoAnimal.php" class="card">
+        <?php gerarCardIconsAnimal("../../public/images/Rectangle 71.png", "Rochele","Femea", "Cachorro", "2", ); ?>
     </a>
     <a href="../resources/perfilUsuarioAdm.php" class="card">
-        <?php gerarCardIconsUser("../images/icons/iconUser.png", "Betina de Souza Silva", "368.148.968-04
+        <?php gerarCardIconsUser("../../public/images/icons/iconUser.png", "Betina de Souza Silva", "368.148.968-04
 ", "67 372422124",true); ?>
     </a>
 </div>
@@ -45,22 +45,22 @@
     </div>
 
     <label for="pergunta1"></label>
-    <input type="text" name="pergunta1" placeholder="Pergunta1:">
+    <input type="text" name="pergunta1" placeholder="Pergunta 1:">
 
     <label for="pergunta2"></label>
-    <input type="text" name="pergunta2" placeholder="Pergunta2:">
+    <input type="text" name="pergunta2" placeholder="Pergunta 2:">
 
     <label for="pergunta3"></label>
-    <input type="text" name="pergunta3" placeholder="Pergunta3:">
+    <input type="text" name="pergunta3" placeholder="Pergunta 3:">
 
     <label for="pergunta4"></label>
-    <input type="text" name="pergunta4" placeholder="Pergunta4:">
+    <input type="text" name="pergunta4" placeholder="Pergunta 4:">
 
     <label for="pergunta5"></label>
-    <input type="text" name="pergunta5" placeholder="Pergunta5:">
+    <input type="text" name="pergunta5" placeholder="Pergunta 5:">
 
     <label for="pergunta6"></label>
-    <input type="text" name="pergunta6" placeholder="Pergunta6:">
+    <input type="text" name="pergunta6" placeholder="Pergunta 6:">
 </form>
 
 <div class="btnContainer">
@@ -69,18 +69,18 @@
         $funcaoClick = "redirecionar('listaFormulario.php')";
         $funcaoLoad = "mudarTamanho('btnAceitar')";
         $titulo = "Aceitar";
-        include('../templates/componenteButton.php');
+        include('../../public/componentes/componenteButton.php');
 
         $idBtn = "btnRecusar";
         $funcaoClick = "redirecionar('listaFormulario.php')";
         $funcaoLoad = "mudarTamanho('btnRecusar')";
         $titulo = "Recusar";
-        include('../templates/componenteButton.php');
+        include('../../public/componentes/componenteButton.php');
 ?>
 </div>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>
 
 

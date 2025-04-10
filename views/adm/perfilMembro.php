@@ -3,13 +3,13 @@
     $tipo = 'Adm';
     include('../../public/componentes/default/topHTML.php');
     
-    if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
-        echo '<script type="text/javascript">
-                alert("Você precisa estar logado como administrador para acessar esta página.");
-                window.location.href = "loginADM.php";
-            </script>';
-        exit();
-    }
+    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
+    //     echo '<script type="text/javascript">
+    //             alert("Você precisa estar logado como administrador para acessar esta página.");
+    //             window.location.href = "loginADM.php";
+    //         </script>';
+    //     exit();
+    // }
 ?>
 
 <div id="perfil">

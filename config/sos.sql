@@ -1,218 +1,123 @@
 CREATE DATABASE SOS_PATINHAS;
 USE SOS_PATINHAS;
 
-CREATE TABLE ANIMAL(
-ID_ANIMAL INT PRYMARY KEY AUTO_INCREMENT,
-ID_TIPO_ANIMAL INT,
-RACA VARCHAR(100),
-ID_PORTE INT,
-ID_IDADE INT,
-DESCRICAO VARCHAR(100),
-FOREIGN KEY (ID_TIPO_ANIMAL) REFERENCES TIPO_ANIMAL(ID_TIPO_ANIMAL),
-FOREIGN KEY (ID_PORTE) REFERENCES PORTE(ID_PORTE),
-FOREIGN KEY (ID_IDADE) REFERENCES IDADE(ID_IDADE)
+
+CREATE TABLE TAG (
+    ID_TAG INT PRIMARY KEY AUTO_INCREMENT,
+    DS_TAG VARCHAR(100)
 );
 
-CREATE TABLE IDADE(
-ID_IDADE INT PRYMARY KEY AUTO_INCREMENT,
-DS_IDADE VARCHAR(100)
+CREATE TABLE ANIMAL (
+    ID_ANIMAL INT PRIMARY KEY AUTO_INCREMENT,
+    NOME VARCHAR(100),
+    TIPO_ANIMAL VARCHAR(100),
+    RACA VARCHAR(100),
+    PORTE VARCHAR(100),
+    IDADE VARCHAR(100),
+    DESCRICAO VARCHAR(100),
+    SEXO BOOLEAN
 );
 
-CREATE TABLE PORTE(
-ID_PORTE INT PRYMARY KEY AUTO_INCREMENT,
-DS_PORTE VARCHAR(100)
+CREATE TABLE TAG_ANIMAL (
+    ID_TAG INT,
+    ID_ANIMAL INT,
+    FOREIGN KEY (ID_ANIMAL) REFERENCES ANIMAL(ID_ANIMAL),
+    FOREIGN KEY (ID_TAG) REFERENCES TAG(ID_TAG)
 );
 
-CREATE TABLE TAG(
-ID_TAG INT PRYMARY KEY AUTO_INCREMENT,
-DS_TAG VARCHAR(100),
-ID_ANIMAL INT,
-FOREIGN KEY (ID_ANIMAL) REFERENCES ANIMAL(ID_ANIMAL)
+CREATE TABLE FOTO (
+    ID_FOTO INT PRIMARY KEY AUTO_INCREMENT,
+    ID_TABELA INT,
+    NM_TABELA VARCHAR(100), 
+    CAMINHO_FOTO VARCHAR(100)
 );
 
-CREATE TABLE TIPO_ANIMAL();
-
-CREATE TABLE FOTO(
-ID_FOTO INT PRYMARY KEY AUTO_INCREMENT,
-ID_TABELA INT,
-NM_TABELA,
-CAMINHO_FOTO VARCHAR(100)
+CREATE TABLE ARRECADACAO (
+    ID_ARRECADACAO INT PRIMARY KEY AUTO_INCREMENT,
+    TITULO VARCHAR(100),
+    NOME_ANIMAL VARCHAR(100),
+    DESCRICAO VARCHAR(100),
+    NOME_USUARIO VARCHAR(100),
+    VL_ARRECADACAO INT,
+    VL_ARRECADADO INT,
+    NM_CONTA VARCHAR(100),
+    NU_CONTA INT,
+    NU_AGENCIA INT,
+    QR_CODE VARCHAR(100)
 );
 
-CREATE TABLE ARRECADACAO(
-ID_ARRECADACAO INT PRYMARY KEY AUTO_INCREMENT,
-VL_ARRECADACAO INT,
-VL_ARRECADADO INT,
-NM_CONTA VARCHAR(100),
-NU_CONTA INT,
-NU_AGENCIA INT
+CREATE TABLE EVENTO (
+    ID_EVENTO INT PRIMARY KEY AUTO_INCREMENT,
+    TITULO VARCHAR(100),
+    DESCRICAO VARCHAR(100),
+    CIDADE_ESTADO VARCHAR(100),
+    LOCAL_EVENTO VARCHAR(100)
 );
 
-CREATE TABLE EVENTO();
-CREATE TABLE MEMBRO();
-
-CREATE TABLE PERMISSAO(
-ID_PERMISSAO INT PRYMARY KEY AUTO_INCREMENT,
-PAGINA VARCHAR()
+CREATE TABLE MEMBRO_ADM (
+    ID_MEMBRO_ADM INT PRIMARY KEY AUTO_INCREMENT,
+    NOME VARCHAR(100),
+    EMAIL VARCHAR(100),
+    TELEFONE VARCHAR(100),
+    SENHA VARCHAR(100)
 );
 
-CREATE TABLE PERMISSAO_MEMBRO(
-ID_PERMISSAO_MEMBRO INT PRYMARY KEY AUTO_INCREMENT,
-ID_MEMBRO INT,
-ID_PERMISSAO INT,
-FG_ACESSO BOOL,
-FOREIGN KEY (ID_MEMBRO) REFERENCES MEMBRO(ID_MEMBRO),
-FOREIGN KEY (ID_ANIMAL) REFERENCES ANIMAL(ID_ANIMAL)
-);
-CREATE TABLE USUARIO();
-CREATE TABLE CIDADE();
-CREATE TABLE ESTADO();
-
-CREATE TABLE PARTE_EDITAVEL(
-ID_PARTE_EDITAVEL VARCHAR(100),
-INPUT_SIMPLES VARCHAR(100),
-TEXTAREA VARCHAR(100),
-
+CREATE TABLE PERMISSAO (
+    ID_PERMISSAO INT PRIMARY KEY AUTO_INCREMENT,
+    PAGINA VARCHAR(100)
 );
 
-CREATE TABLE FORMULARIO();
-CREATE TABLE FORMULARIO_PERGUNTA();
-
-
-
-
-
--- Area do Usuario
-
-create table endereco(
-id_endereco int primary key auto_increment,
-cidade varchar(50),
-uf varchar(3),
-rua varchar(50) not null,
-numero varchar(8),
-bairro varchar(50) not null,
-complemento varchar(50) not null
+CREATE TABLE PERMISSAO_MEMBRO_ADM (
+    ID_PERMISSAO_MEMBRO_ADM INT PRIMARY KEY AUTO_INCREMENT,
+    ID_MEMBRO_ADM INT,
+    ID_PERMISSAO INT,
+    FG_ACESSO BOOLEAN,
+    FOREIGN KEY (ID_MEMBRO_ADM) REFERENCES MEMBRO_ADM(ID_MEMBRO_ADM),
+    FOREIGN KEY (ID_PERMISSAO) REFERENCES PERMISSAO(ID_PERMISSAO)
 );
 
-create table usuario(
-id_usuario int primary key auto_increment,
-nome varchar(50) unique not null,
-email varchar(254) not null,
-senha varchar(128) not null,
-data_nasc date not null,
-cpf varchar(14) not null,
-rg varchar(12) not null,
-telefone varchar(20) not null,
-id_foto int,
-foreign key (id_foto) references foto(id_foto),
-id_endereco int,
-foreign key (id_endereco) references endereco(id_endereco)
+CREATE TABLE USUARIO (
+    ID_USUARIO INT PRIMARY KEY AUTO_INCREMENT,
+    NOME VARCHAR(100),
+    CPF VARCHAR(100),
+    RG VARCHAR(100), -- Fixed syntax
+    EMAIL VARCHAR(100),
+    DATA_NASCIMENTO DATE,
+    TELEFONE VARCHAR(100),
+    SENHA VARCHAR(100)
 );
 
-
--- Area de Adoção
-
-create table animal(
-id_animal int primary key auto_increment,
-nome varchar(50),
-tipo varchar(50),
-raca varchar(30),
-porte varchar(7),
-descricao varchar(100),
-tags varchar(50),
-idade varchar(50),
-sexo varchar(10)
+CREATE TABLE PARTE_EDITAVEL (
+    ID_PARTE_EDITAVEL VARCHAR(100),
+    INPUT_SIMPLES VARCHAR(100),
+    TEXTAREA VARCHAR(100),
+    CAMINHO_IMAGEM VARCHAR(100)
 );
 
-create table foto(
-id_foto int primary key auto_increment,
-id_table int not null,
-tipo_table enum() not null,
-caminho_foto int not null
+CREATE TABLE FORMULARIO_PERGUNTA (
+    ID_FORMULARIO_PERGUNTA INT PRIMARY KEY AUTO_INCREMENT,
+    DS_FORMULARIO_PERGUNTA VARCHAR(100)
 );
 
-create table tag(
-id_tag int primary key auto_increment,
-id_animal int,
-foreign key (id_animal) references animal(id_animal),
-tag_nome varchar(50)
+CREATE TABLE FORMULARIO_PERGUNTA_RESPOSTA (
+    ID_FORMULARIO_RESPOSTA INT PRIMARY KEY AUTO_INCREMENT,
+    ID_FORMULARIO_PERGUNTA INT,
+    DS_FORMULARIO_RESPOSTA VARCHAR(100),
+    FOREIGN KEY (ID_FORMULARIO_PERGUNTA) REFERENCES FORMULARIO_PERGUNTA(ID_FORMULARIO_PERGUNTA)
 );
 
-create table formulario_adocao(
-id_formulario_adocao int primary key auto_increment,
-id_animal int,
-foreign key (id_animal) references animal(id_animal),
-id_usuario int,
-foreign key (id_usuario) references usuario(id_usuario),
-termos boolean,
-data_adocao date
+CREATE TABLE FORMULARIO_RELATORIO (
+    ID_FORMULARIO_RELATORIO INT PRIMARY KEY AUTO_INCREMENT,
+    ID_USUARIO INT,
+    ID_ANIMAL INT,
+    ID_FORMULARIO_PERGUNTA_RESPOSTA INT,
+    CIDADE VARCHAR(100),
+    ESTADO VARCHAR(100),
+    RUA VARCHAR(100),
+    NU_RUA INT,
+    BAIRRO VARCHAR(100),
+    COMPLEMENTO VARCHAR(100),
+    FOREIGN KEY (ID_USUARIO) REFERENCES USUARIO(ID_USUARIO),
+    FOREIGN KEY (ID_ANIMAL) REFERENCES ANIMAL(ID_ANIMAL),
+    FOREIGN KEY (ID_FORMULARIO_PERGUNTA_RESPOSTA) REFERENCES FORMULARIO_PERGUNTA_RESPOSTA(ID_FORMULARIO_RESPOSTA)
 );
-insert into animal values (
-	'',
-    'Bartolomeu',
-    'Gato',
-    'Siamês',
-    'Pequeno',
-    'Descrição alternativamente variada',
-    'Gato Fofo',
-    '4 Meses',
-    'Macho'
-);
-insert into animal values (
-	'',
-    'Bartolomeu',
-    'Gato',
-    'Siamês',
-    'Pequeno',
-    'Descrição alternativamente variada',
-    'Gato Fofo',
-    '4 Meses',
-    'Macho'
-);
-insert into animal values (
-	'',
-    'Bartolomeu',
-    'Gato',
-    'Siamês',
-    'Pequeno',
-    'Descrição alternativamente variada',
-    'Gato Fofo',
-    '4 Meses',
-    'Macho'
-);
-insert into animal values (
-	'',
-    'Bartolomeu',
-    'Gato',
-    'Siamês',
-    'Pequeno',
-    'Descrição alternativamente variada',
-    'Gato Fofo',
-    '4 Meses',
-    'Macho'
-);
-insert into animal values (
-	'',
-    'Bartolomeu',
-    'Gato',
-    'Siamês',
-    'Pequeno',
-    'Descrição alternativamente variada',
-    'Gato Fofo',
-    '4 Meses',
-    'Macho'
-);
-insert into animal values (
-	'',
-    'Bartolomeu',
-    'Gato',
-    'Siamês',
-    'Pequeno',
-    'Descrição alternativamente variada',
-    'Gato Fofo',
-    '4 Meses',
-    'Macho'
-);
-
-select * from pagQS_Banner;
-

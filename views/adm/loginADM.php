@@ -29,17 +29,16 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS Patinhas</title>
     <link rel="stylesheet" href="../../public/css/loginADM.css">
 </head>
 
 <body>
-    <?php include('../../public/componentes/navbar.php')?>
+    <?php include('../../public/componentes/navbar.php')?> 
     
     <section class="corpo-container">
         <section class="secao-login">
@@ -49,15 +48,20 @@
                     <input type="text" placeholder="ID" name="id">
                     <input type="password" placeholder="Senha" name="password">
                     <?php
+                        $idBtn = "btnEntrarAdm";
                         $funcaoClick = "submitComValidacao('frmLoginADM')";
+                        $funcaoLoad = "mudarTamanho('btnEntrarAdm', '188px', '50px', '20px' )";
                         $titulo = "Entrar";
                         include('../../public/componentes/componenteButton.php');
-                        ?>
+                    ?>
                 </form>
             </div>
         </section>
     </section>
-        
-    <?php include('../../public/componentes/footerUser.php')?>
-</body>
+
+    <?php
+        include('../../public/componentes/default/bottomHTML.php');
+    ?>
+
+    </body>
 </html>

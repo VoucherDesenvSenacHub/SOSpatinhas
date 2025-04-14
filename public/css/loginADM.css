@@ -4,20 +4,6 @@
     border: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
-    background-color: rgb(198, 225, 196);
-    background-image: url("../images/Patinhas.png");
-    background-size: 50%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.secao-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 57vh;
-    margin: 100px 0px;
-}
 
 .login {
     background-color: white;
@@ -25,7 +11,6 @@ body{
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    
 }
 
 .login h2 {
@@ -41,55 +26,32 @@ body{
     outline: none;
 }
 
-.buttonLogin {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    width: 93%;
-    height: 47px;
-    margin-top: 47px;
-    margin-bottom: 21px;
-    padding: 10px;
-    background-color: rgb(68, 128, 63);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none; /* Remover sublinhado se for um link */
+
+@media (max-width: 1024px) {
+    .login {
+        width: 80%;
+    }
 }
 
-.buttonLogin:hover {
-    transition: .4s;
-    background-color: rgb(56, 105, 52);
-}
-
-
-
-@media (max-width: 768px){
-    body{
-        background-size: 100%;
+@media (max-width: 768px) {
+    .login {
+        width: 76%;
     }
     .secao-login{
         margin: 80px 0px;
     }
-    .login{
-        width: 40%;
-    }
 }
 
-@media (max-width: 425px){
-    body{
-        background-size: 150%;
-    }
-
-    .secao-login{
-        margin: 53px 53px 90px 53px;
-    }
-    .login{
+@media (max-width: 425px) {
+    .login {
         padding: 40px 25px 65px 25px;
         width: 85%;
     }
     .buttonLogin{
         margin-top: 35px;
         margin-bottom: 20px;
+    }
+    .secao-login{
+        margin: 53px 53px 90px 53px;
     }
 }

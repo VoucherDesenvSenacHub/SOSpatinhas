@@ -13,9 +13,9 @@
     //     exit();
     // }
 
-    $cssLink  = '../css/perfilUsuario.css';
-    $tipo = 'User';
-    include('../../../componentes/default/topHTML.php');
+    $cssLink  = '../../public/css/perfilUsuario.css';
+    $tipo = 'Adm';
+    include('../../public/componentes/default/topHTML.php');
 
     // $emailLogado = $_SESSION['email'];
 
@@ -34,14 +34,14 @@
 
 <div id="perfil">
     <div id="contentFotoMembro">
-        <img id="fotoMembro" src="../images/icons/iconUser.png" alt="icone foto do Usuário">
-        <p id="nomeMembro">.</p>
+        <img id="fotoMembro" src="../../public/images/icons/iconUser.png" alt="icone foto do Usuário">
+        <h1 id="nomeMembro">Betina de Souza Silva</h1>
 </div>
 
 <div id="iconscontainers">
         <div id="contentInfosMembro">
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/iconUser_2.png" alt="icone telefone">
+                <img class="icones" src="../../public/images/icons/iconUser_2.png" alt="icone telefone">
                 <div class="contentItens">
                     <p class="titulos">Nome:</p>
                     <p class="conteudoTitulos">Betina de Souza Silva</p>
@@ -49,7 +49,7 @@
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/data.png" alt="icone data de nascimento">
+                <img class="icones" src="../../public/images/icons/data.png" alt="icone data de nascimento">
                 <div class="contentItens">
                     <p class="titulos">Data Nascimento:</p>
                     <p class="conteudoTitulos">
@@ -59,7 +59,7 @@
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/Telefone.png" alt="icone telefone">
+                <img class="icones" src="../../public/images/icons/Telefone.png" alt="icone telefone">
                 <div class="contentItens">
                     <p class="titulos">Telefone:</p>
                     <p class="conteudoTitulos">
@@ -71,15 +71,15 @@
 
         <div id="contentInfosMembro2">
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/email.png" alt="icone email">
+                <img class="icones" src="../../public/images/icons/email.png" alt="icone email">
                 <div class="contentItens">
                     <p class="titulos">Email:</p>
-                    <p class="conteudoTitulos">gatolo_cat@htmail.com</p>
+                    <p class="conteudoTitulos">teste@teste.com</p>
                 </div>
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../images/icons/rg.png" alt="icone cpf">
+                <img class="icones" src="../../public/images/icons/rg.png" alt="icone cpf">
                 <div class="contentItens">
                     <p class="titulos">CPF:</p>
                     <p class="conteudoTitulos">
@@ -90,7 +90,7 @@
             
             
             <div class="contentItensPerfil" id="rg">
-                <img class="icones" src="../images/icons/rg.png" alt="icone rg">
+                <img class="icones" src="../../public/images/icons/rg.png" alt="icone rg">
                 <div class="contentItens">
                     <p class="titulos">RG:</p>
                     <p class="conteudoTitulos">
@@ -106,5 +106,5 @@
 </div>
         
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../public/componentes/default/bottomHTML.php');
 ?>

@@ -50,7 +50,7 @@ function incluirPagina($pagina, $tipo = 'compartilhada') {
         include($arquivo);
     } else {
         header("HTTP/1.0 404 Not Found");
-        include("views/404.php");
+        include("views/user/404.php");
     }
 }
 
@@ -115,7 +115,7 @@ if (isset($paginasRestritas[$tipoUsuario]) && in_array($pagina, $paginasRestrita
             break;
         default:
             header("HTTP/1.0 404 Not Found");
-            incluirPagina("404", 'admin');
+            incluirPagina("404", 'user');
             break;
     }
 }

@@ -1,51 +1,63 @@
 <?php
-    // session_start();
+    session_start();
 
-    // if ($_SERVER['REQUEST_METHOD'] == 'POST')
-    // {
-    //     $id = trim($_POST['id']);
-    //     $password = trim($_POST['password']);
+    if ($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        $id = trim($_POST['id']);
+        $password = trim($_POST['password']);
 
-    //     $adminsFile = '../../public/script/adminData.json';
-    //     $admins = [];
+        $adminsFile = '../../public/script/adminData.json';
+        $admins = [];
 
-    //     if (file_exists($adminsFile))
-    //     {
-    //         $jsonData = file_get_contents($adminsFile);
-    //         $admins = json_decode($jsonData, true);
-    //     }
+        if (file_exists($adminsFile))
+        {
+            $jsonData = file_get_contents($adminsFile);
+            $admins = json_decode($jsonData, true);
+        }
 
-    //     foreach ($admins as $admin)
-    //     {
-    //         if ($admin['id'] === $id && $admin['password'] === $password)
-    //         {
-    //             $_SESSION['id'] = "Admin";
-    //             $_SESSION['taLogado'] = true;
-    //             header('Location: ../../editarPaginaInicio.php');
-    //             exit();
-    //         }
-    //     }
-    // }
-    $cssLink= "../../public/css/loginADM.css";
-    $tipo = 'Adm'; 
-    include('../../public/componentes/default/topHTML.php');
+        foreach ($admins as $admin)
+        {
+            if ($admin['id'] === $id && $admin['password'] === $password)
+            {
+                $_SESSION['id'] = "Admin";
+                $_SESSION['taLogado'] = true;
+                header('Location: ../../editarPaginaInicio.php');
+                exit();
+            }
+        }
+    }
 ?>
 
-        <div class="login">
-            <h2>Login</h2>
-            <form method="POST" id="frmLoginADM">
-                <input type="text" placeholder="ID" name="id">
-                <input type="password" placeholder="Senha" name="password">
-                <?php
-                    $idBtn = "btnEntrarAdm";
-                    $funcaoClick = "submitComValidacao('frmLoginADM')";
-                    $funcaoLoad = "mudarTamanho('btnEntrarAdm', '188px', '50px', '20px' )";
-                    $titulo = "Entrar";
-                    include('../../public/componentes/componenteButton.php');
-                ?>
-            </form>
-        </div>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <?php
-        include('../../public/componentes/default/bottomHTML.php');
-    ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Patinhas</title>
+    <link rel="stylesheet" href="../../public/css/loginADM.css">
+</head>
+
+<body>
+    <?php include('../../public/componentes/navbar.php')?>
+    
+    <section class="corpo-container">
+        <section class="secao-login">
+            <div class="login">
+                <h2>Login</h2>
+                <form method="POST" id="frmLoginADM">
+                    <input type="text" placeholder="ID" name="id">
+                    <input type="password" placeholder="Senha" name="password">
+                    <?php
+                        $funcaoClick = "submitComValidacao('frmLoginADM')";
+                        $titulo = "Entrar";
+                        include('../../public/componentes/componenteButton.php');
+                        ?>
+                </form>
+            </div>
+        </section>
+    </section>
+        
+    <?php include('../../public/componentes/footerUser.php')?>
+</body>
+</html>

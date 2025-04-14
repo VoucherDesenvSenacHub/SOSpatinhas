@@ -4,7 +4,7 @@
     include('../../public/componentes/default/topHTML.php');
 ?>
 
-<form action="" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
+<form action="" method="POST" enctype="multipart/form-data" id="frmCadastroArrecadacao">
     <div class="conteudoForm">
         <div class="col1">
             <input type="text" name="titulo" placeholder="Titulo da Arrecadação" required>

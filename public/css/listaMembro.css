@@ -37,7 +37,7 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.listaMembros {
+.lista {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -58,11 +58,11 @@ h1 {
     margin-bottom: 10px;
 }
 
-item-membro {
+item {
     display: none;
 }
 
-.item-membro[data-pagina="1"] {
+.item[data-pagina="1"] {
     display: block;
 }
 
@@ -195,7 +195,7 @@ item-membro {
     .pesquisar .lupa{
         left: 12px;
     }
-    .listaMembros{
+    .lista{
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
@@ -217,7 +217,7 @@ item-membro {
         width: 90%;
         max-width: 280px;
     }
-    .listaMembros{
+    .lista{
         grid-template-columns: 1fr;
         gap: 10px;
     }

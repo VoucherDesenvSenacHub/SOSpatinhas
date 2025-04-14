@@ -20,7 +20,7 @@
     <input type="text" placeholder="Pesquisar">
 </div>
 
-<div class="listaMembros" id="lista-de-membros">
+<div class="lista" id="listaMembro">
 
 
     <?php
@@ -43,14 +43,14 @@
             $itensPorPagina = 12;
             foreach ($membro as $index => $membros) {
                 $pagina = floor($index / $itensPorPagina) + 1;
-                echo '<div class="item-membro" data-pagina="' . $pagina . '">';
+                echo '<div class="item" data-pagina="' . $pagina . '">';
                 gerarCardMembros($membros['nome'], $membros['status']);
                 echo '</div>';
             }
     ?>
 
     <div class="btnAddConteiner">
-        <a href="cadastrarMembroADM.php"><button class="btnAdd">+</button></a>
+        <a href="cadastrarMembro.php"><button class="btnAdd">+</button></a>
     </div>
 </div>
 
@@ -122,8 +122,8 @@
 
     function recalcularPaginacao() {
         const itensPorPagina = 12;
-        const listaMembros = document.getElementById('lista-de-membros');
-        const itens = listaMembros.querySelectorAll('.item-membro');
+        const lista = document.getElementById('listaMembro');
+        const itens = lista.querySelectorAll('.item');
         totalPaginas = Math.ceil(itens.length / itensPorPagina);
 
         itens.forEach((item, index) => {
@@ -149,7 +149,7 @@
     }
 
     function exibirPagina(pagina){
-        const itens = document.querySelectorAll('.item-membro');
+        const itens = document.querySelectorAll('.item');
         itens.forEach((item) => {
             const paginaItem = parseInt(item.getAttribute('data-pagina'));
             if (paginaItem == pagina) {

@@ -21,7 +21,7 @@
     <input type="text" placeholder="Pesquisar">
 </div>
 
-<div class="listaArrecadacoes" id="lista-arrecadacoes">
+<div class="lista" id="listaArrecadacao">
     <?php
         $arrecadacoes = [
             ["nome" => "Rochele", "imagem" => "../../public/images/Rectangle 71.png", "progresso" => "Em progresso", "meta" => "Meta: R$ 1000,00"],
@@ -35,13 +35,13 @@
         $itensPorPagina = 6;
         foreach ($arrecadacoes as $index => $arrecadacoes) {
             $pagina = floor($index / $itensPorPagina) + 1;
-            echo '<div class="item-arrecadacao" data-paginas="' . $pagina . '">';
+            echo '<div class="item" data-pagina="' . $pagina . '">';
             gerarCardArrecadacao($arrecadacoes['nome'], $arrecadacoes['imagem'], $arrecadacoes['progresso'], $arrecadacoes['meta']);
             echo '</div>';
         }
     ?>
     <div class="btnAddContainer">
-        <a href="cadastrarArrecadacao-ADM.php"><button class="btnAdd">+</button></a>
+        <a href="cadastrarArrecadacao.php"><button class="btnAdd">+</button></a>
     </div>
 </div>
 
@@ -92,7 +92,7 @@
 
     document.querySelectorAll('.btnEditar').forEach(button => {
         button.addEventListener('click', function() {
-            window.location.href = "editarArrecadacao-ADM.php";
+            window.location.href = "editarArrecadacao.php";
         });
     });
 
@@ -105,13 +105,13 @@
 
     function recalcularPaginacao() {
         const itensPorPagina = 6;
-        const listaAdocao = document.getElementById('lista-arrecadacoes');
-        const itens = listaAdocao.querySelectorAll('.item-arrecadacao');
+        const listaAdocao = document.getElementById('listaArrecadacao');
+        const itens = listaAdocao.querySelectorAll('.item');
         totalPaginas = Math.ceil(itens.length / itensPorPagina);
 
         itens.forEach((item, index) => {
             const pagina = Math.floor(index / itensPorPagina) + 1;
-            item.setAttribute('data-pagina', pagina);
+            item.setAttribute('dataPagina', pagina);
         });
 
         atualizarPaginacao(totalPaginas);
@@ -133,9 +133,9 @@
     }
 
     function exibirPagina(pagina) {
-        const itens = document.querySelectorAll('.item-arrecadacao');
+        const itens = document.querySelectorAll('.item');
         itens.forEach((item) => {
-            const paginaItem = parseInt(item.getAttribute('data-pagina'));
+            const paginaItem = parseInt(item.getAttribute('dataPagina'));
             if (paginaItem === pagina) {
                 item.style.display = 'block';
             } else {

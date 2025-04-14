@@ -7,10 +7,10 @@
 
 <!-- Container para os cards -->
 <div class="CardIcons-container">
-    <a href="../resources/infoAnimal.php" class="card">
+    <a href="../../views/user/infoAnimal.php" class="card">
         <?php gerarCardIconsAnimal("../../public/images/Rectangle 71.png", "Rochele","Femea", "Cachorro", "2", ); ?>
     </a>
-    <a href="../resources/perfilUsuarioAdm.php" class="card">
+    <a href="../../views/compartilhada/perfilUsuarioAdm.php" class="card">
         <?php gerarCardIconsUser("../../public/images/icons/iconUser.png", "Betina de Souza Silva", "368.148.968-04
 ", "67 372422124",true); ?>
     </a>

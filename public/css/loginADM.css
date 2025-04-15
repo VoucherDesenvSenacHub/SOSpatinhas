@@ -2,7 +2,13 @@
     padding: 0;
     margin: 0;
     border: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.secaoLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(129vh - 431px);
 }
 
 .login {
@@ -11,6 +17,12 @@
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* background-color: aqua; */
+    
 }
 
 .login h2 {
@@ -29,29 +41,24 @@
 
 @media (max-width: 1024px) {
     .login {
-        width: 80%;
+        width: 90%;
     }
 }
 
 @media (max-width: 768px) {
     .login {
-        width: 76%;
-    }
-    .secao-login{
-        margin: 80px 0px;
+        width: 80%;
+        padding: 40px 20px 40px 20px;
     }
 }
 
 @media (max-width: 425px) {
     .login {
-        padding: 40px 25px 65px 25px;
-        width: 85%;
+        width: 80%;
+        padding: 40px 20px 40px 20px;
     }
-    .buttonLogin{
-        margin-top: 35px;
-        margin-bottom: 20px;
-    }
-    .secao-login{
-        margin: 53px 53px 90px 53px;
+    .secaoLogin {
+        width: 100%;
+        /* background-color: aqua; */
     }
 }

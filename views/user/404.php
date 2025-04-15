@@ -4,7 +4,7 @@
 ?>
 
 <h1>404</h1>
-<p>Oh não! Parece que alguém levou embora a página</p>
+<p>Oh não! Parece que alguém levou embora a página!</p>
 
 <img src="" alt="">
 

@@ -4,29 +4,29 @@
     border: 0;
 }
 
+
 .secaoLogin {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(129vh - 431px);
+    min-height: 90vh;
 }
 
 .login {
     background-color: white;
-    padding: 50px;
+    padding: 10px 40px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 50%;
-    /* background-color: aqua; */
-    
+    width: 43%;
+    height: 50vh;
 }
 
 .login h2 {
-    margin-bottom: 25px;
+    margin-bottom: 60px;
 }
 
 .login input {
@@ -38,14 +38,27 @@
     outline: none;
 }
 
+#password {
+    margin-bottom: 50px;
+}
+
 
 @media (max-width: 1024px) {
+    .secaoLogin {
+        width: 100%;
+        min-height: 109vh;
+    }
     .login {
-        width: 90%;
+        height: 28em;
+        width: 70%;
+        padding: 50px 20px 50px 20px;
     }
 }
 
 @media (max-width: 768px) {
+    .secaoLogin {
+        min-height: 84vh;
+    }
     .login {
         width: 80%;
         padding: 40px 20px 40px 20px;
@@ -53,12 +66,12 @@
 }
 
 @media (max-width: 425px) {
+    .secaoLogin {
+        min-height: 84vh;
+    }
     .login {
         width: 80%;
         padding: 40px 20px 40px 20px;
-    }
-    .secaoLogin {
-        width: 100%;
-        /* background-color: aqua; */
+        
     }
 }

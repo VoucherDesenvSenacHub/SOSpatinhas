@@ -45,11 +45,11 @@
             <h2>Login</h2>
             <form method="POST" id="frmLoginADM">
                 <input type="text" placeholder="ID" name="id">
-                <input type="password" placeholder="Senha" name="password">
+                <input type="password" placeholder="Senha" name="password" id="password">
                 <?php
                     $idBtn = "btnEntrarAdm";
                     $funcaoClick = "submitComValidacao('frmLoginADM')";
-                    $funcaoLoad = "mudarTamanho('btnEntrarAdm', '188px', '50px', '20px' )";
+                    $funcaoLoad = "mudarTamanho('btnEntrarAdm', '188px', '50px', '20px',  )";
                     $titulo = "Entrar";
                     include('../../public/componentes/componenteButton.php');
                 ?>

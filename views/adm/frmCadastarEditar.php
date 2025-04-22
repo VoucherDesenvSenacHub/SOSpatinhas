@@ -5,6 +5,7 @@
     $form = 'Animal';
     $acao = 'C';
     $id = $_GET['id'] ?? null;
+    $tabela = strtoupper($form);
 
     $model = new FormularioDev();
     $fields = $model->pegaCampos("ANIMAL");
@@ -22,10 +23,33 @@
                 include('../../public/componentes/imgUpload.php');
                 break;
             case 'perfilUpload':
-                //fazer um componente do imgUpload pra ft de perfil
+                //fazer um componente tipo imgUpload pra ft de perfil
                 break;
-            default: 
-            ?>
+            case 'checkbox': ?>
+                <input 
+                    type="checkbox" 
+                    id="<?= $field['NAME_FIELD'] ?>" 
+                    name="<?= $field['NAME_FIELD'] ?>" 
+                    <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
+                >
+                <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
+                <?php break; ?>
+            <?php case 'select': ?>
+                <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
+                <select name="<?= $field['NAME_FIELD'] ?>" id="<?= $field['NAME_FIELD'] ?>" <?= $field['OBRIGATORIO'] ? 'required' : '' ?>>
+                    <option value="">Selecionar</option>
+                    <?php 
+                        $options = explode(",", $field['OPTIONS_SELECT']);
+                        foreach ($options as $option):
+                            $selected = (isset($formData[$field['NAME_FIELD']]) && $formData[$field['NAME_FIELD']] === trim($option)) ? 'selected' : '';
+                    ?>
+                            <option value="<?= trim($option) ?>" <?= $selected ?>>
+                                <?= htmlspecialchars(trim($option)) ?>
+                            </option>
+                    <?php endforeach; ?>
+                </select>
+            <?php default: ?>
+                <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
                 <input
                     type="<?= $field['TIPO'] ?>"
                     name="<?= $field['NAME_FIELD'] ?>"

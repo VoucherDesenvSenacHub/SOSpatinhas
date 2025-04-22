@@ -12,7 +12,9 @@ body{
 }
 
 
-.secao-login {
+
+
+.secaoLogin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +29,7 @@ body{
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    
 }
 
 .esqSenha h2 {
@@ -69,14 +72,14 @@ body{
 }
 
 @media (max-width: 768px) {
-    .secao-login{
+    .secaoLogin{
         margin: 120px 0px;
     }
 }
 
 @media (max-width: 425px) {
    
-    .secao-login{
+    .secaoLogin{
         width: auto;
         height: 70vh;
         margin: 80px 50px;     

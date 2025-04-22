@@ -15,7 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 431px);
+    height: calc(129vh - 431px);
 }
 
 .login {
@@ -24,6 +24,8 @@ body{
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 50%;
+    height: 50%;
 }
 
 .login h2 {
@@ -75,6 +77,8 @@ body{
     text-decoration: underline;
 
 }
+
+
 
 
 @media (max-width: 768px) {

@@ -1,12 +1,17 @@
-<?php
-  $cssLink  = '../../public/css/esqueciSenha.css';
-  $tipo = 'User';
-  include ('../../public/componentes/default/topHTML.php');
-?>
-
+<!DOCTYPE html>
+ <html lang="pt-br">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>SOS Patinhas</title>
+     <link rel="stylesheet" href="../../public/css/esqueciSenha.css">
+     <link rel="stylesheet" href="../../public/css/default.css">
+ </head>
 <body>
-    <section class="corpo-container">
-        <section class="secao-login">
+    <?php include('../../public/componentes/navbar.php'); ?>
+    <section class="corpoContainer">
+        <section class="secaoLogin">
             <div class="esqSenha">
                 <h2>Esqueci a senha</h2>
                 <p>Não se preocupe! Um link será enviado na sua caixa de entrada.</p>
@@ -15,7 +20,7 @@
                     <?php
         $idBtn = "btnEnviar";
         $funcaoClick = "redirecionar('confirmacaoEmail.php')";                             
-        $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
+        $funcaoLoad = "mudarTamanho('btnEnviar','80%', '80%')";                                                                     
         $titulo = "Enviar";                                           
         include('../../public/componentes/componenteButton.php');
     ?>

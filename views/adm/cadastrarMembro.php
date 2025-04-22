@@ -8,13 +8,13 @@
 <form action="" method="post" id="cadastrarMembro">      
     <div id="conteudoForm">
         <div id="colunaForm">
-        <div class="upload-container">
+        <div class="uploadContainer">
             <div id="filePreview">
                 <img src="../../public/images/userProfile.png" alt="" id="previewImg">
             </div>
             <div id="imgUpload">
-                <input type="file" id="image" name="image[]" accept="image/*" hidden>
-                <label for="image" id="imgLabel" class="upload-box">
+                <input type="file" id="image" nome="image[]" accept="image/*" hidden>
+                <label for="image" id="imgLabel" class="uploadBox">
                     <img src="../../public/images/btnAdicionar.png" alt="Upload Icon" class="mais">
                 </label>
             </div>
@@ -56,7 +56,7 @@
         if([...document.querySelectorAll("input")].every(input => input.value.trim() !== "")){
             alert("Arrecadação cadastrada com sucesso!")
             
-        }else{
+        }else{ 
             alert("Preencha todos os campos.")
         }
     }

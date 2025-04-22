@@ -1,10 +1,16 @@
-<?php
-  $cssLink  = '../../public/css/novaSenha.css';
-  $tipo = 'User';
-  include ('../../public/componentes/default/topHTML.php');
-?>
+<!DOCTYPE html>
+ <html lang="pt-br">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>SOS Patinhas</title>
+     <link rel="stylesheet" href="../../public/css/novaSenha.css">
+     <link rel="stylesheet" href="../../public/css/default.css">
+ </head>
 
 <body>
+    <?php include('../../public/componentes/navbar.php'); ?>
     <section class="corpo-container">
         <section class="secao-login">
             <div class="login">
@@ -15,7 +21,7 @@
                     <?php
         $idBtn = "btnEnviar";
         $funcaoClick = "adicionarComValidacao('Enviado com sucesso')";                             
-        $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
+        $funcaoLoad = "mudarTamanho('btnEnviar','188px', '50px', '20px')";                                                                     
         $titulo = "Enviar";                                           
         include('../../public/componentes/componenteButton.php');
     ?>
@@ -24,6 +30,6 @@
         </section>
     </section>
 
-    <?php include('../../public/componentes/default/bottomHTML.php'); ?>
+    <?php include('../../public/componentes/footer.php'); ?>
 </body>
 </html>

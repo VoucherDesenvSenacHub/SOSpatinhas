@@ -89,7 +89,7 @@
         return true;
     });
 
-    $itensPorPag = 9;
+    $itensPorPag = isset($_GET['itensPorPag']) ? (int) $_GET['itensPorPag'] : 9; 
     $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
     $offset = ($paginaAtual - 1) * $itensPorPag;
     
@@ -99,14 +99,16 @@
     
     if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
         foreach ($rowAnimal as $animal) {
-            include('../templates/animalCard.php'); 
+            include('../../public/componentes/animalCard.php'); 
         }
         exit; 
     }
 ?>
 
+
+
 <?php
-    $cssLink  = 'adocao.css';
+    $cssLink  = '../../public/css/adocao.css';
     $tipo = $_GET['type'] ?? 'User';
     include('../../public/componentes/default/topHTML.php');
 ?>
@@ -237,6 +239,20 @@
         }
     });
 
+
+function carregarAnimais(pagina = 1) {
+let largura = window.innerWidth;
+let itensPorPag = largura <= 768 ? 8 : 9;
+
+fetch(`adocao.php?pagina=${pagina}&ajax=1&itensPorPag=${itensPorPag}`)
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('.card-container').innerHTML = data;
+    });
+}
+
+
+carregarAnimais();
 
 </script>
 

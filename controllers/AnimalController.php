@@ -29,7 +29,7 @@ class AnimalController {
         $jsonData = json_encode($data);
 
         $animal = new AnimalModel();
-        $resultado = $animal->CRUD($data);
+        $resultado = $animal->CRUD($jsonData);
     }
 }
 ?>

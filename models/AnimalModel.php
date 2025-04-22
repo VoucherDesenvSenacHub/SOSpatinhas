@@ -3,10 +3,9 @@ require_once '../config/connect.php';
 
 class AnimalModel extends Connect{
     public function CRUD($data){
-        $jsonData = json_encode($data);
         
         $stmt = $this->connection->prepare("CALL CRUD_ANIMAL(?)");
-        $stmt->bind_param("s", $jsonData);
+        $stmt->bind_param("s", $data);
 
         if ($stmt->execute()) {
             if ($data['acao'] == 'R') {

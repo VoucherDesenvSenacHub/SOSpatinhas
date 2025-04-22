@@ -2,16 +2,19 @@
     require_once '../../models/formularioDev.php';
     $cssLink  = '../../public/css/cadastrarAdocao.css';
     include('../../public/componentes/default/topHTML.php');
-    $form = $_GET['form'] ?? null;
-    $acao = 'E';
+    $form = 'Animal';
+    $acao = 'C';
     $id = $_GET['id'] ?? null;
+
     $model = new FormularioDev();
     $fields = $model->pegaCampos("ANIMAL");
     $formData = $model->pegaCamposComResultado("ANIMAL", 1);
 ?>
 
-<form action="<?= $form ?>Controller.php" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
-    <input type="hidden" name="acao" value="<?= htmlspecialchars($acao) ?>">
+<form action="../../controllers/AnimalController.php" method="POST" enctype="multipart/form-data" id="frmCadastroAdocao">
+    <input type="hidden" name="ACAO" value="<?= htmlspecialchars($acao) ?>">
+    <input type="hidden" name="ID" value="<?= htmlspecialchars($id) ?>">
+    
 
     <?php foreach ($fields as $field): ?>
         <?php switch ($field['TIPO']):
@@ -25,10 +28,10 @@
             ?>
                 <input
                     type="<?= $field['TIPO'] ?>"
-                    name="<?= $field['NAME'] ?>"
-                    id="<?= $field['NAME'] ?>"
+                    name="<?= $field['NAME_FIELD'] ?>"
+                    id="<?= $field['NAME_FIELD'] ?>"
                     placeholder="<?= $field['PLACEHOLDER'] ?>"
-                    <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME']] ?? '') . '"' : ''; ?>
+                    <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
                     <?= $field['OBRIGATORIO'] ? 'required' : '' ?>
                 >
                 <?php break; ?>

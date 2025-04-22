@@ -12,7 +12,7 @@
     </ul>
 
     <div class="navRight">
-        <?php if ($taLogado): ?>
+        <?php if ($isset($_SESSION['taLogado']) && $_SESSION['taLogado'] === true): ?>
             <a class="navbarLogo" href="<?php echo ($isAdm) ? "../../views/adm/perfilADM.php" : "../../views/user/perfilUsuario.php"; ?>">
                 <img src="<?php echo ($isAdm) ? "../images/icons/iconUserAdm.png" : "../images/icons/iconUser.png"; ?>" alt="Login">
             </a>

@@ -3,7 +3,7 @@ require_once '../../config/connect.php';
 
 class FormularioDev extends Connect{
     public function pegaCampos($formName) {
-        $stmt = $this->connection->prepare("SELECT * FROM FORMULARIO_CRIAR_EDITAR WHERE FORMULARIO = ? ORDER BY ORDEM ASC");
+        $stmt = $this->connection->prepare("SELECT * FROM FORMULARIO_CRIAR_EDITAR WHERE ID_FORM = ? ORDER BY ORDEM ASC");
         $stmt->execute([$formName]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

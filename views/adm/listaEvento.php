@@ -1,13 +1,4 @@
 <?php
-
-    // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
-    // echo '<script type="text/javascript">
-    //         alert("Você precisa estar logado como administrador para acessar esta página.");
-    //         window.location.href = "loginADM.php";
-    //       </script>';
-    // exit();
-    // }
-
   $cssLink  = '../../public/css/listaEvento.css';
   $tipo = 'Adm';
   include('../../public/componentes/default/topHTML.php');
@@ -41,7 +32,7 @@
 
     ?>
     <div class="btnAddContainer">
-        <a href="cadastrarEventos-ADM.php"><button class="btnAdd">+</button></a>
+        <a href="cadastrarEventos.php"><button class="btnAdd">+</button></a>
     </div>
 </div>
 <div class="ctaSlide">
@@ -98,7 +89,7 @@
 
     botaoEditar.forEach(button => {
         button.addEventListener('click', function() {
-            window.location.href = "editarEventos-ADM.php";
+            window.location.href = "editarEventos.php";
         });
     });
 

@@ -4,30 +4,8 @@ $tipoUsuario = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'visitante';
 $pagina = isset($_GET['page']) ? $_GET['page'] : 'paginaInicio';
 
 $paginasRestritas = [
-    'Admin' => [
-        'perfilAdm',
-        'cadastrarAdocao',
-        'cadastrarArrecadacao',
-        'cadastrarEventos',
-        'cadastrarMembro',
-        'editarAdocao',
-        'editarArrecadacao',
-        'editarEventos',
-        'editarPerfilAdm',
-        'editarPerfilMembro',
-        'frmPreenchido',
-        'listaAdocao',
-        'listaArrecadacao',
-        'listaEvento',
-        'listaFormulario',
-        'listaMembro',
-        'listaUsuario'
-    ],
-    'Usuario' => [
-        'editarPerfilUsuario',
-        'frmAdocao',
-        'perfilUsuario'
-    ]
+    'Admin' => ['perfilAdm', 'frmCadastrarEditar', 'frmPreenchido', 'listas'],
+    'Usuario' => ['editarPerfilUsuario', 'frmAdocao', 'perfilUsuario']
 ];
 
 $pastaAdm = "views/adm/";
@@ -59,22 +37,17 @@ if (isset($paginasRestritas[$tipoUsuario]) && in_array($pagina, $paginasRestrita
         switch ($pagina) {
             case "perfilAdm":
             case "perfilMembro":
-            case "cadastrarAdocao":
-            case "cadastrarArrecadacao":
-            case "cadastrarEventos":
-            case "cadastrarMembro":
-            case "editarAdocao":
-            case "editarArrecadacao":
-            case "editarEventos":
-            case "editarPerfilAdm":
-            case "editarPerfilMembro":
+            case "CadastrarEditar":
+                require 'controllers/CadastrarEditarController.php'
+                $form = new CadastrarEditarController();
+                $form->index($form, $id, $acao);//paramns in the url
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    require 'controllers/{$form}Controller.php'
+                    $obj = new $form Controller();
+                    $obj->CRUD();
+                }
             case "frmPreenchido":
-            case "listaAdocao":
-            case "listaArrecadacao":
-            case "listaEvento":
-            case "listaFormulario":
-            case "listaMembro":
-            case "listaUsuario":
+            case "listas":
                 incluirPagina($pagina, 'admin');
                 break;
             default:

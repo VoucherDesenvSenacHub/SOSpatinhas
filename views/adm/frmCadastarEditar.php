@@ -8,7 +8,7 @@
     $tabela = strtoupper($form);
 
     $model = new FormularioDev();
-    $fields = $model->pegaCampos("ANIMAL");
+    $fields = $model->pegaCampos("TESTE");
     $formData = $model->pegaCamposComResultado("ANIMAL", 1);
 ?>
 
@@ -16,7 +16,6 @@
     <input type="hidden" name="ACAO" value="<?= htmlspecialchars($acao) ?>">
     <input type="hidden" name="ID" value="<?= htmlspecialchars($id) ?>">
     
-
     <?php foreach ($fields as $field): ?>
         <?php switch ($field['TIPO']):
             case 'imgUpload':
@@ -48,6 +47,7 @@
                             </option>
                     <?php endforeach; ?>
                 </select>
+                <?php break; ?>
             <?php default: ?>
                 <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
                 <input

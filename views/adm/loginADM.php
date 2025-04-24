@@ -39,7 +39,7 @@
 </head>
 
 <body>
-    <?php include('../../public/componentes/navbar.php')?>  
+    <?php include('../../componentes/navbar.php')?>  
     <section class="secaoLogin">
         <div class="login">
             <h2>Login</h2>
@@ -51,11 +51,11 @@
                     $funcaoClick = "submitComValidacao('frmLoginADM')";
                     $funcaoLoad = "mudarTamanho('btnEntrarAdm', '188px', '50px', '20px',  )";
                     $titulo = "Entrar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
                 ?>
             </form>
         </div>
     </section>
-    <?php include('../../public/componentes/footer.php'); ?>
+    <?php include('../../componentes/footer.php'); ?>
 </body>
 </html>

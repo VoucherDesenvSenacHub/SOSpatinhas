@@ -1,7 +1,7 @@
 <?php
     $cssLink  = '../../public/css/arrecadacao.css';
     $tipo = 'User';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 ?>
 
 <div id="section">
@@ -73,7 +73,7 @@
                     
                     $funcaoClick = "compartilhar()";
                     $titulo = "Compartilhar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
                 ?>
                 <p id="textoCompartilhar">Verificado e autenticado pelo SOS Patinhas</p>
             </div>
@@ -107,5 +107,5 @@
     
 </script>
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

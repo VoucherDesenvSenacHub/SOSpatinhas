@@ -42,7 +42,7 @@
 </head>
 
 <body>
-    <?php include('../../public/componentes/navbar.php')?>
+    <?php include('../../componentes/navbar.php')?>
     
     <section class="corpo-container">
 
@@ -60,18 +60,18 @@
                     <?php
                         $funcaoClick = "submitComValidacao('formLogin')";
                         $titulo = "Entrar";
-                        include('../../public/componentes/componenteButton.php');
+                        include('../../componentes/componenteButton.php');
                     ?>
                 </form>
                 <p>Não tem uma conta? <a href="cadastroUsuario.php"> Cadastrar</a></p>
                 <div class="login-adm">
                     <a href="./loginADM.php">
-                        <img src="../../public/images/iconeAdm.png" alt="acesso-adm">
+                        <img src="../../images/iconeAdm.png" alt="acesso-adm">
                     </a>
                 </div>
             </div>
         </section>
     </section>
-    <?php include('../../public/componentes/footer.php'); ?>
+    <?php include('../../componentes/footer.php'); ?>
 </body>
 </html>

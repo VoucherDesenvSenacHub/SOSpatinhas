@@ -9,7 +9,7 @@
      <link rel="stylesheet" href="../../public/css/default.css">
  </head>
 <body>
-    <?php include('../../public/componentes/navbar.php'); ?>
+    <?php include('../../componentes/navbar.php'); ?>
     <section class="corpoContainer">
         <section class="secaoLogin">
             <div class="esqSenha">
@@ -22,13 +22,13 @@
         $funcaoClick = "redirecionar('confirmacaoEmail.php')";                             
         $funcaoLoad = "mudarTamanho('btnEnviar','80%', '80%')";                                                                     
         $titulo = "Enviar";                                           
-        include('../../public/componentes/componenteButton.php');
+        include('../../componentes/componenteButton.php');
     ?>
                 </form>
             </div>
         </section>
     </section>
 
-    <?php include('../../public/componentes/default/bottomHTML.php'); ?>
+    <?php include('../../componentes/default/bottomHTML.php'); ?>
 </body>
 </html>

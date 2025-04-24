@@ -2,7 +2,7 @@
 
     $cssLink  = '../../public/css/cadastrarMembro.css';
     $tipo = 'Adm';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 ?>
 
 <form action="" method="post" id="cadastrarMembro">      
@@ -37,13 +37,13 @@
         $funcaoClick = "adicionarComValidacao('Membro cadastrado com sucesso!')";
         $funcaoLoad = "mudarTamanho('btnCadastrar', '275px', '50px', '20px')";
         $titulo = "Cadastrar";
-        include('../../public/componentes/componenteButton.php');
+        include('../../componentes/componenteButton.php');
         
         $idBtn = "btnCancelar";
         $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
         $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
         $titulo = "Cancelar";
-        include('../../public/componentes//componenteButton.php');
+        include('../../componentes//componenteButton.php');
         ?>
         
         </form>
@@ -63,5 +63,5 @@
 </script>
     
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

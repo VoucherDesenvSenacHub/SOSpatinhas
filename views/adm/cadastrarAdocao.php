@@ -1,7 +1,7 @@
 <?php
     $cssLink  = '../../public/css/cadastrarAdocao.css';
     $tipo = 'Adm';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 
     // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
     // echo '<script type="text/javascript">
@@ -66,13 +66,13 @@
                 $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
                 $funcaoLoad = "mudarTamanho('btnCadastrar', '275px', '50px', '20px')";
                 $titulo = "Cadastrar";
-                include('../../public/componentes/componenteButton.php');
+                include('../../componentes/componenteButton.php');
 
                 $idBtn = "btnCancelar";
                 $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
                 $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
                 $titulo = "Cancelar";
-                include('../../public/componentes/componenteButton.php');
+                include('../../componentes/componenteButton.php');
                 ?>
             </div>
         </div>
@@ -118,7 +118,7 @@
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>
 
 <?php

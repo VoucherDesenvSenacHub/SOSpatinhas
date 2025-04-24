@@ -10,7 +10,7 @@
         <link rel="icon" type="image/png" href="../../public/images/icons/favicon.png">
     </head>
     <body>
-    <?php include('../../public/componentes/navbarUser.php'); ?>
+    <?php include('../../componentes/navbarUser.php'); ?>
 
     <div class="row" id="cima">
         <div class="containerCarrossel">
@@ -52,7 +52,7 @@
                     $funcaoClick = "redirecionar('quemSomos.php')";
                     $funcaoLoad = "mudarTamanho('btnEquipe')";
                     $titulo = "Conheça nossa equipe!";
-                    include("../../public/componentes/componenteButton.php");
+                    include("../../componentes/componenteButton.php");
                 ?>
             </div>
         </div>
@@ -70,7 +70,7 @@
                     $funcaoClick = "redirecionar('comoAjudar.php')";
                     $funcaoLoad = "mudarTamanho('btnDoacao')";
                     $titulo = "Saiba Mais!";
-                    include("../../public/componentes/componenteButton.php");
+                    include("../../componentes/componenteButton.php");
                 ?>
             </div> 
         </div>
@@ -86,7 +86,7 @@
                     $funcaoClick = "redirecionar('eventos.php')";
                     $funcaoLoad = "mudarTamanho('btnEventos')";
                     $titulo = "Saiba Mais!";
-                    include("../../public/componentes/componenteButton.php");
+                    include("../../componentes/componenteButton.php");
                 ?>
             </div> 
         </div>
@@ -102,7 +102,7 @@
                     $funcaoClick = "redirecionar('adocao.php')";
                     $funcaoLoad = "mudarTamanho('btnAdocao')";
                     $titulo = "Saiba Mais!";
-                    include("../../public/componentes/componenteButton.php");
+                    include("../../componentes/componenteButton.php");
                 ?>
             </div> 
         </div>
@@ -132,6 +132,6 @@
 
     </script>
         
-    <?php include('../../public/componentes/footer.php'); ?>
+    <?php include('../../componentes/footer.php'); ?>
     </body>
 </html>

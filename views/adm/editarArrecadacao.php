@@ -1,7 +1,7 @@
 <?php
   $cssLink  = '../../public/css/editarArrecadacao.css';
   $tipo = 'Adm';
-  include('../../public/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="frmEditarArrecadacao">
@@ -38,13 +38,13 @@
             $funcaoClick = "adicionarComValidacao('Arrecadação editada com sucesso!', 1, 'listaArrecadacao.php')";
             $funcaoLoad = "mudarTamanho('btnAdicionar', '100%', '39px', '16px')"; 
             $titulo = "Adicionar";           
-            include('../../public/componentes/componenteButton.php');
+            include('../../componentes/componenteButton.php');
 
             $idBtn = "btnCancelar";
             $funcaoClick = "cancelarForm('frmEditarArrecadacao', 1, 'editarArrecadacao.php')";
             $funcaoLoad = "mudarTamanho('btnCancelar', '100%', '39px', '16px')";
             $titulo = "Cancelar";
-            include('../../public/componentes/componenteButton.php');
+            include('../../componentes/componenteButton.php');
             ?>
 
         </div>
@@ -108,6 +108,6 @@
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>
 

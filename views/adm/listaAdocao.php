@@ -10,26 +10,26 @@
 
   $cssLink  = '../css/listaAdocao-ADM.css';
   $tipo = 'Adm';
-  include('../../../componentes/default/topHTML.php');
-  include('../templates/cardListas.php');
+  include('../../componentes/default/topHTML.php');
+  include('../../componentes/cardListas.php');
 ?>
 
 <h1>Lista de Adoções</h1>
 
 <div class="pesquisar">
-    <img src="../images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
+    <img src="../../public/images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
     <input type="text" placeholder="Pesquisar">
 </div>
 
 <div class="lista-adocao" id="lista-adocao">
     <?php
         $animais = [
-            ["nome" => "Rochele", "imagem" => "../images/Rectangle 71.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Toby", "imagem" => "../images/Toby.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Rumi", "imagem" => "../images/Rumi.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nobre", "imagem" => "../images/Nobre.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Sir Dougg", "imagem" => "../images/Sir Dougg.png", "localizacao" => "Campo Grande - MS"],
-            ["nome" => "Nigel", "imagem" => "../images/Nigel.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Rochele", "imagem" => "../../public/images/Rectangle 71.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Toby", "imagem" => "../../public/images/Toby.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Rumi", "imagem" => "../../public/images/Rumi.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nobre", "imagem" => "../../public/images/Nobre.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Sir Dougg", "imagem" => "../../public/images/Sir Dougg.png", "localizacao" => "Campo Grande - MS"],
+            ["nome" => "Nigel", "imagem" => "../../public/images/Nigel.png", "localizacao" => "Campo Grande - MS"],
         ];
 
         $itensPorPagina = 6; 
@@ -152,5 +152,5 @@ let links = document.querySelectorAll('.link');
 </script>
 
 <?php
-    include('../templates/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

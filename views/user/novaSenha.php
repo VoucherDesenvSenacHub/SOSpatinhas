@@ -10,7 +10,7 @@
  </head>
 
 <body>
-    <?php include('../../public/componentes/navbar.php'); ?>
+    <?php include('../../componentes/navbar.php'); ?>
     <section class="corpo-container">
         <section class="secao-login">
             <div class="login">
@@ -23,13 +23,13 @@
         $funcaoClick = "adicionarComValidacao('Enviado com sucesso')";                             
         $funcaoLoad = "mudarTamanho('btnEnviar','188px', '50px', '20px')";                                                                     
         $titulo = "Enviar";                                           
-        include('../../public/componentes/componenteButton.php');
+        include('../../componentes/componenteButton.php');
     ?>
                 </form>
             </div>
         </section>
     </section>
 
-    <?php include('../../public/componentes/footer.php'); ?>
+    <?php include('../../componentes/default/bottomHTML.php'); ?>
 </body>
 </html>

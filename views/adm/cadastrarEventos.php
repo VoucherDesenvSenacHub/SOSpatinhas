@@ -1,7 +1,7 @@
 <?php
     $cssLink  = '../../public/css/cadastrarEventos.css';
     $tipo = 'Adm';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
     // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
     // echo '<script type="text/javascript">
     //         alert("Você precisa estar logado como administrador para acessar esta página.");
@@ -44,14 +44,14 @@
                     $funcaoClick = "adicionarComValidacao('Evento cadastrado com sucesso!')";
                     $funcaoLoad = "mudarTamanho('btn', '275px', '50px', '20px')";
                     $titulo = "Cadastrar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
                     
                     //  arrumar o direcionamento
                     $idBtn = "btnCancelar";
                     $funcaoClick = "cancelarForm('frmCadastroAdocao','listaEventosADM.php')";
                     $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
                     $titulo = "Cancelar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
                 ?>
             </div>
         </div>
@@ -96,7 +96,7 @@
 </script>
 
 <?php
-   include('../../public/componentes/default/bottomHTML.php');
+   include('../../componentes/default/bottomHTML.php');
 ?>
 
 <?php

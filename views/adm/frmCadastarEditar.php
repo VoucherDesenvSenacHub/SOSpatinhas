@@ -1,7 +1,7 @@
 <?php
     require_once '../../models/formularioDev.php';
     $cssLink  = '../../public/css/cadastrarAdocao.css';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
     $form = 'Animal';
     $acao = 'C';
     $id = $_GET['id'] ?? null;
@@ -19,7 +19,7 @@
     <?php foreach ($fields as $field): ?>
         <?php switch ($field['TIPO']):
             case 'imgUpload':
-                include('../../public/componentes/imgUpload.php');
+                include('../../componentes/imgUpload.php');
                 break;
             case 'perfilUpload':
                 //fazer um componente tipo imgUpload pra ft de perfil
@@ -67,5 +67,5 @@
 </form>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

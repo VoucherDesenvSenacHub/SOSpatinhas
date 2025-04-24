@@ -1,7 +1,7 @@
 <?php
   $cssLink  = '../../public/css/detalhesEvento.css';
   $tipo = 'User';
-  include('../../public/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <section class="conteudo">
@@ -37,7 +37,7 @@
       <?php
         $funcaoClick = "compartilhar()";
         $titulo = "Compartilhar";
-        include('../../public/componentes/componenteButton.php');
+        include('../../componentes/componenteButton.php');
       ?>
     </div>
   </div>
@@ -49,13 +49,13 @@
       $cardComponents2 = array();
       for ($i = 0; $i < 5; $i++) {
           ob_start(); 
-          include('../../public/componentes/eventosCard.php');
+          include('../../componentes/eventosCard.php');
           $cardComponents2[] = ob_get_clean();
       }
 
       $cardComponents = $cardComponents2;
       $carouselId = 'carousel2';
-      include('../../public/componentes/carossel.php');
+      include('../../componentes/carossel.php');
       ?>
     </div>
   </div>
@@ -86,4 +86,4 @@
   }
 </script>
 
-<?php include('../../public/componentes/default/bottomHTML.php'); ?>
+<?php include('../../componentes/default/bottomHTML.php'); ?>

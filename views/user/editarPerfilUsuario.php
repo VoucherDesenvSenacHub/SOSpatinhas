@@ -1,7 +1,7 @@
 <?php
     $cssLink  = '../../public/css/editarPerfilUsuario.css';
     $tipo = 'User';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 ?>
 
 <form action="" class="frmEditarPerfil">
@@ -34,13 +34,13 @@
                     $funcaoClick = "adicionarComValidacao('Dasos salvos com sucesso!', 1, 'perfilUsuario.php')";
                     $funcaoLoad = "mudarTamanho('btnSalvar')";
                     $titulo = "Salvar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
 
                     $idBtn = "btnCancelar";
                     $funcaoClick = "adicionarComValidacao('Dasos salvos com sucesso!', 1, 'perfilUsuario.php')";
                     $funcaoLoad = "mudarTamanho('btnCancelar')";
                     $titulo = "Cancelar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
                 ?>
             </div>
         </div>
@@ -61,5 +61,5 @@
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

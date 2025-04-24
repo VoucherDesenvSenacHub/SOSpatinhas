@@ -1,7 +1,7 @@
 <?php
     $cssLink  = '../../public/css/developers.css';
     $tipo = 'User';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 ?>
 <body>
     <section class="pai">
@@ -344,7 +344,7 @@
         </section>
     </section>
     <?php
-        include('../../public/componentes/default/bottomHTML.php');
+        include('../../componentes/default/bottomHTML.php');
     ?>
 </body>
 </html>

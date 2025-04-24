@@ -10,7 +10,7 @@
 
   $cssLink  = '../../public/css/editarEventos.css';
   $tipo = 'Adm';
-  include('../../public/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="formCadastroEvento">
@@ -44,14 +44,14 @@
                     $funcaoClick = "adicionarComValidacao('Evento editado com sucesso!', 1, 'listaEventosADM.php')";
                     $funcaoLoad = "mudarTamanho('btnSalvar', '275px', '50px', '20px')";
                     $titulo = "Salvar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
                     
                     
                     $idBtn = "btnCancelar";
                     $funcaoClick = "cancelarForm('frmCadastroAdocao','listaEventosADM.php')";
                     $funcaoLoad = "mudarTamanho('btnCancelar', '275px', '50px', '20px')";
                     $titulo = "Cancelar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
                     ?>
             </div>
         </div>
@@ -112,7 +112,7 @@
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>
 
 <?php

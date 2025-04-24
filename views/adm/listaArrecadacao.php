@@ -1,8 +1,8 @@
 <?php
   $cssLink  = '../../public/css/listaArrecadacao.css';
   $tipo = 'Adm';
-  include('../../public/componentes/default/topHTML.php');
-  include('../../public/componentes/cardListas.php');
+  include('../../componentes/default/topHTML.php');
+  include('../../componentes/cardListas.php');
 ?>
 
 <h1>Lista de Arrecadações</h1>
@@ -147,5 +147,5 @@
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

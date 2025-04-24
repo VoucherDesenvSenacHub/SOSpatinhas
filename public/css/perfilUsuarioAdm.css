@@ -20,7 +20,7 @@
     gap: 1rem;
 }
 
-#iconscontainers{
+#iconsContainers{
 
     display:flex;
     flex-direction: row;
@@ -51,25 +51,29 @@
     margin-left: 10px;
 }
 
-
 #fotoMembro{
     width: 190px;
 }
+
 #nomeMembro{
     font-size: 24px;
 }
+
 .icones{
     width: 30px;
     height: 30px;
 }
+
 .titulos{
     font-size: 24px;
     font-weight:bold;
 }
+
 .conteudoTitulos{
     font-size: 20px;
     color: #696969;
 }
+
 
 @media (max-width: 1440px) {
     #perfil {
@@ -82,8 +86,6 @@
         font-size: 18px;
     }
 }
-
-
 @media (max-width: 1024px) {
     #perfil {
         gap: 3rem; 
@@ -95,7 +97,6 @@
         font-size: 18px;
     }
 }
-
 @media (max-width: 768px) {
     #perfil {
         display: flex;
@@ -103,7 +104,7 @@
         gap: 2rem;
         align-items: center;
     }
-    #iconscontainers {
+    #iconsContainers {
         gap: 2rem;
     }
     #fotoMembro {
@@ -123,19 +124,17 @@
         margin-bottom: 35px;
     }
 }
-
-
 @media (max-width: 425px) {
     #perfil {
         align-items: flex-start;
         flex-direction: column;  
         gap: 1rem;
+        margin-top: 20px;
     }
     #fotoMembro {
         width: 120px;
     }
-
-    #iconscontainers {
+    #iconsContainers {
         flex-direction: column;
         gap: 2rem;
     }
@@ -149,7 +148,6 @@
     .conteudoTitulos {
         font-size: 18px;
     }
-
     #rg{
         margin-bottom: 35px;
     }

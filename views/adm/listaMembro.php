@@ -1,8 +1,8 @@
 <?php
   $cssLink  = '../../public/css/listaMembro.css';
   $tipo = 'Adm';
-  include('../../public/componentes/default/topHTML.php');
-  include ('../../public/componentes/cardUsuarioADM.php');
+  include('../../componentes/default/topHTML.php');
+  include ('../../componentes/cardUsuarioADM.php');
 ?>
 
 <h1>Lista de membros</h1>
@@ -163,5 +163,5 @@
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

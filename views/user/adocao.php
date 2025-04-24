@@ -99,7 +99,7 @@
     
     if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
         foreach ($rowAnimal as $animal) {
-            include('../../public/componentes/animalCard.php'); 
+            include('../../componentes/animalCard.php'); 
         }
         exit; 
     }
@@ -110,7 +110,7 @@
 <?php
     $cssLink  = '../../public/css/adocao.css';
     $tipo = $_GET['type'] ?? 'User';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 ?>
 
 <section class="top-texts">
@@ -166,7 +166,7 @@
             <?php
                 $funcaoClick = "submitSimples(filtros)";
                 $titulo = "Filtrar"; 
-                include("../../public/componentes/componenteButton.php");
+                include("../../componentes/componenteButton.php");
 
             ?>
         </div>
@@ -177,7 +177,7 @@
 <div class="card-container">
     <?php
         foreach ($rowAnimal as $animal){
-            include ('../../public/componentes/animalCard.php');
+            include ('../../componentes/animalCard.php');
         };
     ?>
 </div>
@@ -257,5 +257,5 @@ carregarAnimais();
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

@@ -1,7 +1,7 @@
 <?php
     $cssLink  = '../../public/css/cadastrarArrecadacao.css';
     $tipo = 'Adm';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroArrecadacao">
@@ -38,12 +38,12 @@
             $funcaoClick = "adicionarComValidacao('Arrecadação cadastrada com sucesso!')";
             $funcaoLoad = "mudarTamanho('400px')";
             $titulo = "Cadastrar";
-            include('../../public/componentes/componenteButton.php');
+            include('../../componentes/componenteButton.php');
 
             $funcaoClick = "cancelarForm('frmCadastroAdocao','listaArrecadacoesADM.php')";
             $funcaoLoad = "mudarTamanho('400px')";
             $titulo = "Cancelar";
-            include('../../public/componentes/componenteButton.php');
+            include('../../componentes/componenteButton.php');
             ?>
             
         </div>
@@ -103,6 +103,6 @@
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>
 

@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <?php include('../../public/componentes/navbar.php')?>
+    <?php include('../../componentes/navbar.php')?>
     
     <section class="corpo-container">
         <h1>Cadastro</h1>
@@ -85,12 +85,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php
                 $funcaoClick = "submitComValidacao('formCadastro')";
                 $titulo = "Cadastrar";
-                include('../../public/componentes/componenteButton.php');
+                include('../../componentes/componenteButton.php');
             ?>
         </form>
         <p>Já tem uma conta? <a href="login.php">Login</a></p>
    
     </section>
 </body>
-<?php include('../../public/componentes/footer.php'); ?>
+<?php include('../../componentes/default/bottomHTML.php'); ?>
 </html> 

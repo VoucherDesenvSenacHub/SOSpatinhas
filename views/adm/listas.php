@@ -1,6 +1,6 @@
 <?php
   $cssLink  = '../../public/css/listaMembro.css';
-  include('../../public/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
   $tipo = $_GET['tipo'] ?? null;
 ?>
 
@@ -30,5 +30,5 @@
 
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

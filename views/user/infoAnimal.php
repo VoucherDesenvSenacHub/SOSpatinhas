@@ -1,7 +1,7 @@
 <?php
   $cssLink  = '../../public/css/infoAnimal.css';
   $tipo = 'User';
-  include('../../public/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <div class="container">
@@ -53,7 +53,7 @@
       <?php
         $funcaoClick = "redirecionar('formAdocao.php')";                             
         $titulo = "Adotar";     
-        include('../../public/componentes/componenteButton.php');
+        include('../../componentes/componenteButton.php');
       ?>
     </div>
   </div>
@@ -95,5 +95,5 @@
 </script>
 
 <?php
-  include('../../public/componentes/default/bottomHTML.php');
+  include('../../componentes/default/bottomHTML.php');
 ?>

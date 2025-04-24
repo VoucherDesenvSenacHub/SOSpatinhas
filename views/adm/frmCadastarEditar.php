@@ -63,6 +63,7 @@
     <?php endforeach; ?>
 
     <button type="submit">Salvar</button>
+    <button type="reset">Cancelar</button>
 </form>
 
 <?php

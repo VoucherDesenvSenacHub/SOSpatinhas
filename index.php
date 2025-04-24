@@ -37,13 +37,13 @@ if (isset($paginasRestritas[$tipoUsuario]) && in_array($pagina, $paginasRestrita
         switch ($pagina) {
             case "perfilAdm":
             case "perfilMembro":
-            case "CadastrarEditar":
-                require 'controllers/CadastrarEditarController.php'
+            case "cadastrarEditar":
+                require 'controllers/CadastrarEditarController.php';
                 $form = new CadastrarEditarController();
                 $form->index($form, $id, $acao);//paramns in the url
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    require 'controllers/{$form}Controller.php'
-                    $obj = new $form Controller();
+                    require 'controllers/{$form}Controller.php';
+                    $obj = new $formController();
                     $obj->CRUD();
                 }
             case "frmPreenchido":
@@ -84,7 +84,7 @@ if (isset($paginasRestritas[$tipoUsuario]) && in_array($pagina, $paginasRestrita
         case "comoAjudar":
         case "quemSomos":
         case "paginaInicio":
-            incluirPagina($pagina, 'compartilhada');
+            incluirPagina($pagina, 'user');
             break;
         default:
             header("HTTP/1.0 404 Not Found");

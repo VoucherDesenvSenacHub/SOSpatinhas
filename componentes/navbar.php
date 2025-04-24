@@ -24,7 +24,7 @@
                         $funcaoClick = "redirecionar('login.php')";
                         $titulo = "Entrar";
                         $funcaoLoad = "mudarTamanho('btnEntrar', '142px', '42px', '16px')";
-                        include('../../public/componentes/componenteButton.php');
+                        include('../../componentes/componenteButton.php');
                     ?>
                 </div>
                 <div id="btnCadastroDiv">
@@ -33,7 +33,7 @@
                         $funcaoClick = "redirecionar('cadastroUsuario.php')";
                         $titulo = "Cadastrar";
                         $funcaoLoad = "mudarTamanho('btnCadastro', '142px', '42px', '16px')";
-                        include('../../public/componentes/componenteButton.php');
+                        include('../../componentes/componenteButton.php');
                         $idBtn = "";
                         $funcaoClick = "";
                         $titulo = "";

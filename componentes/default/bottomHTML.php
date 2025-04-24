@@ -1,4 +1,4 @@
 </section>
-    <?php include('../../public/componentes/footer.php'); ?>
+    <?php include('../../componentes/footer.php'); ?>
 </body>
 </html>

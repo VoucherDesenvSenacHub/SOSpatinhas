@@ -14,10 +14,10 @@
     <link rel="icon" type="image/png" href="../../public/images/icons/favicon.png">
 </head>
 <body>
-<?php include('../../public/componentes/navbar.php'); ?>
+<?php include('../../componentes/navbar.php'); ?>
 
 <?php if ($isAdm): ?>
-    <?php include('../../public/componentes/sidebarAdm.php'); ?>
+    <?php include('../../componentes/sidebarAdm.php'); ?>
 <?php endif; ?>
     
 

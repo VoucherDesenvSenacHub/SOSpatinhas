@@ -13,9 +13,9 @@
     //     exit();
     // }
 
-    $cssLink  = '../../public/css/perfilUsuario.css';
+    $cssLink  = '../../public/css/perfilUsuarioAdm.css';
     $tipo = 'Adm';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 
     // $emailLogado = $_SESSION['email'];
 
@@ -36,9 +36,9 @@
     <div id="contentFotoMembro">
         <img id="fotoMembro" src="../../public/images/icons/iconUser.png" alt="icone foto do Usuário">
         <h1 id="nomeMembro">Betina de Souza Silva</h1>
-</div>
+    </div>
 
-<div id="iconscontainers">
+    <div id="iconsContainers">
         <div id="contentInfosMembro">
             <div class="contentItensPerfil">
                 <img class="icones" src="../../public/images/icons/iconUser_2.png" alt="icone telefone">
@@ -52,9 +52,7 @@
                 <img class="icones" src="../../public/images/icons/data.png" alt="icone data de nascimento">
                 <div class="contentItens">
                     <p class="titulos">Data Nascimento:</p>
-                    <p class="conteudoTitulos">
-                        25/12/1981
-                    </p>
+                    <p class="conteudoTitulos">25/12/1981</p>
                 </div>
             </div>
 
@@ -62,9 +60,7 @@
                 <img class="icones" src="../../public/images/icons/Telefone.png" alt="icone telefone">
                 <div class="contentItens">
                     <p class="titulos">Telefone:</p>
-                    <p class="conteudoTitulos">
-                        67 372422124
-                    </p>
+                    <p class="conteudoTitulos">67 372422124</p>
                 </div>
             </div>
         </div>
@@ -82,9 +78,7 @@
                 <img class="icones" src="../../public/images/icons/rg.png" alt="icone cpf">
                 <div class="contentItens">
                     <p class="titulos">CPF:</p>
-                    <p class="conteudoTitulos">
-                        368.148.968-04
-                    </p>
+                    <p class="conteudoTitulos">368.148.968-04</p>
                 </div>
             </div>
             
@@ -93,18 +87,13 @@
                 <img class="icones" src="../../public/images/icons/rg.png" alt="icone rg">
                 <div class="contentItens">
                     <p class="titulos">RG:</p>
-                    <p class="conteudoTitulos">
-                        45.622.343-5
-                    </p>
+                    <p class="conteudoTitulos">45.622.343-5</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-    
-</div>
         
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

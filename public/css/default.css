@@ -37,6 +37,8 @@ body {
     padding: 20px;
 }
 
+
+/* ----------------------------  NAVBAR  ----------------------------------------------------------*/
 .navbar {
     background-color: white;
     position: sticky;
@@ -139,6 +141,8 @@ body {
     display: none;
 }
 
+
+/* ----------------------------  SIDEBAR  ----------------------------------------------------------*/
 .sidebar {
     height: 100vh;
     min-height: 50px;
@@ -203,6 +207,9 @@ body {
     letter-spacing: 0.3px;
 }
 
+
+
+/* ----------------------------  FOOTER  ----------------------------------------------------------*/
 footer {
     width: 100%;
     position: relative; 
@@ -309,6 +316,74 @@ footer {
     display: inline-block;
     color: white;
 }
+
+
+
+/* ----------------------------  FORMULARIO  ----------------------------------------------------------*/
+#frmCadastrarEditar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.frmContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.frmField {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ----------------------------  INPUTS E AFINS  ----------------------------------------------------------*/
+input, textarea, select {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+select {
+    color: #888;
+    cursor: pointer;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    padding-right: 40px;
+    position: relative;
+}
+
+.selectContainer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.selectContainer::after {
+    content: url("../images/cadastroAdocao-ADM/setaBaixoDD.png");
+    color: #888;
+    position: absolute;
+    right: 20px;
+    top: 45%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+
 
 
 @media (max-width: 1440px) {

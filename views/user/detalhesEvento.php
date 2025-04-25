@@ -34,11 +34,13 @@
     <div class="detalhesEvento">
       <h1>Feira do Auau</h1>
       <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
-      <?php
-        $funcaoClick = "compartilhar()";
-        $titulo = "Compartilhar";
-        include('../../componentes/componenteButton.php');
-      ?>
+      <div class="buttonComponente">
+        <?php
+          $funcaoClick = "compartilhar()";
+          $titulo = "Compartilhar";
+          include('../../componentes/componenteButton.php');
+        ?>
+      </div>
     </div>
   </div>
     

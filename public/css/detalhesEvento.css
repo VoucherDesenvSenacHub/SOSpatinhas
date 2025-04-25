@@ -6,7 +6,7 @@
 }
 
 #eventosCarrosel {
-  width: 90%; 
+  width: 100%; 
 }
 
 .titulo {
@@ -18,7 +18,7 @@
 }
 
 .carrosselContainer {
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 
 .imgEDetalhesEvento {
@@ -31,10 +31,6 @@
   padding: 0 0 0 5px;
   margin-top: 3rem;
   margin-bottom: 5rem;
-}
-
-.slide {
-  display: none;
 }
 
 .slider {
@@ -100,14 +96,15 @@
 .detalhesEvento {
   text-align: left;
   height: 360px;
-  width: 553px;
+  width: 90%;
+  max-width: 553px;
 }
 
 .detalhesEvento h1 {
   margin-bottom: 10px;
   color: #333;
   font-size: 35px;
-  width: 585px;
+  width: 100%;
 }
 
 .detalhesEvento p {
@@ -131,6 +128,11 @@
   margin: 0 11rem;
 }
 
+.buttonComponente {
+  display: flex;
+  justify-content: center;
+}
+
 
 @media (max-width: 1024px) {
   .eventoSlides {
@@ -138,14 +140,33 @@
     height: 100%;
     max-width: 27rem;
   }
+  .detalhesEvento {
+    width: 63%;
+  }
+  .fade {
+    width: 80%;
+  }
+  .btnSlide {
+    width: 80%;
+  }
+  .imgEDetalhesEvento {
+    gap: 0;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+  .carrosselContainer {
+    margin-top: 0;
+  }
+  .slider {
+    width: 85%;
+  }
+  #eventosCarrosel {
+    width: 100%;
+  }
 }
-
 @media (max-width: 768px) {
   .carrosselContainer {
     margin-top: 4rem;
-  }
-  .conteudo {
-    padding-right: 10px;
   }
   .corpo {
     width: 100%;
@@ -167,9 +188,6 @@
     width: 100%;
     height: auto;
   }
-  .eventoSlides {
-    width: 100%;
-  }
   .detalhesEvento {
     width: 90%;
     height: auto;
@@ -190,9 +208,13 @@
     padding: 10px 30px;
     font-size: 18px;
   }
+  .fade {
+    width: 100%;
+  }
+  .btnSlide {
+    width: 100%;
+  }
 }
-
-
 @media (max-width: 425px) {
   .container {
     padding: 8px;

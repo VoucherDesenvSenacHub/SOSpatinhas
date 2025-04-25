@@ -38,25 +38,28 @@
                     <?php break; ?>
                 <?php case 'select': ?>
                     <div class="frmField">
-                        <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
-                        <select name="<?= $field['NAME_FIELD'] ?>" id="<?= $field['NAME_FIELD'] ?>" <?= $field['OBRIGATORIO'] ? 'required' : '' ?>>
-                            <option value="">Selecionar</option>
-                            <?php 
-                                $options = explode(",", $field['OPTIONS_SELECT']);
-                                foreach ($options as $option):
-                                    $selected = (isset($formData[$field['NAME_FIELD']]) && $formData[$field['NAME_FIELD']] === trim($option)) ? 'selected' : '';
-                            ?>
-                                    <option value="<?= trim($option) ?>" <?= $selected ?>>
-                                        <?= htmlspecialchars(trim($option)) ?>
-                                    </option>
-                            <?php endforeach; ?>
-                        </select>
+                        <div class="selectContainer">
+                            <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
+                            <select name="<?= $field['NAME_FIELD'] ?>" id="<?= $field['NAME_FIELD'] ?>" <?= $field['OBRIGATORIO'] ? 'required' : '' ?>>
+                                <option value="">Selecionar</option>
+                                <?php 
+                                    $options = explode(",", $field['OPTIONS_SELECT']);
+                                    foreach ($options as $option):
+                                        $selected = (isset($formData[$field['NAME_FIELD']]) && $formData[$field['NAME_FIELD']] === trim($option)) ? 'selected' : '';
+                                ?>
+                                        <option value="<?= trim($option) ?>" <?= $selected ?>>
+                                            <?= htmlspecialchars(trim($option)) ?>
+                                        </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
                     </div>
                     <?php break; ?>
                 <?php case 'textarea': ?>
                     <div class="frmField">
-                        <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
+                        <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
                         <textarea
+                            class="form-input"
                             name="<?= $field['NAME_FIELD'] ?>"
                             id="<?= $field['NAME_FIELD'] ?>"
                             placeholder="<?= $field['LABEL'] ?>"
@@ -67,8 +70,9 @@
                     <?php break; ?>
                 <?php default: ?>
                     <div class="frmField">
-                        <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
+                        <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
                         <input
+                            class="form-input"
                             type="<?= $field['TIPO'] ?>"
                             name="<?= $field['NAME_FIELD'] ?>"
                             id="<?= $field['NAME_FIELD'] ?>"

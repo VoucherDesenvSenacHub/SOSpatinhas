@@ -322,8 +322,12 @@ footer {
 /* ----------------------------  FORMULARIO  ----------------------------------------------------------*/
 #frmCadastrarEditar {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    column-gap: 4rem;
+    display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
 .frmContainer {
@@ -341,7 +345,64 @@ footer {
 
 
 /* ----------------------------  INPUTS E AFINS  ----------------------------------------------------------*/
-input, textarea, select {
+/* input, textarea {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+} */
+
+.form-input {
+    width: clamp(100px, 50vw, 420px);
+    height: 40px;
+    padding: 0 20px;
+    color: var(--main-color);
+    font-family: var(--body-font);
+    border: 1px solid var(--tertiary-color); /* Basic border styling */
+    border-radius: 1px 1px 2px 2px;
+    margin: 0 auto 10px auto;
+    transition: all 500ms; /* This is used to animate the border later */
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-label {
+    font-size: 1.4rem;
+    color: rgb(117, 117, 117);
+    display: block;
+    /* Moves the label on TOP of the placeholder */
+    /* You'll need to change this as needed */
+    transform: translate(2rem,-4rem);
+    transform-origin: 0 0; /* Used later for transitions */
+    transition: all 500ms;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    pointer-events: none; 
+}
+
+.form-input::placeholder {
+    display: none;
+    color: transparent;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-6.75rem) scale(0.8);
+}
+
+.form-input:not(:placeholder-shown) {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+select {
     width: 100%;
     padding: 20px;
     margin-bottom: 15px;

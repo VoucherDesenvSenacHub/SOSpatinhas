@@ -1,7 +1,7 @@
 <?php
 require_once '../config/connect.php';
 
-class Arrecadacao extends Connect{
+class ArrecadacaoModel extends Connect{
     public function CRUD($jsonData){
         $stmt = $this->connection->prepare("CALL CRUD_ARRECADACAO(:jsonData)");
         $stmt->bindParam(':jsonData', $jsonData, PDO::PARAM_STR);

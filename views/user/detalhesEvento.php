@@ -7,15 +7,15 @@
 <section class="conteudo">
   <div class="imgEDetalhesEvento">
     <div class="slider">
-      <div class="slide fade">
+      <div class="slideFade">
         <img class= "eventoSlides" src="../../public/images/horto-florestal.png" alt="Horto Florestal 1">
       </div>
 
-      <div class="slide fade">
+      <div class="slideFade">
         <img class= "eventoSlides" src="../../public/images/horto-florestal.png" alt="Horto Florestal 2">
       </div>
 
-      <div class="slide fade">
+      <div class="slideFade">
         <img class= "eventoSlides" src="../../public/images/horto-florestal.png" alt="Horto Florestal 3">
       </div>
 

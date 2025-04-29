@@ -2,18 +2,21 @@
     padding: 0;
     margin: 0;
     border: 0;
+    box-sizing: border-box; /* ESSENCIAL para controle de tamanho */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
+
+body {
     background-color: rgb(198, 225, 196);
     background-image: url("../images/Patinhas.png");
     background-size: 50%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden; /* Previne o scroll lateral */
 }
 
-.corpo-container{
-
-    max-width: auto;
+.corpo-container {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -23,57 +26,53 @@ body{
     justify-content: center;
     align-items: center;
     height: calc(125vh - 431px);
+    width: 100%;
 }
-.bloco {
 
+.bloco {
     background-color: white;
-    padding: 65px 55px 65px 55px;
+    padding: 65px 55px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    align-items: center;
+    max-width: 90vw; /* evita estourar em telas pequenas */
 }
 
 .bloco h2 {
     margin-bottom: 25px;
 }
+
 .bloco p {
     font-size: 20px;
-    width: 350px;
-    margin-bottom: 25px;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto 25px auto;
 }
-.bloco img{
-    width: 260px;
+
+.bloco img {
+    width: 100%;
+    max-width: 260px;
 }
+
+/* RESPONSIVO */
 
 @media (max-width: 768px) {
-
-    .section{
-        max-width: 768px;
-
-    }
-    .corpo-container{
-
-        max-width: 768px;
+    .bloco {
+        padding: 45px 10vw;
     }
 
-    
-    .bloco{
-        padding: 45px 115px ;
-    }
-    .bloco img{
+    .bloco img {
         max-width: 130px;
     }
+
     .bloco p {
-        width:175px;
+        font-size: 18px;
     }
-   
 }
 
-@media (max-width: 425px){
-
-    .bloco{
-        padding:45px 65px;
+@media (max-width: 425px) {
+    .bloco {
+        padding: 45px 5vw;
     }
 
     .secao-emailenviado {

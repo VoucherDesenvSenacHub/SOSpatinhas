@@ -1,7 +1,7 @@
 <?php
     $cssLink  = '../../public/css/perfilMembro.css';
     $tipo = 'Adm';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
     
     // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
     //     echo '<script type="text/javascript">
@@ -40,5 +40,5 @@
 </div>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

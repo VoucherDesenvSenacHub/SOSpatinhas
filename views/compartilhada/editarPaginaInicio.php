@@ -9,8 +9,7 @@
     </head>
     <body>
         <?php 
-            include('../../public/componentes/navbarAdm.php');
-            include('../../public/componentes/modalEditar.php')
+            include('../../componentes/navbarAdm.php');
          ?>
 
         <section id="bannerMobas">
@@ -99,7 +98,7 @@
 
 
 
-        <?php include('../../public/componentes/footer.php') ?>
+        <?php include('../../componentes/footer.php') ?>
     </body>
 
     <script>

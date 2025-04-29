@@ -16,13 +16,13 @@
         exit();
      }
 
-    $cssLink  = '../../public/componentes/css/perfilUsuario.css';
+    $cssLink  = '../../public/css/perfilUsuario.css';
     $tipo = 'User';
-    include('../../public/componentes/default/topHTML.php');
+    include('../../componentes/default/topHTML.php');
 
     $emailLogado = $_SESSION['email'];
 
-    $usersFile = '../../public/componentes/script/userData.json';
+    $usersFile = '../../public/script/userData.json';
     $users = json_decode(file_get_contents($usersFile), true);
 
     $usuarioAtual = null;
@@ -37,19 +37,19 @@
 
 <div id="perfil">
     <div id="contentFotoMembro">
-        <img id="fotoMembro" src="../../public/componentes/images/icons/iconUser.png" alt="icone foto do Usuário">
+        <img id="fotoMembro" src="../../public/images/icons/iconUser.png" alt="icone foto do Usuário">
         <p id="nomeMembro"><?=$usuarioAtual['nome']; ?></p>
         <?php
             $funcaoClick = "sair()";
             $titulo = "Sair";
-            include('../../public/componentes/componenteButton.php');
+            include('../../componentes/componenteButton.php');
         ?>
 </div>
 
 <div id="iconscontainers">
         <div id="contentInfosMembro">
             <div class="contentItensPerfil">
-                <img class="icones" src="../../public/componentes/images/icons/iconUser_2.png" alt="icone telefone">
+                <img class="icones" src="../../public/images/icons/iconUser_2.png" alt="icone telefone">
                 <div class="contentItens">
                     <p class="titulos">Nome:</p>
                     <p class="conteudoTitulos"><?=$usuarioAtual['nome']; ?></p>
@@ -57,7 +57,7 @@
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../../public/componentes/images/icons/data.png" alt="icone data de nascimento">
+                <img class="icones" src="../../public/images/icons/data.png" alt="icone data de nascimento">
                 <div class="contentItens">
                     <p class="titulos">Data Nascimento:</p>
                     <p class="conteudoTitulos">
@@ -67,7 +67,7 @@
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../../public/componentes/images/icons/Telefone.png" alt="icone telefone">
+                <img class="icones" src="../../public/images/icons/Telefone.png" alt="icone telefone">
                 <div class="contentItens">
                     <p class="titulos">Telefone:</p>
                     <p class="conteudoTitulos">
@@ -79,7 +79,7 @@
 
         <div id="contentInfosMembro2">
             <div class="contentItensPerfil">
-                <img class="icones" src="../../public/componentes/images/icons/email.png" alt="icone email">
+                <img class="icones" src="../../public/images/icons/email.png" alt="icone email">
                 <div class="contentItens">
                     <p class="titulos">Email:</p>
                     <p class="conteudoTitulos"><?=$usuarioAtual['email']; ?></p>
@@ -87,7 +87,7 @@
             </div>
 
             <div class="contentItensPerfil">
-                <img class="icones" src="../../public/componentes/images/icons/rg.png" alt="icone cpf">
+                <img class="icones" src="../../public/images/icons/rg.png" alt="icone cpf">
                 <div class="contentItens">
                     <p class="titulos">CPF:</p>
                     <p class="conteudoTitulos">
@@ -98,7 +98,7 @@
             
             
             <div class="contentItensPerfil" id="rg">
-                <img class="icones" src="../images/icons/rg.png" alt="icone rg">
+                <img class="icones" src="../../public/images/icons/rg.png" alt="icone rg">
                 <div class="contentItens">
                     <p class="titulos">RG:</p>
                     <p class="conteudoTitulos">
@@ -114,5 +114,5 @@
 </div>
         
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

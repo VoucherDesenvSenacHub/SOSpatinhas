@@ -11,14 +11,6 @@
         <img class= "eventoSlides" src="../../public/images/horto-florestal.png" alt="Horto Florestal 1">
       </div>
 
-      <div class="slideFade">
-        <img class= "eventoSlides" src="../../public/images/horto-florestal.png" alt="Horto Florestal 2">
-      </div>
-
-      <div class="slideFade">
-        <img class= "eventoSlides" src="../../public/images/horto-florestal.png" alt="Horto Florestal 3">
-      </div>
-
       <div class="btnSlide">
         <span class="botao" onclick="OutroSlide(1)" > </span>
         <span class="botao" onclick="OutroSlide(2)" > </span>

@@ -8,7 +8,7 @@
     // exit();
     // }
 
-  $cssLink  = '../css/listaAdocao-ADM.css';
+  $cssLink  = '../../public/css/listaAdocao.css';
   $tipo = 'Adm';
   include('../../componentes/default/topHTML.php');
   include('../../componentes/cardListas.php');

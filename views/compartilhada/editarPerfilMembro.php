@@ -10,7 +10,7 @@
 
   $cssLink  = '../../public/css/editarPerfilMembro.css';
   $tipo = 'Adm';
-  include('../../public/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <form action="" method="post" id="frmEditarPerfilMembro">
@@ -42,14 +42,14 @@
                     $funcaoClick = "adicionarComValidacao('Dados salvos com sucesso!', 1, 'perfilMembro.php')";
                     $funcaoLoad = "mudarTamanho('btnSalvar')";  
                     $titulo = "Salvar";           
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
             
                     //btn Cancelar
                     $idBtn = "btnCancelar";
                     $funcaoClick = "cancelarForm(nomeForm, 1, 'perfilMembro.php')";
                     $funcaoLoad = "mudarTamanho('btnCancelar')";
                     $titulo = "Cancelar";
-                    include('../../public/componentes/componenteButton.php');
+                    include('../../componentes/componenteButton.php');
                 ?>
             </div>
         </div>
@@ -68,5 +68,5 @@
 </script>
 
 <?php
-    include('../../public/componentes/default/bottomHTML.php');
+    include('../../componentes/default/bottomHTML.php');
 ?>

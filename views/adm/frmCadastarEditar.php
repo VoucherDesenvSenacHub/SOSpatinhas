@@ -57,7 +57,6 @@
                     <?php break; ?>
                 <?php case 'textarea': ?>
                     <div class="frmField">
-                        <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
                         <textarea
                             class="form-input"
                             name="<?= $field['NAME_FIELD'] ?>"
@@ -66,11 +65,11 @@
                             <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
                             <?= $field['OBRIGATORIO'] ? 'required' : '' ?>
                         ></textarea>
+                        <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
                     </div>
                     <?php break; ?>
                 <?php default: ?>
                     <div class="frmField">
-                        <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
                         <input
                             class="form-input"
                             type="<?= $field['TIPO'] ?>"
@@ -80,6 +79,7 @@
                             <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
                             <?= $field['OBRIGATORIO'] ? 'required' : '' ?>
                         >
+                        <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
                     </div>
                     <?php break; ?>
             <?php endswitch; ?>

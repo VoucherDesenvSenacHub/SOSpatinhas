@@ -192,6 +192,72 @@
     to {opacity: 1}
 }
 
+@media (max-width: 1024px) {
+    
+    .container,
+    .corpo {
+      width: 90%;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  
+  
+    #sectionfotoEpix {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    #sectionfotoEpix h2 {
+      font-size: 30px;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  
+  
+    .fotoArrecadacao,
+    #slider {
+      width: 100%;
+      max-width: 550px;
+    }
+    .slide {
+      display: block;
+    }
+    #botoesSlider {
+      bottom: 250px;  
+    }
+  
+    
+    #descricaoArrecadacao {
+      width: 100%;
+      max-width: 1000px;
+      font-size: 18px;
+      padding: 30px 0;
+      text-align: justify;
+    }
+  
+    
+    #sectionPix,
+    #pix,
+    #banco {
+      width: 100%;
+      max-width: 390px;
+    }
+    #banco {
+      margin: 1.5rem auto;
+    }
+  
+    
+    #nomeAnimal {
+      font-size: 24px;
+    }
+    .informacoesPix {
+      font-size: 14px;
+    }
+    #barraArrecadacao img {
+      width: 100%;
+      max-width: 290px;
+    }
+  }
 
 
 @media (max-width: 768px) {
@@ -330,7 +396,7 @@
 
     #banco {
         order: 4; 
-        width: 380px; 
+        width: 400px; 
         padding: 10px; 
     }
 
@@ -348,7 +414,7 @@
 
     #localEusuario {
         display: flex;
-        padding: 15px;
+        padding: 5px;
         justify-content: center;
         align-items: center;
     }

@@ -8,7 +8,7 @@ p {
     margin-bottom: 15px;
 }
 
-.tracinho{
+.Tracinho{
     background-color: #44803F;
     height: 0.2px;
     width: 90%;
@@ -46,32 +46,17 @@ input[type="checkbox"] {
     margin-bottom: 40px;
 }
 
-/* ! tentativa falha de ajustar os botões do header sem interfirir em nada no restante da minha pag
-button[name=Entrar]{
-    margin: 8px;
-    padding: 1px 6px;
-    height: 26px;
-    width: 82.27px;
-}
-
-button[name=Cadastrar]{
-    margin: 8px;
-    padding: 1px 6px;
-    height: 26px;
-    width: 121.41px;
-} */
-
-.redimensionar-top{
+.RedimensionarTop{
     width:80%;
     margin-bottom: 30px;
 }
 
-.redimensionar-bottom{
+.RedimensionarBottom{
     width:80%;
     margin-bottom: 35px;
 }
 
-#p-feliz{
+#PBoasVindas{
     display: flex;
     justify-content: center;
 }
@@ -80,7 +65,7 @@ label {
     font-size: 14px;
 }
 
-.checkbox {
+.Checkbox {
     display: flex;
     align-items: center;
     gap: 10px; 
@@ -89,7 +74,7 @@ label {
     margin-top: 40px;
 }
 
-.checkbox input[type="checkbox"] {
+.Checkbox input[type="checkbox"] {
     width: 18px; 
     height: 18px;
     cursor: pointer;
@@ -97,7 +82,7 @@ label {
     vertical-align: middle; 
 }
 
-.checkbox label {
+.Checkbox label {
     font-size: 16px;
     line-height: 18px;
 }
@@ -159,7 +144,7 @@ input[type="date"]:valid::before {
         margin: 0;
     }
 
-    .tracinho{
+    .Tracinho{
         width: 100%;
     }
 
@@ -178,11 +163,11 @@ input[type="date"]:valid::before {
         padding-right: 0px;
     }
 
-    .redimensionar-bottom{
+    .RedimensionarBottom{
         width: 100%;
     }
     
-    .redimensionar-top{
+    .RedimensionarTop{
         width: 100%;
     }
 }

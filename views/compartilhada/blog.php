@@ -1,15 +1,23 @@
 <?php
     $cssLink  = '../../public/css/blog.css';
-    $tipo = 'User';
+    $tipo = isset($_SESSION['id']) && $_SESSION['id'] === 'Admin' ? 'Adm' : 'User';
+    $isAdm = $tipo === 'Adm';
     include('../../componentes/default/topHTML.php');
 ?>
 <section class="corpo-desktop">
     <div class="principal">
-        
+
+        <?php if ($isAdm): ?>
+
+            <img src="../../public/images/btnEditar.png" alt="Editar" class="btnEditar">
+
+        <?php endif; ?>
+
         <div class="grandin" id="cima">
         <a href="" class="link-not">
 
-            <img src="" alt="Article Image 1"  class="img-first" style='visibility: hidden'>
+            <img src="../../public/images/Rectangle 272.png"  id="imgMain" alt="Article Image 1">
+            <h2>Título da Notícia</h2>
             <div class="titulo">
                 <h2>Título da notícia</h2>
                 <p class="p-none">Display none</p>
@@ -129,4 +137,4 @@
 
 <?php
     include('../../componentes/default/bottomHTML.php');
-    ?>
+?>

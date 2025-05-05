@@ -5,35 +5,35 @@
 ?>
 
 <div class="container">
-  <a class="back-link" href="#">
+  <a class="BackLink" href="#">
     <img src="../../public/images/icons/btn_esquerdo.png" 
        alt="voltar" class="Voltar">
   </a>
-  <div class="profile">
+  <div class="Profile">
     
-    <div class="profile-images">
+    <div class="ProfileImages">
       <img src="../../public/images/rocheleInfoAnimal.jpg" 
-            alt="rochele 1 " class="main-image">
+            alt="rochele 1 " class="MainImage">
 
       <div class="gallery">
         <img src="../../public/images/rocheleInfoAnimal.jpg" 
-              alt="rochele 2" class="gallery-img">
+              alt="rochele 2" class="GalleryImg">
         <img src="../../public/images/rochele5.png" 
-              alt="rochele 3 " class="gallery-img">
+              alt="rochele 3 " class="GalleryImg">
         <img src="../../public/images/rochele6.png" 
-              alt="rochele 4" class="gallery-img">
+              alt="rochele 4" class="GalleryImg">
       </div>
 
     </div>
-    <div class="profile-details">
+    <div class="ProfileDetails">
       <h1>Rochele</h1>
-      <p class="submitted-by">
-        <i class="fas fa-user"></i> enviado por Mitski
+      <p class="SubmittedBy">
+        <i class="FasFaUser"></i> enviado por Mitski
         <img src="../../public/images/icons/iconUser.png" 
         alt="" class="User">
       </p>
       <h2>História</h2>
-      <p class="descrição">
+      <p class="descricao">
         Olá, me chamo Rochele. Tenho 4 anos, mas se engana quem acha que já estou velha. Isso é puro preconceito.
         Tenho muita energia, sou esperta e vou aprender tudo que me ensinarem. Como todos os outros cães do abrigo,
         ainda tenho esperança de ser adotada.
@@ -61,7 +61,7 @@
 
 <script>  
   document.addEventListener("DOMContentLoaded", () => {
-    const backLink = document.querySelector(".back-link");
+    const backLink = document.querySelector(".BackLink");
     if (backLink) {
       backLink.addEventListener("click", (event) => {
         event.preventDefault();
@@ -69,29 +69,29 @@
       });
     }
 
-    const adoptBtn = document.querySelector(".adopt-btn");
+    const adoptBtn = document.querySelector(".AdoptBtn");
     if (adoptBtn) {
       adoptBtn.addEventListener("click", () => {
         window.location.href = "../resources/formAdocao.php";
       });
     }
 
-    // Seleciona todas as mini imgs da galeria
-    const galleryImages = document.querySelectorAll(".gallery-img");
-    // Seleciona a img principal pela class
-    const mainProductImage = document.querySelector(".main-image");
+    
+    const galleryImages = document.querySelectorAll(".GalleryImg");
 
-    // Verifica se a img principal 
+    const mainProductImage = document.querySelector(".MainImage");
+
+     
     if (!mainProductImage) return;
 
-    // Ao clicar em qualquer mini img substitui a img principal
+
     galleryImages.forEach((img) => {
       img.addEventListener("click", () => {
-        // Se quiser só trocar direto sem converter URl
         mainProductImage.src = img.src;
       });
     });
   });
+
 </script>
 
 <?php

@@ -4,11 +4,11 @@
   include('../../componentes/default/topHTML.php');
 ?>
     
-<div class="redimensionar-top">
+<div class="RedimensionarTop">
     <h1>FORMULÁRIO DE ADOÇÃO</h1>
 
-    <div class="p-container">
-        <p id="p-feliz">Olá! Estamos muito felizes por você escolher adotar um animalzinho do SOS Patinhas 🙂</p>
+    <div class="PContainer">
+        <p id="PBoasVindas">Olá! Estamos muito felizes por você escolher adotar um animalzinho do SOS Patinhas 🙂</p>
     </div>
     <p>Para adotar um dos nossos cãezinhos, é necessário ter mais de 18 anos, preencher este formulário, enviar fotos do seu lar e, caso a adoção seja aprovada, assinar um termo de responsabilidade. Também solicitamos que nos mantenha atualizados sobre o bem-estar do animalzinho após a adoção, enviando notícias de tempos em tempos. Este é o procedimento padrão adotado por diversas outras organizações não governamentais (ONGs) comprometidas com a adoção responsável.</p>
 
@@ -16,9 +16,9 @@
     Portanto, solicitamos que você responda todas as perguntas com cuidado e atenção. Analisaremos suas respostas minuciosamente e entraremos em contato assim que possível!</p>
 </div>
 
-<div class="tracinho"></div>
+<div class="Tracinho"></div>
 
-<form id="frmAdc">
+<form id="FrmAdc">
     <input type="text" name="nome" placeholder="Nome Completo*">
 
     <div class="divMetade">
@@ -65,7 +65,7 @@
     <input type="text" name="pergunta6" placeholder="Pergunta6:">
 </form>
     
-<div class="redimensionar-bottom">
+<div class="RedimensionarBottom">
     <h2>TERMO DE COMPROMISO</h2>
 
     <p>O adotante se declara pelo presente, ciente das responsabilidades de ter um animal e se
@@ -83,13 +83,13 @@
         velhice ou quaisquer motivos não citados. Abandono é crime. Lei municipal No.13131
         de 18 de Maio de 2001.</p>
         
-        <div class="checkbox">
+        <div class="Checkbox">
             <input type="checkbox" name="termo">
             <label for="termo">Compreendo e aceito os Termos de Compromisso</label>
         </div>
 </div>
 
-<div class="botao">
+<div class="Botao">
     <?php
         $idBtn = "btnEnviar";
         $funcaoClick = "adicionarComValidacao('Formulário eviado com sucesso', 1, 'adocao.php')";                             

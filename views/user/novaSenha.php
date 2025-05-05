@@ -11,8 +11,8 @@
 
 <body>
     <?php include('../../componentes/navbar.php'); ?>
-    <section class="corpo-container">
-        <section class="secao-login">
+    <section class="CorpoContainer">
+        <section class="SecaoLogin">
             <div class="login">
                 <h2>Nova Senha</h2>
                 <form>

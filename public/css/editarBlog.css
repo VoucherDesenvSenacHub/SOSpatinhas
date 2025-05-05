@@ -13,13 +13,13 @@
     width: 4rem;
 }
 
-.principal {
+.noticiaPrincipal {
     width: 65%;
     margin-right: 20px;
     margin: 3rem 0;
 }
  
-.grandin {
+.noticiaPrincipal {
     position: relative;
     margin-bottom: 20px;
     text-align: center;
@@ -33,7 +33,7 @@
     position: relative;
 }
  
-.ladin {
+.noticiasLaterais {
     position: relative;
     text-align: center;
 }
@@ -54,7 +54,7 @@ h2 {
     display: none;
 }
 
-#tatu{
+#terceiro-destaque{
     position: absolute;
     top: 251px;
     left: 18px;
@@ -63,11 +63,11 @@ h2 {
     }
 }
 
-#maus_tratos {
+#segundo-destaque {
     bottom: 50px;
 }
 
-#pit {
+#primeiro-destaque {
     position: absolute;
     bottom: 148.3%;
     left: 18px;
@@ -92,21 +92,21 @@ h2 {
         margin-left: auto;
         margin-right: auto;
     }
-    #pit{
+    #primeiro-destaque{
         margin-bottom: 20px;
         text-align: center;
     }
-    .principal {
+    .noticiaPrincipal {
         width: 65%;
         margin-right: 0;
     }
     .sidebarFoto {
         width: 65%;
     }
-    #tatu {
+    #terceiro-destaque {
         margin-bottom: 20px;
     }
-    #maus_tratos {
+    #segundo-destaque {
         margin-bottom: 20px;
     }
     .btnEditar{
@@ -121,7 +121,7 @@ h2 {
         background-size: 100%;
     } 
     
-    .corpo{
+    .corpo-desktop{
         display: none;
 
     }
@@ -135,27 +135,27 @@ h2 {
         background-color: rgb(255, 255, 255);
     }
     /* a partir daqui a margin é o ponto chave para o espaçamento requisitado */
-    .grandin, .ladin{
+    .noticiaPrincipal, .noticiasLaterais{
         width: 80%;
         margin: auto;
     }
 
-    .ladin{
+    .noticiasLaterais{
         margin: 0 auto;
     }
 
-    .grandin img{
+    .noticiaPrincipal img{
         width: 85%;
         height: auto;
         margin-top: 50px;
     }
 
-    .ladin img{
+    .noticiasLaterais img{
         width: 85%;
         padding-bottom: 20px;
     }
 
-    #pit, #maus_tratos, #tatu {
+    #primeiro-destaque, #segundo-destaque, #terceiro-destaque {
         margin-top: 50px;
         transition: margin-top 0.3s ease;
     }

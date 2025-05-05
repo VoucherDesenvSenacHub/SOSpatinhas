@@ -86,8 +86,8 @@
         <?php endforeach; ?>
     </div>
 
-    <button type="submit">Salvar</button>
-    <button type="reset">Cancelar</button>
+    <button type="submit" id="btnSalvar">Salvar</button>
+    <button type="reset" id="btnCancelar">Cancelar</button>
 </form>
 
 <?php

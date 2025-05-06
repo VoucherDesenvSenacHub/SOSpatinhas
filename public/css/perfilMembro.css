@@ -1,0 +1,90 @@
+#perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+#contentFotoMembro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#contentInfosMembro{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contentItensPerfil{
+    display: flex;
+    align-items: center;
+}
+
+.contentItens{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+
+#fotoMembro{
+    width: 190px;
+}
+#nomeMembro{
+    font-size: 24px;
+}
+.icones{
+    width: 30px;
+    height: 30px;
+}
+.titulos{
+    font-size: 24px;
+}
+.conteudoTitulos{
+    font-size: 20px;
+    color: #272727;
+}
+
+#buttonEditarPerfil{
+    width: 270px;
+    height: 55px;
+    background-color: #83CE7D;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: #44803F;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px){
+    #corpocontainer {
+        width: 87%;
+}
+
+    body{
+        background-size: 80%;
+    }
+
+@media (max-width: 425px){
+    body{
+        background-size: 130%;
+    }
+    
+    #corpocontainer {
+        height: 625px;
+        width: 87%;
+    }
+
+    #perfil{
+        flex-direction: column;
+    }
+}
+}

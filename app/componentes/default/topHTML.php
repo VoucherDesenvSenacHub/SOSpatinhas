@@ -1,0 +1,24 @@
+<?php   
+    session_start(); 
+    $taLogado = isset($_SESSION['taLogado']) && $_SESSION['taLogado'] === true; 
+    $isAdm = isset($_SESSION['id']) && $_SESSION['id'] === "Admin";
+?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Patinhas</title>
+    <link rel="stylesheet" href="<?php echo $cssLink; ?>">
+    <link rel="stylesheet" href="../../public/css/default.css">
+    <link rel="icon" type="image/png" href="../../public/images/icons/favicon.png">
+</head>
+<body>
+<?php include('../../componentes/navbar.php'); ?>
+
+<?php if ($isAdm): ?>
+    <?php include('../../componentes/sidebarAdm.php'); ?>
+<?php endif; ?>
+    
+
+<section class="corpo container" >

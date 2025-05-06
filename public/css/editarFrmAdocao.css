@@ -1,0 +1,263 @@
+.botaozin .perguntaIcon{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;  
+}
+
+.tracinho{
+    background-color: #44803F;
+    height: 0.2px;
+    width: 90%;
+    margin-bottom: 35px;
+}
+
+.p-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+    margin-bottom: 15px;
+}
+
+.p-container p {
+    flex: 1; 
+    margin: 0; 
+    line-height: 1.5; 
+}
+
+.p-container .botaozin {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.perguntaIcon{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.botaozin{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0.5px;
+    margin-bottom: 2px;
+}
+
+.botaozao{
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.botaozao-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.botao{
+    width: 275px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+body {
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redimensionar-top{
+    width:80%;
+    margin-bottom: 30px;
+}
+
+.redimensionar-bottom{
+    width:80%;
+    margin-bottom: 35px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+#p-feliz{
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin: 10px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 18px; 
+    height: 18px;
+    cursor: pointer;
+    margin: 0; 
+    vertical-align: middle; 
+}
+
+.checkbox label {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+input[type="date"] {
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    outline: none;
+    appearance: none;
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/747/747310.png'); 
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+input[type="date"]::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    position: absolute;
+    left: 10px;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    content: "";
+}
+
+.divMetade{
+    display: flex;
+    gap: 1rem;
+}
+    #inputddd{
+        width: 30%;
+    }
+    #inputuf{
+        width: 30%;
+    }
+    #inputnum{
+        width: 30%;
+    }
+
+@media (max-width: 768px){
+    .tracinho{
+        width: 100%;
+    }
+
+    .p-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .p-container .botaozin {
+        position: absolute;
+        top: -30px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    form{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    h1{
+        margin-bottom: 50px;
+    }
+
+    .redimensionar-bottom{
+        width: 100%;
+    }
+    
+    .redimensionar-top{
+        width: 100%;
+    }
+    
+    .botao{
+        width: 180px;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 425px){
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="checkbox"] {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+}

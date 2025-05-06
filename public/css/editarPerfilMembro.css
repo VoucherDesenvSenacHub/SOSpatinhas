@@ -1,0 +1,120 @@
+#frmEditarPerfilMembro{
+    width: 100%;
+}
+.conteudoFrm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    column-gap: 3rem;
+    padding: 70px;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+input{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+} 
+
+#imgUpload{
+    display: flex;
+    position: relative;
+    bottom: 3rem;
+    right: -1rem;
+}
+
+#previewImg{
+    width: 265px;
+    height: 257px;
+    border: 1px solid #ccc;
+    border-radius: 10rem;
+}
+
+
+
+@media (max-width: 425px){
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .corpo{
+        width: 85%;
+    }
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 2rem
+    }
+
+    .col{
+        width: 80%;
+        max-width: 80%;
+    }
+
+    input{
+        width: 65%;
+    }
+
+    #btn-photo{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #imgUpload{
+        right: 18rem;
+        bottom: 8rem
+    }
+}
+
+
+@media (max-width: 768px){
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .corpo{
+        width: 85%;
+    }
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-top: 2rem
+    }
+
+    .col{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    input{
+        width: 105%;
+    }
+
+    #btn-photo{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #imgUpload{
+        right: 38rem;
+        bottom: 8rem
+    }
+}

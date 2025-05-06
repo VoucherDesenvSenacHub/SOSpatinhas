@@ -1,0 +1,84 @@
+.carroseis{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 28px;
+    text-align: center;
+    width: 100%; 
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo::before,
+.titulo::after {
+    content: "";
+    flex: 1;
+    height: 2px; /* Espessura da linha */
+    background-color: rgb(68, 128, 63); /* Cor da linha */
+    margin: 0 15px; /* Espaçamento entre a linha e o texto */
+}
+
+.carouselParceiros, .carouselEquipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 40px; 
+}
+
+.imagemEquipe {
+    width: 100%;
+    margin-bottom: 30px;
+    height: auto;
+}
+
+.imagemEquipe img{
+    width: 100%;
+}
+
+#carouselEquipe, #carouselParceiros{
+    width: 80rem;
+}
+@media(max-width:1440px){
+    
+    #carouselEquipe, #carouselParceiros{
+        width: 75rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 28px; 
+    }
+
+    #carouselEquipe, #carouselParceiros{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 28px;
+    }
+
+    #carouselEquipe, #carouselParceiros{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 28px; 
+    }
+
+    #carouselEquipe, #carouselParceiros{
+        width: 100%;
+    }
+}

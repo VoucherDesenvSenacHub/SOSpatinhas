@@ -1,0 +1,59 @@
+#conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#topConteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 5rem;
+}
+
+.adm_foto{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.adm_foto img{
+    width: 6rem;
+    height: 6rem;
+}
+
+#infoAdm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #9B9B9B;
+}
+
+#topBtns{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 4rem;
+}
+
+.col{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (max-width: 768px) {
+   
+}
+
+@media (max-width: 425px) {
+    
+}

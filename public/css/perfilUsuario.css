@@ -1,0 +1,159 @@
+.mobile-menu{
+    display: none;
+}
+#perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+#perfil2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+#contentFotoMembro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#iconscontainers{
+
+    display:flex;
+    flex-direction: row;
+    gap:5rem;
+}
+
+#contentInfosMembro{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#contentInfosMembro2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contentItensPerfil{
+    display: flex;
+    align-items: center;
+}
+
+.contentItens{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+
+#fotoMembro{
+    width: 190px;
+}
+#nomeMembro{
+    font-size: 24px;
+}
+.icones{
+    width: 30px;
+    height: 30px;
+}
+.titulos{
+    font-size: 24px;
+    font-weight:bold;
+}
+.conteudoTitulos{
+    font-size: 20px;
+    color: #696969;
+}
+
+@media (max-width: 1440px) {
+    #perfil {
+        gap: 3rem; 
+    }
+    .titulos {
+        font-size: 22px; 
+    }
+    .conteudoTitulos {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    #perfil {
+        gap: 3rem; 
+    }
+    .titulos {
+        font-size: 17px; 
+    }
+    .conteudoTitulos {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    #perfil {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    #iconscontainers {
+        gap: 2rem;
+    }
+    #fotoMembro {
+        width: 150px;  
+    }
+    .icones {
+        width: 25px;
+        height: 25px;
+    }
+    .titulos {
+        font-size: 20px;
+    }
+    .conteudoTitulos {
+        font-size: 16px;
+    }
+    #rg{
+        margin-bottom: 35px;
+    }
+}
+
+
+@media (max-width: 425px) {
+    #perfil {
+        align-items: flex-start;
+        flex-direction: column;  
+        gap: 1rem;
+    }
+    #fotoMembro {
+        width: 120px;
+    }
+
+    #iconscontainers {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .icones {
+        width: 27px;
+        height: 27px;
+    }
+    .titulos {
+        font-size: 22px;
+    }
+    .conteudoTitulos {
+        font-size: 18px;
+    }
+
+    #rg{
+        margin-bottom: 35px;
+    }
+}

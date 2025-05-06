@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgb(198, 225, 196);
+    background-image: url("../images/Patinhas.png");
+    background-size: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+.secaoLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 431px);
+    margin: 150px 0px;
+}
+
+
+.esqSenha {
+    background-color: white;
+    padding: 40px 50px 60px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+.esqSenha h2 {
+    padding: 40px 0px 10px 0px;
+}
+.esqSenha p{
+    font-size: 20px;
+    width: 350px;
+    padding: 15px 0px 25px 0px;
+}
+
+.esqSenha input {
+    width: 93%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.esqSenha button {
+    font-family:  Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 12px;
+    background-color: rgb( 68, 128, 63);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.esqSenha a {
+    font-family:  Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.esqSenha button:hover {
+    transition: .4s;
+    background-color: rgb(56, 105, 52);
+}
+
+@media (max-width: 768px) {
+    .secaoLogin{
+        margin: 120px 0px;
+    }
+}
+
+@media (max-width: 425px) {
+   
+    .secaoLogin{
+        width: auto;
+        height: 70vh;
+        margin: 80px 50px;     
+    }
+
+    .esqSenha{
+        width: auto;
+    }
+
+    .esqSenha p{
+        font-size: 20px;
+        width: auto;
+        padding: 15px 0px 25px 0px;
+    }
+}

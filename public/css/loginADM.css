@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+.secaoLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.login {
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 43%;
+    height: 50vh;
+}
+
+.login h2 {
+    margin-bottom: 60px;
+}
+
+.login input {
+    width: 93%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#password {
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 1024px) {
+    .secaoLogin {
+        width: 100%;
+        min-height: 109vh;
+    }
+    .login {
+        height: 28em;
+        width: 70%;
+        padding: 50px 20px 50px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .secaoLogin {
+        min-height: 84vh;
+    }
+    .login {
+        width: 80%;
+        padding: 40px 20px 40px 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .secaoLogin {
+        min-height: 84vh;
+    }
+    .login {
+        width: 80%;
+        padding: 40px 20px 40px 20px;
+        
+    }
+}

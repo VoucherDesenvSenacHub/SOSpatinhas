@@ -1,0 +1,470 @@
+#section{
+    display:inline;
+    padding: 30px 0px 30px 0px;
+}
+#sectionfotoEpix{
+    
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    gap: 5rem;
+}
+#sectionfotoEpix h2{
+    font-size: 35px;
+    text-align: left;
+    padding: 0px 0px 10px 15px;
+}
+
+#sectionPix{
+    
+    display: inline;
+}
+
+#localEusuario{
+    display: flex;
+    padding: 5px;
+}
+#nomeAnimal{
+    font-size: 30px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+#userElocal{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+#divLocalUsuario{
+    display: flex;
+}
+.textoLocalUsuario{
+    font-size: 13px;
+}
+
+#pix{
+    
+    display: inline;
+    text-align: center;
+}
+#banco{
+    display: flex;
+    background-color: #E2F8E0;
+    width: 390px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+#numeroBanco{
+    display: flex;
+}
+#infos{
+    display: inline;
+}
+
+#infosConta{
+    display: inline;
+    text-align: left;
+}
+.informacoesPix{
+    font-size: 15px;
+    font-weight: 500;
+}
+#nomeConta{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+#numeroBanco{
+    display: flex;
+    align-items: center;
+}
+#numeroBanco img{
+    width: 15px;
+    height: 15px;
+}
+
+#barraArrecadacao{
+    display: inline;
+}
+#barraArrecadacao img{
+    width: 290px;
+}
+#textoBarra{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#descricaoArrecadacao{
+    flex:3;
+    font-size: 20px;
+    width: 1000px;
+    text-align: justify;
+    padding: 50px 0px 10px 0px;
+}
+
+#descrição{
+    
+    flex-direction: row;
+}
+
+#botaoCompartilhar{
+    padding-top: 15px;
+}
+#textoCompartilhar{
+    font-size: 9px;
+    font-weight: bold;
+    color: #757575;
+    padding-top: 5px;
+}
+
+.iconeInfo{
+    width: 15px;
+    height: 15px;
+}
+#qrcode{
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+}
+#imagemBanco{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+.fotoArrecadacao {
+    
+    width: 550px;
+    height: 100%;
+    margin: auto;
+    display: block;
+    position: relative;
+}
+
+#slider {
+    position: relative;
+    width: 550px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+#botoesSlider {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 350px;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.botaoTrocarFoto {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.56);
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+.active, .botaoTrocarFoto:hover {
+    background-color: #ffffff;
+}
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media (max-width: 1024px) {
+    
+    .container,
+    .corpo {
+      width: 90%;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  
+  
+    #sectionfotoEpix {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    #sectionfotoEpix h2 {
+      font-size: 30px;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  
+  
+    .fotoArrecadacao,
+    #slider {
+      width: 100%;
+      max-width: 550px;
+    }
+    .slide {
+      display: block;
+    }
+    #botoesSlider {
+      bottom: 250px;  
+    }
+  
+    
+    #descricaoArrecadacao {
+      width: 100%;
+      max-width: 1000px;
+      font-size: 18px;
+      padding: 30px 0;
+      text-align: justify;
+    }
+  
+    
+    #sectionPix,
+    #pix,
+    #banco {
+      width: 100%;
+      max-width: 390px;
+    }
+    #banco {
+      margin: 1.5rem auto;
+    }
+  
+    
+    #nomeAnimal {
+      font-size: 24px;
+    }
+    .informacoesPix {
+      font-size: 14px;
+    }
+    #barraArrecadacao img {
+      width: 100%;
+      max-width: 290px;
+    }
+  }
+
+
+@media (max-width: 768px) {
+    body{
+        background-size: 80%;
+    }
+    
+    .corpo{
+        max-width: 768px;
+        width: 85%;
+    }
+
+    #descricao{
+        width: 550px;
+    }
+
+    #sectionfotoEpix {
+        flex-direction: column;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 1rem;
+    }
+
+    #descricaoArrecadacao {
+        order: 3; 
+        margin:0;
+        font-size: 20px;
+        width: 600px; 
+        text-align: justify; 
+        padding: 25px 0px 25px 0px;
+    }
+    .fotoArrecadacao {
+        order: 2;
+    
+        display: block;
+    }
+
+    #botoesSlider {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: 350px;
+        position: absolute;
+        bottom: 318px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #sectionfotoEpix h2{
+        font-size: 35px;
+        text-align: center;
+        padding: 0px 0px 10px 15px;
+    }
+    
+    .botaoTrocarFoto {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+@media (max-width: 425px) {
+    #descricao {
+        width: 380px;
+    }
+
+    .fotoArrecadacao {
+        order: 2;
+        width: 380px;
+        display: block;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    .container {
+        
+        flex-direction: column; 
+        max-width: 425px; 
+        margin: 0; 
+        padding: 1px; 
+        display: flex;
+    }
+
+    .corpo {
+        margin:0;
+        max-width: auto;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        display: flex; 
+        text-align: center; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    #titulo h2 {
+        order: 1; 
+        width: auto;
+    }
+
+    #descricaoArrecadacao {
+        order: 3; 
+        margin:0;
+        font-size: 20px;
+        width: 350px; 
+        text-align: justify; 
+        padding: 25px 0px 10px 0px;
+    }
+
+    #sectionPix {
+        order: 4; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    #botoesSlider {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        width: 350px;
+        position: absolute;
+        bottom: 445px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    
+    .botaoTrocarFoto {
+        width: 15px;
+        height: 15px;
+    }
+
+    #banco {
+        order: 4; 
+        width: 400px; 
+        padding: 10px; 
+    }
+
+    #numeroBanco img {
+        width: 35px; 
+        height: 35px; 
+        padding: 10px; 
+    }
+
+    #userElocal {
+        display: flex; 
+        gap: 0.5rem; 
+        flex-direction: column; 
+    }
+
+    #localEusuario {
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nomeAnimal {
+        font-size: 20px; 
+        padding-right: 20px; 
+        text-align: left; 
+        padding: 10px; 
+    }
+
+    #outraDiv, #maisUmaDiv {
+        text-align: left; 
+    }
+
+    #slider {
+        position: relative;
+        width: 380px;
+    }
+
+    .slide {
+        display: block; 
+    }
+
+    #section {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+
+    #sectionfotoEpix {
+        flex-direction: column;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 1rem;
+    }
+
+    #sectionfotoEpix h2 {
+        font-size: 20px; 
+        text-align: center; 
+        padding: 0px 0px 10px 15px; 
+    }
+
+    #pix {
+        display: inline; 
+        text-align: center; 
+        width: 400px; 
+    }
+}
+
+
+

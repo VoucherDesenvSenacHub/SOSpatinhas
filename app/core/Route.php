@@ -20,45 +20,39 @@ class Route{
     public static function dispatch()
     {
         $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        $requestMethod = $_SERVER['REQUEST_METHOD'];
+        $requestMetodo = $_SERVER['REQUEST_METHOD'];
         $routes = self::$routes[$requestMethod] ?? [];
-        $found = false;
+        $encontrou = false;
 
         foreach ($routes as $route => $handler) {
-            $pattern = preg_replace('#\{[a-zA-Z_][a-zA-Z0-9_]*\}#', '([a-zA-Z0-9_-]+)', $route);
-            $pattern = "#^" . $pattern . "$#";
+            $padrao = preg_replace('#\{[a-zA-Z_][a-zA-Z0-9_]*\}#', '([a-zA-Z0-9_-]+)', $route);
+            $padrao = "#^" . $padrao . "$#";
 
-            if (preg_match($pattern, $requestUri, $matches)) {
-                // Check permissions before calling the handler
-                if (self::checkPermissions($handler['roles'])) {
-                    array_shift($matches); // Remove the full match
+            if (preg_match($padrao, $requestUri, $matches)) {
+                if (self::checkPermissions($handler['roles']), $requestUri) {
+                    array_shift($matches); 
                     if (is_string($handler['callback']) && strpos($handler['callback'], '@') !== false) {
-                        // If the callback is a controller action
                         list($controller, $method) = explode('@', $handler['callback']);
-                        require_once "../app/Controllers/$controller.php";
+                        require_once "../controllers/$controller.php";
                         $instance = new $controller();
                         call_user_func_array([$instance, $method], $matches);
-                    } else {
-                        // If it's a closure function
-                        call_user_func_array($handler['callback'], $matches);
                     }
-                    $found = true;
+                    $encontrou = true;
                 } else {
-                    // Redirect to login or 403 Forbidden page if no permission
-                    header("Location: /login"); // or header("HTTP/1.0 403 Forbidden");
+                    echo 'confirm("Você não possui permissão para ver esta página")';
+                    header("Location: /login");
                     exit;
                 }
                 break;
             }
         }
 
-        if (!$found) {
-            http_response_code(404);
-            echo "404 Not Found";
+        if (!$encontrou) {
+            include('../views/404.php')
         }
     }
 
-    public static function checkPermissao($tiposPermitidos){
+    public static function checkPermissao($tiposPermitidos, $requestUri){
         $idUser = $_SESSION['idUser'];
         $tipoUser = $_SESSION['tipoUser'];
 
@@ -71,9 +65,11 @@ class Route{
         }
 
         if($tipoUser !== 'Admin'){
-            return in_array($_SESSION['role'], $requiredRoles);
+            return in_array($_SESSION['tipoUser'], $tiposPermitidos);
         }
 
-
+        $permissao = new PermissaoAdminController();
+        $resultado = $permissao->checar($idUser);
+        return in_array($requestUri, $resultado)
     }
 }

@@ -1,14 +1,14 @@
 <nav class="navbar">
-    <a class="navbarLogo" href="../../views/user/paginaInicio.php">
+    <a class="navbarLogo" href="../../app/views/user/paginaInicio.php">
         <img src="../../public/images/Logo_Navbar.png" alt="Logo">
     </a>
 
     <ul class="navLinks">
-        <a href="../../views/user/blog.php">Blog</a>
-        <a href="../../views/user/quemSomos.php">Quem Somos</a>
-        <a href="../../views/user/comoAjudar.php">Como Ajudar</a>
-        <a href="../../views/user/eventos.php">Eventos</a>
-        <a href="../../views/user/adocao.php">Adoção</a>
+        <a href="../../app/views/user/blog.php">Blog</a>
+        <a href="../../app/views/user/quemSomos.php">Quem Somos</a>
+        <a href="../../app/views/user/comoAjudar.php">Como Ajudar</a>
+        <a href="../../app/views/user/eventos.php">Eventos</a>
+        <a href="../../app/views/user/adocao.php">Adoção</a>
     </ul>
 
     <div class="navRight">
@@ -24,7 +24,7 @@
                         $funcaoClick = "redirecionar('login.php')";
                         $titulo = "Entrar";
                         $funcaoLoad = "mudarTamanho('btnEntrar', '142px', '42px', '16px')";
-                        include('../../componentes/componenteButton.php');
+                        include('../../app/componentes/componenteButton.php');
                     ?>
                 </div>
                 <div id="btnCadastroDiv">
@@ -33,7 +33,7 @@
                         $funcaoClick = "redirecionar('cadastroUsuario.php')";
                         $titulo = "Cadastrar";
                         $funcaoLoad = "mudarTamanho('btnCadastro', '142px', '42px', '16px')";
-                        include('../../componentes/componenteButton.php');
+                        include('../../app/componentes/componenteButton.php');
                         $idBtn = "";
                         $funcaoClick = "";
                         $titulo = "";

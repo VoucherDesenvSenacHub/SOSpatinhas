@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-
+<?php include('../../app/componentes/default/topHTML.php'); ?>
 <div id="divPai">
   <h2>teste</h2>
   <p>teste teste tes test tese</p>
-  <?php include("../public/componentes/btnEditar.php")?>
+  <?php include("../app/componentes/btnEditar.php")?>
 </div>
+<?php include('../../app/componentes/default/bottomHTML.php'); ?>
 </body>
 </html>
 

@@ -1,6 +1,5 @@
 <?php
-//      USER
-Route::get('/PaginaInicio', function() { include('../views/user/paginaInicio.php'); });
+Route::get('/', function() { include('../views/user/paginaInicio.php'); });
 Route::get('/QuemSomos', function() { include('../views/user/quemSomos.php'); });
 Route::get('/Eventos', 'EventosController@index');
 Route::get('/Eventos/DetalhesEvento/{idEvento}', 'DetalhesEventoController@index');
@@ -17,4 +16,5 @@ Route::get('/Login/EsqueciSenha/ConfirmacaoEmail', function() { include('../view
 Route::get('/NovaSenha', function() { include('../views/user/novaSenha.php'); });
 Route::get('/Perfil/{idUsuario}', 'PerfilController@index', ['User', 'Admin']);
 
-//      ADM
+Route::post('/Formulario/{acao}/{obj}/{id}', 'FormularioDevController@index', ['? + obj']); // !!
+Route::post('/Lista/{obj}', 'ListaDevController@index', ['lista + obj']); // !!

@@ -14,7 +14,7 @@ Route::get('/Cadastro', function() { include('../views/user/cadastroUsuario.php'
 Route::get('/Login/EsqueciSenha', function() { include('../views/user/esqueciSenha.php'); });
 Route::get('/Login/EsqueciSenha/ConfirmacaoEmail', function() { include('../views/user/confirmacaoEmail.php'); });
 Route::get('/NovaSenha', function() { include('../views/user/novaSenha.php'); });
-Route::get('/Perfil/{idUsuario}', 'PerfilController@index', ['User', 'Admin']);
+Route::get('/Perfil/{tipoUsuario}/{idUsuario}', 'PerfilController@index', ['User', 'Admin']);
 
 Route::post('/Formulario/{acao}/{obj}/{id}', 'FormularioDevController@index', ['? + obj']); // !!
 Route::post('/Lista/{obj}', 'ListaDevController@index', ['lista + obj']); // !!

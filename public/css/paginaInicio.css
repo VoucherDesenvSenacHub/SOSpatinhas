@@ -1,0 +1,353 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(68, 128, 63);
+}
+
+.cardSaibaMais {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 42rem;
+}
+
+.baixo {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.divBtnBaixo {
+    width: 18rem;
+    height: auto;
+    position: relative;
+    bottom: 17rem;
+    left: 11rem;
+}
+
+.titulo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    align-self: center;
+    position: relative;
+    top: 23rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.texto {
+    width: 45rem;
+    font-size: 25px;
+    color: white;
+}
+
+#meio {
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+    text-align: justify;
+}
+
+.divBtnMeio {
+    position: relative;
+    bottom: 6rem;
+    width: 18rem;
+    left: 6rem;
+}
+
+#baixo {
+    justify-content: center;
+    align-items: center;
+}
+
+.divImgBaixo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.divImgMeio {
+    margin-top: 5rem;
+}
+
+.row { 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.homeCarrosel {
+    width: 100%;
+}
+
+#secslider {
+    position: relative;
+    width: 100%; 
+    height: 500px; 
+    overflow: hidden; 
+}
+
+#divslider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#slider {
+    display: flex;
+    transition: transform 0.5s ease; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#slider li {
+    min-width: 100%; 
+    height: 100%; 
+}
+
+
+#slider img {
+    width: 100%; 
+    height: 31rem;
+    object-fit: cover; 
+}
+
+
+.buttonslider {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; 
+}
+
+.buttonslider img {
+    width: 20px; 
+    height: auto;
+}
+
+#esquerda {
+    left: 15px; 
+}
+
+#direita {
+    right: 25px; 
+}
+
+
+@media (max-width: 1440px) {
+    .cardSaibaMais {
+        width: 35rem;
+        height: 32rem;
+    }
+
+    .titulo {
+        font-size: 24px;
+        top: 19rem;
+    }
+
+    .texto {
+        width: 40rem;
+        font-size: 23px;
+    }
+
+    .divBtnBaixo {
+        bottom: 12rem;
+        left: 6rem;
+    }
+
+    .divBtnMeio {
+        left: 6rem;
+    }
+    
+    
+}
+
+
+@media (max-width: 768px) {
+    .cardSaibaMais {
+        width: 32rem;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 22px;
+        top: 18rem;
+    }
+
+    .texto {
+        width: 90%;
+        font-size: 20px;
+        margin-top: 4rem;
+    }
+
+    .divBtnBaixo {
+        bottom: 7rem;
+        left: 7rem;
+    }
+
+    #secslider {
+        height: 350px; 
+    }
+
+    #slider img {
+        height: 23rem;
+    }
+
+    .buttonslider {
+        height: 65px;
+        width: 65px;
+    }
+
+    .buttonslider img {
+        width: 18px;
+    }
+
+    .divImgBaixo img {
+        height: 400px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    #meio {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .divBtnMeio {
+        left: 6rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cardSaibaMais {
+        width: 32rem;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 22px;
+        top: 18rem;
+    }
+
+    .texto {
+        width: 90%;
+        font-size: 20px;
+        margin-top: 4rem;
+    }
+
+    .divBtnBaixo {
+        bottom: 7rem;
+        left: 7rem;
+    }
+
+    #secslider {
+        height: 350px;
+    }
+
+    #slider img {
+        height: 23rem;
+    }
+
+    .buttonslider {
+        height: 65px;
+        width: 65px;
+    }
+
+    .buttonslider img {
+        width: 18px;
+    }
+
+    .divImgBaixo img {
+        height: 400px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    #meio {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .divBtnMeio {
+        left: 6rem;
+    }
+}
+
+
+@media (max-width: 425px) {
+    body {
+        background-size: 100%;
+    }
+
+    .cardSaibaMais {
+        width: 100%;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 20px;
+        top: 12rem;
+    }
+
+    .texto {
+        width: 21rem;
+        font-size: 13px;
+    }
+
+    .divBtnBaixo {
+        bottom: 7rem;
+        left: 4rem;
+    }
+
+    #secslider {
+        height: 250px; 
+    }
+
+    .buttonslider {
+        height: 50px;
+        width: 50px;
+        padding: 6px;
+    }
+
+    .buttonslider img {
+        width: 15px;
+    }
+
+    .divImgBaixo img {
+        height: 300px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+    .divImgMeio img{
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .divBtnMeio {
+        left: 4rem;
+    }
+
+    #slider img {
+        height: 16rem;
+    }
+}

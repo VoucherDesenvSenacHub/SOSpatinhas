@@ -1,5 +1,5 @@
 <?php
-require_once '../models/FormularioPerguntaModel.php';
+require_once '../models/formularioPerguntaModel.php';
 
 class FormularioPerguntaController {
 

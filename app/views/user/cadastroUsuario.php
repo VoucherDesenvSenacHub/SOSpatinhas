@@ -1,50 +1,3 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome= trim($_POST['nome']);
-    $cpf= trim($_POST['cpf']);
-    $rg= trim($_POST['rg']);
-    $email= trim($_POST['email']);
-    $dtNasc= trim($_POST['dtNasc']);
-    $ddd= trim($_POST['ddd']);
-    $telefone= trim($_POST['telefone']);
-    $senha= trim($_POST['senha']);
-
-    $usersFile = '../script/userData.json';
-    $users = [];
-
-    if (file_exists($usersFile)) {
-        $jsonData = file_get_contents($usersFile);
-        $users = json_decode($jsonData, true);
-    }
-
-    foreach ($users as $user) {
-        if ($user['email'] === $email) {
-            echo "Email já cadastrado.";
-            exit();
-        }
-    }
-
-    $hashedPassword = password_hash($senha, PASSWORD_DEFAULT);
-
-    $novoUser  = [
-        'nome' => $nome,
-        'cpf' => $cpf,
-        'rg' => $rg,
-        'email' => $email,
-        'dtNasc' => $dtNasc,
-        'ddd' => $ddd,
-        'telefone' => $telefone,
-        'senha' => $hashedPassword
-    ];
-
-    $users[] = $novoUser ;
-
-    file_put_contents($usersFile, json_encode($users, JSON_PRETTY_PRINT));
-
-    header('Location: login.php');
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -62,7 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     <section class="corpo-container">
         <h1>Cadastro</h1>
-        <form method="POST" action="" class="form" id="formCadastro">
+        <form method="POST" action="/cadastro" class="form" id="formCadastro">
+            <input type="hidden" name="ACAO" value="C">
             <input type="text" name="nome" placeholder="Nome Completo*" required>
             
             <div class="divInputs">
@@ -82,13 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             <input type="password" name="senha" placeholder="Senha:" required>
 
-            <?php
-                $funcaoClick = "submitComValidacao('formCadastro')";
-                $titulo = "Cadastrar";
-                include('../../componentes/componenteButton.php');
-            ?>
+            <button type="submit" id="btnSalvar">Cadastrar</button>
         </form>
-        <p>Já tem uma conta? <a href="login.php">Login</a></p>
+        <p>Já tem uma conta? <a href="/login">Login</a></p>
    
     </section>
 </body>

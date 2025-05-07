@@ -1,20 +1,23 @@
 <?php
-Route::get('/', function() { include('../views/user/paginaInicio.php'); });
-Route::get('/QuemSomos', function() { include('../views/user/quemSomos.php'); });
-Route::get('/Eventos', 'EventosController@index');
-Route::get('/Eventos/DetalhesEvento/{idEvento}', 'DetalhesEventoController@index');
-Route::get('/Eventos/Arrecadacao/{idArrecadacao}', 'ArrecadacaoController@index');
-Route::get('/Adocao', 'AnimalController@adocao');
-Route::get('/Adocao/DetalhesAnimal/{idAnimal}', 'AnimalController@detalhesAnimal');
-Route::get('/Adocao/DetalhesAnimal/{idAnimal}/FormularioAdocao', 'AnimalController@formularioAdocao');
-Route::get('/ComoAjudar', function() { include('../views/user/comoAjudar.php'); });
-Route::get('/Login', function() { include('../views/user/login.php'); });
-Route::get('/LoginAdm', function() { include('../views/user/loginADM.php'); });
-Route::get('/Cadastro', function() { include('../views/user/cadastroUsuario.php'); });
-Route::get('/Login/EsqueciSenha', function() { include('../views/user/esqueciSenha.php'); });
-Route::get('/Login/EsqueciSenha/ConfirmacaoEmail', function() { include('../views/user/confirmacaoEmail.php'); });
-Route::get('/NovaSenha', function() { include('../views/user/novaSenha.php'); });
-Route::get('/Perfil/{tipoUsuario}/{idUsuario}', 'PerfilController@index', ['User', 'Admin']);
+Route::get('/', function() { include('app/views/user/paginaInicio.php'); });
+Route::get('/quemsomos', function() { include('app/views/user/quemSomos.php'); });
+Route::get('/eventos', function() { include('app/views/user/eventos.php'); });
+Route::get('/eventos/detalhesevento/{idEvento}', 'EventoController@index');
+Route::get('/eventos/arrecadacao/{idArrecadacao}', 'ArrecadacaoController@index');
+Route::get('/adocao', 'AnimalController@adocao');
+Route::get('/adocao/detalhesanimal/{idAnimal}', 'AnimalController@detalhesAnimal');
+Route::get('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@index', ['User', 'Admin']);
+Route::get('/comoajudar', function() { include('app/views/user/comoAjudar.php'); });
+Route::get('/login', function() { include('app/views/user/login.php'); });
+Route::get('/loginadm', function() { include('app/views/user/loginADM.php'); });
+Route::get('/cadastro', function() { include('app/views/user/cadastroUsuario.php'); });
+Route::get('/login/esquecisenha', function() { include('app/views/user/esqueciSenha.php'); });
+Route::get('/login/esquecisenha/confirmacaoemail', function() { include('app/views/user/confirmacaoEmail.php'); });
+Route::get('/novasenha', function() { include('app/views/user/novaSenha.php'); });
+Route::get('/perfil/{tipoUsuario}/{idUsuario}', 'PerfilController@index', ['User', 'Admin'], ['AuthMiddleware']);
 
-Route::post('/Formulario/{acao}/{obj}/{id}', 'FormularioDevController@index', ['? + obj']); // !!
-Route::post('/Lista/{obj}', 'ListaDevController@index', ['lista + obj']); // !!
+Route::get('/Formulario/{acao}/{obj}/{id}', 'CriarEditarController@index', ['? + obj']);
+Route::post('/Formulario/{acao}/{obj}/{id}', 'FormularioDevController@index', ['? + obj']); // !!Tem q arrumar
+
+Route::get('/Lista/{obj}', 'ListaDevController@index', ['lista + obj']);
+Route::post('/Lista/{obj}', 'ListaDevController@index', ['lista + obj']); // !!Tem q arrumar

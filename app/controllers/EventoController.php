@@ -1,7 +1,11 @@
 <?php
-require_once '../models/EventoModel.php';
+require_once 'app/models/EventoModel.php';
 
 class EventoController {
+
+    public function index(){
+        include('app/views/user/eventos.php');
+    }
 
     public function CRUD() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

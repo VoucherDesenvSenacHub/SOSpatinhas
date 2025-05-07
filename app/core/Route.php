@@ -37,7 +37,7 @@ class Route{
                 foreach ($handler['middleware'] ?? [] as $middlewareClass) {
                     require_once "app/core/Middleware/$middlewareClass.php";
                     $middleware = new $middlewareClass();
-                    if (!$middleware->handle()) {
+                    if (!call_user_func_array([$middleware, 'handle'], $matches)) {
                         return;
                     }
                 }

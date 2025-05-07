@@ -1,7 +1,7 @@
 <?php
     require_once '../../models/formularioDevModel.php';
-    $cssLink  = '../../public/css/default.css';
-    include('../../componentes/default/topHTML.php');
+    $cssLink  = '../../../public/css/default.css';
+    include('../../../app/componentes/default/topHTML.php');
     $form = 'Animal';
     $acao = 'C';
     $id = $_GET['id'] ?? null;
@@ -28,6 +28,7 @@
                 case 'checkbox': ?>
                     <div class="frmField">
                         <input 
+                            class="label__checkbox"
                             type="checkbox" 
                             id="<?= $field['NAME_FIELD'] ?>" 
                             name="<?= $field['NAME_FIELD'] ?>" 
@@ -86,10 +87,16 @@
         <?php endforeach; ?>
     </div>
 
+    <div id="btn">
+        
     <button type="submit" id="btnSalvar">Salvar</button>
     <button type="reset" id="btnCancelar">Cancelar</button>
+
+    </div>
+
+
 </form>
 
-<?php
+<!-- <?php
     include('../../componentes/default/bottomHTML.php');
-?>
+?> -->

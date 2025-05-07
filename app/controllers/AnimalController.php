@@ -6,7 +6,7 @@ class AnimalController {
     public function CRUD() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $acao = $_POST['ACAO'];
-            $id = $_POST['ID'];
+            $id = $_POST['ID_ANIMAL'];
             $nome = $_POST['NOME'];
             $tipoAnimal = $_POST['TIPO_ANIMAL'];
             $raca = $_POST['RACA'];

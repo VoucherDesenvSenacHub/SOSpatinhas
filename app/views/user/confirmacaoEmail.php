@@ -13,7 +13,7 @@
     <?php include('../../componentes/navbar.php')?>
     
     <section class="corpo-container">
-        <section class="secao-emailenviado">
+        <section class="secaoEmailEnviado">
             <div class="bloco">
                 <h2>E-mail enviado!</h2>
                 <p>Verifique sua caixa de entrada e clique no link para alterar a senha!</p>

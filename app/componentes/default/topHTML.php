@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
     <link rel="stylesheet" href="<?php echo $cssLink; ?>">
-    <link rel="stylesheet" href="../../app/public/css/default.css">
-    <link rel="icon" type="image/png" href="../../app/public/images/icons/favicon.png">
+    <link rel="stylesheet" href="../../public/css/default.css">
+    <link rel="icon" type="image/png" href="../../public/images/icons/favicon.png">
 </head>
 <body>
 <?php include('../../app/componentes/navbar.php'); ?>

@@ -37,12 +37,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
     
-    <link rel="stylesheet" href="../../public/css/default.css">
-    <link rel="stylesheet" href="../../public/css/login.css">
+    <link rel="stylesheet" href="../public/css/default.css">
+    <link rel="stylesheet" href="../public/css/login.css">
 </head>
 
 <body>
-    <?php include('../../componentes/navbar.php')?>
+<?php include('../../app/componentes/default/topHTML.php'); ?>
     
     <section class="corpo-container">
 
@@ -72,6 +72,6 @@
             </div>
         </section>
     </section>
-    <?php include('../../componentes/footer.php'); ?>
+    <?php include('../app/componentes/default/bottomHTML.php'); ?>
 </body>
 </html>

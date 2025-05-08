@@ -11,6 +11,8 @@
     $fields = $model->pegaCampos("ANIMAL");
     $formData = $model->pegaCamposComResultado("ANIMAL", 1);
 ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <form action="../../controllers/AnimalController.php" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
     <input type="hidden" name="ACAO" value="<?= htmlspecialchars($acao) ?>">
@@ -25,17 +27,26 @@
                 case 'perfilUpload':
                     //fazer um componente tipo imgUpload pra ft de perfil
                     break;
+                    
                 case 'checkbox': ?>
                     <div class="frmField">
-                        <input 
-                            class="label__checkbox"
-                            type="checkbox" 
-                            id="<?= $field['NAME_FIELD'] ?>" 
-                            name="<?= $field['NAME_FIELD'] ?>" 
-                            <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
-                        >
-                        <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label>
-                    </div>
+                        <label class="label">
+                            <input 
+                                class="label__checkbox"
+                                type="checkbox" 
+                                id="<?= $field['NAME_FIELD'] ?>" 
+                                name="<?= $field['NAME_FIELD'] ?>" 
+                                <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
+                            >
+                            <span class="label__text">
+                                <span class="label__check">
+                                    <i class="fa fa-check icon"></i>
+                                </span>
+                                <?= $field['LABEL'] ?>
+                            </span>
+                        </label>
+                        <!-- <label for="<?= $field['NAME_FIELD'] ?>"><?= $field['LABEL'] ?></label> -->
+                     </div>
                     <?php break; ?>
                 <?php case 'select': ?>
                     <div class="frmField">

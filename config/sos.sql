@@ -133,3 +133,26 @@ CREATE TABLE FORMULARIO_CRIAR_EDITAR(
     MASCARA VARCHAR(100),
     ORDEM INT
 );
+
+
+INSERT INTO FORMULARIO_CRIAR_EDITAR(ID_FORM, NAME_FIELD, LABEL, TIPO, OBRIGATORIO, OPTIONS_SELECT, MASCARA, ORDEM) VALUES 
+('Animal', 'NOME', 'Nome:', 'text', true, null, null, 1),
+('Animal', 'TIPO_ANIMAL', 'Tipo Animal:', 'text', true, null, null, 2),
+('Animal', 'RACA', 'Raça:', 'text', true, null, null, 3),
+('Animal', 'PORTE', 'Porte:', 'select', true, 'Pequeno,Médio,Grande', null, 4),
+('Animal', 'IDADE', 'Idade:', 'select', true, '-1 ano,Até 5 anos,Até 10 anos,+10 anos', null, 5),
+('Animal', 'DESCRICAO', 'Descrição:', 'textarea', true, null, null, 6),
+('Animal', 'SEXO', 'Sexo:', 'select', true, 'Femea,Macho', null, 7),
+('Animal', 'CAMINHO_FOTO', null, 'imgUpload', true, null, null, 8),
+
+('Arrecadacao', 'TITULO', 'Título:', 'text', true, null, null, 1),
+('Arrecadacao', 'NOME_ANIMAL', 'Nome do Animal:', 'text', true, null, null, 2),
+('Arrecadacao', 'TITULO', 'Título:', 'text', true, null, null, 3),
+('Arrecadacao', 'DESCRICAO', 'Descrição:', 'textarea', true, null, null, 4),
+('Arrecadacao', 'VL_ARRECADACAO', 'Valor da Arrecadação:', 'text', true, null, 'money()', 5),
+('Arrecadacao', 'VL_ARRECADADO', 'Valor da Arrecadado:', 'text', true, null, 'money()', 6),
+('Arrecadacao', 'NM_CONTA', 'Nome da Conta:', 'text', true, null, null, 7),
+('Arrecadacao', 'NU_CONTA', 'Número da Conta:', 'text', true, null, 'number()', 8),
+('Arrecadacao', 'NU_AGENCIA', 'Número da Agéncia:', 'text', true, null, 'number()', 9),
+('Arrecadacao', 'QR_CODE', null, 'QRCode', true, null, null, 10),
+('Arrecadacao', 'CAMINHO_FOTO', null, 'imgUpload', true, null, null, 8),

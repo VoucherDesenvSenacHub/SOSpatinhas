@@ -1,5 +1,5 @@
 <?php
-require_once '../config/connect.php';
+require_once 'app/config/connect.php';
 
 class UsuarioModel extends Connect{
     public function CRUD($jsonData){

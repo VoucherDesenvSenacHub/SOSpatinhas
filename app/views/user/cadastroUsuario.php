@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="../../public/css/cadastroUsuario.css">
-    <link rel="stylesheet" href="../../public/css/default.css">
+    <link rel="stylesheet" href="public/css/cadastroUsuario.css">
+    <link rel="stylesheet" href="public/css/default.css">
     
 </head>
 
 <body>
-    <?php include('../../componentes/navbar.php')?>
+    <?php include('app/componentes/navbar.php')?>
     
     <section class="corpo-container">
         <h1>Cadastro</h1>
@@ -42,5 +42,5 @@
    
     </section>
 </body>
-<?php include('../../componentes/default/bottomHTML.php'); ?>
+<?php include('app/componentes/default/bottomHTML.php'); ?>
 </html> 

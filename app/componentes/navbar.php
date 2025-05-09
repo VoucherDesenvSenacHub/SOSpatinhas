@@ -1,20 +1,19 @@
 <nav class="navbar">
-    <a class="navbarLogo" href="../../app/views/user/paginaInicio.php">
-        <img src="../../public/images/Logo_Navbar.png" alt="Logo">
+    <a class="navbarLogo" href="/">
+        <img src="public/images/Logo_Navbar.png" alt="Logo">
     </a>
 
     <ul class="navLinks">
-        <a href="../../app/views/user/blog.php">Blog</a>
-        <a href="../../app/views/user/quemSomos.php">Quem Somos</a>
-        <a href="../../app/views/user/comoAjudar.php">Como Ajudar</a>
-        <a href="../../app/views/user/eventos.php">Eventos</a>
-        <a href="../../app/views/user/adocao.php">Adoção</a>
+        <a href="quemsomos">Quem Somos</a>
+        <a href="comoajudar">Como Ajudar</a>
+        <a href="eventos">Eventos</a>
+        <a href="adocao">Adoção</a>
     </ul>
 
     <div class="navRight">
         <?php if ($taLogado): ?>
-            <a class="navbarLogo" href="<?php echo ($isAdm) ? "../../views/adm/perfilADM.php" : "../../views/user/perfilUsuario.php"; ?>">
-                <img src="<?php echo ($isAdm) ? "../images/icons/iconUserAdm.png" : "../images/icons/iconUser.png"; ?>" alt="Login">
+            <a class="navbarLogo" href="<?php echo ($isAdm) ? "perfil/adm/{idUsuario}" : "perfil/user/{idUsuario}"; ?>">
+                <img src="<?php echo ($isAdm) ? "public/images/icons/iconUserAdm.png" : "public/images/icons/iconUser.png"; ?>" alt="Login">
             </a>
         <?php else: ?>
             <div id="btnLoginRegister">
@@ -24,7 +23,7 @@
                         $funcaoClick = "redirecionar('login.php')";
                         $titulo = "Entrar";
                         $funcaoLoad = "mudarTamanho('btnEntrar', '142px', '42px', '16px')";
-                        include('../../app/componentes/componenteButton.php');
+                        include('app/componentes/componenteButton.php');
                     ?>
                 </div>
                 <div id="btnCadastroDiv">
@@ -33,7 +32,7 @@
                         $funcaoClick = "redirecionar('cadastroUsuario.php')";
                         $titulo = "Cadastrar";
                         $funcaoLoad = "mudarTamanho('btnCadastro', '142px', '42px', '16px')";
-                        include('../../app/componentes/componenteButton.php');
+                        include('app/componentes/componenteButton.php');
                         $idBtn = "";
                         $funcaoClick = "";
                         $titulo = "";
@@ -52,18 +51,17 @@
 </nav>
 
 <div class="mobileMenu">
-    <a href="../../views/user/blog.php">Blog</a>
-    <a href="../../views/user/quemSomos.php">Quem Somos</a>
-    <a href="../../views/user/comoAjudar.php">Como Ajudar</a>
-    <a href="../../views/user/eventos.php">Eventos</a>
-    <a href="../../views/user/adocao.php">Adoção</a>
+    <a href="quemsomos">Quem Somos</a>
+    <a href="comoajudar">Como Ajudar</a>
+    <a href="eventos">Eventos</a>
+    <a href="adocao">Adoção</a>
     <?php if ($isAdm): ?>
-        <a href="../../views/adm/listaAdocao.php">Adoções</a>
-        <a href="../../views/adm/listaEvento.php">Eventos</a>
-        <a href="../../views/adm/listaArrecadacao.php">Arrecadações</a>
-        <a href="../../views/adm/listaMembro.php">Membros</a>
-        <a href="../../views/adm/listaUsuario.php">Usuários</a>
-        <a href="../../views/adm/editarFrmAdocao.php">Editar Formulário</a>
+        <a href="lista/Animal">Adoções</a>
+        <a href="lista/Evento">Eventos</a>
+        <a href="lista/Arrecadacao">Arrecadações</a>
+        <a href="lista/Membro">Membros</a>
+        <a href="lista/Usuario">Usuários</a>
+        <a href="#">Editar Formulário</a>
     <?php endif; ?>
 </div>
 

@@ -1,5 +1,5 @@
 <?php
-require_once '../../config/connect.php';
+require_once 'app/config/connect.php';
 
 class FormularioDev extends Connect{
     public function pegaCampos($formName) {

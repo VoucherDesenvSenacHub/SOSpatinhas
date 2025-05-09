@@ -1,34 +1,3 @@
-<?php
-    session_start();
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'], $_POST['senha'])) {
-        $tentouLogar = true;
-
-        $email = trim($_POST['email']);
-        $senha = trim($_POST['senha']);
-
-        $usersFile = '../script/userData.json';
-        $users = [];
-
-        if (file_exists($usersFile)) {
-            $jsonData = file_get_contents($usersFile);
-            $users = json_decode($jsonData, true);
-        }
-
-        foreach ($users as $user) {
-            if ($user['email'] === $email && password_verify($senha, $user['senha'])) {
-                $_SESSION['email'] = $email;
-                $_SESSION['taLogado'] = true;
-                header('Location: perfilUsuario.php');
-                exit();
-            }
-        }
-
-        $_SESSION['erroLogin'] = "Email ou senha inválidos.";
-        header('Location: login.php');
-        exit();
-    }
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

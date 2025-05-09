@@ -1,5 +1,5 @@
 <?php
-require_once '../models/PermisaoModel.php';
+require_once 'app/models/PermisaoModel.php';
 
 class PermisaoController {
 

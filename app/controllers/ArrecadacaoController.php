@@ -1,5 +1,5 @@
 <?php
-require_once '../models/ArrecadacaoModel.php';
+require_once 'app/models/ArrecadacaoModel.php';
 
 class ArrecadacaoController {
 

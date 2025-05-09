@@ -6,7 +6,6 @@ class Route{
     public static function get($uri, $callback, $roles = [], $middleware = []) {
         self::$routes['GET'][$uri] = [
             'callback' => $callback,
-            'roles' => $roles,
             'middleware' => $middleware
         ];
     }
@@ -14,7 +13,6 @@ class Route{
     public static function post($uri, $callback, $roles = [], $middleware = []) {
         self::$routes['POST'][$uri] = [
             'callback' => $callback,
-            'roles' => $roles,
             'middleware' => $middleware
         ];
     }

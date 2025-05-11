@@ -9,7 +9,7 @@
 
 body {
     background-color: rgb(198, 225, 196);
-    background-image: url("../../public/images/Patinhas.png");
+    background-image: url("public/images/default/Patinhas.png");
     background-size: 50%;
     background-position: center;
     display: flex;

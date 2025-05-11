@@ -11,7 +11,9 @@
     </ul>
 
     <div class="navRight">
-        <?php if ($taLogado): ?>
+        <?php 
+        $taLogado = false;
+        if ($taLogado): ?>
             <a class="navbarLogo" href="<?php echo ($isAdm) ? "perfil/adm/{idUsuario}" : "perfil/user/{idUsuario}"; ?>">
                 <img src="<?php echo ($isAdm) ? "public/images/icons/iconUserAdm.png" : "public/images/icons/iconUser.png"; ?>" alt="Login">
             </a>
@@ -20,7 +22,7 @@
                 <div id="btnEntrarDiv">
                     <?php
                         $idBtn = "btnEntrar";
-                        $funcaoClick = "redirecionar('login.php')";
+                        $funcaoClick = "redirecionar('login')";
                         $titulo = "Entrar";
                         $funcaoLoad = "mudarTamanho('btnEntrar', '142px', '42px', '16px')";
                         include('app/componentes/componenteButton.php');
@@ -29,7 +31,7 @@
                 <div id="btnCadastroDiv">
                     <?php
                         $idBtn = "btnCadastro";
-                        $funcaoClick = "redirecionar('cadastroUsuario.php')";
+                        $funcaoClick = "redirecionar('cadastro')";
                         $titulo = "Cadastrar";
                         $funcaoLoad = "mudarTamanho('btnCadastro', '142px', '42px', '16px')";
                         include('app/componentes/componenteButton.php');

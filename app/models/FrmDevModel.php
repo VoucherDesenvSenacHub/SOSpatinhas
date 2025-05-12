@@ -1,7 +1,7 @@
 <?php
 require_once 'app/config/connect.php';
 
-class FormularioDev extends Connect{
+class FrmDevModel extends Connect{
     public function pegaCampos($formName) {
         $stmt = $this->connection->prepare("SELECT * FROM FORMULARIO_CRIAR_EDITAR WHERE ID_FORM = ? ORDER BY ORDEM ASC");
         $stmt->execute([$formName]);

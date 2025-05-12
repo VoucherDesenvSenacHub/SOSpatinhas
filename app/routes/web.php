@@ -26,3 +26,4 @@ Route::post('/login', 'UsuarioController@login');
 Route::post('/loginadm', 'AdmController@login');
 Route::post('/cadastro', 'UsuarioController@CRUD');
 Route::post('/formulario/{acao}/{obj}/{id}', 'CriarEditarController@CRUD', ['PermissaoMiddleware', 'AdminMiddleware', 'AuthMiddleware']); // !!Tem q arrumar
+Route::post('/perfil/{tipoUsuario}/{idUsuario}/e', 'PerfilController@index', ['AuthMiddleware']);

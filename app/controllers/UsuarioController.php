@@ -14,12 +14,12 @@ class UsuarioController {
     
             $usuario = new UsuarioModel();
             $resultado = $usuario->CRUD($jsonData);
-            var_dump($resultado);
 
             if ($resultado) {
                 if ($resultado[0]['EMAIL'] === $email && password_verify($senha, $resultado[0]['SENHA'])) {
                     $_SESSION['idUser'] = $resultado['ID_USUARIO'];
                     $_SESSION['taLogado'] = true;
+                    $_SESSION['tipoUser'] == 'user';
                     header("Location: perfil/user/" . $resultado[0]['ID_USUARIO']);
                     exit();
                 } else {

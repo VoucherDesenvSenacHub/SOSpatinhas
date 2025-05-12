@@ -5,6 +5,7 @@
 ?>
 
 <h1>Lista de <?= htmlspecialchars($tipo) ?></h1>
+
 <div class="pesquisar">
     <img src="../../public/images/lupa_pesquisa.png" alt="Lupa de pesquisa" class="lupa">
     <input type="text" placeholder="Pesquisar">
@@ -18,17 +19,6 @@
         <a href="cadastrarMembro.php"><button class="btnAdd">+</button></a>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 <?php
     include('../../componentes/default/bottomHTML.php');

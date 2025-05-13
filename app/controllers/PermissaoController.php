@@ -7,13 +7,8 @@ class PermisaoController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $acao = $_POST['ACAO'];
             $id = $_POST['ID'];
-            $nome = $_POST['NOME'];
-            $tipoPErmisaao = $_POST['TIPO_PErmisaao'];
-            $raca = $_POST['RACA'];
-            $porte = $_POST['PORTE'];
-            $idade = $_POST['IDADE'];
-            $descricao = $_POST['DESCRICAO'];
-            $sexo = $_POST['SEXO'];
+            $id = $_POST['PAGINA'];
+
     
             $data = [
                 'ACAO' => $acao,

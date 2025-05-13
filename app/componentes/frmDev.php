@@ -5,7 +5,7 @@
     $formData = $model->pegaCamposComResultado("ANIMAL", 1);
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<form action="../../controllers/AnimalController.php" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
+<form action="salvar/" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
     <input type="hidden" name="ACAO" value="<?= htmlspecialchars($acao) ?>">
     <input type="hidden" name="ID" value="<?= htmlspecialchars($id) ?>">
     

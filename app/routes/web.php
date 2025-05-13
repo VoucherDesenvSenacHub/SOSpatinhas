@@ -17,7 +17,9 @@ Route::get('/adocao', 'AnimalController@adocao');
 Route::get('/adocao/detalhesanimal/{idAnimal}', 'AnimalController@detalhesAnimal');
 Route::get('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@index', ['AuthMiddleware']);
 Route::get('/perfil/{tipoUsuario}/{idUsuario}', 'PerfilController@index', ['AuthMiddleware']);
-Route::get('/formulario/{acao}/{obj}', 'CriarEditarController@index', ['PermissaoMiddleware', 'AdminMiddleware', 'AuthMiddleware']);
+
+Route::get('/formulario/{acao}/{obj}/{id}', 'CriarEditarController@index', ['PermissaoMiddleware', 'AdminMiddleware', 'AuthMiddleware']);
+
 Route::get('/lista/{obj}', 'ListaDevController@index', ['PermissaoMiddleware', 'AdminMiddleware', 'AuthMiddleware']); // !!Tem q arrumar
 
 // POST
@@ -25,5 +27,8 @@ Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdo
 Route::post('/login', 'UsuarioController@login');
 Route::post('/loginadm', 'AdmController@login');
 Route::post('/cadastro', 'UsuarioController@CRUD');
+
 Route::post('/formulario/{acao}/{obj}/{id}', 'CriarEditarController@CRUD', ['PermissaoMiddleware', 'AdminMiddleware', 'AuthMiddleware']); // !!Tem q arrumar
+
 Route::post('/perfil/{tipoUsuario}/{idUsuario}/e', 'PerfilController@index', ['AuthMiddleware']);
+Route::post('/salvar/{obj}', 'FrmDevController@index', ['AuthMiddleware']);

@@ -100,7 +100,7 @@
 
         botaoEditar.forEach(button => {
             button.addEventListener('click', function() {
-                window.location.href = "editarPerfilMembro.php";
+                window.location.href = "editarMembro.php";
             });
         });
 

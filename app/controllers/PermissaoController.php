@@ -1,14 +1,14 @@
 <?php
-require_once 'app/models/AnimalModel.php';
+require_once 'app/models/PermisaoModel.php';
 
-class AnimalController {
+class PermisaoController {
 
     public function CRUD() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $acao = $_POST['ACAO'];
-            $id = $_POST['ID_ANIMAL'];
+            $id = $_POST['ID'];
             $nome = $_POST['NOME'];
-            $tipoAnimal = $_POST['TIPO_ANIMAL'];
+            $tipoPErmisaao = $_POST['TIPO_PErmisaao'];
             $raca = $_POST['RACA'];
             $porte = $_POST['PORTE'];
             $idade = $_POST['IDADE'];
@@ -17,9 +17,9 @@ class AnimalController {
     
             $data = [
                 'ACAO' => $acao,
-                'ID_ANIMAL' => $id,
+                'ID_PErmisaao' => $id,
                 'NOME' => $nome,
-                'TIPO_ANIMAL' => $tipoAnimal,
+                'TIPO_PErmisaao' => $tipoPErmisaao,
                 'RACA' => $raca,
                 'PORTE' => $porte,
                 'IDADE' => $idade,
@@ -29,8 +29,8 @@ class AnimalController {
     
             $jsonData = json_encode($data);
     
-            $animal = new AnimalModel();
-            $resultado = $animal->CRUD($jsonData);
+            $permisao = new PermisaoModel();
+            $resultado = $permisao->CRUD($jsonData);
         }
     }
 }

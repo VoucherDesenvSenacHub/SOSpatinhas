@@ -1,7 +1,7 @@
 <?php
-    $cssLink  = '../../public/css/arrecadacao.css';
+    $cssLink  = 'public/css/arrecadacao.css';
     $tipo = 'User';
-    include('../../componentes/default/topHTML.php');
+    include('app/componentes/default/topHTML.php');
 ?>
 
 <div id="section">
@@ -10,13 +10,13 @@
             <h2 class="Titulo">Ajude o Frêgues</h2>
             <div id="slider">
                 <div class="slide fade">             
-                    <img class="fotoArrecadacao" src="../../public/images/listaArrecadacoes-ADM/fregues.png" alt="">
+                    <img class="fotoArrecadacao" src="public/images/default/semfoto.png" alt="">
                 </div>
                 <div class="slide fade">
-                    <img class="fotoArrecadacao" src="../../public/images/listaArrecadacoes-ADM/fregues.png" alt="">
+                    <img class="fotoArrecadacao" src="public/images/default/semfoto.png" alt="">
                 </div>
                 <div class="slide fade">
-                    <img class="fotoArrecadacao" src="../../public/images/listaArrecadacoes-ADM/fregues.png" alt="">
+                    <img class="fotoArrecadacao" src="public/images/default/semfoto.png" alt="">
                 </div>
                 <div id="botoesSlider">
                     <div class="botaoTrocarFoto" onclick="currentSlide(1)"></div>
@@ -73,7 +73,7 @@
                     
                     $funcaoClick = "compartilhar()";
                     $titulo = "Compartilhar";
-                    include('../../componentes/componenteButton.php');
+                    include('app/componentes/componenteButton.php');
                 ?>
                 <p id="textoCompartilhar">Verificado e autenticado pelo SOS Patinhas</p>
             </div>
@@ -107,5 +107,5 @@
     
 </script>
 <?php
-    include('../../componentes/default/bottomHTML.php');
+    include('app/componentes/default/bottomHTML.php');
 ?>

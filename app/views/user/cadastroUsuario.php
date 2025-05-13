@@ -1,50 +1,3 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome= trim($_POST['nome']);
-    $cpf= trim($_POST['cpf']);
-    $rg= trim($_POST['rg']);
-    $email= trim($_POST['email']);
-    $dtNasc= trim($_POST['dtNasc']);
-    $ddd= trim($_POST['ddd']);
-    $telefone= trim($_POST['telefone']);
-    $senha= trim($_POST['senha']);
-
-    $usersFile = '../script/userData.json';
-    $users = [];
-
-    if (file_exists($usersFile)) {
-        $jsonData = file_get_contents($usersFile);
-        $users = json_decode($jsonData, true);
-    }
-
-    foreach ($users as $user) {
-        if ($user['email'] === $email) {
-            echo "Email já cadastrado.";
-            exit();
-        }
-    }
-
-    $hashedPassword = password_hash($senha, PASSWORD_DEFAULT);
-
-    $novoUser  = [
-        'nome' => $nome,
-        'cpf' => $cpf,
-        'rg' => $rg,
-        'email' => $email,
-        'dtNasc' => $dtNasc,
-        'ddd' => $ddd,
-        'telefone' => $telefone,
-        'senha' => $hashedPassword
-    ];
-
-    $users[] = $novoUser ;
-
-    file_put_contents($usersFile, json_encode($users, JSON_PRETTY_PRINT));
-
-    header('Location: login.php');
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -52,45 +5,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="../../public/css/cadastroUsuario.css">
-    <link rel="stylesheet" href="../../public/css/default.css">
+    <link rel="stylesheet" href="public/css/cadastroUsuario.css">
+    <link rel="stylesheet" href="public/css/default.css">
     
 </head>
 
 <body>
-    <?php include('../../componentes/navbar.php')?>
+    <?php include('app/componentes/navbar.php')?>
     
     <section class="corpo-container">
         <h1>Cadastro</h1>
-        <form method="POST" action="" class="form" id="formCadastro">
-            <input type="text" name="nome" placeholder="Nome Completo*" required>
+        <form method="POST" action="cadastro" class="form" id="formCadastro">
+            <input type="hidden" name="ACAO" value="C">
+
+            <input type="text" name="NOME" placeholder="Nome Completo*" required>
             
             <div class="divInputs">
-                <input type="text" name="cpf" placeholder="CPF*" required>           
-                <input type="text" name="rg" placeholder="RG*" required>
+                <input type="text" name="CPF" placeholder="CPF*" required>           
+                <input type="text" name="RG" placeholder="RG*" required>
             </div>
             
             <div class="divInputs">
-                <input type="email" name="email" placeholder="Email*" required>
-                <input type="date" name="dtNasc" placeholder="Data de Nascimento*" required>
+                <input type="email" name="EMAIL" placeholder="Email*" required>
+                <input type="date" name="DATA_NASCIMENTO" placeholder="Data de Nascimento*" required>
             </div>
             
             <div id="divTelefone">
-                <input id="inputDDD" type="text" name="ddd" placeholder="DDD*" required>
-                <input id="inputTelefone" type="text" name="telefone" placeholder="Telefone*" required>
+                <input id="inputTelefone" type="text" name="TELEFONE" placeholder="Telefone*" required>
             </div>
             
-            <input type="password" name="senha" placeholder="Senha:" required>
+            <input type="password" name="SENHA" placeholder="Senha:" required>
 
-            <?php
-                $funcaoClick = "submitComValidacao('formCadastro')";
-                $titulo = "Cadastrar";
-                include('../../componentes/componenteButton.php');
-            ?>
+            <button type="submit" id="btnSalvar">Cadastrar</button>
         </form>
-        <p>Já tem uma conta? <a href="login.php">Login</a></p>
+        <p>Já tem uma conta? <a href="login">Login</a></p>
    
     </section>
 </body>
-<?php include('../../componentes/default/bottomHTML.php'); ?>
+<?php include('app/componentes/default/bottomHTML.php'); ?>
 </html> 

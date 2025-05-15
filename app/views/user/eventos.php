@@ -1,7 +1,6 @@
 <?php
-  $cssLink  = '../../public/css/eventos.css';
-  $tipo = $_GET['type'] ?? 'User';
-  include('../../componentes/default/topHTML.php');
+  $cssLink  = 'public/css/eventos.css';
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <section class="content">
@@ -13,13 +12,13 @@
 
                 for ($i = 0; $i < 5; $i++) {    
                     ob_start(); 
-                    include('../../componentes/arrecadacaoCard.php'); 
+                    include('app/componentes/arrecadacaoCard.php'); 
                     $cardComponents1[] = ob_get_clean();
                 }
 
                 $cardComponents = $cardComponents1;
                 $carouselId = 'carousel1';
-                @include('../../componentes/carossel.php');
+                @include('app/componentes/carossel.php');
             ?>
         </div> 
     </div>
@@ -32,18 +31,18 @@
 
             for ($i = 0; $i < 5; $i++) {
                 ob_start(); 
-                include('../../componentes/eventosCard.php');
+                include('app/componentes/eventosCard.php');
                 $cardComponents2[] = ob_get_clean();
             }
     
             $cardComponents = $cardComponents2;
             $carouselId = 'carousel2';
-            @include('../../componentes/carossel.php');
+            @include('app/componentes/carossel.php');
             ?>
         </div>
     </div>
 </section>
 
 <?php
-    include('../../componentes/default/bottomHTML.php');
+    include('app/componentes/default/bottomHTML.php');
 ?>

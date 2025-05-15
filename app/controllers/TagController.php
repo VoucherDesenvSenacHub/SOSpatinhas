@@ -1,5 +1,5 @@
 <?php
-require_once '../models/TagModel.php';
+require_once 'app/models/TagModel.php';
 
 class TagController {
 

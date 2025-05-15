@@ -1,5 +1,5 @@
 <?php
-require_once '../models/MembroAdmModel.php';
+require_once 'app/models/MembroAdmModel.php';
 
 class MembroAdmController {
 

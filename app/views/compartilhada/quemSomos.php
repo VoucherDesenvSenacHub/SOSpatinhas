@@ -1,13 +1,13 @@
 <?php
-  $cssLink  = '../../public/css/quemSomos.css';
+  $cssLink  = '.public/css/quemSomos.css';
   $tipo = 'User';
-  include('../../componentes/default/topHTML.php');
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <section class="carroseis">
   <div class="carouselEquipe">
     <div class="imagemEquipe">
-      <img src="../../public/images/grupo.png" alt="Imagem da nossa equipe completa">
+      <img src="public/images/grupo.png" alt="Imagem da nossa equipe completa">
     </div>
       <h1 class="titulo">Nossa Equipe</h1>
       <div id="carouselEquipe">
@@ -16,13 +16,13 @@
 
             for ($i = 0; $i < 3; $i++) {
               ob_start();
-              include('../../componentes/equipeCard.php');
+              include('app/componentes/equipeCard.php');
               $cardComponentEquipe[] = ob_get_clean();
             }
 
             $cardComponents = $cardComponentEquipe;
             $carouselId = 'carouselEquipe';
-            @include('../../componentes/carossel.php');
+            @include('app/componentes/carossel.php');
         ?>
       </div>
   </div>
@@ -35,18 +35,18 @@
 
         for ($i = 0; $i < 3; $i++) {
             ob_start(); 
-            include('../../componentes/parceirosCard.php');
+            include('app/componentes/parceirosCard.php');
             $cardComponentParceiros[] = ob_get_clean(); 
         }
 
         $cardComponents = $cardComponentParceiros;
         $carouselId = 'carouselParceiros';
-        @include('../../componentes/carossel.php');
+        @include('app/componentes/carossel.php');
         ?>
     </div>
   </div>
 </section>
 
 <?php
-  include('../../componentes/default/bottomHTML.php');
+  include('app/componentes/default/bottomHTML.php');
 ?>

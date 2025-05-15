@@ -4,6 +4,6 @@ session_unset();
 session_destroy(); 
 
 
-header('Location: ../views/user/login.php');
+header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/login");
 exit();
 ?>

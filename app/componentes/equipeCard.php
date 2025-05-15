@@ -1,6 +1,6 @@
 <div class="cardIntegranteEquipe">
-    <img src="../images/sophia.png" alt="Integrante da equipe">
-    <div id="nomeIntegrante">Sophia Silva</div>
+    <img src="public/images/default/semfoto.png" alt="Integrante da equipe">
+    <div id="nomeIntegrante">Lorem ipsum</div>
 </div>
 
 <style>

@@ -1,14 +1,13 @@
 <?php
-  $cssLink  = '../../public/css/detalhesEvento.css';
-  $tipo = 'User';
-  include('../../componentes/default/topHTML.php');
+  $cssLink  = 'public/css/detalhesEvento.css';
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <section class="conteudo">
   <div class="imgEDetalhesEvento">
     <div class="slider">
       <div class="slideFade">
-        <img class= "eventoSlides" src="../../public/images/horto-florestal.png" alt="Horto Florestal 1">
+        <img class= "eventoSlides" src="public/images/default/semfoto.png" alt="Horto Florestal 1">
       </div>
 
       <div class="btnSlide">
@@ -18,7 +17,7 @@
       </div>
 
       <div class="localEvento">
-        <img src="../../public/images/marcador_1.png" alt="Icone de local">
+        <img src="public/images/default/semfoto.png" alt="Icone de local">
         <p>Campo Grande MS, Horto Florestal</p>
       </div>
     </div>
@@ -30,7 +29,7 @@
         <?php
           $funcaoClick = "compartilhar()";
           $titulo = "Compartilhar";
-          include('../../componentes/componenteButton.php');
+          include('app/componentes/componenteButton.php');
         ?>
       </div>
     </div>
@@ -43,13 +42,13 @@
       $cardComponents2 = array();
       for ($i = 0; $i < 5; $i++) {
           ob_start(); 
-          include('../../componentes/eventosCard.php');
+          include('app/componentes/eventosCard.php');
           $cardComponents2[] = ob_get_clean();
       }
 
       $cardComponents = $cardComponents2;
       $carouselId = 'carousel2';
-      include('../../componentes/carossel.php');
+      include('app/componentes/carossel.php');
       ?>
     </div>
   </div>
@@ -80,4 +79,4 @@
   }
 </script>
 
-<?php include('../../componentes/default/bottomHTML.php'); ?>
+<?php include('app/componentes/default/bottomHTML.php'); ?>

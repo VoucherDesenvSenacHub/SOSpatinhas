@@ -1,5 +1,5 @@
 <?php
-require_once '../models/AnimalModel.php';
+require_once 'app/models/AnimalModel.php';
 
 class AnimalController {
 

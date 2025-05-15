@@ -6,7 +6,7 @@ class AnimalController {
     public function CRUD() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $acao = $_POST['ACAO'];
-            $id = $_POST['ID_ANIMAL'];
+            $id = $_POST['ID'];
             $nome = $_POST['NOME'];
             $tipoAnimal = $_POST['TIPO_ANIMAL'];
             $raca = $_POST['RACA'];
@@ -33,5 +33,21 @@ class AnimalController {
             $resultado = $animal->CRUD($jsonData);
         }
     }
+
+    // public function adocao() {
+    //      $animalModel = new AnimalModel();
+
+    //     // Coleta filtros da URL (GET)
+    //     $filtros = [];
+    //     if (isset($_GET['tipo'])) {
+    //         $filtros['tipo'] = $_GET['tipo'];
+    //     }
+    //     if (isset($_GET['porte'])) {
+    //         $filtros['porte'] = $_GET['porte'];
+    //     }
+
+    //     // Busca os animais filtrados
+    //     $animais = $animalModel->buscarTodos($filtros);
+    // }
 }
 ?>

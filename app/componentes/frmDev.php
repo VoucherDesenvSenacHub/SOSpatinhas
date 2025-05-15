@@ -1,8 +1,6 @@
 <?php
-
-    $model = new FormularioDev();
-    $fields = $model->pegaCampos("ANIMAL");
-    $formData = $model->pegaCamposComResultado("ANIMAL", 1);
+    $controller = new FrmDevController();
+    $controller->loadForm($tabela, )
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <form action="salvar/" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">

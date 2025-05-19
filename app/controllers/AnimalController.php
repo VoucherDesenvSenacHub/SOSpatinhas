@@ -42,5 +42,19 @@ class AnimalController {
 
         require 'app/views/user/adocao.php';
     }   
+
+    public function detalhesAnimal($id) {
+        require_once 'app/models/AnimalModel.php';
+        $model = new AnimalModel();
+
+        $animal = $model->buscarAnimalPorId($id);
+
+        if ($animal) {
+            require 'app/views/user/infoAnimal.php';
+        } else {
+            // Tratar o caso em que o animal não é encontrado
+            echo "Animal não encontrado.";
+        }
+    }
 }
 ?>

@@ -58,22 +58,22 @@
    
 
     $filteredAnimais = array_filter($animais, function ($animal) use ($sexoFilter, $idadeFilter, $porteFilter, $animalFilter) {
-        if ($sexoFilter && $animal['sexo'] !== $sexoFilter) {
+        if ($sexoFilter && $animal['SEXO'] !== $sexoFilter) {
             return false;
         }
 
         if ($idadeFilter) {
-            if ($idadeFilter === "< 1" && $animal['idade'] >= 1) return false;
-            if ($idadeFilter === "<= 5" && $animal['idade'] > 5) return false;
-            if ($idadeFilter === "<= 10" && $animal['idade'] > 10) return false;
-            if ($idadeFilter === "> 10" && $animal['idade'] <= 10) return false;
+            if ($idadeFilter === "< 1" && $animal['IDADE'] >= 1) return false;
+            if ($idadeFilter === "<= 5" && $animal['IDADE'] > 5) return false;
+            if ($idadeFilter === "<= 10" && $animal['IDADE'] > 10) return false;
+            if ($idadeFilter === "> 10" && $animal['IDADE'] <= 10) return false;
         }
 
-        if ($porteFilter && $animal['porte'] !== $porteFilter) {
+        if ($porteFilter && $animal['PORTE'] !== $porteFilter) {
             return false;
         }
 
-        if ($animalFilter && $animal['tipo'] !== $animalFilter) {
+        if ($animalFilter && $animal['TIPO'] !== $animalFilter) {
             return false;
         }
 
@@ -167,9 +167,7 @@
 <div class="card-container">
     <?php
         foreach ($rowAnimal as $animal){
-            echo "<pre>";
-                print_r($animal);
-            echo "</pre>";
+            include('app/componentes/animalCard.php'); 
         };
     ?>
 </div>
@@ -232,16 +230,16 @@
     });
 
 
-function carregarAnimais(pagina = 1) {
-let largura = window.innerWidth;
-let itensPorPag = largura <= 768 ? 8 : 9;
+    // function carregarAnimais(pagina = 1) {
+    // let largura = window.innerWidth;
+    // let itensPorPag = largura <= 768 ? 8 : 9;
 
-fetch(`adocao.php?pagina=${pagina}&ajax=1&itensPorPag=${itensPorPag}`)
-    .then(response => response.text())
-    .then(data => {
-        document.querySelector('.card-container').innerHTML = data;
-    });
-}
+    // fetch(`adocao.php?pagina=${pagina}&ajax=1&itensPorPag=${itensPorPag}`)
+    //     .then(response => response.text())
+    //     .then(data => {
+    //         document.querySelector('.card-container').innerHTML = data;
+    //     });
+    // }
 
 
 

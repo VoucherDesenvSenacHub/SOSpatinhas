@@ -1,7 +1,6 @@
 <?php
-  $cssLink  = '../../public/css/infoAnimal.css';
-  $tipo = 'User';
-  include('../../componentes/default/topHTML.php');
+   $cssLink  = 'public/css/infoAnimal.css';
+    include('app/componentes/default/topHTML.php');
 ?>
 
 <div class="container">
@@ -95,5 +94,5 @@
 </script>
 
 <?php
-  include('../../componentes/default/bottomHTML.php');
+  include('app/componentes/default/bottomHTML.php');
 ?>

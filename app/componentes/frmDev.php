@@ -1,17 +1,13 @@
-<?php
-    $controller = new FrmDevController();
-    $controller->loadForm($tabela, )
-?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<form action="salvar/" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
-    <input type="hidden" name="ACAO" value="<?= htmlspecialchars($acao) ?>">
-    <input type="hidden" name="ID" value="<?= htmlspecialchars($id) ?>">
+<form action="/formulario/salvar/<?= $obj ?>" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
+    <input type="hidden" name="ACAO" value="<?= isset($formData) ? "U" : "C" ?>">
+    <input type="hidden" name="ID" value="<?= isset($id) ? $id : null ?>">
     
     <div class="frmContainer">
         <?php foreach ($fields as $field): ?>
             <?php switch ($field['TIPO']):
                 case 'imgUpload':
-                    include('../../componentes/imgUpload.php');
+                    include('app/componentes/imgUpload.php');
                     break;
                 case 'perfilUpload':
                     //fazer um componente tipo imgUpload pra ft de perfil
@@ -87,7 +83,7 @@
         <?php endforeach; ?>
     </div>
 
-    <?php if(!isset($mostrarBtn) && $mostrarBtn == true): ?>
+    <?php if(!isset($mostrarBtn) || $mostrarBtn == true): ?>
         <div id="btn">
             
             <button type="submit" id="btnSalvar">Salvar</button>

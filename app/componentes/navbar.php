@@ -14,8 +14,8 @@
         <?php 
         $taLogado = false;
         if ($taLogado): ?>
-            <a class="navbarLogo" href="<?php echo ($isAdm) ? "perfil/adm/{idUsuario}" : "perfil/user/{idUsuario}"; ?>">
-                <img src="<?php echo ($isAdm) ? "public/images/icons/iconUserAdm.png" : "public/images/icons/iconUser.png"; ?>" alt="Login">
+            <a class="navbarLogo" href="<?php echo isset($isAdm) ? "perfil/adm/{idUsuario}" : "perfil/user/{idUsuario}"; ?>">
+                <img src="<?php echo isset($isAdm) ? "public/images/icons/iconUserAdm.png" : "public/images/icons/iconUser.png"; ?>" alt="Login">
             </a>
         <?php else: ?>
             <div id="btnLoginRegister">
@@ -57,7 +57,7 @@
     <a href="comoajudar">Como Ajudar</a>
     <a href="eventos">Eventos</a>
     <a href="adocao">Adoção</a>
-    <?php if ($isAdm): ?>
+    <?php if (isset($isAdm)): ?>
         <a href="lista/Animal">Adoções</a>
         <a href="lista/Evento">Eventos</a>
         <a href="lista/Arrecadacao">Arrecadações</a>

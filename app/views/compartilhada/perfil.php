@@ -16,7 +16,10 @@
     <div class="frmContainer">
         <?php 
             $mostrarBtn = false;
-            include('app/componentes/frmDev.php'); ?>
+            require_once 'app/controllers/FrmDevController.php';
+            $controller = new FrmDevController();
+            $controller->loadForm('U',$frmName, $id);
+        ?>
     </div>
 </div>
 

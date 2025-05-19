@@ -16,10 +16,10 @@ class AdmController {
             $resultado = $adm->CRUD($jsonData);
 
             if ($resultado) {
-                if ($resultado[0]['EMAIL'] === $email && password_verify($senha, $resultado[0]['SENHA'])) {
+                if ($resultado[0]['EMAIL'] === $email && $resultado[0]['SENHA'] === $senha) {
                     $_SESSION['idAdm'] = $resultado['ID_ADM'];
                     $_SESSION['taLogado'] = true;
-                    header("Location: adm/perfil/" . $resultado[0]['ID_ADM']);
+                    header("Location: perfil/" . $resultado[0]['ID_ADM']);
                     exit();
                 } else {
                     $_SESSION['erroLogin'] = "Email ou senha inválidos.";
@@ -35,9 +35,8 @@ class AdmController {
     }
 
     public function perfil($id){
-        $tabela = 'ADM';
-        $idObj = $id;
-
+        $frmName = 'ADM';
+        // $id = $id;
         include('app/views/compartilhada/perfil.php');
     }
 

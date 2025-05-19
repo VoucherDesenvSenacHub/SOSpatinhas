@@ -7,5 +7,12 @@ class AnimalModel extends Connect{
         $stmt->bindParam(':jsonData', $jsonData, PDO::PARAM_STR);
         $stmt->execute();
     }
+
+       public function buscarTodos() {
+        $sql = "SELECT * FROM animal";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>

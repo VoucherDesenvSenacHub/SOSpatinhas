@@ -34,20 +34,13 @@ class AnimalController {
         }
     }
 
-    // public function adocao() {
-    //      $animalModel = new AnimalModel();
+        public function adocao() {
+        require_once 'app/models/AnimalModel.php';
+        $model = new AnimalModel();
 
-    //     // Coleta filtros da URL (GET)
-    //     $filtros = [];
-    //     if (isset($_GET['tipo'])) {
-    //         $filtros['tipo'] = $_GET['tipo'];
-    //     }
-    //     if (isset($_GET['porte'])) {
-    //         $filtros['porte'] = $_GET['porte'];
-    //     }
+        $animais = $model->buscarTodos();
 
-    //     // Busca os animais filtrados
-    //     $animais = $animalModel->buscarTodos($filtros);
-    // }
+        require 'app/views/user/adocao.php';
+    }   
 }
 ?>

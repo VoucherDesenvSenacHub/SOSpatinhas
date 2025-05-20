@@ -8,13 +8,6 @@ require_once 'app/models/FrmDevModel.php';
 
 
 class CriarEditarController {
-
-    public function index($obj, $id = null) {
-        
-
-        include('app/views/adm/frmCriarEditar');
-    }
-    
     public function CRUD($obj){
         $controllerName = $obj . "Controller.php";
         $controller = new $controllerName();

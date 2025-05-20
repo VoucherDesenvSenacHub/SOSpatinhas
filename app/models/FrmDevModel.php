@@ -9,6 +9,7 @@ class FrmDevModel extends Connect{
     }
 
     public function pegaCamposComResultado($formName, $id) {
+        $formName = strtoupper($formName);
         $columnName = "ID_" . $formName;
         $stmt = $this->connection->prepare("SELECT * FROM `$formName` WHERE `$columnName` = ?");
         $stmt->execute([$id]);

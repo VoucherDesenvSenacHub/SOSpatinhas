@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<form action="/formulario/salvar/<?= $obj ?>" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
+<form action="salvar/<?= htmlspecialchars($frmName) ?>" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
     <input type="hidden" name="ACAO" value="<?= isset($formData) ? "U" : "C" ?>">
     <input type="hidden" name="ID" value="<?= isset($id) ? $id : null ?>">
     

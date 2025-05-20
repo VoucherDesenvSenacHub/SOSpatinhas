@@ -28,4 +28,4 @@ Route::post('/cadastro', 'AdmController@CRUD');
 Route::post('/perfil/{acao}/{idAdm}', 'AdmController@perfil', ['AuthMiddleware']);
 Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@CRUD', ['AuthMiddleware']);
 
-Route::post('/formulario/salvar/{obj}', 'CriarEditarController@CRUD', ['PermissaoMiddleware', 'AdminMiddleware', 'AuthMiddleware']); // !!Tem q arrumar
+Route::post('/adm/formulario/criar/salvar/{obj}', 'CriarEditarController@CRUD'); // !!Tem q arrumar

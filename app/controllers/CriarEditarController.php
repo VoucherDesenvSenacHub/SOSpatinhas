@@ -14,7 +14,7 @@ class CriarEditarController {
         $controller->CRUD();
         echo $obj;
 
-        header("Location: lista/" . $obj);
+        header("Location: /SOSPatinhas/adm/lista/" . $obj);
         exit();
     }   
 }

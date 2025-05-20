@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Paytone+One&display=swap');
 
 *{
     margin: 0;
     padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.teste p{
+    background-color: #FFFBEA;
+    height: 20rem;
+
 }
 
 .carrossel-section{
@@ -16,51 +27,60 @@
     font-family: "Nunito", sans-serif;
 }
 
-.carrossel-container{
+.carrossel-wrap{
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 36rem;
+}
+
+.carrossel-track{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
     overflow: hidden;
 }
 
 .slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    height: 375px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
-.slide.ativo{
+.slide img {
+    object-fit: cover;
     display: block;
 }
 
-.seta-esquerda{
-    position: absolute;
-    top: 10%;
-    left: 6rem;
-    background: transparent;
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    padding: 5px 10px;
-    color: antiquewhite;
-}
-
-.seta-direita{
+.prev{
     position: absolute;
     top: 20%;
-    right: 37rem;
+    left: -1rem;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 5px 3px;
+    color: #FFFBEA;
+}
+
+.next{
+    position: absolute;
+    top: 60%;
+    right: -1rem;
     background: transparent;
     border: none;
     font-size: 40px;
     cursor: pointer;
     padding: 5px 10px;
-    color: antiquewhite;
+    color: #FFFBEA;
 }
 
-.seta-direita.seta-esquerda:hover{
-    background: #fff;
+.prev.next:hover{
+    background: #7BAEDC;
 }
 
 .texto-doe {
@@ -69,23 +89,87 @@
 }
 
 .texto-doe h2 {
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 100;
+    font-family: "Paytone One", sans-serif;
+    color: #FFFBEA;
+    font-size: 35px;
+
 }
 
 .texto-doe p {
-    margin-top: 10px;
-    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+    margin-top: 2rem;
+    color: #FFFBEA;
 }
 
 .botao {
     display: inline-block;
-    margin-top: 20px;
-    background-color: #ff8855;
+    margin-top: 2rem;
+    background-color: #F28C66;
     color: #fff;
     padding: 12px 24px;
     border-radius: 25px;
     text-decoration: none; 
     font-weight: bold;
+}
+
+.pataverde{
+    position: absolute;
+    left: 4rem;
+    top: 43.4rem;
+}
+
+/* luan */
+
+
+.faixaMain{
+    background-color: #FFFBEA;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Paytone One", sans-serif;
+
+    padding-block: 4rem;
+    align-items: center;
+    & h1{
+        font-size: 30px;
+        font-weight: 300;
+        color: #333333;
+    }
+    & .bolasCtn{
+        display: flex;
+        gap: 2rem;
+        & .bolas{
+            border: 3px solid #f28c66;
+            padding: 4.27rem 1.54rem;
+            border-radius: 100%;
+            /* padding-bottom: 100%; */
+            color: #f28c66;
+            display: flex
+            ;
+            flex-direction: column;
+            width: 90px;
+            align-items: center;
+            POSITION: RELATIVE;
+            & .textosBola{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                font-family: "Nunito";
+                top: 48px;
+                text-align: center;
+                & h3{
+                    font-size: 30px;
+                }
+                & p {
+                    font-weight: 600;
+                }
+            }
+            & img{
+                width: 25px;
+                position: absolute;
+                top: 12px;
+            }
+        }
+    }
 }

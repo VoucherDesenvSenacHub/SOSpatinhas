@@ -3,7 +3,7 @@
         <img src="public/images/default/semfoto.png" alt="">
         <div class="titulo">
             <h1 class="nome">
-                <?= !empty($animal['nome']) ? htmlspecialchars($animal['nome']) : 'Nome não disponível' ?>
+                <?= !empty($animal['NOME']) ? htmlspecialchars($animal['NOME']) : 'Nome não disponível' ?>
             </h1> 
         </div>
     </div>
@@ -16,7 +16,7 @@
             <p><?= !empty($animal['RACA']) ? htmlspecialchars($animal['RACA']) : 'Raça' ?></p>
         </header>
         <button class="button-card">
-            <a href="adocao/detalhesanimal/<?= !empty($animal['RACA']) ? htmlspecialchars($animal['RACA']) : '' ?>">Adotar!</a>
+            <a href="adocao/detalhesanimal/<?= !empty($animal['NOME']) ? htmlspecialchars($animal['NOME']) : '' ?>">Adotar!</a>
         </button>
     </div>
 </div>

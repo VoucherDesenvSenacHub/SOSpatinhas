@@ -43,11 +43,11 @@ class AnimalController {
         require 'app/views/user/adocao.php';
     }   
 
-    public function detalhesAnimal($id) {
+    public function detalhesAnimal($nome) {
         require_once 'app/models/AnimalModel.php';
         $model = new AnimalModel();
 
-        $animal = $model->buscarAnimalPorId($id);
+        $animal = $model->buscarAnimal($nome);
 
         if ($animal) {
             require 'app/views/user/infoAnimal.php';

@@ -16,7 +16,7 @@
             <p><?= !empty($animal['RACA']) ? htmlspecialchars($animal['RACA']) : 'Raça' ?></p>
         </header>
         <button class="button-card">
-            <a href="adocao/detalhesanimal/<?= !empty($animal['NOME']) ? htmlspecialchars($animal['NOME']) : '' ?>">Adotar!</a>
+            <a href="adocao/detalhesanimal/<?= !empty($animal['ID_ANIMAL']) ? htmlspecialchars($animal['ID_ANIMAL']) : '' ?>">Adotar!</a>
         </button>
     </div>
 </div>

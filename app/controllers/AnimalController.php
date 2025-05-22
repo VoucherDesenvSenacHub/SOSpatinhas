@@ -6,7 +6,7 @@ class AnimalController {
     public function CRUD() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $acao = $_POST['ACAO'];
-            $id = $_POST['ID'];
+            $id = $_POST['ID_ANIMAL'];
             $nome = $_POST['NOME'];
             $tipoAnimal = $_POST['TIPO_ANIMAL'];
             $raca = $_POST['RACA'];
@@ -43,14 +43,30 @@ class AnimalController {
         require 'app/views/user/adocao.php';
     }   
 
-    public function detalhesAnimal($nome) {
+    public function detalhesAnimal($id) {
         require_once 'app/models/AnimalModel.php';
         $model = new AnimalModel();
 
-        $animal = $model->buscarAnimal($nome);
+
+        
+        $animal = $model->buscarAnimal($id);
 
         if ($animal) {
             require 'app/views/user/infoAnimal.php';
+        } else {
+            // Tratar o caso em que o animal não é encontrado
+            echo "Animal não encontrado.";
+        }
+    }
+    
+    public function detalhesAnimalForm($id) {
+        require_once 'app/models/AnimalModel.php';
+        $model = new AnimalModel();
+
+        $animal = $model->buscarAnimal($id);
+
+        if ($animal) {
+            require 'app/views/compartilhada/frmAdocao.php';
         } else {
             // Tratar o caso em que o animal não é encontrado
             echo "Animal não encontrado.";

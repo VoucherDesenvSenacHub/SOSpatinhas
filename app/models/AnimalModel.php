@@ -15,10 +15,10 @@ class AnimalModel extends Connect{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function buscarAnimal($nome) {
-        $sql = "SELECT * FROM animal WHERE NOME = :nome";
+    public function buscarAnimal($id) {
+        $sql = "SELECT * FROM animal WHERE ID_ANIMAL = :id";
         $stmt = $this->connection->prepare($sql);
-        $stmt->bindParam(':nome', $nome, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }

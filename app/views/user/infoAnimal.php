@@ -25,34 +25,23 @@
 
     </div>
     <div class="ProfileDetails">
-      <h1>Rochele</h1>
+      <?= !empty($animal['NOME']) ? htmlspecialchars($animal['NOME']) : 'Nome não disponível' ?>
       <p class="SubmittedBy">
         <i class="FasFaUser"></i> enviado por Mitski
         <img src="public/images/icons/iconUser.png" 
         alt="" class="User">
       </p>
-      <h2>História</h2>
-      <p class="descricao">
-        Olá, me chamo Rochele. Tenho 4 anos, mas se engana quem acha que já estou velha. Isso é puro preconceito.
-        Tenho muita energia, sou esperta e vou aprender tudo que me ensinarem. Como todos os outros cães do abrigo,
-        ainda tenho esperança de ser adotada.
-      </p>
-      <h2>Mais detalhes</h2>
-      <div class="tags">
-        <span>Doce</span>
-        <span>Brincalhona</span>
-        <span>Sociável</span>
-        <span>Independente</span>
-        <span>Castrado</span>
-        <span>Vacinado</span>
-        <span>Vermifugado</span>
-        <span>Sociável com cachorros</span>
-      </div>
+      <h2>Descrição</h2>
+      <p class = "descricao"><?= !empty($animal['DESCRICAO']) ? htmlspecialchars($animal['DESCRICAO']) : 'Descrição' ?></p>
+      <button class="button-card">
+            <a href="formularioadocao<?= !empty($animal['ID_ANIMAL']) ? htmlspecialchars($animal['ID_ANIMAL']) : '' ?>">Adotar!</a>
+        </button>
+
 
       <?php
-        $funcaoClick = "redirecionar('formAdocao.php')";                             
-        $titulo = "Adotar";     
-        include('app/componentes/componenteButton.php');
+        // $funcaoClick = "redirecionar('frmAdocao.php')";                             
+        // $titulo = "Adotar";     
+        // include('app/componentes/componenteButton.php');
       ?>
     </div>
   </div>
@@ -71,7 +60,7 @@
     const adoptBtn = document.querySelector(".AdoptBtn");
     if (adoptBtn) {
       adoptBtn.addEventListener("click", () => {
-        window.location.href = "formAdocao.php";
+        window.location.href = "frmAdocao.php";
       });
     }
 

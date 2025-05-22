@@ -19,8 +19,8 @@
         <div class="carrossel-wrap">
             <div class="carrossel-track">
                 
-                <div class="slide"><img id = "img1" src="public/images/default/cachorro1.png" alt="Cachorro machucado 1" ></div>
-                <div class="slide"><img id = "img2" src="public/images/default/cachorro2.png" alt="Cachorro machucado 2"></div>
+                <div class="slide"><img id = "img1" src="" alt="imagem 1" ></div>
+                <div class="slide"><img id = "img2" src="" alt="imagem 2"></div>
 
             </div>
             <div class="buttons">
@@ -91,34 +91,34 @@
         
         document.addEventListener('DOMContentLoaded', () =>{
             const imagens = [
-                ["public/images/default/cachorro1.png", "public/images/default/cachorro2.png"],
-                ["public/images/default/cachorro2.png", "public/images/default/cachorro1.png"]
+                'public/images/default/cachorro1.png',
+                'public/images/default/cachorro2.png',
+                'public/images/default/cachorro1.png',
+                'public/images/default/cachorro2.png',
+                'public/images/default/semfoto.png',
             ];
             
-            let index = 0;
             
             const img1 = document.getElementById('img1');
             const img2 = document.getElementById('img2');
             const nextBtn = document.querySelector('.next');
             const prevBtn = document.querySelector('.prev');
+            
+            let index = 0;
 
             function atualizarImagens() {
-                img1.src = imagens[index][0];
-                img2.src = imagens[index][1];
+                img1.src = imagens[index];
+                img2.src = imagens[(index + 1) % imagens.length];
             }
 
             nextBtn.addEventListener('click', () =>{
-                if (index < imagens.length -1) {
-                    index++;
-                    atualizarImagens();
-                }
+                index = (index + 2 ) % imagens.length;
+                atualizarImagens();
             });
 
             prevBtn.addEventListener('click', () =>{
-                if (index > 0) {
-                    index--;
-                    atualizarImagens();
-                }
+                index = (index - 2 + imagens.length) % imagens.length;
+                atualizarImagens();
             });
 
             atualizarImagens();

@@ -30,27 +30,34 @@ body {
 .carrossel-wrap{
     position: relative;
     width: 36rem;
+    height: 375px;
+    width: 750px;
 }
 
 .carrossel-track{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25rem;
-    overflow: hidden;
+    height: 320px;
+
 }
 
 .slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 375px;
-    height: 375px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    object-fit: cover;
     transition: transform 0.5s ease-in-out;
 }
 
 .slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }

@@ -13,7 +13,8 @@ class EventoController {
             $acao = $_POST['ACAO'];
             $titulo = $_POST['TITULO'];
             $descricao = $_POST['DESCRICAO'];
-            $cidade_estado = $_POST['CIDADE_ESTADO'];
+            $cidade = $_POST['CIDADE'];
+            $estado = $_POST['ESTADO'];
             $local_evento = $_POST['LOCAL_EVENTO'];
 
     
@@ -22,7 +23,8 @@ class EventoController {
                 'ACAO' => $acao,
                 'TITULO' => $titulo,   
                 'DESCRICAO' => $descricao,
-                'CIDADE_ESTADO' => $cidade_estado,
+                'CIDADE' => $cidade,
+                'ESTADO' => $estado,
                 'LOCAL_EVENTO' => $local_evento,
                 
             ];

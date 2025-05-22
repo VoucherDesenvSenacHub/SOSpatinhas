@@ -15,17 +15,11 @@ Route::get('/eventos/arrecadacao/{idArrecadacao}', 'ArrecadacaoController@index'
 Route::get('/adocao', 'AnimalController@adocao');
 Route::get('/adocao/detalhesanimal/{idAnimal}', 'AnimalController@detalhesAnimal');
 Route::get('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@index');
-
-Route::get('/adm/formulario/criar/{obj}', function($obj, $id = null) { include('app/views/adm/frmCadastarEditar.php');});
-Route::get('/adm/formulario/editar/{obj}/{id}', function($obj, $id) { include('app/views/adm/frmCadastarEditar.php');});
-
-Route::get('/adm/lista/{obj}', 'ListaDevController@index', ['PermissaoMiddleware', 'AuthMiddleware']); // !!Tem q arrumar
-Route::get('/adm/perfil/{idAdm}', 'AdmController@perfil', ['AuthMiddleware']);
+Route::get('/adm/formulario/criar/{obj}', function($obj, $id = null) { include('app/views/adm/frmCadastarEditar.php');}, ['PermissaoMiddleware', 'AuthMiddleware']);
+Route::get('/adm/formulario/editar/{obj}/{id}', function($obj, $id) { include('app/views/adm/frmCadastarEditar.php');}, ['PermissaoMiddleware', 'AuthMiddleware']);
+Route::get('/adm/lista/{obj}', 'ListaDevController@index', ['PermissaoMiddleware', 'AuthMiddleware']);
 
 // POST
 Route::post('/adm/login', 'AdmController@login');
-Route::post('/cadastro', 'AdmController@CRUD');
-Route::post('/perfil/{acao}/{idAdm}', 'AdmController@perfil', ['AuthMiddleware']);
-Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@CRUD', ['AuthMiddleware']);
-
-Route::post('/adm/formulario/criar/salvar/{obj}', 'CriarEditarController@CRUD'); // !!Tem q arrumar
+Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@CRUD');
+Route::post('/adm/formulario/{obj}/salvar', 'CriarEditarController@CRUD');

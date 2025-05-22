@@ -1,5 +1,4 @@
 <?php
-    $cssLink  = 'public/css/default.css';
     include('app/componentes/default/topHTML.php');
 
     require_once 'app/controllers/FrmDevController.php';

@@ -49,6 +49,6 @@ BEGIN
         SELECT * FROM ADM 
         WHERE 1 = 1
         AND (_ID_ADM IS NULL OR ID_ADM = _ID_ADM)
-        OR (_EMAIL IS NULL OR EMAIL = _EMAIL);
+        AND (_EMAIL IS NULL OR EMAIL = _EMAIL);
     END IF;
 END

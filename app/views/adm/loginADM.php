@@ -16,6 +16,10 @@
             <form action="login" method="POST" id="frmLoginADM">
                 <input type="text" placeholder="Email:" name="EMAIL">
                 <input type="password" placeholder="Senha:" name="SENHA" id="password">
+                <?php if (isset($_SESSION['erroLogin'])): ?>
+                        <p style="color:red;"><?php echo htmlspecialchars($_SESSION['erroLogin']); ?></p>
+                        <?php unset($_SESSION['erroLogin']); ?>
+                    <?php endif; ?>
                 <?php
                     $idBtn = "btnEntrarAdm";
                     $funcaoClick = "submitComValidacao('frmLoginADM')";

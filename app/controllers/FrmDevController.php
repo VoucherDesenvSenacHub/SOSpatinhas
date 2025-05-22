@@ -8,6 +8,7 @@ class FrmDevController {
         if($id != null){
             $formData = $model->pegaCamposComResultado($frmName, $id);
         }
+        echo $id;
         include("app/componentes/frmDev.php");
     }
 }

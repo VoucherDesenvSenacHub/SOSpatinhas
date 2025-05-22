@@ -19,7 +19,7 @@ class AdmController {
                 if ($resultado[0]['EMAIL'] === $email && $resultado[0]['SENHA'] === $senha) {
                     $_SESSION['idAdm'] = $resultado['ID_ADM'];
                     $_SESSION['taLogado'] = true;
-                    header("Location: perfil/" . $resultado[0]['ID_ADM']);
+                    header("Location: lista/Animal");
                     exit();
                 } else {
                     $_SESSION['erroLogin'] = "Email ou senha inválidos.";
@@ -32,12 +32,6 @@ class AdmController {
                 exit();
             }
         }
-    }
-
-    public function perfil($id){
-        $frmName = 'ADM';
-        // $id = $id;
-        include('app/views/compartilhada/perfil.php');
     }
 
     public function CRUD() {

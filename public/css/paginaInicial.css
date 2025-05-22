@@ -23,66 +23,77 @@ body {
     background-color: #7BAEDC;
     padding: 40px;
     flex-wrap: wrap;
-    gap: 10rem;
     font-family: "Nunito", sans-serif;
 }
 
 .carrossel-wrap{
     position: relative;
-    width: 36rem;
-    height: 375px;
-    width: 750px;
+    width: 40rem;
+    height: 25rem;
+}
+
+.carrossel-wrap #elemento1{
+    position: absolute;
+    left: 3rem;
+    top: 2rem;
+    width: 360px;
+    height: 335px;
 }
 
 .carrossel-track{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 320px;
-
+    height: 26rem;
+    width: 28rem;
+    position: relative;
 }
 
-.slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
+#img1 {
+    position: absolute;
+    width: 235px;
+    height: 235px;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease-in-out;
+    left: 1rem;
+    top: 0rem;
 }
+#img2 {
+    position: absolute;
+    width: 235px;
+    height: 235px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+    bottom: 0rem;
+    left: 13rem;
+
+}
+
 
 .prev{
     position: absolute;
-    top: 20%;
-    left: -1rem;
+    top: 45%;
+    left: -1.6rem;
     background: transparent;
     border: none;
+    border-width: normal;
     font-size: 40px;
     cursor: pointer;
-    padding: 5px 3px;
+    padding: 5px 11px;
     color: #FFFBEA;
 }
 
 .next{
     position: absolute;
-    top: 60%;
-    right: -1rem;
+    top: 45%;
+    right: 10rem;
     background: transparent;
     border: none;
     font-size: 40px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 5px 11px;
     color: #FFFBEA;
 }
 
@@ -91,26 +102,29 @@ body {
 }
 
 .texto-doe {
-    max-width: 400px;
+    max-width: 35rem;
     color: #fff;
 }
 
 .texto-doe h2 {
     font-family: "Paytone One", sans-serif;
     color: #FFFBEA;
-    font-size: 35px;
+    font-size: 50px;
+    font-weight: 100;
 
 }
 
 .texto-doe p {
     font-family: "Nunito", sans-serif;
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: #FFFBEA;
+    font-size: 1.20rem;
+    font-weight: 300;
 }
 
 .botao {
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 4rem;
     background-color: #F28C66;
     color: #fff;
     padding: 12px 24px;

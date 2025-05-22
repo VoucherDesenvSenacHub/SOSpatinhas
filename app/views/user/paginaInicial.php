@@ -16,17 +16,20 @@
 
     
     <section class="carrossel-section">
-        <div class="carrossel-wrap">
-            <div class="carrossel-track">
-                
-                <div class="slide"><img id = "img1" src="" alt="imagem 1" ></div>
-                <div class="slide"><img id = "img2" src="" alt="imagem 2"></div>
 
+        <div class="carrossel-wrap">
+            <img id = "elemento1" src="public/images/default/efeitocarrossel.png" alt="Elemento Carrossel">
+
+            <div class="carrossel-track">
+                <img id = "img1" src="" alt="imagem 1">
+                <img id = "img2" src="" alt="imagem 2">
             </div>
+
             <div class="buttons">
                 <button class="prev">&#10094;</button>
                 <button class="next">&#10095;</button>
             </div>
+
         </div>
 
 
@@ -91,11 +94,9 @@
         
         document.addEventListener('DOMContentLoaded', () =>{
             const imagens = [
-                'public/images/default/cachorro1.png',
-                'public/images/default/cachorro2.png',
-                'public/images/default/cachorro1.png',
-                'public/images/default/cachorro2.png',
-                'public/images/default/semfoto.png',
+                ['public/images/default/cachorro2.png', 'public/images/default/cachorro1.png',],
+                ['public/images/default/cachorro1.png', 'public/images/default/cachorro2.png',],
+                ['public/images/default/semfoto.png', 'public/images/default/cachorro2.png',]
             ];
             
             
@@ -107,17 +108,17 @@
             let index = 0;
 
             function atualizarImagens() {
-                img1.src = imagens[index];
-                img2.src = imagens[(index + 1) % imagens.length];
+                img1.src = imagens[index][0];
+                img2.src = imagens[index][1];
             }
 
             nextBtn.addEventListener('click', () =>{
-                index = (index + 2 ) % imagens.length;
+                index = (index + 1 ) % imagens.length;
                 atualizarImagens();
             });
 
             prevBtn.addEventListener('click', () =>{
-                index = (index - 2 + imagens.length) % imagens.length;
+                index = (index - 1 + imagens.length) % imagens.length;
                 atualizarImagens();
             });
 

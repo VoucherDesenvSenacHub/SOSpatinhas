@@ -29,7 +29,7 @@ body {
 .carrossel-wrap{
     position: relative;
     width: 40rem;
-    height: 25rem;
+    height: 26rem;
 }
 
 .carrossel-wrap #elemento1{
@@ -38,6 +38,7 @@ body {
     top: 2rem;
     width: 360px;
     height: 335px;
+    box-shadow: rgba(0, 0, 0, 0.2);
 }
 
 .carrossel-track{
@@ -68,37 +69,44 @@ body {
     transition: transform 0.5s ease-in-out;
     bottom: 0rem;
     left: 13rem;
+    box-shadow: rgba(255, 255, 255, 0.2);
 
 }
-
 
 .prev{
     position: absolute;
-    top: 45%;
-    left: -1.6rem;
+    top: 38%;
+    left: -1.7rem;
     background: transparent;
     border: none;
-    border-width: normal;
-    font-size: 40px;
+    font-size: 4rem;
     cursor: pointer;
-    padding: 5px 11px;
+    padding: 0px 11px;
     color: #FFFBEA;
+    transition: color 0.3s ease;
+    box-shadow: #333333;
+}
+ .next{
+    position: absolute;
+    top: 38%;
+    right: -20rem;
+    background: transparent;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0px 11px;
+    color: #FFFBEA;
+    transition: color 0.3s ease;
+    box-shadow: #333333;
 }
 
 .next{
-    position: absolute;
-    top: 45%;
-    right: 10rem;
-    background: transparent;
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    padding: 5px 11px;
-    color: #FFFBEA;
+    right: 9.5rem;
 }
 
-.prev.next:hover{
-    background: #7BAEDC;
+.prev:hover, .next:hover {
+    color: #ff7350;
+    transition: color 0.3s ease;
 }
 
 .texto-doe {
@@ -131,6 +139,11 @@ body {
     border-radius: 25px;
     text-decoration: none; 
     font-weight: bold;
+}
+
+.botao:hover{
+    background-color: #ff7350;
+    transition: background-color 0.3s ease;
 }
 
 .pataverde{

@@ -26,8 +26,8 @@
             </div>
 
             <div class="buttons">
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
+                <button class="prev">&#x276C;</button>
+                <button class="next">&#x276D;</button>
             </div>
 
         </div>

@@ -94,11 +94,11 @@
         
         document.addEventListener('DOMContentLoaded', () =>{
             const imagens = [
-                ['public/images/default/cachorro2.png', 'public/images/default/cachorro1.png',],
-                ['public/images/default/cachorro1.png', 'public/images/default/cachorro2.png',],
-                ['public/images/default/semfoto.png', 'public/images/default/cachorro2.png',]
+                ['public/images/default/cachorro2.png', 'public/images/default/cachorro1.png'],
+                ['public/images/default/cachorro1.png', 'public/images/default/cachorro2.png'],
+                ['public/images/default/semfoto.png', 'public/images/default/cachorro2.png'],
+                ['public/images/default/teste.jpg', 'public/images/default/teste2.jpg']
             ];
-            
             
             const img1 = document.getElementById('img1');
             const img2 = document.getElementById('img2');
@@ -108,9 +108,20 @@
             let index = 0;
 
             function atualizarImagens() {
-                img1.src = imagens[index][0];
-                img2.src = imagens[index][1];
+                img1.classList.add('mostrar');
+                img2.classList.add('mostrar');
+
+                setTimeout(() => {
+                    img1.src = `public/images/default/${imagens[index][0]}`;
+                    img2.src = `public/images/default/${imagens[index][1]}`;
+                    
+                    // img1.classList.remove('mostrar');
+                    // img2.classList.remove('mostrar');
+                }, 500);
+                
+        
             }
+                
 
             nextBtn.addEventListener('click', () =>{
                 index = (index + 1 ) % imagens.length;

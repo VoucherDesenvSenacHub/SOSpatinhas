@@ -1,29 +1,21 @@
 <?php
-require_once 'app/models/AnimalModel.php';
-require_once 'app/models/ArrecadacaoModel.php';
-require_once 'app/models/UsuarioModel.php';
-require_once 'app/models/EventoModel.php';
-require_once 'app/models/MembroAdmModel.php';
-require_once 'app/models/FrmDevModel.php';
+require_once 'app/controllers/AnimalController.php';
+require_once 'app/controllers/ArrecadacaoController.php';
+require_once 'app/controllers/AdmController.php';
+require_once 'app/controllers/EventoController.php';
+require_once 'app/controllers/AdmController.php';
+require_once 'app/controllers/FrmDevController.php';
+
 
 class CriarEditarController {
-
-    public function index($obj, $id = null) {
-        $tabela = strtoupper($obj);
-        $model = new FormularioDev();
-
-        $fields = $model->pegaCampos($tabela);
-
-        $formData = null;
-        if (!empty($id)) {
-            $formData = $model->pegaCamposComResultado($tabela, $id);
-        }
-    }
-    
     public function CRUD($obj){
-        $controllerName = $obj . "Controller.php";
+        $controllerName = $obj . "Controller";
         $controller = new $controllerName();
         $controller->CRUD();
+        echo $obj;
+
+        header("Location: /SOSPatinhas/adm/lista/" . $obj);
+        exit();
     }   
 }
 ?>

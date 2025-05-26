@@ -2,6 +2,13 @@
     include("app/componentes/default/topHTML.php");    
 ?>
 
+<h1><?= htmlspecialchars($obj) ?> Dashboard</h1>
+<input type="search" name="pesquisa" id="pesquisa">
+
+<button onclick="window.location.href='/SOSPatinhas/adm/formulario/criar/<?= htmlspecialchars($obj) ?>'">
+    Adicionar <?= htmlspecialchars($obj) ?>
+</button>
+
 <table>
     <thead>
         <tr>
@@ -53,5 +60,16 @@
         .catch(error => {
             console.error('Error:', error);
         });
-    }
+    };
+
+    document.getElementById('pesquisa').addEventListener('input', function () {
+        const valorProcurado = this.value.toLowerCase();
+        const rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            const rowText = Array.from(cells).map(cell => cell.textContent.toLowerCase()).join(' ');
+            row.style.display = rowText.includes(valorProcurado) ? '' : 'none';
+        });
+    });
 </script>

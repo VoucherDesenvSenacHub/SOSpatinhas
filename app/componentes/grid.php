@@ -30,9 +30,13 @@
                     <td><?= htmlspecialchars($valor) ?></td>
                 <?php endforeach; ?>
                 <td>
+                    <button>Selecionar</button>
                     <button><a href="<?= '/SOSPatinhas/adm/formulario/editar/'.$obj.'/'.$data['ID_'.strtoupper($obj)] ?>">Editar</a></button>
                     <button onclick="deletar('<?= htmlspecialchars($obj) ?>', <?= $data['ID_'.strtoupper($obj)] ?>)">Deletar</button>
                 </td>
+            </tr>
+            <tr id="noResult" style="display: none;">
+                <td colspan="<?= count($cols) + 1 ?>" style="text-align: center;">Nenhum resultado encontrado.</td>
             </tr>
         <?php endforeach; ?>
     </tbody>
@@ -40,8 +44,7 @@
 
 <script>
     function deletar(obj, idObj){
-        if(!confirm("Certeza que deseja deletar?")) 
-            return
+        if(!confirm("Certeza que deseja deletar?")) return
 
         fetch(`/SOSPatinhas/adm/deletar/${obj}/${idObj}`, {
             method: 'DELETE',
@@ -65,11 +68,19 @@
     document.getElementById('pesquisa').addEventListener('input', function () {
         const valorProcurado = this.value.toLowerCase();
         const rows = document.querySelectorAll('tbody tr');
+        const noResultRow = document.getElementById('noResult');
+        let encontrou = false;
 
         rows.forEach(row => {
+            if (row.id === 'noResult') return;
             const cells = row.querySelectorAll('td');
             const rowText = Array.from(cells).map(cell => cell.textContent.toLowerCase()).join(' ');
-            row.style.display = rowText.includes(valorProcurado) ? '' : 'none';
+            const match = rowText.includes(valorProcurado);
+
+            row.style.display = match ? '' : 'none';
+            if (match) encontrou = true;
         });
+
+        noResultRow.style.display = encontrou ? 'none' : '';
     });
 </script>

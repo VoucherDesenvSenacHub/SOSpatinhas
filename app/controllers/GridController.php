@@ -4,8 +4,12 @@ require_once 'app/models/GridModel.php';
 class GridController {
     public function mostraGrid($obj){
         $model = new GridModel();
-        $cols = $model->getColuna($obj);
-        $dataCols = $model->getInfoColuna($obj);
+        try{
+            $cols = $model->getColuna($obj);
+            $dataCols = $model->getInfoColuna($obj);
+        } catch (Exception $e) {
+            $_SESSION['modal_error'] = $e->getMessage();
+        }
         include('app/componentes/grid.php');
     }
 

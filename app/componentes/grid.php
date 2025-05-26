@@ -1,14 +1,25 @@
-<?php 
-    include("app/componentes/default/topHTML.php");    
+<?php
+// Setup
+$itemsPerPage = 10;
+$totalItems = count($dataCols);
+$totalPages = ceil($totalItems / $itemsPerPage);
+
+// Get current page from URL (?page=1), default to 1
+$currentPage = isset($_GET['page']) ? max((int)$_GET['page'], 1) : 1;
+$offset = ($currentPage - 1) * $itemsPerPage;
+
+// Slice the array for the current page
+$paginatedData = array_slice($dataCols, $offset, $itemsPerPage);
 ?>
 
-<h1><?= htmlspecialchars($obj) ?> Dashboard</h1>
+<h1><?= htmlspecialchars(ucfirst(strtolower($obj))) ?> Dashboard</h1>
 <input type="search" name="pesquisa" id="pesquisa">
 
 <button onclick="window.location.href='/SOSPatinhas/adm/formulario/criar/<?= htmlspecialchars($obj) ?>'">
-    Adicionar <?= htmlspecialchars($obj) ?>
+    Adicionar <?= htmlspecialchars(ucfirst(strtolower($obj))) ?>
 </button>
 
+<?php if((isset($cols) && $cols !== null) && (isset($dataCols) && $dataCols !== null)): ?>
 <table>
     <thead>
         <tr>
@@ -20,7 +31,7 @@
     </thead>
 
     <tbody>
-        <?php foreach ($dataCols as $data): ?>
+        <?php foreach ($paginatedData as $data): ?>
             <tr>
                 <?php foreach ($cols as $col): ?>
                     <?php
@@ -41,6 +52,15 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+
+<div class="pagination">
+    <?php for ($page = 1; $page <= $totalPages; $page++): ?>
+        <a href="?page=<?= $page ?>" 
+           style="<?= $page === $currentPage ? 'font-weight: bold; text-decoration: underline;' : '' ?>">
+           <?= $page ?>
+        </a>
+    <?php endfor; ?>
+</div>
 
 <script>
     function deletar(obj, idObj){
@@ -84,3 +104,4 @@
         noResultRow.style.display = encontrou ? 'none' : '';
     });
 </script>
+<?php endif; ?>

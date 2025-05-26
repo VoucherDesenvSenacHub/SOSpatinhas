@@ -8,5 +8,15 @@ class GridController {
         $dataCols = $model->getInfoColuna($obj);
         include('app/componentes/grid.php');
     }
+
+    public function deletar($obj, $id){
+        $modelName = $obj . "Model";
+        require_once 'app/models/'.$modelName.'.php';
+        $model = new $modelName();
+        
+        $data = ['ACAO' => 'D', 'ID_'.strtoupper($obj) => $id];
+        $jsonData = json_encode($data);
+        $model->CRUD($jsonData);
+    }
 }
 ?>

@@ -16,10 +16,13 @@ Route::get('/adocao', 'AnimalController@adocao');
 Route::get('/adocao/detalhesanimal/{idAnimal}', 'AnimalController@detalhesAnimal');
 Route::get('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@index');
 Route::get('/adm/formulario/criar/{obj}', function($obj, $id = null) { include('app/views/adm/frmCadastarEditar.php');}, ['PermissaoMiddleware', 'AuthMiddleware']);
-Route::get('/adm/formulario/editar/{obj}/{id}', function($obj, $id) { include('app/views/adm/frmCadastarEditar.php');}, ['PermissaoMiddleware', 'AuthMiddleware']);
+Route::get('/adm/formulario/editar/{obj}/{id}', function($obj, $id) { include('app/views/adm/frmCadastarEditar.php');});
 Route::get('/adm/lista/{obj}', function($obj) { include('app/views/adm/lista.php');});
 
 // POST
 Route::post('/adm/login', 'AdmController@login');
 Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@CRUD');
 Route::post('/adm/formulario/{obj}/salvar', 'CriarEditarController@CRUD');
+
+// DELETE
+Route::delete('/adm/deletar/{obj}/{id}', 'GridController@deletar');

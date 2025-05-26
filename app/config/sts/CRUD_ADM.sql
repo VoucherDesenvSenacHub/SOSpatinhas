@@ -53,14 +53,14 @@ BEGIN
 
     ELSEIF _ACAO = 'G' THEN
         CREATE TEMPORARY TABLE GRID_COLUNA(
-            ID_COL VARCHAR,
-            NM_COL VARCHAR
+            ID_COL VARCHAR(100),
+            NM_COL VARCHAR(100)
         );
 
         INSERT INTO GRID_COLUNA(ID_COL, NM_COL)
         VALUES  ('NOME', 'Nome'),
                 ('EMAIL', 'Email'),
-                ('TELEFONE', 'Telefone')
+                ('TELEFONE', 'Telefone');
 
         SELECT * FROM GRID_COLUNA;
     END IF;

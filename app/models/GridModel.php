@@ -10,7 +10,6 @@ class GridModel extends Connect{
         $jsonData = json_encode($data);
 
         return $model->CRUD($jsonData);
-
     }
 
     public function getColuna($obj){

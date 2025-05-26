@@ -24,9 +24,34 @@
                 <?php endforeach; ?>
                 <td>
                     <button><a href="<?= '/SOSPatinhas/adm/formulario/editar/'.$obj.'/'.$data['ID_'.strtoupper($obj)] ?>">Editar</a></button>
-                    <button>Deletar</button>
+                    <button onclick="deletar('<?= htmlspecialchars($obj) ?>', <?= $data['ID_'.strtoupper($obj)] ?>)">Deletar</button>
                 </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+
+<script>
+    function deletar(obj, idObj){
+        if(!confirm("Certeza que deseja deletar?")) 
+            return
+
+        fetch(`/SOSPatinhas/adm/deletar/${obj}/${idObj}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('<?= htmlspecialchars($obj) ?> deletado com sucesso.');
+                location.reload();
+            } else {
+                alert('Falha ao tentar deletar <?= htmlspecialchars($obj) ?>');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>

@@ -10,10 +10,23 @@ body {
     height: 100vh;
 }
 
-.teste p{
+.eventos{
+    text-align: center;
     background-color: #FFFBEA;
     height: 20rem;
+    padding: 2rem;
+}
 
+.eventos h2 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+.carrossel-eventos{
+    display: flex;
 }
 
 .carrossel-section{
@@ -48,6 +61,8 @@ body {
     height: 26rem;
     width: 28rem;
     position: relative;
+    overflow: hidden; 
+    background-color: transparent; 
 }
 
 #img1 {
@@ -60,7 +75,10 @@ body {
     left: 1rem;
     top: 0rem;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+    filter: blur(4px); /* começa com blur */
+    transition: opacity 0.4s ease, filter 0.5s ease;
+    transform: scale(0.90);
 }
 #img2 {
     position: absolute;
@@ -72,12 +90,19 @@ body {
     left: 13rem;
     box-shadow: rgba(255, 255, 255, 0.2);
     opacity: 0;
-    transition: opacity 0.5s ease-out;
+    z-index: 0;
+    filter: blur(4px);
+    transition: opacity 0.4s ease, filter 0.5s ease;
+    transform: scale(0.90);
+    
 
 }
 
 #img1.mostrar, #img2.mostrar{
     opacity: 1;
+    z-index: 1;
+    filter: blur(0px);
+    transform: scale(1);
 }
 
 .prev{
@@ -124,7 +149,7 @@ body {
 .texto-doe h2 {
     font-family: "Paytone One", sans-serif;
     color: #FFFBEA;
-    font-size: 50px;
+    font-size: 2.7rem;
     font-weight: 100;
 
 }
@@ -158,7 +183,7 @@ body {
 .pataverde{
     position: absolute;
     left: 4rem;
-    top: 43.4rem;
+    top: 44.4rem;
 }
 
 /* luan */

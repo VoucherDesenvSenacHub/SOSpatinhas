@@ -10,8 +10,35 @@
 
 
 
-    <section>
-        <div class="teste"><p>a</p></div>
+    <section class="eventos">
+
+        <h2>Alguns de nossos eventos</h2>
+
+        <div class="carrossel-eventos">
+            <button class="seta prev1">&#x276C;</button>
+
+            <div class="carrossel-trak2">
+
+                <div class="evento-card">
+                    <img src="" alt="Evento 1">
+                    <p>Feira de Adoção</p>
+                </div>
+
+                <div class="evento-card destaque">
+                    <img src="evento2.jpg" alt="Evento 2">
+                    <p>Feirão do Bazar + Feira do Auau</p>
+                </div>
+
+                <div class="evento-card">
+                    <img src="evento3.jpg" alt="Evento 3">
+                    <p>Adoção com Carinho</p>
+                </div>
+            </div>
+
+            <button class="seta next1">&#x276D;</button>
+        </div>
+
+        <a href="#eventos" class="botao-eventos">Veja futuros eventos</a>
     </section>
 
     
@@ -94,10 +121,10 @@
         
         document.addEventListener('DOMContentLoaded', () =>{
             const imagens = [
-                ['public/images/default/cachorro2.png', 'public/images/default/cachorro1.png'],
-                ['public/images/default/cachorro1.png', 'public/images/default/cachorro2.png'],
-                ['public/images/default/semfoto.png', 'public/images/default/cachorro2.png'],
-                ['public/images/default/teste.jpg', 'public/images/default/teste2.jpg']
+                ['cachorro2.png', 'cachorro1.png'],
+                ['cachorro1.png', 'cachorro2.png'],
+                ['cachorro2.png', 'teste.jpg'],
+                ['teste.jpg', 'teste2.jpg']
             ];
             
             const img1 = document.getElementById('img1');
@@ -107,21 +134,22 @@
             
             let index = 0;
 
-            function atualizarImagens() {
-                img1.classList.add('mostrar');
-                img2.classList.add('mostrar');
+            function fadeTroca(img, novoSrc) {
+                img.classList.remove('mostrar');
 
                 setTimeout(() => {
-                    img1.src = `public/images/default/${imagens[index][0]}`;
-                    img2.src = `public/images/default/${imagens[index][1]}`;
-                    
-                    // img1.classList.remove('mostrar');
-                    // img2.classList.remove('mostrar');
-                }, 500);
-                
-        
+                    img.src = `public/images/default/${novoSrc}`;
+                }, 20); // tempo do fade-out
+
+                setTimeout(() => {
+                    img.classList.add('mostrar');
+                }, 10); // tempo pra iniciar fade-in
             }
-                
+
+            function atualizarImagens() {
+                fadeTroca(img1, imagens[index][0]);
+                fadeTroca(img2, imagens[index][1]);
+            }
 
             nextBtn.addEventListener('click', () =>{
                 index = (index + 1 ) % imagens.length;

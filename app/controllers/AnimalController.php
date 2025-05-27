@@ -55,15 +55,15 @@ class AnimalController {
             require 'app/views/user/infoAnimal.php';
         } else {
             // Tratar o caso em que o animal não é encontrado
-            echo "Animal não encontrado.";
+            echo "Animal nao encontrado.";
         }
     }
     
-    public function detalhesAnimalForm($id) {
+    public function detalhesAnimalForm($idAnimal) {
         require_once 'app/models/AnimalModel.php';
         $model = new AnimalModel();
 
-        $animal = $model->buscarAnimal($id);
+        $animal = $model->buscarAnimal($idAnimal);
 
         if ($animal) {
             require 'app/views/compartilhada/frmAdocao.php';

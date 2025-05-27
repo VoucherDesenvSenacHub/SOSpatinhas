@@ -34,7 +34,9 @@
       <h2>Descrição</h2>
       <p class = "descricao"><?= !empty($animal['DESCRICAO']) ? htmlspecialchars($animal['DESCRICAO']) : 'Descrição' ?></p>
       <button class="button-card">
-            <a href="formularioadocao<?= !empty($animal['ID_ANIMAL']) ? htmlspecialchars($animal['ID_ANIMAL']) : '' ?>">Adotar!</a>
+           <a href="<?= $animal['ID_ANIMAL'] ?>/formularioadocao">Adotar!</a>
+
+
         </button>
 
 

@@ -55,34 +55,25 @@
     $porteFilter = isset($_GET['porte-filter']) && $_GET['porte-filter'] !== "Selecionar" ? $_GET['porte-filter'] : null;
     $animalFilter = isset($_GET['animal-filter']) && $_GET['animal-filter'] !== "Selecionar" ? $_GET['animal-filter'] : null;
 
-    $animals = [];
-    for ($i = 0; $i < 20; $i++) {
-        $animals[] = [
-            'nome' => 'Animal ' . ($i + 1),
-            'tipo' => ($i % 2 == 0) ? 'Cachorro' : 'Gato',
-            'sexo' => ($i % 2 == 0) ? 'Macho' : 'Fêmea',
-            'idade' => rand(1, 15),
-            'porte' => ($i % 3 == 0) ? 'Pequeno' : (($i % 3 == 1) ? 'Médio' : 'Grande')
-        ];
-    }
+   
 
-    $filteredAnimals = array_filter($animals, function ($animal) use ($sexoFilter, $idadeFilter, $porteFilter, $animalFilter) {
-        if ($sexoFilter && $animal['sexo'] !== $sexoFilter) {
+    $filteredAnimais = array_filter($animais, function ($animal) use ($sexoFilter, $idadeFilter, $porteFilter, $animalFilter) {
+        if ($sexoFilter && $animal['SEXO'] !== $sexoFilter) {
             return false;
         }
 
         if ($idadeFilter) {
-            if ($idadeFilter === "< 1" && $animal['idade'] >= 1) return false;
-            if ($idadeFilter === "<= 5" && $animal['idade'] > 5) return false;
-            if ($idadeFilter === "<= 10" && $animal['idade'] > 10) return false;
-            if ($idadeFilter === "> 10" && $animal['idade'] <= 10) return false;
+            if ($idadeFilter === "< 1" && $animal['IDADE'] >= 1) return false;
+            if ($idadeFilter === "<= 5" && $animal['IDADE'] > 5) return false;
+            if ($idadeFilter === "<= 10" && $animal['IDADE'] > 10) return false;
+            if ($idadeFilter === "> 10" && $animal['IDADE'] <= 10) return false;
         }
 
-        if ($porteFilter && $animal['porte'] !== $porteFilter) {
+        if ($porteFilter && $animal['PORTE'] !== $porteFilter) {
             return false;
         }
 
-        if ($animalFilter && $animal['tipo'] !== $animalFilter) {
+        if ($animalFilter && $animal['TIPO'] !== $animalFilter) {
             return false;
         }
 
@@ -93,13 +84,13 @@
     $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
     $offset = ($paginaAtual - 1) * $itensPorPag;
     
-    $registrosTotal = count($filteredAnimals);
+    $registrosTotal = count($filteredAnimais);
     $totalPag = ceil($registrosTotal / $itensPorPag);
-    $rowAnimal = array_slice($filteredAnimals, $offset, $itensPorPag);
+    $rowAnimal = array_slice($filteredAnimais, $offset, $itensPorPag);
     
     if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
         foreach ($rowAnimal as $animal) {
-            include('app/componentes/animalCard.php'); 
+            include('../../app/componentes/animalCard.php'); 
         }
         exit; 
     }
@@ -176,7 +167,7 @@
 <div class="card-container">
     <?php
         foreach ($rowAnimal as $animal){
-            include ('app/componentes/animalCard.php');
+            include('app/componentes/animalCard.php'); 
         };
     ?>
 </div>
@@ -239,19 +230,19 @@
     });
 
 
-function carregarAnimais(pagina = 1) {
-let largura = window.innerWidth;
-let itensPorPag = largura <= 768 ? 8 : 9;
+    // function carregarAnimais(pagina = 1) {
+    // let largura = window.innerWidth;
+    // let itensPorPag = largura <= 768 ? 8 : 9;
 
-fetch(`adocao.php?pagina=${pagina}&ajax=1&itensPorPag=${itensPorPag}`)
-    .then(response => response.text())
-    .then(data => {
-        document.querySelector('.card-container').innerHTML = data;
-    });
-}
+    // fetch(`adocao.php?pagina=${pagina}&ajax=1&itensPorPag=${itensPorPag}`)
+    //     .then(response => response.text())
+    //     .then(data => {
+    //         document.querySelector('.card-container').innerHTML = data;
+    //     });
+    // }
 
 
-carregarAnimais();
+
 
 </script>
 

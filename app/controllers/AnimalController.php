@@ -33,5 +33,44 @@ class AnimalController {
             $resultado = $animal->CRUD($jsonData);
         }
     }
+
+        public function adocao() {
+        require_once 'app/models/AnimalModel.php';
+        $model = new AnimalModel();
+
+        $animais = $model->buscarTodos();
+
+        require 'app/views/user/adocao.php';
+    }   
+
+    public function detalhesAnimal($id) {
+        require_once 'app/models/AnimalModel.php';
+        $model = new AnimalModel();
+
+
+        
+        $animal = $model->buscarAnimal($id);
+
+        if ($animal) {
+            require 'app/views/user/infoAnimal.php';
+        } else {
+            // Tratar o caso em que o animal não é encontrado
+            echo "Animal nao encontrado.";
+        }
+    }
+    
+    public function detalhesAnimalForm($idAnimal) {
+        require_once 'app/models/AnimalModel.php';
+        $model = new AnimalModel();
+
+        $animal = $model->buscarAnimal($idAnimal);
+
+        if ($animal) {
+            require 'app/views/compartilhada/frmAdocao.php';
+        } else {
+            // Tratar o caso em que o animal não é encontrado
+            echo "Animal não encontrado.";
+        }
+    }
 }
 ?>

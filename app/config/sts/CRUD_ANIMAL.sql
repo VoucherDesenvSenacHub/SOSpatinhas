@@ -57,5 +57,22 @@ BEGIN
         FROM ANIMAL 
         WHERE 1 = 1 
             AND (_ID_ANIMAL IS NULL OR ID_ANIMAL = _ID_ANIMAL);
-	END IF;
+
+	ELSEIF _ACAO = 'G' THEN
+        CREATE TEMPORARY TABLE GRID_COLUNA(
+            ID_COL VARCHAR(100),
+            NM_COL VARCHAR(100)
+        );
+
+        INSERT INTO GRID_COLUNA(ID_COL, NM_COL)
+        VALUES  ('NOME', 'Nome'),
+                ('TIPO_ANIMAL', 'Tipo Animal'),
+                ('RACA', 'Raça'),
+                ('PORTE', 'Porte'),
+                ('IDADE', 'Idade'),
+                ('DESCRICAO', 'Descrição'),
+                ('SEXO', 'Sexo');
+
+        SELECT * FROM GRID_COLUNA;
+    END IF;
 END

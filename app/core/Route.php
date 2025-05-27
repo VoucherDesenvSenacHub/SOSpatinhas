@@ -3,15 +3,22 @@
 class Route{
     protected static $routes = [];
 
-    public static function get($uri, $callback, $roles = [], $middleware = []) {
+    public static function get($uri, $callback, $middleware = []) {
         self::$routes['GET'][$uri] = [
             'callback' => $callback,
             'middleware' => $middleware
         ];
     }
     
-    public static function post($uri, $callback, $roles = [], $middleware = []) {
+    public static function post($uri, $callback, $middleware = []) {
         self::$routes['POST'][$uri] = [
+            'callback' => $callback,
+            'middleware' => $middleware
+        ];
+    }
+
+    public static function delete($uri, $callback, $middleware = []) {
+        self::$routes['DELETE'][$uri] = [
             'callback' => $callback,
             'middleware' => $middleware
         ];

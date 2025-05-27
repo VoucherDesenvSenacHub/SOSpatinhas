@@ -24,7 +24,7 @@ class GridModel extends Connect{
 
         $data = ['ACAO' => $acao];
         if ($id !== null) {
-            $data['ID'] = $id;
+            $data['ID_'.strtoupper($obj)] = $id;
         }
         $jsonData = json_encode($data);
 

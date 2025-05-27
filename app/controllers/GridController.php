@@ -2,11 +2,16 @@
 require_once 'app/models/GridModel.php';
 
 class GridController {
+    private $model;
+    
+    public function __construct(){
+        $this->model = new GridModel();
+    }
+
     public function mostraGrid($obj){
-        $model = new GridModel();
         try{
-            $cols = $model->getColuna($obj);
-            $dataCols = $model->getInfoColuna($obj);
+            $cols = $this->model->getColuna($obj);
+            $dataCols = $this->model->getInfoColuna($obj);
         } catch (Exception $e) {
             $_SESSION['modal_error'] = $e->getMessage();
         }
@@ -14,13 +19,11 @@ class GridController {
     }
 
     public function deletar($obj, $id){
-        $modelName = $obj . "Model";
-        require_once 'app/models/'.$modelName.'.php';
-        $model = new $modelName();
-        
-        $data = ['ACAO' => 'D', 'ID_'.strtoupper($obj) => $id];
-        $jsonData = json_encode($data);
-        $model->CRUD($jsonData);
+        try{
+            $this->model->deletar($obj, $id);
+        } catch (Exception $e) {
+            $_SESSION['modal_error'] = $e->getMessage();
+        }
     }
 }
 ?>

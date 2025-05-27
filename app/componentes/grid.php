@@ -1,17 +1,3 @@
-<?php
-// Setup
-$itemsPerPage = 10;
-$totalItems = count($dataCols);
-$totalPages = ceil($totalItems / $itemsPerPage);
-
-// Get current page from URL (?page=1), default to 1
-$currentPage = isset($_GET['page']) ? max((int)$_GET['page'], 1) : 1;
-$offset = ($currentPage - 1) * $itemsPerPage;
-
-// Slice the array for the current page
-$paginatedData = array_slice($dataCols, $offset, $itemsPerPage);
-?>
-
 <h1><?= htmlspecialchars(ucfirst(strtolower($obj))) ?> Dashboard</h1>
 <input type="search" name="pesquisa" id="pesquisa">
 
@@ -19,7 +5,18 @@ $paginatedData = array_slice($dataCols, $offset, $itemsPerPage);
     Adicionar <?= htmlspecialchars(ucfirst(strtolower($obj))) ?>
 </button>
 
-<?php if((isset($cols) && $cols !== null) && (isset($dataCols) && $dataCols !== null)): ?>
+<?php 
+if((isset($cols) && $cols !== null) && (isset($dataCols) && $dataCols !== null)): 
+    $itemPorPag = 10;
+    $totalItems = count($dataCols);
+    $totalPag = ceil($totalItems / $itemPorPag);
+
+    $pagAtual = isset($_GET['page']) ? max((int)$_GET['page'], 1) : 1;
+    $offset = ($pagAtual - 1) * $itemPorPag;
+
+    $paginatedData = array_slice($dataCols, $offset, $itemPorPag);
+
+?>
 <table>
     <thead>
         <tr>
@@ -54,9 +51,9 @@ $paginatedData = array_slice($dataCols, $offset, $itemsPerPage);
 </table>
 
 <div class="pagination">
-    <?php for ($page = 1; $page <= $totalPages; $page++): ?>
+    <?php for ($page = 1; $page <= $totalPag; $page++): ?>
         <a href="?page=<?= $page ?>" 
-           style="<?= $page === $currentPage ? 'font-weight: bold; text-decoration: underline;' : '' ?>">
+           style="<?= $page === $pagAtual ? 'font-weight: bold; text-decoration: underline;' : '' ?>">
            <?= $page ?>
         </a>
     <?php endfor; ?>

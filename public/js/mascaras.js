@@ -29,13 +29,13 @@ function maskRG(campo) {
 function maskTelefone(campo) {
   let valor = campo.value.replace(/\D/g, '');
 
-  if (valor.length > 10) {
-    valor = valor.slice(0, 10);
+  if (valor.length > 11) {
+    valor = valor.slice(0, 11);
   }
 
   campo.value = valor
     .replace(/^(\d{2})(\d)/g, '($1) $2')
-    .replace(/(\d{4})(\d{1,4})$/, '$1-$2');
+    .replace(/(\d{5})(\d{1,4})$/, '$1-$2');
 }
 
 function maskData(campo) {

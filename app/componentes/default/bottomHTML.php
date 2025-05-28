@@ -1,5 +1,5 @@
 </section>
     <?php include('app/componentes/footer.php'); ?>
-    <script src="public/js/mascaras.js"></script>
+    <script src="/SOSPatinhas/public/js/mascaras.js"></script>
 </body>
 </html>

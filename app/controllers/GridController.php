@@ -13,7 +13,11 @@ class GridController {
             $cols = $this->model->getColuna($obj);
             $dataCols = $this->model->getInfoColuna($obj);
         } catch (Exception $e) {
-            $_SESSION['modal_error'] = $e->getMessage();
+            $_SESSION['notifModal'] = [
+                'tipo' => 'erro',       
+                'titulo' => 'Erro encontrado!',
+                'mensagem' => 'Ocorreu um erro ao processar a requisição.'
+            ];
         }
         include('app/componentes/grid.php');
     }

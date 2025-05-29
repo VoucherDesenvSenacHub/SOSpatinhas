@@ -20,17 +20,17 @@
             <div class="carrossel-trak2">
 
                 <div class="evento-card">
-                    <img src="" alt="Evento 1">
+                    <img src="public/images/default/evento1.png" alt="Evento 1">
                     <p>Feira de Adoção</p>
                 </div>
 
                 <div class="evento-card destaque">
-                    <img src="evento2.jpg" alt="Evento 2">
+                    <img src="public/images/default/evento2.png" alt="Evento 2">
                     <p>Feirão do Bazar + Feira do Auau</p>
                 </div>
 
                 <div class="evento-card">
-                    <img src="evento3.jpg" alt="Evento 3">
+                    <img src="public/images/default/evento3.png" alt="Evento 3">
                     <p>Adoção com Carinho</p>
                 </div>
             </div>
@@ -38,10 +38,11 @@
             <button class="seta next1">&#x276D;</button>
         </div>
 
-        <a href="#eventos" class="botao-eventos">Veja futuros eventos</a>
+        <a href="#eventos" class="botao-eventos">VEJA FUTUROS EVENTOS</a>
     </section>
 
-    
+    <img class= "pataInvertida"src="public/images/icons/iconPataVerde.png" alt="Pata_Inicial1">
+
     <section class="carrossel-section">
 
         <div class="carrossel-wrap">
@@ -77,7 +78,7 @@
 
     </section>
 
-    <img class= "pataverde"src="public/images/icons/iconPata.png" alt="Pata_Inicial">
+    <img class= "pataverde"src="public/images/icons/iconPataVerde1.png" alt="Pata_Inicial">
 
     <section class="faixaMain">
         <div class="bolasCtn">
@@ -139,11 +140,11 @@
 
                 setTimeout(() => {
                     img.src = `public/images/default/${novoSrc}`;
-                }, 20); // tempo do fade-out
+                }, 20);
 
                 setTimeout(() => {
                     img.classList.add('mostrar');
-                }, 10); // tempo pra iniciar fade-in
+                }, 10); 
             }
 
             function atualizarImagens() {

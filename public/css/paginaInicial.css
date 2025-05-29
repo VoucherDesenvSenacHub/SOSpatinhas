@@ -27,6 +27,29 @@ body {
 
 .carrossel-eventos{
     display: flex;
+    font-family: "Nunito", sans-serif;
+}
+.botao-eventos{
+    display: inline-block;
+    margin-top: 4rem;
+    background-color: #F28C66;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none; 
+    font-weight: bold;
+    line-height: 1;
+    font-family: "Nunito", sans-serif;
+}
+.botao:hover{
+    transform: translateY(-5px);
+    background-color: #ff7350;
+    transition: transform 300ms;
+}
+
+/* MUDAR DPS  */
+.evento-card{
+    display: none;
 }
 
 .carrossel-section{
@@ -34,7 +57,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #7BAEDC;
-    padding: 40px;
+    padding: 4.4rem;
     flex-wrap: wrap;
     font-family: "Nunito", sans-serif;
 }
@@ -183,7 +206,12 @@ body {
 .pataverde{
     position: absolute;
     left: 4rem;
-    top: 44.4rem;
+    top: 52.2rem;
+}
+.pataInvertida{
+    position: absolute;
+    right: 4rem;
+    top: 19.4rem;
 }
 
 /* luan */
@@ -212,8 +240,7 @@ body {
             border-radius: 100%;
             /* padding-bottom: 100%; */
             color: #f28c66;
-            display: flex
-            ;
+            display: flex;
             flex-direction: column;
             width: 90px;
             align-items: center;
@@ -239,5 +266,144 @@ body {
                 top: 12px;
             }
         }
+    }
+}
+
+
+@media (max-width: 1440px){
+    .pataverde{
+        top: 52.2rem;
+    }
+    .carrossel-wrap{
+        width: 40rem;
+    }
+    .next {
+    right: 9.5rem;
+    }
+}
+@media (max-width: 1024px){
+    .pataverde{
+        top: 73.3rem;
+    }
+    .carrossel-wrap{
+        width: 30rem;
+    }
+    .next {
+    right: -0.5rem;
+    }
+}
+@media (max-width: 768px){
+    .pataverde{
+        left: 1rem;
+        top: 83.6rem;
+        width: 192.85px;
+    }
+    .pataInvertida{
+        top: 20.2rem;
+        right: 1rem;
+        width: 192.85px;
+    }
+    .faixaMain{
+        gap: 3rem;
+        padding-block: 7rem;
+
+    }
+    .carrossel-section{
+        flex-direction: column;
+    }
+    .carrossel-wrap {
+        margin-top: 3rem ;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+    .carrossel-wrap #elemento1{
+        left: 8.5rem;
+    }
+    .carrossel-track{
+    flex-direction: column;
+    height: 26rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent
+    }
+    .prev{
+        left: 2.8rem;
+        padding: 0px 20px;
+    }
+    .next{
+        right: 2.2rem ;
+        padding: 0px 20px;
+    }
+    #img1{
+        left: 6.6rem;
+    }
+    #img2{
+        left: 18.4rem;
+    }
+    .texto-doe h2{
+        margin-top: 3rem;
+    }
+    .texto-doe a{
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 425px){
+    .carrossel-section{
+        padding: 2.2rem;
+    }
+    .carrossel-wrap{
+        width: 23rem;
+    }
+    .carrossel-wrap #elemento1 {
+        left: 1.5rem;
+        width: 20rem;
+        height: 18rem;
+    }
+    .prev{left: -2.2rem;}
+    .next{right: -1.8rem;}
+    #elemento1{left: -0.5rem;}
+    #img1 {
+        left: 1.2rem;
+        width: 183px;
+        height: 183px;
+        top: 1rem;
+    }
+    #img2 {
+        left: 10.1rem;
+        width: 183px;
+        height: 183px;
+        bottom: 4rem;
+    }
+    .texto-doe h2 {
+        margin-top: 0rem;
+        font-size: 2.11rem;
+    }
+    .texto-doe a{margin-bottom: 3rem;}
+    .pataInvertida{
+        width: 152.85px;
+    }
+    .pataverde{
+        top: 82.8rem;
+        width: 152.85px;
+    }
+
+    .faixaMain{
+        padding: 2rem;
+    }
+    .faixaMain {
+    & .bolasCtn {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 2fr 2fr;
+        margin-top: 4rem;
+        }
+        & h1 {
+        font-size: 28px;
+        font-weight: 200;
+        color: #333333;
+        text-align: justify;
+    }
     }
 }

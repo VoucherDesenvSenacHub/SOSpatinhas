@@ -66,17 +66,20 @@
   }
 
   .modalContent{
+    height: 10rem;
+    width: 40rem;
     background: #FFFFFF;
-    margin:100px auto; 
+    margin:0px auto; 
     width:300px; 
     border-radius:10px; 
     position:relative;
   }
 
   .modalHeader{
-    background: #F26666;
+    height: 25%;
     padding: 8px;
     border-radius: 10px 10px 0 0;
+    
   }
 
   #modalTitulo{
@@ -84,11 +87,36 @@
     color: #FFFBEA;
   }
 
+  .modalBody{
+    height: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
   .modalFooter{
+    height: 25%;
     text-align: center;
   }
 
   #btnModal{
     
+  }
+
+  .modalSucesso{
+    background-color: #349582;
+  }
+
+  .modalErro{
+    background-color: #F26666;
+  }
+
+  .modalAtencao{
+    background-color: #F28C66;
+  }
+
+  .modalInfo{
+    background-color: #7BAEDC;
   }
 </style>

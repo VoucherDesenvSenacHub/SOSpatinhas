@@ -73,7 +73,7 @@
             return false;
         }
 
-        if ($animalFilter && $animal['TIPO'] !== $animalFilter) {
+        if ($animalFilter && $animal['TIPO_ANIMAL'] !== $animalFilter) {
             return false;
         }
 

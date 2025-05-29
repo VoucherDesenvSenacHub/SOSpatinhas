@@ -3,17 +3,25 @@ require_once 'app/models/AdmModel.php';
 
 class AdmController {
 
+    private $model;
+    
+    public function __construct(){
+        $this->model = new AdmModel();
+    }
+
     public function login(){
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email = trim($_POST['EMAIL'] ?? '');
             $senha = trim($_POST['SENHA'] ?? '');
 
             $data = ['ACAO' => 'R', 'EMAIL' => $email];
-    
             $jsonData = json_encode($data);
-    
-            $adm = new AdmModel();
-            $resultado = $adm->CRUD($jsonData);
+            
+            try{
+                $resultado = $this->model->CRUD($jsonData);
+            } catch (Exception $e) {
+                setModal('erro', 'Erro encontrado!', $e->getMessage());
+            }
 
             if ($resultado) {
                 if ($resultado[0]['EMAIL'] === $email && $resultado[0]['SENHA'] === $senha) {
@@ -54,8 +62,11 @@ class AdmController {
     
             $jsonData = json_encode($data);
     
-            $adm = new AdmModel();
-            $resultado = $adm->CRUD($jsonData);
+            try{
+                $resultado = $this->model->CRUD($jsonData);
+            } catch (Exception $e) {
+                setModal('erro', 'Erro encontrado!', $e->getMessage());
+            }
         }
     }
 }

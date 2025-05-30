@@ -31,9 +31,13 @@ class AnimalController {
                 'DESCRICAO' => $descricao,
                 'SEXO' => $sexo
             ];
-            $jsonData = json_encode($data);
-    
-            $resultado = $this->model->CRUD($jsonData);
+            
+            try{
+                $jsonData = json_encode($data);
+                $resultado = $this->model->CRUD($jsonData);
+            } catch (Exception $e) {
+                setModal('erro', 'Erro encontrado!', $e->getMessage());
+            }
         }
     }
 

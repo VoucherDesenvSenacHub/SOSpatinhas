@@ -50,5 +50,18 @@ BEGIN
         WHERE 1 = 1
         AND (_ID_ADM IS NULL OR ID_ADM = _ID_ADM)
         AND (_EMAIL IS NULL OR EMAIL = _EMAIL);
+
+    ELSEIF _ACAO = 'G' THEN
+        CREATE TEMPORARY TABLE GRID_COLUNA(
+            ID_COL VARCHAR(100),
+            NM_COL VARCHAR(100)
+        );
+
+        INSERT INTO GRID_COLUNA(ID_COL, NM_COL)
+        VALUES  ('NOME', 'Nome'),
+                ('EMAIL', 'Email'),
+                ('TELEFONE', 'Telefone');
+
+        SELECT * FROM GRID_COLUNA;
     END IF;
 END

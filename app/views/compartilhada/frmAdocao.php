@@ -1,6 +1,5 @@
 <?php
   $cssLink  = 'app/public/css/frmAdocao.css';
-  $tipo = 'User';
   include('app/componentes/default/topHTML.php');
 ?>
     

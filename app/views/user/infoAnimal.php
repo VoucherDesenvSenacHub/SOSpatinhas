@@ -1,6 +1,6 @@
 <?php
-   $cssLink  = 'public/css/infoAnimal.css';
-    include('app/componentes/default/topHTML.php');
+  $cssLink  = 'public/css/infoAnimal.css';
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <div class="container">
@@ -25,26 +25,17 @@
 
     </div>
     <div class="ProfileDetails">
-      <?= !empty($animal['NOME']) ? htmlspecialchars($animal['NOME']) : 'Nome não disponível' ?>
+      <?= !empty($animal[0]['NOME']) ? htmlspecialchars($animal[0]['NOME']) : 'Nome não disponível' ?>
       <p class="SubmittedBy">
         <i class="FasFaUser"></i> enviado por Mitski
         <img src="public/images/icons/iconUser.png" 
         alt="" class="User">
       </p>
       <h2>Descrição</h2>
-      <p class = "descricao"><?= !empty($animal['DESCRICAO']) ? htmlspecialchars($animal['DESCRICAO']) : 'Descrição' ?></p>
+      <p class = "descricao"><?= !empty($animal[0]['DESCRICAO']) ? htmlspecialchars($animal[0]['DESCRICAO']) : 'Descrição' ?></p>
       <button class="button-card">
-           <a href="<?= $animal['ID_ANIMAL'] ?>/formularioadocao">Adotar!</a>
-
-
-        </button>
-
-
-      <?php
-        // $funcaoClick = "redirecionar('frmAdocao.php')";                             
-        // $titulo = "Adotar";     
-        // include('app/componentes/componenteButton.php');
-      ?>
+        <a href="<?= $animal[0]['ID_ANIMAL'] ?>/formularioadocao">Adotar!</a>
+      </button>
     </div>
   </div>
 </div>

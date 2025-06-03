@@ -14,7 +14,17 @@
         <div class="login">
             <h2>Login</h2>
             <form action="login" method="POST" id="frmLoginADM">
-                <input type="text" placeholder="Email:" name="EMAIL">
+                <input type="text" placeholder="Email:" name="EMAIL" required>
+
+
+
+                <input type="password" id="senha" name="SENHA" required placeholder="Senha:"> <!-- do meu form -->
+                <!-- <input type="password" placeholder="Senha:" name="SENHA" id="inputSenha">  já estava aqui -->
+                <button type="button" id="btnIconOlho">
+                    <img id="imgIconOlho" src="../public/images/icons/iconOlhoAberto.png" alt="Mostrar senha">
+                </button>
+            </div>
+
                 <input type="password" placeholder="Senha:" name="SENHA" id="password">
                 <?php if (isset($_SESSION['erroLogin'])): ?>
                         <p style="color:red;"><?php echo htmlspecialchars($_SESSION['erroLogin']); ?></p>
@@ -30,6 +40,23 @@
             </form>
         </div>
     </section>
+    <script>
+         document.getElementById("btnIconOlho").addEventListener("click", function() {
+            let inputSenha = document.getElementById("senha");
+            let imgIconOlho = document.getElementById("imgIconOlho");
+
+            if (inputSenha.type === "password") {
+                inputSenha.type = "text";
+                imgIconOlho.src = "../public/images/icons/iconOlhoFechado.png"; 
+                imgIconOlho.alt = "Esconder senha";
+            } 
+            else {
+                inputSenha.type = "password";
+                imgIconOlho.src = "../public/images/icons/iconOlhoAberto.png"; 
+                imgIconOlho.alt = "Mostrar senha";
+            }
+        });
+    </script>
     <?php include('app/componentes/footer.php'); ?>
 </body>
 </html>

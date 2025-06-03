@@ -52,10 +52,12 @@ class AdmController {
             'ACAO' => $acao
             ];
     
-            $jsonData = json_encode($data);
-    
-            $adm = new AdmModel();
-            $resultado = $adm->CRUD($jsonData);
+            try{
+                $jsonData = json_encode($data);
+                $resultado = $this->model->CRUD($jsonData);
+            } catch (Exception $e) {
+                setModal('erro', 'Erro encontrado!', $e->getMessage());
+            }
         }
     }
 }

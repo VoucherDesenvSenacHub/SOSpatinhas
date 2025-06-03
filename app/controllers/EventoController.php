@@ -3,6 +3,12 @@ require_once 'app/models/EventoModel.php';
 
 class EventoController {
 
+    private $model;
+    
+    public function __construct(){
+        $this->model = new EventoModel();
+    }
+
     public function index(){
         include('app/views/user/eventos.php');
     }
@@ -21,18 +27,19 @@ class EventoController {
             $data = [
                 'ID_EVENTO' => $id,
                 'ACAO' => $acao,
-                'TITULO' => $titulo,   
+                'TITULO' => $titulo,
                 'DESCRICAO' => $descricao,
                 'CIDADE' => $cidade,
                 'ESTADO' => $estado,
                 'LOCAL_EVENTO' => $local_evento,
-                
             ];
     
-            $jsonData = json_encode($data);
-    
-            $evento = new EventoModel();
-            $resultado = $evento->CRUD($jsonData);
+            try{
+                $jsonData = json_encode($data);
+                $resultado = $this->model->CRUD($jsonData);
+            } catch (Exception $e) {
+                setModal('erro', 'Erro encontrado!', $e->getMessage());
+            }
         }
     }
 }

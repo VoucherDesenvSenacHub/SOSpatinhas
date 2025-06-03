@@ -1,5 +1,5 @@
 <?php
-  $cssLink  = 'public/css/detalhesEvento.css';
+  $cssLink  = '../../public/css/detalhesEvento.css';
   include('app/componentes/default/topHTML.php');
 ?>
 
@@ -18,13 +18,19 @@
 
       <div class="localEvento">
         <img src="public/images/default/semfoto.png" alt="Icone de local">
-        <p>Campo Grande MS, Horto Florestal</p>
+        <p>
+          <?= $evento[0]["CIDADE"].' '. $evento[0]["ESTADO"].', '. $evento[0]["LOCAL_EVENTO"]; ?>
+        </p>
       </div>
     </div>
 
     <div class="detalhesEvento">
-      <h1>Feira do Auau</h1>
-      <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
+      <h1>
+        <?= $evento[0]["TITULO"]?>
+      </h1>
+      <p>
+        <?= $evento[0]["DESCRICAO"]?>
+      </p>
       <div class="buttonComponente">
         <?php
           $funcaoClick = "compartilhar()";
@@ -40,10 +46,15 @@
     <div id="eventosCarrosel">
       <?php
       $cardComponents2 = array();
-      for ($i = 0; $i < 5; $i++) {
-          ob_start(); 
-          include('app/componentes/eventosCard.php');
-          $cardComponents2[] = ob_get_clean();
+      // for ($i = 0; $i < 5; $i++) {
+        //     include('app/componentes/eventosCard.php');
+        //   }
+        
+        
+      foreach ($resultado as $evento) {
+        ob_start();
+        include('app/componentes/eventosCard.php');
+        $cardComponents2[] = ob_get_clean();
       }
 
       $cardComponents = $cardComponents2;

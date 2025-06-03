@@ -11,8 +11,8 @@
     <?php if(isset($cssLink)): ?>
         <link rel="stylesheet" href="<?php echo $cssLink; ?>">
     <?php endif; ?>
-    <link rel="stylesheet" href="public/css/default.css">
-    <link rel="icon" type="image/png" href="public/images/icons/favicon.png">
+    <link rel="stylesheet" href="../../public/css/default.css">
+    <link rel="icon" type="image/png" href="../../public/images/icons/favicon.png">
 </head>
 <body>
 <?php include('app/componentes/navbar.php'); ?>

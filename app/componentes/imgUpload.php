@@ -1,6 +1,6 @@
 <div class="uploadContainer">
     <div class="imgContainer">
-        <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
+        <input type="file" id="image" name="CAMINHO_FOTO[]" accept="image/*" multiple hidden>
         <label for="image" id="imgLabel" class="upload-box">
             <img src="../../public/images/cadastroAdocao-ADM/grampoBranco.png" alt="Upload Icon">
             <p>Enviar fotos</p>
@@ -13,7 +13,7 @@
 <script>
     let selectedFiles = [];
 
-    document.getElementById('image').addEventListener('change', function (event) {
+    document.getElementById('CAMINHO_FOTO').addEventListener('change', function (event) {
         const newFiles = Array.from(event.target.files);
 
         const filteredNewFiles = newFiles.filter(newFile => {

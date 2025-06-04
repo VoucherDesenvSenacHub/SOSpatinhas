@@ -2,6 +2,11 @@
 require_once 'app/models/AnimalModel.php';
 
 class AnimalController {
+    private $model;
+    
+    public function __construct(){
+        $this->model = new AnimalModel();
+    }
 
     public function CRUD() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -26,50 +31,55 @@ class AnimalController {
                 'DESCRICAO' => $descricao,
                 'SEXO' => $sexo
             ];
-    
-            $jsonData = json_encode($data);
-    
-            $animal = new AnimalModel();
-            $resultado = $animal->CRUD($jsonData);
+            
+            try{
+                $jsonData = json_encode($data);
+                $resultado = $this->model->CRUD($jsonData);
+            } catch (Exception $e) {
+                setModal('erro', 'Erro encontrado!', $e->getMessage());
+            }
         }
     }
 
-        public function adocao() {
-        require_once 'app/models/AnimalModel.php';
-        $model = new AnimalModel();
-
-        $animais = $model->buscarTodos();
-
+    public function adocao() {
+        $data = ['ACAO' => 'R'];
+        $jsonData = json_encode($data);
+        try{
+            $animais = $this->model->CRUD($jsonData);
+        } catch (Exception $e) {
+            setModal('erro', 'Erro encontrado!', $e->getMessage());
+        }
         require 'app/views/user/adocao.php';
     }   
 
     public function detalhesAnimal($id) {
-        require_once 'app/models/AnimalModel.php';
-        $model = new AnimalModel();
+        $data = ['ACAO' => 'R', 'ID_ANIMAL' => $id];
+        $jsonData = json_encode($data);
 
+        try{
+            $animal = $this->model->CRUD($jsonData);
+        } catch (Exception $e) {
+            setModal('erro', 'Erro encontrado!', $e->getMessage());
+        }
 
-        
-        $animal = $model->buscarAnimal($id);
-
-        if ($animal) {
+        if (!empty($animal)) {
             require 'app/views/user/infoAnimal.php';
         } else {
-            // Tratar o caso em que o animal não é encontrado
-            echo "Animal nao encontrado.";
+            setModal('info', 'Info', 'Animal não encontrado.');
+            redirect('adocao');
         }
     }
     
     public function detalhesAnimalForm($idAnimal) {
-        require_once 'app/models/AnimalModel.php';
-        $model = new AnimalModel();
-
-        $animal = $model->buscarAnimal($idAnimal);
+        $data = ['ACAO' => 'R', 'ID_ANIMAL' => $idAnimal];
+        $jsonData = json_encode($data);
+        $animal = $this->model->CRUD($jsonData);
 
         if ($animal) {
             require 'app/views/compartilhada/frmAdocao.php';
         } else {
-            // Tratar o caso em que o animal não é encontrado
-            echo "Animal não encontrado.";
+            setModal('info', 'Info', 'Animal não encontrado.');
+            redirect('adocao');
         }
     }
 }

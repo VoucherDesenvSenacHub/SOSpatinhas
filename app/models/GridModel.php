@@ -2,7 +2,7 @@
 require_once 'app/config/connect.php';
 
 class GridModel extends Connect{
-    private function getObgController($obj, $acao, $id = null) {
+    private function getObgModel($obj, $acao, $id = null) {
         $modelName = ucfirst(strtolower($obj)) . "Model";
         $modelFile = 'app/models/' . $modelName . '.php';
 
@@ -19,7 +19,7 @@ class GridModel extends Connect{
         $model = new $modelName();
 
         if (!method_exists($model, 'CRUD')) {
-            throw new Exception("Não foi encontrado um medoto 'CRUD' para $modelName");
+            throw new Exception("Não foi encontrada a função 'CRUD' de $modelName");
         }
 
         $data = ['ACAO' => $acao];
@@ -32,15 +32,15 @@ class GridModel extends Connect{
     }
 
     public function getColuna($obj){
-        return $this->getObgController($obj, 'G');
+        return $this->getObgModel($obj, 'G');
     }
 
     public function getInfoColuna($obj){
-        return $this->getObgController($obj, 'R');
+        return $this->getObgModel($obj, 'R');
     }
 
     public function deletar($obj, $id){
-        return $this->getObgController($obj, 'D', $id);
+        return $this->getObgModel($obj, 'D', $id);
     }
 }
 ?>

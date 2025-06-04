@@ -3,6 +3,12 @@ require_once 'app/models/EventoModel.php';
 
 class EventoController {
 
+    private $model;
+    
+    public function __construct(){
+        $this->model = new EventoModel();
+    }
+
     public function index(){
         include('app/views/user/eventos.php');
     }
@@ -29,10 +35,12 @@ class EventoController {
                 
             ];
     
-            $jsonData = json_encode($data);
-    
-            $evento = new EventoModel();
-            $resultado = $evento->CRUD($jsonData);
+            try{
+                $jsonData = json_encode($data);
+                $resultado = $this->model->CRUD($jsonData);
+            } catch (Exception $e) {
+                setModal('erro', 'Erro encontrado!', $e->getMessage());
+            }
         }
     }
 }

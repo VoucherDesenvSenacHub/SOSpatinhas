@@ -13,11 +13,11 @@
  
          function connectDatabase(){
              try{
-                 $this->connection = new PDO('mysql:host='.HOST.';dbname='.DATABASE, USER, PASSWORD);
+                $this->connection = new PDO('mysql:host='.HOST.';dbname='.DATABASE, USER, PASSWORD);
              }
              catch(PDOException $e){
-                 echo "Error!: ".$e->getMessage();
-                 die();
+                echo "Error!: ".$e->getMessage();
+                die();
              }
          }
  

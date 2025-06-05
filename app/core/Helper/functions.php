@@ -31,3 +31,17 @@ function imageUpload($fotos){
 
     return $caminhoFts;
 }
+
+function salvar($obj){
+    try{
+        $controllerName = ucfirst(strtolower($obj)) . "Controller";
+        $modelFile = 'app/controllers/' . $controllerName . '.php';
+        require_once $modelFile;
+        $controller = new $controllerName();
+        $controller->CRUD();
+    } catch (Exception $e) {
+        setModal('erro', 'Erro encontrado!', $e->getMessage());
+    }
+    
+    redirect('adm/lista/' . $obj);
+}

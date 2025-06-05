@@ -24,7 +24,7 @@ Route::get('/adm/lista/{obj}', function($obj) { include('app/views/adm/lista.php
 Route::post('/adm/login', 'AdmController@login');
 // Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@CRUD');
 Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'AnimalController@CRUD');
-Route::post('/adm/formulario/{obj}/salvar', 'CriarEditarController@CRUD');
+Route::post('/adm/formulario/{obj}/salvar', function($obj){salvar($obj);});
 
 // DELETE
 Route::delete('/adm/deletar/{obj}/{id}', 'GridController@deletar');

@@ -13,7 +13,7 @@
 <script>
     let selectedFiles = [];
 
-    document.getElementById('CAMINHO_FOTO').addEventListener('change', function (event) {
+    document.getElementById('image').addEventListener('change', function (event) {
         const newFiles = Array.from(event.target.files);
 
         const filteredNewFiles = newFiles.filter(newFile => {

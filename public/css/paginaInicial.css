@@ -322,20 +322,20 @@ section {
 
 .botao-secundario {
   display: inline-block;
-  padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: var(--border-radius-xl);
+  margin-top: 4rem;
+  background-color: #F28C66;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 25px;
   text-decoration: none;
-  font-weight: 600;
-  color: var(--secondary-color);
-  background: transparent;
-  border: 2px solid var(--secondary-color);
-  transition: all var(--transition-normal);
-  margin-left: var(--spacing-md);
+  font-weight: bold;
+  line-height: 1;
 }
 
 .botao-secundario:hover {
   background: var(--secondary-color);
   color: var(--text-light);
+  transform: translateY(-5px);
 }
 
 .botoes-grupo {
@@ -369,8 +369,8 @@ section {
     position: absolute;
     width: 15%;
     height: auto;
-    right: 95%;
-    top: -37%;
+    right: 111%;
+    top: -40%;
     z-index: 1
 }
 
@@ -378,8 +378,8 @@ section {
     position: absolute;
     width: 10%;
     height: auto;
-    left: 96%;
-    bottom: -13%;
+    left: 116%;
+    bottom: -14%;
     z-index: 1;
 }
 
@@ -544,7 +544,7 @@ section {
 }
 
 .cta-text {
-  flex: 1 1 400px;
+  flex: 3 1 505px;
   background-color: var(--accent-color);
   padding: var(--spacing-xxl);
   display: flex;
@@ -567,6 +567,7 @@ section {
 }
 
 .btn-doar {
+  line-height: 1;
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -1135,16 +1136,17 @@ body {
     transition: transform 300ms;
 }
 
-.pataverde{
-    position: absolute;
-    left: 4rem;
-    top: 52.2rem;
-}
-.pataInvertida{
-    position: absolute;
-    right: 4rem;
-    top: 19.4rem;
-}
+/* .pataverde{
+  position: absolute;
+  left: 4rem;
+  top: 52.2rem;
+} */
+
+/* .pataInvertida{
+  position: absolute;
+  right: 4rem;
+  top: 19.4rem;
+} */
 
 /* luan */
 

@@ -14,21 +14,25 @@ function redirect(string $url): void {
 }
 
 function imageUpload($fotos){
-    $caminhoFts = [];
+    
     $caminhoPasta = 'uploads/';
-
-    foreach ($fotos['tmp_name'] as $key => $tmpName) {
-        if ($tmpName) {
-            $originalName = basename($fotos['name'][$key]);
-            $uniqueName = uniqid() . '_' . $originalName;
-            $destination = $uploadDir . $uniqueName;
-
-            if (move_uploaded_file($tmpName, $destination)) {
-                $caminhoFts[] = $destination;
+    try{
+        foreach ($fotos['tmp_name'] as $key => $tmpName) {
+            if ($tmpName) {
+                $originalName = basename($fotos['name'][$key]);
+                $uniqueName = uniqid() . '_' . $originalName;
+                $destination = $uploadDir . $uniqueName;
+    
+                if (move_uploaded_file($tmpName, $destination)) {
+                    $caminhoFts = ['CAMINHO_FOTO' => $destination];
+                }
             }
         }
+    } catch (Exception $e) {
+        setModal('erro', 'Erro encontrado!', $e->getMessage());
     }
 
+    var_dump( $caminhoFts);
     return $caminhoFts;
 }
 

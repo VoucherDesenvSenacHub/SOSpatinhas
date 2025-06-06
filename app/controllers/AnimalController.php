@@ -21,9 +21,9 @@ class AnimalController {
             $sexo = isset($_POST['SEXO']) ? trim($_POST['SEXO']) : null;
             $fotos = $_FILES['CAMINHO_FOTO'] ?? null;
             
-            if($fotos){
-                $caminhoFts = json_encode(imageUpload($fotos));
-            }
+            $caminhoFts = $fotos ? imageUpload($fotos) : null;
+
+            var_dump($caminhoFts);
     
             $data = [
                 'ACAO' => $acao,

@@ -25,3 +25,6 @@ Route::post('/adm/login', 'AdmController@login');
 // Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@CRUD');
 Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'AnimalController@CRUD');
 Route::post('/adm/formulario/{obj}/salvar', 'CriarEditarController@CRUD');
+
+// DELETE
+Route::delete('/adm/deletar/{obj}/{id}', 'GridController@deletar');

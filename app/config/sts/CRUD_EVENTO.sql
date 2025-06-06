@@ -50,5 +50,20 @@ BEGIN
         SELECT * FROM EVENTO 
         WHERE 1 = 1 
             AND (_ID_EVENTO IS NULL OR ID_EVENTO = _ID_EVENTO);
+
+    ELSEIF _ACAO = 'G' THEN
+        CREATE TEMPORARY TABLE GRID_COLUNA(
+            ID_COL VARCHAR(100),
+            NM_COL VARCHAR(100)
+        );
+
+        INSERT INTO GRID_COLUNA(ID_COL, NM_COL)
+        VALUES  ('TITULO', 'Titulo'),
+                ('DESCRICAO', 'Descrição'),
+                ('CIDADE', 'Cidade'),
+                ('ESTADO', 'Estado'),
+                ('LOCAL_EVENTO', 'Local do Evento');
+
+        SELECT * FROM GRID_COLUNA;
     END IF;
 END

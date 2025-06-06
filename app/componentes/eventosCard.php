@@ -67,7 +67,7 @@
 }
 
 .local img {
-  margin-bottom: 5px;
+  margin-top: 7.2px;
   width: 15px;
   height: 17px;
 }

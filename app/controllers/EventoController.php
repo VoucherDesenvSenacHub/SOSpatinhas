@@ -27,12 +27,11 @@ class EventoController {
             $data = [
                 'ID_EVENTO' => $id,
                 'ACAO' => $acao,
-                'TITULO' => $titulo,   
+                'TITULO' => $titulo,
                 'DESCRICAO' => $descricao,
                 'CIDADE' => $cidade,
                 'ESTADO' => $estado,
                 'LOCAL_EVENTO' => $local_evento,
-                
             ];
     
             try{
@@ -43,5 +42,39 @@ class EventoController {
             }
         }
     }
+
+    public function eventoDetalhado($id){
+        
+        $eventData = [
+            'ID_EVENTO' => $id,
+            'ACAO' => "R"
+        ];
+
+        $acao = [
+            'ACAO' => "R"
+        ];
+        
+
+        try{
+            $jsonData = json_encode($eventData);
+            $evento = $this->model->CRUD($jsonData);
+
+            $jsonData2 = json_encode($acao);
+            $resultado = $this->model->CRUD($jsonData2);
+
+        } catch (Exception $e) {
+            setModal('erro', 'Erro encontrado!', $e->getMessage());
+        }
+
+        if($evento){
+            include('app/views/user/detalhesEvento.php');
+        } else {
+            setModal('erro', 'Erro encontrado!', 'Evento não encontrado!');
+            redirect('eventos'); 
+        }
+
+    }
+
+
 }
 ?>

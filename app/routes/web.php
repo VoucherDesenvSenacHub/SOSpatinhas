@@ -10,7 +10,7 @@ Route::get('/login/esquecisenha', function() { include('app/views/user/esqueciSe
 Route::get('/login/esquecisenha/confirmacaoemail', function() { include('app/views/user/confirmacaoEmail.php');});
 Route::get('/novasenha', function() { include('app/views/user/novaSenha.php');});
 Route::get('/developers', function() { include('app/views/user/developers.php');});
-Route::get('/eventos/detalhesevento/{idEvento}', 'EventoController@index');
+Route::get('/eventos/detalhesevento/{idEvento}', 'EventoController@eventoDetalhado');
 Route::get('/eventos/arrecadacao/{idArrecadacao}', 'ArrecadacaoController@index');
 Route::get('/adocao', 'AnimalController@adocao');
 Route::get('/adocao/detalhesanimal/{idAnimal}', 'AnimalController@detalhesAnimal');

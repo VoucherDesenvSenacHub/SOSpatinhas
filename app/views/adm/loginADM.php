@@ -12,16 +12,17 @@
     <?php include('app/componentes/default/topHTML.php')?>  
     <section class="secaoLogin">
         <div class="login">
-            <h2>Login</h2>
+            <h2>Login </h2>
             <form action="login" method="POST" id="frmLoginADM">
                 <input type="email" placeholder="Email:" name="EMAIL" required>
+
                 <div class="containerSenha">
                     <input type="password" id="inputSenha" placeholder="Senha:" name="SENHA" required>  
                     <button type="button" class="btnIconOlho">
                         <img id="imgIconOlho" src="../public/images/icons/iconOlhoAberto.png" alt="Mostrar senha">
                     </button>
                 </div>
-        </div>
+
                 <?php if (isset($_SESSION['erroLogin'])): ?>
                         <p style="color:red;"><?php echo htmlspecialchars($_SESSION['erroLogin']); ?></p>
                         <?php unset($_SESSION['erroLogin']); ?>
@@ -36,6 +37,7 @@
             </form>
         </div>
     </section>
+
     <script>
         document.querySelector(".btnIconOlho").addEventListener("click", function () {
             const inputSenha = document.getElementById("inputSenha");

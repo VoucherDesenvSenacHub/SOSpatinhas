@@ -4,49 +4,48 @@
     border: 0;
 }
 
-
 .secaoLogin {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-    background-color: aquamarine;
+    width: 100%;
+    max-width: 800px;
+    /* background-color: aquamarine; */
 }
 
 .login {
     background-color: white;
-    padding: 10px 40px;
+    padding: 40px 30px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 43%;
-    height: 50vh;
-    background-color: blue;
+    max-width: 400px;
+    width: 100%;
+    /* background-color: blue; */
 }
 
 .login h2 {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
-.login input {
-    width: 93%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-    background-color: red;
+.login input[type="email"],
+.login input[type="password"],
+.login input[type="text"] {
+  width: 100%;
+  padding: 10px 45px 12px 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  /* background-color: #f8fafc; */
+  font-size: 16px;
+  color: #0f172a;
+  position: relative;
+  /* background-color: red; */
 }
-
-#inputSenha {
-    margin-bottom: 50px;
-}
-
-
-
 
 .containerSenha {
     position: relative;
@@ -55,28 +54,26 @@
     /* background-color: cadetblue; */
 }
 
-.containerInput input {
-    width: 100%;
-    padding: 12px;
-    padding-right: 40px; 
-    border-radius: 8px;
-    /* background-color: pink; */
+#inputSenha {
+  padding-right: 2px;
+  cursor: pointer;
+  background-color: blue;
 }
 
 .btnIconOlho {
-    position: absolute;
-    right: 2px;
-    background: none;
+    position: relative;
+    width: 15%;
+    height: 15%;
+    bottom: 28px;
     border: none;
     cursor: pointer;
-    margin-bottom: 13px;
     /* background-color: aqua; */
+    
 }
 
 .btnIconOlho img {
     width: 20px;
     height: 20px;
-    justify-content: center;
     /* background-color: blueviolet; */
 }
 
@@ -85,8 +82,8 @@
 
 @media (max-width: 1024px) {
     .secaoLogin {
-        width: 100%;
-        min-height: 109vh;
+        width: 96%;
+        min-height: 100vh;
     }
     .login {
         height: 28em;

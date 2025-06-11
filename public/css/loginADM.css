@@ -48,33 +48,38 @@
 }
 
 .containerSenha {
-    position: relative;
     display: flex;
-    align-items: center;
-    /* background-color: cadetblue; */
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: cadetblue;
+}
+
+.containerSenha:focus-within {
+    outline: 1px solid #ccc;
 }
 
 #inputSenha {
-  padding-right: 2px;
-  cursor: pointer;
-  background-color: blue;
+    border-radius: 8px;
+    flex-grow: 2;
+    border: none;
+    background-color: blue;
 }
 
-.btnIconOlho {
-    position: relative;
-    width: 15%;
-    height: 15%;
-    bottom: 28px;
-    border: none;
-    cursor: pointer;
-    /* background-color: aqua; */
-    
+#inputSenha:focus {
+    outline: none;    
 }
+
 
 .btnIconOlho img {
     width: 20px;
     height: 20px;
-    /* background-color: blueviolet; */
+    margin-bottom: 15px;
+    background-color: blueviolet;
+}
+
+.btnIconOlho {
+    all: unset;
 }
 
 

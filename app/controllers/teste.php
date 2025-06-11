@@ -1,15 +1,20 @@
 <?php
-require_once 'models/teste.php';
 
-class TesteController {
+$a = $_FILES;
 
-    public function crud() {
-        $data = file_get_contents("php://input");
+$b = imageUpload($a);
+var_dump($b);
+// require_once 'models/teste.php';
 
-        $teste = new TesteModel();
-        $resultado = $teste->crud($data);
+// class TesteController {
 
-        echo json_encode($resultado);
-    }
-}
+//     public function crud() {
+//         $data = file_get_contents("php://input");
+
+//         $teste = new TesteModel();
+//         $resultado = $teste->crud($data);
+
+//         echo json_encode($resultado);
+//     }
+// }
 ?>

@@ -28,3 +28,9 @@ Route::post('/adm/formulario/{obj}/salvar', function($obj){salvar($obj);});
 
 // DELETE
 Route::delete('/adm/deletar/{obj}/{id}', 'GridController@deletar');
+
+
+
+//TESTE
+Route::get('/teste', function(){ include('app/views/teste.php'); });
+Route::post('/teste/submit', function(){ include('app/controllers/teste.php'); });

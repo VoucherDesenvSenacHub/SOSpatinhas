@@ -19,10 +19,10 @@ class AnimalController {
             $idade = isset($_POST['IDADE']) ? trim($_POST['IDADE']) : null;
             $descricao = isset($_POST['DESCRICAO']) ? trim($_POST['DESCRICAO']) : null;
             $sexo = isset($_POST['SEXO']) ? trim($_POST['SEXO']) : null;
-            $fotos = $_FILES['CAMINHO_FOTO'] ?? null;
+            $fotos = $_POST['CAMINHO_FOTO'] ?? null;
             
+            var_dump( $fotos);
             $caminhoFts = $fotos ? imageUpload($fotos) : null;
-
             var_dump($caminhoFts);
     
             $data = [

@@ -1,6 +1,6 @@
 <div class="uploadContainer">
     <div class="imgContainer">
-        <input type="file" id="image" name="CAMINHO_FOTO[]" accept="image/*" multiple hidden>
+        <input type="file" id="image" name="CAMINHO_FOTO[]" accept="image/*" multiple >
         <label for="image" id="imgLabel" class="upload-box">
             <img src="../../public/images/cadastroAdocao-ADM/grampoBranco.png" alt="Upload Icon">
             <p>Enviar fotos</p>
@@ -12,6 +12,7 @@
 
 <script>
     let selectedFiles = [];
+    
 
     document.getElementById('image').addEventListener('change', function (event) {
         const newFiles = Array.from(event.target.files);
@@ -31,6 +32,14 @@
         selectedFiles = selectedFiles.concat(filteredNewFiles);
         renderFilePreview();
         this.value = "";
+        fetch('<?= ucfirst(strtolower($obj)) ?>Controller.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 'CAMINHO_FOTO': selectedFiles })
+        })
+        console.log(selectedFiles)
     });
 
     function renderFilePreview() {

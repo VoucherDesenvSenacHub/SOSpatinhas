@@ -185,39 +185,42 @@
 
 
     <section class="eventos">
-
-        <h2>Alguns de nossos eventos</h2>
+      <h2>Alguns de nossos eventos</h2>
 
         <div class="carrossel-eventos">
-            <button class="seta prev1">&#x276C;</button>
+          <button class="seta1 prev1">&#x276C;</button>
+          
+          <div class="carrossel-track2">
 
-            <div class="carrossel-track2">
-
-                <div class="evento-card esquerda">
-                    <img src="public/images/default/evento1.png" alt="Evento 1">
-                    <p>Feira de Adoção</p>
-                </div>
-
-                <div class="evento-card destaque">
-                    <img src="public/images/default/evento2.png" alt="Evento 2">
-                    <p>Feirão do Bazar + Feira do Auau</p>
-                </div>
-
-                <div class="evento-card direita">
-                    <img src="public/images/default/evento3.png" alt="Evento 3">
-                    <p>Adoção com Carinho</p>
-                </div>
+            <div class="evento-card">
+              <img src="public/images/default/evento1.png" alt="Evento 1">
+                <p>Feira de Adoção</p>
             </div>
 
-            <button class="seta next1">&#x276D;</button>
+            <div class="evento-card">
+              <img src="public/images/default/evento2.png" alt="Evento 2">
+                <p>Feirão do Bazar + Feira do Auau</p>
+            </div>
+
+            <div class="evento-card">
+              <img src="public/images/default/evento3.png" alt="Evento 3">
+                <p>Adoção com Carinho</p>
+            </div>
+
+          </div>
+              
+          <button class="seta1 next1">&#x276D;</button>
+
+          <div class="carrossel-paginacao"></div>
         </div>
 
         <a href="#eventos" class="botao-eventos">VEJA FUTUROS EVENTOS</a>
     </section>
 
-    <img class= "pataInvertida"src="public/images/icons/iconPataVerde.png" alt="Pata_Inicial1">
 
+    
     <section class="carrossel-section">
+      <img class= "pataInvertida"src="public/images/icons/iconPataVerde.png" alt="Pata_Inicial1">
 
         <div class="carrossel-wrap">
             <img id = "elemento1" src="public/images/default/efeitocarrossel.png" alt="Elemento Carrossel">
@@ -250,9 +253,9 @@
 
 
 
+        <img class= "pataverde"src="public/images/icons/iconPataVerde1.png" alt="Pata_Inicial">
     </section>
 
-    <img class= "pataverde"src="public/images/icons/iconPataVerde1.png" alt="Pata_Inicial">
 
     <section class="faixaMain">
         <div class="bolasCtn">

@@ -60,6 +60,8 @@
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
+
+
 /* parte kaua */
 
 .container {
@@ -258,7 +260,7 @@ section {
 
 .carrossel__indicadores {
   position: absolute;
-  bottom: var(--spacing-xl);
+  bottom: var(--spacing-xxl);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -674,8 +676,8 @@ section {
    Footer
    ============================ */
 .footer {
-  background-color: var(--primary-dark);
-  color: var(--text-light);
+  background-color: #349582;
+  color: #FFFBEA;
   padding-top: var(--spacing-xxl);
   margin: 0; 
 }
@@ -841,7 +843,9 @@ section {
     flex: 1 1 100%;
     left: 0;
   }
-  
+  .cta{
+    flex-direction: column;
+  }
   .cta-text,
   .cta-image {
     flex: 1 1 100%;
@@ -910,71 +914,114 @@ body {
 }
 
 .eventos{
-    text-align: center;
-    background-color: #FFFBEA;
-    height: 30rem;
-    padding: 2rem;
-    font-family: "Nunito", sans-serif;
+  text-align: center;
+  background-color: #FFFBEA;
+  padding: 2rem;
+  font-family: "Nunito", sans-serif;
+  overflow: hidden;
 }
 
 .eventos h2 {
-    font-family: "Paytone One", sans-serif;
-    font-size: 2.7rem;
-    font-weight: bold;
-    color: #333333;
-    margin-bottom: 1.5rem;
+  font-family: "Paytone One", sans-serif;
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1.5rem;
 }
 
 .carrossel-eventos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    max-width: 68rem;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 70rem;
+  margin: auto;
+  overflow: hidden;
 }
 .carrossel-track2{
     display: flex;
-    transition: transform 0.5s ease;
-    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
 }
 .evento-card{
-    width: 480px;
-    flex-shrink: 0;
-    margin: 0 10px;
-    transition: transform 0.5s, opacity 0.5s;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 10px;
+  transform: scale(0.8) rotateY(30deg);
+  transition: transform 0.5s, opacity 0.5s;
+}
+.evento-card.ativo{
+  transform: scale(1) rotate(0);
+  opacity: 1;
+  z-index: 2;
+}
+.evento-card img{
+  /* width: 100%; */
+  border-radius: 15px;
+}
+.evento-card p {
+  background-color: #7BAEDC;
+  color: white;
+  padding: 0.5rem;
+  margin: 0;
+  border-radius: 8px;
+}
+.seta1{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background:  #7BAEDC;
+  border: none;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  color: #FFFBEA;
+  padding: 0.4rem 1rem;
+  z-index: 10;
+  transition: color 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+.seta1:hover {
+  color: #ff7350;
+}
 
-    transform: scale(0.8) rotateY(30deg);
-        & p{
-            background-color: #7BAEDC;
-        }
-}
-.evento-card.destaque {
-    transform: scale(1) rotateY(0);
-    z-index: 2;
-}
-.evento-card.esquerda {
-    transform: scale(0.8) rotateY(30deg);
-    z-index: 1;
+.prev1 {
+  left: -1rem;
 }
 
-.evento-card.direita {
-    transform: scale(0.8) rotateY(-30deg);
-    z-index: 1;
+.next1 {
+  right: -1rem;
+}
+.carrossel-paginacao {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 5px;
+}
+.carrossel-paginacao span {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.carrossel-paginacao .ativo {
+  background-color: #7BAEDC;
 }
 
 .botao-eventos{
-    display: inline-block;
-    background-color: #F28C66;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 25px;
-    text-decoration: none; 
-    font-weight: bold;
-    line-height: 1;
-    font-family: "Nunito", sans-serif;
+  display: inline-block;
+  background-color: #F28C66;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none; 
+  font-weight: bold;
+  line-height: 1;
+  font-family: "Nunito", sans-serif;
 }
 .botao-eventos:hover{
     transform: translateY(-5px);
@@ -986,6 +1033,7 @@ body {
 
 
 .carrossel-section{
+  position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1136,17 +1184,16 @@ body {
     transition: transform 300ms;
 }
 
-/* .pataverde{
+.pataverde{
   position: absolute;
   left: 4rem;
-  top: 52.2rem;
-} */
-
-/* .pataInvertida{
+  top: 28.2rem;
+}
+.pataInvertida{
   position: absolute;
   right: 4rem;
-  top: 19.4rem;
-} */
+  top: -6.8rem;
+}
 
 /* luan */
 
@@ -1204,9 +1251,9 @@ body {
 }
 
 
-@media (max-width: 1440px){
+/* @media (max-width: 1440px){
     .pataverde{
-        top: 52.2rem;
+        top: -6.8rem;
     }
     .carrossel-wrap{
         width: 40rem;
@@ -1214,10 +1261,10 @@ body {
     .next {
     right: 9.5rem;
     }
-}
+} */
 @media (max-width: 1024px){
     .pataverde{
-        top: 73.3rem;
+        top: 51.3rem;;
     }
     .carrossel-wrap{
         width: 30rem;
@@ -1229,11 +1276,11 @@ body {
 @media (max-width: 768px){
     .pataverde{
         left: 1rem;
-        top: 83.6rem;
+        top: 62.1rem;
         width: 192.85px;
     }
     .pataInvertida{
-        top: 20.2rem;
+        top: -5.8rem;
         right: 1rem;
         width: 192.85px;
     }

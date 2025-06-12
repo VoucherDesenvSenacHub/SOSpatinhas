@@ -10,7 +10,7 @@
 
   $cssLink  = '../../public/css/editarPerfil-ADM.css';
   $tipo = 'Adm';
-  include('../../componentes/default/topHTML.php');
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="post" id="frmEditarPerfilADM">

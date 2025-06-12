@@ -1,10 +1,10 @@
 <div class="eventosCard" onclick="window.location.href='<?= '/sospatinhas/eventos/detalhesevento/'.$evento['ID_EVENTO']; ?>'">
-    <img src="../../public/images/eventosimg/eventos4.png" alt="Imagem do evento">
+    <img src="/sospatinhas/public/images/eventosimg/eventos4.png" alt="Imagem do evento">
     <div class="cardInfo">
       <h3><?= $evento["TITULO"];?></h3>
       <p><?= $evento["DESCRICAO"];?></p>
       <div class="local">
-          <img src="../../public/images/icons/iconMarcador.png" alt="Icone de local"'>
+          <img src="/sospatinhas/public/images/icons/iconMarcador.png" alt="Icone de local"'>
           <p><?= $evento["CIDADE"].' '. $evento["ESTADO"].', '. $evento["LOCAL_EVENTO"]; ?></p>
       </div>
     </div>

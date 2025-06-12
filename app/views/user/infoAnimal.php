@@ -1,21 +1,21 @@
 <?php
-  $cssLink  = 'public/css/infoAnimal.css';
+  $cssLink  = '/sospatinhas/public/css/infoAnimal.css';
   include('app/componentes/default/topHTML.php');
 ?>
 
 <div class="container">
   <a class="BackLink" href="#">
-    <img src="public/images/icons/btn_esquerdo.png" 
+    <img src="/sospatinhas/public/images/icons/btn_esquerdo.png" 
        alt="voltar" class="Voltar">
   </a>
   <div class="Profile">
     
     <div class="ProfileImages">
-      <img src="public/images/rocheleInfoAnimal.jpg" 
+      <img src="/sospatinhas/public/images/rocheleInfoAnimal.jpg" 
             alt="rochele 1 " class="MainImage">
 
       <div class="gallery">
-        <img src="public/images/rocheleInfoAnimal.jpg" 
+        <img src="/sospatinhas/public/images/rocheleInfoAnimal.jpg" 
               alt="rochele 2" class="GalleryImg">
         <img src="public/images/rochele5.png" 
               alt="rochele 3 " class="GalleryImg">

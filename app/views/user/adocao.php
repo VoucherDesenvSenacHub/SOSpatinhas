@@ -99,7 +99,7 @@
 
 
 <?php
-    $cssLink  = 'public/css/adocao.css';
+    $cssLink  = '/sospatinhas/public/css/adocao.css';
     include('app/componentes/default/topHTML.php');
 ?>
 

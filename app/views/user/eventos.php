@@ -1,5 +1,5 @@
 <?php
-  $cssLink  = 'public/css/eventos.css';
+  $cssLink  = '/sospatinhas/public/css/eventos.css';
   include('app/componentes/default/topHTML.php');
 ?>
 
@@ -40,11 +40,7 @@
             include('app/componentes/eventosCard.php');
             $cardComponents2[] = ob_get_clean();
             }
-            // for ($i = 0; $i < 5; $i++) {
-            //     ob_start(); 
-            //     include('app/componentes/eventosCard.php');
-            //     $cardComponents2[] = ob_get_clean();
-            // }
+            
     
             $cardComponents = $cardComponents2;
             $carouselId = 'carousel2';

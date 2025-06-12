@@ -1,5 +1,5 @@
 <?php
-  $cssLink  = '../../public/css/detalhesEvento.css';
+  $cssLink  = '/sospatinhas/public/css/detalhesEvento.css';
   include('app/componentes/default/topHTML.php');
 ?>
 
@@ -7,7 +7,7 @@
   <div class="imgEDetalhesEvento">
     <div class="slider">
       <div class="slideFade">
-        <img class= "eventoSlides" src="public/images/default/semfoto.png" alt="Horto Florestal 1">
+        <img class= "eventoSlides" src="../../public/images/default/semfoto.png" alt="Horto Florestal 1">
       </div>
 
       <div class="btnSlide">
@@ -17,7 +17,7 @@
       </div>
 
       <div class="localEvento">
-        <img src="public/images/default/semfoto.png" alt="Icone de local">
+        <img src="../../public/images/default/semfoto.png" alt="Icone de local">
         <p>
           <?= $evento[0]["CIDADE"].' '. $evento[0]["ESTADO"].', '. $evento[0]["LOCAL_EVENTO"]; ?>
         </p>
@@ -46,11 +46,7 @@
     <div id="eventosCarrosel">
       <?php
       $cardComponents2 = array();
-      // for ($i = 0; $i < 5; $i++) {
-        //     include('app/componentes/eventosCard.php');
-        //   }
-        
-        
+      
       foreach ($resultado as $evento) {
         ob_start();
         include('app/componentes/eventosCard.php');

@@ -4,14 +4,14 @@
             <div class="container">
                 <div class="esquerda"><a href="developers">© 2025 Voucher Desenv. 141</a></div>
                 <a class="footer-logo" href="/SOSPatinhas/">
-                    <img src="public/images/Logo_Footer.png" alt="SOS Patinhas">
+                    <img src="/sospatinhas/public/images/Logo_Footer.png" alt="SOS Patinhas">
                 </a>
                 <div class="direita">
                     <a href="https://www.facebook.com/?locale=pt_BR">
-                        <img src="public/images/icons/facebookBranco.png" alt="Facebook">
+                        <img src="/sospatinhas/public/images/icons/facebookBranco.png" alt="Facebook">
                     </a>
                     <a href="https://www.instagram.com">
-                        <img src="public/images/icons/instagramBranco.png" alt="Instagram">
+                        <img src="/sospatinhas/public/images/icons/instagramBranco.png" alt="Instagram">
                     </a>
                 </div>
             </div>
@@ -26,10 +26,10 @@
                 </a>
                 <div class="footer-links-img">
                     <a href="https://www.facebook.com/?locale=pt_BR">
-                        <img src="../../public/images/icons/facebookBranco.png" alt="Facebook">
+                        <img src="/sospatinhas/public/images/icons/facebookBranco.png" alt="Facebook">
                     </a>
                     <a href="https://www.instagram.com">
-                        <img src="../../public/images/icons/instagramBranco.png" alt="Instagram">
+                        <img src="/sospatinhas/public/images/icons/instagramBranco.png" alt="Instagram">
                     </a>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <?php
-$cssLink  = '../../public/css/editarPerfilMembro.css';
+$cssLink  = '/sospatinhas/public/css/editarPerfilMembro.css';
   $tipo = 'Adm';
-  include('../../componentes/default/topHTML.php');
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="post" id="frmEditarPerfilMembro">

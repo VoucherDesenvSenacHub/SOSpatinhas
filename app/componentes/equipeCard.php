@@ -1,5 +1,5 @@
 <div class="cardIntegranteEquipe">
-    <img src="public/images/default/semfoto.png" alt="Integrante da equipe">
+    <img src="/sospatinhas/public/images/default/semfoto.png" alt="Integrante da equipe">
     <div id="nomeIntegrante">Lorem ipsum</div>
 </div>
 

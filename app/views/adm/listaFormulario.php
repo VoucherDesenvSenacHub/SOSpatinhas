@@ -1,8 +1,8 @@
 <?php
-    $cssLink  = '../../public/css/listaFormulario.css';
+    $cssLink  = '/sospatinhas/public/css/listaFormulario.css';
     $tipo = 'Adm';
-    include('../../componentes/default/topHTML.php');
-    include('../../componentes/cardListas.php');
+    include('app/componentes/default/topHTML.php');
+    include('app/componentes/cardListas.php');
 ?>
 
 <h1>Lista de Formulários de Adoções</h1>

@@ -4,16 +4,6 @@
     border: 0;
 }
 
-.secaoLogin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    width: 100%;
-    max-width: 800px;
-    /* background-color: aquamarine; */
-}
-
 .login {
     background-color: white;
     padding: 40px 30px;
@@ -40,7 +30,7 @@
   margin-bottom: 20px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  /* background-color: #f8fafc; */
+  background-color: #f8fafc;
   font-size: 16px;
   color: #0f172a;
   position: relative;
@@ -49,10 +39,11 @@
 
 .containerSenha {
     display: flex;
-    flex-direction: row;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: cadetblue;
+    height: 43px;
+    margin-bottom: 20px;
+    /* background-color: cadetblue; */
 }
 
 .containerSenha:focus-within {
@@ -60,22 +51,20 @@
 }
 
 #inputSenha {
-    border-radius: 8px;
-    flex-grow: 2;
     border: none;
-    background-color: blue;
+    height: 41px;
+    /* background-color: blue; */
 }
 
 #inputSenha:focus {
     outline: none;    
 }
 
-
 .btnIconOlho img {
     width: 20px;
     height: 20px;
-    margin-bottom: 15px;
-    background-color: blueviolet;
+    margin-right: 6px;
+    /* background-color: blueviolet; */
 }
 
 .btnIconOlho {
@@ -83,13 +72,7 @@
 }
 
 
-
-
 @media (max-width: 1024px) {
-    .secaoLogin {
-        width: 96%;
-        min-height: 100vh;
-    }
     .login {
         height: 28em;
         width: 70%;
@@ -98,9 +81,6 @@
 }
 
 @media (max-width: 768px) {
-    .secaoLogin {
-        min-height: 84vh;
-    }
     .login {
         width: 80%;
         padding: 40px 20px 40px 20px;
@@ -108,9 +88,6 @@
 }
 
 @media (max-width: 425px) {
-    .secaoLogin {
-        min-height: 84vh;
-    }
     .login {
         width: 80%;
         padding: 40px 20px 40px 20px;

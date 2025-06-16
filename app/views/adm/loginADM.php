@@ -10,7 +10,6 @@
 
 <body>
     <?php include('app/componentes/default/topHTML.php')?>  
-    <section class="secaoLogin">
         <div class="login">
             <h2>Login </h2>
             <form action="login" method="POST" id="frmLoginADM">
@@ -36,7 +35,6 @@
                 ?>
             </form>
         </div>
-    </section>
 
     <script>
         document.querySelector(".btnIconOlho").addEventListener("click", function () {

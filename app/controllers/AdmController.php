@@ -25,7 +25,7 @@ class AdmController {
 
             if ($resultado) {
                 if ($resultado[0]['EMAIL'] === $email && $resultado[0]['SENHA'] === $senha) {
-                    $_SESSION['idAdm'] = $resultado['ID_ADM'];
+                    $_SESSION['idAdm'] = $resultado[0]['ID_ADM'];
                     $_SESSION['taLogado'] = true;
                     header("Location: lista/Animal");
                     exit();

@@ -18,7 +18,7 @@ Route::get('/adocao/detalhesanimal/{idAnimal}', 'AnimalController@detalhesAnimal
 Route::get('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'AnimalController@detalhesAnimalForm');
 Route::get('/adm/formulario/criar/{obj}', function($obj, $id = null) { include('app/views/adm/frmCadastarEditar.php');});
 Route::get('/adm/formulario/editar/{obj}/{id}', function($obj, $id) { include('app/views/adm/frmCadastarEditar.php');});
-Route::get('/adm/lista/{obj}', function($obj) { include('app/views/adm/lista.php');});
+Route::get('/adm/lista/{obj}', function($obj) { include('app/views/adm/lista.php');}, ['PermissaoMiddleware']);
 
 // POST ['PermissaoMiddleware', 'AuthMiddleware']
 Route::post('/adm/login', 'AdmController@login');

@@ -1,16 +1,24 @@
 <?php
-require_once "app/controllers/PermissaoAdminController.php";
+require_once "app/controllers/PermissaoController.php";
 
 class PermissaoMiddleware {
-    public function handle($acao, $obj, $id) {
-        $idUser = $_SESSION['idUser'];
-        $permissao = $acao + $obj;
-        $permissaoAdmin = new PermissaoAdminController();
-        $resultado = $permissao->checar($idUser);
-        if (!in_array($permissao, $resultado)) {
-            echo "alert(Você não tem permissão para acessar essa página.)";
-            exit;
+    public function handle(){
+        try {
+            $controller = new PermissaoController();
+            $resultado = $controller->checarPermissao();
+            $url = $_SERVER['REQUEST_URI'];
+            if($resultado){
+                if(in_array($url, $resultado[0])){
+                    return true;
+                }
+                else{
+                    return false;
+                };
+            
+            }
+        } catch (Exception $e) {
+            setModal('erro', 'Erro encontrado!', $e->getMessage());
         }
-        return true;
     }
+        
 }

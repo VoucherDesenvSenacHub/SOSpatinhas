@@ -60,6 +60,7 @@
                             name="<?= $field['NAME_FIELD'] ?>"
                             id="<?= $field['NAME_FIELD'] ?>"
                             placeholder="<?= $field['LABEL'] ?>"
+                            oninput="<?= $field['MASCARA'] ?>"
                             <?= $field['OBRIGATORIO'] ? 'required' : '' ?>
                         ><?= ($acao === 'U') ? htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') : '' ?></textarea>
                         <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
@@ -73,6 +74,7 @@
                             name="<?= $field['NAME_FIELD'] ?>"
                             id="<?= $field['NAME_FIELD'] ?>"
                             placeholder="<?= $field['LABEL'] ?>"
+                            oninput="<?= $field['MASCARA'] ?>"
                             <?= ($acao === 'U') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
                             <?= $field['OBRIGATORIO'] ? 'required' : '' ?>
                         >

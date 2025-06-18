@@ -17,7 +17,6 @@
     max-width: 100%;
     height: 60vh;
     max-height: 100%;
-    /* background-color: blue; */
 }
 
 .login h2 {
@@ -27,16 +26,19 @@
 .login input[type="email"],
 .login input[type="password"],
 .login input[type="text"] {
-  width: 100%;
-  padding: 10px 45px 12px 12px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background-color: #f8fafc;
-  font-size: 16px;
-  color: #0f172a;
-  position: relative;
-  /* background-color: red; */
+    width: 100%;
+    padding: 10px 45px 12px 12px;
+    margin-bottom: 20px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    background-color: #f8fafc;
+    font-size: 16px;
+    color: #0f172a;
+    position: relative;
+}
+
+.login input[type="email"] {
+    border-radius: 8px;
 }
 
 .containerSenha {
@@ -44,10 +46,10 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     height: 43px;
-    margin-bottom: 20px;
-    /* background-color: cadetblue; */
+    margin-bottom: 40px;
 }
 
+.login input:focus-within,
 .containerSenha:focus-within {
     outline: 1px solid #ccc;
 }
@@ -55,7 +57,6 @@
 #inputSenha {
     border: none;
     height: 41px;
-    /* background-color: blue; */
 }
 
 #inputSenha:focus {
@@ -65,12 +66,13 @@
 .btnIconOlho img {
     width: 20px;
     height: 20px;
-    margin-right: 6px;
-    /* background-color: blueviolet; */
+    margin-right: 10px;
 }
 
 .btnIconOlho {
     all: unset;
+    background-color: #f8fafc;
+    border-radius: 0 8px 8px 0;
 }
 
 
@@ -78,20 +80,20 @@
     .login {
         height: 28em;
         width: 70%;
-        padding: 50px 20px 50px 20px;
+        padding: 40px 30px 40px 30px;
     }
 }
 
 @media (max-width: 768px) {
     .login {
         width: 80%;
-        padding: 40px 20px 40px 20px;
+        padding: 40px 30px 40px 30px;
     }
 }
 
 @media (max-width: 425px) {
     .login {
-        width: 80%;
+        width: 90%;
         padding: 40px 20px 40px 20px;
         
     }

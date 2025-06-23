@@ -66,9 +66,9 @@
       </ul>
 
       <div class="carrossel__indicadores" id="indicadores"></div>
-      <button class="carrossel_controle carrossel_controle--anterior" id="anterior" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
-      <button class="carrossel_controle carrossel_controle--proximo" id="proximo" aria-label="Próximo slide"><i class="fas fa-chevron-right"></i></button>
-    </div>
+        <button class="carrossel_controle carrossel_controle--anterior" id="anterior" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="carrossel_controle carrossel_controle--proximo" id="proximo" aria-label="Próximo slide"><i class="fas fa-chevron-right"></i></button>
+      </div>
   </section>
 
   <!-- Conteúdo Principal -->

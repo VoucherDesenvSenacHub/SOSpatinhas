@@ -277,48 +277,48 @@
     <!-- RODAPÉ -->
     <!-- ============================================ -->
     <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-col">
-                <h3 class="footer-title">SOS Patinhas</h3>
-                <p>Transformando vidas através da adoção responsável e cuidados com animais abandonados desde 2015.</p>
-                
-                <div class="social-links">
-                
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
+        <div class="footer-content">
+            <!-- Logo Section -->
+            <div class="footer-section logo-section">
+                <div class="logo"></div>
+                <h2>SOS Patinhas</h2>
+                <p>Ong de animais,<br>sem fins lucrativos.</p>
             </div>
-            
-            <div class="footer-col">
-                <h3 class="footer-title">Links Rápidos</h3>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#adopt">Adote um Pet</a></li>
-                    <li><a href="#donate">Doe Agora</a></li>
-                    <li><a href="#events">Eventos</a></li>
-                    <li><a href="#about">Sobre Nós</a></li>
+
+            <!-- Navigation Links -->
+            <div class="footer-section">
+                <ul>
+                    <li><a href="#">Ande pelo site :)</a></li>
+                    <li><a href="#">Adote um pet!</a></li>
+                    <li><a href="#">Como Ajudar?</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Vaquinhas</a></li>
+                    <li><a href="#">Quem somos</a></li>
                 </ul>
             </div>
-            
-            <div class="footer-col">
-                <h3 class="footer-title">Contato</h3>
-                <ul class="footer-contact">
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i> 
-                        Motel Tropical - Av. Cônsul Assaf Trad, 5237-5319 - Cel. Antonino, Campo Grande - MS, 79017-135
-                    </li>
-                    <li><i class="fas fa-phone"></i> (67) 9989-5662</li>
-                    <li><i class="fas fa-envelope"></i> email@gmail.com</li>
-                </ul>
+
+            <!-- Contact Information -->
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <div class="contact-info">(67) 99222-1411</div>
+                <div class="contact-info">suporte@sospatinhas.com</div>
+                <div class="contact-info">@sospatinhas</div>
+                <div class="contact-info">@sospatinhas</div>
+                <div class="contact-info">@sospatinhas</div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="footer-section">
+                <h3>Quero ser colaborador/patrocinador</h3>
+                <a href="#" class="cta-button">COLABORADOR</a>
+                
+                <h3>Quero ser voluntário(a)</h3>
+                <a href="#" class="cta-button">VOLUNTÁRIO</a>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-              <div class="footer-bottom">
-                <p>Desenvolvido por <span class="highlight">141</span> &nbsp;&nbsp; Copyright © 2025 SOS Patinhas</p>
-              </div>
+            Desenvolvido por <a href="#">141</a> &nbsp;&nbsp;&nbsp; Copyright © 2025 SOS Patinhas
         </div>
     </footer>
 

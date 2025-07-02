@@ -2,6 +2,11 @@
 $cssLink  = '/sospatinhas/public/css/editarPerfilMembro.css';
   $tipo = 'Adm';
   include('app/componentes/default/topHTML.php');
+
+
+  require_once '../../../core/helper/permissoes.php';
+
+
 ?>
 
 <form action="" method="post" id="frmEditarPerfilMembro">

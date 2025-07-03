@@ -356,7 +356,7 @@ section {
   border-radius: 0; 
   overflow: hidden;
   padding: var(--spacing-xxl) 0;
-  margin: 0; 
+  margin: -32px; 
 }
 
 .adocao-container {
@@ -796,6 +796,11 @@ img.direita{
     font-weight: bold;
 }
 
+img.bandeira{
+  width: 70%;
+  height: 50%;
+}
+
 
 .highlight {
   color: #ff6a6a;
@@ -944,6 +949,7 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    
 }
 
 .eventos{

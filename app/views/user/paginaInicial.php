@@ -165,7 +165,7 @@
                     <i class="fa-solid fa-paw"></i>
                     <i class="fa-solid fa-paw"></i>
                 </div>
-            </div>
+            </div>      
         </section>
 
         <!-- SEÇÃO DE EVENTOS -->
@@ -252,7 +252,7 @@
                     </div>
                 </div>
                 
-                <div class="bolas">
+                <div class="bolas"> 
                     <img src="public/images/icons/iconPataLaranja.png" alt="Ícone Pata Laranja">
                     <div class="textosBola">
                         <h3>+100</h3>
@@ -281,6 +281,7 @@
             <!-- Logo Section -->
             <div class="footer-section logo-section">
                 <div class="logo"></div>
+                <img src="public/images/icons/bandeira.png" alt="" class="bandeira">
                 <h2>SOS Patinhas</h2>
                 <p>Ong de animais,<br>sem fins lucrativos.</p>
             </div>

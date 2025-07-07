@@ -11,6 +11,8 @@ class PermissaoModel extends Connect{
             return $resultado;
         } catch (PDOException $e) {
             throw new Exception("Erro no banco de dados: " . $e->getMessage(), $e->getCode(), $e);
+
+            
         }
     }
 }

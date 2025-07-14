@@ -82,12 +82,38 @@
             <?php endswitch; ?>
         <?php endforeach; ?>
     </div>
-
     <div id="btn">
-        
         <button type="submit" id="btnSalvar">Salvar</button>
         <button type="reset" id="btnCancelar">Cancelar</button>
-
     </div>
-
 </form>
+
+<script>
+    document.getElementbyId
+    
+    function montaFormData(idFrm){
+        const form = document.getElementbyId(idFrm);
+        const formData = new FormData();
+
+        const inputs = form.querySelectorAll('input, select, textarea');
+
+        inputs.forEach(input => {
+            const name = input.name;
+            if(!name) return;
+
+            switch (input.type){
+                case 'checkbox':
+                    if(input.checked){
+                        formData.append(name, input.value);
+                    }
+                    break;
+                case 'file':
+                    ///?????
+                    break;
+                default:
+                    formData.set(name, input.value);
+            }
+        })
+        return formData;
+    }
+</script>

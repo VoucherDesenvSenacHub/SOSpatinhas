@@ -27,7 +27,8 @@
     const header = document.getElementById('headerModal');
     const modal = document.getElementById('notifModal');
 
-    header.class = 'modalHeader';
+    header.classList.remove('modalSucesso', 'modalErro', 'modalAtencao', 'modalInfo');
+    header.classList.add('modalHeader');
 
     switch(tipo){
       case 'sucesso':

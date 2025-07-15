@@ -19,11 +19,7 @@ class AnimalController {
             $idade = isset($_POST['IDADE']) ? trim($_POST['IDADE']) : null;
             $descricao = isset($_POST['DESCRICAO']) ? trim($_POST['DESCRICAO']) : null;
             $sexo = isset($_POST['SEXO']) ? trim($_POST['SEXO']) : null;
-            $fotos = json_decode($_POST['CAMINHO_FOTO'] ?? '[]', true);
-            
-            var_dump( $fotos);
-            $caminhoFts = $fotos ? json_encode(imageUpload($fotos)) : null;
-            var_dump($caminhoFts);
+            $caminhoFts = !empty($_FILES['image']) ? imageUpload($_FILES) : null;
     
             $data = [
                 'ACAO' => $acao,

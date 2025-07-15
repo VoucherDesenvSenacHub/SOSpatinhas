@@ -13,26 +13,36 @@ function redirect(string $url): void {
     exit();
 }
 
-function imageUpload($fotos){
+function imageUpload($fotos) {
     $caminhoFts = [];
-    $uploadDir = 'app/uploads/';  
-    try {
-        foreach ($fotos['CAMINHO_FOTO']['tmp_name'] as $key => $tmpName) {
-            if ($tmpName) {
-                $originalName = basename($fotos['CAMINHO_FOTO']['name'][$key]);
-                $uniqueName = uniqid() . '_' . $originalName;
-                $destination = $uploadDir . $uniqueName;
+    $uploadDir = 'app/uploads/';
 
-                // if (move_uploaded_file($tmpName, $destination)) {
-                    $caminhoFts[] = $destination; 
-                // }
+    try {
+        if (isset($fotos['image'])) {
+            foreach ($fotos['image']['tmp_name'] as $key => $tmpName) {
+
+                if ($tmpName && $fotos['image']['error'][$key] === UPLOAD_ERR_OK) {
+                    $originalName = basename($fotos['image']['name'][$key]);
+                    $uniqueName = uniqid() . '_' . $originalName;
+                    $destination = $uploadDir . $uniqueName;
+
+                    if (move_uploaded_file($tmpName, $destination)) {
+                        $caminhoFts[] = $destination;
+                    } else {
+                        throw new Exception("Falha ao mover:  $tmpName para $destination");
+                    }
+                } else {
+                    throw new Exception("Arquivo Inválido: " . $fotos['image']['error'][$key]);
+                }
             }
+        } else {
+            throw new Exception("Não há imagens em \$_FILES");
         }
     } catch (Exception $e) {
         setModal('erro', 'Erro encontrado!', $e->getMessage());
     }
 
-    return $caminhoFts;
+    return json_encode($caminhoFts);
 }
 
 function salvar($obj){
@@ -47,4 +57,4 @@ function salvar($obj){
     }
     
     //redirect('adm/lista/' . $obj);
-}
+}?>

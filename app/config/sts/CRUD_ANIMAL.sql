@@ -42,16 +42,16 @@ BEGIN
 
         SET _ID_ANIMAL = LAST_INSERT_ID();
 
-        IF JSON_LENGTH(JSON_EXTRACT(jsonData, '$.CAMINHO_FOTO')) > 0 THEN
-
-            SET total = JSON_LENGTH(JSON_EXTRACT(jsonData, '$.CAMINHO_FOTO'));
-
-            WHILE i < total DO
-                SET _CAMINHO_FOTO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, CONCAT('$.CAMINHO_FOTO[', i, ']')));
-                INSERT INTO FOTO(ID_OBJ, ID_TIPO_OBJ, CAMINHO_FOTO) VALUES (_ID_ANIMAL, 1, _CAMINHO_FOTO);
-                SET i = i + 1;
-            END WHILE;
-        END IF;
+        SET total = JSON_LENGTH(JSON_EXTRACT(jsonData, '$.CAMINHO_FOTO'));
+		WHILE i < total DO
+			INSERT INTO FOTO (ID_OBJ, ID_TIPO_OBJ, CAMINHO_FOTO)
+			VALUES (
+				_ID_ANIMAL,
+				1,
+				JSON_UNQUOTE(JSON_EXTRACT(jsonData, CONCAT('$.CAMINHO_FOTO[', i, ']')))
+			);
+			SET i = i + 1;
+		END WHILE;
 
 	ELSEIF _ACAO = 'U' THEN
 		UPDATE ANIMAL SET 

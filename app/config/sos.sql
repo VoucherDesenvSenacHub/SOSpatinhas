@@ -231,3 +231,7 @@ INSERT INTO ADM (NOME, EMAIL, TELEFONE, SENHA) VALUES
 ('Thiago Martins', 'thiago.martins@site.com', '(81) 91111-8901', '12345'),
 ('Bruna Rocha', 'bruna.rocha@site.com', '(91) 90000-9012', '12345'),
 ('Eduardo Pires', 'eduardo.pires@site.com', '(85) 98800-1122', '12345');
+
+
+INSERT INTO TIPO_OBJ (DS_TIPO_OBJ) VALUES
+('Animal'), ('Evento'), ('Arrecadação'), ('Adm')

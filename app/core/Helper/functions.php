@@ -20,10 +20,9 @@ function imageUpload($fotos) {
     try {
         if (isset($fotos['image'])) {
             foreach ($fotos['image']['tmp_name'] as $key => $tmpName) {
-
                 if ($tmpName && $fotos['image']['error'][$key] === UPLOAD_ERR_OK) {
-                    $originalName = basename($fotos['image']['name'][$key]);
-                    $uniqueName = uniqid() . '_' . $originalName;
+                    $extension = pathinfo($originalName, PATHINFO_EXTENSION);
+                    $uniqueName = uniqid() . '.' . $extension;
                     $destination = $uploadDir . $uniqueName;
 
                     if (move_uploaded_file($tmpName, $destination)) {
@@ -42,7 +41,7 @@ function imageUpload($fotos) {
         setModal('erro', 'Erro encontrado!', $e->getMessage());
     }
 
-    return json_encode($caminhoFts);
+    return $caminhoFts;
 }
 
 function salvar($obj){

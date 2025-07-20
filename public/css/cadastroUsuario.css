@@ -86,7 +86,7 @@ input {
     font-size: 16px;
 }
 button {
-    background-color: #44803F;
+    background-color: var(--orange);
     color: white;
     padding: 10px;
     width: 97%;

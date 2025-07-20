@@ -23,8 +23,8 @@
 
 /*--------------------------------------------------------------------------------*/
 .filter-button{
-  background-color: #44803F;
-  color: white;
+  background-color: var(--orange);
+  color: var(--white);
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -34,7 +34,7 @@
 }
 
 .filter-button:hover{
-  background-color: green;
+  background-color: var(--orange-light);
 }
 
  #sexo-select, #idade-select, #porte-select,#animal-select{
@@ -109,7 +109,7 @@
   height: 100%;
   width: 100%;
   background: rgba(0,0,0,0.25);
-  color: white;
+  color: var(--white);
   font-size: 30px;
   font-weight: bold;
   border-radius: 40px;
@@ -136,7 +136,7 @@
 }
 
 .button-card{
-  background-color: #44803F;
+  background-color: var(--orange);
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -152,7 +152,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: var(--white);
   font-size: 24px;
   font-weight: bold;
   height: 100%;
@@ -203,10 +203,9 @@
 
 .paginacao .active {
   background-color: #4CAF50;
-  color: white;
+  color: var(--white);
   border-radius: 5px;
 }
-
 
 .vermais {
   text-align: center;
@@ -216,20 +215,17 @@
 #btnVerMais {
   background-color:#44803F;
   font-size: 20px;
-  color: #ffffff;
-  /* font-weight: 600; */
+  color: var(--white);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: none; /* Escondido por padrão */
+  display: none;
 }
 
 #btnVerMais:hover {
   background-color: #C6E1C4;
-
 }
-
 
 
 
@@ -239,7 +235,6 @@
     padding: 0;
 
   }
-
   .card-container{
     width: 80%;
   }
@@ -248,11 +243,9 @@
     height: 350px;
   }
   .card-animal img{
-    
     width: 250px;
     height: 350px;
     margin-right: 50px;
-    
   }
   .nome{
     font-size: 30px;
@@ -263,13 +256,14 @@
   }
   .box2{
   margin: 0 auto; /* Centraliza horizontalmente */
+  }
 }
-}
+
+
 @media(max-width:768px){
   .card-container{
     grid-template-columns: repeat(2, 1fr);
   }
-
   .form-filter{
     display: flex;
     flex-wrap: wrap;
@@ -284,11 +278,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 25px;}
-
-  
+    gap: 25px;
+  }
 }
-
 
 
 @media (max-width: 425px){
@@ -297,31 +289,24 @@
     padding: 0;
   }
   .card-container{
-   margin-right: 20px;
+    margin-right: 20px;
     grid-template-columns: repeat(1, 1fr);
-   
   }
   .box2{
-    
     right: 100px;;
-    
-    
   }
  .card-animal{
     margin: 0 auto;
- }
+  }
   .form-filter{
     flex-wrap: wrap;
     display: flex;
     width: 100%;
-    
   }
   .paginacao{
     display: none;
   }
-
   #btnVerMais {
     display: inline-block;
-    
   }
 }

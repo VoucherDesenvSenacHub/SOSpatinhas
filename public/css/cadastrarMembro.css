@@ -50,8 +50,8 @@ img.mais{
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #44803F;
-    color: #fff;
+    background-color: var(--orange);
+    color: var(--white);
     border-radius: 50px;
     font-size: 25px;
 
@@ -63,21 +63,21 @@ img.mais{
     margin:-15px 0 0 -30px;
 
     &:hover{
-        background-color: #83CE7D;
+        background-color: var(--orange-light);
         cursor: pointer;
     }
 }
 
 .buttonsPerfil{
-    background-color: #83CE7D;
-    color: #fff;
+    background-color: var(--orange-light);
+    color: var(--white);
     width: 250px;
     height: 55px;
     font-size: 20px;
     border-radius: 5px;
 
     &:hover{
-        background-color: #44803F;
+        background-color: var(--orange-light);
         cursor: pointer;
     }
 }

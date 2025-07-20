@@ -68,7 +68,7 @@
   .modalContent{
     height: 10rem;
     width: 40rem;
-    background: #FFFFFF;
+    background: var(--white);
     margin:0px auto; 
     width:300px; 
     border-radius:10px; 

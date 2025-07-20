@@ -14,11 +14,12 @@
     --green: #349582;
     --blue: #7BAEDC;
     --orange: #F28C66;
+    --orange-light: #F59D79;
+;
 }
 
 body {
     background-color: rgb(198, 225, 196);
-    background-image: url("public/images/default/Patinhas.png");
     background-size: 50%;
     background-position: center;
     display: flex;
@@ -34,7 +35,7 @@ body {
 }
 
 .corpo {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     width: 90%;
     max-width: 1500px;
     display: flex;
@@ -49,7 +50,7 @@ body {
 
 /* ----------------------------  NAVBAR  ----------------------------------------------------------*/
 .navbar {
-    background-color: white;
+    background-color: var(--white);
     position: sticky;
     top: 0;
     width: 100%;
@@ -74,7 +75,7 @@ body {
 
 .navLinks a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
     padding: 8px 16px;
     font-weight: 550;
     transition: 0.3s;
@@ -101,7 +102,7 @@ body {
 .hamburger div {
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: var(--black);
     transition: 0.3s;
 }
 
@@ -112,7 +113,7 @@ body {
     right: 0;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: var(--white);
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: center;
@@ -122,7 +123,7 @@ body {
 
 .mobileMenu a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
     padding: 15px;
     display: block;
     font-size: 18px;
@@ -191,13 +192,13 @@ body {
     justify-content: space-around;
     text-decoration: none;
     padding: 10px 0;
-    color: white;
+    color: var(--white);
     font-weight: bold;
 }
 
 .sidebarLi a:hover, #logout a:hover {
     background-image: linear-gradient(to right, #C6E1C4 7px, rgba(255, 255, 255, 0.1) 7px);
-    color: white;
+    color: var(--white);
 }
 
 #logout {
@@ -229,7 +230,7 @@ footer {
 .footer-desktop {
     width: 100%;
     background-color: rgb(68, 128, 63);
-    color: white;
+    color: var(--white);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center; 
@@ -250,14 +251,14 @@ footer {
 
 .footer-desktop .esquerda {
     font-size: 14px;
-    border-bottom: 1px solid white; 
+    border-bottom: 1px solid var(--white); 
     white-space: nowrap; 
     ;
 }
 
 .esquerda a {
     text-decoration: none;
-    color: white
+    color: var(--white)
 }
 
 .footer-desktop .footer-logo img {
@@ -278,7 +279,7 @@ footer {
     text-align: center;
     padding: 3px;
     background-color: rgb(68, 128, 63);
-    color: white;
+    color: var(--white);
     width: 100%;
     position: relative;
     z-index: 1200;
@@ -321,9 +322,9 @@ footer {
     margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--white);
     display: inline-block;
-    color: white;
+    color: var(--white);
 }
 
 
@@ -431,7 +432,7 @@ select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: white;
+    background-color: var(--white);
     padding-right: 40px;
     position: relative;
 }
@@ -458,7 +459,7 @@ button {
     border-radius: 12px;
     background-color: #44803F;
     cursor: pointer;
-    color: #ffffff;
+    color: var(--white);
     font-weight: 600;
     height: 3rem;
     width: 25rem;
@@ -485,7 +486,7 @@ button {
     display: inline-block;
     border-radius: 50%;
     border: 5px solid rgba(0, 0, 0, 0.1);
-    background: white;
+    background: var(--white);
     vertical-align: middle;
     margin-right: 20px;
     width: 2rem;

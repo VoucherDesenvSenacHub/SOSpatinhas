@@ -119,8 +119,8 @@
 
 .detalhesEvento button {
   padding: 10px 49px;
-  background-color: #44803F;
-  color: #fff;
+  background-color: var(--orange);
+  color: var(--white);
   border: none;
   border-radius: 12px;
   cursor: pointer;

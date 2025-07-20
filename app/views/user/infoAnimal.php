@@ -198,7 +198,7 @@ img.User{
 
 .tags span {
   background: #90cc89; 
-  color: #fff;
+  color: var(--white);
   padding: 4px 5px;
   border-radius: 99px;
   font-size: 0.975rem;
@@ -210,7 +210,7 @@ img.User{
 
 .AdoptBtn {
   background: #44803F;
-  color: #fff;
+  color: var(--white);
   font-size: 1.125rem;
   font-weight: bold;
   padding: 8px 36px;

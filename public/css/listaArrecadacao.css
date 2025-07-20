@@ -92,7 +92,7 @@ item {
 }
 
 .arrecadacao button {
-    background-color: #44803F;
+    background-color: var(--orange);
     color: white;
     width: 40%;
     height: 40px;

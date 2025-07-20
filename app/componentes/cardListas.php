@@ -270,7 +270,7 @@ function gerarCardIconsUser($imagem, $nome, $cpf, $telefone, $isUser = false) {
 
 .Card .localizacao{
     font-size: 18px;
-    background-color: #fff;
+    background-color: var(--white);
     color: #4caf50;
     display: flex;
     justify-content: center;

@@ -152,9 +152,9 @@
 <style>
     .btnComp{
         border-radius: 12px;
-        background-color: #44803F;
+        background-color: var(--orange);
         cursor: pointer;
-        color: #ffffff;
+        color: var(--white);
         font-weight: 600;
         margin: 0.5rem;
     }
@@ -171,6 +171,6 @@
     }
 
     .btnComp:hover {
-        background-color:rgb(49, 90, 45);
+        background-color: var(--orange-light);
     }
 </style>

@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicio | SOS Patinhas</title>
     <link rel="stylesheet" href="public/css/paginaInicial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="/public/images/icons/favicon.png" type="image/png">
-    <title>Pagina Inicio </title>
 </head>
 <body>
-  <body>
-    <!-- ============================================ -->
-    <!-- CABEÇALHO E NAVEGAÇÃO -->
-    <!-- ============================================ -->
     <header class="navbar" id="home">
         <div class="container navbar-container">
             <h1 class="logo" aria-label="Logo SOS Patinhas">
                 <i class="fa-solid fa-paw"></i> SOS Patinhas
             </h1>
-            
             <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </button>
-            
             <nav aria-label="Menu Principal">
                 <ul class="menu" id="mainMenu">
                     <li><a href="#home">Home</a></li>
@@ -38,9 +33,6 @@
         </div>
     </header>
 
-    <!-- ============================================ -->
-    <!-- BANNER CARROSSEL PRINCIPAL -->
-    <!-- ============================================ -->
     <section class="banner efeito-fade" id="banner">
         <div class="carrossel" id="carrossel">
             <ul class="carrossel__lista" id="listaSlides">
@@ -52,7 +44,6 @@
                         <a href="#adopt" class="botao botao--primario">Conheça-os</a>
                     </div>
                 </li>
-
                 <li class="carrossel__item">
                     <img src="public/images/default/racas.png" alt="Voluntários cuidando dos animais">
                     <div class="carrossel__legenda">
@@ -61,7 +52,6 @@
                         <a href="#volunteer" class="botao botao--primario">Saiba Mais</a>
                     </div>
                 </li>
-
                 <li class="carrossel__item">
                     <img src="public/images/default/racas.png" alt="Eventos de adoção realizados pela ONG">
                     <div class="carrossel__legenda">
@@ -71,59 +61,41 @@
                     </div>
                 </li>
             </ul>
-
             <div class="carrossel__indicadores" id="indicadores"></div>
-            <button class="carrossel_controle carrossel_controle--anterior" id="anterior" aria-label="Slide anterior">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="carrossel_controle carrossel_controle--proximo" id="proximo" aria-label="Próximo slide">
-                <i class="fas fa-chevron-right"></i>
-            </button>
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- CONTEÚDO PRINCIPAL -->
-    <!-- ============================================ -->
     <main>
-        <!-- SEÇÃO DE ADOÇÃO -->
         <section class="adocao efeito-fade" id="adopt">
             <div class="container adocao-container">
                 <img src="public/images/default/Group_230.png" alt="" class="linhas" aria-hidden="true">
                 <img src="public/images/default/Group_231.png" alt="" class="linha" aria-hidden="true">
-                
                 <div class="pet-info">
                     <h3 class="pet-nome" id="petName">Rumi | Macho - 2 anos</h3>
-                    
                     <div class="imagem-container">
                         <button id="pet-prev" class="seta esquerda" aria-label="Pet anterior">
-                          <img src="public/images/icons/SetaEsquerda.png" alt="" class="esquerda">
+                            <img src="public/images/icons/SetaEsquerda.png" alt="" class="esquerda">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-        
                         <div class="imagem-box">
                             <img src="public/images/default/gato.png" alt="Gato Rumi na caixa" id="petImg" class="pet-img">
                             <img src="public/images/default/Group.png" alt="" class="caixa" aria-hidden="true">
                         </div>
-                        
                         <button id="pet-next" class="seta direita" aria-label="Próximo pet">
-                          <img src="public/images/icons/SetaCertaDireita.png" alt="" class="direita">
+                            <img src="public/images/icons/SetaCertaDireita.png" alt="" class="direita">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
-                    
                     <div class="pet-tags">
                         <span class="tag">Vacinado</span>
                         <span class="tag">Castrado</span>
                         <span class="tag">Dócil</span>
                     </div>
                 </div>
-                
                 <div class="texto">
                     <h2>Adote um amigo!</h2>
                     <p>Você sabia que aqui na SOS existem vidas esperando ansiosamente por um lar cheio de amor? São pets incríveis, carinhosos e leais, só esperando por alguém como você.</p>
                     <p>Não compre, transforme uma vida: <strong>adote!</strong></p>
-                    
                     <div class="botoes-grupo">
                         <a href="#" class="botao botao--animado">VEJA OS PETS</a>
                     </div>
@@ -131,17 +103,14 @@
             </div>
         </section>
 
-        <!-- SEÇÃO DE DOAÇÃO -->
         <section class="cta efeito-fade" id="donate">
             <div class="cta-text">
                 <h2>Seja a Mão que Cuida!</h2>
                 <p>Cada ajuda conta. Doe o que puder e quiser na SOS Patinhas e nos ajude a garantir alimento, cuidados médicos e muito amor para os nossos animais resgatados.</p>
                 <p>Juntos, podemos oferecer uma vida digna e cheia de esperança para quem só precisa de uma chance!</p>
-                
                 <a href="#" class="btn-doar">
                     <i class="fas fa-heart"></i> CONTRIBUA COM A ONG
                 </a>
-                
                 <div class="donation-info">
                     <div class="donation-method">
                         <i class="fas fa-credit-card"></i>
@@ -157,7 +126,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="cta-image">
                 <img src="public/images/default/mao.png" alt="Voluntário alimentando cães">
                 <div class="icons">
@@ -165,59 +133,46 @@
                     <i class="fa-solid fa-paw"></i>
                     <i class="fa-solid fa-paw"></i>
                 </div>
-            </div>      
+            </div>
         </section>
 
-        <!-- SEÇÃO DE EVENTOS -->
         <section class="eventos" id="events">
             <h2>Alguns de nossos eventos</h2>
-
             <div class="carrossel-eventos">
                 <button class="seta1 prev1" aria-label="Evento anterior">&#x276C;</button>
-                
                 <div class="carrossel-track2">
                     <div class="evento-card">
                         <img src="public/images/default/evento1.png" alt="Evento 1">
                         <p>Feira de Adoção</p>
                     </div>
-
                     <div class="evento-card">
                         <img src="public/images/default/evento2.png" alt="Evento 2">
                         <p>Feirão do Bazar + Feira do Auau</p>
                     </div>
-
                     <div class="evento-card">
                         <img src="public/images/default/evento3.png" alt="Evento 3">
                         <p>Adoção com Carinho</p>
                     </div>
                 </div>
-                
                 <button class="seta1 next1" aria-label="Próximo evento">&#x276D;</button>
-
                 <div class="carrossel-paginacao"></div>
             </div>
-
             <a href="#eventos" class="botao-eventos">VEJA FUTUROS EVENTOS</a>
         </section>
 
-        <!-- SEÇÃO CARROSSEL DE IMAGENS -->
         <section class="carrossel-section">
             <img class="pataInvertida" src="public/images/icons/iconPataVerde.png" alt="Pata Verde Invertida">
-
             <div class="carrossel-wrap">
                 <img id="elemento1" src="public/images/default/efeitocarrossel.png" alt="Elemento Carrossel">
-
                 <div class="carrossel-track">
                     <img id="img1" src="" alt="Imagem 1">
                     <img id="img2" src="" alt="Imagem 2">
                 </div>
-
                 <div class="buttons">
                     <button class="prev" aria-label="Imagem anterior">&#x276C;</button>
                     <button class="next" aria-label="Próxima imagem">&#x276D;</button>
                 </div>
             </div>
-
             <div class="texto-doe">
                 <h2>Doe e mude destinos!</h2>
                 <p>
@@ -229,11 +184,9 @@
                 </p>
                 <a href="#" class="botao">CONTRIBUA COM A ONG</a>
             </div>
-
             <img class="pataverde" src="public/images/icons/iconPataVerde1.png" alt="Pata Verde">
         </section>
 
-        <!-- SEÇÃO DE ESTATÍSTICAS -->
         <section class="faixaMain">
             <div class="bolasCtn">
                 <div class="bolas">
@@ -243,7 +196,6 @@
                         <p>ANOS</p>
                     </div>
                 </div>
-                
                 <div class="bolas">
                     <img src="public/images/icons/iconMao.png" alt="Ícone Mão">
                     <div class="textosBola">
@@ -251,15 +203,13 @@
                         <p>RESGATES</p>
                     </div>
                 </div>
-                
-                <div class="bolas"> 
+                <div class="bolas">
                     <img src="public/images/icons/iconPataLaranja.png" alt="Ícone Pata Laranja">
                     <div class="textosBola">
                         <h3>+100</h3>
                         <p>ANIMAIS</p>
                     </div>
                 </div>
-                
                 <div class="bolas">
                     <img src="public/images/icons/iconLocal.png" alt="Ícone Localização">
                     <div class="textosBola">
@@ -268,25 +218,18 @@
                     </div>
                 </div>
             </div>
-            
             <h1>Por cada vida que merece uma segunda chance.</h1>
         </section>
     </main>
 
-    <!-- ============================================ -->
-    <!-- RODAPÉ -->
-    <!-- ============================================ -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Logo Section -->
             <div class="footer-section logo-section">
                 <div class="logo"></div>
                 <img src="public/images/icons/bandeira.png" alt="" class="bandeira">
                 <h2>SOS Patinhas</h2>
                 <p>Ong de animais,<br>sem fins lucrativos.</p>
             </div>
-
-            <!-- Navigation Links -->
             <div class="footer-section">
                 <ul>
                     <li><a href="#">Ande pelo site :)</a></li>
@@ -297,8 +240,6 @@
                     <li><a href="#">Quem somos</a></li>
                 </ul>
             </div>
-
-            <!-- Contact Information -->
             <div class="footer-section">
                 <h3>Contato</h3>
                 <div class="contact-info">(67) 99222-1411</div>
@@ -307,369 +248,230 @@
                 <div class="contact-info">@sospatinhas</div>
                 <div class="contact-info">@sospatinhas</div>
             </div>
-
-            <!-- Call to Action -->
             <div class="footer-section">
                 <h3>Quero ser colaborador/patrocinador</h3>
                 <a href="#" class="cta-button">COLABORADOR</a>
-                
                 <h3>Quero ser voluntário(a)</h3>
                 <a href="#" class="cta-button">VOLUNTÁRIO</a>
             </div>
         </div>
-
         <div class="footer-bottom">
             Desenvolvido por <a href="#">141</a> &nbsp;&nbsp;&nbsp; Copyright © 2025 SOS Patinhas
         </div>
     </footer>
 
-
-
     <script>
-
         document.addEventListener('DOMContentLoaded', function() {
-    // ============================
-    // Carrossel principal da página
-    // ============================
-    const carrosselPrincipal = function() {
-      const carrosselLista = document.getElementById('listaSlides');
-      const indicadores = document.getElementById('indicadores');
-      const btnAnterior = document.getElementById('anterior');
-      const btnProximo = document.getElementById('proximo');
-      
-      if (!carrosselLista) return; 
-      
-      const slides = carrosselLista.querySelectorAll('.carrossel__item');
-      let slideAtual = 0;
-      let intervaloAutoPlay;
-      
-      // Configura os indicadores
-      function configurarIndicadores() {
-        slides.forEach((_, index) => {
-          const indicador = document.createElement('div');
-          indicador.className = 'carrossel__indicador';
-          if (index === 0) indicador.classList.add('ativo');
-          
-          indicador.addEventListener('click', () => {
-            irParaSlide(index);
-          });
-          
-          indicadores.appendChild(indicador);
-        });
-      }
-      
-      // Função para ir para um slide específico
-      function irParaSlide(index) {
-        slideAtual = index;
-        
-        
-        const deslocamento = -slideAtual * 100 + '%';
-        carrosselLista.style.transform = `translateX(${deslocamento})`;
-        
-      
-        document.querySelectorAll('.carrossel__indicador').forEach((indicador, i) => {
-          indicador.classList.toggle('ativo', i === slideAtual);
-        });
-        
-      
-        resetarAutoPlay();
-      }
-      
-      
-      function iniciarAutoPlay() {
-        intervaloAutoPlay = setInterval(() => {
-          proximoSlide();
-        }, 5000); 
-      }
-      
-      function resetarAutoPlay() {
-        clearInterval(intervaloAutoPlay);
-        iniciarAutoPlay();
-      }
-      
-      // Função para ir para o próximo slide
-      function proximoSlide() {
-        const novoIndex = (slideAtual + 1) % slides.length;
-        irParaSlide(novoIndex);
-      }
-      
-      // Função para ir para o slide anterior
-      function slideAnterior() {
-        const novoIndex = (slideAtual - 1 + slides.length) % slides.length;
-        irParaSlide(novoIndex);
-      }
-      
-      // Event listeners
-      btnProximo.addEventListener('click', function() {
-        proximoSlide();
-      });
-      
-      btnAnterior.addEventListener('click', function() {
-        slideAnterior();
-      });
-      
-      // Inicializar carrossel
-      configurarIndicadores();
-      iniciarAutoPlay();
-    };
+            
+            // ============================
+            // Efeito de Fade para Elementos (Executado primeiro para evitar página em branco)
+            // ============================
+            const efeitoFade = function() {
+                const observador = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visivel');
+                        }
+                    });
+                }, { threshold: 0.2 });
+                
+                document.querySelectorAll('.efeito-fade').forEach(el => observador.observe(el));
+            };
 
-    // ============================
-    // Carrossel de Pets na Seção de Adoção
-    // ============================
-    const carrosselPets = function() {
-      const petPrevBtn = document.getElementById('pet-prev');
-      const petNextBtn = document.getElementById('pet-next');
-      const petImg = document.getElementById('petImg');
-      const petName = document.getElementById('petName');
-      const petTags = document.querySelector('.pet-tags');
-      const caixaImg = document.querySelector('.caixa');
-      
-      if (!petPrevBtn || !petNextBtn) return; 
-      
-    
-      const pets = [
-        {
-          nome: 'Rumi | Macho - 2 anos',
-          imagem: 'gato.png',
-          tags: ['Vacinado', 'Castrado', 'Dócil']
-        },
-        {
-          nome: 'Alice | Fêmea - 1 ano',
-          imagem: 'Alice.png',
-          tags: ['Vacinada', 'Castrada', 'Brincalhona']
-        },
-        {
-          nome: 'Thor | Macho - 3 anos',
-          imagem: 'thor.png',
-          tags: ['Vacinado', 'Castrado', 'Protetor']
-        }
-      ];
-      
-      let petAtual = 0;
-      
-      // Função para atualizar o display do pet
-      function atualizarPet(index) {
-      
-        petImg.style.opacity = '0';
-        petName.style.opacity = '0';
-        petTags.style.opacity = '0';
-        
-    
-        caixaImg.classList.add('caixa-girando');
-        
-    
-        setTimeout(() => {
-          const pet = pets[index];
-          
-        
-          petImg.src = pet.imagem;
-          petName.textContent = pet.nome;
-          
-      
-          petTags.innerHTML = '';
-          pet.tags.forEach(tag => {
-            const tagElement = document.createElement('span');
-            tagElement.className = 'tag';
-            tagElement.textContent = tag;
-            petTags.appendChild(tagElement);
-          });
-          
-      
-          petImg.style.opacity = '1';
-          petName.style.opacity = '1';
-          petTags.style.opacity = '1';
-          
-        
-          setTimeout(() => {
-            caixaImg.classList.remove('caixa-girando');
-          }, 1000);
-          
-        }, 300); 
-      }
-      
-    
-      petPrevBtn.addEventListener('click', function() {
-        petAtual = (petAtual - 1 + pets.length) % pets.length;
-        atualizarPet(petAtual);
-      });
-      
-      petNextBtn.addEventListener('click', function() {
-        petAtual = (petAtual + 1) % pets.length;
-        atualizarPet(petAtual);
-      });
-      
-      // Eventos de teclado para acessibilidade
-      document.addEventListener('keydown', function(e) {
-        
-        const rect = petImg.getBoundingClientRect();
-        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-        
-        if (isVisible) {
-          if (e.key === 'ArrowLeft') {
-            petPrevBtn.click();
-          } else if (e.key === 'ArrowRight') {
-            petNextBtn.click();
-          }
-        }
-      });
-    };
-
-    // ============================
-    // Efeito de Fade para Elementos
-    // ============================
-    const efeitoFade = function() {
-      const observador = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visivel');
-          }
-        });
-      }, { threshold: 0.2 });
-      
-      document.querySelectorAll('.efeito-fade').forEach(el => {
-        observador.observe(el);
-      });
-    };
-
-    // ============================
-    // Contador de Impacto
-    // ============================
-    const contadorImpacto = function() {
-      const contadores = {
-        adocoes: { elemento: document.getElementById('adocoes'), valor: 320 },
-        resgates: { elemento: document.getElementById('resgates'), valor: 542 },
-        voluntarios: { elemento: document.getElementById('voluntarios'), valor: 48 },
-        atendimentos: { elemento: document.getElementById('atendimentos'), valor: 890 }
-      };
-      
-      const observadorContador = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const contador = Object.values(contadores).find(c => c.elemento === entry.target);
-            if (contador) {
-              let atual = 0;
-              const incremento = Math.ceil(contador.valor / 50);
-              const intervalo = setInterval(() => {
-                atual += incremento;
-                if (atual >= contador.valor) {
-                  atual = contador.valor;
-                  clearInterval(intervalo);
+            // ============================
+            // Carrossel principal da página
+            // ============================
+            const carrosselPrincipal = function() {
+                const carrosselLista = document.getElementById('listaSlides');
+                const indicadoresContainer = document.getElementById('indicadores');
+                
+                if (!carrosselLista || !indicadoresContainer) {
+                    console.warn("Componentes do carrossel principal não encontrados. A função será ignorada.");
+                    return;
                 }
-                contador.elemento.textContent = atual;
-              }, 30);
-            }
-          }
-        });
-      }, { threshold: 0.5 });
-      
-      Object.values(contadores).forEach(contador => {
-        if (contador.elemento) {
-          observadorContador.observe(contador.elemento);
-        }
-      });
-    };
+                
+                const slides = carrosselLista.querySelectorAll('.carrossel__item');
+                let slideAtual = 0;
+                let intervaloAutoPlay;
+                
+                function irParaSlide(index) {
+                    if (index < 0 || index >= slides.length) return;
+                    slideAtual = index;
+                    const deslocamento = -slideAtual * 100 + '%';
+                    carrosselLista.style.transform = `translateX(${deslocamento})`;
+                    
+                    document.querySelectorAll('.carrossel__indicador').forEach((indicador, i) => {
+                        indicador.classList.toggle('ativo', i === slideAtual);
+                    });
+                    
+                    if (intervaloAutoPlay) resetarAutoPlay();
+                }
 
-    // ============================
-    // Menu Mobile
-    // ============================
-    const menuMobile = function() {
-      const menuToggle = document.getElementById('menuToggle');
-      const mainMenu = document.getElementById('mainMenu');
-      
-      if (menuToggle && mainMenu) {
-        menuToggle.addEventListener('click', function() {
-          mainMenu.classList.toggle('active');
-        });
-        
-        // Fechar menu ao clicar em link
-        mainMenu.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            mainMenu.classList.remove('active');
-          });
-        });
-      }
-    };
+                function configurarIndicadores() {
+                    indicadoresContainer.innerHTML = '';
+                    slides.forEach((_, index) => {
+                        const indicador = document.createElement('button');
+                        indicador.className = 'carrossel__indicador';
+                        indicador.setAttribute('aria-label', `Ir para o slide ${index + 1}`);
+                        const iconRegular = document.createElement('i');
+                        iconRegular.className = 'fa-regular fa-paw';
+                        const iconSolid = document.createElement('i');
+                        iconSolid.className = 'fa-solid fa-paw';
+                        indicador.appendChild(iconRegular);
+                        indicador.appendChild(iconSolid);
+                        if (index === 0) indicador.classList.add('ativo');
+                        indicador.addEventListener('click', () => irParaSlide(index));
+                        indicadoresContainer.appendChild(indicador);
+                    });
+                }
+                
+                function iniciarAutoPlay() {
+                    intervaloAutoPlay = setInterval(proximoSlide, 5000);
+                }
+                
+                function resetarAutoPlay() {
+                    clearInterval(intervaloAutoPlay);
+                    iniciarAutoPlay();
+                }
+                
+                function proximoSlide() {
+                    const novoIndex = (slideAtual + 1) % slides.length;
+                    irParaSlide(novoIndex);
+                }
+                
+                configurarIndicadores();
+                iniciarAutoPlay();
+            };
 
+            // ============================
+            // Carrossel de Pets na Seção de Adoção
+            // ============================
+            const carrosselPets = function() {
+                const petPrevBtn = document.getElementById('pet-prev');
+                const petNextBtn = document.getElementById('pet-next');
+                const petImg = document.getElementById('petImg');
+                const petName = document.getElementById('petName');
+                const petTags = document.querySelector('.pet-tags');
+                
+                if (!petPrevBtn || !petNextBtn || !petImg || !petName || !petTags) {
+                    console.warn("Componentes do carrossel de pets não encontrados. A função será ignorada.");
+                    return;
+                }
+                
+                const pets = [
+                    { nome: 'Rumi | Macho - 2 anos', imagem: 'public/images/default/gato.png', tags: ['Vacinado', 'Castrado', 'Dócil'] },
+                    { nome: 'Alice | Fêmea - 1 ano', imagem: 'public/images/default/Alice.png', tags: ['Vacinada', 'Castrada', 'Brincalhona'] },
+                    { nome: 'Thor | Macho - 3 anos', imagem: 'public/images/default/thor.png', tags: ['Vacinado', 'Castrado', 'Protetor'] }
+                ];
+                let petAtual = 0;
+                
+                function atualizarPet(index) {
+                    const pet = pets[index];
+                    petImg.style.opacity = '0';
+                    petName.style.opacity = '0';
+                    petTags.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        petImg.src = pet.imagem;
+                        petName.textContent = pet.nome;
+                        petTags.innerHTML = '';
+                        pet.tags.forEach(tagText => {
+                            const tagElement = document.createElement('span');
+                            tagElement.className = 'tag';
+                            tagElement.textContent = tagText;
+                            petTags.appendChild(tagElement);
+                        });
+                        petImg.style.opacity = '1';
+                        petName.style.opacity = '1';
+                        petTags.style.opacity = '1';
+                    }, 300);
+                }
+                
+                petPrevBtn.addEventListener('click', () => {
+                    petAtual = (petAtual - 1 + pets.length) % pets.length;
+                    atualizarPet(petAtual);
+                });
+                
+                petNextBtn.addEventListener('click', () => {
+                    petAtual = (petAtual + 1) % pets.length;
+                    atualizarPet(petAtual);
+                });
+            };
 
-    
+            // ============================
+            // Carrossel da Seção de Imagens (DOE)
+            // ============================
+            const carrosselDoe = function() {
+                const imagens = [
+                    ['cachorro2.png', 'cachorro1.png'],
+                    ['cachorro1.png', 'cachorro2.png'],
+                    ['cachorro2.png', 'teste.jpg'],
+                    ['teste.jpg', 'teste2.jpg']
+                ];
+                
+                const img1 = document.getElementById('img1');
+                const img2 = document.getElementById('img2');
+                const nextBtn = document.querySelector('.carrossel-section .next');
+                const prevBtn = document.querySelector('.carrossel-section .prev');
+                
+                if (!img1 || !img2 || !nextBtn || !prevBtn) {
+                    console.warn("Componentes do carrossel 'Doe' não encontrados. A função será ignorada.");
+                    return;
+                }
+                
+                let index = 0;
 
-    const smoothScroll = function() {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 70, 
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    };
+                function fadeTroca(img, novoSrc) {
+                    img.classList.remove('mostrar');
+                    setTimeout(() => {
+                        img.src = `public/images/default/${novoSrc}`;
+                        img.classList.add('mostrar');
+                    }, 200);
+                }
 
-    // Inicializar todas as funções
-    carrosselPrincipal();
-    carrosselPets();
-    efeitoFade();
-    contadorImpacto();
-    menuMobile();
-    smoothScroll();
-  });
-        
-        document.addEventListener('DOMContentLoaded', () =>{
-            const imagens = [
-                ['cachorro2.png', 'cachorro1.png'],
-                ['cachorro1.png', 'cachorro2.png'],
-                ['cachorro2.png', 'teste.jpg'],
-                ['teste.jpg', 'teste2.jpg']
-            ];
-            
-            const img1 = document.getElementById('img1');
-            const img2 = document.getElementById('img2');
-            const nextBtn = document.querySelector('.next');
-            const prevBtn = document.querySelector('.prev');
-            
-            let index = 0;
+                function atualizarImagens() {
+                    fadeTroca(img1, imagens[index][0]);
+                    fadeTroca(img2, imagens[index][1]);
+                }
 
-            function fadeTroca(img, novoSrc) {
-                img.classList.remove('mostrar');
+                nextBtn.addEventListener('click', () => {
+                    index = (index + 1) % imagens.length;
+                    atualizarImagens();
+                });
 
-                setTimeout(() => {
-                    img.src = `public/images/default/${novoSrc}`;
-                }, 20);
+                prevBtn.addEventListener('click', () => {
+                    index = (index - 1 + imagens.length) % imagens.length;
+                    atualizarImagens();
+                });
 
-                setTimeout(() => {
-                    img.classList.add('mostrar');
-                }, 10); 
-            }
-
-            function atualizarImagens() {
-                fadeTroca(img1, imagens[index][0]);
-                fadeTroca(img2, imagens[index][1]);
-            }
-
-            nextBtn.addEventListener('click', () =>{
-                index = (index + 1 ) % imagens.length;
                 atualizarImagens();
-            });
+            };
 
-            prevBtn.addEventListener('click', () =>{
-                index = (index - 1 + imagens.length) % imagens.length;
-                atualizarImagens();
-            });
-
-            atualizarImagens();
+            // ============================
+            // Menu Mobile
+            // ============================
+            const menuMobile = function() {
+                const menuToggle = document.getElementById('menuToggle');
+                const mainMenu = document.getElementById('mainMenu');
+                
+                if (menuToggle && mainMenu) {
+                    menuToggle.addEventListener('click', () => mainMenu.classList.toggle('active'));
+                    mainMenu.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => mainMenu.classList.remove('active'));
+                    });
+                }
+            };
+            
+            // ============================
+            // INICIALIZAR TODAS AS FUNÇÕES
+            // ============================
+            carrosselPrincipal();
+            carrosselPets();
+            carrosselDoe();
+            efeitoFade();
+            menuMobile();
 
         });
-
-
-        
-
     </script>
 </body>
 </html>

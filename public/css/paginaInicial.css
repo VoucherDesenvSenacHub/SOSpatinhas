@@ -259,27 +259,67 @@ section {
 }
 
 .carrossel__indicadores {
-  position: absolute;
-  bottom: var(--spacing-xxl);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: var(--spacing-md);
-  z-index: 3;
+    position: absolute;
+    bottom: var(--spacing-xxl);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-md);
+    z-index: 3;
 }
 
+/* Estilo do BOTÃO (apenas layout) */
 .carrossel__indicador {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-  transition: all var(--transition-normal);
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
 }
 
+/* Esconde a patinha preenchida por padrão */
+.carrossel__indicador .fa-solid {
+    opacity: 0;
+}
+
+/* Estilo do ÍCONE da patinha */
+.carrossel__indicador i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+/* Estilo do indicador ATIVO */
 .carrossel__indicador.ativo {
-  background: var(--text-light);
-  transform: scale(1.3);
+    transform: scale(1.2);
+}
+
+.carrossel__indicador.ativo i {
+    color: white;
+}
+
+.carrossel__indicador.ativo .fa-regular {
+    opacity: 0;
+}
+
+.carrossel__indicador.ativo .fa-solid {
+    opacity: 1;
+}
+
+/* Efeito Hover */
+.carrossel__indicador:not(.ativo):hover {
+    transform: scale(1.1);
+}
+
+.carrossel__indicador:not(.ativo):hover i {
+    color: white;
 }
 
 /* ============================

@@ -1,155 +1,153 @@
 .pontoArrecadacao {
-width: 100%;
-max-width: 90vw;
-padding: 0 20px;
+  width: 100%;
+  max-width: 90vw;
+  padding: 0 20px;
 }
 
 .infoDestaque{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-background-color: rgb(68, 128, 63);
-padding: 20px;
-position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(68, 128, 63);
+  padding: 20px;
+  position: relative;
 }
 
 #imgPA{
-max-width: 100%;
-height: auto;
-box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .infoDestaque img{
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .infoDestaque>div{
-width: 50%;
-text-align: center;
-background-color: rgb(68, 128, 63);
+  width: 50%;
+  text-align: center;
+  background-color: rgb(68, 128, 63);
 }
 
 
 .descricaoPontoArrecadacao {  
-width: 100%;
-text-align: center;
-justify-content: center;
-padding: 50px;
-box-sizing: border-box ;
-margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 50px;
+  box-sizing: border-box ;
+  margin-top: 50px;
 }
 
 .descricaoPontoArrecadacao h2 {
-color: #fff;
-margin-bottom: 10px;
+  color: var(--var(--white));
+  margin-bottom: 10px;
 }
 
 .descricaoPontoArrecadacao p{
-color: #fff;
-margin-bottom: 10px;
+  color: var(--var(--white));
+  margin-bottom: 10px;
 }
 
 
 .infoPixECards {
-background-color: #fff;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-gap: 20px;
-width: 100%;
-height: 600px;
-padding: 87px 40px 66px;
+  background-color: var(--var(--white));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+  height: 600px;
+  padding: 87px 40px 66px;
 }
 
 
 .infoValores {
-flex: 1;
-max-width: 400px;
+  flex: 1;
+  max-width: 400px;
 }
 
 .infoValores h2 {
-color: black;
-
+  color: var(--black);
 }
 
 .cards {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .cards h3 { 
-color: black;
+  color: var(--black);
 }
 
 .cards p { 
-color: black;
-margin: 0;
-font-size: 4px;
+  color: var(--black);
+  margin: 0;
+  font-size: 4px;
 }
 
 .cards span { 
-color: #5c5c5c;
-margin: 0;
-font-size: 16px;
-font-weight: 700;
+  color: #5c5c5c;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .cards strong {
-font-size: 18px;
+  font-size: 18px;
 }
 
 .card {
-display: flex;
-align-items: center;
-padding: 10px;
-border-radius: 10px;
-text-align: justify; 
-width: 50%; 
-max-width: 150px;
-margin: 10px auto; 
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: justify; 
+  width: 50%; 
+  max-width: 150px;
+  margin: 10px auto; 
 }
 
 .card img {
-width: 60px;
-height: 60px;
-margin-right: 20px;
-margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .pix {
-padding: 40px 0;
+  padding: 40px 0;
 }
 
 .qrCode {
-background-color: rgb(68, 128, 63);
-padding: 20px;
-border-radius: 10px;
-text-align: center;
-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-color: white;
+  background-color: rgb(68, 128, 63);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--white);
 }
 
 #imgQrCode {
-width: 247px;
-height: 232px;
-margin-top: 30px;
+  width: 247px;
+  height: 232px;
+  margin-top: 30px;
 } 
 
 .qrCode > .logoBb {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 7px;
-& #imgLogoBanco{
-width: 23px;
-height: 23px;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  & #imgLogoBanco{
+  width: 23px;
+  height: 23px;
+  }
 }
 
 @media (max-width: 425px) {
-
   body {
     font-size: 14px;
     background-size: 130%;
@@ -160,18 +158,15 @@ height: 23px;
   .infoDestaque > div {
     width: 100%;
   }
-
   .descricaoPontoArrecadacao {
     padding: 30px 15px;
     margin-top: 30px;
   }
-
   .infoPixECards {
     flex-direction: column;
     padding: 30px 15px;
     height: auto;
   }
-
   .infoValores,
   .cards {
     max-width: 100%;
@@ -180,7 +175,6 @@ height: 23px;
     width: 90%; 
     margin: 20px auto;
   }
-
   #imgQrCode {
     width: 200px;
     height: auto;
@@ -188,11 +182,11 @@ height: 23px;
   }
 }
 
+
 @media (max-width: 768px) {
   body{
   background-size: 80%;
-}
-
+  }
   .infoDestaque {
     flex-direction: column;
     text-align: center;
@@ -202,7 +196,6 @@ height: 23px;
     width: 100%;
     margin-bottom: 20px;
   }
-  
   .infoPixECards {
     flex-direction: column;
     height: auto;
@@ -216,22 +209,18 @@ height: 23px;
     width: 45%; 
     margin: 10px;
   }
-  
   .qrCode h2 {
     font-size: 17px;
-    }
-    
+  }
   .qrCode{
   width: 300px;
   height: 300px;
   margin-left: auto;
   margin-right: auto;
-    }
-  
+  }
   #imgQrCode{
     width: 120px;
     height: auto;
     margin-top: 10px;
-  
   }
-  }
+}

@@ -16,7 +16,7 @@ input[type="date"] {
     color: #555;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--white);
     outline: none;
     appearance: none;
     position: relative;
@@ -55,7 +55,7 @@ body{
 }
 
 .corpo-container {
-    background: #fff;
+    background: var(--white);
     padding:30px;
     padding-top: 80px;
     border-radius: 8px;
@@ -87,7 +87,7 @@ input {
 }
 button {
     background-color: var(--orange);
-    color: white;
+    color: var(--white);
     padding: 10px;
     width: 97%;
     border: none;

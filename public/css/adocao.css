@@ -213,7 +213,7 @@
 }
 
 #btnVerMais {
-  background-color:#44803F;
+  background-color: var(--orange);
   font-size: 20px;
   color: var(--white);
   padding: 10px 20px;

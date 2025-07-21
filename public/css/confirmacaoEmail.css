@@ -54,8 +54,6 @@ body {
     max-width: 260px;
 }
 
-/* RESPONSIVO */
-
 @media (max-width: 768px) {
     .bloco {
         padding: 45px 10vw;
@@ -74,7 +72,6 @@ body {
     .bloco {
         padding: 45px 5vw;
     }
-
     .secao-emailenviado {
         height: calc(127vh - 431px);
     }

@@ -48,7 +48,7 @@ select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: white;
+    background-color: var(--white);
     padding-right: 40px;
     position: relative;
 }
@@ -81,7 +81,7 @@ select {
 }
 
 .switchBtn label {
-    background-color: white;
+    background-color: var(--white);
     border: 1px solid #4CAF50;
     color: #4CAF50;
     padding: 10px 20px;
@@ -101,7 +101,7 @@ select {
 
 .switchBtn input:checked + label {
     background-color: #4CAF50;
-    color: white;
+    color: var(--white);
 }
 
 .upload-container {
@@ -140,7 +140,7 @@ select {
 
 .file-info {
     font-size: 15px;
-    color: black;
+    color: var(--black);
     margin-top: 5px;
     margin-bottom: 20px;
 }
@@ -180,7 +180,7 @@ select {
 .remove-file {
     margin-left: 10px;
     padding: 5px 10px;
-    color: white;
+    color: var(--white);
     background-color: #f44336;
     border: none;
     border-radius: 3px;

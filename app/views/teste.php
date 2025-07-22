@@ -11,7 +11,7 @@
 <div id="divPai">
   <h2>teste</h2>
   <p>teste teste tes test tese</p>
-  <button onclick="showModal('atencao','Sem permissão','Você não tem permissão para acessar esta página.')">Teste Modal</button>
+  <button onclick="showModal('sucesso','Sem permissão','Texto normalTexto normalTexto normalTexto normalTexto normalTexto normalTexto normal.')">Teste Modal</button>
 
 </div>
 <?php include("app/componentes/default/bottomHTML.php"); ?>

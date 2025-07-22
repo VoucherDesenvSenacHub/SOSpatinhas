@@ -99,13 +99,13 @@ function fecharModal() {
   z-index: 1000;
   justify-content: center;
   align-items: flex-start; 
-  padding-top: 50px; 
+  padding-top: 20px; 
 }
 
 .modalContent {
   background: #FFFFFF;
-  width: 90%;
-  max-width: 450px;
+  width: 100%;
+  max-width: 650px;
   border-radius: 12px; 
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -127,22 +127,21 @@ function fecharModal() {
 }
 
 .modalBody {
-  padding: 24px;
-  text-align: center; 
-  font-size: 15px;
+  padding: 78px 10px 20px 24px;
+  font-size: 18px;
   color: #555;
   line-height: 1.6;
   font-family: 'Arial', sans-serif;
-  min-height: 60px;
+  min-height: 80px; 
   display: flex;
-  align-items: center;
-  justify-content: center; 
+  align-items: center; 
+  justify-content: center;
 }
 
 #modalMessage {
   margin: 0;
   width: 100%;
-  text-align: center; 
+  overflow-wrap: break-word;
 }
 
 .modalFooter {
@@ -170,56 +169,56 @@ function fecharModal() {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Cores das modais */
 .modalSucesso {
-  background: linear-gradient(135deg, #4ecdc4, #26a69a) !important;
+  background:  #349582 !important;  
 }
 
 .modalSucesso ~ .modalBody ~ .modalFooter #btnModal {
-  background: linear-gradient(135deg, #4ecdc4, #26a69a);
+  background:  #349582 ;
 }
 
 .modalSucesso ~ .modalBody ~ .modalFooter #btnModal:hover {
-  background: linear-gradient(135deg, #26d0ce, #00897b);
+  background: #349582;
 }
 
 .modalErro {
-  background: linear-gradient(135deg, #ff6b6b, #e74c3c) !important;
+  background:  #F26666  !important;
 }
 
 .modalErro ~ .modalBody ~ .modalFooter #btnModal {
-  background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+  background:  #F26666 ;
 }
 
 .modalErro ~ .modalBody ~ .modalFooter #btnModal:hover {
-  background: linear-gradient(135deg, #ff5252, #d32f2f);
+  background:  #F26666 ;
 }
 
 .modalAtencao {
-  background: linear-gradient(135deg, #ffab91, #ff8a65) !important;
+  background:  #F28C66  !important;
 }
 
 .modalAtencao ~ .modalBody ~ .modalFooter #btnModal {
-  background: linear-gradient(135deg, #ffab91, #ff8a65);
+  background:  #F28C66 ;
 }
 
 .modalAtencao ~ .modalBody ~ .modalFooter #btnModal:hover {
-  background: linear-gradient(135deg, #ff9575, #ff7043);
+  background:  #F28C66 ;
 }
 
 .modalInfo {
-  background: linear-gradient(135deg, #81c7d4, #5fb3d4) !important;
+  background:  #7BAEDC  !important;
 }
 
 .modalInfo ~ .modalBody ~ .modalFooter #btnModal {
-  background: linear-gradient(135deg, #81c7d4, #5fb3d4);
+  background:  #7BAEDC ;
 }
 
 .modalInfo ~ .modalBody ~ .modalFooter #btnModal:hover {
-  background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+  background:  #7BAEDC ;
 }
 
-
+/* NOVA ANIMAÇÃO: vem deslizando de cima */
 @keyframes modalSlideInFromTop {
   from {
     transform: translateY(-100px);
@@ -234,7 +233,7 @@ function fecharModal() {
 /* Responsividade para mobile */
 @media (max-width: 480px) {
   .modalOverlay {
-    padding-top: 20px; 
+    padding-top: 10px; /* Menos espaçamento no mobile - mais para cima */
   }
   
   .modalContent {
@@ -251,8 +250,8 @@ function fecharModal() {
   }
   
   .modalBody {
-    padding: 20px;
-    font-size: 14px;
+    padding: 25px 20px; /* Padding ajustado no mobile */
+    font-size: 16px;
   }
   
   #btnModal {

@@ -1,19 +1,14 @@
-<?php
-
-    $model = new FormularioDev();
-    $fields = $model->pegaCampos("ANIMAL");
-    $formData = $model->pegaCamposComResultado("ANIMAL", 1);
-?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<form action="salvar/" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
+<form action="<?= "/SOSPatinhas/adm/formulario/".htmlspecialchars($frmName)."/salvar" ?>" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
+
     <input type="hidden" name="ACAO" value="<?= htmlspecialchars($acao) ?>">
-    <input type="hidden" name="ID" value="<?= htmlspecialchars($id) ?>">
+    <input type="hidden" name="<?= "ID_".strtoupper(htmlspecialchars($frmName)) ?>" value="<?= htmlspecialchars($id) ?>">
     
     <div class="frmContainer">
         <?php foreach ($fields as $field): ?>
             <?php switch ($field['TIPO']):
                 case 'imgUpload':
-                    include('../../componentes/imgUpload.php');
+                    include('app/componentes/imgUpload.php');
                     break;
                 case 'perfilUpload':
                     //fazer um componente tipo imgUpload pra ft de perfil
@@ -27,7 +22,7 @@
                                 type="checkbox" 
                                 id="<?= $field['NAME_FIELD'] ?>" 
                                 name="<?= $field['NAME_FIELD'] ?>" 
-                                <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
+                                <?= ($acao === 'U') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
                             >
                             <span class="label__text">
                                 <span class="label__check">
@@ -65,9 +60,9 @@
                             name="<?= $field['NAME_FIELD'] ?>"
                             id="<?= $field['NAME_FIELD'] ?>"
                             placeholder="<?= $field['LABEL'] ?>"
-                            <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
+                            oninput="<?= $field['MASCARA'] ?>"
                             <?= $field['OBRIGATORIO'] ? 'required' : '' ?>
-                        ></textarea>
+                        ><?= ($acao === 'U') ? htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') : '' ?></textarea>
                         <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
                     </div>
                     <?php break; ?>
@@ -79,7 +74,8 @@
                             name="<?= $field['NAME_FIELD'] ?>"
                             id="<?= $field['NAME_FIELD'] ?>"
                             placeholder="<?= $field['LABEL'] ?>"
-                            <?= ($acao === 'E') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
+                            oninput="<?= $field['MASCARA'] ?>"
+                            <?= ($acao === 'U') ? 'value="' . htmlspecialchars($formData[$field['NAME_FIELD']] ?? '') . '"' : ''; ?>
                             <?= $field['OBRIGATORIO'] ? 'required' : '' ?>
                         >
                         <label for="<?= $field['NAME_FIELD'] ?>" class="form-label"><?= $field['LABEL'] ?></label>
@@ -89,13 +85,11 @@
         <?php endforeach; ?>
     </div>
 
-    <?php if(!isset($mostrarBtn) && $mostrarBtn == true): ?>
-        <div id="btn">
-            
-            <button type="submit" id="btnSalvar">Salvar</button>
-            <button type="reset" id="btnCancelar">Cancelar</button>
+    <div id="btn">
+        
+        <button type="submit" id="btnSalvar">Salvar</button>
+        <button type="reset" id="btnCancelar">Cancelar</button>
 
-        </div>
-    <?php endif; ?>
+    </div>
 
 </form>

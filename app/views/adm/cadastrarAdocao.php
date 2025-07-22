@@ -1,7 +1,7 @@
 <?php
-    $cssLink  = '../../public/css/cadastrarAdocao.css';
+    $cssLink  = '/sospatinhas/public/css/cadastrarAdocao.css';
     $tipo = 'Adm';
-    include('../../componentes/default/topHTML.php');
+    include('app/componentes/default/topHTML.php');
 
     // if (!isset($_SESSION['taLogado']) || $_SESSION['taLogado'] !== true || $_SESSION['id'] !== 'Admin') {
     // echo '<script type="text/javascript">

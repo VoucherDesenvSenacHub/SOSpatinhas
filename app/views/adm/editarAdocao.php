@@ -1,7 +1,7 @@
 <?php
-  $cssLink  = '../../public/css/editarAdocao.css';
+  $cssLink  = '/sospatinhas/public/css/editarAdocao.css';
   $tipo = 'Adm';
-  include('../../componentes/default/topHTML.php');
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="form-cadastro-adocao">

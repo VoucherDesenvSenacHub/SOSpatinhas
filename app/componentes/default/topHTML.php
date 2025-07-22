@@ -1,6 +1,5 @@
 <?php 
-    $taLogado = isset($_SESSION['taLogado']) && $_SESSION['taLogado'] === true; 
-    $isAdm = isset($_SESSION['id']) && $_SESSION['id'] === "Admin";
+    $isAdm = isset($_SESSION['taLogado']) && $_SESSION['taLogado'] === true;
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -11,15 +10,14 @@
     <?php if(isset($cssLink)): ?>
         <link rel="stylesheet" href="<?php echo $cssLink; ?>">
     <?php endif; ?>
-    <link rel="stylesheet" href="public/css/default.css">
-    <link rel="icon" type="image/png" href="public/images/icons/favicon.png">
+    <link rel="stylesheet" href="/sospatinhas/public/css/default.css">
+    <link rel="icon" type="image/png" href="/sospatinhas/public/images/icons/favicon.png">
 </head>
 <body>
-<?php include('app/componentes/navbar.php'); ?>
-
-<?php if ($isAdm): ?>
-    <?php include('app/componentes/sidebarAdm.php'); ?>
-<?php endif; ?>
+<?php 
+    $isAdm ? include('app/componentes/sidebarAdm.php') : include('app/componentes/navbar.php');
+?>
     
+
 
 <section class="corpo container" >

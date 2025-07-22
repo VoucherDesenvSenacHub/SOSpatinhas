@@ -1,7 +1,6 @@
 <?php
-  $cssLink  = '../../public/css/frmAdocao.css';
-  $tipo = 'User';
-  include('../../componentes/default/topHTML.php');
+  $cssLink  = 'app/public/css/frmAdocao.css';
+  include('app/componentes/default/topHTML.php');
 ?>
     
 <div class="RedimensionarTop">
@@ -95,10 +94,10 @@
         $funcaoClick = "adicionarComValidacao('Formulário eviado com sucesso', 1, 'adocao.php')";                             
         $funcaoLoad = "mudarTamanho('btnEnviar','100%', '100%')";                                                                     
         $titulo = "Enviar";                                           
-        include('../../componentes/componenteButton.php');
+        include('app/componentes/componenteButton.php');
     ?>
 </div>
 
 <?php
-    include('../../componentes/default/bottomHTML.php');
+    include('app/componentes/default/bottomHTML.php');
 ?>

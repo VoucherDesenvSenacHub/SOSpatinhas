@@ -1,5 +1,5 @@
 <?php
-  $cssLink  = '.public/css/quemSomos.css';
+  $cssLink  = '/sospatinhas/public/css/quemSomos.css';
   $tipo = 'User';
   include('app/componentes/default/topHTML.php');
 ?>
@@ -7,7 +7,7 @@
 <section class="carroseis">
   <div class="carouselEquipe">
     <div class="imagemEquipe">
-      <img src="public/images/grupo.png" alt="Imagem da nossa equipe completa">
+      <img src="/sospatinhas/public/images/grupo.png" alt="Imagem da nossa equipe completa">
     </div>
       <h1 class="titulo">Nossa Equipe</h1>
       <div id="carouselEquipe">

@@ -1,5 +1,5 @@
 <?php
-  $cssLink  = 'public/css/comoAjudar.css';
+  $cssLink  = '/sospatinhas/public/css/comoAjudar.css';
   $tipo = 'User';
   include('app/componentes/default/topHTML.php');
 ?>
@@ -7,7 +7,7 @@
 <section class="pontoArrecadacao">
   <div class="infoDestaque">
     <div class="imgPontoArrecadacao">
-      <img src="public/images/cachorro03.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
+      <img src="/sospatinhas/public/images/cachorro03.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
       <p class="endereco">R. do Parque, 75 - Centro, Campo Grande - MS</p>
     </div>
     <div class="fundoTexto">
@@ -25,7 +25,7 @@
       <h2>Valores para Doação</h2>
       <div class="cards">
         <div class="card">
-          <img src="public/images/icons/iconracao.png" alt="Ícone de talher" >
+          <img src="/sospatinhas/public/images/icons/iconracao.png" alt="Ícone de talher" >
           <div>
             <p><strong>Kit Ração</strong></p>
             <span>R$ 50</span>
@@ -33,7 +33,7 @@
         </div>
 
         <div class="card">
-          <img src="public/images/icons/iconLimpeza.png" alt="Ícone de Limpeza">
+          <img src="/sospatinhas/public/images/icons/iconLimpeza.png" alt="Ícone de Limpeza">
           <div>
             <p><strong>Kit Limpeza</strong></p>
             <span>R$ 25</span>
@@ -41,7 +41,7 @@
         </div>
 
         <div class="card">
-          <img src="public/images/icons/iconConforto.png" alt="Ícone de Conforto">
+          <img src="/sospatinhas/public/images/icons/iconConforto.png" alt="Ícone de Conforto">
           <div>
             <p><strong>Kit Conforto</strong></p>
             <span>R$ 50</span>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="card">
-          <img src="public/images/icons/iconMedico.png" alt="Ícone de Médico">
+          <img src="/sospatinhas/public/images/icons/iconMedico.png" alt="Ícone de Médico">
           <div>
             <p><strong>Kit Médico</strong></p>
             <span>R$ 100</span>
@@ -57,7 +57,7 @@
         </div>
 
         <div class="card">
-          <img src="public/images/icons/iconagradecimento.png" alt="Ícone de Atendimento">
+          <img src="/sospatinhas/public/images/icons/iconagradecimento.png" alt="Ícone de Atendimento">
           <div>
             <p><strong>Kit Abono</strong></p>
             <span>R$ 60</span>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="card">
-          <img src="public/images/icons/iconVacinacao.png" alt="Ícone de Vacina">
+          <img src="/sospatinhas/public/images/icons/iconVacinacao.png" alt="Ícone de Vacina">
           <div>
             <p><strong>Kit Vacina</strong></p>
             <span>R$ 40</span>

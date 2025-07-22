@@ -5,8 +5,8 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>SOS Patinhas</title>
-     <link rel="stylesheet" href="../../public/css/esqueciSenha.css">
-     <link rel="stylesheet" href="../../public/css/default.css">
+     <link rel="stylesheet" href="/sospatinhas/public/css/esqueciSenha.css">
+     <link rel="stylesheet" href="/sospatinhas/public/css/default.css">
  </head>
 <body>
     <?php include('../../componentes/navbar.php'); ?>

@@ -1,8 +1,8 @@
 <?php
 
-    $cssLink  = '../../public/css/cadastrarMembro.css';
+    $cssLink  = '/sospatinhas/public/css/cadastrarMembro.css';
     $tipo = 'Adm';
-    include('../../componentes/default/topHTML.php');
+    include('app/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="post" id="cadastrarMembro">      

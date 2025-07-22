@@ -1,6 +1,6 @@
 <?php
   $cssLink  = '/sospatinhas/public/css/detalhesEvento.css';
-  include('app/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <section class="conteudo">

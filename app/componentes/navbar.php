@@ -8,7 +8,7 @@
         </button>
         <nav aria-label="Menu Principal">
             <ul class="menu" id="mainMenu">
-                <li><a href="/">Home</a></li>
+                <li><a href="paginaInicial">Home</a></li>
                 <li><a href="adocao">Adote um Pet</a></li>
                 <li><a href="comoajudar">Doe Agora</a></li>
                 <li><a href="eventos">Eventos</a></li>
@@ -24,8 +24,8 @@
 
 <style>
 .navbar {
-  background-color: var(--primary-color);
-  color: var(--text-light);
+  background-color: var(--blue);
+  color: var(--white);
   padding: var(--spacing-md) 0;
   position: sticky;
   top: 0;
@@ -59,7 +59,7 @@
 }
 
 .menu a {
-  color: var(--text-light);
+  color: var(--white);
   text-decoration: none;
   font-weight: 600;
   padding: var(--spacing-sm) var(--spacing-md);
@@ -73,7 +73,7 @@
 
 .menu-toggle {
   display: none;
-  color: var(--text-light);
+  color: var(--white);
   font-size: var(--font-size-xl);
 }
 

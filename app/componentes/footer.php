@@ -8,7 +8,7 @@
         </div>
         <div class="footer-section">
             <ul>
-                <li><a href="#">Ande pelo site :)</a></li>
+                <li><a href="/SOSPatinhas/">Ande pelo site :)</a></li>
                 <li><a href="adocao">Adote um pet!</a></li>
                 <li><a href="comoajudar">Doe Agora</a></li>
                 <li><a href="eventos">Eventos</a></li>

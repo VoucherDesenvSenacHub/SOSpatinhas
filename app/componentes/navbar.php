@@ -8,7 +8,7 @@
         </button>
         <nav aria-label="Menu Principal">
             <ul class="menu" id="mainMenu">
-                <li><a href="paginaInicial">Home</a></li>
+                <li><a href="/SOSPatinhas/">Home</a></li>
                 <li><a href="adocao">Adote um Pet</a></li>
                 <li><a href="comoajudar">Doe Agora</a></li>
                 <li><a href="eventos">Eventos</a></li>

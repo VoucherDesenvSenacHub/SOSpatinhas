@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Inicio | SOS Patinhas</title>
+    <title>SOS Patinhas</title>
     <link rel="stylesheet" href="public/css/paginaInicial.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="/public/images/icons/favicon.png" type="image/png">
@@ -75,7 +75,6 @@
                     <div class="imagem-container">
                         <button id="pet-prev" class="seta esquerda" aria-label="Pet anterior">
                             <img src="public/images/icons/SetaEsquerda.png" alt="" class="esquerda">
-                            <i class="fas fa-chevron-left"></i>
                         </button>
                         <div class="imagem-box">
                             <img src="public/images/default/gato.png" alt="Gato Rumi na caixa" id="petImg" class="pet-img">
@@ -83,7 +82,6 @@
                         </div>
                         <button id="pet-next" class="seta direita" aria-label="Próximo pet">
                             <img src="public/images/icons/SetaCertaDireita.png" alt="" class="direita">
-                            <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
                     <div class="pet-tags">
@@ -97,7 +95,7 @@
                     <p>Você sabia que aqui na SOS existem vidas esperando ansiosamente por um lar cheio de amor? São pets incríveis, carinhosos e leais, só esperando por alguém como você.</p>
                     <p>Não compre, transforme uma vida: <strong>adote!</strong></p>
                     <div class="botoes-grupo">
-                        <a href="#" class="botao botao--animado">VEJA OS PETS</a>
+                        <a href="adocao" class="botao botao--animado">VEJA OS PETS</a>
                     </div>
                 </div>
             </div>
@@ -108,7 +106,7 @@
                 <h2>Seja a Mão que Cuida!</h2>
                 <p>Cada ajuda conta. Doe o que puder e quiser na SOS Patinhas e nos ajude a garantir alimento, cuidados médicos e muito amor para os nossos animais resgatados.</p>
                 <p>Juntos, podemos oferecer uma vida digna e cheia de esperança para quem só precisa de uma chance!</p>
-                <a href="#" class="btn-doar">
+                <a href="comoajudar" class="btn-doar">
                     <i class="fas fa-heart"></i> CONTRIBUA COM A ONG
                 </a>
                 <div class="donation-info">
@@ -138,28 +136,43 @@
 
         <section class="eventos" id="events">
             <h2>Alguns de nossos eventos</h2>
-            <div class="carrossel-eventos">
-                <button class="seta1 prev1" aria-label="Evento anterior">&#x276C;</button>
-                <div class="carrossel-track2">
-                    <div class="evento-card">
-                        <img src="public/images/default/evento1.png" alt="Evento 1">
-                        <p>Feira de Adoção</p>
-                    </div>
-                    <div class="evento-card">
-                        <img src="public/images/default/evento2.png" alt="Evento 2">
-                        <p>Feirão do Bazar + Feira do Auau</p>
-                    </div>
-                    <div class="evento-card">
-                        <img src="public/images/default/evento3.png" alt="Evento 3">
-                        <p>Adoção com Carinho</p>
-                    </div>
-                </div>
-                <button class="seta1 next1" aria-label="Próximo evento">&#x276D;</button>
-                <div class="carrossel-paginacao"></div>
-            </div>
-            <a href="#eventos" class="botao-eventos">VEJA FUTUROS EVENTOS</a>
-        </section>
+            <div class="carousel-container">
+			<div class="carousel-wrapper">
+				<div class="carousel">
+					<div class="slide">
+						<img src="public/images/default/evento1.png" alt="Imagem 1" />
+                        <h1>Feira do Auau</h1>
+					</div>
+					<div class="slide">
+                        <img src="public/images/default/evento2.png" alt="Imagem 2" />
+                        <h1>Feirão do Bazar</h1>
+					</div>
+					<div class="slide">
+                        <img src="public/images/default/evento3.png" alt="Imagem 3" />
+                        <h1>Feira dos Pets</h1>
+					</div>
+					<div class="slide">
+						<img src="public/images/default/evento1.png" alt="Imagem 1" />
+                        <h1>Feira do Auau</h1>
+					</div>
+					<div class="slide">
+						<img src="public/images/default/evento2.png" alt="Imagem 2" />
+                        <h1>Feirão do Bazar</h1>
+					</div>
+					<div class="slide">
+                        <img src="public/images/default/evento3.png" alt="Imagem 3" />
+                        <h1>Feira dos Pets</h1>
+					</div>
+					
+				</div>
+			</div>
 
+			<button class="prev" id="prevBtn">&#10094;</button>
+			<button class="next" id="nextBtn">&#10095;</button>
+		</div>
+            <a href="eventos" class="botao-eventos">VEJA FUTUROS EVENTOS</a>
+        </section>
+        
         <section class="carrossel-section">
             <img class="pataInvertida" src="public/images/icons/iconPataVerde.png" alt="Pata Verde Invertida">
             <div class="carrossel-wrap">
@@ -169,8 +182,8 @@
                     <img id="img2" src="" alt="Imagem 2">
                 </div>
                 <div class="buttons">
-                    <button class="prev" aria-label="Imagem anterior">&#x276C;</button>
-                    <button class="next" aria-label="Próxima imagem">&#x276D;</button>
+                    <button class="prev" id="nextContribua1" aria-label="Imagem anterior">&#x276C;</button>
+                    <button class="next" id="nextContribua2" aria-label="Próxima imagem">&#x276D;</button>
                 </div>
             </div>
             <div class="texto-doe">
@@ -360,8 +373,8 @@
                 
                 const pets = [
                     { nome: 'Rumi | Macho - 2 anos', imagem: 'public/images/default/gato.png', tags: ['Vacinado', 'Castrado', 'Dócil'] },
-                    { nome: 'Alice | Fêmea - 1 ano', imagem: 'public/images/default/Alice.png', tags: ['Vacinada', 'Castrada', 'Brincalhona'] },
-                    { nome: 'Thor | Macho - 3 anos', imagem: 'public/images/default/thor.png', tags: ['Vacinado', 'Castrado', 'Protetor'] }
+                    { nome: 'Alice | Fêmea - 1 ano', imagem: 'public/images/default/image.png', tags: ['Vacinada', 'Castrada', 'Brincalhona'] },
+                    { nome: 'Thor | Macho - 3 anos', imagem: 'public/images/default/cachorro2.png', tags: ['Vacinado', 'Castrado', 'Protetor'] }
                 ];
                 let petAtual = 0;
                 
@@ -472,6 +485,68 @@
             menuMobile();
 
         });
+        document.addEventListener("DOMContentLoaded", function () {
+	const carousel = document.querySelector(".carousel");
+	const slides = document.querySelectorAll(".slide");
+	const prevBtn = document.getElementById("prevBtn");
+	const nextBtn = document.getElementById("nextBtn");
+
+	let currentIndex = 0;
+	const slidesPerView = 3;
+	const totalSlides = slides.length;
+	const maxIndex = totalSlides - slidesPerView;
+
+	function updateCarousel() {
+		const slideWidth = slides[0].clientWidth;
+		const gap = 15;
+
+		const offset = -currentIndex * (slideWidth + gap);
+		carousel.style.transform = `translateX(${offset}px)`;
+
+		// --- NOVA LÓGICA PARA O EFEITO 3D ---
+
+		// Primeiro, remove todas as classes de estado de todos os slides
+		slides.forEach((slide) => {
+			slide.classList.remove("slide-center", "slide-left", "slide-right");
+		});
+
+		// Adiciona a classe correta para os 3 slides visíveis
+		if (slides[currentIndex]) {
+			slides[currentIndex].classList.add("slide-left");
+		}
+		if (slides[currentIndex + 1]) {
+			slides[currentIndex + 1].classList.add("slide-center");
+		}
+		if (slides[currentIndex + 2]) {
+			slides[currentIndex + 2].classList.add("slide-right");
+		}
+	}
+
+	// A lógica dos botões permanece a mesma (com loop)
+	nextBtn.addEventListener("click", () => {
+		if (currentIndex >= maxIndex) {
+			currentIndex = 0;
+		} else {
+			currentIndex++;
+		}
+		updateCarousel();
+	});
+
+	prevBtn.addEventListener("click", () => {
+		if (currentIndex <= 0) {
+			currentIndex = maxIndex;
+		} else {
+			currentIndex--;
+		}
+		updateCarousel();
+	});
+
+	window.addEventListener("resize", updateCarousel);
+
+	// Chama a função na inicialização para aplicar os estilos 3D corretos
+	updateCarousel();
+});
+
     </script>
 </body>
 </html>

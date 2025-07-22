@@ -1,7 +1,7 @@
 <?php
-  $cssLink  = '../../public/css/editarFrmAdocao.css';
+  $cssLink  = '/sospatinhas/public/css/editarFrmAdocao.css';
   $tipo = 'Adm';
-  include ('../../componentes/default/topHTML.php');
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <div class="redimensionar-top">
@@ -9,7 +9,7 @@
 
     <div class="p-container">
         <p id="p-feliz">Olá! Estamos muito felizes por você escolher adotar um animalzinho do SOS Patinhas 🙂</p>
-        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/iconEditar.png" class="botaozin">
     </div>
     <p>Para adotar um dos nossos cãezinhos, é necessário ter mais de 18 anos, preencher este formulário, enviar fotos do seu lar e, caso a adoção seja aprovada, assinar um termo de responsabilidade. Também solicitamos que nos mantenha atualizados sobre o bem-estar do animalzinho após a adoção, enviando notícias de tempos em tempos. Este é o procedimento padrão adotado por diversas outras organizações não governamentais (ONGs) comprometidas com a adoção responsável.</p>
 
@@ -52,43 +52,43 @@
     
     <div class="perguntaIcon">
         <label for="pergunta1"></label>
-        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
-        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/iconEditar.png" class="botaozin">
         <input type="text" name="pergunta1" placeholder="Pergunta1:">
     </div>
     
     <div class="perguntaIcon">
-        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
-        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta2"></label>
         <input type="text" name="pergunta2" placeholder="Pergunta2:">
     </div>
 
     
     <div class="perguntaIcon">
-        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
-        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta3"></label>
         <input type="text" name="pergunta3" placeholder="Pergunta3:">
     </div>
 
     <div class="perguntaIcon">
-        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
-        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta4"></label>
         <input type="text" name="pergunta4" placeholder="Pergunta4:">  
     </div>
     
     <div class="perguntaIcon">   
-        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
-        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta5"></label>
         <input type="text" name="pergunta5" placeholder="Pergunta5:">
     </div>
     
     <div class="perguntaIcon">     
-        <img src="../../public/images/icons/IconExcluir.png" class="botaozin">
-        <img src="../../public/images/icons/iconEditar.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/IconExcluir.png" class="botaozin">
+        <img src="/sospatinhas/public/images/icons/iconEditar.png" class="botaozin">
         <label for="pergunta6"></label>
         <input type="text" name="pergunta6" placeholder="Pergunta6:">
     </div>

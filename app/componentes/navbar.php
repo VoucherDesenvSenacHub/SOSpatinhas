@@ -38,7 +38,7 @@
   justify-content: space-between;
   align-items: center;
 }
-
+  
 .logo {
   font-size: var(--font-size-xl);
   font-weight: bold;

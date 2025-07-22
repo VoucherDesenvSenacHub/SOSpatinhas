@@ -10,7 +10,7 @@
 
   $cssLink  = '../../public/css/quemSomos.css';
   $tipo = 'Adm';
-  include('../../componentes/default/topHTML.php');
+  include('app/componentes/default/topHTML.php');
 ?>
 <body>
 <section class="carroseis">

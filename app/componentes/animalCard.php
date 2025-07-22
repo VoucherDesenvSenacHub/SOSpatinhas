@@ -1,6 +1,6 @@
 <div class="card-animal">
     <div class="front-card">
-        <img src="public/images/default/semfoto.png" alt="">
+        <img src="/sospatinhas/public/images/default/semfoto.png" alt="">
         <div class="titulo">
             <h1 class="nome">
                 <?= !empty($animal['NOME']) ? htmlspecialchars($animal['NOME']) : 'Nome não disponível' ?>
@@ -16,7 +16,7 @@
             <p><?= !empty($animal['RACA']) ? htmlspecialchars($animal['RACA']) : 'Raça' ?></p>
         </header>
         <button class="button-card">
-            <a href="adocao/detalhesanimal/<?= !empty($animal['RACA']) ? htmlspecialchars($animal['RACA']) : '' ?>">Adotar!</a>
+            <a href="adocao/detalhesanimal/<?= !empty($animal['ID_ANIMAL']) ? htmlspecialchars($animal['ID_ANIMAL']) : '' ?>">Adotar!</a>
         </button>
     </div>
 </div>

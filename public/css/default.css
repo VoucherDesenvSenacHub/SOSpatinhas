@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 * {
     margin: 0;
@@ -5,6 +6,14 @@
     box-sizing: border-box;
     border: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --black: #333333;
+    --white: #FFFBEA;
+    --green: #349582;
+    --blue: #7BAEDC;
+    --orange: #F28C66;
 }
 
 body {

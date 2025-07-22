@@ -1,5 +1,5 @@
 <?php
-    $cssLink  = '../../public/css/editarPerfilUsuario.css';
+    $cssLink  = '/sospatinhas/public/css/editarPerfilUsuario.css';
     $tipo = 'User';
     include('../../componentes/default/topHTML.php');
 ?>

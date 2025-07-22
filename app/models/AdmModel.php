@@ -1,10 +1,10 @@
 <?php
 require_once 'app/config/connect.php';
 
-class EventoModel extends Connect{
+class AdmModel extends Connect{
     public function CRUD($jsonData){
         try{
-            $stmt = $this->connection->prepare("CALL CRUD_EVENTO(:jsonData)");
+            $stmt = $this->connection->prepare("CALL CRUD_ADM(:jsonData)");
             $stmt->bindParam(':jsonData', $jsonData, PDO::PARAM_STR);
             $stmt->execute();
             $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);

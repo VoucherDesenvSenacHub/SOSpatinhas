@@ -3,8 +3,7 @@
 class AuthMiddleware {
     public function handle() {
         if (!isset($_SESSION['taLogado']) || !$_SESSION['taLogado']) {
-            header("Location: login");
-            exit;
+            redirect('adm/login');
         }
         return true;
     }

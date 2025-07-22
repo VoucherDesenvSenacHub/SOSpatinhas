@@ -1,5 +1,5 @@
 <?php
-    $cssLink  = 'public/css/404.css';
+    $cssLink  = '/sospatinhas/public/css/404.css';
     include('app/componentes/default/topHTML.php');
 ?>
 
@@ -10,7 +10,7 @@
         <button><a href="/SOSPatinhas/">Voltar para o inicio</a></button>
     </div>
     
-    <img src="public/images/default/404Cat.png" alt="">
+    <img src="/sospatinhas/public/images/default/404Cat.png" alt="">
 </div>
 
 

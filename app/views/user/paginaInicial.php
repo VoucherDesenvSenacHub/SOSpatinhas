@@ -9,29 +9,7 @@
     <link rel="icon" href="/public/images/icons/favicon.png" type="image/png">
 </head>
 <body>
-    <header class="navbar" id="home">
-        <div class="container navbar-container">
-            <h1 class="logo" aria-label="Logo SOS Patinhas">
-                <i class="fa-solid fa-paw"></i> SOS Patinhas
-            </h1>
-            <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav aria-label="Menu Principal">
-                <ul class="menu" id="mainMenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#adopt">Adote um Pet</a></li>
-                    <li><a href="#donate">Doe Agora</a></li>
-                    <li><a href="#events">Eventos</a></li>
-                    <li><a href="#about">Sobre Nós</a></li>
-                    <li class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include('app/componentes/navbar.php'); ?>
 
     <section class="banner efeito-fade" id="banner">
         <div class="carrossel" id="carrossel">
@@ -222,43 +200,7 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section logo-section">
-                <div class="logo"></div>
-                <img src="public/images/icons/bandeira.png" alt="" class="bandeira">
-                <h2>SOS Patinhas</h2>
-                <p>Ong de animais,<br>sem fins lucrativos.</p>
-            </div>
-            <div class="footer-section">
-                <ul>
-                    <li><a href="#">Ande pelo site :)</a></li>
-                    <li><a href="#">Adote um pet!</a></li>
-                    <li><a href="#">Como Ajudar?</a></li>
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Vaquinhas</a></li>
-                    <li><a href="#">Quem somos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contato</h3>
-                <div class="contact-info">(67) 99222-1411</div>
-                <div class="contact-info">suporte@sospatinhas.com</div>
-                <div class="contact-info">@sospatinhas</div>
-                <div class="contact-info">@sospatinhas</div>
-                <div class="contact-info">@sospatinhas</div>
-            </div>
-            <div class="footer-section">
-                <h3>Quero ser colaborador/patrocinador</h3>
-                <a href="#" class="cta-button">COLABORADOR</a>
-                <h3>Quero ser voluntário(a)</h3>
-                <a href="#" class="cta-button">VOLUNTÁRIO</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            Desenvolvido por <a href="#">141</a> &nbsp;&nbsp;&nbsp; Copyright © 2025 SOS Patinhas
-        </div>
-    </footer>
+    <?php include('app/componentes/footer.php'); ?>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

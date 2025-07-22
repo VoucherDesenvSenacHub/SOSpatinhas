@@ -1,75 +1,96 @@
-<nav class="navbar">
-    <a class="navbarLogo" href="/">
-        <img src="public/images/Logo_Navbar.png" alt="Logo">
-    </a>
-
-    <ul class="navLinks">
-        <a href="quemsomos">Quem Somos</a>
-        <a href="comoajudar">Como Ajudar</a>
-        <a href="eventos">Eventos</a>
-        <a href="adocao">Adoção</a>
-    </ul>
-
-    <div class="navRight">
-        <?php 
-        $taLogado = false;
-        if ($taLogado): ?>
-            <a class="navbarLogo" href="<?php echo ($isAdm) ? "perfil/adm/{idUsuario}" : "perfil/user/{idUsuario}"; ?>">
-                <img src="<?php echo ($isAdm) ? "public/images/icons/iconUserAdm.png" : "public/images/icons/iconUser.png"; ?>" alt="Login">
-            </a>
-        <?php else: ?>
-            <div id="btnLoginRegister">
-                <div id="btnEntrarDiv">
-                    <?php
-                        $idBtn = "btnEntrar";
-                        $funcaoClick = "redirecionar('login')";
-                        $titulo = "Entrar";
-                        $funcaoLoad = "mudarTamanho('btnEntrar', '142px', '42px', '16px')";
-                        include('app/componentes/componenteButton.php');
-                    ?>
-                </div>
-                <div id="btnCadastroDiv">
-                    <?php
-                        $idBtn = "btnCadastro";
-                        $funcaoClick = "redirecionar('cadastro')";
-                        $titulo = "Cadastrar";
-                        $funcaoLoad = "mudarTamanho('btnCadastro', '142px', '42px', '16px')";
-                        include('app/componentes/componenteButton.php');
-                        $idBtn = "";
-                        $funcaoClick = "";
-                        $titulo = "";
-                        $funcaoLoad = "";
-                    ?>
-                </div>
-            </div>
-        <?php endif; ?>
-
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+<header class="navbar" id="home">
+    <div class="container navbar-container">
+        <h1 class="logo" aria-label="Logo SOS Patinhas">
+            <i class="fa-solid fa-paw"></i> SOS Patinhas
+        </h1>
+        <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav aria-label="Menu Principal">
+            <ul class="menu" id="mainMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="adocao">Adote um Pet</a></li>
+                <li><a href="comoajudar">Doe Agora</a></li>
+                <li><a href="eventos">Eventos</a></li>
+                <li><a href="quemsomos">Sobre Nós</a></li>
+                <li class="social-icons">
+                    <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+        </nav>
     </div>
-</nav>
+</header>
 
-<div class="mobileMenu">
-    <a href="quemsomos">Quem Somos</a>
-    <a href="comoajudar">Como Ajudar</a>
-    <a href="eventos">Eventos</a>
-    <a href="adocao">Adoção</a>
-    <?php if ($isAdm): ?>
-        <a href="lista/Animal">Adoções</a>
-        <a href="lista/Evento">Eventos</a>
-        <a href="lista/Arrecadacao">Arrecadações</a>
-        <a href="lista/Membro">Membros</a>
-        <a href="lista/Usuario">Usuários</a>
-        <a href="#">Editar Formulário</a>
-    <?php endif; ?>
-</div>
+<style>
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: var(--spacing-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
 
-<script>
-    function toggleMenu() {
-        const mobileMenu = document.querySelector('.mobileMenu');
-        mobileMenu.classList.toggle('show');
-    }
-</script>
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo i {
+  font-size: 1.2em;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.menu a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition-normal);
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-toggle {
+  display: none;
+  color: var(--text-light);
+  font-size: var(--font-size-xl);
+}
+
+.social-icons {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-icons a {
+  font-size: var(--font-size-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+</style>

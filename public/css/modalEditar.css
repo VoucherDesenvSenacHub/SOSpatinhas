@@ -102,7 +102,7 @@
     left: 50%;
     width: 4px;
     height: 28px;
-    background-color: black;
+    background-color: var(--black);
     border-radius: 2px; 
     transform: translate(-50%, -50%);
 }

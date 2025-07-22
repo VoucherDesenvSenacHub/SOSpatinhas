@@ -191,7 +191,7 @@
 .paginacao a {
   text-decoration: none;
   padding: 8px 12px;
-  color: black;
+  color: var(--black);
   font-weight: bold;
   border-radius: 5px;
   transition: background 0.3s;

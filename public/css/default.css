@@ -15,7 +15,6 @@
     --blue: #7BAEDC;
     --orange: #F28C66;
     --orange-light: #F59D79;
-;
 }
 
 body {
@@ -152,6 +151,7 @@ body {
 }
 
 
+
 /* ----------------------------  SIDEBAR  ----------------------------------------------------------*/
 .sidebar {
     height: 100vh;
@@ -253,12 +253,11 @@ footer {
     font-size: 14px;
     border-bottom: 1px solid var(--white); 
     white-space: nowrap; 
-    ;
 }
 
 .esquerda a {
     text-decoration: none;
-    color: var(--white)
+    color: var(--white);
 }
 
 .footer-desktop .footer-logo img {
@@ -357,7 +356,6 @@ footer {
 }
 
 
-
 /* ----------------------------  INPUTS E AFINS  ----------------------------------------------------------*/
 .form-input {
     width: 100%;
@@ -453,8 +451,6 @@ select {
     pointer-events: none;
 }
 
-/* button */
-
 button {
     border-radius: 12px;
     background-color: #44803F;
@@ -517,7 +513,7 @@ i.icon{
     .icon{
         opacity: 1;
         transform: scale(0);
-        color: white;
+        color: var(--white);
     }
 }
 

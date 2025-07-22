@@ -5,16 +5,14 @@
   padding: 16px;
 }
 
-
 .BackLink {
   display: inline-block;
   font-size: 1.125rem;
   margin-bottom: 16px;
-  color: #000;
+  color: var(--black);
   text-decoration: none;
-  margin-right:95% ;
+  margin-right: 95%;
 }
-
 
 img.Voltar{
   width: 60%;
@@ -44,12 +42,12 @@ img.Voltar{
 
 .gallery {
   display: flex;
-    gap: 10px;
-    object-fit: fill;
-    margin-left: 20%;
-    height: 12%;
-    width: 76%;
-    border-radius: 5px;
+  gap: 10px;
+  object-fit: fill;
+  margin-left: 20%;
+  height: 12%;
+  width: 76%;
+  border-radius: 5px;
 }
 
 .GalleryImg {
@@ -85,10 +83,10 @@ img.Icon{
 }
 
 img.User{
-    width: 25px;
-    height: 25px;
-    position: relative;
-    left: 1%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: 1%;
 }
 
 .ProfileDetails h2 {
@@ -104,7 +102,6 @@ img.User{
   text-align: justify;
 }
 
-
 .tags {
   flex-wrap:  wrap;
   gap: 5px;
@@ -116,19 +113,16 @@ img.User{
 
 .tags span {
   background: #90cc89; 
-  color: #fff;
+  color: var(--white);
   padding: 4px 5px;
   border-radius: 99px;
   font-size: 0.975rem;
   padding: 15px;
-  
-
 }
 
-
 .AdoptBtn {
-  background: #44803F;
-  color: #fff;
+  background: var(--orange);
+  color: var(--white);
   font-size: 1.125rem;
   font-weight: bold;
   padding: 8px 36px;
@@ -139,7 +133,7 @@ img.User{
 }
 
 .AdoptBtn:hover {
-  background: #059669;
+  background: var(--orange-light);
 }
   
 @media (max-width: 768px) {
@@ -155,7 +149,6 @@ img.User{
     padding: 0;
     margin-top: 16px; 
   }
-
   img.Voltar {
     width: 120%;
     height: 120%;
@@ -167,40 +160,36 @@ img.User{
     width: 77%;
     position: relative;
     left: 0%;
-    }
-    .MainImage {
-      width: 100%;
-      max-width: 80%;
-      object-fit: fill;
-      height: auto;
-      overflow: hidden;
-      border-radius: 5px;
-      }
   }
+  .MainImage {
+    width: 100%;
+    max-width: 80%;
+    object-fit: fill;
+    height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+}
   
 @media (max-width: 425px) {
   .container {
     padding: 8px;
   }
-
   .Profile {
     flex-direction: column;
     gap: 16px;
   }
- 
   .ProfileImages,
   .ProfileDetails {
     width: 100%;
     padding: 0;
   }
- 
   .MainImage {
     max-width: 100%;
     height: auto;
     overflow: hidden;
     object-fit: fill;
   }
- 
   .gallery {
     left: 38px;
     width: 37%;
@@ -208,45 +197,33 @@ img.User{
     gap: 5px;
     position: relative;
   }
- 
   .GalleryImg {
     width: calc(50% - 5px);
     height: auto;
   }
-
-
   .ProfileDetails h1 {
     font-size: 1.75rem;
   }
-
   .ProfileDetails h2 {
     font-size: 1.25rem;
   }
-
   .SubmittedBy {
     font-size: 0.875rem;
   }
-
-  
   .AdoptBtn {
     font-size: 1rem;
     padding: 6px 12px;
   }
-
   .BackLink {
     margin-right: 0;
     font-size: 1rem;
   }
-
-
   img.Voltar {
     width: 15%;
     height: auto;
     position: relative;
     left: -173px;
   }
-
-
   img.User {
     left: 10px;
     position: relative;

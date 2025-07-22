@@ -7,27 +7,21 @@
 
 body{
     background-color: rgb(198, 225, 196);
-    background-image: url("../images/Patinhas.png");
+    /* background-image: url("../images/default/Patinhas.png"); */
     background-size: 50%;
     width: 100%;
     height: 100%;
 }
 
-
-
-/* Seção do Login */
 .secao-login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 77vh;
-    
 }
 
-/* Cria o fundo branco na área de login */
 .login {  
-   
-    background-color: white;
+    background-color: var(--white);
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -39,7 +33,6 @@ body{
     margin-bottom: 25px;
 }
 
-/* estrutura das   */
 .login input {
     width: 93%;
     padding: 12px;
@@ -47,7 +40,6 @@ body{
     border-radius: 8px;
     border: 1px solid #ccc;
     outline: none;
-
 }
 
 .login .esc_senha {
@@ -66,23 +58,24 @@ body{
     font-family:  Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 12px;
-    background-color: rgb( 68, 128, 63);
-    color: white;
+    background-color: var(--orange);
+    color: var(--white);
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 20px;
 }
+
 .login a {
     font-family:  Arial, Helvetica, sans-serif;
-    color: white;
+    color: var(--white);
     text-decoration: none;
     cursor: pointer;
 }
 
 .login button:hover {
     transition: .4s;
-    background-color: #386934;
+    background-color: var(--orange-light);
 }
 
 .login p {
@@ -96,11 +89,11 @@ body{
     text-decoration: none;
     font-size: 15px;
 }
+
 .login p a:hover {
     text-decoration: underline;
-
 }
-/* Botões das redes sociais */
+
 .rede-social{
     display: flex;
     align-items: center;
@@ -110,7 +103,6 @@ body{
     justify-content: center;
 }
 
-/* Botão acesso ADM */
 #acesso-adm {
     display: block;
     margin-top: 20px;
@@ -127,6 +119,7 @@ body{
 .login-adm img{
     height: 30px;
 }
+
 .login-adm span{
     color: #9B9B9B;
 }
@@ -134,8 +127,8 @@ body{
 #divSpan{
     display: flex;
     justify-content: center;
-
 }
+
 hr{
     border-color: 1px solid #386934;
     width: 50px;
@@ -145,20 +138,12 @@ hr{
     .login{
         height: auto;    
         border-radius: 0;
-        
         width: 50%;
-       
     }
 }
 
 @media (max-width: 425px){
-
-   
     .login{
-
         width: 65%;
-       
     }
-   
-
 }

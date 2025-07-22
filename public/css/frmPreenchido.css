@@ -88,7 +88,7 @@ input[type="date"] {
     color: #555;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--white);
     outline: none;
     appearance: none;
     position: relative;
@@ -134,29 +134,23 @@ input[type="date"]:valid::before {
 
 
 @media (max-width: 1024px){
-
     body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         width: 100%;
     }
-
-
     form {
         padding-left: 20px;
         padding-right: 20px;
     }
-
     .corpo {
         border-radius: 0;
         margin: 0;
     }
-
     .tracinho{
         width: 100%;
     }
-
     .botao{
         width: 180px;
         height: 50px;
@@ -166,39 +160,30 @@ input[type="date"]:valid::before {
         align-items: center;
         margin-bottom: 40px;
     }
-
-    form{
+    form {
         padding-left: 0px;
         padding-right: 0px;
     }
-
-    .redimensionar-bottom{
+    .redimensionar-bottom {
         width: 100%;
     }
-    
-    .redimensionar-top{
+    .redimensionar-top {
         width: 100%;
     }
-  
 }
 
 @media (max-width: 768px){
-
     form {
         padding-left: 10px;
         padding-right: 10px;
     }
-
-
     .corpo {
         border-radius: 0;
         margin: 0;
     }
-
     .tracinho{
         width: 100%;
     }
-
     .botao{
         width: 180px;
         height: 50px;
@@ -208,17 +193,14 @@ input[type="date"]:valid::before {
         align-items: center;
         margin-bottom: 40px;
     }
-
-    form{
+    form {
         padding-left: 0px;
         padding-right: 0px;
     }
-
-    .redimensionar-bottom{
+    .redimensionar-bottom {
         width: 100%;
     }
-    
-    .redimensionar-top{
+    .redimensionar-top {
         width: 100%;
     }
 }
@@ -229,14 +211,12 @@ input[type="date"]:valid::before {
         margin: 0;
         padding: 10px;
     }
-
     input[type="text"],
     input[type="date"],
     input[type="email"],
     input[type="checkbox"] {
         font-size: 12px;
     }
-
     h1 {
         font-size: 18px;
         margin-top: 15px;

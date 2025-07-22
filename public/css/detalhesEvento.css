@@ -109,7 +109,7 @@
 }
 
 .detalhesEvento p {
-  color: #000000;
+  color: var(--black);
   margin-top: 35px;
   margin-bottom: 50px;
   font-size: 20px;

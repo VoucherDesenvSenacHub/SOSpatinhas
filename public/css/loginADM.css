@@ -5,7 +5,7 @@
 }
 
 .login {
-    background-color: white;
+    background-color: var(--white);
     padding: 100px 40px;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -94,7 +94,6 @@
 @media (max-width: 425px) {
     .login {
         width: 90%;
-        padding: 40px 20px 40px 20px;
-        
+        padding: 40px 20px 40px 20px;  
     }
 }

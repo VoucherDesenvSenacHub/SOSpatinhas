@@ -1,6 +1,5 @@
 /* overlay padrão para encaixar o popup */
 .overlayEditar {
-    
     position: fixed;
     top: 0;
     left: 0;
@@ -12,14 +11,13 @@
 
 /* css da janela que será exibida */
 .popupEditar {
-    
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--white);
     padding: 20px;
     z-index: 1000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -59,14 +57,14 @@
 }
 
 #enviar_foto {
-    color: black; 
+    color: var(--black); 
     font-size: 16px; 
     line-height: 1.5;
     display:none;
 }
 
 #enviar_foto_pix {
-    color: black; 
+    color: var(--black); 
     font-size: 16px; 
     line-height: 1.5; 
     display:none;
@@ -83,9 +81,7 @@
     opacity: 0;
 }
 
-/* X estilizado via css */
-#btnFecharPopup
-{
+#btnFecharPopup {
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -96,6 +92,7 @@
     right: 10px;
     z-index: 1000;
 }
+
 #btnFecharPopup::before,
 #btnFecharPopup::after
 {
@@ -156,6 +153,7 @@ label {
     margin-bottom: 70px;
     display:none;
 }
+
 #price_label{
     display: none;
 }
@@ -165,7 +163,6 @@ label {
     display: none;
 }
 
-/* Caixa do input */
 #inputBoxPopup {
     width: 76%;
     padding: 10px;
@@ -182,7 +179,7 @@ label {
     font-size: 16px;
     border: 1px solid #ccc; 
     border-radius: 5px; 
-    background-color: #fff; 
+    background-color: var(--white); 
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;

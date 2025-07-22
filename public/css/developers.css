@@ -4,6 +4,7 @@
     text-decoration: none;
     font-style: none;
 }
+
 .pai{
     display: flex;
     align-items: center;
@@ -12,7 +13,6 @@
     grid-template-columns: repeat(3, 400px);
     gap: 20px;
     justify-items: center;
-    
 }
 
 .main{
@@ -43,10 +43,10 @@
         top: 16px;
         left: 80px;
     }& .title{
-        color: white;
+        color: var(--white);
         font-size: 3vh;
     }& .subTitle{
-        color: white;
+        color: var(--white);
     }& .links{
         border-radius: 30px;
         background-color: #1A6215;

@@ -1,6 +1,6 @@
 <?php
 // GET
-Route::get('/', function() { include('app/views/user/paginaInicio.php');});
+Route::get('/', function() { include('app/views/user/paginaInicial.php');});
 Route::get('/quemsomos', function() { include('app/views/compartilhada/quemSomos.php');});
 Route::get('/eventos', function() { include('app/views/user/eventos.php');});
 Route::get('/comoajudar', function() { include('app/views/compartilhada/comoAjudar.php');});

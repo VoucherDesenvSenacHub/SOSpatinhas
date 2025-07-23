@@ -10,7 +10,7 @@
   
   $cssLink  = '/sospatinhas/public/css/editarComoAjudar.css';
   $tipo = 'Adm';
-  include('app/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
   
   
 ?>
@@ -18,7 +18,7 @@
 <section class="pontoArrecadacao">
   <div class="infoDestaque">
     <div class="imgPontoArrecadacao">
-      <img src="/sospatinhas/public/images/cachorro03.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
+      <img src="/sospatinhas/public/images/default/cachorro1.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
       <div class="ruaIcone">
         <p class="endereco">
           R. do Parque, 75 - Centro, Campo Grande - MS
@@ -118,7 +118,7 @@
           -->
         </h2>
 
-        <img id="imgQrCode" src="/sospatinhas/public/images/imagem_qrcode.png" alt="QR Code para Doação">
+        <img id="imgQrCode" src="/sospatinhas/public/images/icons/Iconpix.png" alt="QR Code para Doação">
         <br><br>
         <h3 id='title_qrcode'>Sos Patinhas</h3>
         <div id="logoBb">

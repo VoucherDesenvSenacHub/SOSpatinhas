@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Inicio | SOS Patinhas</title>
-    <link rel="stylesheet" href="public/css/paginaInicial.css">
+    <link rel="stylesheet" href="/sospatinhas/public/css/paginaInicial.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="/public/images/icons/favicon.png" type="image/png">
+    <link rel="icon" href="/sospatinhas/public/images/icons/favicon.png" type="image/png">
 </head>
 <body>
-    <?php include('app/componentes/navbar.php'); ?>
+    <?php include('../../componentes/navbar.php'); ?>
 
     <section class="banner efeito-fade" id="banner">
         <div class="carrossel" id="carrossel">
             <ul class="carrossel__lista" id="listaSlides">
                 <li class="carrossel__item">
-                    <img src="public/images/default/racas.png" alt="Pets resgatados pela ONG">
+                    <img src="/sospatinhas/public/images/default/racas.png" alt="Pets resgatados pela ONG">
                     <div class="carrossel__legenda">
                         <h2>Adote um Amigo</h2>
                         <p>Animais resgatados em busca de um novo lar</p>
@@ -23,7 +23,7 @@
                     </div>
                 </li>
                 <li class="carrossel__item">
-                    <img src="public/images/default/racas.png" alt="Voluntários cuidando dos animais">
+                    <img src="/sospatinhas/public/images/default/racas.png" alt="Voluntários cuidando dos animais">
                     <div class="carrossel__legenda">
                         <h2>Seja um Voluntário</h2>
                         <p>Ajude a cuidar dos nossos animais</p>
@@ -31,7 +31,7 @@
                     </div>
                 </li>
                 <li class="carrossel__item">
-                    <img src="public/images/default/racas.png" alt="Eventos de adoção realizados pela ONG">
+                    <img src="/sospatinhas/public/images/default/racas.png" alt="Eventos de adoção realizados pela ONG">
                     <div class="carrossel__legenda">
                         <h2>Eventos de Adoção</h2>
                         <p>Participe dos nossos eventos mensais</p>
@@ -46,21 +46,21 @@
     <main>
         <section class="adocao efeito-fade" id="adopt">
             <div class="container adocao-container">
-                <img src="public/images/default/Group_230.png" alt="" class="linhas" aria-hidden="true">
-                <img src="public/images/default/Group_231.png" alt="" class="linha" aria-hidden="true">
+                <img src="/sospatinhas/public/images/default/Group_230.png" alt="" class="linhas" aria-hidden="true">
+                <img src="/sospatinhas/public/images/default/Group_231.png" alt="" class="linha" aria-hidden="true">
                 <div class="pet-info">
                     <h3 class="pet-nome" id="petName">Rumi | Macho - 2 anos</h3>
                     <div class="imagem-container">
                         <button id="pet-prev" class="seta esquerda" aria-label="Pet anterior">
-                            <img src="public/images/icons/SetaEsquerda.png" alt="" class="esquerda">
+                            <img src="/sospatinhas/public/images/icons/SetaEsquerda.png" alt="" class="esquerda">
                             <i class="fas fa-chevron-left"></i>
                         </button>
                         <div class="imagem-box">
-                            <img src="public/images/default/gato.png" alt="Gato Rumi na caixa" id="petImg" class="pet-img">
-                            <img src="public/images/default/Group.png" alt="" class="caixa" aria-hidden="true">
+                            <img src="/sospatinhas/public/images/default/gato.png" alt="Gato Rumi na caixa" id="petImg" class="pet-img">
+                            <img src="/sospatinhas/apublic/images/default/Group.png" alt="" class="caixa" aria-hidden="true">
                         </div>
                         <button id="pet-next" class="seta direita" aria-label="Próximo pet">
-                            <img src="public/images/icons/SetaCertaDireita.png" alt="" class="direita">
+                            <img src="/sospatinhas/public/images/icons/SetaCertaDireita.png" alt="" class="direita">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
@@ -105,7 +105,7 @@
                 </div>
             </div>
             <div class="cta-image">
-                <img src="public/images/default/mao.png" alt="Voluntário alimentando cães">
+                <img src="/sospatinhas/public/images/default/mao.png" alt="Voluntário alimentando cães">
                 <div class="icons">
                     <i class="fa-solid fa-paw"></i>
                     <i class="fa-solid fa-paw"></i>
@@ -120,15 +120,15 @@
                 <button class="seta1 prev1" aria-label="Evento anterior">&#x276C;</button>
                 <div class="carrossel-track2">
                     <div class="evento-card">
-                        <img src="public/images/default/evento1.png" alt="Evento 1">
+                        <img src="/sospatinhas/public/images/default/evento1.png" alt="Evento 1">
                         <p>Feira de Adoção</p>
                     </div>
                     <div class="evento-card">
-                        <img src="public/images/default/evento2.png" alt="Evento 2">
+                        <img src="/sospatinhas/public/images/default/evento2.png" alt="Evento 2">
                         <p>Feirão do Bazar + Feira do Auau</p>
                     </div>
                     <div class="evento-card">
-                        <img src="public/images/default/evento3.png" alt="Evento 3">
+                        <img src="/sospatinhas/public/images/default/evento3.png" alt="Evento 3">
                         <p>Adoção com Carinho</p>
                     </div>
                 </div>
@@ -139,9 +139,9 @@
         </section>
 
         <section class="carrossel-section">
-            <img class="pataInvertida" src="public/images/icons/iconPataVerde.png" alt="Pata Verde Invertida">
+            <img class="pataInvertida" src="/sospatinhas/public/images/icons/iconPataVerde.png" alt="Pata Verde Invertida">
             <div class="carrossel-wrap">
-                <img id="elemento1" src="public/images/default/efeitocarrossel.png" alt="Elemento Carrossel">
+                <img id="elemento1" src="/sospatinhas/public/images/default/efeitocarrossel.png" alt="Elemento Carrossel">
                 <div class="carrossel-track">
                     <img id="img1" src="" alt="Imagem 1">
                     <img id="img2" src="" alt="Imagem 2">
@@ -162,34 +162,34 @@
                 </p>
                 <a href="#" class="botao">CONTRIBUA COM A ONG</a>
             </div>
-            <img class="pataverde" src="public/images/icons/iconPataVerde1.png" alt="Pata Verde">
+            <img class="pataverde" src="/sospatinhas/public/images/icons/iconPataVerde1.png" alt="Pata Verde">
         </section>
 
         <section class="faixaMain">
             <div class="bolasCtn">
                 <div class="bolas">
-                    <img src="public/images/icons/iconBoloAniversario.png" alt="Ícone Aniversário">
+                    <img src="/sospatinhas/public/images/icons/iconBoloAniversario.png" alt="Ícone Aniversário">
                     <div class="textosBola">
                         <h3>5</h3>
                         <p>ANOS</p>
                     </div>
                 </div>
                 <div class="bolas">
-                    <img src="public/images/icons/iconMao.png" alt="Ícone Mão">
+                    <img src="/sospatinhas/public/images/icons/iconMao.png" alt="Ícone Mão">
                     <div class="textosBola">
                         <h3>+1000</h3>
                         <p>RESGATES</p>
                     </div>
                 </div>
                 <div class="bolas">
-                    <img src="public/images/icons/iconPataLaranja.png" alt="Ícone Pata Laranja">
+                    <img src="/sospatinhas/public/images/icons/iconPataLaranja.png" alt="Ícone Pata Laranja">
                     <div class="textosBola">
                         <h3>+100</h3>
                         <p>ANIMAIS</p>
                     </div>
                 </div>
                 <div class="bolas">
-                    <img src="public/images/icons/iconLocal.png" alt="Ícone Localização">
+                    <img src="/sospatinhas/public/images/icons/iconLocal.png" alt="Ícone Localização">
                     <div class="textosBola">
                         <h3>2</h3>
                         <p>ABRIGOS</p>
@@ -200,7 +200,7 @@
         </section>
     </main>
 
-    <?php include('app/componentes/footer.php'); ?>
+    <?php include('../../componentes/footer.php'); ?>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -366,7 +366,7 @@
                 function fadeTroca(img, novoSrc) {
                     img.classList.remove('mostrar');
                     setTimeout(() => {
-                        img.src = `public/images/default/${novoSrc}`;
+                        img.src = `/sospatinhas/public/images/default/${novoSrc}`;
                         img.classList.add('mostrar');
                     }, 200);
                 }

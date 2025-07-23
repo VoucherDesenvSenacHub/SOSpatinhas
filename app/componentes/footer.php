@@ -6,13 +6,13 @@
             <h2>SOS Patinhas</h2>
             <p>Ong de animais,<br>sem fins lucrativos.</p>
         </div>
-        <div class="footer-section">
+        <div class="footer-section" id="linksNavg">
             <ul>
                 <li><a href="/SOSPatinhas/">Ande pelo site :)</a></li>
-                <li><a href="adocao">Adote um pet!</a></li>
-                <li><a href="comoajudar">Doe Agora</a></li>
-                <li><a href="eventos">Eventos</a></li>
-                <li><a href="quemsomos">Quem somos</a></li>
+                <li><a href="/SOSPatinhas/adocao">Adote um pet!</a></li>
+                <li><a href="/SOSPatinhas/comoajudar">Doe Agora</a></li>
+                <li><a href="/SOSPatinhas/eventos">Eventos</a></li>
+                <li><a href="/SOSPatinhas/quemsomos">Quem somos</a></li>
             </ul>
         </div>
         <div class="footer-section">
@@ -23,12 +23,12 @@
             <div class="contact-info">@sospatinhas</div>
             <div class="contact-info">@sospatinhas</div>
         </div>
-        <div class="footer-section">
+        <!-- <div class="footer-section">
             <h3>Quero ser colaborador/patrocinador</h3>
             <a href="https://web.whatsapp.com/" class="cta-button">COLABORADOR</a>
             <h3>Quero ser voluntário(a)</h3>
             <a href="https://web.whatsapp.com/" class="cta-button">VOLUNTÁRIO</a>
-        </div>
+        </div> -->
     </div>
     <div class="footer-bottom">
         Desenvolvido por <a href="/SOSPatinhas/141">141</a> &nbsp;&nbsp;&nbsp; Copyright © 2025 SOS Patinhas
@@ -162,5 +162,52 @@ img.bandeira{
 
 .highlight {
   color: #ff6a6a;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-section ul {
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
+  .contact-info::before {
+    display: none;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+  img.bandeira {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (max-width: 425px) {
+#linksNavg{
+    display: none;
+}
+.voltar-btn {
+    left: 0rem;
 }
 </style>

@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <form action="<?= "/SOSPatinhas/adm/formulario/".htmlspecialchars($frmName)."/salvar" ?>" method="POST" enctype="multipart/form-data" id="frmCadastrarEditar">
 
-    <input type="hidden" name="ACAO" value="<?= htmlspecialchars($acao) ?>">
-    <input type="hidden" name="<?= "ID_".strtoupper(htmlspecialchars($frmName)) ?>" value="<?= htmlspecialchars($id) ?>">
+    <input type="hidden" name="ACAO" value="<?= htmlspecialchars($acao) ?>" id="acao">
+    <input type="hidden" name="<?= "ID_".strtoupper(htmlspecialchars($frmName)) ?>" value="<?= htmlspecialchars($id) ?>" id="idObj">
     
     <div class="frmContainer">
         <?php foreach ($fields as $field): ?>
@@ -88,10 +88,9 @@
     <div id="btn">
         
         <button type="submit" id="btnSalvar">Salvar</button>
-        <button type="reset" id="btnCancelar">Cancelar</button>
+        <button type="reset" id="btnCancelar"><a href='/SOSPatinhas/adm/lista/<?= htmlspecialchars(strtolower($frmName)) ?>'>Cancelar</a></button>
 
     </div>
-
 </form>
 
 <style>
@@ -108,5 +107,10 @@
         width: 14rem;
         font-size: 1.2rem;
         color: white;
+    }
+
+    #btnCancelar a{
+        color: white;
+        text-decoration: none;
     }
 </style>

@@ -1,254 +1,105 @@
-
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 16px;
-}
-
-
-.BackLink {
-  display: inline-block;
-  font-size: 1.125rem;
-  margin-bottom: 16px;
-  color: #000;
-  text-decoration: none;
-  margin-right:95% ;
-}
-
-
-img.Voltar{
-  width: 60%;
-  height: 60%;
-}
-
-.Profile {
-  flex-direction: row;
-  gap: 32px;
+.adocao-detalhes {
   display: flex;
-}
-
-.ProfileImages {
-  flex: 1;
-  width: 33.33%;
-}
-
-.MainImage {
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+  background-color: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
   width: 100%;
-  max-width: 300px;
-  margin-bottom: 16px;
-  object-fit: fill;
-  height: 320px;
-  overflow: hidden;
-  border-radius: 5px;
+  max-width: 1200px;
+  position: relative;
 }
 
-.gallery {
+.voltar-btn {
+  position: absolute;
+  left: -1rem;
+  top: var(--spacing-md);
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black);
+  transition: var(--transition-fast);
+}
+.voltar-btn:hover {
+  transform: scale(1.1);
+}
+
+.adocao-esquerda {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  text-align: center;
+}
+
+.imagem-grande img {
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  object-fit: cover;
+}
+
+.imagens-miniatura {
   display: flex;
-    gap: 10px;
-    object-fit: fill;
-    margin-left: 20%;
-    height: 12%;
-    width: 76%;
-    border-radius: 5px;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+.imagens-miniatura img {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--border-radius-sm);
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: var(--transition-fast);
+}
+.imagens-miniatura img:hover {
+  border-color: var(--orange);
 }
 
-.GalleryImg {
-  width: calc(25.33% - 2.33px);
-  object-fit: fill;
-
-}
-
-.ProfileDetails {
+.adocao-direita {
   flex: 2;
-  width: 66.66%;
-  padding-left: 32px;
+  min-width: 300px;
 }
 
-.ProfileDetails h1 {
-  font-size: 2.25rem;
+.adocao-direita h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xxl);
+  color: var(--black);
+}
+
+.adocao-direita .info {
   font-weight: bold;
-  margin-bottom: 5px;
-  display: flex;
+  margin-top: var(--spacing-xs);
+  color: var(--black);
 }
 
-.SubmittedBy {
-  color: #44803F; 
-  font-size: 1rem;
-  margin-bottom: 20px;
-  display: flex;
-}
-
-img.Icon{
-  width: 28px;
-  height: 28px;
-  margin: -2px 0px 0px 10px;
-}
-
-img.User{
-    width: 25px;
-    height: 25px;
-    position: relative;
-    left: 1%;
-}
-
-.ProfileDetails h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  display: flex;
-}
-
-.descricao{
-  margin-bottom: 36px;
+.adocao-direita .descricao {
+  margin: var(--spacing-md) 0;
+  line-height: 1.6;
+  color: var(--black);
   text-align: justify;
 }
 
-
-.tags {
-  flex-wrap:  wrap;
-  gap: 5px;
-  margin-bottom: 30px;
-  padding: 20px ;
-  display: inline-flex;
-  padding: initial;
-}
-
-.tags span {
-  background: #90cc89; 
-  color: #fff;
-  padding: 4px 5px;
-  border-radius: 99px;
-  font-size: 0.975rem;
-  padding: 15px;
-  
-
-}
-
-
-.AdoptBtn {
-  background: #44803F;
-  color: #fff;
-  font-size: 1.125rem;
+.btn-adotar {
+  background-color: var(--orange);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius-xl);
   font-weight: bold;
-  padding: 8px 36px;
-  border: none;
-  border-radius: 99px;
+  font-size: var(--font-size-md);
   cursor: pointer;
-  transition: background 0.3s;
+  transition: var(--transition-fast);
+}
+.btn-adotar:hover {
+  background-color: var(--orange-light);
 }
 
-.AdoptBtn:hover {
-  background: #059669;
+.btn-adotar a{
+  color: white;
+  text-decoration: none;
 }
-  
-@media (max-width: 768px) {
-  .Profile {
-    flex-direction: column; 
-    gap: 32px;
-  }
-  .ProfileImages {
-    width: 100%; 
-  }
-  .ProfileDetails {
-    width: 100%;
-    padding: 0;
-    margin-top: 16px; 
-  }
 
-  img.Voltar {
-    width: 120%;
-    height: 120%;
-  }
-  .gallery {
-    display: flex;
-    gap: 10px;
-    object-fit: fill;
-    width: 77%;
-    position: relative;
-    left: 0%;
-    }
-    .MainImage {
-      width: 100%;
-      max-width: 80%;
-      object-fit: fill;
-      height: auto;
-      overflow: hidden;
-      border-radius: 5px;
-      }
-  }
-  
-@media (max-width: 425px) {
-  .container {
-    padding: 8px;
-  }
-
-  .Profile {
-    flex-direction: column;
-    gap: 16px;
-  }
- 
-  .ProfileImages,
-  .ProfileDetails {
-    width: 100%;
-    padding: 0;
-  }
- 
-  .MainImage {
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-    object-fit: fill;
-  }
- 
-  .gallery {
-    left: 38px;
-    width: 37%;
-    height: auto;
-    gap: 5px;
-    position: relative;
-  }
- 
-  .GalleryImg {
-    width: calc(50% - 5px);
-    height: auto;
-  }
-
-
-  .ProfileDetails h1 {
-    font-size: 1.75rem;
-  }
-
-  .ProfileDetails h2 {
-    font-size: 1.25rem;
-  }
-
-  .SubmittedBy {
-    font-size: 0.875rem;
-  }
-
-  
-  .AdoptBtn {
-    font-size: 1rem;
-    padding: 6px 12px;
-  }
-
-  .BackLink {
-    margin-right: 0;
-    font-size: 1rem;
-  }
-
-
-  img.Voltar {
-    width: 15%;
-    height: auto;
-    position: relative;
-    left: -173px;
-  }
-
-
-  img.User {
-    left: 10px;
-    position: relative;
-  }
+.voltar-btn a{
+  text-decoration: none;
+  color: black;
 }

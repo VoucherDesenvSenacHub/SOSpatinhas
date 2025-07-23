@@ -1,10 +1,9 @@
 CREATE DATABASE SOS_PATINHAS;
 USE SOS_PATINHAS;
 
-
-CREATE TABLE TAG (
-    ID_TAG INT PRIMARY KEY AUTO_INCREMENT,
-    DS_TAG VARCHAR(100)
+CREATE TABLE TIPO_OBJ (
+    ID_TIPO_OBJ INT PRIMARY KEY AUTO_INCREMENT,
+    DS_TIPO_OBJ VARCHAR(15)
 );
 
 CREATE TABLE ANIMAL (
@@ -18,31 +17,12 @@ CREATE TABLE ANIMAL (
     SEXO VARCHAR(5)
 );
 
-CREATE TABLE TAG_ANIMAL (
-    ID_TAG INT,
-    ID_ANIMAL INT,
-    FOREIGN KEY (ID_ANIMAL) REFERENCES ANIMAL(ID_ANIMAL),
-    FOREIGN KEY (ID_TAG) REFERENCES TAG(ID_TAG)
-);
-
 CREATE TABLE FOTO (
     ID_FOTO INT PRIMARY KEY AUTO_INCREMENT,
-    ID_TABELA INT,
-    NM_TABELA VARCHAR(100), 
-    CAMINHO_FOTO VARCHAR(100)
-);
-
-CREATE TABLE ARRECADACAO (
-    ID_ARRECADACAO INT PRIMARY KEY AUTO_INCREMENT,
-    TITULO VARCHAR(100),
-    NOME_ANIMAL VARCHAR(100),
-    DESCRICAO VARCHAR(100),
-    VL_ARRECADACAO INT,
-    VL_ARRECADADO INT,
-    NM_CONTA VARCHAR(100),
-    NU_CONTA INT,
-    NU_AGENCIA INT,
-    QR_CODE VARCHAR(100)
+    ID_OBJ INT,
+    ID_TIPO_OBJ INT, 
+    CAMINHO_FOTO VARCHAR(100),
+    FOREIGN KEY (ID_TIPO_OBJ) REFERENCES TIPO_OBJ(ID_TIPO_OBJ)
 );
 
 CREATE TABLE EVENTO (
@@ -62,53 +42,6 @@ CREATE TABLE ADM (
     SENHA VARCHAR(255)
 );
 
-CREATE TABLE PERMISSAO (
-    ID_PERMISSAO INT PRIMARY KEY AUTO_INCREMENT,
-    PAGINA VARCHAR(100)
-);
-
-CREATE TABLE PERMISSAO_ADM (
-    ID_PERMISSAO_ADM INT PRIMARY KEY AUTO_INCREMENT,
-    ID_ADM INT,
-    ID_PERMISSAO INT,
-    FG_ACESSO BOOLEAN,
-    FOREIGN KEY (ID_ADM) REFERENCES ADM(ID_ADM),
-    FOREIGN KEY (ID_PERMISSAO) REFERENCES PERMISSAO(ID_PERMISSAO)
-);
-
-CREATE TABLE PARTE_EDITAVEL (
-    ID_PARTE_EDITAVEL VARCHAR(100),
-    INPUT_SIMPLES VARCHAR(100),
-    TEXTAREA VARCHAR(100),
-    CAMINHO_IMAGEM VARCHAR(100)
-);
-
-CREATE TABLE FORMULARIO_PERGUNTA (
-    ID_FORMULARIO_PERGUNTA INT PRIMARY KEY AUTO_INCREMENT,
-    DS_FORMULARIO_PERGUNTA VARCHAR(100)
-);
-
-CREATE TABLE FORMULARIO_PERGUNTA_RESPOSTA (
-    ID_FORMULARIO_RESPOSTA INT PRIMARY KEY AUTO_INCREMENT,
-    ID_FORMULARIO_PERGUNTA INT,
-    DS_FORMULARIO_RESPOSTA VARCHAR(100),
-    FOREIGN KEY (ID_FORMULARIO_PERGUNTA) REFERENCES FORMULARIO_PERGUNTA(ID_FORMULARIO_PERGUNTA)
-);
-
-CREATE TABLE FORMULARIO_RELATORIO (
-    ID_FORMULARIO_RELATORIO INT PRIMARY KEY AUTO_INCREMENT,
-    ID_ANIMAL INT,
-    ID_FORMULARIO_PERGUNTA_RESPOSTA INT,
-    CIDADE VARCHAR(100),
-    ESTADO VARCHAR(100),
-    RUA VARCHAR(100),
-    NU_RUA INT,
-    BAIRRO VARCHAR(100),
-    COMPLEMENTO VARCHAR(100),
-    FOREIGN KEY (ID_ANIMAL) REFERENCES ANIMAL(ID_ANIMAL),
-    FOREIGN KEY (ID_FORMULARIO_PERGUNTA_RESPOSTA) REFERENCES FORMULARIO_PERGUNTA_RESPOSTA(ID_FORMULARIO_RESPOSTA)
-);
-
 CREATE TABLE FORMULARIO_CRIAR_EDITAR(
     ID_FORMULARIO_CRIAR_EDITAR INT PRIMARY KEY AUTO_INCREMENT,
     ID_FORM VARCHAR(100),
@@ -123,6 +56,11 @@ CREATE TABLE FORMULARIO_CRIAR_EDITAR(
 
 
 --- INSERTS 33
+INSERT INTO ADM (NOME, EMAIL, TELEFONE, SENHA) VALUES ('141', '141@gmail.com', '(99) 99999-9999', '$2y$10$xWoIFjBbTmnV5SWId.6bLugZSdzWWVqYy33ke0O41i7JDWOb1UW9i');
+
+INSERT INTO TIPO_OBJ (DS_TIPO_OBJ) VALUES ('Animal'), ('Evento'), ('Adm');
+
+
 INSERT INTO FORMULARIO_CRIAR_EDITAR(ID_FORM, NAME_FIELD, LABEL, TIPO, OBRIGATORIO, OPTIONS_SELECT, MASCARA, ORDEM) VALUES 
 ('Animal', 'NOME', 'Nome:', 'text', true, null, null, 1),
 ('Animal', 'TIPO_ANIMAL', 'Tipo Animal:', 'text', true, null, null, 2),
@@ -131,22 +69,15 @@ INSERT INTO FORMULARIO_CRIAR_EDITAR(ID_FORM, NAME_FIELD, LABEL, TIPO, OBRIGATORI
 ('Animal', 'IDADE', 'Idade:', 'select', true, '-1 ano,Até 5 anos,Até 10 anos,+10 anos', null, 5),
 ('Animal', 'DESCRICAO', 'Descrição:', 'textarea', true, null, null, 6),
 ('Animal', 'SEXO', 'Sexo:', 'select', true, 'Fêmea,Macho', null, 7),
-('Animal', 'CAMINHO_FOTO', null, 'imgUpload', true, null, null, 8),
-('Arrecadacao', 'TITULO', 'Título:', 'text', true, null, null, 1),
-('Arrecadacao', 'NOME_ANIMAL', 'Nome do Animal:', 'text', true, null, null, 2),
-('Arrecadacao', 'DESCRICAO', 'Descrição:', 'textarea', true, null, null, 3),
-('Arrecadacao', 'VL_ARRECADACAO', 'Valor da Arrecadação:', 'text', true, null, 'money()', 4),
-('Arrecadacao', 'VL_ARRECADADO', 'Valor da Arrecadado:', 'text', true, null, 'money()', 5),
-('Arrecadacao', 'NM_CONTA', 'Nome da Conta:', 'text', true, null, null, 6),
-('Arrecadacao', 'NU_CONTA', 'Número da Conta:', 'text', true, null, 'number()', 7),
-('Arrecadacao', 'NU_AGENCIA', 'Número da Agéncia:', 'text', true, null, 'number()', 8),
-('Arrecadacao', 'QR_CODE', null, 'QRCode', true, null, null, 9),
-('Arrecadacao', 'CAMINHO_FOTO', null, 'imgUpload', true, null, null, 10),
+-- ('Animal', 'CAMINHO_FOTO', null, 'imgUpload', true, null, null, 8),
+
 ('Evento', 'TITULO', 'Título:', 'text', true, null, null, 1),
 ('Evento', 'DESCRICAO', 'Descrição:', 'textarea', true, null, null, 2),
 ('Evento', 'CIDADE', 'Cidade:', 'text', true, null, null, 3),
 ('Evento', 'ESTADO', 'Estado:', 'text', true, null, null, 4),
 ('Evento', 'LOCAL_EVENTO', 'Local do Evento:', 'text', true, null, null, 5),
+-- ('Evento', 'CAMINHO_FOTO', null, 'imgUpload', true, null, null, 8),
+
 ('Adm', 'NOME', 'Nome:', 'text', true, null, null, 1),
 ('Adm', 'EMAIL', 'Email:', 'text', true, null, null, 2),
 ('Adm', 'TELEFONE', 'Telefone:', 'text', true, null, null, 3),
@@ -225,14 +156,223 @@ INSERT INTO EVENTO (TITULO, DESCRICAO, CIDADE, ESTADO, LOCAL_EVENTO) VALUES
 ('Pet Folia', 'Carnaval pet com concurso de fantasias, trio elétrico e barracas temáticas. Diversão garantida para todos!', 'Olinda', 'PE', 'Praça do Carmo');
 
 
-INSERT INTO ADM (NOME, EMAIL, TELEFONE, SENHA) VALUES
-('Carla Mendes', 'carla.mendes@site.com', '(11) 98888-1234', '12345'),
-('João Pedro Ramos', 'joao.ramos@site.com', '(21) 97777-2345', '12345'),
-('Fernanda Oliveira', 'fernanda.oliveira@site.com', '(31) 96666-3456', '12345'),
-('Lucas Carvalho', 'lucas.carvalho@site.com', '(41) 95555-4567', '12345'),
-('Mariana Lima', 'mariana.lima@site.com', '(51) 94444-5678', '12345'),
-('Rafael Souza', 'rafael.souza@site.com', '(61) 93333-6789', '12345'),
-('Aline Costa', 'aline.costa@site.com', '(71) 92222-7890', '12345'),
-('Thiago Martins', 'thiago.martins@site.com', '(81) 91111-8901', '12345'),
-('Bruna Rocha', 'bruna.rocha@site.com', '(91) 90000-9012', '12345'),
-('Eduardo Pires', 'eduardo.pires@site.com', '(85) 98800-1122', '12345');
+
+-- PROCS
+DELIMITER $$
+
+CREATE PROCEDURE `CRUD_ANIMAL`(IN jsonData JSON)
+BEGIN
+    DECLARE _ACAO CHAR;
+    DECLARE _ID_ANIMAL INT;
+    DECLARE _NOME VARCHAR(50);
+    DECLARE _TIPO_ANIMAL VARCHAR(30);
+    DECLARE _RACA VARCHAR(100);
+    DECLARE _PORTE VARCHAR(7);
+    DECLARE _IDADE VARCHAR(11);
+    DECLARE _DESCRICAO TEXT;
+    DECLARE _SEXO VARCHAR(5);
+
+    DECLARE _CODIGO_ERRO INT;
+    DECLARE _ERRO_MSG VARCHAR(255);
+
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS CONDITION 1
+            _CODIGO_ERRO = MYSQL_ERRNO, _ERRO_MSG = MESSAGE_TEXT;
+        SET _ERRO_MSG = CONCAT('Erro na linha: ', _CODIGO_ERRO, ' Mensagem: ', _ERRO_MSG);
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = _ERRO_MSG;
+    END;
+
+    SET _ACAO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.ACAO'));
+    SET _ID_ANIMAL = CAST(JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.ID_ANIMAL')) AS UNSIGNED);
+    SET _NOME = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.NOME'));
+    SET _TIPO_ANIMAL = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.TIPO_ANIMAL'));
+    SET _RACA = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.RACA'));
+    SET _PORTE = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.PORTE'));
+    SET _IDADE = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.IDADE'));
+    SET _DESCRICAO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.DESCRICAO'));
+    SET _SEXO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.SEXO'));
+
+    IF _ACAO = 'C' THEN
+        INSERT INTO ANIMAL(NOME, TIPO_ANIMAL, RACA, PORTE, IDADE, DESCRICAO, SEXO)
+        VALUES(_NOME, _TIPO_ANIMAL, _RACA, _PORTE, _IDADE, _DESCRICAO, _SEXO);
+
+    ELSEIF _ACAO = 'U' THEN
+        UPDATE ANIMAL SET 
+            NOME = _NOME,
+            TIPO_ANIMAL = _TIPO_ANIMAL,
+            RACA = _RACA,
+            PORTE = _PORTE,
+            IDADE = _IDADE,
+            DESCRICAO = _DESCRICAO,
+            SEXO = _SEXO
+        WHERE ID_ANIMAL = _ID_ANIMAL;
+
+    ELSEIF _ACAO = 'D' THEN
+        DELETE FROM ANIMAL 
+        WHERE ID_ANIMAL = _ID_ANIMAL;
+
+    ELSEIF _ACAO = 'R' THEN
+        SELECT * 
+        FROM ANIMAL 
+        WHERE 1 = 1 
+            AND (_ID_ANIMAL IS NULL OR ID_ANIMAL = _ID_ANIMAL);
+
+    ELSEIF _ACAO = 'G' THEN
+        CREATE TEMPORARY TABLE GRID_COLUNA(
+            ID_COL VARCHAR(100),
+            NM_COL VARCHAR(100)
+        );
+
+        INSERT INTO GRID_COLUNA(ID_COL, NM_COL)
+        VALUES  ('NOME', 'Nome'),
+                ('TIPO_ANIMAL', 'Tipo Animal'),
+                ('RACA', 'Raça'),
+                ('PORTE', 'Porte'),
+                ('IDADE', 'Idade'),
+                ('DESCRICAO', 'Descrição'),
+                ('SEXO', 'Sexo');
+
+        SELECT * FROM GRID_COLUNA;
+    END IF;
+END$$
+
+
+CREATE PROCEDURE `CRUD_EVENTO`(IN jsonData JSON)
+BEGIN 
+    DECLARE _ACAO CHAR;
+    DECLARE _ID_EVENTO INT;
+    DECLARE _TITULO VARCHAR(100);
+    DECLARE _DESCRICAO TEXT;
+    DECLARE _CIDADE VARCHAR(50);
+    DECLARE _ESTADO VARCHAR(2);
+    DECLARE _LOCAL_EVENTO VARCHAR(100);
+
+    DECLARE _CODIGO_ERRO INT;
+    DECLARE _ERRO_MSG VARCHAR(255);
+
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS CONDITION 1
+            _CODIGO_ERRO = MYSQL_ERRNO, _ERRO_MSG = MESSAGE_TEXT;
+
+        SET _ERRO_MSG = CONCAT('Erro na linha: ', _CODIGO_ERRO, ' Mensagem: ', _ERRO_MSG);
+
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = _ERRO_MSG;
+    END;
+
+    SET _ACAO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.ACAO'));
+    SET _ID_EVENTO = CAST(JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.ID_EVENTO')) AS UNSIGNED);
+    SET _TITULO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.TITULO'));
+    SET _DESCRICAO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.DESCRICAO'));
+    SET _CIDADE = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.CIDADE'));
+    SET _ESTADO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.ESTADO'));
+    SET _LOCAL_EVENTO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.LOCAL_EVENTO'));
+
+    IF _ACAO = 'C' THEN
+        INSERT INTO EVENTO(TITULO, DESCRICAO, CIDADE, ESTADO, LOCAL_EVENTO)
+        VALUES (_TITULO, _DESCRICAO, _CIDADE, _ESTADO, _LOCAL_EVENTO);
+
+    ELSEIF _ACAO = 'U' THEN 
+        UPDATE EVENTO SET 
+            TITULO = _TITULO,
+            DESCRICAO = _DESCRICAO,
+            CIDADE = _CIDADE,
+            ESTADO = _ESTADO,
+            LOCAL_EVENTO = _LOCAL_EVENTO
+        WHERE ID_EVENTO = _ID_EVENTO;
+
+    ELSEIF _ACAO = 'D' THEN
+        DELETE FROM EVENTO 
+        WHERE ID_EVENTO = _ID_EVENTO;
+
+    ELSEIF _ACAO = 'R' THEN
+        SELECT * FROM EVENTO 
+        WHERE 1 = 1 
+            AND (_ID_EVENTO IS NULL OR ID_EVENTO = _ID_EVENTO);
+
+    ELSEIF _ACAO = 'G' THEN
+        CREATE TEMPORARY TABLE GRID_COLUNA(
+            ID_COL VARCHAR(100),
+            NM_COL VARCHAR(100)
+        );
+
+        INSERT INTO GRID_COLUNA(ID_COL, NM_COL)
+        VALUES  ('TITULO', 'Titulo'),
+                ('DESCRICAO', 'Descrição'),
+                ('CIDADE', 'Cidade'),
+                ('ESTADO', 'Estado'),
+                ('LOCAL_EVENTO', 'Local do Evento');
+
+        SELECT * FROM GRID_COLUNA;
+    END IF;
+END$$
+
+
+CREATE PROCEDURE `CRUD_ADM`(IN jsonData JSON)
+BEGIN
+    DECLARE _ACAO CHAR(1);
+    DECLARE _ID_ADM INT;
+    DECLARE _NOME VARCHAR(50);
+    DECLARE _EMAIL VARCHAR(254);
+    DECLARE _TELEFONE VARCHAR(20);
+    DECLARE _SENHA VARCHAR(255);
+
+    DECLARE _CODIGO_ERRO INT;
+    DECLARE _ERRO_MSG VARCHAR(255);
+
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS CONDITION 1
+            _CODIGO_ERRO = MYSQL_ERRNO, _ERRO_MSG = MESSAGE_TEXT;
+
+        SET _ERRO_MSG = CONCAT('Erro na linha: ', _CODIGO_ERRO, ' Mensagem: ', _ERRO_MSG);
+
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = _ERRO_MSG;
+    END;
+
+    SET _ACAO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.ACAO'));
+    SET _ID_ADM = CAST(JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.ID_ADM')) AS UNSIGNED);
+    SET _NOME = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.NOME'));
+    SET _EMAIL = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.EMAIL'));
+    SET _TELEFONE = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.TELEFONE'));
+    SET _SENHA = JSON_UNQUOTE(JSON_EXTRACT(jsonData, '$.SENHA'));
+
+    IF _ACAO = 'C' THEN 
+        INSERT INTO ADM(NOME, EMAIL, TELEFONE, SENHA)
+        VALUES(_NOME, _EMAIL, _TELEFONE, _SENHA);
+
+    ELSEIF _ACAO = 'U' THEN
+        UPDATE ADM SET 
+            NOME = _NOME,
+            EMAIL = _EMAIL,
+            TELEFONE = _TELEFONE,
+            SENHA = _SENHA
+        WHERE ID_ADM = _ID_ADM;
+
+    ELSEIF _ACAO = 'D' THEN
+        DELETE FROM ADM 
+        WHERE ID_ADM = _ID_ADM;
+
+    ELSEIF _ACAO = 'R' THEN
+        SELECT * FROM ADM 
+        WHERE 1 = 1
+        AND (_ID_ADM IS NULL OR ID_ADM = _ID_ADM)
+        AND (_EMAIL IS NULL OR EMAIL = _EMAIL);
+
+    ELSEIF _ACAO = 'G' THEN
+        CREATE TEMPORARY TABLE GRID_COLUNA(
+            ID_COL VARCHAR(100),
+            NM_COL VARCHAR(100)
+        );
+
+        INSERT INTO GRID_COLUNA(ID_COL, NM_COL)
+        VALUES  ('NOME', 'Nome'),
+                ('EMAIL', 'Email'),
+                ('TELEFONE', 'Telefone');
+
+        SELECT * FROM GRID_COLUNA;
+    END IF;
+END$$
+
+DELIMITER ;

@@ -10,10 +10,10 @@
         <nav aria-label="Menu Principal">
             <ul class="menu" id="mainMenu">
                 <li><a href="/SOSPatinhas/">Home</a></li>
-                <li><a href="adocao">Adote um Pet</a></li>
-                <li><a href="comoajudar">Doe Agora</a></li>
-                <li><a href="eventos">Eventos</a></li>
-                <li><a href="quemsomos">Sobre Nós</a></li>
+                <li><a href="/SOSPatinhas/adocao">Adote um Pet</a></li>
+                <li><a href="/SOSPatinhas/comoajudar">Doe Agora</a></li>
+                <li><a href="/SOSPatinhas/eventos">Eventos</a></li>
+                <li><a href="/SOSPatinhas/quemsomos">Sobre Nós</a></li>
                 <!-- <li class="social-icons">
                     <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                     <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -94,4 +94,44 @@
 .social-icons a:hover {
   transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--blue);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-md);
+    display: none;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navbar-container {
+    position: relative;
+  }
+}
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("mainMenu");
+
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("show");
+    });
+  });
+</script>

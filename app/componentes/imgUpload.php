@@ -78,6 +78,41 @@
         }
         // || (window.innerWidth <= 1024 && window.innerWidth > 768)
     }
+
+    // function pegaCaminhoFt()
+    // {
+    //     if(document.getElementById('acao').value != 'U'){
+    //         return;
+    //     }
+
+
+    //     const formData =
+    //     {
+    //         idObg: document.getElementById('idObj').value,
+    //         idTipoObj: novoInput
+    //     };
+        
+    //     const jsonData = JSON.stringify(formData);
+
+    //     fetch('foto/pegaFt',
+    //     {
+    //         method: 'POST',
+    //         headers:
+    //         {
+    //         'Content-Type': 'application/json',
+    //         },
+    //         body: jsonData
+    //     })
+    //     .then(response => response.json())
+    //     .then(data =>
+    //     {
+    //     console.log('Success:', data);
+    //     })
+    //     .catch((error) =>
+    //     {
+    //     console.error('Error:', error);
+    //     });
+    // };
 </script>
 
 <style>

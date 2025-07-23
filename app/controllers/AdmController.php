@@ -22,9 +22,13 @@ class AdmController {
             // } catch (Exception $e) {
             //     setModal('erro', 'Erro encontrado!', $e->getMessage());
             // }
+            // if($email === '141' && $senha === '12345'){
+            //     header("Location: lista/Animal");
+            //     exit();
+            // }
 
             if ($resultado) {
-                if ($resultado[0]['EMAIL'] === $email && $resultado[0]['SENHA'] === $senha) {
+                if ($resultado[0]['EMAIL'] === $email && password_verify($senha, $resultado[0]['SENHA'])) {
                     $_SESSION['idAdm'] = $resultado['ID_ADM'];
                     $_SESSION['taLogado'] = true;
                     header("Location: lista/Animal");

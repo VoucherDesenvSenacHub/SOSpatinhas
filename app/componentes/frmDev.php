@@ -93,3 +93,20 @@
     </div>
 
 </form>
+
+<style>
+    #btn{
+        margin-top: 5rem;
+    }
+
+    #btnSalvar, #btnCancelar{
+        border-radius: 12px;
+        background-color: var(--orange);
+        cursor: pointer;
+        font-weight: 600;
+        height: 3.5rem;
+        width: 14rem;
+        font-size: 1.2rem;
+        color: white;
+    }
+</style>

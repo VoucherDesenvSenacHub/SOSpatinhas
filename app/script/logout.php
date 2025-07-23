@@ -4,6 +4,6 @@ session_unset();
 session_destroy(); 
 
 
-header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/login");
+header("Location: /SOSPatinhas/adm/login");
 exit();
 ?>

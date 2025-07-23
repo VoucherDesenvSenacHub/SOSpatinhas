@@ -2,7 +2,7 @@
     <div class="footer-content">
         <div class="footer-section logo-section">
             <div class="logo"></div>
-            <img src="public/images/icons/bandeira.png" alt="" class="bandeira">
+            <img src="/sospatinhas/public/images/icons/bandeira.png" alt="" class="bandeira">
             <h2>SOS Patinhas</h2>
             <p>Ong de animais,<br>sem fins lucrativos.</p>
         </div>
@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        Desenvolvido por <a href="141">141</a> &nbsp;&nbsp;&nbsp; Copyright © 2025 SOS Patinhas
+        Desenvolvido por <a href="/SOSPatinhas/141">141</a> &nbsp;&nbsp;&nbsp; Copyright © 2025 SOS Patinhas
     </div>
 </footer>
 

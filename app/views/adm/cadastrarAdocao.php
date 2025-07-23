@@ -1,5 +1,5 @@
 <?php
-    $cssLink  = '/sospatinhas/public/css/cadastrarAdocao.css';
+    $cssLink  = '/SOSpatinhas/public/css/cadastrarAdocao.css';
     $tipo = 'Adm';
     include('app/componentes/default/topHTML.php');
 

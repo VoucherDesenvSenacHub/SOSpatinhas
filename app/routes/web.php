@@ -23,7 +23,7 @@ Route::get('/adm/lista/{obj}', function($obj) { include('app/views/adm/lista.php
 Route::get('/teste', function() { include('app/views/teste.php');});
 
 // POST ['PermissaoMiddleware', 'AuthMiddleware']
-Route::post('/adm/login', 'AdmController@login', ['AuthMiddleware']);
+Route::post('/adm/login', 'AdmController@login');
 // Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@CRUD');
 Route::post('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'AnimalController@CRUD');
 Route::post('/adm/formulario/{obj}/salvar', 'CriarEditarController@CRUD', ['AuthMiddleware']);

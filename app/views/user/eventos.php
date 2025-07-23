@@ -1,6 +1,6 @@
 <?php
   $cssLink  = '/sospatinhas/public/css/eventos.css';
-  include('app/componentes/default/topHTML.php');
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <section class="content">
@@ -27,7 +27,7 @@
         <h1 class="titulo">Eventos</h1>
         <div id="eventosCarrosel">
             <?php
-            require_once('app/models/EventoModel.php');
+            require_once('../../models/EventoModel.php');
             $eventoModel = new EventoModel();
 
             $acao = ['ACAO' => "R"];

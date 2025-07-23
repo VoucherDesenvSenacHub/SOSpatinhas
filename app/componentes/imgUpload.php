@@ -1,5 +1,6 @@
 <div class="uploadContainer">
     <div class="imgContainer">
+        <input type="hidden" name="CAMINHO_FOTO" id="CAMINHO_FOTO">
         <input type="file" id="image" name="image[]" accept="image/*" multiple hidden>
         <label for="image" id="imgLabel" class="upload-box">
             <img src="../../public/images/cadastroAdocao-ADM/grampoBranco.png" alt="Upload Icon">
@@ -76,6 +77,8 @@
                 name.style.maxWidth = ""; 
             });
         }
+
+        document.getElementById('CAMINHO_FOTO').value = JSON.stringify(selectedFiles);
         // || (window.innerWidth <= 1024 && window.innerWidth > 768)
     }
 </script>

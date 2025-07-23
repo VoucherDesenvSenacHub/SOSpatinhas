@@ -15,7 +15,7 @@
 </head>
 <body>
 <?php 
-    $isAdm ? include('app/componentes/sidebarAdm.php') : include('app/componentes/navbar.php');
+    $isAdm ? include('app/componentes/sidebarAdm.php') : include(__DIR__ . '/../navbar.php');
 ?>
     
 

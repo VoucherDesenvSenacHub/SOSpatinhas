@@ -1,5 +1,5 @@
 <div class="parceirosCard">
-    <img src="/sospatinhas/public/images/Cão.png" alt="Imagem dos nossos parceiros">
+    <img src="/sospatinhas/public/images/default/Cão.png" alt="Imagem dos nossos parceiros">
 </div>
 
 <style>

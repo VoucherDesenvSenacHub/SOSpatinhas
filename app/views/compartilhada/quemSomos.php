@@ -7,7 +7,7 @@
 <section class="carroseis">
   <div class="carouselEquipe">
     <div class="imagemEquipe">
-      <img src="/sospatinhas/public/images/grupo.png" alt="Imagem da nossa equipe completa">
+      <img src="/sospatinhas/public/images/default/grupo.png" alt="Imagem da nossa equipe completa">
     </div>
       <h1 class="titulo">Nossa Equipe</h1>
       <div id="carouselEquipe">

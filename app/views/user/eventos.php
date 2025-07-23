@@ -1,6 +1,6 @@
 <?php
-  $cssLink  = 'public/css/eventos.css';
-  include('app/componentes/default/topHTML.php');
+  $cssLink  = '/sospatinhas/public/css/eventos.css';
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <section class="content">
@@ -27,13 +27,20 @@
         <h1 class="titulo">Eventos</h1>
         <div id="eventosCarrosel">
             <?php
-            $cardComponents2 = array();
+            require_once('../../models/EventoModel.php');
+            $eventoModel = new EventoModel();
 
-            for ($i = 0; $i < 5; $i++) {
-                ob_start(); 
-                include('app/componentes/eventosCard.php');
-                $cardComponents2[] = ob_get_clean();
+            $acao = ['ACAO' => "R"];
+            $jsonData = json_encode($acao);
+            $resultado = $eventoModel->CRUD($jsonData);
+
+            $cardComponents2 = array();
+            foreach ($resultado as $evento) {
+            ob_start();
+            include('app/componentes/eventosCard.php');
+            $cardComponents2[] = ob_get_clean();
             }
+            
     
             $cardComponents = $cardComponents2;
             $carouselId = 'carousel2';

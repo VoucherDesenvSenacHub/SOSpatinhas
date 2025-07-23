@@ -1,5 +1,5 @@
 <?php
-    $cssLink  = '../../public/css/editarPerfilUsuario.css';
+    $cssLink  = '/sospatinhas/public/css/editarPerfilUsuario.css';
     $tipo = 'User';
     include('../../componentes/default/topHTML.php');
 ?>
@@ -9,7 +9,7 @@
         <div class="col">
             <div class="upload-container">
                 <div id="filePreview">
-                    <img src="../../public/images/userProfile.png" alt="" id="previewImg">
+                    <img src="/sospatinhas/public/images/icons/profile-user.png" alt="" id="previewImg">
                 </div>
                 <div id="imgUpload">
                     <input type="file" id="image" name="image[]" accept="image/*" hidden>

@@ -1,7 +1,7 @@
 <?php
-    $cssLink  = '../../public/css/developers.css';
+    $cssLink  = '/sospatinhas/public/css/developers.css';
     $tipo = 'User';
-    include('../../componentes/default/topHTML.php');
+    include('app/componentes/default/topHTML.php');
 ?>
 <body>
     <section class="pai">

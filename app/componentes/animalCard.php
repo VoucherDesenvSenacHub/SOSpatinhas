@@ -1,6 +1,6 @@
 <div class="card-animal">
     <div class="front-card">
-        <img src="public/images/default/semfoto.png" alt="">
+        <img src="/sospatinhas/public/images/default/semfoto.png" alt="">
         <div class="titulo">
             <h1 class="nome">
                 <?= !empty($animal['NOME']) ? htmlspecialchars($animal['NOME']) : 'Nome não disponível' ?>

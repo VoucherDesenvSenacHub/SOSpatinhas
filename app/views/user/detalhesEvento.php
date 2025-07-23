@@ -1,13 +1,13 @@
 <?php
-  $cssLink  = 'public/css/detalhesEvento.css';
-  include('app/componentes/default/topHTML.php');
+  $cssLink  = '/sospatinhas/public/css/detalhesEvento.css';
+  include('../../componentes/default/topHTML.php');
 ?>
 
 <section class="conteudo">
   <div class="imgEDetalhesEvento">
     <div class="slider">
       <div class="slideFade">
-        <img class= "eventoSlides" src="public/images/default/semfoto.png" alt="Horto Florestal 1">
+        <img class= "eventoSlides" src="/sospatinhas/public/images/default/semfoto.png" alt="Horto Florestal 1">
       </div>
 
       <div class="btnSlide">
@@ -17,19 +17,25 @@
       </div>
 
       <div class="localEvento">
-        <img src="public/images/default/semfoto.png" alt="Icone de local">
-        <p>Campo Grande MS, Horto Florestal</p>
+        <img src="/sospatinhas/public/images/default/semfoto.png" alt="Icone de local">
+        <p>
+          <?= $evento[0]["CIDADE"].' '. $evento[0]["ESTADO"].', '. $evento[0]["LOCAL_EVENTO"]; ?>
+        </p>
       </div>
     </div>
 
     <div class="detalhesEvento">
-      <h1>Feira do Auau</h1>
-      <p>Feira arrecadativa de moda no Horto Florestal, venha comprar roupas para você ou para seu pet! Todos os lucros da feira serão direcionados ao SOS Patinhas.</p>
+      <h1>
+        <?= $evento[0]["TITULO"]?>
+      </h1>
+      <p>
+        <?= $evento[0]["DESCRICAO"]?>
+      </p>
       <div class="buttonComponente">
         <?php
           $funcaoClick = "compartilhar()";
           $titulo = "Compartilhar";
-          include('app/componentes/componenteButton.php');
+          include('../../componentes/componenteButton.php');
         ?>
       </div>
     </div>
@@ -40,15 +46,16 @@
     <div id="eventosCarrosel">
       <?php
       $cardComponents2 = array();
-      for ($i = 0; $i < 5; $i++) {
-          ob_start(); 
-          include('app/componentes/eventosCard.php');
-          $cardComponents2[] = ob_get_clean();
+      
+      foreach ($resultado as $evento) {
+        ob_start();
+        include('../../componentes/eventosCard.php');
+        $cardComponents2[] = ob_get_clean();
       }
 
       $cardComponents = $cardComponents2;
       $carouselId = 'carousel2';
-      include('app/componentes/carossel.php');
+      include('../../componentes/carossel.php');
       ?>
     </div>
   </div>
@@ -79,4 +86,4 @@
   }
 </script>
 
-<?php include('app/componentes/default/bottomHTML.php'); ?>
+<?php include('../../componentes/default/bottomHTML.php'); ?>

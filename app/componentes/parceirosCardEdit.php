@@ -1,6 +1,6 @@
 <div class="parceirosCard">
-    <img src="../images/icons/iconEditar.png" alt="" class="btn-card-parceiro">
-    <img src="../images/Cão.png" alt="Imagem dos nossos parceiros">
+    <img src="/sospatinhas/public/images/icons/iconEditar.png" alt="" class="btn-card-parceiro">
+    <img src="/sospatinhas/public/images/Cão.png" alt="Imagem dos nossos parceiros">
 </div>
 
 <style>

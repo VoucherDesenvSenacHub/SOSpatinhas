@@ -1,11 +1,11 @@
-<div class="eventosCard" onclick="window.location.href='detalhesEvento.php'">
-    <img src="../../public/images/eventosimg/eventos4.png" alt="Feira do Auau">
+<div class="eventosCard" onclick="window.location.href='<?= '/sospatinhas/eventos/detalhesevento/'.$evento['ID_EVENTO']; ?>'">
+    <img src="/sospatinhas/public/images/eventosimg/eventos4.png" alt="Imagem do evento">
     <div class="cardInfo">
-      <h3>Feira do Auau</h3>
-      <p>Feira arrecadativa de moda.</p>
+      <h3><?= $evento["TITULO"];?></h3>
+      <p><?= $evento["DESCRICAO"];?></p>
       <div class="local">
-          <img src="../../public/images/icons/iconMarcador.png" alt="Icone de local"'>
-          <p>Campo Grande MS, Horto Florestal</p>
+          <img src="/sospatinhas/public/images/icons/iconMarcador.png" alt="Icone de local"'>
+          <p><?= $evento["CIDADE"].' '. $evento["ESTADO"].', '. $evento["LOCAL_EVENTO"]; ?></p>
       </div>
     </div>
 </div>
@@ -50,6 +50,7 @@
 
 .cardInfo p {
   font-size: 14px;
+  padding: 8px ;
 }
 
 .cardInfo h3 {
@@ -66,6 +67,7 @@
 }
 
 .local img {
+  margin-top: 7.2px;
   width: 15px;
   height: 17px;
 }

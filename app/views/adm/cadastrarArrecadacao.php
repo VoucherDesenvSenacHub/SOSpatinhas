@@ -1,7 +1,7 @@
 <?php
-    $cssLink  = '../../public/css/cadastrarArrecadacao.css';
+    $cssLink  = '/SOSpatinhas/public/css/cadastrarArrecadacao.css';
     $tipo = 'Adm';
-    include('../../componentes/default/topHTML.php');
+    include('app/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="frmCadastroArrecadacao">

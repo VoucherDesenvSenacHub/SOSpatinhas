@@ -8,9 +8,9 @@
     // exit();
     // }
 
-  $cssLink  = '../../public/css/editarEventos.css';
+  $cssLink  = '/sospatinhas/public/css/editarEventos.css';
   $tipo = 'Adm';
-  include('../../componentes/default/topHTML.php');
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <form action="" method="POST" enctype="multipart/form-data" id="formCadastroEvento">

@@ -14,10 +14,10 @@
                 <li><a href="comoajudar">Doe Agora</a></li>
                 <li><a href="eventos">Eventos</a></li>
                 <li><a href="quemsomos">Sobre Nós</a></li>
-                <li class="social-icons">
+                <!-- <li class="social-icons">
                     <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                     <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </div>

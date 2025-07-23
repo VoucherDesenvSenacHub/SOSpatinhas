@@ -1,3 +1,14 @@
+.btnFiltrar {
+  border-radius: 12px;
+  background-color: var(--orange);
+  cursor: pointer;
+  font-weight: 600;
+  height: 3.5rem;
+  width: 14rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
 /*--------------------------------------------------------------------------------*/
 .top-texts{
   display: flex;
@@ -23,7 +34,7 @@
 
 /*--------------------------------------------------------------------------------*/
 .filter-button{
-  background-color: #44803F;
+  background-color: var(--orange);
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -60,7 +71,7 @@
 .box2{
   display: flex;
   align-items: center;
-  margin-top: 26px;
+  margin-top: 12px;
 }
 
 .filter-option:hover{
@@ -136,7 +147,7 @@
 }
 
 .button-card{
-  background-color: #44803F;
+  background-color: var(--orange);
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -214,7 +225,7 @@
 }
 
 #btnVerMais {
-  background-color:#44803F;
+  background-color:var(--orange);
   font-size: 20px;
   color: #ffffff;
   /* font-weight: 600; */

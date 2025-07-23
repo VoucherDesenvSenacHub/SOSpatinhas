@@ -153,11 +153,11 @@
         </div>
         
         <div class="box2">
+            <button type="submit" class="btnFiltrar">Filtrar</button>
             <?php
-                $funcaoClick = "submitSimples(filtros)";
-                $titulo = "Filtrar"; 
-                include("app/componentes/componenteButton.php");
-
+                // $funcaoClick = "submitSimples(filtros)";
+                // $titulo = "Filtrar"; 
+                // include("app/componentes/componenteButton.php");
             ?>
         </div>
     </form>

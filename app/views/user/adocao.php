@@ -56,43 +56,47 @@
     $animalFilter = isset($_GET['animal-filter']) && $_GET['animal-filter'] !== "Selecionar" ? $_GET['animal-filter'] : null;
 
    
-
-    $filteredAnimais = array_filter($animais, function ($animal) use ($sexoFilter, $idadeFilter, $porteFilter, $animalFilter) {
-        if ($sexoFilter && $animal['SEXO'] !== $sexoFilter) {
-            return false;
-        }
-
-        if ($idadeFilter) {
-            if ($idadeFilter === "< 1" && $animal['IDADE'] >= 1) return false;
-            if ($idadeFilter === "<= 5" && $animal['IDADE'] > 5) return false;
-            if ($idadeFilter === "<= 10" && $animal['IDADE'] > 10) return false;
-            if ($idadeFilter === "> 10" && $animal['IDADE'] <= 10) return false;
-        }
-
-        if ($porteFilter && $animal['PORTE'] !== $porteFilter) {
-            return false;
-        }
-
-        if ($animalFilter && $animal['TIPO_ANIMAL'] !== $animalFilter) {
-            return false;
-        }
-
-        return true;
-    });
-
-    $itensPorPag = isset($_GET['itensPorPag']) ? (int) $_GET['itensPorPag'] : 9; 
-    $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
-    $offset = ($paginaAtual - 1) * $itensPorPag;
+    try{
+        $filteredAnimais = array_filter($animais, function ($animal) use ($sexoFilter, $idadeFilter, $porteFilter, $animalFilter) {
+            if ($sexoFilter && $animal['SEXO'] !== $sexoFilter) {
+                return false;
+            }
     
-    $registrosTotal = count($filteredAnimais);
-    $totalPag = ceil($registrosTotal / $itensPorPag);
-    $rowAnimal = array_slice($filteredAnimais, $offset, $itensPorPag);
+            if ($idadeFilter) {
+                if ($idadeFilter === "< 1" && $animal['IDADE'] >= 1) return false;
+                if ($idadeFilter === "<= 5" && $animal['IDADE'] > 5) return false;
+                if ($idadeFilter === "<= 10" && $animal['IDADE'] > 10) return false;
+                if ($idadeFilter === "> 10" && $animal['IDADE'] <= 10) return false;
+            }
     
-    if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
-        foreach ($rowAnimal as $animal) {
-            include('../../app/componentes/animalCard.php'); 
+            if ($porteFilter && $animal['PORTE'] !== $porteFilter) {
+                return false;
+            }
+    
+            if ($animalFilter && $animal['TIPO_ANIMAL'] !== $animalFilter) {
+                return false;
+            }
+    
+            return true;
+        });
+    
+        $itensPorPag = isset($_GET['itensPorPag']) ? (int) $_GET['itensPorPag'] : 9; 
+        $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
+        $offset = ($paginaAtual - 1) * $itensPorPag;
+        
+        $registrosTotal = count($filteredAnimais);
+        $totalPag = ceil($registrosTotal / $itensPorPag);
+        $rowAnimal = array_slice($filteredAnimais, $offset, $itensPorPag);
+        
+        if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
+            foreach ($rowAnimal as $animal) {
+                include('../../app/componentes/animalCard.php'); 
+            }
+            exit; 
         }
-        exit; 
+
+    }catch (Exception $e) {
+        setModal('erro', 'Erro encontrado!', $e->getMessage());
     }
 ?>
 
@@ -166,40 +170,51 @@
 
 <div class="card-container">
     <?php
+    try{
         foreach ($rowAnimal as $animal){
             include('app/componentes/animalCard.php'); 
         };
+
+    }catch (Exception $e) {
+        setModal('erro', 'Erro encontrado!', $e->getMessage());
+    }
     ?>
 </div>
 
 
 <div class="paginacao">
     <?php
-    if ($paginaAtual > 1) {
-        echo '<a href="?pagina=' . ($paginaAtual - 1) . '">&lt; </a>';
-    }
-
-    for ($i = 1; $i <= $totalPag; $i++) {
-        if ($i == $paginaAtual) {
-
-            echo '<a href="?pagina=' . $i . '" class="active">' . $i . '</a>';
-        } else {
-
-            echo '<a href="?pagina=' . $i . '">' . $i . '</a>';
+    try{
+        if ($paginaAtual > 1) {
+            echo '<a href="?pagina=' . ($paginaAtual - 1) . '">&lt; </a>';
         }
-    }
+    
+        for ($i = 1; $i <= $totalPag; $i++) {
+            if ($i == $paginaAtual) {
+    
+                echo '<a href="?pagina=' . $i . '" class="active">' . $i . '</a>';
+            } else {
+    
+                echo '<a href="?pagina=' . $i . '">' . $i . '</a>';
+            }
+        }
+    
+        if ($paginaAtual < $totalPag) {
+            echo '<a href="?pagina=' . ($paginaAtual + 1) . '"> &gt;</a>';
+        }
 
-    // Se não estiver na última página, exibe o link "Próxima"
-    if ($paginaAtual < $totalPag) {
-        echo '<a href="?pagina=' . ($paginaAtual + 1) . '"> &gt;</a>';
+    }catch (Exception $e) {
+        setModal('erro', 'Erro encontrado!', $e->getMessage());
     }
     ?>
 </div>
 
 
 <div class="vermais">
-    <?php if ($paginaAtual < $totalPag) : ?>
-        <button id="btnVerMais" data-proxima="<?= $paginaAtual + 1 ?>">Ver Mais</button>
+    <?php if ($paginaAtual != null && $totalPag != null) : ?>
+        <?php if ($paginaAtual < $totalPag) : ?>
+            <button id="btnVerMais" data-proxima="<?= $paginaAtual + 1 ?>">Ver Mais</button>
+        <?php endif; ?>
     <?php endif; ?>
 </div>
 

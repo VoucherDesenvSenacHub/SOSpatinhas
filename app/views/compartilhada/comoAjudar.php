@@ -7,7 +7,7 @@
 <section class="pontoArrecadacao">
   <div class="infoDestaque">
     <div class="imgPontoArrecadacao">
-      <img src="/sospatinhas/public/images/cachorro03.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
+      <img src="/sospatinhas/public/images/default/imgPontoDeArrecadacao.png" id="imgPA" alt="Imagem do Ponto de Arrecadação" >
       <p class="endereco">R. do Parque, 75 - Centro, Campo Grande - MS</p>
     </div>
     <div class="fundoTexto">
@@ -77,14 +77,14 @@
     <div class="fundoQrCode"> 
       <div class="qrCode">
         <h2>Pix QR Code ou CNPJ</h2>
-        <img id="imgQrCode" src="public/images/imagem_qrcode.png" alt="QR Code para Doação">
+        <img id="imgQrCode" src="public/images/default/imgQrCode.png" alt="QR Code para Doação">
         <br></br>
         <h3>Sos Patinhas</h3>
-        <div class="logoBb">Conta: 198655-4
-        <img id="imgLogoBanco" src="public/images/banco.png" alt="Imagem da logo do banco">
+        <div class="logoBb">Conta: 123456-7
+        <img id="imgLogoBanco" src="public/images/icons/iconBanco.png" alt="Imagem da logo do banco">
         </div>
         <p>Agência: 1193</p>
-        <p>ChaveCNPJ: XX. XXX. XXX/0001-XX</p>
+        <p>ChaveCNPJ: 12.345.678/0001-90. </p>
       </div>
     </div> 
   </section>

@@ -17,11 +17,11 @@ class AdmController {
             $data = ['ACAO' => 'R', 'EMAIL' => $email];
             $jsonData = json_encode($data);
             
-            try{
+            // try{
                 $resultado = $this->model->CRUD($jsonData);
-            } catch (Exception $e) {
-                setModal('erro', 'Erro encontrado!', $e->getMessage());
-            }
+            // } catch (Exception $e) {
+            //     setModal('erro', 'Erro encontrado!', $e->getMessage());
+            // }
 
             if ($resultado) {
                 if ($resultado[0]['EMAIL'] === $email && $resultado[0]['SENHA'] === $senha) {
@@ -50,17 +50,21 @@ class AdmController {
             $email = isset($_POST['EMAIL']) ? trim($_POST['EMAIL']) : null;
             $telefone = isset($_POST['TELEFONE']) ? trim($_POST['TELEFONE']) : null;
             $senha = isset($_POST['SENHA']) ? trim($_POST['SENHA']) : null;
-    
+
+            if (in_array($acao, ['C', 'U']) && !empty($senha)) {
+                $senha = password_hash($senha, PASSWORD_DEFAULT);
+            }
+
             $data = [
-            'ID_ADM' => $id_adm,
-            'NOME' => $nome,
-            'EMAIL' => $email,
-            'TELEFONE' => $telefone,
-            'SENHA' => $senha,
-            'ACAO' => $acao
+                'ID_ADM' => $id_adm,
+                'NOME' => $nome,
+                'EMAIL' => $email,
+                'TELEFONE' => $telefone,
+                'SENHA' => $senha,
+                'ACAO' => $acao
             ];
-    
-            try{
+
+            try {
                 $jsonData = json_encode($data);
                 $resultado = $this->model->CRUD($jsonData);
             } catch (Exception $e) {

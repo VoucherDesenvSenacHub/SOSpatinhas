@@ -9,7 +9,29 @@
     <link rel="icon" href="/public/images/icons/favicon.png" type="image/png">
 </head>
 <body>
-    <?php include('app/componentes/navbar.php'); ?>
+    <header class="navbar" id="home">
+        <div class="container navbar-container">
+            <h1 class="logo" aria-label="Logo SOS Patinhas">
+                <i class="fa-solid fa-paw"></i> <a href="/SOSPatinhas/" style="text-decoration: none; color: white;">SOS Patinhas</a> 
+            </h1>
+            <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav aria-label="Menu Principal">
+                <ul class="menu" id="mainMenu">
+                    <li><a href="/SOSPatinhas/">Home</a></li>
+                    <li><a href="adocao">Adote um Pet</a></li>
+                    <li><a href="comoajudar">Doe Agora</a></li>
+                    <li><a href="eventos">Eventos</a></li>
+                    <li><a href="quemsomos">Sobre Nós</a></li>
+                    <!-- <li class="social-icons">
+                        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <section class="banner efeito-fade" id="banner">
         <div class="carrossel" id="carrossel">
@@ -87,20 +109,6 @@
                 <a href="comoajudar" class="btn-doar">
                     <i class="fas fa-heart"></i> CONTRIBUA COM A ONG
                 </a>
-                <div class="donation-info">
-                    <div class="donation-method">
-                        <i class="fas fa-credit-card"></i>
-                        <span>Cartão de Crédito</span>
-                    </div>
-                    <div class="donation-method">
-                        <i class="fas fa-barcode"></i>
-                        <span>Boleto</span>
-                    </div>
-                    <div class="donation-method">
-                        <i class="fas fa-qrcode"></i>
-                        <span>Pix</span>
-                    </div>
-                </div>
             </div>
             <div class="cta-image">
                 <img src="public/images/default/mao.png" alt="Voluntário alimentando cães">
@@ -151,7 +159,7 @@
             <a href="eventos" class="botao-eventos">VEJA FUTUROS EVENTOS</a>
         </section>
         
-        <section class="carrossel-section">
+        <!-- <section class="carrossel-section">
             <img class="pataInvertida" src="public/images/icons/iconPataVerde.png" alt="Pata Verde Invertida">
             <div class="carrossel-wrap">
                 <img id="elemento1" src="public/images/default/efeitocarrossel.png" alt="Elemento Carrossel">
@@ -176,7 +184,7 @@
                 <a href="#" class="botao">CONTRIBUA COM A ONG</a>
             </div>
             <img class="pataverde" src="public/images/icons/iconPataVerde1.png" alt="Pata Verde">
-        </section>
+        </section> -->
 
         <section class="faixaMain">
             <div class="bolasCtn">

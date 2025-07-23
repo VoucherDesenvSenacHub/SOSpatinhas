@@ -149,7 +149,7 @@ if((isset($cols) && $cols !== null) && (isset($dataCols) && $dataCols !== null))
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #7FB3D3;
+        background-color: var(--blue);
         gap: 1rem;
         border-radius: 0 0 10px 10px;
         padding: 1rem;
@@ -190,7 +190,7 @@ if((isset($cols) && $cols !== null) && (isset($dataCols) && $dataCols !== null))
     }
 
     .campo-pesquisa:focus {
-        border-color: #7FB3D3;
+        border-color: var(--blue);
     }
 
     #botao-adicionar {
@@ -215,7 +215,7 @@ if((isset($cols) && $cols !== null) && (isset($dataCols) && $dataCols !== null))
     }
 
     .cabecalho-tabela {
-        background-color: #7FB3D3;
+        background-color: var(--blue);
         color: white;
         border-radius: 10px 10px 0 0;
     }

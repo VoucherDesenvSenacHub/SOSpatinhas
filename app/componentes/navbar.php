@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <header class="navbar" id="home">
     <div class="container navbar-container">
         <h1 class="logo" aria-label="Logo SOS Patinhas">
-            <i class="fa-solid fa-paw"></i> SOS Patinhas
+            <i class="fa-solid fa-paw"></i> <a href="/SOSPatinhas/" style="text-decoration: none; color: white;">SOS Patinhas</a>
         </h1>
         <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle">
             <i class="fas fa-bars"></i>
@@ -25,7 +26,7 @@
 <style>
 .navbar {
   background-color: var(--blue);
-  color: var(--white);
+  color: white;
   padding: var(--spacing-md) 0;
   position: sticky;
   top: 0;
@@ -59,7 +60,7 @@
 }
 
 .menu a {
-  color: var(--white);
+  color: white;
   text-decoration: none;
   font-weight: 600;
   padding: var(--spacing-sm) var(--spacing-md);
@@ -73,7 +74,7 @@
 
 .menu-toggle {
   display: none;
-  color: var(--white);
+  color: white;
   font-size: var(--font-size-xl);
 }
 

@@ -995,7 +995,7 @@ body {
 .eventos {
 	text-align: center;
 	background-color: #fffbea;
-	padding: 2rem;
+	padding: 5.2rem;
 	font-family: "Nunito", sans-serif;
 	overflow: hidden;
 }
@@ -1276,13 +1276,13 @@ body {
 /* luan */
 
 .faixaMain {
-	background-color: #fffbea;
+	background-color: #5993c7;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 	font-family: "Paytone One", sans-serif;
 
-	padding-block: 4rem;
+	padding-block: 5.2rem;
 	align-items: center;
 	& h1 {
 		font-size: 30px;
@@ -1293,11 +1293,11 @@ body {
 		display: flex;
 		gap: 2rem;
 		& .bolas {
-			border: 3px solid #f28c66;
+			border: 3px solid #fffbea;
 			padding: 4.27rem 1.54rem;
 			border-radius: 100%;
 			/* padding-bottom: 100%; */
-			color: #f28c66;
+			color: #fffbea;
 			display: flex;
 			flex-direction: column;
 			width: 90px;

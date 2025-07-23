@@ -55,7 +55,7 @@
 }
 
 body {
-    background-color: rgb(198, 225, 196);
+    background-color: #FFFBEA;
     background-image: url("public/images/default/Patinhas.png");
     background-size: 50%;
     background-position: center;
@@ -72,7 +72,7 @@ body {
 }
 
 .corpo {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFBEA;
     width: 90%;
     max-width: 1500px;
     display: flex;
@@ -82,110 +82,6 @@ body {
     align-items: center;
     margin: auto;
     padding: 20px;
-}
-
-
-/* ----------------------------  NAVBAR  ----------------------------------------------------------*/
-.navbar {
-    background-color: white;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.navbarLogo img {
-    width: 50px;
-    height: 50px;
-}
-
-.navLinks {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.navLinks a {
-    text-decoration: none;
-    color: black;
-    padding: 8px 16px;
-    font-weight: 550;
-    transition: 0.3s;
-}
-
-.navLinks a:hover,
-.navLinks a:active {
-    border-bottom: solid #C6E1C4;
-}
-
-.navRight {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger div {
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    transition: 0.3s;
-}
-
-.mobileMenu {
-    display: none;
-    position: fixed;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
-    z-index: 1300;
-}
-
-.mobileMenu a {
-    text-decoration: none;
-    color: black;
-    padding: 15px;
-    display: block;
-    font-size: 18px;
-    width: 100%;
-    text-align: center;
-}
-
-.mobileMenu a:hover {
-    background-color: #C6E1C4;
-}
-
-.mobileMenu.show {
-    display: flex;
-}
-
-#btnLoginRegister {
-    display: flex;
-}
-
-#logos {
-    gap: 1rem;
-}
-
-.navbarLogo {
-    display: none;
 }
 
 
@@ -254,118 +150,6 @@ body {
     letter-spacing: 0.3px;
 }
 
-
-
-/* ----------------------------  FOOTER  ----------------------------------------------------------*/
-footer {
-    width: 100%;
-    position: relative; 
-    z-index: 1200;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.footer-desktop {
-    width: 100%;
-    background-color: rgb(68, 128, 63);
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center; 
-    position: relative; 
-    z-index: 1200;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.footer-desktop .container {
-    max-width: 1200px;    
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    padding: 20px 40px;  
-    box-sizing: border-box;
-}
-
-.footer-desktop .esquerda {
-    font-size: 14px;
-    border-bottom: 1px solid white; 
-    white-space: nowrap; 
-    ;
-}
-
-.esquerda a {
-    text-decoration: none;
-    color: white
-}
-
-.footer-desktop .footer-logo img {
-    width: 180px;   
-    height: auto;
-}
-
-.footer-desktop .direita {
-    display: flex;
-    gap: 15px;      
-}
-.footer-desktop .direita img {
-    width: 40px;    
-    height: auto;
-}
-
-.mobile-footer {
-    text-align: center;
-    padding: 3px;
-    background-color: rgb(68, 128, 63);
-    color: white;
-    width: 100%;
-    position: relative;
-    z-index: 1200;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.mobile-footer-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 15px 0;
-}
-
-.mobile-footer .footer-logo img {
-    width: 120px;
-    height: auto;
-    margin-bottom: 5px;
-}
-
-.mobile-footer .footer-links-img {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 5px 0;
-    padding: 0;
-}
-
-.mobile-footer .footer-links-img a {
-    text-decoration: none;
-}
-
-.mobile-footer .footer-links-img a img {
-    width: 30px;
-    height: auto;
-}
-
-.mobile-footer .voucherDesenv .a-dev {
-    text-align: center;
-    margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    border-bottom: 1px solid white;
-    display: inline-block;
-    color: white;
-}
-
-
-
 /* ----------------------------  FORMULARIO  ----------------------------------------------------------*/
 #frmCadastrarEditar {
     display: flex;
@@ -391,8 +175,9 @@ footer {
 
 .frmField label {
     font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
 }
-
 
 
 /* ----------------------------  INPUTS E AFINS  ----------------------------------------------------------*/
@@ -492,7 +277,7 @@ select {
 
 /* button */
 
-button {
+/* button {
     border-radius: 12px;
     background-color: #44803F;
     cursor: pointer;
@@ -503,7 +288,7 @@ button {
     margin: 0.5rem;
     margin-top: 3rem;
     font-size: 1.2rem;
-}
+} */
 
 #btn {
     display: flex;

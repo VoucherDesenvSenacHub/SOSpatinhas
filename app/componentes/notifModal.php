@@ -8,13 +8,9 @@
   const modal = document.getElementById('notifModal');
   const btnModal = document.getElementById('btnModal');
 
-  // Remove todas as classes anteriores do header
   header.classList.remove('modalSucesso', 'modalErro', 'modalAtencao', 'modalInfo');
-  
-  // Remove todas as classes anteriores do botão
   btnModal.classList.remove('modalSucesso', 'modalErro', 'modalAtencao', 'modalInfo');
 
-  // Adiciona a classe correta baseada no tipo
   switch(tipo){
     case 'sucesso':
       header.classList.add('modalSucesso');
@@ -169,7 +165,6 @@ function fecharModal() {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Cores das modais */
 .modalSucesso {
   background:  #349582 !important;  
 }
@@ -218,7 +213,6 @@ function fecharModal() {
   background:  #7BAEDC ;
 }
 
-/* NOVA ANIMAÇÃO: vem deslizando de cima */
 @keyframes modalSlideInFromTop {
   from {
     transform: translateY(-100px);
@@ -230,10 +224,9 @@ function fecharModal() {
   }
 }
 
-/* Responsividade para mobile */
 @media (max-width: 480px) {
   .modalOverlay {
-    padding-top: 10px; /* Menos espaçamento no mobile - mais para cima */
+    padding-top: 10px;
   }
   
   .modalContent {
@@ -250,7 +243,7 @@ function fecharModal() {
   }
   
   .modalBody {
-    padding: 25px 20px; /* Padding ajustado no mobile */
+    padding: 25px 20px; 
     font-size: 16px;
   }
   

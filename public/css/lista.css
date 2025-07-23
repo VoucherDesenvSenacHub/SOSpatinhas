@@ -1,0 +1,21 @@
+.conteudo-principal {
+    flex: 1;
+    padding: 30px;
+    width: 100%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho h1 {
+    color: #333;
+    font-size: 28px;
+}
+
+.cabecalho h1 span {
+    color: #ff6b6b;
+}

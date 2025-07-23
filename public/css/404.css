@@ -1,0 +1,60 @@
+.button {
+    border-radius: 12px;
+    background-color: var(--orange);
+    cursor: pointer;
+    font-weight: 600;
+    height: 3rem;
+    width: 25rem;
+    margin: 0.5rem;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+.button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
+
+.texto h1{
+    font-size: 13rem;
+}
+
+.texto p {
+    font-size: 2rem;
+    width: 40rem;
+}
+
+img{
+    height: 20rem;
+}
+
+@media(max-width:1024px){
+    .conteudo{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    img{
+        height: 20rem;
+    }
+}
+
+@media(max-width:425px){
+    .texto h1{
+        font-size: 9rem;
+    }
+    
+    .texto p {
+        font-size: 22px;
+        width: 20rem;
+        text-align: center;
+    }
+}

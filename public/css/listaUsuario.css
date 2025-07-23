@@ -1,0 +1,197 @@
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.conteiner {
+    max-width: 1500px;
+    margin: auto;
+    padding: 12px;
+}
+
+.pesquisar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pesquisar .lupa {
+    position: absolute;
+    left: 14px;
+    width: 1.2em;
+    color: #888;
+    cursor: pointer;
+}
+
+.pesquisar input {
+    width: 690px;
+    height: 35px;
+    padding: 5px 15px 5px 40px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.listaUsuarios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+}
+
+
+.cta-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.pagination-btn {
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-btn:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.altPag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.altPag li {
+    list-style: none;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.altPag li.active, .altPag li:hover {
+    background-color: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+/* cards */
+.membro {
+    background: white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.membro img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.membro h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.status div {
+    width: 10px;
+    height: 10px;
+    background: green;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status span {
+    font-size: 12px;
+    color: #666;
+}
+
+.membro button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.membro button:hover {
+    background: #388e3c;
+}
+
+@media (max-width: 1040px) {
+    .listaUsuarios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 768px){
+    .conteiner{
+        padding: 40px 0px 60px 0px;
+    }
+    .listaUsuarios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pesquisar input {
+        width: 500px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .cta-slide{
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    .conteiner{
+        padding: 40px 0px 60px 0px;
+    }
+    .listaUsuarios{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .pesquisar input{
+        width: 300px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .corpo{
+        width: 100%;
+    }
+    .cta-slide{
+        display: none;
+    }
+}

@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-style: none;
+}
+
+.pai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 20px;
+    justify-items: center;
+}
+
+.main {
+    width: fit-content;
+    height: 340px;
+    width: 320px;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    & .subMain {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    & .foto {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        position: absolute;
+        top: 16px;
+        left: 80px;
+    }
+
+    & .title {
+        color: white;
+        font-size: 3vh;
+    }
+
+    & .subTitle {
+        color: white;
+    }
+
+    & .links {
+        border-radius: 30px;
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 260px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pai {
+        display: grid;
+        grid-template-columns: repeat(2, 380px);
+        gap: 20px;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .pai {
+        grid-template-columns: repeat(2, 330px);
+    }
+
+    .main {
+        height: 320px;
+        width: 300px;
+    }
+
+    .main .foto {
+        width: 120px;
+        height: 120px;
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 425px) {
+    .pai {
+        grid-template-columns: repeat(1, 330px);
+    }
+}
+
+.cor1 {
+    background-color: #F28C66;
+}
+
+.cor2 {
+    background-color: #7BAEDC;
+}
+
+.cor3 {
+    background-color: #349582;
+}
+
+
+.cabecalho-dev {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 40px 0 50px;
+    font-family: "Inter", sans-serif;
+}
+
+.cabecalho-dev h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.cabecalho-dev .turma {
+    color: #F28C66; 
+}

@@ -10,15 +10,16 @@ class AnimalController {
 
     public function CRUD() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $acao = $_POST['ACAO'];
-            $id = $_POST['ID_ANIMAL'];
-            $nome = $_POST['NOME'];
-            $tipoAnimal = $_POST['TIPO_ANIMAL'];
-            $raca = $_POST['RACA'];
-            $porte = $_POST['PORTE'];
-            $idade = $_POST['IDADE'];
-            $descricao = $_POST['DESCRICAO'];
-            $sexo = $_POST['SEXO'];
+            $acao = $_POST['ACAO'] ?? null;
+            $id = $_POST['ID_ANIMAL'] ?? null;
+            $nome = isset($_POST['NOME']) ? trim($_POST['NOME']) : null;
+            $tipoAnimal = isset($_POST['TIPO_ANIMAL']) ? trim($_POST['TIPO_ANIMAL']) : null;
+            $raca = isset($_POST['RACA']) ? trim($_POST['RACA']) : null;
+            $porte = isset($_POST['PORTE']) ? trim($_POST['PORTE']) : null;
+            $idade = isset($_POST['IDADE']) ? trim($_POST['IDADE']) : null;
+            $descricao = isset($_POST['DESCRICAO']) ? trim($_POST['DESCRICAO']) : null;
+            $sexo = isset($_POST['SEXO']) ? trim($_POST['SEXO']) : null;
+            $caminhoFts = !empty($_FILES['image']) ? imageUpload($_FILES) : null;
     
             $data = [
                 'ACAO' => $acao,
@@ -29,7 +30,8 @@ class AnimalController {
                 'PORTE' => $porte,
                 'IDADE' => $idade,
                 'DESCRICAO' => $descricao,
-                'SEXO' => $sexo
+                'SEXO' => $sexo,
+                'CAMINHO_FOTO' => $caminhoFts
             ];
             
             try{

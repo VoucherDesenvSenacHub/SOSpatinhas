@@ -14,6 +14,8 @@ Route::get('/eventos/detalhesevento/{idEvento}', 'EventoController@eventoDetalha
 Route::get('/eventos/arrecadacao/{idArrecadacao}', 'ArrecadacaoController@index');
 Route::get('/adocao', 'AnimalController@adocao');
 Route::get('/adocao/detalhesanimal/{idAnimal}', 'AnimalController@detalhesAnimal');
+
+Route::get('/141', function() { include('app/views/user/developers.php');});
 // Route::get('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'FormularioAdocaoController@index'); ORIGINAL
 Route::get('/adocao/detalhesanimal/{idAnimal}/formularioadocao', 'AnimalController@detalhesAnimalForm');
 Route::get('/adm/formulario/criar/{obj}', function($obj, $id = null) { include('app/views/adm/frmCadastarEditar.php');});

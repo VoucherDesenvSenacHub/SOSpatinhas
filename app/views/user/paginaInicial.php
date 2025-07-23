@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="/sospatinhas/public/css/paginaInicial.css">
+    <link rel="stylesheet" href="public/css/paginaInicial.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="/sospatinhas/public/images/icons/favicon.png" type="image/png">
+    <link rel="icon" href="/public/images/icons/favicon.png" type="image/png">
 </head>
 <body>
     <header class="navbar" id="home">
@@ -37,7 +37,7 @@
         <div class="carrossel" id="carrossel">
             <ul class="carrossel__lista" id="listaSlides">
                 <li class="carrossel__item">
-                    <img src="/sospatinhas/public/images/default/racas.png" alt="Pets resgatados pela ONG">
+                    <img src="public/images/default/racas.png" alt="Pets resgatados pela ONG">
                     <div class="carrossel__legenda">
                         <h2>Adote um Amigo</h2>
                         <p>Animais resgatados em busca de um novo lar</p>
@@ -45,7 +45,7 @@
                     </div>
                 </li>
                 <li class="carrossel__item">
-                    <img src="/sospatinhas/public/images/default/racas.png" alt="Voluntários cuidando dos animais">
+                    <img src="public/images/default/racas.png" alt="Voluntários cuidando dos animais">
                     <div class="carrossel__legenda">
                         <h2>Seja um Voluntário</h2>
                         <p>Ajude a cuidar dos nossos animais</p>
@@ -53,7 +53,7 @@
                     </div>
                 </li>
                 <li class="carrossel__item">
-                    <img src="/sospatinhas/public/images/default/racas.png" alt="Eventos de adoção realizados pela ONG">
+                    <img src="public/images/default/racas.png" alt="Eventos de adoção realizados pela ONG">
                     <div class="carrossel__legenda">
                         <h2>Eventos de Adoção</h2>
                         <p>Participe dos nossos eventos mensais</p>
@@ -68,24 +68,20 @@
     <main>
         <section class="adocao efeito-fade" id="adopt">
             <div class="container adocao-container">
-                <img src="/sospatinhas/public/images/default/Group_230.png" alt="" class="linhas" aria-hidden="true">
-                <img src="/sospatinhas/public/images/default/Group_231.png" alt="" class="linha" aria-hidden="true">
+                <img src="public/images/default/Group_230.png" alt="" class="linhas" aria-hidden="true">
+                <img src="public/images/default/Group_231.png" alt="" class="linha" aria-hidden="true">
                 <div class="pet-info">
                     <h3 class="pet-nome" id="petName">Rumi | Macho - 2 anos</h3>
                     <div class="imagem-container">
                         <button id="pet-prev" class="seta esquerda" aria-label="Pet anterior">
-
-                            <img src="/sospatinhas/public/images/icons/SetaEsquerda.png" alt="" class="esquerda">
-                            <i class="fas fa-chevron-left"></i>
+                            <img src="public/images/icons/SetaEsquerda.png" alt="" class="esquerda">
                         </button>
                         <div class="imagem-box">
-                            <img src="/sospatinhas/public/images/default/gato.png" alt="Gato Rumi na caixa" id="petImg" class="pet-img">
-                            <img src="/sospatinhas/apublic/images/default/Group.png" alt="" class="caixa" aria-hidden="true">
+                            <img src="public/images/default/gato.png" alt="Gato Rumi na caixa" id="petImg" class="pet-img">
+                            <img src="public/images/default/Group.png" alt="" class="caixa" aria-hidden="true">
                         </div>
                         <button id="pet-next" class="seta direita" aria-label="Próximo pet">
-
-                            <img src="/sospatinhas/public/images/icons/SetaCertaDireita.png" alt="" class="direita">
-                            <i class="fas fa-chevron-right"></i>
+                            <img src="public/images/icons/SetaCertaDireita.png" alt="" class="direita">
                         </button>
                     </div>
                     <div class="pet-tags">
@@ -115,7 +111,7 @@
                 </a>
             </div>
             <div class="cta-image">
-                <img src="/sospatinhas/public/images/default/mao.png" alt="Voluntário alimentando cães">
+                <img src="public/images/default/mao.png" alt="Voluntário alimentando cães">
                 <div class="icons">
                     <i class="fa-solid fa-paw"></i>
                     <i class="fa-solid fa-paw"></i>
@@ -126,28 +122,36 @@
 
         <section class="eventos" id="events">
             <h2>Alguns de nossos eventos</h2>
-
-            <div class="carrossel-eventos">
-                <button class="seta1 prev1" aria-label="Evento anterior">&#x276C;</button>
-                <div class="carrossel-track2">
-                    <div class="evento-card">
-                        <img src="/sospatinhas/public/images/default/evento1.png" alt="Evento 1">
-                        <p>Feira de Adoção</p>
-                    </div>
-                    <div class="evento-card">
-                        <img src="/sospatinhas/public/images/default/evento2.png" alt="Evento 2">
-                        <p>Feirão do Bazar + Feira do Auau</p>
-                    </div>
-                    <div class="evento-card">
-                        <img src="/sospatinhas/public/images/default/evento3.png" alt="Evento 3">
-                        <p>Adoção com Carinho</p>
-                    </div>
-                </div>
-                <button class="seta1 next1" aria-label="Próximo evento">&#x276D;</button>
-                <div class="carrossel-paginacao"></div>
-            </div>
-            <a href="#eventos" class="botao-eventos">VEJA FUTUROS EVENTOS</a>
-        </section>
+            <div class="carousel-container">
+			<div class="carousel-wrapper">
+				<div class="carousel">
+					<div class="slide">
+						<img src="public/images/default/evento1.png" alt="Imagem 1" />
+                        <h1>Feira do Auau</h1>
+					</div>
+					<div class="slide">
+                        <img src="public/images/default/evento2.png" alt="Imagem 2" />
+                        <h1>Feirão do Bazar</h1>
+					</div>
+					<div class="slide">
+                        <img src="public/images/default/evento3.png" alt="Imagem 3" />
+                        <h1>Feira dos Pets</h1>
+					</div>
+					<div class="slide">
+						<img src="public/images/default/evento1.png" alt="Imagem 1" />
+                        <h1>Feira do Auau</h1>
+					</div>
+					<div class="slide">
+						<img src="public/images/default/evento2.png" alt="Imagem 2" />
+                        <h1>Feirão do Bazar</h1>
+					</div>
+					<div class="slide">
+                        <img src="public/images/default/evento3.png" alt="Imagem 3" />
+                        <h1>Feira dos Pets</h1>
+					</div>
+					
+				</div>
+			</div>
 
 			<button class="prev" id="prevBtn">&#10094;</button>
 			<button class="next" id="nextBtn">&#10095;</button>
@@ -158,7 +162,7 @@
         <!-- <section class="carrossel-section">
             <img class="pataInvertida" src="public/images/icons/iconPataVerde.png" alt="Pata Verde Invertida">
             <div class="carrossel-wrap">
-                <img id="elemento1" src="/sospatinhas/public/images/default/efeitocarrossel.png" alt="Elemento Carrossel">
+                <img id="elemento1" src="public/images/default/efeitocarrossel.png" alt="Elemento Carrossel">
                 <div class="carrossel-track">
                     <img id="img1" src="" alt="Imagem 1">
                     <img id="img2" src="" alt="Imagem 2">
@@ -185,28 +189,28 @@
         <section class="faixaMain">
             <div class="bolasCtn">
                 <div class="bolas">
-                    <img src="/sospatinhas/public/images/icons/iconBoloAniversario.png" alt="Ícone Aniversário">
+                    <img src="public/images/icons/iconBoloAniversario.png" alt="Ícone Aniversário">
                     <div class="textosBola">
                         <h3>5</h3>
                         <p>ANOS</p>
                     </div>
                 </div>
                 <div class="bolas">
-                    <img src="/sospatinhas/public/images/icons/iconMao.png" alt="Ícone Mão">
+                    <img src="public/images/icons/iconMao.png" alt="Ícone Mão">
                     <div class="textosBola">
                         <h3>+1000</h3>
                         <p>RESGATES</p>
                     </div>
                 </div>
                 <div class="bolas">
-                    <img src="/sospatinhas/public/images/icons/iconPataLaranja.png" alt="Ícone Pata Laranja">
+                    <img src="public/images/icons/iconPataLaranja.png" alt="Ícone Pata Laranja">
                     <div class="textosBola">
                         <h3>+100</h3>
                         <p>ANIMAIS</p>
                     </div>
                 </div>
                 <div class="bolas">
-                    <img src="/sospatinhas/public/images/icons/iconLocal.png" alt="Ícone Localização">
+                    <img src="public/images/icons/iconLocal.png" alt="Ícone Localização">
                     <div class="textosBola">
                         <h3>2</h3>
                         <p>ABRIGOS</p>
@@ -217,7 +221,7 @@
         </section>
     </main>
 
-    <?php include('../../componentes/footer.php'); ?>
+    <?php include('app/componentes/footer.php'); ?>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -383,7 +387,7 @@
                 function fadeTroca(img, novoSrc) {
                     img.classList.remove('mostrar');
                     setTimeout(() => {
-                        img.src = `/sospatinhas/public/images/default/${novoSrc}`;
+                        img.src = `public/images/default/${novoSrc}`;
                         img.classList.add('mostrar');
                     }, 200);
                 }

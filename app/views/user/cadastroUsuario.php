@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS Patinhas</title>
-    <link rel="stylesheet" href="/SOSpatinhas/public/css/cadastroUsuario.css">
-    <link rel="stylesheet" href="/SOSpatinhas/public/css/default.css">
+    <link rel="stylesheet" href="public/css/cadastroUsuario.css">
+    <link rel="stylesheet" href="public/css/default.css">
     
 </head>
 
@@ -42,5 +42,5 @@
    
     </section>
 </body>
-<?php include('../../componentes/footer.php');  ?>
+<?php include('app/componentes/default/bottomHTML.php'); ?>
 </html> 

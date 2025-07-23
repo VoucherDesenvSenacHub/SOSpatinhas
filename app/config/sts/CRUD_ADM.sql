@@ -33,21 +33,6 @@ BEGIN
         INSERT INTO ADM(NOME, EMAIL, TELEFONE, SENHA)
         VALUES(_NOME, _EMAIL, _TELEFONE, _SENHA);
 
-        SET _ID_ADM = LAST_INSERT_ID();
-
-        IF JSON_LENGTH(JSON_EXTRACT(jsonData, '$.CAMINHO_FOTO')) > 0 THEN
-            DECLARE i INT DEFAULT 0;
-            DECLARE total INT;
-
-            SET total = JSON_LENGTH(JSON_EXTRACT(jsonData, '$.FOTOS'));
-
-            WHILE i < total DO
-                SET _CAMINHO_FOTO = JSON_UNQUOTE(JSON_EXTRACT(jsonData, CONCAT('$.FOTOS[', i, ']')));
-                INSERT INTO PHOTOS(ID_ADM, CAMINHO_FOTO) VALUES (_ID_ADM, _CAMINHO_FOTO);
-                SET i = i + 1;
-            END WHILE;
-        END IF;
-
     ELSEIF _ACAO = 'U' THEN
         UPDATE ADM SET 
             NOME = _NOME,

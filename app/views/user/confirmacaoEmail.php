@@ -10,18 +10,18 @@
 </head>
 
 <body>
-    <?php include('../../componentes/navbar.php')?>
+    <?php include('app/componentes/navbar.php')?>
     
     <section class="corpo-container">
         <section class="secaoEmailEnviado">
             <div class="bloco">
                 <h2>E-mail enviado!</h2>
                 <p>Verifique sua caixa de entrada e clique no link para alterar a senha!</p>
-                <img src="/SOSpatinhas/public/images/default/animais.png" alt="Animais">
+                <img src="public/images/animais.png" alt="Animais">
             </div>
         </section>
     </section>
         
-    <?php include('../../componentes/footer.php')?>
+    <?php include('app/componentes/footer.php')?>
 </body>
 </html>

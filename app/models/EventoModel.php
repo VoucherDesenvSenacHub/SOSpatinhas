@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/../config/connect.php');
+require_once 'app/config/connect.php';
 
 class EventoModel extends Connect{
     public function CRUD($jsonData){

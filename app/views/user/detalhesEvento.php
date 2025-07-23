@@ -1,13 +1,13 @@
 <?php
   $cssLink  = '/sospatinhas/public/css/detalhesEvento.css';
-  include('../../componentes/default/topHTML.php');
+  include('app/componentes/default/topHTML.php');
 ?>
 
 <section class="conteudo">
   <div class="imgEDetalhesEvento">
     <div class="slider">
       <div class="slideFade">
-        <img class= "eventoSlides" src="/sospatinhas/public/images/default/semfoto.png" alt="Horto Florestal 1">
+        <img class= "eventoSlides" src="../../public/images/default/semfoto.png" alt="Horto Florestal 1">
       </div>
 
       <div class="btnSlide">
@@ -17,7 +17,7 @@
       </div>
 
       <div class="localEvento">
-        <img src="/sospatinhas/public/images/default/semfoto.png" alt="Icone de local">
+        <img src="../../public/images/default/semfoto.png" alt="Icone de local">
         <p>
           <?= $evento[0]["CIDADE"].' '. $evento[0]["ESTADO"].', '. $evento[0]["LOCAL_EVENTO"]; ?>
         </p>
@@ -35,7 +35,7 @@
         <?php
           $funcaoClick = "compartilhar()";
           $titulo = "Compartilhar";
-          include('../../componentes/componenteButton.php');
+          include('app/componentes/componenteButton.php');
         ?>
       </div>
     </div>
@@ -49,13 +49,13 @@
       
       foreach ($resultado as $evento) {
         ob_start();
-        include('../../componentes/eventosCard.php');
+        include('app/componentes/eventosCard.php');
         $cardComponents2[] = ob_get_clean();
       }
 
       $cardComponents = $cardComponents2;
       $carouselId = 'carousel2';
-      include('../../componentes/carossel.php');
+      include('app/componentes/carossel.php');
       ?>
     </div>
   </div>
@@ -86,4 +86,4 @@
   }
 </script>
 
-<?php include('../../componentes/default/bottomHTML.php'); ?>
+<?php include('app/componentes/default/bottomHTML.php'); ?>

@@ -84,81 +84,12 @@
             <?php endswitch; ?>
         <?php endforeach; ?>
     </div>
+
     <div id="btn">
+        
         <button type="submit" id="btnSalvar">Salvar</button>
         <button type="reset" id="btnCancelar">Cancelar</button>
+
     </div>
+
 </form>
-
-<script>
-    document.getElementById('frmCadastrarEditar').addEventListener('submit', async function (f) {
-        f.preventDefault();
-
-        if (selectedFiles.length === 0) {
-            showModal('atencao', 'Atenção!', 'Você precisa selecionar pelo menos uma imagem.');
-            return;
-        }
-
-        const form = f.target;
-        const action = form.action;
-        const formData = montaFormData(form.id);
-
-        fetch(action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                showModal('sucesso', 'Sucesso!', 'Formulário enviado com sucesso!');
-                form.reset();
-                selectedFiles = []; 
-                document.getElementById('filePreview').innerHTML = ''; 
-            } else {
-                showModal('erro', 'Erro!', 'Ocorreu um erro ao enviar o formulário.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-
-    function montaFormData(idFrm) {
-        const form = document.getElementById(idFrm);
-        const formData = new FormData();
-
-        const inputs = form.querySelectorAll('input, select, textarea');
-
-        inputs.forEach(input => {
-            const name = input.name;
-            if (!name) return;
-
-            switch (input.type) {
-                case 'checkbox':
-                    if (input.checked) {
-                        formData.append(name, input.value);
-                    }
-                    break;
-                case 'file':
-                    if (selectedFiles && selectedFiles.length > 0) {
-                        selectedFiles.forEach((file) => {
-                            formData.append(name, file); 
-                        });
-                    } else {
-                        Array.from(input.files).forEach((file) => {
-                            formData.append(name, file);
-                        });
-                    }
-                    break;
-                default:
-                    formData.set(name, input.value);
-            }
-        });
-
-        console.log('FormData contents:');
-        for (let pair of formData.entries()) {
-            console.log(pair[0], pair[1]);
-        }
-
-        return formData;
-    }
-</script>

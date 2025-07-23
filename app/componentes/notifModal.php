@@ -57,8 +57,7 @@ function fecharModal() {
     const header = document.getElementById('headerModal');
     const modal = document.getElementById('notifModal');
 
-    header.classList.remove('modalSucesso', 'modalErro', 'modalAtencao', 'modalInfo');
-    header.classList.add('modalHeader');
+    header.class = 'modalHeader';
 
     switch(tipo){
       case 'sucesso':

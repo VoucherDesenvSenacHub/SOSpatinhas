@@ -118,7 +118,7 @@
         <div class="container-select">
             <h2>Sexo</h2>
             <select name="sexo-filter" id="sexo-select">
-                <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                <option class="filter-option" value="Selecionar">Selecionar</option>
                 <option class="filter-option" value="Macho">Macho</option>
                 <option class="filter-option" value="Fêmea">Fêmea</option>
             </select>
@@ -127,7 +127,7 @@
         <div class="container-select">
             <h2>Idade</h2>
             <select name="idade-filter" id="idade-select">
-                <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                <option class="filter-option" value="Selecionar">Selecionar</option>
                 <option class="filter-option" value="< 1">-1 ano</option>
                 <option class="filter-option" value="<= 5">Até 5 anos</option>
                 <option class="filter-option" value="<= 10">Até 10 anos</option>
@@ -138,7 +138,7 @@
         <div class="container-select">
             <h2>Porte</h2>
             <select name="porte-filter" id="porte-select">
-                <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                <option class="filter-option" value="Selecionar">Selecionar</option>
                 <option class="filter-option" value="Pequeno">Pequeno</option>
                 <option class="filter-option" value="Médio">Médio</option>
                 <option class="filter-option" value="Grande">Grande</option>
@@ -148,7 +148,7 @@
         <div class="container-select">
             <h2>Animal</h2>
             <select name="animal-filter" id="animal-select">
-                <option class="filter-option" value="Selecionar">-- Selecionar --</option>
+                <option class="filter-option" value="Selecionar">Selecionar</option>
                 <option class="filter-option" value="Cachorro">Cachorro</option>
                 <option class="filter-option" value="Gato">Gato</option>
                 <option class="filter-option" value="Passaro">Pássaro</option>

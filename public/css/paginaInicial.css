@@ -129,6 +129,7 @@ section {
 	list-style: none;
 	gap: var(--spacing-lg);
 	align-items: center;
+	font-size: 17px;
 }
 
 .menu a {

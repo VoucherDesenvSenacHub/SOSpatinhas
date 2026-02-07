@@ -40,7 +40,6 @@
     background: linear-gradient(135deg, #4a9b8e, #5fb3a3);
     color: white;
     padding: 40px 20px 20px;
-    width: 100%;
 }
 
 .footer-content {
@@ -204,10 +203,11 @@ img.bandeira{
 }
 
 @media (max-width: 425px) {
-#linksNavg{
-    display: none;
-}
-.voltar-btn {
-    left: 0rem;
+    #linksNavg{
+        display: none;
+    }
+    .voltar-btn {
+        left: 0rem;
+    }
 }
 </style>

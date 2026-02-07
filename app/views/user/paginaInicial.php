@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="navbar" id="home">
-        <div class="container navbar-container">
+    <div class="container navbar-container">
             <h1 class="logo" aria-label="Logo SOS Patinhas">
                 <i class="fa-solid fa-paw"></i> <a href="/SOSPatinhas/" style="text-decoration: none; color: white;">SOS Patinhas</a> 
             </h1>
@@ -24,10 +24,6 @@
                     <li><a href="comoajudar">Doe Agora</a></li>
                     <li><a href="eventos">Eventos</a></li>
                     <li><a href="quemsomos">Sobre Nós</a></li>
-                    <!-- <li class="social-icons">
-                        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </li> -->
                 </ul>
             </nav>
         </div>
@@ -49,7 +45,7 @@
                     <div class="carrossel__legenda">
                         <h2>Seja um Voluntário</h2>
                         <p>Ajude a cuidar dos nossos animais</p>
-                        <a href="#volunteer" class="botao botao--primario">Saiba Mais</a>
+                        <a href="#donate" class="botao botao--primario">Saiba Mais</a>
                     </div>
                 </li>
                 <li class="carrossel__item">
@@ -112,11 +108,6 @@
             </div>
             <div class="cta-image">
                 <img src="public/images/default/mao.png" alt="Voluntário alimentando cães">
-                <div class="icons">
-                    <i class="fa-solid fa-paw"></i>
-                    <i class="fa-solid fa-paw"></i>
-                    <i class="fa-solid fa-paw"></i>
-                </div>
             </div>
         </section>
 
@@ -435,16 +426,16 @@
             menuMobile();
 
         });
-        document.addEventListener("DOMContentLoaded", function () {
-	const carousel = document.querySelector(".carousel");
-	const slides = document.querySelectorAll(".slide");
-	const prevBtn = document.getElementById("prevBtn");
-	const nextBtn = document.getElementById("nextBtn");
+    document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".carousel");
+        const slides = document.querySelectorAll(".slide");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
 
-	let currentIndex = 0;
-	const slidesPerView = 3;
-	const totalSlides = slides.length;
-	const maxIndex = totalSlides - slidesPerView;
+        let currentIndex = 0;
+        const slidesPerView = 3;
+        const totalSlides = slides.length;
+        const maxIndex = totalSlides - slidesPerView;
 
 	function updateCarousel() {
 		const slideWidth = slides[0].clientWidth;
